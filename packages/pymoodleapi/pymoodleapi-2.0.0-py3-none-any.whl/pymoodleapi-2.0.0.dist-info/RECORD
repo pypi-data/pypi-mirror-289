@@ -1,0 +1,10 @@
+pymoodleapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymoodleapi/api/api.py,sha256=qTkjug_Tf9JDR7J48XOoNQgRrD_VuwDyIFcERuO0H5E,228
+pymoodleapi/api/api_response_objects.py,sha256=nunwlYUC3jTpDszLa-8KZk7zpbhBtXQ6eZGHInl-efk,989
+pymoodleapi/api/client.py,sha256=j6yhF2xbgiK6btZM1g6C9kiae63TBkZSj0uBTzCJ75c,765
+pymoodleapi/api/endpoints.py,sha256=og0MkKa4GG5mueWIwKZlwONkrTH3dZjWdLV6FtbUfDs,466
+pymoodleapi/settings.py,sha256=gfiOVx-4t6dEqivNg2rS7L7_HJzwFj9Y9EA9nDKzF7M,305
+pymoodleapi-2.0.0.dist-info/LICENSE,sha256=YYGs1wXk3emVixfmLjcf7HEqJfnVg5P-9ZHQhr4n4DU,1082
+pymoodleapi-2.0.0.dist-info/METADATA,sha256=rBOduuP2hwKgihvF7iZ7zfj7YOnTVFE7_XQH4qVMdoQ,841
+pymoodleapi-2.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pymoodleapi-2.0.0.dist-info/RECORD,,
