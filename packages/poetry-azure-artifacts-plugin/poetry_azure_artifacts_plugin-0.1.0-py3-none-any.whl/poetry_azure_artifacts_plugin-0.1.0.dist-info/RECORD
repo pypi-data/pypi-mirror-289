@@ -1,0 +1,7 @@
+poetry_azure_artifacts_plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+poetry_azure_artifacts_plugin/plugin.py,sha256=5PFZUcfryLUZ8vimv1PhYftfvZCuwn6hKFPFHgs3Sk4,2682
+poetry_azure_artifacts_plugin-0.1.0.dist-info/LICENSE,sha256=nOksfgpwAslCCkvnHb6r_Rv2eGgkC7CMop43FK1zBxo,1109
+poetry_azure_artifacts_plugin-0.1.0.dist-info/METADATA,sha256=fkI_igValioKTRNZ19hIsi5cYXGwllh2iAGpFIvqNkY,3391
+poetry_azure_artifacts_plugin-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+poetry_azure_artifacts_plugin-0.1.0.dist-info/entry_points.txt,sha256=4V_BmsOe2BqLabLR_mzCnxwrav6E093VgCxzOEsnSDU,105
+poetry_azure_artifacts_plugin-0.1.0.dist-info/RECORD,,

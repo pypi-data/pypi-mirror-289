@@ -1,0 +1,3 @@
+[poetry.plugin]
+poetry-azure-artifacts-plugin=poetry_azure_artifacts_plugin.plugin:AzureArtifactsPlugin
+
