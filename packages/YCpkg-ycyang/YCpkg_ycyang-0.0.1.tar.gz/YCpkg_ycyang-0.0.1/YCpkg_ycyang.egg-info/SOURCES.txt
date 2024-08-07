@@ -1,0 +1,8 @@
+README.md
+setup.py
+YCpkg/__init__.py
+YCpkg/pkg1.py
+YCpkg_ycyang.egg-info/PKG-INFO
+YCpkg_ycyang.egg-info/SOURCES.txt
+YCpkg_ycyang.egg-info/dependency_links.txt
+YCpkg_ycyang.egg-info/top_level.txt
