@@ -1,0 +1,17 @@
+numpy
+scipy
+matplotlib
+seaborn
+
+[development]
+pytest
+ruff
+mypy
+ipython
+build
+twine
+
+[documentation]
+mkdocs
+mkdocs-material
+mkdocstrings[python]
