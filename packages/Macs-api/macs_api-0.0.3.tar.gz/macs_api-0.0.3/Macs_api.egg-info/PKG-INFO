@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: Macs-api
+Version: 0.0.3
+Summary: A small example package
+Author-email: Frank Kostine <frankkostine@gmail.com>
+Project-URL: Homepage, https://github.com/draxsoft/msapi
+Project-URL: Issues, https://github.com/draxsoft/msapi/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+```markdown
+# msapi
+
+A Python package for executing scripts with Macsploit's API.
+
+## Overview
+
+This package provides a simple way to execute Roblox scripts (with Macsploit API) via a local server connection. It is designed to work with Roblox's Lua scripting language.
+
+## Installation
+
+You can install the package via pip:
+
+```sh
+pip3 install msapi
+```
