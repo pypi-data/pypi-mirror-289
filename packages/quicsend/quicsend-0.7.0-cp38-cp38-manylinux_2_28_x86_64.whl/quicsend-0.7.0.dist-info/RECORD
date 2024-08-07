@@ -1,0 +1,12 @@
+quicsend_library.so,sha256=0LCITlSq44SGyL0Qh3EcWtl12PBcF_uGkUOhspYCb9k,47213913
+quicsend.libs/libcrypto-401bea5d.so.1.1.1k,sha256=7XXkUZAfCEVe3OvU_nAwJMAqJsXOepwYZ_SwPu91cp8,3215921
+quicsend.libs/libssl-52849bc7.so.1.1.1k,sha256=7OovoL-d8USKAsvf2ZUPjzdbz8u6daGbWhyibfxb9fY,662769
+quicsend-0.7.0.dist-info/METADATA,sha256=vvN_ykqdZOn01fktuW_sNpP-gONPWjWyGWugf2Nnvy8,1212
+quicsend-0.7.0.dist-info/top_level.txt,sha256=mh4lCQn4bYAXCekGXS1nxmrNF1Tt1x7d5BpB7TDakhw,9
+quicsend-0.7.0.dist-info/WHEEL,sha256=plj6P71bcX6nygktg5svWOfhOAq9fo1DX_cT8cP4G80,111
+quicsend-0.7.0.dist-info/LICENSE,sha256=XT3J4mGErU5wxaMJ3g6Xdfi7oPpozUYNjj8F-xlO2oE,1499
+quicsend-0.7.0.dist-info/RECORD,,
+quicsend/__init__.py,sha256=vX4fflTgMOkJuVck5fF1XN0zNfhCiCK0rKskIMIgIZA,146
+quicsend/quicsend_wrapper.py,sha256=k6m0ACJtUTFcfxEu3ltXHkQxhhugCn9hcsKTg_v1oYw,8111
+quicsend/__pycache__/__init__.cpython-310.pyc,sha256=GgvkquhqR_J2_olLAk_p6vYAx9qkfotsFXiXNcJ0uCA,217
+quicsend/__pycache__/quicsend_wrapper.cpython-310.pyc,sha256=e89R2wvzXeXCkH15b82plC-ssKsqlcHdlntsEb2yfzQ,6464
