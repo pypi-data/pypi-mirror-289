@@ -1,0 +1,11 @@
+collegamento/__init__.py,sha256=kIwGFSLmLDmbONjL3c5ndsTSZjYicmVfy5vRP9e1OM8,307
+collegamento/files_variant.py,sha256=0qGCX9gSmrM1H-HUf1VYSdSTgLQQhLO1DwFRSUAMXUU,4311
+collegamento/simple_client_server/__init__.py,sha256=QoGOLxmkr9xcVfFG2eTFzwBVCnbYCBYVSA1h47KVGaA,223
+collegamento/simple_client_server/client.py,sha256=q5a0A2ixWLsVbZFYEgcnO5XHWdQABFXhGf7XIfU04i4,6812
+collegamento/simple_client_server/misc.py,sha256=q1PiOqXOHE_Fc_wAIUKwrym0vzSiclUsvjm2b5yne_0,1108
+collegamento/simple_client_server/server.py,sha256=61jP5w8NafY18EVcL8A7683xqPgiH9kw2E5BPsfZcAo,5845
+collegamento-0.2.0.dist-info/LICENSE,sha256=rR1Fg1rwjW8N-b48ikIYy_eTusYxUP953M0KhJRAV8g,1064
+collegamento-0.2.0.dist-info/METADATA,sha256=9SMeEQbMxHqjRvtPOBZ9Unzhqjfkzqdk4db0xwrfXqA,2095
+collegamento-0.2.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+collegamento-0.2.0.dist-info/top_level.txt,sha256=Nlb147SkLhQn72FdvsI3kzCkFY_G0u2Oi6H6ONkctuI,13
+collegamento-0.2.0.dist-info/RECORD,,
