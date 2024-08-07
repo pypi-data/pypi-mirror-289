@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: safi
+Version: 0.0.1
+Summary: Safi is a versatile and super fast Ai Platform. This is a Python library for Safi API.
+Home-page: https://safi.insolify.com
+Author: Insolify
+Author-email: safi@insolify.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+safi - Pure
+
+Safi is a versatile and high performance Ai Platform. This is a Python library for Safi APIs.
+
+Installation
+
+You can install this package using pip:
+
+```sh
+pip install safi
+
+
+##Usage
+
+from safi import Safi
+
+# Get your api key 'your_api_key' from your account dashbaord on safi.insolify.com
+
+api_key = 'your_api_key'
+
+# Basic Usage for 
+safi = Safi(api_key,'chat')
+response = safi.chat('Hi Safi').go()
+print(response....)
+
+#Deleting a record operation
+response = safibase.lake('test_lake').record('test_record').delete('at id='2'').run()
+print(response)
+
+# Usage with voice input
+safi = safi(api_key, lang='pidgin')
+response = safibase.chat(record.mp3).go()
+print(response.......)
