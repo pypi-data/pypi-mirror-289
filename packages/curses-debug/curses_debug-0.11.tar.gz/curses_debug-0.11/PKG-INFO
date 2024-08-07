@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: curses_debug
+Version: 0.11
+Summary: A simple library for a beautiful output window written in curses and multiprocessing
+Home-page: https://github.com/igorir3/cursesDebugWindow
+Author: igorir3
+Author-email: kirillovigor662@gmail.com
+Keywords: python debug curses
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: windows-curses>=2.3.3
+
+
+Python Example : 
+
+``` Python
+from curses_debug import curses_debug
+
+if __name__ == '__main__':
+    dprint = curses_debug()
+    dprint.send("TEST") # Displaying a message
+    dprint.send("TEST", desc="DESC") # Displaying a message with a description (str, list, dict)
+    dprint.send("TEST", status=1) # Displaying a message with a special status (0 - INFO, 1 - WARN, 2 - ERRO, 3 - CRIT)
+    dprint.send("TEST \", replace_prev = True) # Displaying a temporary message. If you use this command again, this message will be deleted
+```
