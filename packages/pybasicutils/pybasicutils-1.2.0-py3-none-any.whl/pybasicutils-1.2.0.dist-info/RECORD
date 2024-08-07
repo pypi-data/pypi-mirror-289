@@ -1,0 +1,11 @@
+pybasicutils/__init__.py,sha256=6MS6x6NJMHnqRQ7nTcIAN1J9UBtOdPVF_Y7n705UNgI,547
+pybasicutils/clearScreen.py,sha256=wB8WCt5K1VyguseIFcUNzQeQ1_2wQoqbEjfgXpopYXQ,477
+pybasicutils/crypted.py,sha256=vG-Y9zw99G6KlQhtuk7GuJeXj9eH8iGYJeDzGezbP5w,2402
+pybasicutils/jsoned.py,sha256=Sp10k0L1TlLu9FNsJ4Ft0m1cyPVa0IEAVOMYiTlQb3U,608
+pybasicutils/maths.py,sha256=S2SRVw5IuTzmdPxc4W7QSu1uJBp9NYva8xgmbgXubrA,2814
+pybasicutils/sized.py,sha256=LYWDRTYsniR-cBH_d_Pm-R1tWZuGHx4ppejciH3TkQc,513
+pybasicutils-1.2.0.dist-info/LICENSE,sha256=6Pt2e6mklq1agdUsarzUr21npjZRswJN39GAn4rSMXg,20564
+pybasicutils-1.2.0.dist-info/METADATA,sha256=1iBXT8QTKMrKjOi00ysANKq_jE5cSnn36aveXKkaDFQ,926
+pybasicutils-1.2.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+pybasicutils-1.2.0.dist-info/top_level.txt,sha256=O82DZ-enGlH2ZRzKd48vp1-iJwIPr0ZiuH1SULwARo8,13
+pybasicutils-1.2.0.dist-info/RECORD,,
