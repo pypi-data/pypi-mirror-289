@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+pathdirector/__init__.py
+pathdirector/application_dir.py
+pathdirector/sys_dir.py
+pathdirector.egg-info/PKG-INFO
+pathdirector.egg-info/SOURCES.txt
+pathdirector.egg-info/dependency_links.txt
+pathdirector.egg-info/top_level.txt
+tests/test_app_dir.py
+tests/test_sys_dir.py

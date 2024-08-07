@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pathdirector
+Version: 0.0.1
+Summary: Path director is simple python package for getting/creating application/downloads/tempdir paths 
+Home-page: https://github.com/naveensagar765/pathdirector
+Author: Naveen Sagar
+Author-email: sagarnaveen886@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
