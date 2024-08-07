@@ -1,0 +1,56 @@
+import numpy as np
+from scipy.linalg import schur
+
+def compute_A_matrices(A, P):
+    P1, P2 = P
+    A11 = P1.T @ A @ P1
+    A12 = P1.T @ A @ P2
+    A21 = P2.T @ A @ P1
+    A22 = P2.T @ A @ P2  # 修正點：添加 A22 矩陣
+    return A11, A12, A21, A22
+
+def schur_decomposition(A):
+    return schur(A)
+
+def update_A11(A11, A12, Rk):
+    return A11 + A12 @ Rk
+
+def compute_A21_hat(A21, Rk, A12, Q):
+    A21_hat = (A21 + Rk @ A12 @ Rk) @ Q
+    return A21_hat
+
+def solve_sylvester_equation(A22, Z, A21_hat, s):
+    X = np.zeros((A21_hat.shape[0], s))
+    for j in range(s):
+        try:
+            xj = np.linalg.solve(A22 - Z[j, j] * np.eye(A22.shape[0]), -A21_hat[:, j])
+        except np.linalg.LinAlgError:
+            # 如果 A22 是奇異的，使用 pseudo-inverse 來求解
+            xj = np.linalg.pinv(A22 - Z[j, j] * np.eye(A22.shape[0])) @ (-A21_hat[:, j])
+        X[:, j] = xj
+    return X
+
+def image_compression_algorithm(A, P, epsilon):
+    A11, A12, A21, A22 = compute_A_matrices(A, P)  # 修正點：確保 A22 被正確計算
+    k = 0
+    Rk = np.zeros_like(A21)
+    rk = A21
+    
+    if np.linalg.norm(rk) < epsilon:
+        return Rk, None
+    
+    while True:
+        A11_tilde = update_A11(A11, A12, Rk)
+        Q, Z = schur_decomposition(A11_tilde)
+        A21_hat = compute_A21_hat(A21, Rk, A12, Q)
+        X = solve_sylvester_equation(A22, Z, A21_hat, A21_hat.shape[1])
+        
+        Rk_next = X @ Q.T
+        rk_next = np.linalg.norm(Rk_next)
+        
+        if rk_next < epsilon:
+            return Rk_next, A11_tilde
+        
+        Rk = Rk_next
+        rk = rk_next
+        k += 1
