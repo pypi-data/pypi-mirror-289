@@ -1,0 +1,28 @@
+{
+    "LinkedIn": {
+        "DevOps": {
+            "tags": [
+                "DevOps",
+                "Python",
+                "Cloud",
+                "AWS",
+                "GCP",
+                "Azure"
+            ]
+        },
+        "Python": {
+            "tags": [
+                "DevOps",
+                "Python"
+            ]
+        },
+        "Cloud": {
+            "tags": [
+                "Cloud",
+                "AWS",
+                "GCP",
+                "Azure"
+            ]
+        }
+    }
+}
