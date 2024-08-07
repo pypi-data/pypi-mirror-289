@@ -1,0 +1,3 @@
+[console_scripts]
+artix=artix.cli:cli
+

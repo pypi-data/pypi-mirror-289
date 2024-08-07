@@ -1,0 +1,8 @@
+artix/__init__.py,sha256=Y3LJvYiD1EeRsrbMM28GObPFDUBBjt0iQ_ZjOUeRFqk,41
+artix/cli.py,sha256=iborIlxgBBXRPGh3KUYcWBSm5ZFco33hDtne2F1a8-k,1422
+artix/config.py,sha256=08kyAysSwZPhECNzG47IoU34xdILDsVGyZXtx3p3NJQ,8284
+artix-0.0.dev1.dist-info/LICENSE,sha256=-K9bRALZc5G8xfsJ8n9w2_-ArwOa8rYxPy6azOeVugk,1069
+artix-0.0.dev1.dist-info/METADATA,sha256=svOgSB-RQAI2X1D2qBvbB6vW0q6hpENzVrm0VYAFJtw,5572
+artix-0.0.dev1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+artix-0.0.dev1.dist-info/entry_points.txt,sha256=r8OYHhh9y7fxAV5jDINegTSb8FUvpZ96NhUl0M0qivc,39
+artix-0.0.dev1.dist-info/RECORD,,
