@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "m2c2kit-data-cli"
+version = "0.1.11"
+description = ""
+authors = ["Nelson Roque, PhD <nur375@psu.edu>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+m2c2 = "m2c2kit_data_cli.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.12.0"}
+requests = "^2.31.0"  # Updated to a valid version
+rich = "^13.7.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
