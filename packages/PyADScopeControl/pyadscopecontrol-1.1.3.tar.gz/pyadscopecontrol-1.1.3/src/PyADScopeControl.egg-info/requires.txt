@@ -1,0 +1,12 @@
+matplotlib
+numpy
+pandas
+PySide6
+scipy
+rich
+pyqtgraph
+pandasgui
+toml
+PySide6WidgetCollection>=1.0.2
+confPy6
+mpPy6
