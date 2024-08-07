@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: YCSAI
+Version: 1.0.1
+Summary: AI Training API developed by SphereAX.
+Home-page: https://github.com/changsubi/YCSAI.git
+Author: Changseob
+Author-email: yuncs@sphereax.com
+Keywords: Train,Predict,Detection,Classification
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
