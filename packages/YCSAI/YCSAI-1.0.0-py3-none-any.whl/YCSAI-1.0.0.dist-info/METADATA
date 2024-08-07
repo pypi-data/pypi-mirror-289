@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: YCSAI
+Version: 1.0.0
+Summary: AI Training API developed by SphereAX.
+Home-page: https://github.com/changsubi/YCSAI.git
+Author: Changseob
+Author-email: yuncs@sphereax.com
+Keywords: Train,Predict,Detection,Classification
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Requires-Dist: omegaconf
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: psutil
+Requires-Dist: hydra-core
+Requires-Dist: Pillow (==9.5.0)
+Requires-Dist: seaborn
+Requires-Dist: scipy
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: torchaudio
+
