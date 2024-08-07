@@ -1,0 +1,14 @@
+README.md
+setup.py
+uvenv/__init__.py
+uvenv/__version__.py
+uvenv/_constants.py
+uvenv/cli.py
+uvenv/project.py
+uvenv/uv.py
+uvenv_cli.egg-info/PKG-INFO
+uvenv_cli.egg-info/SOURCES.txt
+uvenv_cli.egg-info/dependency_links.txt
+uvenv_cli.egg-info/entry_points.txt
+uvenv_cli.egg-info/requires.txt
+uvenv_cli.egg-info/top_level.txt
