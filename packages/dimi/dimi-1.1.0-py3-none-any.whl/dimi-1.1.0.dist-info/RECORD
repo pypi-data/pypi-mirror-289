@@ -1,0 +1,12 @@
+dimi/__init__.py,sha256=PwgEXmcrn3DxbYJGNkAdB3mC7fjZcrM6S4AyIy58LKM,65
+dimi/_integrations.py,sha256=w69Lztd7qjWCvrOwz1aO22-3Lai6xBgTo8ixT5LxLCw,400
+dimi/_storage.py,sha256=adjunuFkNHpmz-Ddgp1_FfLdlLZdP0lwNPlEdLBn_BE,2805
+dimi/dependency.py,sha256=-h7y-Dv7U1FJizv6BVNKiIslDVgj2Q3MnrUxVbwTyVM,2754
+dimi/di.py,sha256=xjBq4hDlHeYMzd_nVlX-aUQw8emKwkw7yJQk4x-DsaE,5448
+dimi/exceptions.py,sha256=W_zrbz26SODxPmiFb2GEvqeysfzcdBhKkmGgYigpYgA,185
+dimi/scopes.py,sha256=2DuFlEcKNJTrDVzY0oDmDvxOqHyjWERy5EO4hbvmjwk,3189
+dimi-1.1.0.dist-info/LICENSE,sha256=efpsthX7qhFzocTMFPhOYkOVxE9jma7QuqQPmw4RXnw,1072
+dimi-1.1.0.dist-info/METADATA,sha256=dSi_RTV8B8fjts5LK7b7rS9iMZFx2HswvxAulC4qItI,6490
+dimi-1.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+dimi-1.1.0.dist-info/top_level.txt,sha256=mJqTRBzvdeLlI4Mg06AEMNm8QlaBlQTz9CY_jSwrtxA,5
+dimi-1.1.0.dist-info/RECORD,,
