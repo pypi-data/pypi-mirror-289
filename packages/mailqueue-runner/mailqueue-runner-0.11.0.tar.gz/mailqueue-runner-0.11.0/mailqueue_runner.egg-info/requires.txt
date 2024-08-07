@@ -1,0 +1,22 @@
+boltons
+docopt
+portalocker
+
+[plugins]
+PuzzlePluginSystem>=0.6.0
+
+[testing]
+PuzzlePluginSystem>=0.6.0
+dotmap
+pymta>=0.8
+pytest
+schwarzlog
+setuptools
+testfixtures
+
+[testing:implementation_name != "pypy"]
+time-machine
+
+[testutils]
+pymta>=0.8
+schwarzlog
