@@ -1,0 +1,48 @@
+
+![Logo](img/logo_opensimula.png) 
+
+This site contains the documentation for the
+___OpenSimula___ project.
+
+`OpenSimula` is a component-based time simulation environment in Python. 
+
+The general object structure provided by OpenSimula is composed of three main elements:
+
+- Simulation: The global environment for simulation.
+- Project: A set of components that define a problem that can be temporarily simulated.
+- Component: These are the base elements on which the simulation is performed. The types of components currently available can be consulted in section [Component list](component_list.md).
+
+![Global structure](img/global_structure.png)
+
+### Parameters
+
+**Parameters** are used to define the characteristics that make up the projects and components. 
+
+![Paremeters](img/parameters.png)
+
+Parameters can be of different types depending on the type of information they contain (strings, boolean, integer, float, options, ...). A list of all parameter types and their possibilities can be found in the [User guide](user_guide.md#parameters). :
+
+
+### Variables
+
+**Variables** are elements included in the components to store the temporal 
+information generated during the simulation.
+
+![Variables](img/variables.png)
+
+
+## Documentation
+
+
+1. [Getting started](getting_started.md)
+2. [User guide](user_guide.md)
+3. [Component list](component_list.md)
+3. [Developer guide](developer_guide.md)
+
+
+## Acknowledgements
+
+People:
+- ...
+
+_© JFC 2023_
