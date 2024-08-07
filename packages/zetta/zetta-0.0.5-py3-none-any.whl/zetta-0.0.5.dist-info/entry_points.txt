@@ -1,0 +1,3 @@
+[console_scripts]
+zetta = zetta.main:main
+
