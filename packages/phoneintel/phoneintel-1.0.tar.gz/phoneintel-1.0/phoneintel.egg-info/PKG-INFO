@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: phoneintel
+Version: 1.0
+Summary: A tool for processing phone numbers with OSINT capabilities.
+Home-page: https://github.com/phoneintel/phoneintel
+Author: PhoneIntel
+Author-email: phoneintel@proton.me
+License: Apache License 2.0
+Project-URL: Bug Tracker, https://github.com/phoneintel/phoneintel/issues
+Project-URL: Documentation, https://phoneintel.github.io/
+Project-URL: Source Code, https://github.com/phoneintel/phoneintel
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: colorama==0.4.6
+Requires-Dist: phonenumbers==8.13.42
+Requires-Dist: requests==2.32.3
+Requires-Dist: beautifulsoup4==4.12.3
