@@ -1,0 +1,2 @@
+[console_scripts]
+lemonpdf = lemonpdf.cli:main
