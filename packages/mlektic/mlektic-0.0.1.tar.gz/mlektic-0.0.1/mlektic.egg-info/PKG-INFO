@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: mlektic
+Version: 0.0.1
+Summary: A python machine learning library to use and visualize gradient descent for linear regression and logistic regression optimization.
+Author-email: Daniel Antonio García Escobar <contacto@dialektico.com>
+Project-URL: homepage, https://github.com/DanielDialektico/mlektic
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24.3
+Requires-Dist: pandas>=2.1.4
+Requires-Dist: polars>=0.20.2
+Requires-Dist: scikit_learn>=1.3.0
+Requires-Dist: tensorflow>=2.17.0
+Requires-Dist: matplotlib>=3.7.1
+Requires-Dist: ipython>=7.34.0
+Requires-Dist: jedi==0.17.2
+Requires-Dist: bottleneck>=1.3.6
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: setuptools>=72.1.0; extra == "dev"
+
+# Mlektic
+
+A python machine learning library to use and visualize gradient descent for linear regression and logistic regression optimization.
+
+## Installation
+
+```sh
+pip install mlektic
