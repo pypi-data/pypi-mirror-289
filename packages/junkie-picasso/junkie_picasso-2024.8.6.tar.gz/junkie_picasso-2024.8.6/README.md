@@ -1,0 +1,72 @@
+![Logo](./docs/junkie_picasso_logo.png)
+
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/GPL-3.0)
+[![Static Badge](https://img.shields.io/badge/pip_installable-PyPi-blue)](https://pypi.org/project/junkie-picasso/)
+
+
+
+# [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/): abstract functionality for [Junkie](https://bitbucket.org/rfg_lab/junkie/src/master/)
+
+[JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) adds onto the functionality of [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/), allowing you to not just explore your images, but also the parameter space of your image processing pipeline.
+
+## Installing [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/)
+
+To install [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/), type:  
+
+    $ python3 -m pip install junkie_picasso
+
+We do most of the development and testing of [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) in [Jupyter Lab](https://jupyter.org/install), so we recommend using [Jupyter Lab](https://jupyter.org/install). 
+
+### A note on the Python interpreter
+
+[JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) requires that you
+have [Python 3.10 or above](https://www.python.org/downloads/) installed.
+
+## Using [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/)
+For details on how to use the basic functionality of [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/), visit the [JuNkIE docs](https://bitbucket.org/rfg_lab/junkie/src/master/README.md).
+
+
+## Adding abstract functions
+
+[JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) allows the user to define abstract image processing functions that will be applied to the input image. This allows you to explore the parameter space of your image processing pipeline without re-writing and re-running your code!
+
+**New in version 2024.8.6!** Create abstract functions using a simple function definition without the need for an entire class!
+
+Define your image processing function. There are a few rules that it must follow:
+* The first argument must be a positional argument that takes the image numpy array
+* All following arguments must be keyword arguments and contain both type hints and defaults
+* The types of the keyword arguments can be float, int, or bool
+* The function must return the processed image as a numpy array with dtype np.uint16
+
+For example, lets say we wanted to apply a gaussian filter and offset to our image, 
+and have an easy way to turn processing on and off:
+```python
+def gaussian_and_offset(img, offset: int = 0, sigma: float = .0, apply_flag: bool = False):
+  
+  if apply_flag:
+    for t in range(len(img)):
+      img[t] = skimage.filters.gaussian(img[t], sigma, preserve_range=True) + offset
+          
+  return img.astype(np.uint16)
+```
+
+Finally, create a [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/) instance using your custom class as an additional parameter:
+
+```python
+ayim = junkie('/path/to/img.tiff', func=gaussian_and_offset)
+```
+The parameters you have defined will appear to the right of the default [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/) parameters in a tabbed box, with each tab corresponding to a different parameter. This allows for an arbitrary number of parameters to be added without reorganizing the widget layout.
+
+![Making a custom pipeline](./docs/junkie_docs_example.gif)
+
+    
+## Citing [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/)
+
+If you use [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/), please cite this repository and the repository for the original [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/). We are working on the paper!
+
+## Sponsors
+
+We are grateful for the generous support from the following agencies and institutions, which contribute to the
+development and maintenance of [JuNkIE](https://bitbucket.org/rfg_lab/junkie/src/master/) and [JuNkIE-picasso](https://bitbucket.org/raymond_hawkins_utor/junkie_picasso/src/master/):
+
+![Sponsors](./docs/sponsors.png)
