@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: finishes-library
+Version: 0.1.0
+Summary: A library to manage finish specifications
+Home-page: https://github.com/pratiksha306/finish_specification.git
+Author: Pratiksha Kohokade
+Author-email: pratiksha.kohokade@danfoss.com
+Requires-Dist: python-dotenv
