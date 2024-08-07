@@ -1,0 +1,9 @@
+README.md
+requirements.txt
+setup.py
+StreetSolarTrack.egg-info/PKG-INFO
+StreetSolarTrack.egg-info/SOURCES.txt
+StreetSolarTrack.egg-info/dependency_links.txt
+StreetSolarTrack.egg-info/requires.txt
+StreetSolarTrack.egg-info/top_level.txt
+tests/test_photo.py
