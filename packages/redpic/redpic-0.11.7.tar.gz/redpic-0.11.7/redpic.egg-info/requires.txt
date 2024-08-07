@@ -1,0 +1,5 @@
+numba>=0.59.1
+numpy>=1.26.0
+pandas>=2.0.3
+scipy>=1.11.2
+setuptools>=65.5.1
