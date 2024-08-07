@@ -1,0 +1,5 @@
+modelgauge/annotators/openai_compliance_annotator.py,sha256=09miieIBzKwD_3nbqlj9HMlh699OQT8wu4z5Vreidtw,5617
+modelgauge/suts/openai_client.py,sha256=O7KQmsjQ3RI5UKUx6VjjWy8ItF0D9bw7v8kwh8-Su_k,6051
+modelgauge_openai-0.6.0.dist-info/METADATA,sha256=iI03hMvhBrAyPOr_ZkGFopIEmFOSdLVyvCEW871iCNs,504
+modelgauge_openai-0.6.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+modelgauge_openai-0.6.0.dist-info/RECORD,,
