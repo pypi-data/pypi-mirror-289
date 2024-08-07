@@ -1,0 +1,8 @@
+stencila_plugin-2.0.0b3.dist-info/METADATA,sha256=t_lHhcNv3Vl4dXHT_phRsTdyM8pHV-zgW603kSP3z-I,1757
+stencila_plugin-2.0.0b3.dist-info/WHEEL,sha256=rSwsxJWe3vzyR5HCwjWXQruDgschpei4h_giTm0dJVE,90
+stencila_plugin/__init__.py,sha256=wJiT5kLnhBuoikdGH33sTLeuYlFSgg3ZAm9SEIRW9EY,255
+stencila_plugin/kernel.py,sha256=HOoaxDJG2KY-YUHF5wbhyU1CL38_wLcKIw5jJI6Aaw0,5721
+stencila_plugin/model.py,sha256=6zaThYAOi7f2F51kkIySfZO16DF-aFQd6thGVJtYkAo,1778
+stencila_plugin/plugin.py,sha256=IaFUHALj3z6jbFnF2_c5b-H4C7YmdNeJvwlNvXs-SrA,11719
+stencila_plugin/testing.py,sha256=djwae75R_mKG8cKrkXCJwPFs0T73QPEzjuh66p8xLog,8274
+stencila_plugin-2.0.0b3.dist-info/RECORD,,
