@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: Ominis-OSINT
+Version: 4.7
+Summary: Discover online mentions of a query or username. Identify potential social profiles and forums.
+Home-page: https://github.com/AnonCatalyst/omnis-osint
+Author: AnonCatalyst
+Author-email: hard2ind.co.01@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: beautifulsoup4
+Requires-Dist: colorama
+Requires-Dist: fake-useragent
+Requires-Dist: requests
+Requires-Dist: serpapi
+Requires-Dist: google-search-results
+Requires-Dist: httpx
+Requires-Dist: tenacity
+Requires-Dist: requests-html
+Requires-Dist: aiohttp
+Requires-Dist: urllib3
+Requires-Dist: asyncio
+Requires-Dist: lxml-html-clean
+Requires-Dist: html-clean
+Requires-Dist: tqdm
+Requires-Dist: anyio >=4.4.0
+Requires-Dist: zipp >=3.19.1
+
