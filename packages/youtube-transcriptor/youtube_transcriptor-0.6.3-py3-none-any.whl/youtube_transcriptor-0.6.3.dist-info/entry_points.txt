@@ -1,0 +1,2 @@
+[console_scripts]
+youtube_transcriptor = youtube_transcriptor.__main__:main
