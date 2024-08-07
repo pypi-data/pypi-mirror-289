@@ -1,0 +1,10 @@
+wintersdeep/argparse/__init__.py,sha256=JlxmNpSxVn_sKpEU0GcfuMKAOH44IEXbp2jSRMH4F0c,896
+wintersdeep/argparse/argument_parser.py,sha256=cdBRPTXT5pYlQ3VLCOvOYEthw1sEFQtPC3bc7voQDng,4117
+wintersdeep/argparse/log_level_action.py,sha256=fOKQhat86tC0__h5xv7OEuCJYgMsWv1lgu5Mq2px2qg,4515
+wintersdeep/argparse/logging_configuration.py,sha256=lGqAnXWwdbHsfxZl8yo-QEBIDAWzGLuaeLs89J-uAgo,3310
+wintersdeep/argparse/mapping_choices_action.py,sha256=kj6il2yh_gcq8pYCXgV6nHnBlGasROM6CEY_jpv933s,4648
+wintersdeep.argparse-1.1.4.dist-info/LICENCE,sha256=_ux89UAUzjCARIn0VRlW7KVBj5rKV0B_3bbIb2QI9dE,1099
+wintersdeep.argparse-1.1.4.dist-info/METADATA,sha256=tqQMwHrZWcPhhb8HJKN5y2hNEngJaHN0Ij7JxWRI5ts,6012
+wintersdeep.argparse-1.1.4.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+wintersdeep.argparse-1.1.4.dist-info/top_level.txt,sha256=LHFlKGZtZ4ngbRsB6tvc9FeEiYoEOGPGKyWUTt8ooRw,12
+wintersdeep.argparse-1.1.4.dist-info/RECORD,,
