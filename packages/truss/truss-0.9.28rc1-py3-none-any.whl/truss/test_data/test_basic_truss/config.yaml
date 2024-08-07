@@ -1,0 +1,18 @@
+environment_variables: {}
+build:
+  build_arg_to_secret_mapping:
+    FOO: foo
+external_package_dirs: []
+model_metadata: {}
+model_name: basic truss
+python_version: py39
+requirements: []
+resources:
+  accelerator: null
+  cpu: '1'
+  memory: 2Gi
+  use_gpu: false
+secrets:
+  foo: "foo"
+  bar: "bar"
+system_packages: []
