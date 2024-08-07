@@ -1,0 +1,4 @@
+[console_scripts]
+deltaver=deltaver.__main__:app
+deltaver_new=deltaver.entry:app
+
