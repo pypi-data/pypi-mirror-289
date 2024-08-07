@@ -1,0 +1,59 @@
+[package]
+name = "fennel_data_lib"
+version = "0.1.3"
+edition = "2021"
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1.0.66"
+tonic = { version = "0.11", features = ["gzip"] }
+arrow = { version = "51.0.0", features = ["pyarrow"] }
+pyo3 = { version = "0.20.0" }
+py_execute_interop = { path = "../py_execute_interop" }
+bytes = "1.3.0"
+log = "0.4.21"
+byteorder = "1.4.3"
+chrono = { version = "0.4.31", features = ["serde"] }
+prost = "0.12.1"
+prost-types = "0.12.1"
+datafusion = { version = "38.0.0", features = ["backtrace"] }
+datafusion-expr = "38.0.0"
+datafusion-common = "38.0.0"
+datafusion-functions = "38.0.0"
+datafusion-functions-array = "38.0.0"
+serde = { version = "1.0", features = ["derive", "std"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+base64 = "0.21.4"
+integer-encoding = "3.0.0"
+num-traits = "0.2.17"
+xxhash-rust = { version = "0.8.5", features = ["xxh3"] }
+rust_decimal = "1.33.1"
+apache-avro = "0.16.0"
+regex = "1.10.1"
+smartstring = { version = "1.0.1", features = ["serde"] }
+prometheus = { version = "0.13.0", features = ["process"] }
+lazy_static = "1.4.0"
+itertools = "0.10"
+tempfile = "3.5.0"
+csv = "1.1.6"
+smallvec = { version = "1.10.0", features = ["serde"] }
+colored = "2"
+num-bigint = "0.4.4"
+uuid = { version = "1.2.1", features = ["v4"] }
+parquet = "51.0.0"
+rdkafka = { version = "0.35.0", features = [
+    "zstd",
+    "cmake-build",
+    "ssl-vendored",
+    "gssapi-vendored",
+    "external-lz4",
+] }
+tokio = { version = "1.38", features = ["full", "fs", "io-util"] }
+protofish = { git = "https://github.com/fennel-ai/protofish.git", branch = "main" }
+
+[build-dependencies]
+tonic-build = "0.9"
+
+[features]
+# Need to use maturin build --features "extension-module" to build the python package
+extension-module = ["pyo3/extension-module"]

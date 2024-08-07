@@ -1,0 +1,135 @@
+syntax = "proto3";
+
+package fennel.proto.schema;
+
+import "google/protobuf/timestamp.proto";
+
+message DataType {
+  oneof dtype {
+    IntType int_type = 1;
+    DoubleType double_type = 2;
+    StringType string_type = 3;
+    BoolType bool_type = 4;
+    TimestampType timestamp_type = 5;
+    ArrayType array_type = 6;
+    MapType map_type = 7;
+    EmbeddingType embedding_type = 8;
+    Between between_type = 9;
+    OneOf one_of_type = 10;
+    RegexType regex_type = 11;
+    OptionalType optional_type = 12;
+    StructType struct_type = 13;
+    DecimalType decimal_type = 14;
+    DateType date_type = 15;
+    BytesType bytes_type = 16;
+    NullType null_type = 17;
+  }
+}
+
+message Field {
+  string name = 1;
+  fennel.proto.schema.DataType dtype = 2;
+}
+
+message NullType {}
+message IntType {}
+message DoubleType {}
+message StringType {}
+message BoolType {}
+message TimestampType {}
+message DateType {}
+message BytesType {}
+
+message RegexType { string pattern = 1; }
+
+message ArrayType { DataType of = 1; }
+
+message EmbeddingType { int32 embedding_size = 2; }
+
+message MapType {
+  DataType key = 1;
+  DataType value = 2;
+}
+
+message StructType {
+  string name = 1;
+  repeated Field fields = 2;
+}
+
+message Between {
+  DataType dtype = 1;
+  Value min = 2;
+  Value max = 3;
+  bool strict_min = 4;
+  bool strict_max = 5;
+}
+
+message OneOf {
+  DataType of = 1;
+  repeated Value options = 2;
+}
+
+message OptionalType { DataType of = 1; }
+
+message DecimalType { int32 scale = 1; }
+
+message Schema { repeated Field fields = 1; }
+
+message DSSchema {
+  Schema keys = 1;
+  Schema values = 2;
+  string timestamp = 3;
+  repeated string erase_keys = 4;
+}
+
+message Value {
+  oneof variant {
+    None none = 1;
+    bool bool = 2;
+    int64 int = 3;
+    double float = 4;
+    string string = 5;
+    google.protobuf.Timestamp timestamp = 6;
+    Embedding embedding = 7;
+    List list = 8;
+    Map map = 9;
+    StructValue struct = 10;
+    Decimal decimal = 11;
+    Date date = 12;
+    bytes bytes = 13;
+  }
+}
+
+message Embedding { repeated double values = 1; }
+message List {
+  fennel.proto.schema.DataType dtype = 1;
+  repeated Value values = 2;
+}
+
+message Map {
+  message Entry {
+    Value key = 1;
+    Value value = 2;
+  }
+  fennel.proto.schema.DataType key_dtype = 1;
+  fennel.proto.schema.DataType value_dtype = 2;
+
+  repeated Entry entries = 3;
+}
+
+message StructValue {
+  message Entry {
+    string name = 1;
+    Value value = 2;
+  }
+  repeated Entry fields = 1;
+}
+
+message Decimal {
+  int32 scale = 1;
+  int64 value = 2;
+}
+
+message Date { int64 days = 2; }
+
+message None {}

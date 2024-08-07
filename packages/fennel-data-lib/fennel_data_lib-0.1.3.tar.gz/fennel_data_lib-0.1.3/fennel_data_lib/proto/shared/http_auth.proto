@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package fennel.proto.http_auth;
+import "google/protobuf/wrappers.proto";
+
+message HTTPAuthentication {
+  oneof variant {
+    BasicAuthentication basic = 1;
+    TokenAuthentication token = 2;
+  }
+}
+  
+message BasicAuthentication {
+  string username = 1;
+  google.protobuf.StringValue password = 2;
+}
+
+message TokenAuthentication {
+  string token = 1;
+}

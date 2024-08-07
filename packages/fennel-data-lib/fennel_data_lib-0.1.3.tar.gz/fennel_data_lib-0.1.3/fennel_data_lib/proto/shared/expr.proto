@@ -1,0 +1,188 @@
+syntax = "proto3";
+
+package fennel.proto.expr;
+
+import "schema.proto";
+
+message Expr {
+  oneof node {
+    Ref ref = 1;
+    // Used for serializing a literal as a JSON string
+    JsonLiteral json_literal = 2;
+    Unary unary = 4;
+    Case case = 5;
+    Binary binary = 6;
+    IsNull isnull =  7;
+    FillNull fillnull = 8;
+    ListFn list_fn = 9;
+    MathFn math_fn = 10;
+    StructFn struct_fn = 11;
+    DictFn dict_fn = 12;
+    StringFn string_fn = 13;
+  }
+}
+
+message JsonLiteral {
+  // Literal sent as a JSON string
+  string literal = 1;
+  fennel.proto.schema.DataType dtype = 2; 
+}
+
+message Ref {
+  string name = 1;
+}
+
+enum UnaryOp {
+  NEG = 0;
+  NOT = 1;
+  LEN = 2;
+}
+
+message Unary {
+  UnaryOp op = 1;
+  Expr operand = 2;
+}
+
+enum BinOp {
+  ADD = 0;
+  SUB = 1;
+  MUL = 2;
+  DIV = 3;
+  MOD = 4;
+  FLOOR_DIV = 5;
+  EQ = 6;
+  NE = 7;
+  GT = 8;
+  GTE = 9;
+  LT = 10;
+  LTE = 11;
+  AND = 12;
+  OR = 13;
+}
+
+message Binary {
+  Expr left = 1;
+  Expr right = 2;
+  BinOp op = 3;
+}
+
+message Case {
+  repeated WhenThen when_then = 1;
+  Expr otherwise = 2;
+}
+
+message WhenThen {
+  Expr when = 1;
+  Expr then = 2;
+}
+
+message IsNull {
+  Expr operand = 1;
+}
+
+message FillNull {
+  Expr operand = 1;
+  Expr fill = 2;
+}
+
+message ListOp {
+  oneof fn_type {
+    Len len = 1;
+    // Index to fetch an element from the list
+    Expr get = 2;
+    // Check if the list contains an element
+    Contains contains = 3;
+  }
+}
+
+message Len {}
+
+
+message Contains {
+  Expr element = 1;
+}
+
+message ListFn {
+  Expr list = 1;
+  ListOp fn = 2; 
+}
+
+message MathOp {
+  oneof fn_type {
+    Round round = 1;
+    Abs abs = 2;
+    Ceil ceil = 3;
+    Floor floor = 4;
+  }
+}
+
+message Round {
+  int32 precision = 1;
+}
+
+message Abs {}
+message Ceil {}
+message Floor {}
+
+message MathFn {
+  Expr operand = 1;
+  MathOp fn = 2;
+}
+
+message StructOp {
+  oneof fn_type {
+    string field = 1;
+  }
+}
+
+message StructFn {
+  Expr struct = 1;
+  StructOp fn = 2;
+}
+
+message DictGet {
+  Expr field = 1;
+  Expr default_value = 3;
+}
+
+message DictOp {
+  oneof fn_type {
+    Len len = 1;
+    DictGet get = 2;
+    Contains contains = 3;
+  }
+}
+
+message DictFn {
+  Expr dict = 1;
+  DictOp fn = 2;
+}
+
+message StringOp {
+  oneof fn_type {
+    Len len = 1;
+    ToLower tolower = 2;
+    ToUpper toupper = 3;
+    Contains contains = 4;
+    StartsWith startswith = 5;
+    EndsWith endswith = 6;
+    Concat concat = 7;
+  }
+}
+
+message ToLower {}
+message ToUpper {}
+message StartsWith {
+  Expr key = 1;
+}
+message EndsWith {
+  Expr key = 1;
+}
+message Concat {
+  Expr other = 1;
+}
+
+message StringFn {
+  Expr string = 1;
+  StringOp fn = 2;
+}

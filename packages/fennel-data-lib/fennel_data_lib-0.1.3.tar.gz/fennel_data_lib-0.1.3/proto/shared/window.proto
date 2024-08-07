@@ -1,0 +1,36 @@
+
+syntax = "proto3";
+
+package fennel.proto.window;
+import "google/protobuf/duration.proto";
+import "pycode.proto";
+import "schema.proto";
+
+message Window {
+    oneof variant {
+        Sliding sliding = 1;
+        Forever forever = 2;
+
+        Session session = 3;
+        Tumbling tumbling = 4;
+        Hopping hopping = 5;
+    }
+}
+
+//  These are continuous windows
+message Sliding { google.protobuf.Duration duration = 1; }
+message Forever {}
+
+// These are fixed window
+message Tumbling { google.protobuf.Duration duration = 1; }
+message Hopping {
+    google.protobuf.Duration duration = 1;
+    google.protobuf.Duration stride = 2;
+}
+message Session { google.protobuf.Duration gap = 1; }
+
+message Summary {
+    string column_name = 1;
+    fennel.proto.schema.DataType output_type = 2;
+    fennel.proto.pycode.PyCode pycode = 3;
+}

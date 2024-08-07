@@ -1,0 +1,90 @@
+syntax = "proto3";
+
+package fennel.proto.spec;
+import "window.proto";
+
+message PreSpec {
+  oneof variant {
+    Sum sum = 1;
+    Average average = 2;
+    Count count = 3;
+    LastK last_k = 4;
+    Min min = 5;
+    Max max = 6;
+    Stddev stddev = 7;
+    Distinct distinct = 8;
+    Quantile quantile = 9;
+    ExponentialDecayAggregate exp_decay = 10;
+  }
+}
+
+message Sum {
+  string of = 1;
+  string name = 2;
+  fennel.proto.window.Window window = 3;
+}
+
+message Average {
+  string of = 1;
+  string name = 2;
+  fennel.proto.window.Window window = 3;
+  double default = 4;
+}
+
+message Count {
+  string name = 1;
+  fennel.proto.window.Window window = 2;
+  bool unique = 3;
+  bool approx = 4;
+  string of = 5;
+}
+
+message LastK {
+  string of = 1;
+  string name = 2;
+  uint32 limit = 3;
+  bool dedup = 4;
+  fennel.proto.window.Window window = 5;
+}
+message Min {
+  string of = 1;
+  string name = 2;
+  fennel.proto.window.Window window = 3;
+  double default = 4;
+}
+
+message Max {
+  string of = 1;
+  string name = 2;
+  fennel.proto.window.Window window = 3;
+  double default = 4;
+}
+
+message Stddev {
+  string of = 1;
+  string name = 2;
+  fennel.proto.window.Window window = 3;
+  double default = 4;
+}
+
+message Distinct {
+  string of = 1;
+  string name = 2;
+  fennel.proto.window.Window window = 3;
+}
+
+message Quantile {
+  string of = 1;
+  string name = 2;
+  fennel.proto.window.Window window = 3;
+  optional double default = 4;
+  double quantile = 5;
+  bool approx = 6;
+}
+
+message ExponentialDecayAggregate {
+  string of = 1;
+  string name = 2;
+  fennel.proto.window.Window window = 3;
+  uint32 half_life_seconds = 4;
+}

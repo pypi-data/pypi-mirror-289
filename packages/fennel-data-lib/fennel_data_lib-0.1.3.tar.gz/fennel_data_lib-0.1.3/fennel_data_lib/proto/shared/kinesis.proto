@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package fennel.proto.kinesis;
+
+enum InitPosition {
+  LATEST = 0;
+  TRIM_HORIZON = 1;
+  AT_TIMESTAMP = 2;
+}

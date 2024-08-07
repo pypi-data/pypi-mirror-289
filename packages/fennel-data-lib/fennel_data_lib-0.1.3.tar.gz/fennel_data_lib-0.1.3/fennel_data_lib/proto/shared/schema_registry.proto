@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package fennel.proto.schema_registry;
+import "http_auth.proto";
+
+enum RegistryProvider {
+    CONFLUENT = 0;
+}
+
+message SchemaRegistry {
+  RegistryProvider registry_provider = 1;
+  string url = 2;
+  fennel.proto.http_auth.HTTPAuthentication auth = 3;
+}

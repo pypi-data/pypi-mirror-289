@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package fennel.proto.services;
+
+import "dataset.proto";
+import "featureset.proto";
+import "connector.proto";
+import "expectations.proto";
+import "index.proto";
+
+message SyncRequest {
+  repeated fennel.proto.dataset.CoreDataset datasets = 1;
+  repeated fennel.proto.dataset.Pipeline pipelines = 2;
+  repeated fennel.proto.dataset.Operator operators = 3;
+  repeated fennel.proto.featureset.CoreFeatureset feature_sets = 4;
+  repeated fennel.proto.featureset.Feature features = 5;
+  repeated fennel.proto.featureset.Extractor extractors = 6;
+  repeated fennel.proto.featureset.Model models = 7;
+  repeated fennel.proto.connector.Source sources = 8;
+  repeated fennel.proto.connector.ExtDatabase extdbs = 9;
+  repeated fennel.proto.expectations.Expectations expectations = 10;
+  string message = 11;
+  repeated fennel.proto.index.OfflineIndex offline_indices = 12;
+  repeated fennel.proto.index.OnlineIndex online_indices = 13;
+  repeated fennel.proto.connector.Sink sinks = 14;
+}

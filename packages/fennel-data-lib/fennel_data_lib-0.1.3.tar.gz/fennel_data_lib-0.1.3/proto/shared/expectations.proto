@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package fennel.proto.expectations;
+
+import "metadata.proto";
+
+message Expectations {
+  enum EntityType {
+    Dataset = 0;
+    Featureset = 1;
+  }
+  string entity_name = 1;
+  int32 entity_version = 2;
+  string suite = 3;
+  repeated Expectation expectations = 4;
+  int32  version = 5;
+  fennel.proto.metadata.Metadata metadata = 6;
+  EntityType e_type = 7;
+  repeated string tags = 8;
+}
+
+message Expectation {
+  string expectation_type = 1;
+  // This is a JSON string that contains the arguments for the expectation.
+  string expectation_kwargs = 2;
+}

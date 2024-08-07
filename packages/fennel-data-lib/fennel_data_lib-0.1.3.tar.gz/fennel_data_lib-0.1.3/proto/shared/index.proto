@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package fennel.proto.index;
+import "google/protobuf/duration.proto";
+
+enum IndexType {
+    PRIMARY = 0;
+}
+
+message IndexDuration {
+    oneof variant {
+        string forever = 1;
+        google.protobuf.Duration duration = 2;
+    }
+}
+
+message OfflineIndex {
+    string ds_name = 1;
+    uint32 ds_version = 2;
+    IndexType index_type = 3;
+    IndexDuration duration = 4;
+
+    // Next id: 5
+}
+
+message OnlineIndex {
+    string ds_name = 1;
+    uint32 ds_version = 2;
+    IndexType index_type = 3;
+    IndexDuration duration = 4;
+
+    // Next id: 5
+}

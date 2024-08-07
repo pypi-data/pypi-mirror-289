@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package fennel.proto.format;
+import "schema_registry.proto";
+
+message FileFormat {
+  message Parquet {}
+  message Json {}
+  message Avro { 
+    fennel.proto.schema_registry.SchemaRegistry schema_registry = 1; 
+  }
+  message Hudi {}
+  message DeltaTable {}
+  message CSV { bytes delimiter = 1; }
+  message Protobuf {
+    fennel.proto.schema_registry.SchemaRegistry schema_registry = 1;
+  }
+
+  oneof kind {
+    Parquet parquet = 1;
+    Json json = 2;
+    Avro avro = 3;
+    Hudi hudi = 4;
+    DeltaTable delta_table = 5;
+    CSV csv = 6;
+    // deprecated jsonl = 7;
+    Protobuf protobuf = 8;
+    // next id = 9;
+  }
+}

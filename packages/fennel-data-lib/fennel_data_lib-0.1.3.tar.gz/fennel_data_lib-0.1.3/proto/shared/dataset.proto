@@ -1,0 +1,318 @@
+syntax = "proto3";
+
+package fennel.proto.dataset;
+
+import "google/protobuf/duration.proto";
+import "metadata.proto";
+import "pycode.proto";
+import "schema.proto";
+import "spec.proto";
+import "window.proto";
+import "expr.proto";
+
+message CoreDataset {
+  string name = 1;
+  fennel.proto.metadata.Metadata metadata = 2;
+  fennel.proto.schema.DSSchema dsschema = 3;
+  google.protobuf.Duration history = 4;
+  google.protobuf.Duration retention = 5;
+  map<string, fennel.proto.metadata.Metadata> field_metadata = 6;
+  fennel.proto.pycode.PyCode pycode = 7;
+  bool is_source_dataset = 8;
+  uint32 version = 9;
+
+  // Union of all tags based on ownership and dataflow semantics.
+  repeated string tags = 10;
+}
+
+// All integers representing time are in microseconds and hence should be int64.
+
+message OnDemand {
+  string function_source_code = 1;
+  bytes function = 2;
+  // TODO(mohit): Make this duration
+  int64 expires_after = 3;
+}
+
+//----------------------------------------------------------------------------------------------
+// Pipeline
+//----------------------------------------------------------------------------------------------
+
+message Pipeline {
+  string name = 1;
+  string dataset_name = 2;
+  string signature = 3;
+  fennel.proto.metadata.Metadata metadata = 4;
+  repeated string input_dataset_names = 5;
+  uint32 ds_version = 6;
+  fennel.proto.pycode.PyCode pycode = 7;
+}
+
+// Each operator corresponds to a valid operation as part of a pipeline
+message Operator {
+  // Every operator has an ID assigned by the client
+  string id = 1;
+  // If the operator is the "root" operator in the given `pipeline` of the given
+  // `dataset`.
+  bool is_root = 2;
+  // Name of the pipeline in which this operator is defined in
+  string pipeline_name = 3;
+  // Name of the dataset in which the pipeline is defined in
+  string dataset_name = 4;
+  uint32 ds_version = 20;
+
+  oneof kind {
+    Aggregate aggregate = 5;
+    Join join = 6;
+    Transform transform = 7;
+    Union union = 8;
+    Filter filter = 9;
+    DatasetRef dataset_ref = 10;
+    Rename rename = 12;
+    Drop drop = 13;
+    Explode explode = 14;
+    Dedup dedup = 15;
+    First first = 16;
+    Assign assign = 17;
+    Dropnull dropnull = 18;
+    WindowOperatorKind window = 19;
+    Latest latest = 21;
+    Changelog changelog = 22;
+    AssignExpr assign_expr = 23;
+    FilterExpr filter_expr = 24;
+  }
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+
+  // Name of the operator assigned by the server
+  string name = 11;
+
+  // Next id: 21
+}
+
+message Aggregate {
+  enum EmitStrategy {
+    Eager = 0;
+    Final = 1;
+  }
+  string operand_id = 1;
+  repeated string keys = 2;
+  repeated fennel.proto.spec.PreSpec specs = 3;
+  optional string along = 5;
+  EmitStrategy emit_strategy = 6;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 4;
+}
+
+message Join {
+  enum How {
+    Left = 0;
+    Inner = 1;
+  }
+  string lhs_operand_id = 1;
+  // RHS of a JOIN can only be a dataset, here it refers to the DSRef operator
+  string rhs_dsref_operand_id = 2;
+  // Map of left field name to right field name to join on.
+  map<string, string> on = 3;
+  optional google.protobuf.Duration within_low = 6;
+  optional google.protobuf.Duration within_high = 7;
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string lhs_operand_name = 4;
+  string rhs_dsref_operand_name = 5;
+  How how = 8;
+
+  // Next id: 9
+}
+
+message Transform {
+  string operand_id = 1;
+  map<string, fennel.proto.schema.DataType> schema = 2;
+  fennel.proto.pycode.PyCode pycode = 3;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 4;
+}
+
+message FilterExpr {
+  string operand_id = 1;
+  fennel.proto.expr.Expr expr = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+message Filter {
+  string operand_id = 1;
+  fennel.proto.pycode.PyCode pycode = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+message Assign {
+  string operand_id = 1;
+  fennel.proto.pycode.PyCode pycode = 2;
+  string column_name = 3;
+  fennel.proto.schema.DataType output_type = 4;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 5;
+}
+
+
+message AssignExpr {
+  string operand_id = 1;
+  map<string, fennel.proto.expr.Expr> exprs = 2;
+  map<string, fennel.proto.schema.DataType> output_types = 3;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 5;
+}
+
+
+message Dropnull {
+  string operand_id = 1;
+  repeated string columns = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+message Drop {
+  string operand_id = 1;
+  repeated string dropcols = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+message Rename {
+  string operand_id = 1;
+  map<string, string> column_map = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+message Union {
+  repeated string operand_ids = 1;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  repeated string operand_names = 2;
+}
+
+message Dedup {
+  string operand_id = 1;
+  repeated string columns = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+message Explode {
+  string operand_id = 1;
+  repeated string columns = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+message First {
+  string operand_id = 1;
+  repeated string by = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+message Latest {
+  string operand_id = 1;
+  repeated string by = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+message Changelog {
+  string operand_id = 1;
+  string delete_column = 2;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 3;
+}
+
+
+
+message WindowOperatorKind {
+  string operand_id = 1;
+  fennel.proto.window.Window window_type = 2;
+  repeated string by = 3;
+  string field = 4;
+  optional fennel.proto.window.Summary summary = 6;
+
+  // NOTE: FOLLOWING PROPERTIES ARE SET BY THE SERVER AND WILL BE IGNORED BY
+  // THE CLIENT
+  string operand_name = 5;
+}
+
+message DatasetRef {
+  string referring_dataset_name = 1;
+}
+
+//----------------------------------------------------------------------------------------------
+// Lineage
+//----------------------------------------------------------------------------------------------
+
+message Dataflow {
+  message PipelineDataflow {
+    string dataset_name = 1;
+    string pipeline_name = 2;
+    repeated Dataflow input_dataflows = 3;
+  }
+  oneof kind {
+    string dataset_name = 1;
+    PipelineDataflow pipeline_dataflow = 2;
+  }
+  repeated string tags = 3;
+}
+
+message PipelineLineages {
+  string dataset_name = 1;
+  string pipeline_name = 2;
+  repeated DatasetLineages input_datasets = 3;
+  bool active = 4;
+  repeated string tags = 5;
+}
+
+message DatasetPipelineLineages {
+  repeated PipelineLineages pipeline_lineages = 2;
+}
+
+message DatasetLineages {
+  oneof kind {
+    // If it is a source dataset, it will have a source dataset name.
+    string source_dataset = 1;
+    // If it is a derived dataset, it will have pipeline lineages, one for each
+    // pipeline in the dataset.
+    DatasetPipelineLineages derived_dataset = 2;
+  }
+  repeated string tags = 3;
+}

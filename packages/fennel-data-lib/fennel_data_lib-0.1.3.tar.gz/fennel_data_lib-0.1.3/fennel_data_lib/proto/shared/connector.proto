@@ -1,0 +1,312 @@
+syntax = "proto3";
+
+/*
+Vocabulary:
+  1. ExtDatabase refers to DB in external data sources & contains
+credentials/config.
+  2. ExtTable refers to a specific table etc. in the context of an external
+database
+  3. Source refers to a (table, dataset) along with some config
+  4. Sink refers to a (table, dataset) along with some config
+  5. This whole module is called connector.
+
+*/
+
+package fennel.proto.connector;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+import "kinesis.proto";
+import "pycode.proto";
+import "schema_registry.proto";
+import "schema.proto";
+
+// -----------------------------------------
+// First we have all the databases
+// -----------------------------------------
+
+message ExtDatabase {
+  string name = 1;
+  oneof variant {
+    MySQL mysql = 2;
+    Postgres postgres = 3;
+    // When a source has already been created on the console
+    // Or via code and is specified by name ONLY.
+    Reference reference = 4;
+    S3 s3 = 5;
+    Bigquery bigquery = 6;
+    Snowflake snowflake = 7;
+    Kafka kafka = 8;
+    Webhook webhook = 9;
+    Kinesis kinesis = 10;
+    Redshift redshift = 11;
+    Mongo mongo = 12;
+    PubSub pubsub = 13;
+  }
+}
+
+enum CDCStrategy {
+  Append = 0;
+  Upsert = 1;
+  Debezium = 2;
+  Native = 3;
+  Delete = 4;
+}
+
+message PubSubFormat {
+  oneof variant {
+    JsonFormat json = 1;
+  }
+}
+
+message KafkaFormat {
+  oneof variant {
+    JsonFormat json = 1;
+    AvroFormat avro = 2;
+    ProtobufFormat protobuf = 3;
+  }
+}
+
+message JsonFormat {
+}
+
+message AvroFormat {
+  fennel.proto.schema_registry.SchemaRegistry schema_registry = 1;
+}
+
+message ProtobufFormat {
+  fennel.proto.schema_registry.SchemaRegistry schema_registry = 1;
+}
+
+message Reference {
+  enum ExtDBType {
+    MYSQL = 0;
+    POSTGRES = 1;
+    S3 = 2;
+    KAFKA = 3;
+    BIGQUERY = 4;
+    SNOWFLAKE = 5;
+    WEBHOOK = 6;
+    KINESIS = 7;
+    REDSHIFT = 8;
+    MONGO = 9;
+    PUBSUB = 10;
+  }
+  ExtDBType dbtype = 1;
+}
+
+message Webhook {
+  string name = 1;
+  google.protobuf.Duration retention = 2;
+}
+
+message MySQL {
+  string host = 1;
+  string database = 2;
+  string user = 3;
+  string password = 4;
+  uint32 port = 5;
+  string jdbc_params = 6;
+}
+
+message Postgres {
+  string host = 1;
+  string database = 2;
+  string user = 3;
+  string password = 4;
+  uint32 port = 5;
+  string jdbc_params = 6;
+}
+
+message S3 {
+  string aws_secret_access_key = 1;
+  string aws_access_key_id = 2;
+  optional string role_arn = 3;
+}
+
+message Bigquery {
+  string dataset_id = 1;
+  string service_account_key = 2;
+  string project_id = 3;
+}
+
+message Snowflake {
+  string account = 1;
+  string user = 2;
+  string password = 3;
+  string schema = 4;
+  string warehouse = 5;
+  string role = 6;
+  string database = 7;
+}
+
+message Kafka {
+  string bootstrap_servers = 1;
+  string security_protocol = 2;
+  string sasl_mechanism = 3;
+  string sasl_jaas_config = 4 [deprecated = true];
+  optional string sasl_plain_username = 5;
+  optional string sasl_plain_password = 6;
+  string group_id = 7 [deprecated = true];
+}
+
+message Kinesis {string role_arn = 1;}
+
+// TODO(Harsha): Use this struct for other sources
+message Credentials {
+  string username = 1;
+  string password = 2;
+}
+
+message RedshiftAuthentication {
+  oneof variant {
+    string s3_access_role_arn = 1;
+    Credentials credentials = 2;
+  }
+}
+
+message Redshift {
+  string database = 1;
+  string host = 2;
+  uint32 port = 3;
+  string schema = 4;
+  RedshiftAuthentication redshift_authentication = 5;
+}
+
+message Mongo {
+  string host = 1;
+  string database = 2;
+  string user = 3;
+  string password = 4;
+}
+
+message PubSub {
+  string project_id = 1;
+  string service_account_key = 2;
+}
+
+
+// -----------------------------------------
+// Next, all the tables
+// -----------------------------------------
+
+message ExtTable {
+  oneof variant {
+    MySQLTable mysql_table = 1;
+    PostgresTable pg_table = 2;
+    S3Table s3_table = 3;
+    KafkaTopic kafka_topic = 4;
+    SnowflakeTable snowflake_table = 5;
+    BigqueryTable bigquery_table = 6;
+    WebhookEndpoint endpoint = 7;
+    KinesisStream kinesis_stream = 8;
+    RedshiftTable redshift_table = 9;
+    MongoCollection mongo_collection = 10;
+    PubSubTopic pubsub_topic = 11;
+  }
+}
+
+message MySQLTable {
+  ExtDatabase db = 1;
+  string table_name = 2;
+}
+
+message PostgresTable {
+  ExtDatabase db = 1;
+  string table_name = 2;
+  optional string slot_name = 3;
+}
+
+message S3Table {
+  string bucket = 1;
+  string path_prefix = 2;
+  string delimiter = 4;
+  string format = 5;
+  ExtDatabase db = 6;
+  bool pre_sorted = 7;
+  string path_suffix = 8;
+  optional google.protobuf.Duration spread = 3;
+  repeated string headers = 9;
+}
+
+message KafkaTopic {
+  ExtDatabase db = 1;
+  string topic = 2;
+  KafkaFormat format = 3;
+}
+
+message BigqueryTable {
+  ExtDatabase db = 1;
+  string table_name = 2;
+}
+
+message SnowflakeTable {
+  ExtDatabase db = 1;
+  string table_name = 2;
+}
+
+message WebhookEndpoint {
+  ExtDatabase db = 1;
+  string endpoint = 2;
+  google.protobuf.Duration duration = 3;
+}
+
+message KinesisStream {
+  string stream_arn = 1;
+  fennel.proto.kinesis.InitPosition init_position = 2;
+  google.protobuf.Timestamp init_timestamp = 3;
+  string format = 4;
+  ExtDatabase db = 5;
+}
+
+message RedshiftTable {
+  ExtDatabase db = 1;
+  string table_name = 2;
+}
+
+message PubSubTopic {
+  ExtDatabase db = 1;
+  string topic_id = 2;
+  PubSubFormat format = 3;
+}
+
+message PreProcValue {
+  oneof variant {
+    string ref = 1;
+    schema.Value value = 2;
+  }
+}
+
+message MongoCollection {
+  ExtDatabase db = 1;
+  string collection_name = 2;
+}
+
+// -----------------------------------------
+// Finally, all the sources and sinks
+// -----------------------------------------
+
+message Source {
+  ExtTable table = 1;
+  string dataset = 2;
+  uint32 ds_version = 3;
+  google.protobuf.Duration every = 4;
+  optional string cursor = 5;
+  google.protobuf.Duration disorder = 6;
+  string timestamp_field = 7;
+  CDCStrategy cdc = 8;
+  google.protobuf.Timestamp starting_from = 9;
+  map<string, PreProcValue> pre_proc = 10;
+  uint32 version = 11;
+  bool bounded = 12;
+  optional google.protobuf.Duration idleness = 13;
+  google.protobuf.Timestamp until = 14;
+  optional fennel.proto.pycode.PyCode filter = 15;
+}
+
+message Sink {
+  ExtTable table = 1;
+  string dataset = 2;
+  uint32 ds_version = 3;
+  CDCStrategy cdc = 4;
+}
