@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: YuChulYANG
+Version: 1.0.1
+Summary: A small example package
+Home-page: https://pipy.org/project/YuChulYANG/
+Author: YuChul YANG
+Author-email: yuchulyang@naver.com
+License: UNKNOWN
+Description: # YuChul YANG
+        
+        python setup.py sdist bdist_wheel
+        python -m twine upload dist/*
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
