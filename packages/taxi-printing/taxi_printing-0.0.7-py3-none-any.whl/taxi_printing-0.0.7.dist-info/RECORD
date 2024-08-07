@@ -1,0 +1,10 @@
+taxi_printing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taxi_printing/classes.py,sha256=jrWTnx0RCk8w68__gAaWpvdw-FemsU2VXBxbi8vdfJ8,970
+taxi_printing/data_processor.py,sha256=RyK0riYhBJoGYl8nfpgeKOczX1SnHyi0H3tuQsGiBu4,1621
+taxi_printing/dollars_to_words.py,sha256=ZdmhGcCsRR31U9CDsNNQRLJKPfnxw27amhdeGCRcV_Y,1533
+taxi_printing/google_sheets.py,sha256=vOwQEAa6yjqCbB5xJ3KRHWCJK6u_n1Hk3bUaUmvXgxA,3005
+taxi_printing/print_dockets.py,sha256=lNNtrmz3-rEMyKcZHNUr4aHfHL_YomQ9CRZfY_zZTW4,2071
+taxi_printing-0.0.7.dist-info/METADATA,sha256=bGFItt7GHhD1aX7W6o9C9KIxCB9DoUp_GtwmVXw4qWE,615
+taxi_printing-0.0.7.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+taxi_printing-0.0.7.dist-info/licenses/LICENSE,sha256=M8zRvtcN09msetbnlVSZO3lwK4lv1nZyp0Ja-a3RBiI,1072
+taxi_printing-0.0.7.dist-info/RECORD,,
