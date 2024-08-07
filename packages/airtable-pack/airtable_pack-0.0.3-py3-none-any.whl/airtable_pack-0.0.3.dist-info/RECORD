@@ -1,0 +1,12 @@
+airtable_pack/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airtable_pack/client.py,sha256=nf3W0c5H_CGthrKoK3BMtdNGuE4_9ZNUPOMnDNeGV7o,1141
+airtable_pack/operations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airtable_pack/operations/create_record.py,sha256=QciXKgheG3nzhdHAPby76UkHd1vp4-sm08oEwbicX8s,138
+airtable_pack/operations/delete_record.py,sha256=M4krYHM9fwjaaTXxZf91h_XOHCIHeyqUeBL5G-PrgJA,212
+airtable_pack/operations/get_record.py,sha256=QEcizH9r5l6wAJ0exct5nOS_P3eOSFJq9da2xN0Xoyk,208
+airtable_pack/operations/update_record.py,sha256=NTtnnDKDGYJippbwfAh_hM_iGZC2v8BZo4QLN9iRwJU,384
+airtable_pack-0.0.3.dist-info/LICENSE,sha256=iHcNH4HWsDuIADzyzBbsJgrAaAUmUq5b7pJR39NzdRk,1075
+airtable_pack-0.0.3.dist-info/METADATA,sha256=KXXPR0RjmtRPy9_2ISi9ZlTARZfAZMuFxdc42xp-MfA,954
+airtable_pack-0.0.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+airtable_pack-0.0.3.dist-info/top_level.txt,sha256=DWSeBUignqarvUyrMpJKxR2Z_a1tMHd1NCenKwIjJng,14
+airtable_pack-0.0.3.dist-info/RECORD,,
