@@ -1,0 +1,13 @@
+setuptools>=64
+setuptools_scm>=8
+setuptools_scm_git_archive
+dask[complete]>=0.13.0
+graphviz>=0.4.9
+matplotlib>=1.0.0
+numpy>=1.24.4
+pandas>=2.2.2
+python-dateutil>=2.0.0
+scipy>=1.10.1
+sympy>=1.0.0
+numpydoc>=0.6.0
+cython>=0.29

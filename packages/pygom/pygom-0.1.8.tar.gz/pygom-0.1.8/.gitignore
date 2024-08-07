@@ -1,0 +1,25 @@
+# For python
+.eggs/*
+build/*
+cover/*
+*.pyc
+*.pyd
+__pycache__
+*.egg-info
+*.egg
+.vscode/
+
+# For jupyter / ipython
+*/.ipynb_checkpoints
+
+# For eclipse
+.project
+.pydevproject
+.settings
+
+# For built documentation
+/docs/pygom-doc/_build/*
+/doc/_build/
+/doc/source/savefig/*
+/docs/pygom-doc/_autosummary/
+*/_build/*
