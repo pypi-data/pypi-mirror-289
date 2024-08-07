@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: meshing
+Version: 2.0.5
+Summary: Simple Python client library for https://devnull.cn/meshing
+Home-page: https://devnull.cn
+Author: Xizhen Du
+Author-email: xizhendu@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: theid
+
+# meshing-sdk-python
+
+#### Build your meshing network in seconds.
+
+```bash
+## Prerequisites: 
+# 1, At least 1 instance with public ip allows UDP inbound. By default, it is udp/7070.
+# 2, Permission to update your routing tables in your VPC.
+
+# 1st, Run following in every instance:
+python3 -c 'import meshing; meshing.checkin()'
+
+# 2nd, Make sure above checkin() completed in ALL regions, then connect():
+python3 -c 'import meshing; meshing.connect()'
+
+# 3rd, check your interface, and you can ping each other by now.
+ifconfig mesh0
+
+# 4th, if you need connecting the subnets behind, update routes in VPC or home router.
+# This parts vary depending your specific requirements.
+
+# 5th, if your need update the default local cidr in routing:
+# by default your_local_ipaddr_by_/23 is used.
+python3 -c 'import meshing; meshing.checkin(cidr="1.2.3.0/24")' # or
+python3 -c 'import meshing; meshing.checkin(cidr="1.2.3.0/24, 2.3.4.0/24")' # one-string-by-comma
+python3 -c 'import meshing; meshing.connect()' # connect() again in all regions.
+
+```
+
+### Sample - Connecting Beijing / Shanghai / Guangzhou / Chongqing
+
+
+#### 1 - Checkin from ALL nodes (Ubuntu/22.04)
+```bash
+# Beijing
+root@ap-beijing-1:~#  pip3 install meshing
+root@ap-beijing-1:~#  python3 -c 'import meshing; meshing.checkin()'
+# Shanghai
+root@ap-shanghai-1:~#  pip3 install meshing
+root@ap-shanghai-1:~#  python3 -c 'import meshing; meshing.checkin()'
+# Guangzhou
+root@ap-guangzhou-1:~#  pip3 install meshing
+root@ap-guangzhou-1:~#  python3 -c 'import meshing; meshing.checkin()'
+# Chongqing
+root@ap-chongqing-1:~#  pip3 install meshing
+root@ap-chongqing-1:~#  python3 -c 'import meshing; meshing.checkin()'
+```
+
+#### 2 - Building the meshing network
+```bash
+root@ap-beijing-1:~# python3 -c 'import meshing; meshing.connect()'
+root@ap-shanghai-1:~# python3 -c 'import meshing; meshing.connect()'
+root@ap-guangzhou-1:~# python3 -c 'import meshing; meshing.connect()'
+root@ap-chongqing-1:~# python3 -c 'import meshing; meshing.connect()'
+```
+Waiting few seconds, then run ifconfig to check your interface:
+```bash
+
+ifconfig mesh0
+# trying to ping your peers' ipaddr:
+for n in {1..4}; do ping -c 3 10.249.249.$n; done
+
+# show your routes via mesh interface, shanghai as example:
+route -n | grep mesh0
+root@ap-shanghai-1:~# route -n | grep mesh0
+10.101.0.0      0.0.0.0         255.255.254.0   U     0      0        0 mesh0
+10.103.0.0      0.0.0.0         255.255.254.0   U     0      0        0 mesh0
+10.104.0.0      0.0.0.0         255.255.254.0   U     0      0        0 mesh0
+10.249.249.1    0.0.0.0         255.255.255.255 UH    0      0        0 mesh0
+10.249.249.3    0.0.0.0         255.255.255.255 UH    0      0        0 mesh0
+10.249.249.4    0.0.0.0         255.255.255.255 UH    0      0        0 mesh0
+root@ap-shanghai-1:~# 
+
+# You can now configure the routing based on your own specification. Good luck.
+# Contact: xizhendu/_@@@_/gmail.com
+```
