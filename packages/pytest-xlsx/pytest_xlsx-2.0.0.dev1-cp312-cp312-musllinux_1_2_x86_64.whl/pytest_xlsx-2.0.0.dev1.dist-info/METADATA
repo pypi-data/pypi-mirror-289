@@ -1,0 +1,268 @@
+Metadata-Version: 2.1
+Name: pytest-xlsx
+Version: 2.0.0.dev1
+Summary: pytest plugin for generating test cases by xlsx(excel)
+Author: dongfangtianyu
+Requires-Python: >=3.12,<3.13
+Requires-Dist: allure-pytest>=2.13.5
+Requires-Dist: jinja2>=3.1.4
+Requires-Dist: openpyxl>=3.0.10
+Requires-Dist: pydantic<3,>=2.0
+Requires-Dist: pytest~=8.2.2
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: tabulate[widechars]>=0.9.0
+Requires-Dist: wcwidth>=0.2.5
+Project-URL: Homepage, https://github.com/dongfangtianyu/pytest-xlsx
+Description-Content-Type: text/markdown
+
+# pytest-xlsx
+
+
+Pytest plugin for generating test cases with `.xlsx` files. 
+In test cases, you can use markers, fixtures, variables, and even call Python functions.
+Convenient implementation of keyword driven testing through Excel (similar to Robot Framework).
+
+
+## Require
+
+```
+python~=3.12
+pytest~=8.2
+openpyxl~=3.0.10
+pyyaml~=6.0
+```
+
+
+## Install
+```
+pip install pytest-xlsx
+```
+
+
+## Config
+
+```ini
+# pytest.ini
+
+[pytest]
+# To execute .xlsx files starting with "test_"
+run_xlsx_case = true 
+```
+
+
+## Usage
+
+### 1. Write tests
+
+| meta      |                                                              |          |
+| --------- | ------------------------------------------------------------ | -------- |
+| name      | 百度搜索_北京时间                                            |          |
+| mark      | usefixtures                                                  | chrome   |
+| goto      | https://www.baidu.com                                        |          |
+| send_keys | //*[@id="kw"]                                                | 北京时间 |
+| click     | //*[@id="su"]                                                |          |
+| save_text | //*[@id="1"]/div/div[1]/div/div/div/h3/div/div/div/p/span/span | title    |
+| assert_in | 北京时间                                                     | ${title} |
+
+
+### 2. Write Hook
+
+```python
+# conftest.py
+
+def pytest_xlsx_run_step(item):
+    if not hasattr(item, "driver"):
+        driver = item.usefixtures.get("chrome")
+        item.wd = KeyWord(driver)
+	
+    # `meta` column input method name
+    key_word = item.current_step["meta"]
+    # Other blank columns input parameters
+    args = [i for i in item.current_step["_BlankField"] if i is not None]
+
+    # Call the method
+    func = getattr(item.wd, key_word)
+    func(*args)
+
+    return True
+
+```
+
+
+
+
+
+
+### 3. Run pytest
+
+```
+(.venv) ~/pytest-xlsx-demo>pytest
+================== test session starts ==================
+platform win32 -- Python 3.12.2, pytest-8.2.2, pluggy-1.5.0
+rootdir: ~/pytest-yaml-demo
+configfile: pytest.ini
+plugins: allure-pytest-2.13.5, result-log-1.2.2, xlsx-2.0.0.dev1
+collected 1 item                                                                                 
+
+test_baidu.xlsx .                            [100%]
+
+================== 1 passed in 7.52s ================== 
+```
+
+
+
+
+
+
+## FeedBack
+
+WeChat: `python_sanmu`
+
+
+
+## Docs
+
+- [pytest-xlsx：把excel文件视为测试文件的pytest插件](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkxMDIyODUwOA==&action=getalbum&album_id=2706445356095520770#wechat_redirect)
+- [pytest-xlsx：使用hook自定义excel用例的执行方式](https://mp.weixin.qq.com/s/iD_KWamziFrTnDt8qpuWWA)
+
+
+
+## Changelog
+### dev
+
+
+
+-   **docs**: add changelog in readme
+
+
+
+### v2.0.0.dev1 (2024-8-6)
+
+- **deps**: update pytest~=8.2.2   ,python>=3.12,<3.13
+- **fix**: item_locals not injected variables
+- **chore**: adjust try_json log level
+
+
+
+### v2.0.0.dev0 (2024-07-20)
+
+-   **WIP**: enter 2.0 development, reference pytest-yaml v1.0
+-   **feat**: support pytest for all mark (e.g. `usefixture`、`parametrize`、`skip`)
+-   **feat**: new configuration `xlsx_run_case`，only enabled when it is true for the plugin
+-   **feat**: new configuration `xlsx_global_variable_paths`，load variables from YAML or JSON files
+-   **feat**: support variable syntax `${var_name}`，variables can be used from fixtures, parameterize, files
+-   **feat**: function `pytest_xlsx.add_globals` can be used to add new variables to the use case
+-   **feat**: the parameterized data can be a YAML or JSON file
+
+
+
+### v1.0.36.1 (2024-05-13)
+
+**Customization**: compatible with Python 3.6
+
+
+
+### v1.0.1 (2024-01-28)
+
+**deps**: update pytest<=8.1
+
+
+
+### v1.0.0 (2024-01-28)
+
+- **break**: remove fixture `xlsx_runner`
+- **feat**: ignore rows with no content in excel
+- **chore**: use new gh action approach to publish to pypi
+- **chore**: update gh action
+- **chore**: remove pytest-html
+
+
+
+### v0.5.2 (2023-07-03)
+
+- **deps**: update pytest>=7.4.0   ,pydantic>=2
+- **test**: supplement test case dependency files
+- **chore**: pdm check
+
+
+
+### v0.5.1 (2023-03-01)
+
+- **feat**: automatically complete table headers in excel when applying table format, retaining key for empty values to facilitate user usage
+- **fix**: setup-level error prompts cannot print
+
+
+
+### v0.5.0 (2023-02-27)
+
+-   **feat**: abandon the method of executing xlsxitem through fixture( `xlsx_runner`), use hook (`pytest_xlsx_run_step`) method instead
+-   **feat**: compatible with old fixture usage and provide deprecation warnings
+-   **feat**: support `mark.usefixtures` in .xlsx files
+
+-   **feat**: output code position and exception content after table when test case fails
+-   **test**: supplement conftest cases
+
+
+
+### v0.4.0 (2023-02-09)
+
+- **feat**: define new hook: pytest_xlsx_execute_step
+- **feat**: add sub-plugin CallRunner, compatible with original xlsx_runner usage
+- **feat**: add sub-plugin Allure, support dynamic marking with allure
+- **fix**: do not execute sub-plugin Allure when step is not marked
+- **test**: add test_allure.xlsx
+- **chore**: pytest-result-log records test case execution logs
+
+
+
+### v0.3.1 (2022-12-13)
+
+- **feat**: modify Runner execution method to display xlsx errors in table format
+- **feat**: remove fields with `None` values from setp, set key=`_BlankField` for empty fields in excel
+- **feat**: roughly bottom-level code, support parametrize and mark, incompatible with previous versions
+- **fix**: `-vv` parameter displays py path
+- **fix**: `_BlankFiel` field may not be a list
+- **test**: update cases to pass tests
+- **chore**: update dependencies
+
+
+
+### v0.2.0 (2022-11-06)
+
+-   **feat**: provide friendly error prompts and log records when excel format does not meet requirements
+- **docs**: add readme
+
+
+
+### v0.1.5 (2022-10-31)
+
+
+- **feat** : automatically add numbers to test case names to avoid overwriting of same-named cases
+- **feat** : plugin adds configuration option to support custom table structures
+- **test**: update test cases to pass tests
+- **fix**: remove a strange line break in logs
+- **fix**: no log recorded when excel format is incorrect
+- **chore**: flake8 ignore e203
+- **chore**: rename  `hooks.py` to `plugin.py`
+
+
+
+### v0.1.3 (2022-08-04)
+
+- **feat**: compatible with pytest-html plugin
+- **fix**: AssertionError
+- **chore**: modify class name  to resolve pytest warnings
+
+
+
+### v0.1.2 (2022-07-08)
+
+- **feat**: compatible with pytest plugins: allure, xdist
+- **feat**: create runner base class, xlsx_runner fixture should return instance object of Runner subclass
+
+
+
+
+### v0.1.0 (2022-06-25)
+
+-   **feat**: Recognized .xlsx files as pytest test cases
