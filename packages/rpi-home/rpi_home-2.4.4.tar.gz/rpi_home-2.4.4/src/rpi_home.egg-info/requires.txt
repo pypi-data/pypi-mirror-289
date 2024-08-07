@@ -1,0 +1,6 @@
+toml
+zeroconf
+ha_tiny
+
+[dev]
+pytest
