@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: thename
+Version: 1.0.3
+Summary: Talking to https://devnull.cn/name
+Home-page: https://devnull.cn
+Author: Xizhen Du
+Author-email: xizhendu@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# fakename
