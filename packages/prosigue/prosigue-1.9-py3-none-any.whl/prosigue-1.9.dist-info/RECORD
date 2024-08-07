@@ -1,0 +1,17 @@
+prosigue/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prosigue/command.py,sha256=VpzeQYl66HFx1GhfLtRhySoQJI1VQe4IUTax-TtPZwI,2974
+prosigue/another_bookstores/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prosigue/another_bookstores/do_hasta_time.py,sha256=gkig1r2ruu43x1uhKzBsREn8VHV0igclqjK8FQfhDy4,1130
+prosigue/another_bookstores/movenatu.py,sha256=JJzMtgoSIZKGfUqk74n7NqlKOSc3SvIq02vqoVQyHXg,1059
+prosigue/read_bookstores/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prosigue/read_bookstores/readme_do_hasta_time_help.py,sha256=6Z0e-CcQ_uH4jF759S6VOypP4VHRAn_ZoYWVOvzXzLI,829
+prosigue/read_bookstores/readme_movenatu_help.py,sha256=dcCtRfST0rscwDpDGKUxFuDD8VdG_4rnYbMRllVQT2M,2637
+prosigue/read_bookstores/readme_prosigue_help.py,sha256=BnOcXGOdeTcGQPCGPWWkKZOTT8c5ebVrUQe1jwn_Tx8,9910
+prosigue/read_bookstores/show_de_principiofinal.py,sha256=94dRaSXX6b0HmKaJw9SPRVpQBqiiGMSlMCuKS2xAwxo,804
+prosigue/standard/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prosigue/standard/principiofinal.py,sha256=4oGauQs2yoCj61wZN6CpA4dGcKqvKiljSNdcXNcy9Do,713
+prosigue-1.9.dist-info/METADATA,sha256=GxuzMk1Sy-kAEjn8PnkTdTbr2_FxElr_lih5lFCFmPE,1916
+prosigue-1.9.dist-info/WHEEL,sha256=mguMlWGMX-VHnMpKOjjQidIo1ssRlCFu4a4mBpz1s2M,91
+prosigue-1.9.dist-info/license.txt,sha256=f5hhud8SJuBypbUTq7FbwZbgs-IfWDVEYbHQAvoWU4s,16940
+prosigue-1.9.dist-info/top_level.txt,sha256=8lSHsuvVUNdygpkYOnM2YXdFKaZ8noErnb7O0nvNnXc,9
+prosigue-1.9.dist-info/RECORD,,
