@@ -1,0 +1,3 @@
+[console_scripts]
+sid_signing_tool=sid_signing_tool.cli:main
+
