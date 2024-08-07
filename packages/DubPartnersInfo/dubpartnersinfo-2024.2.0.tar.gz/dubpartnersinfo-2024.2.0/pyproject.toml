@@ -1,0 +1,29 @@
+[project]
+name = "DubPartnersInfo"
+version = "2024.2.0"
+dependencies = [
+  
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Andres Castro", email = "compuset@pacbell.net"}
+]
+maintainers = [
+  {name = "Andres Castro", email = "compuset@pacbell.net"}
+]
+description = "Creates Google Sheets based on Excel files in a specified directory"
+readme = "README.rst"
+license = {file = "LICENSE.txt"}
+keywords = ["tkinter", "DubPartnersInfo"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+
+
+[project.urls]
+
+
+[project.scripts]

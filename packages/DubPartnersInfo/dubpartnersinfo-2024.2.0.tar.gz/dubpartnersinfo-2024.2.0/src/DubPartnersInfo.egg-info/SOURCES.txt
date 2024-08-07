@@ -1,0 +1,7 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/DubPartnersInfo.egg-info/PKG-INFO
+src/DubPartnersInfo.egg-info/SOURCES.txt
+src/DubPartnersInfo.egg-info/dependency_links.txt
+src/DubPartnersInfo.egg-info/top_level.txt
