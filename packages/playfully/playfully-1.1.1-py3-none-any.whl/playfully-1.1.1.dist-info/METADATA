@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: playfully
+Version: 1.1.1
+Summary: A library for playing with strings.
+Author-email: encerio_melojuras123 <mangelsp1965@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Operating System :: OS Independent
+
+# playfully (1.1.1)
+
+A library for playing with strings.
+
+This library is useful for graphic applications (terminal user interfaces or text user interfaces) as well as for working with similar libraries such as `curses`.
