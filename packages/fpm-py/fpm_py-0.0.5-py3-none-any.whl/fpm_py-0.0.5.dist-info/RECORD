@@ -1,0 +1,11 @@
+fpm_py/__init__.py,sha256=IDjMCIttrh5MPw2pKWK3QAjoPXirpLx49af6iUxbV4Y,45
+fpm_py/algorithm.py,sha256=qNaV2LnpvFwndG2Nl5qeVkm6WVA8Cl6R583u7yIdq_Y,2801
+fpm_py/data.py,sha256=NhV3ylkJiyBRtnuPIPhLLQHwFjx5iyE5ucoFe67B02E,336
+fpm_py/experimental/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fpm_py/iteration_terminators.py,sha256=mTNBE6XoE6WrWqq5Krs40yQdpdXuOCBXknCLbr67wlI,483
+fpm_py/optimizers.py,sha256=Yl-THmaguL18fEtR5SuCXoQSxnmVm8J0J1kHpA9NjA4,1967
+fpm_py/utils.py,sha256=w37tqvsquE-px_VFKgSvSL4mKmasHJzpHHDEGG0uhPE,2420
+fpm_py-0.0.5.dist-info/LICENSE,sha256=k1vyFriKdti-Cm9QzaylY8JVvlgAYUQdBBVRuxBTypg,1126
+fpm_py-0.0.5.dist-info/METADATA,sha256=QlCJDWpgfIvkA5MbMJX9ElmAWw5t2R7FHf4JfJLFFU8,2292
+fpm_py-0.0.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+fpm_py-0.0.5.dist-info/RECORD,,
