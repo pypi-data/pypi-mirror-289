@@ -1,0 +1,13 @@
+uvenv/__init__.py,sha256=tlEGBjg0KEDiYgA_flAeC6BRFmvdwLKrY0-P1s62NoY,34
+uvenv/__version__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+uvenv/_constants.py,sha256=0QYXQb18LhnScBv3l0va4KjNKg8YxgoYcSX-IU83zNY,314
+uvenv/cli.py,sha256=dwYEeoSqO_W3iMSuyysc-LjhcHqLLm28QfAzl2J-yNY,2915
+uvenv/execute.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uvenv/project.py,sha256=BNPuRCYv19NzVFWVPKbeU7RCETy0YGiivYm8S25ArrE,4421
+uvenv/uv.py,sha256=6B6EyqtHrG5SeeRKZwuFp9E4NIrapRdLk9HM901Hi_s,721
+uvenv_cli-0.1.1.dist-info/LICENSE,sha256=UIp30ue1HZit7tMmSK0SS3swJBqOcLLnLJn5LY5YdNE,1036
+uvenv_cli-0.1.1.dist-info/METADATA,sha256=D-6LZ-NruanILSl84qV-eU5Qx8zHMVhVgXWd2MUfNoU,5210
+uvenv_cli-0.1.1.dist-info/WHEEL,sha256=XRxW4r1PNiVhMpP4bT9oWtu3HyndxpJ84SkubFgzp_Y,109
+uvenv_cli-0.1.1.dist-info/entry_points.txt,sha256=XqhYmvG0uz07Y41pMyJQnH4vpNGd5QrI02VaZU6uXL8,41
+uvenv_cli-0.1.1.dist-info/top_level.txt,sha256=rv2Jyzn7kQ9RCDpHaYox_rJCi659vuyNo0sKCKw7Xhk,6
+uvenv_cli-0.1.1.dist-info/RECORD,,
