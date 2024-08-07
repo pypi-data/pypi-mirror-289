@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ran_redis_lock
+Version: 0.0.5
+Summary: This package provides a simple implementation of distributed locks using Redis and Lua scripts.
+Home-page: 
+Author: ranyu
+Author-email: wy176404@163.com
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aioredis >=1.3.1
+
+# Distributed Lock
+
+## Description
+
+This package provides a simple implementation of distributed locks using Redis and Lua scripts.
+
+## Installation
+
+You can install this package via pip:
+
+> pip install distributed-lock
