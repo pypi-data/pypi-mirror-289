@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: colibripy
+Version: 1.0.0
+Summary: The package contains statsitical tests such as one-sample, two-sample and paired t-test. Residual analysis and plotting are also supported.
+Home-page: https://github.com/MMateo1120/colibripy
+License: MIT
+Keywords: statistics,parametric tests,t-test,one-sample t-test,two-sample t-test,paired t-test
+Author: MMateo1120
+Author-email: mmateo1120@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: matplotlib (==3.9.1)
+Requires-Dist: numpy (==2.0.1)
+Requires-Dist: pandas (==2.2.2)
+Requires-Dist: pytest (==8.3.2)
+Requires-Dist: scikit-learn (==1.5.1)
+Requires-Dist: scipy (==1.14.0)
+Requires-Dist: seaborn (==0.13.2)
+Requires-Dist: statsmodels (==0.14.2)
+Requires-Dist: tabulate (==0.9.0)
+Project-URL: Repository, https://github.com/MMateo1120/colibripy
+Description-Content-Type: text/x-rst
+
+.. image:: https://raw.githubusercontent.com/MMateo1120/colibripy/89b4489a8324c3b267e2c63de81654c4017636ea/colibri_pic.svg
+  :width: 150
+  :height: 150 
+  :align: left
+
+|
+| **Colibripy** is a python package for data evaluation using statistical tools. For now, the following methods are available:
+| **one-sample t-test**
+| **two-sample t-test**
+| **paired t-test**
+| 
+|
+
+
+
+Examples
+------------
+| all : https://github.com/MMateo1120/colibripy_examples
+| one-sample t-test : https://github.com/MMateo1120/colibripy_examples/blob/main/t_test_one_sample.ipynb
+| two-sample t-test : https://github.com/MMateo1120/colibripy_examples/blob/main/t_test_two_sample.ipynb
+| paired t-test : https://github.com/MMateo1120/colibripy_examples/blob/main/t_test_paired.ipynb 
+
+=======
+
+
+Installation
+------------
+
+
+User installation
+~~~~~~~~~~~~~~~~~
+
+To install colibripy and update dependencies use ``pip``::
+
+    pip install -U colibripy
+
+colibripy 1.0.0 requires Python 3.12 or newer.
+
+
+Dependencies
+~~~~~~~~~~~~
+
+colibripy requires:
+
+- matplotlib >= 3.9.1
+- numpy >= 2.0.1
+- pandas >= 2.2.2
+- pytest >= 8.3.2
+- scikit_learn >= 1.5.1
+- scipy >= 1.14.0
+- seaborn >= 0.13.2
+- statsmodels >= 0.14.2
+- tabulate >= 0.9.0
+
+=======
+
+Important links
+---------------
+
+- Official source code repo: https://github.com/MMateo1120/colibripy
+- Download releases: https://pypi.org/project/colibripy
+- Issue tracker: https://github.com/MMateo1120/colibripy/issues

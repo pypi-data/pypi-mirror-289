@@ -1,0 +1,10 @@
+colibripy/__init__.py,sha256=65U9KGdPbtMylr5wbVYnEIeAWXwSvpKynqn8JWMBVR0,23
+colibripy/stats/__init__.py,sha256=V2IUput0aXGi7__vtrqYg_VnzLYu9NTqeqZIEpuepxQ,24
+colibripy/stats/parametric/__init__.py,sha256=xuyCFS-HdoK35qluxLtXvx-CimMvnOjlH0afTbmf5YU,20
+colibripy/stats/parametric/t_test.py,sha256=UFMY4sF2btADHI6kzbDJyuXsbtEwQbTFuBpauj62J8U,26838
+colibripy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+colibripy/tests/tests_stats_parameteric_t_test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+colibripy/tests/tests_stats_parameteric_t_test/test_t_test.py,sha256=z7Zu13GAhj4pXigY7ui9DySWNIW647fW46K8Po-jsBo,4397
+colibripy-1.0.0.dist-info/METADATA,sha256=fDJtD7YYMB0a2irsxo6krY0-nMcf8s45fSPdQMEUJZk,2631
+colibripy-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+colibripy-1.0.0.dist-info/RECORD,,
