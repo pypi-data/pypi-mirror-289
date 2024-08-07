@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: autocode-py
+Version: 0.0.1.post1
+Summary: AutoCode: Automated Code Improvement by Metrics Optimization
+Home-page: https://github.com/muazhari/autocode
+Author: muazhari
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: pymoo
+Requires-Dist: pydantic_settings
+Requires-Dist: fastapi
+Requires-Dist: dependency-injector
+Requires-Dist: ray
+Requires-Dist: fastapi
+Requires-Dist: matplotlib<3.9.0
+Requires-Dist: sqlmodel
+Requires-Dist: dill
+Requires-Dist: streamlit
+Requires-Dist: numpy<2
+Requires-Dist: python-on-whales
+Requires-Dist: uvicorn
+Requires-Dist: langchain
+Requires-Dist: langchain-openai
+Requires-Dist: langgraph
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13225517.svg)](https://doi.org/10.5281/zenodo.13225517)
+
+# autocode
+
+Auto Code Improvement by Technical Metrics Optimization.
+
+## Description
+
+Autocode selects the best values for optimized metrics. The value types could be bool, int, float, and choice (including
+but not limited to code). This project utilizes a Large Language Model and Mixed-Variable Many-Objective Optimization.
+Based on our research/literature review, this project hypothetically can contribute to the economic performance of
+companies.
+
+## Features
+
+- Many-software Value-level Mixed-variable Many-objective Optimization.
+- Value types include bool, int, float, and choice (code).
+- Code scoring and variation generators using LLM.
+- Software cross-language support.
+- Easy software deployment using docker-compose.
+- Scalable to infinite cores to speed up processing in parallel.
+
+## How to Use
+
+1. Install the requirements
+
+```bash
+pip install autocode-py
+```
+
+2. Prepare software to be processed as in the `./example/client` folder.
+3. Prepare deployment as in the `./example/client-compose.yml` file.
+3. Prepare controller as in the `./example/controller.ipynb` file.
+4. Run the process in controller.
+5. Open dashboard in `http://localhost:{dashboard_port}/` to see the process in real-time.
+6. Wait until the process is finished.
+7. Analyze and decide the best values.
+
+## Demo
+
+- [Controller](./example/controller.ipynb)
+- [Client](./example/client)
+- Dashboard
+  ![demo-1.png](https://github.com/muazhari/autocode/blob/main/demo-1.png)
+
+## Compatibility
+
+- Python 3.10
+- Linux
+- Docker
