@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baci"
+version = "0.0.1"
+authors = [
+  { name="Nick Palenchar", email="nickpal@nickpalenchar.com" },
+]
+description = "Bolt A Cli Interface (onto your python functions)"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 1 - Planning"
+]
+
+[project.urls]
+Homepage = "https://github.com/nickpalenchar/baci"
+Issues = "https://github.com/nickpalenchar/baci/issues"
+
+[tool.black]
+line-length = 88
+target-verison = ['py38']
