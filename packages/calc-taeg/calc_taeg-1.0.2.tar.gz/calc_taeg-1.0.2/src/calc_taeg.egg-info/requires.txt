@@ -1,0 +1,9 @@
+fr-date
+
+[dev]
+wheel
+pytest
+ruff
+black
+pip-tools
+twine
