@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: fastapi-auth-toolkit
+Version: 0.0.1
+Summary: A comprehensive FastAPI authentication library that provides a robust and integrated set of features for user authentication, registration, and account management. This library also supports third-party social account authentication, making it easy to integrate with popular social platforms.
+Author-email: Ankaj Gupta <ankajgupta@coderwebsite.com>, Coder Website <contact@coderwebsite.com>
+License: MIT
+Keywords: fastapi-auth,fastapi,python,fastapi jwt
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: pydantic
+Requires-Dist: uvicorn
+Requires-Dist: passlib
+Requires-Dist: pyjwt
+Requires-Dist: bson
+Requires-Dist: pydantic-settings
+
+# fastapi-auth
+Integrated set of fastapi applications addressing authentication, registration, auth management as well as 3rd party (social) account authentication.
+
+## License
+This project is licensed under a modified MIT License - see the [LICENSE](LICENSE) file for details.
