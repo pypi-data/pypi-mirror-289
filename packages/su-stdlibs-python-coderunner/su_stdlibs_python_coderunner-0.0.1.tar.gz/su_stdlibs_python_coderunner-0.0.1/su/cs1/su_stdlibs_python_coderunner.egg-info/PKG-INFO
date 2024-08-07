@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: su-stdlibs-python-coderunner
+Version: 0.0.1
+Summary: Stellenbosch University Python 3 CodeRunner code for "Introduction to Programming in Python, 1st Edition" by Sedgewick and Wayne
+Author: Marcel Dunaiski
+Author-email: marceldunaiski@sun.ac.za
+License: GNU General Public License v3 (GPLv3)
+Platform: any
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: coveralls; extra == "dev"
+
+# SU stdlibs for Python 3
+
+`su-stdlibs-python-coderunner` is an adapted version of the [Python programs](https://introcs.cs.princeton.edu/python/code/) provided with the textbook [Introduction to Programming in Python](https://introcs.cs.princeton.edu/python/home/) by Sedgewick, Wayne, and Dondero.
+
+## Target audience
+
+`su-stdlibs-python-coderunner` is intended to expose a subset of the stdlibs API to students when using CodeRunner on Moodle. The visual and audio aspects of the API are removed as well as some network exposures.
+
+## Installation
+
+This library requires a functioning Python 3 environment.
+
+Install `su-stdlibs-python-coderunner` simply with
+```bash
+python3 -m pip install --upgrade su-stdlibs-python-coderunner
+```

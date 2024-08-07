@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+su/cs1/stdarray.py
+su/cs1/stdio.py
+su/cs1/stdrandom.py
+su/cs1/stdstats.py
+su/cs1/su_stdlibs_python_coderunner.egg-info/PKG-INFO
+su/cs1/su_stdlibs_python_coderunner.egg-info/SOURCES.txt
+su/cs1/su_stdlibs_python_coderunner.egg-info/dependency_links.txt
+su/cs1/su_stdlibs_python_coderunner.egg-info/not-zip-safe
+su/cs1/su_stdlibs_python_coderunner.egg-info/requires.txt
+su/cs1/su_stdlibs_python_coderunner.egg-info/top_level.txt
