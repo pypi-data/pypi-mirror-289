@@ -1,0 +1,7 @@
+aiohttp
+pandas
+python-jose[cryptography]
+pydantic[email]
+passlib==1.7.4
+python-dotenv
+aiohttp
