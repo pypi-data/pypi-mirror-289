@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: obsidian-apo
+Version: 0.7.7
+Summary: Automated experiment design and black-box optimization
+Author: Kevin Stone
+Author-email: kevin.stone@merck.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: botorch (>=0.11.1,<0.12.0)
+Requires-Dist: gpytorch (>=1.11,<2.0)
+Requires-Dist: matplotlib (>=3.9.0,<4.0.0)
+Requires-Dist: numpy (>=1.26,<2.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: plotly (>=5.22.0,<6.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: scipy (>=1.13.1,<2.0.0)
+Requires-Dist: shap (>=0.45.1,<0.46.0)
+Requires-Dist: torch (>=2.3,<3.0)
