@@ -1,0 +1,17 @@
+README.md
+setup.py
+autocode/__init__.py
+autocode/container.py
+autocode/controller.py
+autocode/dashboard.py
+autocode/datastore.py
+autocode/gateway.py
+autocode/model.py
+autocode/router.py
+autocode/setting.py
+autocode/use_case.py
+autocode_py.egg-info/PKG-INFO
+autocode_py.egg-info/SOURCES.txt
+autocode_py.egg-info/dependency_links.txt
+autocode_py.egg-info/requires.txt
+autocode_py.egg-info/top_level.txt
