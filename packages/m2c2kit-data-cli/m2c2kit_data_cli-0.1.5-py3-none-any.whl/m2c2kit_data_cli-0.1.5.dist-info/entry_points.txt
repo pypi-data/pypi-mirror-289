@@ -1,0 +1,3 @@
+[console_scripts]
+m2c2=m2c2kit_data_cli.main:app
+
