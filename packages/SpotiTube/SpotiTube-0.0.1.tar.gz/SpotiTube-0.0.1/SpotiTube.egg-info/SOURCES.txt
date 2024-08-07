@@ -1,0 +1,11 @@
+README.md
+setup.py
+SpotiTube/__init__.py
+SpotiTube/song.py
+SpotiTube/spotify.py
+SpotiTube/youtube.py
+SpotiTube.egg-info/PKG-INFO
+SpotiTube.egg-info/SOURCES.txt
+SpotiTube.egg-info/dependency_links.txt
+SpotiTube.egg-info/requires.txt
+SpotiTube.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+requests>=2.25.1
+pytube>=12.1.0
+spotipy>=2.19.0
+moviepy>=1.0.3
+eyed3>=0.9.5
+pytubefix>=1.0.0
