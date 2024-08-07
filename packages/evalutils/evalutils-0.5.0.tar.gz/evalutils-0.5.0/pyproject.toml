@@ -1,0 +1,78 @@
+[tool.poetry]
+name = "evalutils"
+version = "0.5.0"
+description = "evalutils helps users create extensions for grand-challenge.org"
+authors = ["James Meakin <evalutils@jmsmkn.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/comic/evalutils"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "Natural Language :: English",
+]
+
+[tool.poetry.scripts]
+evalutils = "evalutils.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+scipy = "*"
+numpy = "*"
+scikit-learn = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-xdist = "*"
+pytest-randomly = "*"
+pytest-cov = "*"
+sphinx = "*"
+sphinx_autodoc_typehints = "*"
+SimpleITK = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+known_first_party = ["evalutils", "tests"]
+line_length = 79
+
+[tool.black]
+line-length = 79
+target-version = ['py39']
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = [
+    "tests",
+]
+python_files = "tests.py test_*.py *_tests.py"
+addopts = "--strict-markers --showlocals -n auto --dist loadscope --durations=10"
+markers = [
+]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+envlist = py39, py310, py311, py312
+
+[gh-actions]
+python =
+    3.9: py39
+    3.10: py310
+    3.11: py311
+    3.12: py312
+
+[testenv]
+allowlist_externals =
+    poetry
+setenv =
+    PYTHONPATH = {toxinidir}
+commands =
+    poetry install -v
+    poetry run pytest --cov-branch --cov-report term-missing --cov=evalutils --basetemp={envtmpdir} {posargs}
+"""
