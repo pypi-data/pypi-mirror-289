@@ -1,0 +1,14 @@
+flexai/.ruff_cache/.gitignore,sha256=njpg8ebsSuYCFcEdVLFxOSdF7CXp3e1DPVvZITY68xY,35
+flexai/.ruff_cache/0.5.6/10518573301331063087,sha256=Rz-ExHrOJM_oVdh6o7mtKQw9gt3PnJiBN2N0KbR4mok,485
+flexai/.ruff_cache/CACHEDIR.TAG,sha256=WVMVbX4MVkpCclExbq8m-IcOZIOuIZf5FrYw5Pk-Ma4,43
+flexai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flexai/agent.py,sha256=nD5xOTuRc9ndO4WyTuzdZGvwDCXj5ppldEFMG0DQPdg,5298
+flexai/capability.py,sha256=f0Fhcs2aYltmwgR6pYbAEHTW2ceXg72A8kB8OiO-f6M,1113
+flexai/llm.py,sha256=yYnLaU_iGbUBI5cZLgSQyKZKlc7RvSTNIBdeRPVssIc,5886
+flexai/memory/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flexai/memory/short_term.py,sha256=ONRX2Rkmy5mB5pSZyhU7mz2eA3futew5k3e7u6e6a5A,1480
+flexai/message.py,sha256=V2vyFHj62DmjoLUENC70JoPlMRPgMKQJVmDzu81m9vE,1595
+flexai/tool.py,sha256=ApCbAa71D1yz5uqivNPsDDK7Ot_Yw48s1qbEUqCUkLc,2207
+reflex_ai-0.1.0a5.dist-info/METADATA,sha256=p3EpTiOxWRvKBWez46-hF_E_UHWqH8mY5VE4UjgMkwg,483
+reflex_ai-0.1.0a5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+reflex_ai-0.1.0a5.dist-info/RECORD,,
