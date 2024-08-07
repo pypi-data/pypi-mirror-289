@@ -1,0 +1,9 @@
+pillow_jxl_plugin-1.2.6.dist-info/METADATA,sha256=A47Lj16J7JNK_fOlurk1R4UOP2gGIcQEFCiVcnuo6hg,2876
+pillow_jxl_plugin-1.2.6.dist-info/WHEEL,sha256=pCFsRblGZVHYsmRmJJn1d-eFjtrBtm88LDhBFkT7cCs,105
+pillow_jxl_plugin-1.2.6.dist-info/license_files/LICENSE,sha256=dxq2cC9p15poqqSCF0NcRF5LiieG6FVGb8S_HETNMzA,1065
+pillow_jxl/JpegXLImagePlugin.py,sha256=1hxxNt7-GKd6JRZ1NorF9KHxHjk0hEKrCUeGf-o-zys,4024
+pillow_jxl/__init__.pyi,sha256=GTi1MZ59_SiML8fNT131OS9GL8CUxsL-1H-v5iSljhU,1182
+pillow_jxl/__init__.py,sha256=hxeQsVUvZJk8jtFkHPoJQ55bIZUkTj53XvM6LdOkrOw,165
+pillow_jxl/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pillow_jxl/pillow_jxl.cpython-312-darwin.so,sha256=3OJK_M7O4Aew8s0mE53Iqh9CgumAkcbb6vgfzJZ4cDE,554440
+pillow_jxl_plugin-1.2.6.dist-info/RECORD,,
