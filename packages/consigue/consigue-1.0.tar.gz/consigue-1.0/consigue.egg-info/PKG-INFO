@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: consigue
+Version: 1.0
+Summary: Tratamiento de Datos mediante fases de procesos
+Author: El Señor es el único eterno. Que la ciencia lo honre a Él.
+Author-email: from.colombia.to.all@gmail.com
+License: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Requires-Python: >=3.11.3
+Description-Content-Type: text/x-rst
+License-File: license.txt
+
+
+CONSIGUE
+==============================================
+
+Documentacion
+-----------------------------------------------
+
+- dependencias de librerías:
+
+    - 
+
+- funcionalidades que puedo ver de CONSIGUE:
+
+    - 
+
+- CONSIGUE es una librería que...
+
+    He decidido desarrollarla con el propósito de nutrir más al mundo de la programación.
+    Es una librería que, por supuesto busca ser sencilla de ser empleada.
+    Y realiza una operación tan practica que podría desearse en cualquier sistema informático o de computo.
+    
+
+Para mas informacion sobre su forma de ejecucion,
+una vez instalada la libreria, ingrese:
+
+from consigue import readme_consigue
+
+readme_consigue
+
+
+La licencia es: Mozilla Public License 2.0 (MPL 2.0)
+
+La ruta github (debido a la licencia) se dara en la
+siguiente version.

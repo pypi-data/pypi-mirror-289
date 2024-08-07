@@ -1,0 +1,10 @@
+MANIFEST.in
+license.txt
+pyproject.toml
+readme.rst
+setup.py
+consigue/readme_consigue.py
+consigue.egg-info/PKG-INFO
+consigue.egg-info/SOURCES.txt
+consigue.egg-info/dependency_links.txt
+consigue.egg-info/top_level.txt
