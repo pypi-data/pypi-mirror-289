@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+Macs_api.egg-info/PKG-INFO
+Macs_api.egg-info/SOURCES.txt
+Macs_api.egg-info/dependency_links.txt
+Macs_api.egg-info/top_level.txt
+macsploit/__init__.py
+macsploit/msapi.py
