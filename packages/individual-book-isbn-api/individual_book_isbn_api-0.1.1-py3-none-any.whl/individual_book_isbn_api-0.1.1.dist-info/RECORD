@@ -1,0 +1,13 @@
+individual/main.py,sha256=OXZyqBl3ENs8LgyQc6-BkZC5BWXvlER_33t5eTkeOP0,964
+individual/api/google_api.py,sha256=65O1pXHe6Eqkrv0vwqIY5bUm4Bfy34x7g7r2qwv_EfI,1446
+individual/api/opendb_api.py,sha256=lTBIGio5SAayaXNPAh0ofnLC_xPzjp81vFUmSUi4sJs,1045
+individual/api/opensearch_api.py,sha256=IwZf3K_z8S1FXcFdd9ZsDv_XM11vnzb4K5KLibLNGoI,4397
+individual/api/rakuten_api.py,sha256=ChrqAj387KSHxbwUNDcJEiAyQPat2fkS__IaQc7TtnY,1791
+individual/api/sru_api.py,sha256=abAG3o57GBsCOly4hz9AMzR3G8cTfE_n780s3ixB3Ig,2379
+individual/data_fix/matome_jikkou.py,sha256=2j7RnKNEzV90mKYS3bFi6i6M_RmJAfN6S8ZCs9kxu7g,6088
+individual_book_isbn_api-0.1.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+individual_book_isbn_api-0.1.1.dist-info/METADATA,sha256=gjfV59hUspbAK95E2gAsciRWNrIIe8K7txfF0pHUnxQ,1608
+individual_book_isbn_api-0.1.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+individual_book_isbn_api-0.1.1.dist-info/entry_points.txt,sha256=jJ_3xiF85BBo-cTsM4e7Bs-cDGAFR4Mrr991iJI8I68,61
+individual_book_isbn_api-0.1.1.dist-info/top_level.txt,sha256=7PwcZh4qrlLiSXiVWTVC8aX5ZNHxqaHRMPpLeXIjTc0,11
+individual_book_isbn_api-0.1.1.dist-info/RECORD,,
