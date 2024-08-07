@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: mensetmanus
+Version: 0.1.0
+Summary: A package for teaching software development.
+License: MIT
+Author: Fausto Morales
+Author-email: fausto@robinbay.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: anywidget (>=0.9.13,<0.10.0)
+Requires-Dist: deepface (>=0.0.92,<0.0.93)
+Requires-Dist: mermaid-py (>=0.5.2,<0.6.0)
+Description-Content-Type: text/markdown
+
+# mensetmanus
+
+This is an experimental package for teaching design in the context of software development.

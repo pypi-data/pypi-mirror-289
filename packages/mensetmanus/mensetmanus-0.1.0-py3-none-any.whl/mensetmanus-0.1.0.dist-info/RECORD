@@ -1,0 +1,11 @@
+mensetmanus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mensetmanus/tts.py,sha256=QRnCrtVWeArTb45j-zZZ9bck2BmkObGBM3C2_hL_CRE,2770
+mensetmanus/visuals.py,sha256=nm9SZfwutW3Q3fYFqTKH1BN7erl7_md7S7CiYU-ELp4,2454
+mensetmanus/widgets/__init__.py,sha256=lRLnDzFBrwuBOXGbcxqAuGmm8b97j46s4mAhakUCn4g,2519
+mensetmanus/widgets/javascript/photo.js,sha256=ov1IFkVChAKFg2d9boS41HhLBo7JlzlDdstuNayqQf8,1023
+mensetmanus/widgets/javascript/timer.js,sha256=beukIqVvJpIxDzObJ1KbzH_Ym2NOoEcS8KnLtaKSVtg,803
+mensetmanus/widgets/javascript/toast.js,sha256=oNK7zJsPXideQnZCnroGSUfWopl3ATAyqv8kLRTIcco,553
+mensetmanus/widgets/javascript/volume.js,sha256=6CveJ3xshZELIGC-xDPrZaLs9wVWTOQKc_LHt0lT0Lw,1606
+mensetmanus-0.1.0.dist-info/METADATA,sha256=o1Ovp5_VuGUsQ0F6fZkmGWWmZuQ6duW892nIHq2_NUo,738
+mensetmanus-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mensetmanus-0.1.0.dist-info/RECORD,,
