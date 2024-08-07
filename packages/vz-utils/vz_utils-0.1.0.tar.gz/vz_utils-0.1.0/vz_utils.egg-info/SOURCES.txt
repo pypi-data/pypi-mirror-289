@@ -1,0 +1,9 @@
+setup.py
+vz_utils/__init__.py
+vz_utils/_utils.py
+vz_utils/test_dummy.py
+vz_utils.egg-info/PKG-INFO
+vz_utils.egg-info/SOURCES.txt
+vz_utils.egg-info/dependency_links.txt
+vz_utils.egg-info/requires.txt
+vz_utils.egg-info/top_level.txt
