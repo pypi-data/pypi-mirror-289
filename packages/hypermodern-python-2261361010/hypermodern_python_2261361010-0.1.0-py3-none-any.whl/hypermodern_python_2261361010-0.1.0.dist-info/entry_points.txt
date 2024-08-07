@@ -1,0 +1,3 @@
+[console_scripts]
+hypermodern-python-2261361010=hypermodern_python_2261361010.console:main
+
