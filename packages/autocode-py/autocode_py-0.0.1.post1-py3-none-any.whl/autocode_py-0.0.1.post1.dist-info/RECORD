@@ -1,0 +1,14 @@
+autocode/__init__.py,sha256=xdWCjXdkcQj8BYUCPbw3i0yvECk7AwphUR6RRjPRHHA,5122
+autocode/container.py,sha256=81U436VGGL6vw8E8d6yfHF5aigTxsFH7O7QaYVwa_eo,2605
+autocode/controller.py,sha256=acGQFlIlsRSl_YSoIcDiZ0ussGRXVHSAl-tQIs9H258,1232
+autocode/dashboard.py,sha256=8SYCHavH_PBprBmiL5LjKg0ZcwnUbMhNJZ9U55ffUH0,6615
+autocode/datastore.py,sha256=dAXmFYy3ZImxExrrOU8Zq-SXJWytS5rtbLUqzYwl9_E,572
+autocode/gateway.py,sha256=8curEVJ5nvITCPneZnkhnA73GEA25NI9e-oGpKo2_ag,1468
+autocode/model.py,sha256=AV7DM0kDWsOn5pPJOfsS3R7BZFIJ2p5ECsLMs2No11k,6593
+autocode/router.py,sha256=FOJeM9Bn_qy0hmsAawxf0Did-kSEA-Y9qS1rGeCk-KE,614
+autocode/setting.py,sha256=3vsSV9lY3QhBLkcLkThkzFj_kCIMG_nXiNG0AgXdIy0,486
+autocode/use_case.py,sha256=7MIgQVPyXQf5h7ya3VznwulfsCIDyo0BH6RPbHBwSAY,34336
+autocode_py-0.0.1.post1.dist-info/METADATA,sha256=B42TktcxJXif376GkA8OgWLUD_4OeijnP81Vp--W4f4,2263
+autocode_py-0.0.1.post1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+autocode_py-0.0.1.post1.dist-info/top_level.txt,sha256=0CYU3eca8A70mZoSrdOg6211q0-lswVU5fsbK1cY7i0,9
+autocode_py-0.0.1.post1.dist-info/RECORD,,
