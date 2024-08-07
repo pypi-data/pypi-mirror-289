@@ -1,0 +1,12 @@
+vizdxp/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+vizdxp/__main__.py,sha256=iZ112TIYazn8VawphR9DCxtHWKQUO_d1u6GiCrNgoKU,272
+vizdxp/app.py,sha256=dW4vioht_a7J_37ZrUqGeHDHwZdifOKz3Qqj0W5NW8w,16043
+vizdxp/graphs.py,sha256=T2JCQFI_5lc943v1n2SeJsZFx2xf5GqvfN8Ewe6D7kE,8569
+vizdxp/style.css,sha256=X2JqUccb1ngKqZNtUh2GjTIXe2gC-m_NrDoC1o6KWxw,2140
+vizdxp-0.2.1.data/data/style.css,sha256=X2JqUccb1ngKqZNtUh2GjTIXe2gC-m_NrDoC1o6KWxw,2140
+vizdxp-0.2.1.dist-info/LICENSE,sha256=DvtOLLkwHESdmH8Z9YzBu-cv7NVXgWsNEprocsJg4jA,1094
+vizdxp-0.2.1.dist-info/METADATA,sha256=nW6aAVb7o082HUES0JhEwEr3S9Su-8QaW2EZjQ-EnM4,2075
+vizdxp-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vizdxp-0.2.1.dist-info/entry_points.txt,sha256=Xi2QgK7spbrlTXzJMgKsxJgLVcwuOqaTSgdGFNZTRf4,49
+vizdxp-0.2.1.dist-info/top_level.txt,sha256=3HcYlwR3bOriz1e3dw7z-PHf5rHZxTCLGgqLcG8u_Nk,7
+vizdxp-0.2.1.dist-info/RECORD,,
