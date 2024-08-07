@@ -1,0 +1,17 @@
+qubitcooling/__init__.py,sha256=IemXXfAACOrj66OIVmS3OQQUdajPskFP0qMnQ_82T4E,388
+qubitcooling/coolingCircuit.py,sha256=flkAgkbExrG0oh2kNzhuqCCNu_ttjRn8zFAhRnWM--8,9714
+qubitcooling/coolingUnitary.py,sha256=CbP0v4HX106MZ2oRnJMUa5Y0zI9m6qEF3gmerz_K5l8,16456
+qubitcooling/dynamicCooling.py,sha256=quPyDIxS8yDdXhMkUzs84V6YZw2AbTF0JjeXptTIOT4,3401
+qubitcooling/heatBathCooling.py,sha256=N0Ff4wxSV3Ix4DITs2CSagnCJhjdwTeAjpSjxB0tPxc,5671
+qubitcooling/minimalWorkProtocol.py,sha256=VGaMoF-84zP9x3Mpn29DbfCDaMON-w5sc2TtStwRdOw,5312
+qubitcooling/mirrorProtocol.py,sha256=3J81ABva-0Fg2wcjFVgSJBFKbgSHOqOT3BStzZzSOuQ,1215
+qubitcooling/partnerPairingAlgorithm.py,sha256=lGxsyeYLUWrhoKe2nW0E3JGqyjOv85PF_PE7Dw4yo4M,5140
+qubitcooling/semiOpenCooling.py,sha256=bZEjDxw5qNADOFyMRvfpHyQuwnZSaNthljxq9DYX2QU,5745
+qubitcooling/subOptimalCooling.py,sha256=Z3Nts790ta3MrTAMrB-vacwBsKzOvgpCdegZkYl7kO4,6045
+qubitcooling/utils/occupationProbabilitiesList.py,sha256=KpxoCXWZZSlzsu-BmNmlfm11bRIu3mNo3IDXEL48KzY,3171
+qubitcooling/utils/testCircuit.py,sha256=ysuRcVPx3Uk9HOm7MVh4Znj5dyotrPq_ahKhAGwbRt0,2672
+qubitcooling/utils/utils.py,sha256=-AEeQN9Fq6hd0qMiQ07WqE7whaQcYQiFn60uuO1PUo4,5021
+qubitcooling-0.77777.dist-info/METADATA,sha256=ICkArfrNG6i1d7p8y_kgCKGgIXdELsD6gWMt_YmCOz8,390
+qubitcooling-0.77777.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+qubitcooling-0.77777.dist-info/top_level.txt,sha256=0C3oMhvxjWCGwk2gIbnI5U5MEjDell-w-Umc0jkpRlY,13
+qubitcooling-0.77777.dist-info/RECORD,,
