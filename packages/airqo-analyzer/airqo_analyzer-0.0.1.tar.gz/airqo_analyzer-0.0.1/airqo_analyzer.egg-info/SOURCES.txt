@@ -1,0 +1,8 @@
+setup.py
+airqo_analyzer.egg-info/PKG-INFO
+airqo_analyzer.egg-info/SOURCES.txt
+airqo_analyzer.egg-info/dependency_links.txt
+airqo_analyzer.egg-info/requires.txt
+airqo_analyzer.egg-info/top_level.txt
+library/__init__.py
+library/airqoairqloudanalysis.py
