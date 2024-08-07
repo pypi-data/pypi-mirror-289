@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: dxrsubscriber
+Version: 0.0.0
+Summary: A ZMQ subscriber for receiving and decoding video streams.
+Home-page: https://github.com/yourusername/zmq_subscriber
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ZMQ Subscriber
+
+A ZMQ subscriber for receiving and decoding video streams.
+
+## Installation
+
+```sh
+pip install zmq_subscriber
+
+from zmq_subscriber import ZmqSubscriber
+
+subscriber = ZmqSubscriber("tcp://localhost:5555")
+img, topic = subscriber.pull()
+if img is not None:
+    subscriber.show(img, "5555")
+subscriber.close()
+
+
+### 6. 生成分发包
+
+在项目根目录下运行以下命令生成分发包：
+
+```sh
+python setup.py sdist bdist_wheel

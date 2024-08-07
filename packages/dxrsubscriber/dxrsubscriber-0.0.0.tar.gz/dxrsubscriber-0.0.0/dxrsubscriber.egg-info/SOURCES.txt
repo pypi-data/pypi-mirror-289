@@ -1,0 +1,9 @@
+README.md
+setup.py
+dxrsubscriber/__init__.py
+dxrsubscriber/subscriber.py
+dxrsubscriber.egg-info/PKG-INFO
+dxrsubscriber.egg-info/SOURCES.txt
+dxrsubscriber.egg-info/dependency_links.txt
+dxrsubscriber.egg-info/requires.txt
+dxrsubscriber.egg-info/top_level.txt
