@@ -1,0 +1,9 @@
+django_papaye/__init__.py,sha256=1BKG0uNKunQ5oeW6UHz5jy3zf8XoqjtAfVVoLJ6C5MY,34
+django_papaye/__main__.py,sha256=Pxmhj1ZD7gJyrpV7djGUXb8-xXIsEGKDNHY3HKlDc-w,119
+django_papaye/sub_dir/__init__.py,sha256=DjmjF-zV-cO57aiNGnFLWTfd4s7fyLplTw5lmJCDmVk,40
+django_papaye/sub_dir/django_papaye.py,sha256=O91OF0Y4e5L1gEscgIvpsF_GAJWQjCd2FHHmQql5Qto,1106
+django_papaye-0.0.1.dist-info/METADATA,sha256=4SNBNi3VPp1pq4A3MM80tPhw4NhoyKzqi6at94Ud5S8,793
+django_papaye-0.0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+django_papaye-0.0.1.dist-info/entry_points.txt,sha256=foPzxEGkDNh5a6dceNaDR6rUtFHoqITwAeOj6j-1zDM,59
+django_papaye-0.0.1.dist-info/top_level.txt,sha256=nIdB24eA2xhR80YG9pziEElvlyjYRz7jKn8_v27HLJ4,14
+django_papaye-0.0.1.dist-info/RECORD,,
