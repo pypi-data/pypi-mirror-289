@@ -1,0 +1,10 @@
+ucdp_glbl-1.1.0.dist-info/METADATA,sha256=YJEfTZXGkvV519Al97QELDWyyVWStVfakshqS_EfGSE,1519
+ucdp_glbl-1.1.0.dist-info/WHEEL,sha256=rSwsxJWe3vzyR5HCwjWXQruDgschpei4h_giTm0dJVE,90
+ucdp_glbl-1.1.0.dist-info/licenses/LICENSE,sha256=C5dC7xMg5vdkSj6eKxdnX0qszqjdI49MsHgvMhGCIq4,1067
+ucdp_glbl/__init__.py,sha256=myifpFEY1klx2dcL4bYb1mIxGeiqczaTSQ-ZEHPDO6c,1154
+ucdp_glbl/attrs.py,sha256=5z_YWExJHEfGG4JZ6Jq5uoYD0yR1bweWNuZEnhFJvGk,3251
+ucdp_glbl/irq.py,sha256=JGgCFAgGgaMkfT-tGUdsjlnTnC-wyt0Ww2EiCgw30Is,1883
+ucdp_glbl/lane.py,sha256=9S63VJA8amVKYb9MNF7Lo7Rofj35fU5HKQvNjqeH7q8,2870
+ucdp_glbl/mem.py,sha256=IaxzKf5fjlBa6UAwmi8vpvp9pP9GhUteX_E-83xp1FM,6009
+ucdp_glbl/stream.py,sha256=CQsOrGqMNt6XZxKwY18OmGPZOlRYxi8Uy73rXn8nhaw,2821
+ucdp_glbl-1.1.0.dist-info/RECORD,,
