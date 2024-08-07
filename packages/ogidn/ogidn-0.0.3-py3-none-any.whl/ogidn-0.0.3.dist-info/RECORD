@@ -1,0 +1,14 @@
+ogidn/__init__.py,sha256=riQfdVpVd1GMx_Rep46Zq-MqmGmJmwzRv9UxbQsfiME,241
+ogidn/calibrate.py,sha256=IybFgAFcBYlfHa3jUFxnvXEZudp8JbXo6CiXkxADwnQ,3112
+ogidn/constants.py,sha256=2rAVEXEh7JPqZ0dqvhb66VB4VBIlMi8UhajmwHOTcMg,13059
+ogidn/income.py,sha256=njFI_9ppGDVrKiTr38VYeuAQeFWqydCLLNLvr2xQgv4,6988
+ogidn/input_output.py,sha256=ODT_qydcdG6WQ4Qu4CKPg5-rw5769BRnVhkzU2C8uoA,2776
+ogidn/macro_params.py,sha256=FhfY2o1VchSIrhL474ei8MDU1OpgnSw3JT6b0Y3pbCM,6919
+ogidn/ogidn_default_parameters.json,sha256=32s_VCC-2P93Ae-mfJtpKbHFUTNBSFXgxAvT9gbyObc,3063896
+ogidn/utils.py,sha256=trmNwzhequ52tlABWFaIWtkw_FS89b6RJEMWpCKkz_U,1557
+ogidn/data/002_IFPRI_SAM_IDN_2018_SAM.csv,sha256=bZrny6u_miOGsKOdB-xUeRw8vSBfbWmFIFc654ADmco,25556
+ogidn-0.0.3.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+ogidn-0.0.3.dist-info/METADATA,sha256=gm6Sl-2Hv3F96QBr9ZwHpLaSb-MoctkO7-_6rA_OWAc,7844
+ogidn-0.0.3.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+ogidn-0.0.3.dist-info/top_level.txt,sha256=O6K4Tk-aE-eyWPzLFYW_Lq198lxLRgavBHshJlOE9LE,6
+ogidn-0.0.3.dist-info/RECORD,,
