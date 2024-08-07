@@ -1,0 +1,8 @@
+setup.py
+Polymarket/__init__.py
+Polymarket/polymarket.py
+polymarket.egg-info/PKG-INFO
+polymarket.egg-info/SOURCES.txt
+polymarket.egg-info/dependency_links.txt
+polymarket.egg-info/requires.txt
+polymarket.egg-info/top_level.txt
