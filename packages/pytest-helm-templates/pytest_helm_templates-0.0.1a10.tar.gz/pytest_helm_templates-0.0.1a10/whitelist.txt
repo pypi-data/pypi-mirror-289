@@ -1,0 +1,8 @@
+adhoc
+crds
+dirname
+joinpath
+kube
+param
+repo
+scm
