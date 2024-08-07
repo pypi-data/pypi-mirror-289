@@ -1,0 +1,10 @@
+py_docker_k8s_tasks/__init__.py,sha256=PIBqEOI-nqKFL9oJAWQQwlHuujG9Cd7EmdxDrThNQto,23
+py_docker_k8s_tasks/django_tasks.py,sha256=p8aj7EqTEdOjGUF5362BQ4filOEscxxfzgeKXc1Vftc,2123
+py_docker_k8s_tasks/docker_tasks.py,sha256=xEPMkTS5GJBaXiW0J0Domif4ZG_DIBwkvJQpmwwQiJc,6561
+py_docker_k8s_tasks/k8s_tasks.py,sha256=yJb7Yn6WxmEeLQ-CfLzc2IvOi9HvrnU_TIB5srQZiiE,10029
+py_docker_k8s_tasks/util_tasks.py,sha256=6uTfl8oY9OFmfAIhk2A7MH3rZNDmOwsLDUwqUSsVU5c,1523
+inv_py_docker_k8s_tasks-0.1.14.dist-info/LICENSE.txt,sha256=ceC9ZJOV9H6CtQDcYmHOS46NA3dHJ_WD4J9blH513pc,1081
+inv_py_docker_k8s_tasks-0.1.14.dist-info/METADATA,sha256=LrUnXRFNiBLg8FSeyzWaaSHSp14UQI4SJZflH3UuqY4,1664
+inv_py_docker_k8s_tasks-0.1.14.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+inv_py_docker_k8s_tasks-0.1.14.dist-info/top_level.txt,sha256=pAPK2HFVLpFq1xAiJN1ZZ93-BTaaqiPaf5ivcInjEHM,20
+inv_py_docker_k8s_tasks-0.1.14.dist-info/RECORD,,
