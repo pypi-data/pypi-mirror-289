@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: pyfutugrpc
+Version: 0.1
+Requires-Dist: grpcio==1.64.1
+Requires-Dist: setuptools==70.3.0
