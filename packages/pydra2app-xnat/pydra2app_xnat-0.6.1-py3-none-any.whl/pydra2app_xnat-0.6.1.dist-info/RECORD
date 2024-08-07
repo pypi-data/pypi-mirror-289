@@ -1,0 +1,15 @@
+pydra2app/xnat/__init__.py,sha256=MrA0i1f0TgSEb6qxi-q-8zIWbEoNh8M96Yxf_XTtx98,60
+pydra2app/xnat/_version.py,sha256=lgiCYGSijhLK71WmuudWf_AyhNAutwQWx2V8bV6a5VQ,411
+pydra2app/xnat/command.py,sha256=Ob_64Z-EG4HCRusu3-MUmZyjxmeULi-9W8nYkYuytP0,12840
+pydra2app/xnat/deploy.py,sha256=5K_-OU762DVHZ_WscGk-ZX6LFAiz5JbZcwCTc3P9RXw,9751
+pydra2app/xnat/image.py,sha256=fkNrF7WLGE43x8XRgD8JUzeDu2MV598EFZRRNDk0ZLE,4758
+pydra2app/xnat/cli/__init__.py,sha256=sdC8LFAQLipPep2V4JOHOcu099MtPyL0eLAw9JFvM0g,150
+pydra2app/xnat/cli/base.py,sha256=4hs_xmY64cnzwnzVfHheFkF-Vy_bN4lrDhB9I_xii8s,88
+pydra2app/xnat/cli/entrypoint.py,sha256=3ycpE4nYzjIW6yt4I2xAOOBsswKMVTDkMtkamr2oVck,1010
+pydra2app/xnat/cli/release.py,sha256=DuuNVYAeNLmRKna8M3P48lMy_V_smZIfgBvwdDDsDZc,11653
+pydra2app/xnat/tests/test_app.py,sha256=JwQoBP78fLfcRiyovQ6H-MSKdZ7bscS9bYydYotKmVg,7180
+pydra2app/xnat/tests/test_cli_xnat_images.py,sha256=BzDJQCiQ0XNhx1CPl5VWlclm7CZ0dwE74wQtYC_ph3o,5065
+pydra2app_xnat-0.6.1.dist-info/METADATA,sha256=TIlivzjGp5A0AIjtle_hZMCovHCrtb5ljZRK7QQI9AM,21308
+pydra2app_xnat-0.6.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pydra2app_xnat-0.6.1.dist-info/licenses/LICENSE,sha256=YvHlhl0Z71CeLbT-BjXQa_R4_7sXfKtStdlqe_jftqA,16577
+pydra2app_xnat-0.6.1.dist-info/RECORD,,
