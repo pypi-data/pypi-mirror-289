@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/Ominis_OSINT.egg-info/PKG-INFO
+src/Ominis_OSINT.egg-info/SOURCES.txt
+src/Ominis_OSINT.egg-info/dependency_links.txt
+src/Ominis_OSINT.egg-info/entry_points.txt
+src/Ominis_OSINT.egg-info/requires.txt
+src/Ominis_OSINT.egg-info/top_level.txt
