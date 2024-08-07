@@ -1,0 +1,11 @@
+uvenv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uvenv/__version__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+uvenv/_constants.py,sha256=VOVlwL5JnB2sQnetAb-IhYAQ20KkFkQzuvlaVAto_3w,103
+uvenv/cli.py,sha256=S_Ec8x5Si5VVGGVcFP_-TKPVFIBGm6FPopa0xMlyQIA,3707
+uvenv/project.py,sha256=V_BdN-yA8Br-8CpHplMtmJTyWppmyXzV1-aYkQzZX8E,1312
+uvenv/uv.py,sha256=6B6EyqtHrG5SeeRKZwuFp9E4NIrapRdLk9HM901Hi_s,721
+uvenv_cli-0.1.0.dist-info/METADATA,sha256=JvVJKOwFTIP2CDT9wshrnP-5HDS86A_EivF7fcIgv7I,3968
+uvenv_cli-0.1.0.dist-info/WHEEL,sha256=XRxW4r1PNiVhMpP4bT9oWtu3HyndxpJ84SkubFgzp_Y,109
+uvenv_cli-0.1.0.dist-info/entry_points.txt,sha256=XqhYmvG0uz07Y41pMyJQnH4vpNGd5QrI02VaZU6uXL8,41
+uvenv_cli-0.1.0.dist-info/top_level.txt,sha256=rv2Jyzn7kQ9RCDpHaYox_rJCi659vuyNo0sKCKw7Xhk,6
+uvenv_cli-0.1.0.dist-info/RECORD,,
