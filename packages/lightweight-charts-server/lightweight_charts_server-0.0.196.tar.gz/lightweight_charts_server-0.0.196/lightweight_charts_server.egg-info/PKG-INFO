@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: lightweight-charts-server
+Version: 0.0.196
+Summary: lightweight-chart custom python server
+Author-email: Won JeongHoo <clomia.sig@gmail.com>
+Project-URL: Homepage, https://github.com/vegaxholdings/lightweight-charts-server
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi==0.111.1
+Requires-Dist: lightweight-charts==2.0.1
+Requires-Dist: psutil==6.0.0
+
+> 초안입니다.
+
+### 샘플 실행해보기
+
+```
+python setting_data.py
+
+python line_indicators.py
+
+python styling.py
+```
+
+### Development convention
+
+- 브랜치
+    - release: 절대 오류나면 안되는, pypi에 배포되는 소스코드 (CI/CD 파이프라인에 연동됨)
+    - main: 오류 나면 안되는 git clone 대상 브랜치
+    - dev: 오류 나도 상관 없는 개발 브랜치
+
+- 의존성: pyproject.toml에서 project 섹션의 dependencies 리스트 인스톨하면 됨
