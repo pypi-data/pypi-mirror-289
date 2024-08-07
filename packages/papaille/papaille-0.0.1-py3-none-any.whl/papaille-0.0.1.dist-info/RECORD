@@ -1,0 +1,9 @@
+papaille/__init__.py,sha256=1zSCOvKdX2DZHDou392wmEVCYzKhfwDXqbEVWKv_FkY,30
+papaille/__main__.py,sha256=ntoDiowDE4ysjg90-E9W5LFn-wBAas8WtF2MuSMjR_c,111
+papaille/sub_dir/__init__.py,sha256=OHqaQhZfJ9vQDlal-o6n-rlMjyFaqlKQwVjMqeNPnSw,31
+papaille/sub_dir/papaille.py,sha256=eQaCjK_Ufs2NXjqpBmOJDfrBjca2IP-G64E2sA0ROcA,1084
+papaille-0.0.1.dist-info/METADATA,sha256=nskY6Fhn-aYajUi82To-qfvNMn0fXmkanxlxZk-zgmY,769
+papaille-0.0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+papaille-0.0.1.dist-info/entry_points.txt,sha256=EZFkKEbq1CAd2XSNFpZSulvrVPBd_5iQar2ukkz-CEk,54
+papaille-0.0.1.dist-info/top_level.txt,sha256=UkTcBqeTxL3tptpl5IFwAUBQGzNsTW2hovCIrsMtZJI,9
+papaille-0.0.1.dist-info/RECORD,,
