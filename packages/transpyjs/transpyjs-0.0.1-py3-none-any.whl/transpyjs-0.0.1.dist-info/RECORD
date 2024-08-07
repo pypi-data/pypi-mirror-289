@@ -1,0 +1,9 @@
+transpyjs/__init__.py,sha256=W8z-VGX2shHgfuPpzaupnu_AAQvmliQyu0tqlvhhJKs,32
+transpyjs/__main__.py,sha256=nBQlzx6KrppMwJHvE86hUw2GWZp9KS8PlvJb19IMOdQ,104
+transpyjs/sub_dir/__init__.py,sha256=UJBtL5e55r79HCOOJLyNizp9z6iF5gYOdkImyGQigfE,34
+transpyjs/sub_dir/transpyjs.py,sha256=1nOZrTpDja7HTUIxz7y-epXMjvt2W0PVSX0c6N9avpU,1724
+transpyjs-0.0.1.dist-info/METADATA,sha256=onIatiFXIwacJSJZ9OiW0Xdd72M3qWFXdvkl157tnKY,747
+transpyjs-0.0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+transpyjs-0.0.1.dist-info/entry_points.txt,sha256=ZOOUDRnUO6b39iFzJTZvq_kQM5F_NMOgaoOkJ-adgPk,93
+transpyjs-0.0.1.dist-info/top_level.txt,sha256=Ro59fLirNjQ6cpACzcEHogOFNJ6LUjkTKHwd_hAIqxU,10
+transpyjs-0.0.1.dist-info/RECORD,,

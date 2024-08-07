@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: transpyjs
+Version: 0.0.1
+Summary: Write in Python, compile in Javascript
+Home-page: UNKNOWN
+Author: Guy-Yann VECTOL
+Author-email: guyyann.vectol@gmail.com
+Maintainer: Guy-Yann VECTOL
+Maintainer-email: guyyann.vectol@gmail.com
+License: BSD
+Project-URL: Transcrypt, https://www.transcrypt.org/
+Keywords: pyjs,transcrypt,pytojs,py2js,transpy,transcript,Vectol,transpyjs
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: Transcrypt==3.9.3
+
+UNKNOWN
+

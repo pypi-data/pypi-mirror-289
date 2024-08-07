@@ -1,0 +1,4 @@
+[console_scripts]
+configure = transpyjs.__main__:configure
+create = transpyjs.__main__:main
+
