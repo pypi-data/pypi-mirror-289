@@ -1,0 +1,16 @@
+lightweight_charts_server/__init__.py,sha256=Kt86DC1jFqpeE0ZnI1qT96eDbQU1FkO4QqtQLbcwX8E,111
+lightweight_charts_server/display.py,sha256=0Q8pDV3k_18476acJz00uP_0_4IwrZseUFIm9SWFCVg,9193
+lightweight_charts_server/server.py,sha256=F7e2uR0iYE_OHJorMd_pcuygXpz5k7izAPf_Ryz281I,2266
+lightweight_charts_server/system.py,sha256=TULkvu4rwHMKjq3gsv4i8mweX0waPuZbmSNJ4Ssrua0,2346
+lightweight_charts_server/static/default.css,sha256=UPoA2HD1OtBBBwzbWUWKf-83LqwVuLm5XjpEOQZeYyI,4439
+lightweight_charts_server/static/index.html,sha256=DPh6K8KPAHvu3bLWgOm2OijmAne8AjCjyX0ibopIR48,599
+lightweight_charts_server/static/index.js,sha256=fju80gmGw2ybmk0mlPKIPEPuTPFGo3U-W-sy_8yruhE,4188
+lightweight_charts_server/static/styles.css,sha256=5QyiefIS2gptKk6vvJjnsPcJ1-eVkVZkGRFyio5zCEc,3586
+lightweight_charts_server/static/asset/arrow.png,sha256=zIzZo9-4pG9SAZkEp05nII_dFM-PYZb-I6P2CL8-BbM,455
+lightweight_charts_server/static/asset/favicon.ico,sha256=Fn_oBnkZKK0_qnk_f_kU7o46plRkc-imsjkXjSar0ro,1150
+lightweight_charts_server/static/build/bundle.js,sha256=dFSQMl1qXo9t53rdEfliqfowvY4_FpemQCH6BpwCIYk,48354
+lightweight_charts_server/static/build/lightweight-charts.js,sha256=p9QiFRbH6guwzBfWBd-ISMHHSFF6LKQ8LOGpXdsVkAY,160942
+lightweight_charts_server-0.0.210.dist-info/METADATA,sha256=4eunJCggQGOjqJN5O9Ke7kJNhre3yJfPNlSDDryKBDo,1287
+lightweight_charts_server-0.0.210.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+lightweight_charts_server-0.0.210.dist-info/top_level.txt,sha256=cwDSK7cgzxWB3O9q5KeS35TG3d4uLTQ_eWLFgH-W4dU,26
+lightweight_charts_server-0.0.210.dist-info/RECORD,,
