@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: m2c2kit-data-cli
+Version: 0.1.3
+Summary: 
+Author: Nelson Roque, PhD
+Author-email: nur375@psu.edu
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: typer[all] (>=0.1.0,<0.2.0)
+Description-Content-Type: text/markdown
+
+# Portal Gun
+
+The awesome Portal Gun
