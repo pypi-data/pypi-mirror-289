@@ -1,0 +1,25 @@
+
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-function-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=line-too-long
+from enum import Enum
+
+class Module(Enum):
+    CORE="core"
+    ORACLE="oracle"
+    PORTFOLIO="portfolio"
+    RISK="risk"
+    RESEARCH="research"
+    TRADING="trading"
+    SIMULATION="simulation"
+
+class Domain(Enum):
+    FINCORE="fincore"
+    GYMCORE="gymcore"
+    HEALTHCORE="healthcore"
+    ENVICORE="envicore"
+    SPORTSCORE="sportscore"
+    POLICORE="policore"
+    CUSTOM="custom"
+
