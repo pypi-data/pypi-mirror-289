@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/PySide6WidgetCollection.egg-info/PKG-INFO
+src/PySide6WidgetCollection.egg-info/SOURCES.txt
+src/PySide6WidgetCollection.egg-info/dependency_links.txt
+src/PySide6WidgetCollection.egg-info/requires.txt
+src/PySide6WidgetCollection.egg-info/top_level.txt
+src/dialogs/AboutDialog.py
+src/dialogs/__init__.py
+src/widgets/LEDIndicatorWidget.py
+src/widgets/PlayPushButton.py
+src/widgets/QProgressBarWindow.py
+src/widgets/__init__.py

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: PySide6WidgetCollection
+Version: 1.0.1
+Summary: Widgest for the flexsensor application, that are shared across the project
+Author-email: Christoph Schmidt <cschmidt.fs@gmail.com>
+Project-URL: Homepage, https://gitlab.tugraz.at/flexsensor-public/fswidgets
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyside6
+Requires-Dist: rich
+Requires-Dist: pyyaml
+
+# FSWidget
+
+A repository for the FlexSensor widget.
