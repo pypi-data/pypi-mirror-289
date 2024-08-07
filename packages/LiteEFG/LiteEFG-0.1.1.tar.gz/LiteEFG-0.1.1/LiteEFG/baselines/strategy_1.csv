@@ -1,0 +1,145 @@
+,Infoset,Fold,Call,Raise
+0,[Observer: 1][Private: 0][Round 1][Player: 1][Pot: 2][Money: 99 99][Round1: 1][Round2: ],0.0,0.5049277261923352,0.4950722738076649
+1,[Observer: 1][Private: 0][Round 1][Player: 1][Pot: 4][Money: 97 99][Round1: 2][Round2: ],0.32422367498573273,0.3001103450433668,0.37566597997090057
+2,[Observer: 1][Private: 1][Round 1][Player: 1][Pot: 2][Money: 99 99][Round1: 1][Round2: ],0.0,0.4969544208609765,0.5030455791390235
+3,[Observer: 1][Private: 1][Round 1][Player: 1][Pot: 4][Money: 97 99][Round1: 2][Round2: ],0.3066405901964264,0.3221210152203181,0.3712383945832554
+4,[Observer: 1][Private: 2][Round 1][Player: 1][Pot: 2][Money: 99 99][Round1: 1][Round2: ],0.0,0.4942075612909913,0.5057924387090087
+5,[Observer: 1][Private: 2][Round 1][Player: 1][Pot: 4][Money: 97 99][Round1: 2][Round2: ],0.2807339109982897,0.382076327534444,0.33718976146726626
+6,[Observer: 1][Private: 0][Round 1][Player: 1][Pot: 8][Money: 95 97][Round1: 1 2 2][Round2: ],0.4852654954554537,0.5147345045445463,0.0
+7,[Observer: 1][Private: 1][Round 1][Player: 1][Pot: 8][Money: 95 97][Round1: 1 2 2][Round2: ],0.48136974868191007,0.5186302513180899,0.0
+8,[Observer: 1][Private: 2][Round 1][Player: 1][Pot: 8][Money: 95 97][Round1: 1 2 2][Round2: ],0.43943915978613235,0.5605608402138677,0.0
+9,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 2][Money: 99 99][Public: 1][Round1: 1 1][Round2: 1],0.0,0.5102619693148989,0.4897380306851013
+10,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 6][Money: 95 99][Public: 1][Round1: 1 1][Round2: 2],0.3390790343043915,0.32317616149994366,0.3377448041956646
+11,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 2][Money: 99 99][Public: 2][Round1: 1 1][Round2: 1],0.0,0.5053025463192572,0.4946974536807429
+12,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 6][Money: 95 99][Public: 2][Round1: 1 1][Round2: 2],0.3423217541145163,0.33311606478615174,0.32456218109933194
+13,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 1][Round1: 2 1][Round2: 1],0.0,0.512424983524161,0.4875750164758391
+14,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 1][Round1: 2 1][Round2: 2],0.34261716375277634,0.3333019167586364,0.3240809194885872
+15,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 2][Round1: 2 1][Round2: 1],0.0,0.4957421956111261,0.5042578043888739
+16,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 2][Round1: 2 1][Round2: 2],0.3369650862834258,0.32218984836090603,0.3408450653556683
+17,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 2][Money: 99 99][Public: 0][Round1: 1 1][Round2: 1],0.0,0.5143465481234134,0.4856534518765866
+18,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 6][Money: 95 99][Public: 0][Round1: 1 1][Round2: 2],0.3392957295599744,0.3423570366177014,0.31834723382232416
+19,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 2][Money: 99 99][Public: 1][Round1: 1 1][Round2: 1],0.0,0.5022605643637593,0.49773943563624057
+20,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 6][Money: 95 99][Public: 1][Round1: 1 1][Round2: 2],0.3268947341112811,0.3303441176198991,0.34276114826881987
+21,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 2][Money: 99 99][Public: 2][Round1: 1 1][Round2: 1],0.0,0.4924701643184829,0.5075298356815171
+22,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 6][Money: 95 99][Public: 2][Round1: 1 1][Round2: 2],0.3331520482235729,0.3352999708606454,0.3315479809157816
+23,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 0][Round1: 2 1][Round2: 1],0.0,0.5157470581580003,0.48425294184199985
+24,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 0][Round1: 2 1][Round2: 2],0.3072989703336527,0.3092229934573242,0.38347803620902304
+25,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 1][Round1: 2 1][Round2: 1],0.0,0.5129866119687342,0.4870133880312659
+26,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 1][Round1: 2 1][Round2: 2],0.3191773248148345,0.3495141101615774,0.3313085650235881
+27,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 2][Round1: 2 1][Round2: 1],0.0,0.5134834662013468,0.48651653379865323
+28,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 2][Round1: 2 1][Round2: 2],0.3162385692881315,0.3289754590521695,0.354785971659699
+29,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 2][Money: 99 99][Public: 0][Round1: 1 1][Round2: 1],0.0,0.502322698304822,0.49767730169517804
+30,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 6][Money: 95 99][Public: 0][Round1: 1 1][Round2: 2],0.3221731348235818,0.34040692879418555,0.3374199363822326
+31,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 2][Money: 99 99][Public: 1][Round1: 1 1][Round2: 1],0.0,0.5082421488731054,0.49175785112689463
+32,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 6][Money: 95 99][Public: 1][Round1: 1 1][Round2: 2],0.317050841657539,0.3230681556181906,0.35988100272427037
+33,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 2][Money: 99 99][Public: 2][Round1: 1 1][Round2: 1],0.0,0.49757834080751123,0.5024216591924888
+34,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 6][Money: 95 99][Public: 2][Round1: 1 1][Round2: 2],0.3102602000406329,0.3509394118412927,0.33880038811807445
+35,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 0][Round1: 2 1][Round2: 1],0.0,0.4929378670155717,0.5070621329844283
+36,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 0][Round1: 2 1][Round2: 2],0.32015409912176335,0.3391566241525769,0.3406892767256598
+37,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 1][Round1: 2 1][Round2: 1],0.0,0.47813878588230097,0.521861214117699
+38,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 1][Round1: 2 1][Round2: 2],0.3216751296555982,0.33983408362530354,0.33849078671909827
+39,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 2][Round1: 2 1][Round2: 1],0.0,0.4989141068670779,0.5010858931329221
+40,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 2][Round1: 2 1][Round2: 2],0.3121176333037533,0.33483957765643513,0.3530427890398117
+41,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 2][Money: 99 99][Public: 0][Round1: 1 1][Round2: 1],0.0,0.49470459669365074,0.5052954033063491
+42,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 6][Money: 95 99][Public: 0][Round1: 1 1][Round2: 2],0.323775784950418,0.3336027242942421,0.34262149075534004
+43,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 0][Round1: 2 1][Round2: 1],0.0,0.49868772682742646,0.5013122731725735
+44,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 0][Round1: 2 1][Round2: 2],0.29866250144198786,0.31293374848504873,0.38840375007296346
+45,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 1][Round1: 1 2 1][Round2: 1],0.0,0.4976817935442878,0.5023182064557122
+46,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 1][Round1: 1 2 1][Round2: 2],0.326649865501427,0.33667506724928653,0.33667506724928653
+47,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 2][Round1: 1 2 1][Round2: 1],0.0,0.5114598076352804,0.4885401923647196
+48,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 2][Round1: 1 2 1][Round2: 2],0.3330509474057888,0.3270147941695562,0.3399342584246551
+49,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 1][Round1: 2 2 1][Round2: 1],0.0,0.4819876006612203,0.5180123993387796
+50,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 1][Round1: 2 2 1][Round2: 2],0.32285213296843385,0.3424518816770073,0.33469598535455886
+51,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 2][Round1: 2 2 1][Round2: 1],0.0,0.5005066548010547,0.4994933451989453
+52,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 2][Round1: 2 2 1][Round2: 2],0.341927361518995,0.30389961298648555,0.3541730254945195
+53,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 0][Round1: 1 2 1][Round2: 1],0.0,0.5034153233500878,0.4965846766499122
+54,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 0][Round1: 1 2 1][Round2: 2],0.33404813378934795,0.32999640170100714,0.33595546450964486
+55,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 1][Round1: 1 2 1][Round2: 1],0.0,0.49983297108676034,0.5001670289132398
+56,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 1][Round1: 1 2 1][Round2: 2],0.32909585763483656,0.33356723799223503,0.33733690437292824
+57,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 2][Round1: 1 2 1][Round2: 1],0.0,0.5128686876862529,0.48713131231374707
+58,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 2][Round1: 1 2 1][Round2: 2],0.3294500375402474,0.3352749812298763,0.3352749812298763
+59,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 0][Round1: 2 2 1][Round2: 1],0.0,0.5105577874403162,0.48944221255968373
+60,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 0][Round1: 2 2 1][Round2: 2],0.3252181098380949,0.3200748288286818,0.3547070613332233
+61,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 1][Round1: 2 2 1][Round2: 1],0.0,0.501958985226381,0.498041014773619
+62,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 1][Round1: 2 2 1][Round2: 2],0.3272070371568833,0.3363964814215583,0.3363964814215583
+63,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 2][Round1: 2 2 1][Round2: 1],0.0,0.4946103322382254,0.5053896677617746
+64,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 2][Round1: 2 2 1][Round2: 2],0.3111902080340721,0.34501751221817967,0.3437922797477481
+65,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 0][Round1: 1 2 1][Round2: 1],0.0,0.5004584791511905,0.4995415208488095
+66,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 0][Round1: 1 2 1][Round2: 2],0.3235232224779629,0.32632451079021957,0.3501522667318175
+67,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 1][Round1: 1 2 1][Round2: 1],0.0,0.4980961114235444,0.5019038885764555
+68,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 1][Round1: 1 2 1][Round2: 2],0.31645272377763317,0.3403112917894019,0.3432359844329647
+69,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 2][Round1: 1 2 1][Round2: 1],0.0,0.4918947106508648,0.5081052893491351
+70,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 2][Round1: 1 2 1][Round2: 2],0.3307164071326743,0.3357077538227171,0.3335758390446086
+71,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 0][Round1: 2 2 1][Round2: 1],0.0,0.49862754264170583,0.5013724573582943
+72,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 0][Round1: 2 2 1][Round2: 2],0.33085030604779364,0.32633512211674953,0.34281457183545677
+73,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 1][Round1: 2 2 1][Round2: 1],0.0,0.49498270101168845,0.5050172989883115
+74,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 1][Round1: 2 2 1][Round2: 2],0.3244234093813611,0.3377882953093195,0.3377882953093195
+75,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 2][Round1: 2 2 1][Round2: 1],0.0,0.5021567535775513,0.49784324642244865
+76,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 2][Round1: 2 2 1][Round2: 2],0.32484964591081156,0.3309431464974159,0.34420720759177253
+77,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 6][Money: 97 97][Public: 0][Round1: 1 2 1][Round2: 1],0.0,0.48652959278377467,0.5134704072162253
+78,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 93 97][Public: 0][Round1: 1 2 1][Round2: 2],0.32502561237088545,0.33766058899852514,0.33731379863058936
+79,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 0][Round1: 2 2 1][Round2: 1],0.0,0.5099635542061529,0.49003644579384703
+80,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 0][Round1: 2 2 1][Round2: 2],0.313198335818149,0.33859628751282245,0.34820537666902857
+81,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 1][Round1: 1 1][Round2: 1 2 2],0.4942154356610769,0.505784564338923,0.0
+82,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 2][Round1: 1 1][Round2: 1 2 2],0.48593427944883494,0.514065720551165,0.0
+83,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 1][Round1: 1 2 2 1][Round2: 1],0.0,0.5,0.5
+84,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 1][Round1: 1 2 2 1][Round2: 2],0.3317684724147911,0.31466349402571414,0.3535680335594948
+85,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 2][Round1: 1 2 2 1][Round2: 1],0.0,0.5088489792995865,0.4911510207004135
+86,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 2][Round1: 1 2 2 1][Round2: 2],0.33894381862038947,0.32211236275922106,0.33894381862038947
+87,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 1][Round1: 2 1][Round2: 1 2 2],0.5051126216465163,0.4948873783534836,0.0
+88,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 2][Round1: 2 1][Round2: 1 2 2],0.4910091116408043,0.5089908883591956,0.0
+89,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 0][Round1: 1 1][Round2: 1 2 2],0.4827162357527949,0.5172837642472052,0.0
+90,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 1][Round1: 1 1][Round2: 1 2 2],0.4864004883089605,0.5135995116910396,0.0
+91,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 2][Round1: 1 1][Round2: 1 2 2],0.45628964404273264,0.5437103559572674,0.0
+92,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 0][Round1: 1 2 2 1][Round2: 1],0.0,0.5113886217551736,0.4886113782448262
+93,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 0][Round1: 1 2 2 1][Round2: 2],0.32606779500793237,0.3274289411529098,0.3465032638391578
+94,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 1][Round1: 1 2 2 1][Round2: 1],0.0,0.5,0.5
+95,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 1][Round1: 1 2 2 1][Round2: 2],0.3333333333333333,0.3333333333333333,0.3333333333333333
+96,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 2][Round1: 1 2 2 1][Round2: 1],0.0,0.4913880189043979,0.5086119810956022
+97,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 2][Round1: 1 2 2 1][Round2: 2],0.3149918567583549,0.33902680435120575,0.34598133889043936
+98,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 0][Round1: 2 1][Round2: 1 2 2],0.5064289056788489,0.49357109432115115,0.0
+99,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 1][Round1: 2 1][Round2: 1 2 2],0.4522832795701866,0.5477167204298135,0.0
+100,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 2][Round1: 2 1][Round2: 1 2 2],0.5049307753770674,0.4950692246229327,0.0
+101,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 0][Round1: 1 1][Round2: 1 2 2],0.5133858021224167,0.48661419787758325,0.0
+102,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 1][Round1: 1 1][Round2: 1 2 2],0.4831434068481833,0.5168565931518166,0.0
+103,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 2][Round1: 1 1][Round2: 1 2 2],0.49545615451616193,0.504543845483838,0.0
+104,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 0][Round1: 1 2 2 1][Round2: 1],0.0,0.4777852343148775,0.5222147656851225
+105,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 0][Round1: 1 2 2 1][Round2: 2],0.29011937055335096,0.37268504405096387,0.33719558539568517
+106,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 1][Round1: 1 2 2 1][Round2: 1],0.0,0.48275090285082245,0.5172490971491776
+107,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 1][Round1: 1 2 2 1][Round2: 2],0.3027948772779734,0.3024665971507429,0.39473852557128364
+108,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 2][Round1: 1 2 2 1][Round2: 1],0.0,0.4983047374237228,0.5016952625762773
+109,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 2][Round1: 1 2 2 1][Round2: 2],0.3333333333333333,0.3333333333333333,0.3333333333333333
+110,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 0][Round1: 2 1][Round2: 1 2 2],0.49490688806975575,0.5050931119302442,0.0
+111,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 1][Round1: 2 1][Round2: 1 2 2],0.48580347999477436,0.5141965200052258,0.0
+112,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 2][Round1: 2 1][Round2: 1 2 2],0.5,0.5,0.0
+113,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 0][Round1: 1 1][Round2: 1 2 2],0.47907941743833493,0.520920582561665,0.0
+114,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 10][Money: 95 95][Public: 0][Round1: 1 2 2 1][Round2: 1],0.0,0.5,0.5
+115,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 14][Money: 91 95][Public: 0][Round1: 1 2 2 1][Round2: 2],0.32166657477195093,0.3391667126140245,0.3391667126140245
+116,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 0][Round1: 2 1][Round2: 1 2 2],0.5,0.5,0.0
+117,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 1][Round1: 1 2 1][Round2: 1 2 2],0.5,0.5,0.0
+118,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 2][Round1: 1 2 1][Round2: 1 2 2],0.5129387958669732,0.4870612041330269,0.0
+119,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 1][Round1: 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
+120,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 2][Round1: 2 2 1][Round2: 1 2 2],0.5091864609810826,0.4908135390189175,0.0
+121,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 0][Round1: 1 2 1][Round2: 1 2 2],0.48776465562246274,0.5122353443775373,0.0
+122,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 1][Round1: 1 2 1][Round2: 1 2 2],0.5,0.5,0.0
+123,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 2][Round1: 1 2 1][Round2: 1 2 2],0.5072624364039248,0.49273756359607535,0.0
+124,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 0][Round1: 2 2 1][Round2: 1 2 2],0.536689209339027,0.463310790660973,0.0
+125,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 1][Round1: 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
+126,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 2][Round1: 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
+127,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 0][Round1: 1 2 1][Round2: 1 2 2],0.5,0.5,0.0
+128,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 1][Round1: 1 2 1][Round2: 1 2 2],0.47767378845089375,0.5223262115491063,0.0
+129,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 2][Round1: 1 2 1][Round2: 1 2 2],0.47859569742357005,0.5214043025764298,0.0
+130,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 0][Round1: 2 2 1][Round2: 1 2 2],0.46488080735646276,0.5351191926435374,0.0
+131,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 1][Round1: 2 2 1][Round2: 1 2 2],0.47861752999589413,0.5213824700041059,0.0
+132,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 2][Round1: 2 2 1][Round2: 1 2 2],0.49673812710358856,0.5032618728964113,0.0
+133,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 18][Money: 89 93][Public: 0][Round1: 1 2 1][Round2: 1 2 2],0.48059443483440034,0.5194055651655995,0.0
+134,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 0][Round1: 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
+135,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 1][Round1: 1 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
+136,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 2][Round1: 1 2 2 1][Round2: 1 2 2],0.5180168195252202,0.48198318047477984,0.0
+137,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 0][Round1: 1 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
+138,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 1][Round1: 1 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
+139,[Observer: 1][Private: 1][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 2][Round1: 1 2 2 1][Round2: 1 2 2],0.4972884525595222,0.5027115474404777,0.0
+140,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 0][Round1: 1 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
+141,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 1][Round1: 1 2 2 1][Round2: 1 2 2],0.4505356018956839,0.549464398104316,0.0
+142,[Observer: 1][Private: 2][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 2][Round1: 1 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
+143,[Observer: 1][Private: 0][Round 2][Player: 1][Pot: 22][Money: 87 91][Public: 0][Round1: 1 2 2 1][Round2: 1 2 2],0.5,0.5,0.0
