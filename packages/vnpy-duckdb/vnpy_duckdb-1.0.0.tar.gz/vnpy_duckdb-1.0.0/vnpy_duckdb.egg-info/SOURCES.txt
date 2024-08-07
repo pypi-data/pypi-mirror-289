@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+vnpy_duckdb/__init__.py
+vnpy_duckdb/duckdb_database.py
+vnpy_duckdb/duckdb_sql.py
+vnpy_duckdb.egg-info/PKG-INFO
+vnpy_duckdb.egg-info/SOURCES.txt
+vnpy_duckdb.egg-info/dependency_links.txt
+vnpy_duckdb.egg-info/not-zip-safe
+vnpy_duckdb.egg-info/requires.txt
+vnpy_duckdb.egg-info/top_level.txt
