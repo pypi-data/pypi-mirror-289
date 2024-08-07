@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: artix
+Version: 0.0.0
+Summary: A generic artifact management utility.
+License: MIT
+Author: celestialorb
+Author-email: chris.m.busby@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: dynaconf (>=3.2.6,<4.0.0)
+Requires-Dist: importlib-metadata (>=8.2.0,<9.0.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: packaging (>=24.1,<25.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich-click (>=1.8.3,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Artix
+A generic artifact utility.
+
+## Purpose
+The motivation behind this project is to provide an integrated, CLI-based experience for managing general (i.e. file-based) artifacts.
+
+# Quickstart
+To get started with `artix` you'll need to create an Artix configuration file within your project. Currently,
+the filename must be `artix.toml`. The directory the configuration file is placed in will be considered the root path
+that `artix` will act on for that configuration file, thus all artifacts will be downloaded relative to that root.
+
+An example configuration is given below for a project that declares some country code data as an artifact.
+```toml
+[artix.config]
+version = 0
+
+[repository.country-codes]
+source = "https://raw.githubusercontent.com/datasets/country-codes/${tag}/data/country-codes.csv"
+
+[artifact.country-codes]
+destination = "country-codes.csv"
+locked = true
+repository = "country-codes"
+
+[artifact.country-codes.version]
+tag = "master"
+```
+
+This configuration declares one "repository", which declares where to pull the artifact data from, as well as one
+"artifact" and the associated version information for it. The artifact's `destination` is where to place the downloaded
+artifact on the filesystem. The artifact's version information will be populated into the repository's source.
+
+## Usage
+To get started with the Artix CLI, ask it for help using the `--help` flag:
+```shell
+artix --help
+```
+
+The primary use case of `artix` is to sync your remote artifacts to your local filesystem. This can be accomplished with
+the `sync` command.
+```shell
+artix sync --help
+```
+
+**NOTE**: At present Artix doesn't fully "sync" your artifacts in that it won't remove artifacts that were once
+downloaded but have been removed from the configuration file. We intend to add this feature into a future release of
+Artix.
+
+## Configuration
+The simplest way to configure Artix is to create an `artix.toml` file at the root of your project, or at the root of
+where you want your artifacts to be downloaded (e.g. a `/data` directory).
+
+There are two main sections of the Artix TOML configuration file. The first is configuring repositories, and the second
+is configuring artifacts.
+
+### Repositories
+A repository is simply a declaration of _where_ to pull the artifact from, and it most commonly a URI. Each repository
+has a `name` and a `source`. A repository definition is a table, with the `name` being the second key of the table.
+
+For example a repository with the name of `country-codes` would be declared as `[repository.country-codes]`.
+The source of the repository would then be declared with a `source` key/value pair.
+
+The `source` key/value pair may contain string replacements that are populated from an artifact's version information.
+These replacements use the `${key}` syntax where `key` is the name of the key/value pair from the version information.
+
+See the full example definition below:
+```toml
+[repository.country-codes]
+source = "https://raw.githubusercontent.com/datasets/country-codes/${tag}/data/country-codes.csv"
+```
+
+### Artifacts
+An artifact is a declaration of a _specific version_ of a file pulled from a repository. Similar to a repository an
+artifact is declared as a TOML table, with the name of the artifact being the second key of the table. The only required
+configuration element is the name of the repository the artifact is pulled from.
+```toml
+[artifact.country-codes]
+repository = "country-codes"
+```
+
+Additionally, you may specify a `destination` key which can be used to determine where to place the downloaded artifact.
+By default, Artix will simply save it in the Artix project's root directory with the same name as the artifact.
+
+The example configuration below will save the artifact under the `data` directory located alongside the `artix.toml`
+configuration file with the name `country-codes.csv`.
+```toml
+[artifact.country-codes]
+destination = "data/country-codes.csv"
+repository = "country-codes"
+```
+
+Additionally there is a `locked` key/value pair that takes a boolean value. If true, this will instruct Artix to check
+the downloaded artifact against the Artix lockfile (if one exists) to ensure the checksum matches. By default, this is
+set to `true` but can be disabled with a `false` value, which can be useful if you don't care if the contents of the
+artifact change.
+```toml
+[artifact.country-codes]
+destination = "data/country-codes.csv"
+locked = false
+repository = "country-codes"
+```
+
+Finally, each artifact can have a version definition. This is done via another TOML table and contains key/value pairs
+that are replaced into the associated repository's `source` value. Below is an example where we define the `tag` value
+to be `master` for the `country-codes` artifact's `country-codes` repository source string.
+```toml
+[artifact.country-codes.version]
+tag = "master"
+```
+
