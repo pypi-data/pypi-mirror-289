@@ -1,0 +1,11 @@
+evalutils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+evalutils/__main__.py,sha256=FhdbzZ4lTRdQU9OqGQ82iSVLtQ1rfkFPWcGcnq8b-8I,369
+evalutils/annotations.py,sha256=PdOtiWSfbN6ubPhwMT-z0tQfsw37tbQBmmnGw6fWxtw,3938
+evalutils/roc.py,sha256=otykOR-kCLxp4J5FJSo0r0bzKYGYnDCMTdjJeOeJI_M,10224
+evalutils/scorers.py,sha256=9-qQWRYGxh6qi5rNXJmBEOblJJ17sr-fJweXqHxtxb8,3796
+evalutils/stats.py,sha256=5OmdgX1e1iMhbnB04kFiU-YikmcQldCMJ70NQIKlfxU,20543
+evalutils-0.5.0.dist-info/LICENSE,sha256=31MzbS82A0yFIqCuosNW9RYli1JJJ25VSdzJFrPi91E,1086
+evalutils-0.5.0.dist-info/METADATA,sha256=4k1TK0rAoBM8oYiERtMwzHf9LJfCzB6qrveMhvjGQWQ,2294
+evalutils-0.5.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+evalutils-0.5.0.dist-info/entry_points.txt,sha256=gLs64AMb41SDqWe24XfraoQGSWrL0a3IT98FNA7gRW0,53
+evalutils-0.5.0.dist-info/RECORD,,
