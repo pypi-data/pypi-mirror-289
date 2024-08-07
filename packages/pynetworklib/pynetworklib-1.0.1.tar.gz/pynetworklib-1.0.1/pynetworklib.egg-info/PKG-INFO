@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: pynetworklib
+Version: 1.0.1
+Summary: A simple library for makeing dense multilayer neural networks
+Author: Joseph Bronsten
+Author-email: josephbronsten.dev_contact@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# PyNetworkLib
+
+### This is an INDEV version of a multi-layer perception network written in Python
+
+### It is designed to be used as a library, it has a network module that provides trainable dense multilayer perceptron networks, a configuration module that provides a way to store parameters for training and optimization, and an optimization module that creates an optimized network structure and hyperparameters for a given dataset
+
+## Installation of the library
+
+```bash
+pip install pynetworklib
+```
+
+## Example of how to use this library
+
+```python
+from network import network
+from network import dense
+from network import activation_functions
+from network import mse
+import numpy as np
+
+# Create a network with a struct of 3 layers of size 2, 3, and 1
+input_size = 2
+output_size = 1
+network_xor = network.Network([dense.Dense(2,3), activation_functions.Tanh(), 
+                           dense.Dense(3,1), activation_functions.Tanh()], 
+                           input_size, output_size)
+
+# Create a data set, this example uses the xor operation as the training output
+x_train = [
+    np.array([1,1]),
+    np.array([0,1]),
+    np.array([1,0]),
+    np.array([0,0])
+    ]
+y_train = [0,1,1,0]
+
+network_xor.fit(mse.MeanSquaredError(), x_train, y_train, epoachs = 10, verbose = True)
+
+
+```
