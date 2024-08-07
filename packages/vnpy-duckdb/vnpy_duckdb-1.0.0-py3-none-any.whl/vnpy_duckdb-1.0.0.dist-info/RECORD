@@ -1,0 +1,8 @@
+vnpy_duckdb/__init__.py,sha256=sbH_a6FOvYlC0sW1NDeDn8QXJIgVGUyYJxZJFoACAmc,1231
+vnpy_duckdb/duckdb_database.py,sha256=QVXOtW7cah45cSPpOklbalcF0Y5avrrPrVN52kBRXKE,6758
+vnpy_duckdb/duckdb_sql.py,sha256=KOJcDM20pNt66UYZyyJKhNRpxAiKMHYp9lwiX6hn7T8,1786
+vnpy_duckdb-1.0.0.dist-info/LICENSE,sha256=JbnXn3rU_xdtl8t6DDCJyXpvAsAhzciclEPo97Gt0O8,1100
+vnpy_duckdb-1.0.0.dist-info/METADATA,sha256=RprPIyU24COYZrzZTAu7DnhrTkpKjwknWU5vhb2gF8s,1931
+vnpy_duckdb-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+vnpy_duckdb-1.0.0.dist-info/top_level.txt,sha256=TH-Ff7AuaxdGDClyNxQqR80QSsO39vac_g81jqkxfjY,12
+vnpy_duckdb-1.0.0.dist-info/RECORD,,
