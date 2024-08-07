@@ -1,0 +1,13 @@
+{
+  "tests/test_data.py::FeatureRequestTestCase::test_cache": true,
+  "tests/test_data.py::FeatureRequestTestCase::test_call_multiple_days": true,
+  "tests/test_data.py::FeatureRequestTestCase::test_call_single_day": true,
+  "tests/test_data.py::FeatureRequestTestCase::test_false_feature": true,
+  "tests/test_data.py::FeatureRequestTestCase::test_rolling_window": true,
+  "tests/test_anomaly_base.py::AnomalyBaseClassTestCase::test_get_features": true,
+  "tests/test_baseclass.py::BaseClassTestCase::test_2D_append": true,
+  "tests/test_baseclass.py::BaseClassTestCase::test_append": true,
+  "tests/test_baseclass.py::BaseClassTestCase::test_exceptions": true,
+  "tests/test_rsam.py::RSAMTestCase::test_append": true,
+  "tests/test_baseclass.py::test_append": true
+}
