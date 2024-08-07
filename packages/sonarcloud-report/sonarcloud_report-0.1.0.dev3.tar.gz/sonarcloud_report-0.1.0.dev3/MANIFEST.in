@@ -1,0 +1,1 @@
+include sonarcloud_report/templates/sonarcloud_report.j2
