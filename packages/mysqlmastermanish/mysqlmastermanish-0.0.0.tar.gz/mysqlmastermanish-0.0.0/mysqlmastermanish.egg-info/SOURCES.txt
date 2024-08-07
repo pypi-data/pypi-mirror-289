@@ -1,0 +1,6 @@
+setup.py
+mysqlmastermanish.egg-info/PKG-INFO
+mysqlmastermanish.egg-info/SOURCES.txt
+mysqlmastermanish.egg-info/dependency_links.txt
+mysqlmastermanish.egg-info/requires.txt
+mysqlmastermanish.egg-info/top_level.txt
