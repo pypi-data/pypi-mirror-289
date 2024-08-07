@@ -1,0 +1,2 @@
+[console_scripts]
+pyrcf-visualise-robot = pyrcf.executables.visualise_robot:main
