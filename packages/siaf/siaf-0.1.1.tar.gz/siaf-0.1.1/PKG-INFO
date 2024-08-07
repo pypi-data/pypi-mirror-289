@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: siaf
+Version: 0.1.1
+Summary: Swarm Intelligence Algorithm Framework
+Home-page: https://github.com/lshengjian/siaf
+Author: alex
+Author-email: lsj178@139.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: matplotlib>=3.8.0
+Requires-Dist: omegaconf>=2.3.0
+Requires-Dist: vrplib>=1.4.0
+Requires-Dist: pyDOE2>=1.3.0
+
+# Swarm Intelligence Algorithm Framework
+
+## install
+```
+pip install -U siaf
+
+install from local src code [py -m pip install -e .]
+```
+
+## mini example
+
+```
+from siaf import *
+```

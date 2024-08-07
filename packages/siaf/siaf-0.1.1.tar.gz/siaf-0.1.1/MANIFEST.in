@@ -1,0 +1,7 @@
+include README.md  
+include LICENSE  
+include configs/*
+include tests/*
+recursive-include docs *
+recursive-include instances *    
+exclude src/*  

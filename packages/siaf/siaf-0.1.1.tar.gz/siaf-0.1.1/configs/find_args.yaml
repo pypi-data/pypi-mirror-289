@@ -1,0 +1,24 @@
+algorithms:
+  - name: MyOpt
+    pkg_name: src
+    parameters:
+      particles: [20,40,60]
+      step: [0.2,0.5,0.8]
+  - name: LSO
+    pkg_name: 
+    parameters:
+      particles: [20,40,60] #num_lions
+      step: [0.2,0.5,0.8]
+      num_adult: [4,8,12]
+problems:
+  - name: CVRP
+    pkg_name: 
+    args:
+      num_city: 0
+      capacity: 0
+      fname: demo/A-n32-k5.vrp
+  - name: CVRP
+    pkg_name: 
+    args:
+      num_city: 20
+      capacity: 4

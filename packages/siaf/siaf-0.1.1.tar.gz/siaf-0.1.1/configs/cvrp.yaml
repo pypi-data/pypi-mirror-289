@@ -1,0 +1,13 @@
+algorithms:
+  - name: MyOpt
+    pkg_name: src
+    parameters:
+      particles: 40
+      step: 0.2
+  - name: LSO
+    pkg_name: 
+    parameters:
+      particles: 40
+      step: 0.2
+      num_adult: 8
+problems: cvrp/demo  
