@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mysql_basics
+Version: 0.0.0
+Summary: A module for mysql to get some basic details of database and tables like table ddl and row cound and space usage.
+Author: Harish Daga
+Requires-Python: >=3.6
+Requires-Dist: boto3==1.34.154
+Requires-Dist: botocore==1.34.154
+Requires-Dist: jmespath==1.0.1
+Requires-Dist: mysql-connector-python==9.0.0
+Requires-Dist: numpy==2.0.1
+Requires-Dist: pandas==2.2.2
+Requires-Dist: Pyment==0.3.3
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2024.1
+Requires-Dist: s3transfer==0.10.2
+Requires-Dist: setuptools==72.1.0
+Requires-Dist: six==1.16.0
+Requires-Dist: tzdata==2024.1
+Requires-Dist: urllib3==2.2.2

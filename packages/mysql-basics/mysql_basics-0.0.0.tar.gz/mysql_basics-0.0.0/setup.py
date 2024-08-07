@@ -1,0 +1,25 @@
+from setuptools import setup, find_packages
+
+setup(
+    author='Harish Daga',
+    description='A module for mysql to get some basic details of database and tables like table ddl and row cound and space usage.',
+    name='mysql_basics',
+    packages=find_packages(include=['mysql_basics', 'musql_basics.*']),
+    install_requires=[
+        'boto3==1.34.154',
+         'botocore==1.34.154',
+         'jmespath==1.0.1',
+         'mysql-connector-python==9.0.0',
+         'numpy==2.0.1',
+         'pandas==2.2.2',
+         'Pyment==0.3.3',
+         'python-dateutil==2.9.0.post0',
+         'pytz==2024.1',
+         's3transfer==0.10.2',
+         'setuptools==72.1.0',
+         'six==1.16.0',
+         'tzdata==2024.1',
+         'urllib3==2.2.2'
+    ],
+    python_requires='>=3.6',
+)
