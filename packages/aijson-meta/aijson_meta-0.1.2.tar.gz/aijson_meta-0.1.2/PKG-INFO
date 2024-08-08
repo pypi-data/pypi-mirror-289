@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: aijson-meta
+Version: 0.1.2
+Summary: AI JSON Quickstart | Low-code config language for AI Pipelines
+Author: Rafael Irgolic
+Author-email: hello@irgolic.com
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aijson-core
+Requires-Dist: aijson-ml[api]
+Description-Content-Type: text/markdown
+
+# AI JSON – meta
+
+This is a metapackage.
+
+`pip install aijson-meta` is a shortcut for installing:
+- `aijson-core`
+- `aijson-ml[api]`
