@@ -1,0 +1,10 @@
+[console_scripts]
+dsapi = hdltools.dsapi:main
+hdlclient = hdltools.dsclient:main
+hdlgen = hdltools.hdlgendata:main
+hdlgenspark = hdltools.hdlgendataspark:main
+hdlinst = hdltools.hdlinstance:main
+hdlord = hdltools.hdlord:main
+hdlpolicy = hdltools.hdlpolicy:main
+hdlshare = hdltools.hdlshare:main
+sapcert = hdltools.sapcert:main
