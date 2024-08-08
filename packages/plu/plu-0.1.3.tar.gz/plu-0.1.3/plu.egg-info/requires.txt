@@ -1,0 +1,5 @@
+tiktoken
+openai-whisper
+soundfile
+transformers
+datasets
