@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: am_algorithms
+Version: 0.1.0
+Summary: 
+Author: Aleksandra
+Author-email: ola.mostowska@op.pl
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: sortedcontainers (>=2.4.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+

@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "am_algorithms"
+version = "0.1.0"
+description = ""
+authors = ["Aleksandra <ola.mostowska@op.pl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sortedcontainers = "^2.4.0"
+
+[tool.poetry.scripts]
+am_python_algorithms = "am_python_algorithms.app:main"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.2"
+pytest-html = "^4.1.1"
+pytest-cov = "^5.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
