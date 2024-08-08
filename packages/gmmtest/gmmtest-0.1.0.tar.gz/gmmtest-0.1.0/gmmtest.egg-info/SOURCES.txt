@@ -1,0 +1,9 @@
+README.md
+setup.py
+gmmtest.egg-info/PKG-INFO
+gmmtest.egg-info/SOURCES.txt
+gmmtest.egg-info/dependency_links.txt
+gmmtest.egg-info/top_level.txt
+mypackagepypi/__init__.py
+mypackagepypi/log2.py
+mypackagepypi/math.py
