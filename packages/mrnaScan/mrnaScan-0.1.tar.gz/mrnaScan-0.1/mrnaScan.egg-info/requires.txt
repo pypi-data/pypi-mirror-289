@@ -1,0 +1,6 @@
+pysam
+pandas
+numpy
+scipy
+tables
+collections
