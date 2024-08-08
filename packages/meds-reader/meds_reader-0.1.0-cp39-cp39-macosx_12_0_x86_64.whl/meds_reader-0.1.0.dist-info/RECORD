@@ -1,0 +1,13 @@
+meds_reader-0.1.0.dist-info/RECORD,,
+meds_reader-0.1.0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+meds_reader-0.1.0.dist-info/WHEEL,sha256=b39RNE_mWHaqb8RlMoNd2MFIxFnZzRoqaYWRh0zssG8,108
+meds_reader-0.1.0.dist-info/entry_points.txt,sha256=v3x5nrHwz6Qt4FKbJgx3WFl7OhILbvV1Lf78-UXX5pY,124
+meds_reader-0.1.0.dist-info/top_level.txt,sha256=krMWExcZNaLkkDQELnTkX3OJtN1yi6UPpdHbdJn7qNo,12
+meds_reader-0.1.0.dist-info/METADATA,sha256=WEnUCypt3U7ncIaFTaEjZ9ge_Xljdc6L2aW6HrDO2ZU,3077
+meds_reader/__init__.pyi,sha256=CzVELpOhqYfsjyE8Ht1FcbZ0dqTR_V3mfEyMQ_zbwt4,2474
+meds_reader/meds_reader_convert.cpython-39-darwin.so,sha256=9Abhbx2tZCik8F8c-MpGuP4bA_yGdMsjm5QD3Bgvcbg,11749696
+meds_reader/__init__.py,sha256=hwxWV_ELVZANaJzjtmxKM-Wbe0L7LHPLzygSPUl4i4I,9628
+meds_reader/_meds_reader.cpython-39-darwin.so,sha256=kZShF6s5j9DcI5xvCVfuyHuV6HK3ut65a_43kGcsk4g,402728
+meds_reader/transform.py,sha256=ydftGb_yvY37UVSiX-mItcN83EegLNb_CyNHW2CegPs,6881
+meds_reader/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+meds_reader/transform.pyi,sha256=coDZk_ng2qxLG_TbQZJNP9XdzsXk1IlEMCvbsJcVZeI,1638
