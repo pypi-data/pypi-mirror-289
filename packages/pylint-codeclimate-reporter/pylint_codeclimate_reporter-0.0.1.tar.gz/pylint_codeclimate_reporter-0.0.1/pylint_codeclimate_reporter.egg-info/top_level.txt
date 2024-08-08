@@ -1,0 +1,1 @@
+pylint_codeclimate_reporter

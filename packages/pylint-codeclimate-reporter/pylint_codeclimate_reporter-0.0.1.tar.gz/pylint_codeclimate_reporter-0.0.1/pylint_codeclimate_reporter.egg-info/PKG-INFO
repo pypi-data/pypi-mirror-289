@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: pylint-codeclimate-reporter
+Version: 0.0.1
+Summary: CodeClimate compatible reporter for Pylint
+Home-page: https://gitlab.com/thomaswucher/pylint-codeclimate-reporter
+Author: Thomas Wucher
+Author-email: mail@thomaswucher.de
+License: GPL-2.0-or-later
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Description-Content-Type: text/markdown
+Requires-Dist: pylint
+
+# Pylint Code Climate Reporter
+
+This Pylint reporter generates reports in Code Climate compatible JSON format.
+This is useful for integration of Pylint with tools such as GitLab CI.
+
+## Installation
+
+Pylint Code Climate Reporter is published on PyPI and can be installed from
+there.
+
+```
+pip install pylint-codeclimate-reporter
+```
+
+## Usage
+
+Place the following in `.pylintrc`:
+
+```
+[MASTER]
+load-plugins=pylint_codeclimate_reporter
+
+[REPORTS]
+output-format=pylint_codeclimate_reporter.CodeClimateReporter
+```
+
+or place the following in `pyproject.toml`:
+
+```
+[tool.pylint.MASTER]
+load-plugins=pylint_codeclimate_reporter
+
+[tool.pylint.REPORTS]
+output-format=pylint_codeclimate_reporter.CodeClimateReporter
+```
+
+or manually pass the `--load-plugins` and `--output-format` flags when calling
+pylint.

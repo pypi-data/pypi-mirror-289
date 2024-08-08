@@ -1,0 +1,32 @@
+from setuptools import setup
+
+setup(
+    name="pylint-codeclimate-reporter",
+    version="0.0.1",
+    url="https://gitlab.com/thomaswucher/pylint-codeclimate-reporter",
+    license="GPL-2.0-or-later",
+    author="Thomas Wucher",
+    author_email="mail@thomaswucher.de",
+    description="CodeClimate compatible reporter for Pylint",
+    long_description=open("README.md", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    zip_safe=False,
+    py_modules=["pylint_codeclimate_reporter"],
+    install_requires=["pylint"],
+    classifiers=[
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Topic :: Software Development :: Debuggers",
+        "Topic :: Software Development :: Quality Assurance",
+        "Topic :: Software Development :: Testing",
+    ],
+)
