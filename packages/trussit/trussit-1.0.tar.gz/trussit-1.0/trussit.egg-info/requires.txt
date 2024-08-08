@@ -1,0 +1,6 @@
+setuptools==68.1.2
+numpy==2.0.1
+tk==0.1.0
+customtkinter==5.2.2
+matplotlib==3.6.3
+pandas==2.2.2
