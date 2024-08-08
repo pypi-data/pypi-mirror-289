@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/bigquery_connector/__init__.py
+src/bigquery_connector/connector.py
+src/simple_bigquery_gcf_sync.egg-info/PKG-INFO
+src/simple_bigquery_gcf_sync.egg-info/SOURCES.txt
+src/simple_bigquery_gcf_sync.egg-info/dependency_links.txt
+src/simple_bigquery_gcf_sync.egg-info/requires.txt
+src/simple_bigquery_gcf_sync.egg-info/top_level.txt
