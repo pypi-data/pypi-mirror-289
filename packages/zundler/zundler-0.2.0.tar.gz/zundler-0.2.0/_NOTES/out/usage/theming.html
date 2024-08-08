@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>/*
+ * Monkeypatch URLSearchParams
+ *
+ * Sphinx documents that use `searchtool.js` rely on passing information via
+ * GET parameters (aka search parameters). Unfortunately, this doesn't work
+ * in our approach due to the same origin policy, so we have to get ...
+ * creative.
+ *
+ * Here, we patch the `URLSearchParams` class so it returns the information
+ * stored in `window.global_context.get_parameters`.
+ *
+ */
+
+const originalGet = URLSearchParams.prototype.get;
+
+var myGet = function (arg) {
+    const originalResult = originalGet.apply(this, [arg]);
+    // If searchtools.js of sphinx is used
+    if (
+        window.global_context.get_parameters &&
+        (window.location.search === "") &&
+        (Array.from(this.entries()).length == 0)
+    ) {
+        const params = new URLSearchParams('?' + window.global_context.get_parameters);
+        const result = params.get(arg);
+        // console.log("Return virtual get parameter:", arg, result);
+        return result;
+    } else {
+        return originalResult;
+    }
+};
+
+URLSearchParams.prototype.get = myGet;
+
+/*
+ * Monkeypatch fetch
+ */
+
+const { fetch: originalFetch } = window;
+
+window.fetch = async (...args) => {
+    let [resource, config ] = args;
+    var path = normalize_path(resource);
+    var response;
+    if (is_virtual(path)) {
+        var data = retrieve_file(path);
+        response = new Response(data);
+
+    } else {
+        response = await originalFetch(resource, config);
+    }
+    return response;
+};
+//# sourceURL=inject_pre.js</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>HTML Theming — Sphinx documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/basic.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx13.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<link href="https://www.sphinx-doc.org/en/master/usage/theming.html" rel="canonical"/>
+<link href="../_static/opensearch.xml" rel="search" title="Search within Sphinx documentation" type="application/opensearchdescription+xml"/>
+<link href="../_static/favicon.svg" rel="shortcut icon"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="advanced/intl.html" rel="next" title="Internationalization"/>
+<link href="extensions/viewcode.html" rel="prev" title="sphinx.ext.viewcode – Add links to highlighted source code"/>
+</head><body>
+<div class="pageheader">
+<a href="../index.html">
+<img alt="SPHINX" src="../_static/sphinxheader.png"/>
+</a>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li><a href="../index.html">Documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="index.html">Using Sphinx</a> »</li>
+<li class="nav-item nav-item-this"><a href="">HTML Theming</a></li>
+</ul>
+</div>
+<div class="document">
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div id="searchbox" role="search" style="display: none">
+<h3 id="searchlabel">Quick search</h3>
+<div class="searchformwrapper">
+<form action="../search.html" class="search" method="get">
+<input aria-labelledby="searchlabel" autocapitalize="off" autocomplete="off" autocorrect="off" name="q" spellcheck="false" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<div class="sphinxsidebar-navigation__contents">
+<h3>On this page</h3>
+<ul>
+<li><a class="reference internal" href="#">HTML Theming</a><ul>
+<li><a class="reference internal" href="#builders">Builders</a></li>
+<li><a class="reference internal" href="#themes">Themes</a><ul>
+<li><a class="reference internal" href="#using-a-theme">Using a theme</a></li>
+<li><a class="reference internal" href="#builtin-themes">Builtin themes</a></li>
+<li><a class="reference internal" href="#third-party-themes">Third Party Themes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sphinxsidebar-navigation__pages">
+<h3>Site navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installing Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial: Build your first project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using Sphinx</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext/index.html">reStructuredText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markdown.html">Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="builders/index.html">Builders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extensions/index.html">Extensions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">HTML Theming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/intl.html">Internationalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/setuptools.html">Setuptools integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/websupport/index.html">Sphinx Web Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Extending Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templating.html">Templating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex.html">LaTeX customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extdev/index.html">Developing extensions for Sphinx</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Get support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internals/index.html">Contribute to Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Sphinx FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../man/index.html">Command-Line Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Projects using Sphinx</a></li>
+</ul>
+</div>
+</div>
+<div class="body" role="main">
+<section id="html-theming">
+<span id="html-themes"></span><h1>HTML Theming<a class="headerlink" href="#html-theming" title="Permalink to this heading">¶</a></h1>
+<p>Sphinx provides a number of builders for HTML and HTML-based formats.</p>
+<section id="builders">
+<h2>Builders<a class="headerlink" href="#builders" title="Permalink to this heading">¶</a></h2>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Populate when the ‘builders’ document is split up.</p>
+</div>
+</section>
+<section id="themes">
+<h2>Themes<a class="headerlink" href="#themes" title="Permalink to this heading">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.6.</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section provides information about using pre-existing HTML themes. If
+you wish to create your own theme, refer to
+<a class="reference internal" href="../development/theming.html"><span class="doc">HTML theme development</span></a>.</p>
+</div>
+<p>Sphinx supports changing the appearance of its HTML output via <em>themes</em>.  A
+theme is a collection of HTML templates, stylesheet(s) and other static files.
+Additionally, it has a configuration file which specifies from which theme to
+inherit, which highlighting style to use, and what options exist for customizing
+the theme’s look and feel.</p>
+<p>Themes are meant to be project-unaware, so they can be used for different
+projects without change.</p>
+<section id="using-a-theme">
+<h3>Using a theme<a class="headerlink" href="#using-a-theme" title="Permalink to this heading">¶</a></h3>
+<p>Using a <a class="reference internal" href="#builtin-themes"><span class="std std-ref">theme provided with Sphinx</span></a> is easy. Since these
+do not need to be installed, you only need to set the <a class="reference internal" href="configuration.html#confval-html_theme"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme</span></code></a>
+config value. For example, to enable the <code class="docutils literal notranslate"><span class="pre">classic</span></code> theme, add the following
+to <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">"classic"</span>
+</pre></div>
+</div>
+<p>You can also set theme-specific options using the <a class="reference internal" href="configuration.html#confval-html_theme_options"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_options</span></code></a>
+config value.  These options are generally used to change the look and feel of
+the theme. For example, to place the sidebar on the right side and a black
+background for the relation bar (the bar with the navigation links at the
+page’s top and bottom), add the following <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"rightsidebar"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+    <span class="s2">"relbarbgcolor"</span><span class="p">:</span> <span class="s2">"black"</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If the theme does not come with Sphinx, it can be in two static forms or as a
+Python package. For the static forms, either a directory (containing
+<code class="file docutils literal notranslate"><span class="pre">theme.conf</span></code> and other needed files), or a zip file with the same
+contents is supported. The directory or zipfile must be put where Sphinx can
+find it; for this there is the config value <a class="reference internal" href="configuration.html#confval-html_theme_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_path</span></code></a>. This
+can be a list of directories, relative to the directory containing
+<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>, that can contain theme directories or zip files.  For example,
+if you have a theme in the file <code class="file docutils literal notranslate"><span class="pre">blue.zip</span></code>, you can put it right in the
+directory containing <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> and use this configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">"blue"</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"."</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The third form is a Python package.  If a theme you want to use is distributed
+as a Python package, you can use it after installing</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>installing theme package
+<span class="gp">$ </span>pip install sphinxjp.themes.dotted
+</pre></div>
+</div>
+<p>Once installed, this can be used in the same manner as a directory or
+zipfile-based theme:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">"dotted"</span>
+</pre></div>
+</div>
+<p>For more information on the design of themes, including information about
+writing your own themes, refer to <a class="reference internal" href="../development/theming.html"><span class="doc">HTML theme development</span></a>.</p>
+</section>
+<section id="builtin-themes">
+<span id="id2"></span><h3>Builtin themes<a class="headerlink" href="#builtin-themes" title="Permalink to this heading">¶</a></h3>
+<table class="longtable standard docutils align-default">
+<colgroup>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Theme overview</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><img alt="alabaster" src="../_images/alabaster.png"/></p>
+<p><em>alabaster</em></p>
+</td>
+<td><p><img alt="classic" src="../_images/classic.png"/></p>
+<p><em>classic</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><img alt="sphinxdoc" src="../_images/sphinxdoc.png"/></p>
+<p><em>sphinxdoc</em></p>
+</td>
+<td><p><img alt="scrolls" src="../_images/scrolls.png"/></p>
+<p><em>scrolls</em></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><img alt="agogo" src="../_images/agogo.png"/></p>
+<p><em>agogo</em></p>
+</td>
+<td><p><img alt="traditional" src="../_images/traditional.png"/></p>
+<p><em>traditional</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><img alt="nature" src="../_images/nature.png"/></p>
+<p><em>nature</em></p>
+</td>
+<td><p><img alt="haiku" src="../_images/haiku.png"/></p>
+<p><em>haiku</em></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><img alt="pyramid" src="../_images/pyramid.png"/></p>
+<p><em>pyramid</em></p>
+</td>
+<td><p><img alt="bizstyle" src="../_images/bizstyle.png"/></p>
+<p><em>bizstyle</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sphinx comes with a selection of themes to choose from.</p>
+<p>Note that from these themes only the Alabaster and Scrolls themes are
+mobile-optimated, the other themes resort to horizontal scrolling
+if the screen is too narrow.</p>
+<p class="clear">These themes are:</p>
+<dl>
+<dt><strong>basic</strong></dt><dd><p>This is a basically unstyled layout used as the base for the
+other themes, and usable as the base for custom themes as well.  The HTML
+contains all important elements like sidebar and relation bar.  There are
+these options (which are inherited by the other themes):</p>
+<ul>
+<li><p><strong>nosidebar</strong> (true or false): Don’t include the sidebar.  Defaults to
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>sidebarwidth</strong> (int or str): Width of the sidebar in pixels.
+This can be an int, which is interpreted as pixels or a valid CSS
+dimension string such as ‘70em’ or ‘50%’.  Defaults to 230 pixels.</p></li>
+<li><p><strong>body_min_width</strong> (int or str): Minimal width of the document body.
+This can be an int, which is interpreted as pixels or a valid CSS
+dimension string such as ‘70em’ or ‘50%’. Use 0 if you don’t want
+a width limit. Defaults may depend on the theme (often 450px).</p></li>
+<li><p><strong>body_max_width</strong> (int or str): Maximal width of the document body.
+This can be an int, which is interpreted as pixels or a valid CSS
+dimension string such as ‘70em’ or ‘50%’. Use ‘none’ if you don’t
+want a width limit. Defaults may depend on the theme (often 800px).</p></li>
+<li><p><strong>navigation_with_keys</strong> (true or false): Allow navigating
+with the following keyboard shortcuts:</p>
+<ul class="simple">
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Left</kbd> <kbd class="kbd docutils literal notranslate">arrow</kbd></kbd>: previous page</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Right</kbd> <kbd class="kbd docutils literal notranslate">arrow</kbd></kbd>: next page</p></li>
+</ul>
+<p>Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</li>
+<li><p><strong>enable_search_shortcuts</strong> (true or false): Allow jumping to the search box
+with <kbd class="kbd docutils literal notranslate">/</kbd> and allow removal of search highlighting with <kbd class="kbd docutils literal notranslate">Esc</kbd>.</p>
+<p>Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</li>
+<li><p><strong>globaltoc_collapse</strong> (true or false): Only expand subsections
+of the current document in <code class="docutils literal notranslate"><span class="pre">globaltoc.html</span></code>
+(see <a class="reference internal" href="configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a>).
+Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 3.1.</span></p>
+</div>
+</li>
+<li><p><strong>globaltoc_includehidden</strong> (true or false): Show even those
+subsections in <code class="docutils literal notranslate"><span class="pre">globaltoc.html</span></code> (see <a class="reference internal" href="configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a>)
+which have been included with the <code class="docutils literal notranslate"><span class="pre">:hidden:</span></code> flag of the
+<a class="reference internal" href="restructuredtext/directives.html#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> directive.
+Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 3.1.</span></p>
+</div>
+</li>
+<li><p><strong>globaltoc_maxdepth</strong> (int): The maximum depth of the toctree in
+<code class="docutils literal notranslate"><span class="pre">globaltoc.html</span></code> (see <a class="reference internal" href="configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a>).  Set it to -1 to allow
+unlimited depth. Defaults to the max depth selected in the toctree directive.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 3.2.</span></p>
+</div>
+</li>
+</ul>
+</dd>
+<dt><strong>alabaster</strong></dt><dd><p><a class="reference external" href="https://pypi.org/project/alabaster/">Alabaster theme</a> is a modified “Kr” Sphinx theme from @kennethreitz
+(especially as used in his Requests project), which was itself originally
+based on @mitsuhiko’s theme used for Flask &amp; related projects.  Refer to its
+<a class="reference external" href="https://alabaster.readthedocs.io/en/latest/installation.html">installation page</a> for information on how to configure
+<a class="reference internal" href="configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a> for its use.</p>
+</dd>
+<dt><strong>classic</strong></dt><dd><p>This is the classic theme, which looks like <a class="reference external" href="https://docs.python.org/2/">the Python 2
+documentation</a>.  It can be customized via
+these options:</p>
+<ul class="simple">
+<li><p><strong>rightsidebar</strong> (true or false): Put the sidebar on the right side.
+Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>stickysidebar</strong> (true or false): Make the sidebar “fixed” so that it
+doesn’t scroll out of view for long body content.  This may not work well
+with all browsers.  Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>collapsiblesidebar</strong> (true or false): Add an <em>experimental</em> JavaScript
+snippet that makes the sidebar collapsible via a button on its side.
+Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>externalrefs</strong> (true or false): Display external links differently from
+internal links.  Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+<p>There are also various color and font options that can change the color scheme
+without having to write a custom stylesheet:</p>
+<ul class="simple">
+<li><p><strong>footerbgcolor</strong> (CSS color): Background color for the footer line.</p></li>
+<li><p><strong>footertextcolor</strong> (CSS color): Text color for the footer line.</p></li>
+<li><p><strong>sidebarbgcolor</strong> (CSS color): Background color for the sidebar.</p></li>
+<li><p><strong>sidebarbtncolor</strong> (CSS color): Background color for the sidebar collapse
+button (used when <em>collapsiblesidebar</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p></li>
+<li><p><strong>sidebartextcolor</strong> (CSS color): Text color for the sidebar.</p></li>
+<li><p><strong>sidebarlinkcolor</strong> (CSS color): Link color for the sidebar.</p></li>
+<li><p><strong>relbarbgcolor</strong> (CSS color): Background color for the relation bar.</p></li>
+<li><p><strong>relbartextcolor</strong> (CSS color): Text color for the relation bar.</p></li>
+<li><p><strong>relbarlinkcolor</strong> (CSS color): Link color for the relation bar.</p></li>
+<li><p><strong>bgcolor</strong> (CSS color): Body background color.</p></li>
+<li><p><strong>textcolor</strong> (CSS color): Body text color.</p></li>
+<li><p><strong>linkcolor</strong> (CSS color): Body link color.</p></li>
+<li><p><strong>visitedlinkcolor</strong> (CSS color): Body color for visited links.</p></li>
+<li><p><strong>headbgcolor</strong> (CSS color): Background color for headings.</p></li>
+<li><p><strong>headtextcolor</strong> (CSS color): Text color for headings.</p></li>
+<li><p><strong>headlinkcolor</strong> (CSS color): Link color for headings.</p></li>
+<li><p><strong>codebgcolor</strong> (CSS color): Background color for code blocks.</p></li>
+<li><p><strong>codetextcolor</strong> (CSS color): Default text color for code blocks, if not
+set differently by the highlighting style.</p></li>
+<li><p><strong>bodyfont</strong> (CSS font-family): Font for normal text.</p></li>
+<li><p><strong>headfont</strong> (CSS font-family): Font for headings.</p></li>
+</ul>
+</dd>
+<dt><strong>sphinxdoc</strong></dt><dd><p>The theme originally used by this documentation. It features
+a sidebar on the right side. There are currently no options beyond
+<em>nosidebar</em> and <em>sidebarwidth</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Sphinx documentation now uses
+<a class="reference external" href="https://github.com/sphinx-doc/sphinx/tree/master/doc/_themes/sphinx13">an adjusted version of the sphinxdoc theme</a>.</p>
+</div>
+</dd>
+<dt><strong>scrolls</strong></dt><dd><p>A more lightweight theme, based on <a class="reference external" href="https://jinja.palletsprojects.com/">the Jinja documentation</a>.  The following color options are
+available:</p>
+<ul class="simple">
+<li><p><strong>headerbordercolor</strong></p></li>
+<li><p><strong>subheadlinecolor</strong></p></li>
+<li><p><strong>linkcolor</strong></p></li>
+<li><p><strong>visitedlinkcolor</strong></p></li>
+<li><p><strong>admonitioncolor</strong></p></li>
+</ul>
+</dd>
+<dt><strong>agogo</strong></dt><dd><p>A theme created by Andi Albrecht.  The following options are supported:</p>
+<ul class="simple">
+<li><p><strong>bodyfont</strong> (CSS font family): Font for normal text.</p></li>
+<li><p><strong>headerfont</strong> (CSS font family): Font for headings.</p></li>
+<li><p><strong>pagewidth</strong> (CSS length): Width of the page content, default 70em.</p></li>
+<li><p><strong>documentwidth</strong> (CSS length): Width of the document (without sidebar),
+default 50em.</p></li>
+<li><p><strong>sidebarwidth</strong> (CSS length): Width of the sidebar, default 20em.</p></li>
+<li><p><strong>rightsidebar</strong> (true or false): Put the sidebar on the right side.
+Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>bgcolor</strong> (CSS color): Background color.</p></li>
+<li><p><strong>headerbg</strong> (CSS value for “background”): background for the header area,
+default a grayish gradient.</p></li>
+<li><p><strong>footerbg</strong> (CSS value for “background”): background for the footer area,
+default a light gray gradient.</p></li>
+<li><p><strong>linkcolor</strong> (CSS color): Body link color.</p></li>
+<li><p><strong>headercolor1</strong>, <strong>headercolor2</strong> (CSS color): colors for &lt;h1&gt; and &lt;h2&gt;
+headings.</p></li>
+<li><p><strong>headerlinkcolor</strong> (CSS color): Color for the backreference link in
+headings.</p></li>
+<li><p><strong>textalign</strong> (CSS <em>text-align</em> value): Text alignment for the body, default
+is <code class="docutils literal notranslate"><span class="pre">justify</span></code>.</p></li>
+</ul>
+</dd>
+<dt><strong>nature</strong></dt><dd><p>A greenish theme.  There are currently no options beyond
+<em>nosidebar</em> and <em>sidebarwidth</em>.</p>
+</dd>
+<dt><strong>pyramid</strong></dt><dd><p>A theme from the Pyramid web framework project, designed by Blaise Laflamme.
+There are currently no options beyond <em>nosidebar</em> and <em>sidebarwidth</em>.</p>
+</dd>
+<dt><strong>haiku</strong></dt><dd><p>A theme without sidebar inspired by the <a class="reference external" href="https://www.haiku-os.org/docs/userguide/en/contents.html">Haiku OS user guide</a>.  The following
+options are supported:</p>
+<ul class="simple">
+<li><p><strong>full_logo</strong> (true or false, default <code class="docutils literal notranslate"><span class="pre">False</span></code>): If this is true, the
+header will only show the <a class="reference internal" href="configuration.html#confval-html_logo"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_logo</span></code></a>.  Use this for large logos.
+If this is false, the logo (if present) will be shown floating right, and
+the documentation title will be put in the header.</p></li>
+<li><p><strong>textcolor</strong>, <strong>headingcolor</strong>, <strong>linkcolor</strong>, <strong>visitedlinkcolor</strong>,
+<strong>hoverlinkcolor</strong> (CSS colors): Colors for various body elements.</p></li>
+</ul>
+</dd>
+<dt><strong>traditional</strong></dt><dd><p>A theme resembling the old Python documentation.  There are
+currently no options beyond <em>nosidebar</em> and <em>sidebarwidth</em>.</p>
+</dd>
+<dt><strong>epub</strong></dt><dd><p>A theme for the epub builder.  This theme tries to save visual
+space which is a sparse resource on ebook readers.  The following options
+are supported:</p>
+<ul class="simple">
+<li><p><strong>relbar1</strong> (true or false, default <code class="docutils literal notranslate"><span class="pre">True</span></code>): If this is true, the
+<cite>relbar1</cite> block is inserted in the epub output, otherwise it is omitted.</p></li>
+<li><p><strong>footer</strong>  (true or false, default <code class="docutils literal notranslate"><span class="pre">True</span></code>): If this is true, the
+<cite>footer</cite> block is inserted in the epub output, otherwise it is omitted.</p></li>
+</ul>
+</dd>
+<dt><strong>bizstyle</strong></dt><dd><p>A simple bluish theme. The following options are supported
+beyond <em>nosidebar</em> and <em>sidebarwidth</em>:</p>
+<ul class="simple">
+<li><p><strong>rightsidebar</strong> (true or false): Put the sidebar on the right side.
+Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3: </span>‘alabaster’, ‘sphinx_rtd_theme’ and ‘bizstyle’ theme.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.3: </span>The ‘default’ theme has been renamed to ‘classic’. ‘default’ is still
+available, however it will emit a notice that it is an alias for the new
+‘alabaster’ theme.</p>
+</div>
+</section>
+<section id="third-party-themes">
+<span id="id3"></span><h3>Third Party Themes<a class="headerlink" href="#third-party-themes" title="Permalink to this heading">¶</a></h3>
+<p>There are many third-party themes created for Sphinx. Some of these are for
+general use, while others are specific to an individual project.</p>
+<p><a class="reference external" href="https://sphinx-themes.org/">sphinx-themes.org</a> is a gallery that showcases various themes for Sphinx,
+with demo documentation rendered under each theme. Themes can also be found
+on <a class="reference external" href="https://pypi.org/search/?q=&amp;o=&amp;c=Framework+%3A%3A+Sphinx+%3A%3A+Theme">PyPI</a> (using the classifier <code class="docutils literal notranslate"><span class="pre">Framework</span> <span class="pre">::</span> <span class="pre">Sphinx</span> <span class="pre">::</span> <span class="pre">Theme</span></code>), <a class="reference external" href="https://github.com/search?utf8=%E2%9C%93&amp;q=sphinx+theme">GitHub</a>
+and <a class="reference external" href="https://gitlab.com/explore?name=sphinx+theme">GitLab</a>.</p>
+</section>
+</section>
+</section>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+  © <a href="../copyright.html">Copyright</a> 2007-2022, the Sphinx developers.
+  Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+</div>
+<script>var embed_css = function() {
+    Array.from(document.querySelectorAll("link")).forEach( link => {
+        if (link.getAttribute('rel') == 'stylesheet') {
+            const style = document.createElement("style");
+            var href = link.getAttribute('href');
+            let [path, get_parameters, anchor] = split_url(href);
+            path = normalize_path(path);
+            style.innerText = retrieve_file(path);
+            link.replaceWith(style);
+        };
+    });
+};
+
+
+var embed_js = function() {
+    Array.from(document.querySelectorAll("script")).forEach( oldScript => {
+        const newScript = document.createElement("script");
+        Array.from(oldScript.attributes).forEach( attr => {
+            newScript.setAttribute(attr.name, attr.value);
+        });
+        try {
+            if (newScript.hasAttribute('src') && is_virtual(newScript.getAttribute('src'))) {
+                var src = newScript.getAttribute('src');
+                let [path, get_parameters, anchor] = split_url(src);
+                path = normalize_path(path);
+                var src = retrieve_file(path) + ' //# sourceMap=' + path;
+                newScript.appendChild(document.createTextNode(src));
+                newScript.removeAttribute('src');
+                oldScript.parentNode.replaceChild(newScript, oldScript);
+            }
+        } catch (e) {
+            // Make sure all scripts are loaded
+            console.error("Caught error in " + oldScript.getAttribute("src"), e);
+        }
+    });
+};
+
+
+var split_url = function(url) {
+    // Return a list of three elements: path, GET parameters, anchor
+    var anchor = url.split('#')[1] || "";
+    var get_parameters = url.split('#')[0].split('?')[1] || "";
+    var path = url.split('#')[0];
+    path = path.split('?')[0];
+    let result = [path, get_parameters, anchor];
+    // console.log("Split URL", url, result);
+    return result;
+}
+
+
+var virtual_click = function(evnt) {
+    // Handle GET parameters and anchors
+    // console.log("Virtual click", evnt);
+
+    var el = evnt.currentTarget;
+    var name = el.tagName.toLowerCase();
+
+    if (name == 'a') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('href'));
+    } else if (name == 'form') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('action'));
+        const formData = new FormData(el);
+        get_parameters = new URLSearchParams(formData).toString();
+    } else {
+        console.error("Invalid element", el);
+    }
+
+    path = normalize_path(path);
+
+    window.parent.postMessage({
+        action: "virtual_click",
+        argument: {
+            path: path,
+            get_parameters: get_parameters,
+            anchor: anchor,
+        }
+    }, '*');
+    evnt.preventDefault();
+    evnt.stopPropagation();
+    return false;
+};
+
+var fix_links = function() {
+    Array.from(document.querySelectorAll("a")).forEach( a => {
+        fix_link(a);
+    });
+};
+
+var fix_link = function(a) {
+    if (is_virtual(a.getAttribute('href'))) {
+        a.addEventListener('click', virtual_click);
+    } else if (a.getAttribute('href').startsWith('#')) {
+        a.setAttribute('href', "about:srcdoc" + a.getAttribute('href'))
+    } else {
+        // External links should open in a new tab. Browsers block links to
+        // sites of different origin within an iframe for security reasons.
+        a.setAttribute('target', "_blank");
+    }
+};
+
+var fix_form = function(form) {
+    var href = form.getAttribute('action');
+    if (is_virtual(href) && form.getAttribute('method').toLowerCase() == 'get') {
+        form.addEventListener('submit', virtual_click);
+    }
+};
+
+
+var fix_forms = function() {
+    Array.from(document.querySelectorAll("form")).forEach( form => {
+        fix_form(form);
+    });
+};
+
+
+var embed_img = function(img) {
+    if (img.hasAttribute('src')) {
+        const src = img.getAttribute('src');
+        if (is_virtual(src)) {
+            var path = normalize_path(src);
+            const file = retrieve_file(path);
+            const mime_type = window.global_context.file_tree[path].mime_type;
+            if (mime_type == 'image/svg+xml') {
+                img.setAttribute('src', "data:image/svg+xml;charset=utf-8;base64, " + btoa(file));
+            } else {
+                img.setAttribute('src', `data:${mime_type};base64, ${file}`);
+            }
+        };
+    };
+};
+
+var embed_imgs = function() {
+    Array.from(document.querySelectorAll("img")).forEach( img => {
+        embed_img(img);
+    });
+};
+
+var is_virtual = function(url) {
+    // Return true if the url should be retrieved from the virtual file tree
+    var _url = url.toString().toLowerCase();
+    return (! (
+        _url == "" ||
+        _url[0] == "#" ||
+        _url.startsWith('https://') ||
+        _url.startsWith('http://') ||
+        _url.startsWith('data:') ||
+        _url.startsWith('blob:')
+    ));
+};
+
+var retrieve_file = function(path) {
+    // console.log("Retrieving file: " + path);
+    var file_tree = window.global_context.file_tree;
+    var file = file_tree[path];
+    if (!file) {
+        console.warn("File not found: " + path);
+        return "";
+    } else {
+        return file.data;
+    }
+};
+
+var normalize_path = function(path) {
+    // make relative paths absolute in context of our virtual file tree
+
+    while (path && path[0] == '/') {
+        path = path.substr(1);
+    }
+
+    var result = window.global_context.current_path;
+    result = result.split('/');
+    result.pop();
+    result = result.concat(path.split('/'));
+
+    // resolve relative directories
+    var array = [];
+    Array.from(result).forEach( component => {
+        if (component == '..') {
+            if (array) {
+                array.pop();
+            }
+        } else if (component == '.') {
+        } else {
+            if (component) { array.push(component); }
+        }
+    });
+
+    result = array.join('/');
+    // console.log(`Normalized path: ${path} -> ${result} (@${window.global_context.current_path})`);
+    return result;
+};
+
+
+var fix_document = function() {
+    embed_js(); // This might change the DOM, so do this first
+    monkey_patch();
+    embed_css();
+    embed_imgs();
+    fix_links();
+    fix_forms();
+};
+
+
+var on_set_data = function(argument) {
+    window.global_context = argument;
+    console.log("Received data from parent", window.global_context);
+    // dynamically fix elements on this page
+    try {
+        fix_document();
+        // Trigger DOMContentLoaded again, some scripts that have just
+        // been executed expect it.
+        window.document.dispatchEvent(new Event("DOMContentLoaded", {
+            bubbles: true,
+            cancelable: true
+        }));
+    } finally {
+        observer.observe(window.document.body, {subtree: true, childList: true});
+        window.parent.postMessage({
+            action: "show_iframe",
+            argument: "",
+        }, '*');
+    }
+}
+
+
+var on_scroll_to_anchor = function(argument) {
+    if (window.global_context.anchor) {
+        document.location.replace("about:srcdoc#" + window.global_context.anchor);
+    }
+}
+
+
+const observer = new MutationObserver((mutationList) => {
+    // console.log("Fix mutated elements...", mutationList);
+    mutationList.forEach((mutation) => {
+        if (mutation.type == 'childList') {
+            Array.from(mutation.target.querySelectorAll("a")).forEach( a => {
+                fix_link(a);
+            });
+            Array.from(mutation.target.querySelectorAll("img")).forEach( img => {
+                embed_img(img);
+            });
+            Array.from(mutation.target.querySelectorAll("form")).forEach( form => {
+                fix_form(form);
+            });
+        }
+    });
+});
+
+
+var monkey_patch = function() {
+    if (typeof jQuery === 'undefined') {return;} // Only for jQuery at the moment
+    /**
+     * Monkey patch getQueryParameters
+     * This function is defined in Sphinx' (v4) doctools.js and incompatible with our
+     * approach.
+     * This is a copy with effectively only the third line changed.
+     * See: https://github.com/sphinx-doc/sphinx/blob/2329fdef8c20c6c75194f5d842b8f62ebad5c79d/sphinx/themes/basic/static/doctools.js#L54
+     */
+    jQuery._getQueryParameters = jQuery.getQueryParameters;
+    jQuery.getQueryParameters = function(s) {
+      if (typeof s === 'undefined')
+        s = '?' + window.global_context.get_parameters;
+      return jQuery._getQueryParameters(s);
+    };
+
+    /**
+     * Monkey patch jQuery.ajax
+     * Only settings.url and settings.complete are supported for virtual
+     * URLs.
+     */
+    jQuery._ajax = jQuery.ajax;
+    jQuery.ajax = function(settings) {
+        url = normalize_path(settings.url);
+        if (is_virtual(url)) {
+            var result;
+            var data;
+            data = retrieve_file(url);
+            result = settings.complete({responseText: data}, "");
+            return; // Return value not actually needed in searchtools.js
+        } else {
+            return jQuery.ajax(settings);
+        };
+    };
+}
+
+
+var on_load = function() {
+    // Set up message listener
+    window.addEventListener("message", (evnt) => {
+        console.log("Received message in iframe", evnt);
+        if (evnt.data.action == 'set_data') {
+            on_set_data(evnt.data.argument);
+        } else if (evnt.data.action == 'scroll_to_anchor') {
+            on_scroll_to_anchor(evnt.data.argument);
+        }
+    }, false);
+
+    // Set parent window title and trigger data transmission
+    var favicon = window.document.querySelector("link[rel*='icon']");
+    if (favicon) { favicon = favicon.getAttribute('href'); }
+    var title = window.document.querySelector('head>title');
+    if (title) { title = title.innerText; }
+
+    window.parent.postMessage({
+        action: "set_title",
+        argument: {
+            title: title,
+            favicon: favicon
+        }
+    }, '*');
+
+};
+
+
+window.addEventListener('load', on_load);
+//# sourceURL=inject_post.js</script></body>
+</html>

@@ -1,0 +1,6 @@
+* setuptools: confusion in pygments with dark/light
+-
+* handle redirects -> don't see the need yet
+* remote assets -> perhaps in future release
+* optional menu? -> perhaps in future release
+* embed pdf in sphinx -> out of scope
