@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mkdocs-pipeline-visualizer
+Version: 0.1.2
+Summary: generate MD file from tekton pipelines and tasks, intended to be used together with mkdocs-techdocs-core
+Home-page: https://github.com/obegron/mkdocs-pipeline-visualizer
+Author: Christer Grönblad
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mkdocs
+
+# not-yet
