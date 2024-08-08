@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/scrape_youtube/__init__.py
+src/scrape_youtube/scrapper.py
+src/scrape_youtube.egg-info/PKG-INFO
+src/scrape_youtube.egg-info/SOURCES.txt
+src/scrape_youtube.egg-info/dependency_links.txt
+src/scrape_youtube.egg-info/requires.txt
+src/scrape_youtube.egg-info/top_level.txt
