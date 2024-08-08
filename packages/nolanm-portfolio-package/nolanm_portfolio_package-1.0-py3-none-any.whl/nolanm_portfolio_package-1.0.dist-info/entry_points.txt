@@ -1,0 +1,3 @@
+[console_scripts]
+setup-env = nolanm_portfolio_package.setup:main
+
