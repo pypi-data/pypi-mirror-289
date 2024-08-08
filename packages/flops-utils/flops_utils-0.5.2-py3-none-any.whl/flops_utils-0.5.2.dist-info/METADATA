@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: flops_utils
+Version: 0.5.2
+Summary: A library containing commong utilities for FLOps
+Author: Alexander Malyuk
+Author-email: malyuk.alexander1999@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: paho-mqtt (==2.0)
+Description-Content-Type: text/markdown
+
+# TODO move to the mono FLOps repo once it is public !
+
+# tmp_flops_utils
+Will be moved to the Oakestra FLOps Repo once it becomes public
+
