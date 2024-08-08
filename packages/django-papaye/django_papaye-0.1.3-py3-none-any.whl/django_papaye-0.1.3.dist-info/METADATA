@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: django-papaye
+Version: 0.1.3
+Summary: You write in Python, it compiles to Javascript #Made with ❤️ from west indies
+Home-page: https://github.com/VectolGuy-Yann/django-papaye
+Download-URL: https://github.com/VectolGuy-Yann/django-papaye
+Author: Guy-Yann VECTOL
+Author-email: guyyann.vectol@gmail.com
+Maintainer: Guy-Yann VECTOL
+Maintainer-email: guyyann.vectol@gmail.com
+License: BSD
+Project-URL: Transcrypt, https://www.transcrypt.org/
+Keywords: django-papaye,django,papaye,transcrypt,pyjs,pytojs,py2js,Vectol
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: Transcrypt==3.9.3
+
