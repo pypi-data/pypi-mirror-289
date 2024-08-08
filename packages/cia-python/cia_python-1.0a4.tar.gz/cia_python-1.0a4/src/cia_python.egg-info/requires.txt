@@ -1,0 +1,10 @@
+seaborn
+numpy
+pandas
+AnnData
+scanpy
+
+[testing]
+setuptools
+pytest
+pytest-cov
