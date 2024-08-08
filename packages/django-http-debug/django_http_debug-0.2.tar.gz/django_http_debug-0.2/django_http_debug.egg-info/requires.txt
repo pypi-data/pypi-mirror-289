@@ -1,0 +1,5 @@
+filetype
+django
+
+[test]
+pytest
