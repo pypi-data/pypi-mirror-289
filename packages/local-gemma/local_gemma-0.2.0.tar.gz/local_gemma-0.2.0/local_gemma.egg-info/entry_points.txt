@@ -1,0 +1,2 @@
+[console_scripts]
+local-gemma = local_gemma.cli:main

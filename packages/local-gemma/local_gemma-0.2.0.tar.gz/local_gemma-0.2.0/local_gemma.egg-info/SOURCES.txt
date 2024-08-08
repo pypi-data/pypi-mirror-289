@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+local_gemma/__init__.py
+local_gemma/attention.py
+local_gemma/cli.py
+local_gemma/modeling_local_gemma_2.py
+local_gemma.egg-info/PKG-INFO
+local_gemma.egg-info/SOURCES.txt
+local_gemma.egg-info/dependency_links.txt
+local_gemma.egg-info/entry_points.txt
+local_gemma.egg-info/requires.txt
+local_gemma.egg-info/top_level.txt
+local_gemma/utils/__init__.py
+local_gemma/utils/benchmark.py
+local_gemma/utils/config.py

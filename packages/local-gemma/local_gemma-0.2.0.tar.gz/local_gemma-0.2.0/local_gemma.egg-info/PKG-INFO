@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: local_gemma
+Version: 0.2.0
+Author: The Hugging Face team
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: torch>=2.1.1
+Requires-Dist: accelerate>=0.33.0
+Requires-Dist: transformers>=4.44.0
+Provides-Extra: cuda
+Requires-Dist: bitsandbytes>=0.43.2; extra == "cuda"
+Provides-Extra: mps
+Requires-Dist: quanto>=0.2.0; extra == "mps"
+Requires-Dist: torch>=2.4.0; extra == "mps"
+Provides-Extra: cpu
+Requires-Dist: quanto>=0.2.0; extra == "cpu"
+Requires-Dist: torch>=2.4.0; extra == "cpu"
