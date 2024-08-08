@@ -1,0 +1,7 @@
+setup.py
+hlayers.egg-info/PKG-INFO
+hlayers.egg-info/SOURCES.txt
+hlayers.egg-info/dependency_links.txt
+hlayers.egg-info/entry_points.txt
+hlayers.egg-info/requires.txt
+hlayers.egg-info/top_level.txt
