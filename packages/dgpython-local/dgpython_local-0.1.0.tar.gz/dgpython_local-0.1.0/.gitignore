@@ -1,0 +1,10 @@
+__pycache__
+*.egg-info
+*~
+*.bak
+build
+dist
+dgpython_local.egg-info
+setup_local.cfg
+dgpython_local/_version.py
+

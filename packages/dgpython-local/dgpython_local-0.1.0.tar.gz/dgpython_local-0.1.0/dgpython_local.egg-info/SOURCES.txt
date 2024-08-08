@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.py
+.github/workflows/push-to-pypi.yml
+demos/dgplocal_test.dgp
+dgpython_local/__init__.py
+dgpython_local/local.dpi
+dgpython_local.egg-info/PKG-INFO
+dgpython_local.egg-info/SOURCES.txt
+dgpython_local.egg-info/dependency_links.txt
+dgpython_local.egg-info/not-zip-safe
+dgpython_local.egg-info/top_level.txt

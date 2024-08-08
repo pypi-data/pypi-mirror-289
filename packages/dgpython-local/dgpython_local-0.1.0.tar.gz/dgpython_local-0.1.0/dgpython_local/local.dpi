@@ -1,0 +1,50 @@
+import dgpython_local
+
+# This next line recieves the keyword arguments to the
+# dgpy.include() function.
+dpi_kwargs = None
+
+# Suggest here define a series of functions for
+# instantiating local modules. e.g. create_mot()
+# for a local motion controller module.
+
+# For example,  
+#def create_mot():
+#    from dataguzzler_python.modules.motion_control import acr9000
+#    mot = acr9000.ACR9000("mot","socket://acr9000:5002",X="mm",Y="mm",Z="mm",RY="degrees")
+#    return mot
+
+# The logic at the bottom of this file will call create_mot()
+# and return the mot object in a list when you pass
+# enable_mot = True to dgpy.include() as a keyword argument.
+# The list will be ordered the same way as the enable_
+# parameters.
+
+# For example,
+# (mot,)=dgpy.include(dgpython_local,"local.dpi",enable_mot=True)
+
+_standard_module_descriptions = {
+    "mot":"motion control",
+    "wcapt":"waveform capture",
+    "icapt":"image capture",
+    }
+
+# Handle enable_... keyword arguments
+_enables = [enable[7:] for enable in dpi_kwargs if enable[:7] == "enable_" and bool(dpi_kwargs[enable])]
+
+modules_to_return=[]
+for _enable in _enables:
+    _create_funcname="create_"+_enable
+    if _create_funcname not in locals():
+        if _enable in _standard_module_descriptions:
+            _description = _standard_module_descriptions[_enable]
+            pass
+        else:
+            _description = None
+            pass
+        raise dgpython_local.dgpl_NotImplementedError(_enable, module_description=_description)
+
+    mod=locals()[_create_funcname]()
+    modules_to_return.append(mod)
+    pass
+return modules_to_return

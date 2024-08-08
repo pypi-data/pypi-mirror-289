@@ -1,0 +1,15 @@
+from dataguzzler_python import dgpy
+import dgpython_local
+
+include(dgpy,"dgpy_startup.dpi") # If you get a NameError here, be sure you are executing this file with dataguzzler-python
+
+# This include does nothing useful but verifies that
+# dgpython_local is installed and local.dpi is present
+include(dgpython_local,"local.dpi")
+
+
+# This next line should work once you have implemented
+# create_mot() in your customized local.dpi
+# Until that time it will raise a
+# dgpython_local.dgpl_NotImplementedError
+(mot,) = include(dgpython_local,"local.dpi",enable_mot=True) 
