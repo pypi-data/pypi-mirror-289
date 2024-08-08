@@ -1,0 +1,13 @@
+stuf_zds_payments/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stuf_zds_payments/apps.py,sha256=KtnY12ZPMY0RqsnaLf5Lwk3oHp06dAqHF69qqLmQitE,336
+stuf_zds_payments/client.py,sha256=TPUwRrcxmzenJvjZxRsCaYoCHXgAcuc_X6HTqFdzvlA,2223
+stuf_zds_payments/plugin.py,sha256=epYT4kOBpykOPqH_Qz_-cit5PhJwUrrCAUytK3mkDFc,4978
+stuf_zds_payments/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stuf_zds_payments/registration_variables.py,sha256=isRQx94GbNb-IqK0g7yaFj6tz4e6ZL7yx9k3Ro_NpP0,2259
+stuf_zds_payments/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stuf_zds_payments/tests/test_plugin.py,sha256=oKWze_-aHWXvwtT1kBGJOE1Ggx-6kCl3KD50XNNcy2Y,8241
+open_forms_ext_stuf_zds_payments-0.1.0.dist-info/LICENSE,sha256=87pUHaou8NqIUh5tMpEmPuogLtiHVZGuAhucRdLUk8g,1052
+open_forms_ext_stuf_zds_payments-0.1.0.dist-info/METADATA,sha256=Oa-4mcCPV28Fl_RiNzwzm0jPt6xeBc869lX-hRtwOoU,5121
+open_forms_ext_stuf_zds_payments-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+open_forms_ext_stuf_zds_payments-0.1.0.dist-info/top_level.txt,sha256=cE5ZO8DoGkMf4Tp2RFqoPGDd_4bwIm6Q1gOYyvkfyLs,18
+open_forms_ext_stuf_zds_payments-0.1.0.dist-info/RECORD,,
