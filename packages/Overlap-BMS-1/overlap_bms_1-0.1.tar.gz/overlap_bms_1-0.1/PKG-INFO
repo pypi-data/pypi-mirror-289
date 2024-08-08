@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Overlap_BMS_1
+Version: 0.1
+Summary: A library for interactive data analysis with widgets.
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: ipywidgets
+Requires-Dist: IPython
