@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+cw/__init__.py
+cw.egg-info/PKG-INFO
+cw.egg-info/SOURCES.txt
+cw.egg-info/dependency_links.txt
+cw.egg-info/not-zip-safe
+cw.egg-info/top_level.txt
