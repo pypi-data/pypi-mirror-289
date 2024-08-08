@@ -1,0 +1,8 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/logging.py,sha256=f2LBjufcOf2pto9qdBpQGVfmnokRVLhbmtWdlTnky-g,359
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_logging.py,sha256=O-zH7UOGOfFmka9pUcUahy7u2smMGQbej1Gx5G_18GM,481
+kom_python_logging-0.1.dist-info/METADATA,sha256=j6trG4S2blJ30PFY6PZYA5UFPGkBzEzMuwHwm-UMOdI,676
+kom_python_logging-0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+kom_python_logging-0.1.dist-info/top_level.txt,sha256=KW3xgkz9NLMTcmmzgKvW8RFpCFkRIQ085qzq2diFf68,10
+kom_python_logging-0.1.dist-info/RECORD,,
