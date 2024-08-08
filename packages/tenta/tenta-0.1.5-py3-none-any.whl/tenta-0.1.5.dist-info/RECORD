@@ -1,0 +1,8 @@
+tenta-0.1.5.dist-info/METADATA,sha256=Ct7eJ2n2CF2BTsWa4TDcE8MsQL1czYf6CAo_oLwSQ3k,5556
+tenta-0.1.5.dist-info/WHEEL,sha256=rSwsxJWe3vzyR5HCwjWXQruDgschpei4h_giTm0dJVE,90
+tenta-0.1.5.dist-info/licenses/LICENSE,sha256=HViNV-8WNfu0u7O2mdpXKzpanK_CKfAkw_vpo7-gG_M,1112
+tenta/__init__.py,sha256=tNiZvWGRexobvNyuxwkndr3dBgMKEXIbpViAMUM2bHI,509
+tenta/client.py,sha256=sX_q7eyr3HoRBCobTuEqhaTRPBmRkfGs2yNoO3KpjpU,15183
+tenta/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tenta/types.py,sha256=i6Qr1fkeAB1nrTnZ0heEM7p48nHXW1K5-Sx9HLUkakc,3605
+tenta-0.1.5.dist-info/RECORD,,
