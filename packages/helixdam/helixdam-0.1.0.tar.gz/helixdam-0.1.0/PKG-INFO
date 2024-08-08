@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: helixdam
+Version: 0.1.0
+Summary: A Python wrapper for Perforce Helix DAM REST API
+Author-email: Jase Lindgren <jclindgren@gmail.com>
+Project-URL: Homepage, https://github.com/jase-perf/helixdam
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# HelixDAM Python Wrapper
+
+A Python wrapper for the [Helix DAM API](https://help.perforce.com/helix-core/helix-dam/current/api/#/), providing easy-to-use methods for interacting with digital asset management features.
+
+## Installation
+
+Install the package via pip:
+
+```sh
+pip install --update helixdam
+```
+
+## Usage
+
+To start using the HelixDAM package, you need to create an instance of the `HelixDAM` class. You can authenticate using either an `account_key` or a combination of `company`, `username`, and `password` (the same as you would enter on the Helix DAM web ui login).
+
+The user account or the account_key should be from a user with Admin permissions on the server, or you will likely get errors on some commands. Feel free to try, though, and leave a comment on what works or what doesn't!
+
+To create an account_key, see [Creating an Account Key](#creating-an-account-key)
+
+```python
+from helixdam import HelixDAM
+
+# Authentication with account key
+dam = HelixDAM(url='https://your-helixdam-url.com', account_key='your_account_key')
+
+# Authentication with company credentials
+dam = HelixDAM(url='https://your-helixdam-url.com', company='company_name', username='user', password='pass')
+```
+
+## Methods
+
+### HelixDAM.get_session()
+
+This method is called automatically when using other methods, but can be called manually if you want to verify that the login credentials are valid.
+
+Will raise a HelixDAMAuthException if credentials are not valid.
+
+```python
+dam.get_session()
+```
+
+### HelixDAM.download_file(depot_file, output_file, changelist)
+
+Downloads a file from the depot
+
+- `depot_path`: In `//depot/stream/depot_path.ext` format
+- `output_file` (optional): File path OR File-like object to save the downloaded file contents to. If not specified, the content is returned as bytes.
+- `changelist` (optional): Set to download asset as a specific changelist (aka identifier). If not set, will download the latest revision.
+
+Returns file path of output file or file-like object (if specified) or bytes of the downloaded file
+
+```python
+dam.download_file(
+    depot_path="//depot/some/depot/path.fbx",
+    output_file="path_cl_1252.fbx",
+    changelist=1252,
+)
+
+latest_file_bytes: bytes = dam.download_file(
+    depot_path="//depot/some/depot/path.fbx"
+)
+```
+
+### HelixDAM.download_preview(depot_file, output_file, changelist)
+
+Downloads a preview image of an asset from DAM
+
+(Usage is the same as [download_file](#helixdamdownload_filedepot_file-output_file-changelist) )
+
+### HelixDAM.download_thumbnail(depot_file, output_file, changelist)
+
+Downloads a preview image of an asset from DAM
+
+(Usage is the same as [download_file](#helixdamdownload_filedepot_file-output_file-changelist) )
+
+### HelixDAM.upload_preview(depot_path, input_file, input_bytes, changelist)
+
+Uploads a preview image for an file in DAM. This will automatically trigger Helix Search to generate a thumbnail and submit the thumbnail to your AI Tagging service, if configured.
+
+- depot_path: In `//depot/stream/depot_path.ext` format
+- image: May be bytes, base64 string, hex string, or file path
+- changelist (optional): Set to upload to asset at a specific changelist (aka identifier) If not set, will upload to the latest revision.
+
+```python
+preview_image = Path("img/preview_image.png")
+
+dam.upload_preview(
+    depot_path="//depot/stream/my_file.ext",
+    image=preview_image,
+)
+```
+
+
+### Error Handling
+
+The package includes custom exceptions for handling various errors:
+
+- **HelixDAMException**: General exception for Helix DAM-related errors.
+- **HelixDAMAuthException**: Raised for authentication-related issues.
+
+### Testing
+
+To run the test suite, use the following command:
+
+```sh
+pytest tests
+```
+
+## Extra Info
+
+### Creating an Account Key
+
+- As an admin in DAM, click on in the upper right menu and choose `Go to Helix Teamhub`
+ - Click on the small arrow in the upper right by your profile image and select `User Preferences`
+ - Select API Keys
+ - Click `+ Add new key` at the bottom, give it a title, and click save
+- Now you can copy the new key to use for authentication.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
