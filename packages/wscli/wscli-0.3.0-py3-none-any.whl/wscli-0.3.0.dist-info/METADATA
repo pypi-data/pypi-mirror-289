@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: wscli
+Version: 0.3.0
+Summary: 
+Author: Lorenzo Trojan
+Author-email: ltrojan@wildersensing.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: boto3 (>=1.34.136,<2.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: pydantic (==2.7.4)
+Requires-Dist: pyjwt (>=2.8.0,<3.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: requests (>=2.32.2,<3.0.0)
+Description-Content-Type: text/markdown
+
+# wscli
+
+Wilder Sensing CLI tool
+
+# Install
+
+from pypi:
+
+```
+pip install wscli
+```
+
+Configure the authentication backend using a profile:
+
+```
+wscli auth configure set-profile <name>
+```
+
+in order to inspect the available profiles, please run the following:
+
+```
+wscli auth configure profiles
+```
+
+# Usage
+
+## Login
+
+to login in the Wilder Sensing platform:
+
+```
+wscli auth login \
+  --username myusername
+  --password mypassword
+```
+
+To refresh the login token:
+
+```
+wscli auth refresh
+```
+
+in order to inspect your current login data:
+
+```
+wscli auth show
+```
+
+and, to check how much time is left before a refresh is required:
+
+```
+wscli auth show --remaining --no-claims
+```
+
