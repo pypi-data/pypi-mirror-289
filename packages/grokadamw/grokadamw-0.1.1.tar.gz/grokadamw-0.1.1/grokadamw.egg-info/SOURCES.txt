@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+grokadamw/__init__.py
+grokadamw/grokadamw.py
+grokadamw.egg-info/PKG-INFO
+grokadamw.egg-info/SOURCES.txt
+grokadamw.egg-info/dependency_links.txt
+grokadamw.egg-info/requires.txt
+grokadamw.egg-info/top_level.txt
