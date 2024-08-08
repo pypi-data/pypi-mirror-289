@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: blofin
+Version: 0.3.5
+Summary: BloFin API SDK
+Author-email: Nomeida <nomeida@proton.me>
+License: MIT
+Project-URL: Homepage, https://github.com/nomeida/blofin-python
+Project-URL: Bug Tracker, https://github.com/nomeida/blofin-python/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: certifi>=2024.7.4
+Requires-Dist: charset-normalizer>=3.3.2
+Requires-Dist: idna>=3.7
+Requires-Dist: requests>=2.32.3
+Requires-Dist: urllib3>=2.2.2
+
