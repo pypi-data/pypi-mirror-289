@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+imagecompression7/__init__.py
+imagecompression7/algorithm.py
+imagecompression7/image_utils.py
+imagecompression7.egg-info/PKG-INFO
+imagecompression7.egg-info/SOURCES.txt
+imagecompression7.egg-info/dependency_links.txt
+imagecompression7.egg-info/requires.txt
+imagecompression7.egg-info/top_level.txt
