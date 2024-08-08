@@ -1,0 +1,21 @@
+[project]
+
+name = "Wiggles"
+version = "2.5.0"
+authors = [
+    { name="Ranit Bhowmick", email="bhowmickranitking@gmail.com" },
+    { name="Sayanti Chatterjee", email="sayantichatterjee28@gmail.com" },
+]
+description = '''This library makes signal processing easy! A great tool for students to easily visualise and test their sigals virtually. Whether you're working with continuous or discrete signals, Wiggles provides a wide range of functionalities to make signal processing straightforward and intuitive. It supports operations in both the time domain and frequency domain, including Fast Fourier Transform (FFT) and inverse FFT, and allows for easy conversion between different representations.
+Wiggles is designed to be easy to use and integrate into your existing Python workflows, making it a valuable tool for engineers, researchers, and anyone interested in signal processing.'''
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Kawai-Senpai/Wiggles"
+Issues = "https://github.com/Kawai-Senpai/Wiggles"

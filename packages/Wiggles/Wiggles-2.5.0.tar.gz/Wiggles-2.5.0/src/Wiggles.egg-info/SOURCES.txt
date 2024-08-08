@@ -1,0 +1,10 @@
+LICENSE.rst
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/Wiggles.egg-info/PKG-INFO
+src/Wiggles.egg-info/SOURCES.txt
+src/Wiggles.egg-info/dependency_links.txt
+src/Wiggles.egg-info/requires.txt
+src/Wiggles.egg-info/top_level.txt
