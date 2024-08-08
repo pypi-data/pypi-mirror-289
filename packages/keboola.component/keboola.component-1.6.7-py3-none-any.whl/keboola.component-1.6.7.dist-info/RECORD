@@ -1,0 +1,12 @@
+keboola/component/__init__.py,sha256=nI8dil7HrBwJHEep1j74Rn4jvFLw7rgO0sbvzB48fWo,204
+keboola/component/base.py,sha256=38Po9UzjjAyJsyVainfj4gsBHUioDnpBkJh2yTr1-9o,14307
+keboola/component/dao.py,sha256=ajc_tx2P9OeT2X5EBcplSgGrauAilJXYBUNvZNSnejo,78016
+keboola/component/exceptions.py,sha256=9S2gCsjnPzkM-mr2n_X2h_XQmv6H97xnWLBqqWdyzVA,41
+keboola/component/interface.py,sha256=E4rqtNvzRx4zqmT8Rj2nPWs52Dp_YBv0m-eYcj9VRYk,51118
+keboola/component/sync_actions.py,sha256=hM-gpdmkAAI19eGqxyPucUFKM8BsuqVmTrm-lP8qaQc,2648
+keboola/component/table_schema.py,sha256=ntDhfs1EcvBQDA7ZEh9yGf9U_ETHsjBHZ7FN-OI6LBk,2514
+keboola.component-1.6.7.dist-info/LICENSE,sha256=w09ldcjU7C4tv69_XmfwMTeu2vfTW3CS3xYAa3K5MVw,1078
+keboola.component-1.6.7.dist-info/METADATA,sha256=txqAqAFk3_iV14F0aUjVjA-7eMritNB7G2muKWW3ed4,27844
+keboola.component-1.6.7.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+keboola.component-1.6.7.dist-info/top_level.txt,sha256=1TnbEAlaLTkaGvBq953CKE610TCyDVi7GUtCRyPm1cU,8
+keboola.component-1.6.7.dist-info/RECORD,,
