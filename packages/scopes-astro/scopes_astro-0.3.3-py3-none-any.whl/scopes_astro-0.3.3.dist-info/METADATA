@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: scopes-astro
+Version: 0.3.3
+Summary: System for Coordinating Observational Planning and Efficient Scheduling
+Author: Nicolas Unger
+Author-email: nicolas.unger@unige.ch
+License: GNU General Public License v3.0
+Project-URL: GitHub, https://github.com/nicochunger/SCOPES
+Project-URL: Documentation, https://github.com/nicochunger/SCOPES/blob/main/SCOPES_documentation.pdf
+Project-URL: Changelog, https://github.com/nicochunger/SCOPES/blob/main/CHANGELOG.txt
+Keywords: astronomy scheduling observation planning
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: astropy
+Requires-Dist: astroplan
+Requires-Dist: tqdm
+Requires-Dist: pytz
+Requires-Dist: timezonefinder
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+
+![logo](https://raw.githubusercontent.com/nicochunger/SCOPES/main/logo.png)
+
+# SCOPES
+
+## **S**ystem for **C**oordinating **O**bservational **P**lanning and **E**fficient **S**cheduling
+
+SCOPES is an automated scheduler for astronomical observations.
+
+## Installation
+
+To install SCOPES, open your terminal and run the following command:
+
+`pip install scopes-astro`
+
+You can then import the package in your Python code with:
+
+`import scopes`
+
+## Examples
+
+For an example of how to use SCOPES, you can check out the Python notebook: [`scopes_example.ipynb`](https://github.com/nicochunger/SCOPES/blob/main/scopes_example.ipynb)
+
+## Documentation
+
+Comprehensive documentation, including details on package contents and class definitions, is available [here](https://github.com/nicochunger/SCOPES/blob/main/SCOPES_documentation.pdf).
