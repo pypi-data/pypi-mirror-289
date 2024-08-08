@@ -1,0 +1,43 @@
+[project]
+name = 'moretunes'
+version = "0.0.4rc10.dev44"
+description = 'fully featured python wrapper for the Apple Music, Spotify, and YouTube Music APIs'
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = '>=3.12'
+authors = [{name = 'jcbirdwell', email = 'jcbirdwell@gmail.com'}]
+license = {file="LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha"
+]
+dependencies = ['moretunes-apple', 'moretunes-spotify', 'moretunes-youtube']
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []
+
+
+# DEV
+[tool.pytest.ini_options]
+python_functions = "test_*"
+testpaths = ["tests"]
+addopts = "--verbose --cov"
+
+[tool.coverage.run]
+source = ["moretunes_apple/src", "moretunes_spotify/src", "moretunes_youtube/src"]
+
+
+[tool.coverage.report]
+precision = 2
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "coverage",
+    "ruff",
+    "pytest",
+    "pytest-cov",
+]
