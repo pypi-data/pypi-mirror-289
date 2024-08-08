@@ -1,0 +1,315 @@
+# 数据收集
+
+## 简介
+
+> DataCollector的目的是为QuantPy提供统一、稳定的数据接口，QuantPy可以不用考虑数据获取问题，专注策略开发。
+
+DataCollector从各种数据源收集相关数据，并且可以选择缓存在本地，目前的覆盖的数据及数据源包括：
+
+- baostock: Python库，提供股市、债券、货币、存款等数据。
+
+## 架构
+
+为了提供统一的接口，DataCollector包采用了**工厂方法**。
+
+对于不同的数据源，实现时都要继承`abstract_data_collector.py`中的`AbstractDataCollector`类，最终由`data_collector.py`提供统一接口。
+
+详见：[架构](../../documentations/DataCollectorDocs/DataCollectorStructure.md)
+
+## 使用
+
+通过DataCollector类向外提供统一接口，以获取所有股票sz.399995的基本信息为例：
+
+```python
+from QuantPy.DataCollector.data_collector import DataCollector
+data_collector = DataCollector()
+error_code, data = data_collector.get_stock_basic_data("sz.399995")
+print(data)
+```
+结果：
+> {'code': 'sz.399995', 'code_name': '中证基建工程指数', 'ipoDate': '2015-03-12', 'outDate': '', 'type': '2', 'status': '1'}
+
+
+### 配置项
+`data_collector_config.py`中有DataCollector的配置项
+
+构造DataCollector时，给定配置项，控制日志详细程度、是否使用cache以及cache的类型。
+
+默认配置为
+```
+{
+  "cache" : cache_config.NO_CACHE,
+  "log" : log_config.WARNING_LOG
+}
+```
+
+配置方法是在实例化时传入配置：
+
+```python
+from QuantPy.DataCollector.data_collector import DataCollector 
+data_collector = DataCollector({"cache" : cache_config.PICKLE_CACHE, "log" : log_config.DEBUG_LOG})
+```
+
+### 日志查看
+
+通过`get_data_collector_info`接口查看日志路径，进而查看日志
+
+```python
+from QuantPy.DataCollector.data_collector import DataCollector
+data_collector = DataCollector()
+print(data_collector.get_data_collector_info())
+```
+
+
+
+### docstring
+
+下面是自动生成的接口介绍
+
+```
+class AbstractDataCollector(builtins.object)
+
+ |  Methods defined here:
+ |  
+ |  __init__(self, config_dict)
+ |      构造函数
+ |      
+ |      在构造函数中，配置DataCollector的一些行为，比如是否使用cache，使用哪种类型的cache等
+ |      
+ |      Args:
+ |        config: dict, 配置字典
+ |      
+ |      Raises:
+ |        DataCollectorError: 配置项无法识别时
+ |  
+ |  get_all_share_code(self, day=None)
+ |      获取所有股票代码
+ |      
+ |      获取交易日day时，股市上所有股票代码，不包括指数和其他。
+ |      
+ |      Args:
+ |        day: String，交易日，如果不是交易日，会导致失败。可省略，默认为离今天最近的交易日。
+ |      
+ |      Returns:
+ |        Number: 错误码，0表示成功，否则表示失败，1表示非交易日
+ |        list: 内容为表示股票代码的字符串
+ |      
+ |      Raises:
+ |        DataCollectorError:
+ |  
+ |  get_all_stock_code(self, day=None)
+ |      获取所有证券代码(包括股票、指数和其他)
+ |      
+ |      获取交易日day时，股市上所有证券代码，包括股票、指数和其他。
+ |      
+ |      Args:
+ |        day: String，交易日，如果不是交易日，会导致失败。可省略，默认为离今天最近的交易日。
+ |      
+ |      Returns:
+ |        Number: 错误码，0表示成功，否则表示失败，1表示非交易日
+ |        list: 内容为表示证券代码的字符串
+ |      
+ |      Raises:
+ |        DataCollectorError:
+ |  
+ |  get_data_collector_info(self)
+ |      获取关于数据收集器的一些信息，包括日志位置、数据来源等
+ |  
+ |  get_recent_trade_day(self, day=None)
+ |      获取day之前最接近day的交易日
+ |      
+ |      获取当前日期之前，最近的交易日期
+ |      
+ |      Args:
+ |        day: String，日期，格式为："2022-1-20"。如果省略，则day为运行时日期
+ |      
+ |      Returns:
+ |        String: 离day最近的交易日
+ |      Raises:
+ |  
+ |  get_stock_basic_data(self, stock_code)
+ |      获取某证券的基本信息
+ |      
+ |      通过stock_code指定某证券，获取该股票的基本信息。主要包括：名称、上市日期、退市日期、证券类型、上市状态
+ |      
+ |      Args:
+ |        stock_code: String，证券代码，比如"sh.600000"
+ |      
+ |      Returns:
+ |        Number: 错误码，0表示获取成功
+ |        dict: 字典
+ |      
+ |      Raises:
+ |        DataCollectorError
+ |  
+ |  get_stock_data(self, stock_code, day=None)
+ |      获取某股票某个交易日的数据
+ |      
+ |      获取股票代码为stock_code的股票，在交易日day的数据，主要OHLC、成交量、成交额、换手率、市盈、市净、市销等
+ |      
+ |      目前返回值中字段有：
+ |        - date
+ |          一定存在，表示数据对应日期，格式为YYYY-MM-DD
+ |        - code
+ |          一定存在，表示数据对应证券代码
+ |        - code_name
+ |          可选（但大部分情况下存在），表示数据对应证券名称
+ |        - open
+ |          可选（但大部分情况下存在），表示开盘价
+ |        - close
+ |          可选（但大部分情况下存在），表示收盘价
+ |        - high
+ |          可选（但大部分情况下存在），表示最高价
+ |        - low
+ |          可选（但大部分情况下存在），表示最低价
+ |        - preclose
+ |          可选（但大部分情况下存在），表示前收盘价
+ |        - volumn
+ |          可选（但大部分情况下存在），表示成交量（累计 单位：股）
+ |        - amount
+ |          可选（但大部分情况下存在），表示成交额（单位：人民币元）
+ |        - adjustflag
+ |          可选（但大部分情况下存在），表示复权状态(1：后复权， 2：前复权，3：不复权
+ |        - turn
+ |          可选（但大部分情况下存在），表示换手率
+ |        - tradestatus
+ |          可选（但大部分情况下存在），表示交易状态(1：正常交易 0：停牌）
+ |        - pctChg
+ |          可选（但大部分情况下存在），表示涨跌幅（百分比）：日涨跌幅=[(指定交易日的收盘价-指定交易日前收盘价)/指定交易日前收盘价]*100%
+ |        - peTTM
+ |          可选（大部分情况下不存在），表示滚动市盈率：(指定交易日的股票收盘价/指定交易日的每股盈余TTM)=(指定交易日的股票收盘价*截至当日公司总股本)/归属母公司股东净利润TTM
+ |        - pbMRQ
+ |          可选（大部分情况下不存在），表示市净率：(指定交易日的股票收盘价/指定交易日的每股净资产)=总市值/(最近披露的归属母公司股东的权益-其他权益工具)
+ |        - psTTM
+ |          可选（大部分情况下不存在），表示市销率：(指定交易日的股票收盘价/指定交易日的每股销售额)=(指定交易日的股票收盘价*截至当日公司总股本)/营业总收入TTM
+ |        - pcfNcfTTM
+ |          可选（大部分情况下不存在），表示市现率：(指定交易日的股票收盘价/指定交易日的每股现金流TTM)=(指定交易日的股票收盘价*截至当日公司总股本)/现金以及现金等价物净增加额TTM
+ |        - isST
+ |          可选（但大部分情况下存在），表示是否ST股
+ |        - net_main_inflow_amount
+ |          可选（只有近期存在），表示主力净流入净额（元）
+ |        - net_main_inflow_pct
+ |          可选（只有近期存在），表示主力净流入净占比
+ |        - net_super_large_inflow_amount
+ |          可选（只有近期存在），表示超大单净流入净额（元）
+ |        - net_super_large_inflow_pct
+ |          可选（只有近期存在），表示超大单净流入净占比
+ |        - net_large_inflow_amount
+ |          可选（只有近期存在），表示大单净流入净额（元）
+ |        - net_large_inflow_pct
+ |          可选（只有近期存在），表示大单净流入净占比
+ |        - net_middle_inflow_amount
+ |          可选（只有近期存在），表示中单净流入净额（元）
+ |        - net_middle_inflow_pct
+ |          可选（只有近期存在），表示中单净流入净占比
+ |        - net_small_inflow_amount
+ |          可选（只有近期存在），表示小单净流入净额（元）
+ |        - net_small_inflow_pct
+ |          可选（只有近期存在），表示小单净流入净占比
+ |        - ipoDate
+ |          可选（但大部分情况下存在），表示ipo日期
+ |        - type
+ |          可选（但大部分情况下存在），表示证券类型，其中1：股票，2：指数，3：其它，4：可转债，5：ETF
+ |      
+ |      
+ |      Args:
+ |        stock_code: String，证券代码，比如"sh.600000"
+ |        day: 以字符串形式表示的日期，比如'2008-1-1'。默认为最新交易日
+ |        
+ |      Returns:
+ |        Number: 错误码，0表示获取成功
+ |        dict: 字典
+ |      
+ |      Raises:
+ |        DataCollectorError:
+ |      
+ |      --------------------------------------------------------
+ |      Override Notes:
+ |        不限实现方式，为了性能，最好存储在数据库或者本地缓存
+ |  
+ |  get_stock_data_period(self, stock_code, start=None, end=None)
+ |      获取某股票一段时期内的数据
+ |      
+ |      获取股票代码为stock_code的股票，从startDay到endDay的数据，主要OHLC、成交量、成交额、换手率、市盈、市净、市销等
+ |      
+ |      Args:
+ |        stock_code: String，证券代码，比如"sh.600000"
+ |        start: 以字符串形式表示的日期，比如'2008-1-1'，默认为ipo日期
+ |        end: 以字符串形式表示的日期，比如'2008-1-1'。默认为最新交易日
+ |        
+ |      Returns:
+ |        Number: 错误码，0表示获取成功
+ |        dict: 每个日期一个key，对应value为字典
+ |      
+ |      Raises:
+ |        DataCollectorError:
+ |      
+ |      --------------------------------------------------------
+ |      Override Notes:
+ |        不限实现方式，为了性能，最好存储在数据库或者本地缓存
+ |  
+ |  get_stock_type(self, stock_code)
+ |      获取证券类型
+ |      
+ |      获取code对应证券的类型
+ |      
+ |      Args:
+ |        stock_code: String，证券代码，比如"sh.600000"
+ |      
+ |      Returns:
+ |        Number: 错误码，0表示成功，否则表示失败
+ |        String:
+ |          '1'表示股票
+ |          '2'表示指数
+ |          '3'表示其他
+ |      
+ |      Raises:
+ |        DataCollectorError:
+ |  
+ |  is_trade_day(self, day)
+ |      判断day是否为交易日
+ |      
+ |      Args:
+ |        day: String，需要查询的日期，格式为:"2021-3-23"
+ |      
+ |      Returns:
+ |        bool: 是否为交易日
+ |      
+ |      Raise:
+ |        DataCollectorError
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __abstractmethods__ = frozenset({'__init__', 'get_all_share_code', 'ge...
+
+```
+
+## 数据源及其特点
+
+
+### baostock
+
+已经包装好的**股票数据拉取**Python库，数据覆盖
+
+- 股票
+- 公司业绩
+- 货币
+- 存款利率
+
+优点：
+
+- 使用简单
+
+缺点：
+
+- 服务由他人提供，已有收费趋势，可用性不高
