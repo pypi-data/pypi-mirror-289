@@ -1,0 +1,9 @@
+pyvalidify/__init__.py,sha256=VjZnhsz0g2pvinxpDNr0cvykukVQGSZyN1s3t6uqASM,184
+pyvalidify/decorators.py,sha256=u9CxQBttQBiVeVmYNX86bwmWbcapLBdTIjxG1t0w9N4,5307
+pyvalidify/descriptor.py,sha256=t8twv6ddaMlqpqKZhNALKnu1IXdy3vD-m3hKbmReVSI,26804
+pyvalidify/type_hints.py,sha256=3xlofk88wW2nRWGgQo1vnicnW5BhSG-Spr_tkZ-vKd4,4067
+pyvalidify/validator.py,sha256=ArBbG-oAzx8-RHme8xrOLb60uPXNNSyJM0Kc5VNUllk,1931
+pyvalidify-1.0.1.dist-info/LICENSE,sha256=kNnmxN46S5KCB6SLnaDVeNrLz0RCTfZAqktBCByN5U8,1063
+pyvalidify-1.0.1.dist-info/METADATA,sha256=vc6iTAvo0ywYSzq_TWm2JnnmRiLlwgv6AUpt-5x90yA,6967
+pyvalidify-1.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pyvalidify-1.0.1.dist-info/RECORD,,
