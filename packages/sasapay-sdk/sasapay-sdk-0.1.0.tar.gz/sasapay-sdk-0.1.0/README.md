@@ -1,0 +1,66 @@
+# sasapay-python-sdk
+
+# A Python wrapper for the SasaPay API.
+
+## Installation
+
+```bash
+pip install sasapay-sdk
+```
+
+
+## Usage
+
+```bash
+from sasapay import SasaPayAPI
+
+# Initialize the API client
+api = SasaPayAPI(
+    environment='sandbox',
+    client_id='CLIENT_ID',
+    client_secret='CLIENT_SECRET'
+)
+
+# Authenticate and get access token
+access_token = api.authenticate()
+print(f"Access Token: {access_token}")
+
+# Perform a customer to business transaction
+response = api.customer_to_business(
+    merchant_code='6**80',
+    network_code='63902',
+    phone_number='2547******280',
+    amount='1',
+    description='Deposit',
+    account_reference='2547******280',
+    callback_url='https://webhook.site/2986****-0dac-****-8091-f1e7afbc979d'
+)
+print(f"C2B Response: {response}")
+
+# # Perform a business to customer transaction
+response = api.business_to_customer(
+    merchant_code='6**80',
+    channel='63902',
+    receiver_account_number='2547******280',
+    amount='10',
+    description='B2C Payment',
+    merchant_reference='TestB2CB1',
+    callback_url='https://webhook.site/2986****-0dac-****-8091-f1e7afbc979d'
+)
+print(f"B2C Response: {response}")
+
+# # Perform a business to business transaction
+response = api.business_to_business(
+    merchant_code='6**80',
+    network_code='63902',
+    receiver_merchant_code='522522',
+    amount=10.00,
+    description='B2B Payment',
+    merchant_reference='TestB2BB1',
+    account_reference='125*****04',
+    receiver_account_type='PAYBILL',
+    callback_url='https://webhook.site/2986****-0dac-****-8091-f1e7afbc979d'
+)
+print(f"B2B Response: {response}")
+
+```
