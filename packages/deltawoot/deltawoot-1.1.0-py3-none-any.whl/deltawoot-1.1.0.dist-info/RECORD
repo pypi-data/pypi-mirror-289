@@ -1,0 +1,11 @@
+deltawoot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deltawoot/avatar.jpg,sha256=sfTMI1G3QygYrebSb7jEQ3zcG3w3gDlbynQfQv01ZFU,35785
+deltawoot/recv.py,sha256=FYgpKkK91hlksileySzPnuPOkFZ9JwfbFeNUyKoVZ40,4318
+deltawoot/send.py,sha256=zJXqzMiN_7OPL8bzl30BqUPE1rhxdy254tzGTO7MNIs,1801
+deltawoot/woot.py,sha256=3xtCA-fC52FMc4uRHTVoRIAaLxZn9gqa1e6nj5STTtk,5984
+deltawoot-1.1.0.dist-info/LICENSE,sha256=4MZjpijz7ZYgGVUl9uAtTujk9ot7_JuWlr1mK7GPGkU,727
+deltawoot-1.1.0.dist-info/METADATA,sha256=mz_WHCq6GBRkmt62bqzcWICsSPCxF4tgpue_VlpC6uk,6235
+deltawoot-1.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+deltawoot-1.1.0.dist-info/entry_points.txt,sha256=nSDlNuOMcEK5MsVujE8CfYGG8V6LQOfFLiw8NTvOIcI,50
+deltawoot-1.1.0.dist-info/top_level.txt,sha256=4LuPFu1hiVCemvbrSxeu4KCFv625VGZgfih1YlxVhYw,10
+deltawoot-1.1.0.dist-info/RECORD,,
