@@ -1,0 +1,2 @@
+[console_scripts]
+file_converter = file_converter.cli:main
