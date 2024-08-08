@@ -1,0 +1,8 @@
+[orange.canvas.help]
+html-index = orangecontrib.adls.widgets:WIDGET_HELP_PATH
+
+[orange.widgets]
+ADLS = orangecontrib.adls.widgets
+
+[orange3.addon]
+Orange3-Azure-Data-Lake-Storage-Gen2 = orangecontrib.adls
