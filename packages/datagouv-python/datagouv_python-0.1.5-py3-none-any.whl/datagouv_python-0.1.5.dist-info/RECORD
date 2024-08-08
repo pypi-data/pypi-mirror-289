@@ -1,0 +1,15 @@
+datagouv/__init__.py,sha256=XlPKxzMHslEtm5anFZ0MuV0qnr_6k0mDZmzNL1ILy9g,301
+datagouv/api_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datagouv/api_client/_data_requestor.py,sha256=eD_ianWjqapoyGinTShg_rpFYyfyc6eO7OPask7uJls,1373
+datagouv/api_client/_datagouv_client.py,sha256=Az0xlKIpwvd5i4MoF9dmE9d8DTyzhuLXp5iE33HY6fs,350
+datagouv/api_client/_datasets_service.py,sha256=K_MFvh802RBETYylgmGlrwNjTYVA0RHa13nQyGH70a4,1607
+datagouv/downloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datagouv/downloader/_resources_downloader.py,sha256=rJsk4vac5jxWtercPsxCb3NPEdVhcZSM5i0DMCjRhqQ,1895
+datagouv/downloader/_resources_downloader__test.py,sha256=qNmnwKj9Ey5j8ZUuBCyrkjxmm9nt82ABAwHLfkgTGGI,2820
+datagouv/downloader/_utils.py,sha256=1VWA7N769GOQebaq33daBnTC8tXOYtabwOhEIGe_Nis,767
+datagouv/main.py,sha256=CT3FMRRcszzX1vac37w6C7tkDMSHhYs5fiLGSHIfxpY,131
+datagouv_python-0.1.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+datagouv_python-0.1.5.dist-info/METADATA,sha256=4wSGJ8RtugvSVS_3vcuUCfDRFOcEHUSzSXQS_qoeEQE,3902
+datagouv_python-0.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+datagouv_python-0.1.5.dist-info/entry_points.txt,sha256=bjGxdoXMTuhQ_bsWVcaz5Pt7_H7W0w-2wSRuw-6agkE,44
+datagouv_python-0.1.5.dist-info/RECORD,,
