@@ -1,0 +1,2 @@
+[console_scripts]
+stc8isp = stc8isp:_main
