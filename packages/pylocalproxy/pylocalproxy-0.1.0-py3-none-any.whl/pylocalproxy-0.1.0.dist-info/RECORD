@@ -1,0 +1,8 @@
+localproxy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+localproxy/cli.py,sha256=oT1hvs2AvY_b-E9ywIdlJ85zULC7u-8M4ddlSO0dUCc,3915
+localproxy/proxy.py,sha256=Jw6jx0idfZ2xz4QGQXHXSv17h09Hyz6bgeluFIQ7t3g,836
+pylocalproxy-0.1.0.dist-info/LICENSE,sha256=ljU65wX6-MNxynXXiVS3c5q6NjA3_oKApaplqJZoCrg,1065
+pylocalproxy-0.1.0.dist-info/METADATA,sha256=tCKXHB-CZmcUX15KAKR84bLQBc2-wWgytdSPAKK1srA,550
+pylocalproxy-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pylocalproxy-0.1.0.dist-info/entry_points.txt,sha256=DdxKQCgzyy8XhYvaKfE4-rlZYusPoyanGUAo4tGJGZQ,50
+pylocalproxy-0.1.0.dist-info/RECORD,,
