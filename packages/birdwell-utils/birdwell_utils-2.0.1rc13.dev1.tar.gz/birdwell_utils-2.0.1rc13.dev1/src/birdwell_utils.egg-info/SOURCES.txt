@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/birdwell/utils/__init__.py
+src/birdwell/utils/items.py
+src/birdwell/utils/strings.py
+src/birdwell/utils/thread.py
+src/birdwell/utils/time.py
+src/birdwell/utils/trigram.py
+src/birdwell_utils.egg-info/PKG-INFO
+src/birdwell_utils.egg-info/SOURCES.txt
+src/birdwell_utils.egg-info/dependency_links.txt
+src/birdwell_utils.egg-info/top_level.txt
