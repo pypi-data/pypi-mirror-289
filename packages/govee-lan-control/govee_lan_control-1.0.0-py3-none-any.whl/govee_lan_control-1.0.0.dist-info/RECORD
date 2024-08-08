@@ -1,0 +1,9 @@
+govee_lan_control/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+govee_lan_control/discover.py,sha256=E8wuQfnkBO3Tv0nbFB8ZUuquL5TLQB5U1uUEAulGo9k,1134
+govee_lan_control/govee_lan_device.py,sha256=DJWRF9QmJDLGfv2cIg1C055zCn7CkKr6UeklEvYPhnY,4679
+govee_lan_control/udp.py,sha256=Fc_bCF7nFObwJ54DDFZoLbb_gom2Kqp1qxw4b_1Q79g,1213
+govee_lan_control-1.0.0.dist-info/LICENSE,sha256=xehdttRSY4CP8jdt5GLkTz5ehSre1I0h97fqFXHTgOU,1075
+govee_lan_control-1.0.0.dist-info/METADATA,sha256=mc9nJ2zrV1WvadL90-166kraO5GShpCG2YWCTxCveHw,1972
+govee_lan_control-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+govee_lan_control-1.0.0.dist-info/top_level.txt,sha256=pgs_FCrt4TzA25-bqxKvtWgZol5VDSpvTom8SAVFWx0,18
+govee_lan_control-1.0.0.dist-info/RECORD,,
