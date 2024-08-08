@@ -1,0 +1,8 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/matmul.py,sha256=S-lrxaEr2F6NC0HI7TiDxv3bm-JPqMRTz3EEh8GXCD8,517
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_matmul.py,sha256=mSGyVWsbaUxmyKmbCz-vWOva5Txap3Jan0a0JF_4uBM,470
+matmul_package-0.1.dist-info/METADATA,sha256=kgXBxvk7pAHAn0VsDmbV64Q6J1gMQvtdBXRip1k3BwA,620
+matmul_package-0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+matmul_package-0.1.dist-info/top_level.txt,sha256=KW3xgkz9NLMTcmmzgKvW8RFpCFkRIQ085qzq2diFf68,10
+matmul_package-0.1.dist-info/RECORD,,
