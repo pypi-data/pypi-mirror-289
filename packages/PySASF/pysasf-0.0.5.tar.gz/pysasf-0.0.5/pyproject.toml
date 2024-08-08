@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pysasf"]
+
+[project]
+name = "PySASF"
+version = "0.0.5"
+authors = [
+  { name="Tiago M Buriol", email="tiagoburiol@gmail.com" },
+]
+maintainers = [
+    { name="Tiago M Buriol", email="tiagoburiol@gmail.com" }
+]
+description = "A Python package for Source Apportionment with Sediment Fingerprinting."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT No Attribution License (MIT-0)",
+    "Operating System :: OS Independent",
+]
+
+[dependencies]
+dependencies = ["numpy", "pandas", "scipy", "matplotlib"]
+
+[optional-dependencies]
+optional-dependencies = ["seaborn","pyarrow"]
+
+[project.urls]
+Homepage = "https://github.com/tiagoburiol/PySASF"
+Issues = "https://github.com/pypa/pysasf/issues"
