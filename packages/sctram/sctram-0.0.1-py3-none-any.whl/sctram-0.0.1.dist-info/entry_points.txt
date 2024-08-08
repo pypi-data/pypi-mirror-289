@@ -1,0 +1,3 @@
+[console_scripts]
+sctram=sctram.__main__:main
+
