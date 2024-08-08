@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: antdingopensdk
+Version: 0.0.8
+Summary: alipay ant ding open sdk for python
+Home-page: UNKNOWN
+Author: alipay ant ding open
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+`antdingopensdk`是一个自动化生成的 python sdk。
+
+
