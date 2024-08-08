@@ -1,0 +1,6 @@
+airflow_custom_trigger_dv01/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_custom_trigger_dv01/dataproc_trigger.py,sha256=yiwkAvUmxXcrPkSwQ6jVGo6dvBHHpS771ZVe7AJm_Xg,2131
+airflow_custom_trigger_dv01-0.0.1.dist-info/METADATA,sha256=k_8sJ4OtsEI9kgw7FggVRVTazRPUxmCaUDK6jOAZ1CI,708
+airflow_custom_trigger_dv01-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+airflow_custom_trigger_dv01-0.0.1.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+airflow_custom_trigger_dv01-0.0.1.dist-info/RECORD,,
