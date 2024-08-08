@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: eurostatpy
+Version: 0.7.1
+Summary: Basic package for querying & downloading EuroStat data by dataset name or ID.
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: terminaltables
+Requires-Dist: aiohttp
+
+# EuroStatPy
+
+[![Upload Python Package](https://github.com/deepwaterpaladin/eurostatpy/actions/workflows/publish.yml/badge.svg)](https://github.com/deepwaterpaladin/eurostatpy/actions/workflows/publish.yml)
+
+Basic package for querying &amp; downloading EuroStat data by dataset name or ID
+
+Allows for querying datasets via plain text search or table ID.
+
+## Installation
+
+`pip install eurostatpy`
+
+## Usage
+
+coming soon...
+
+## Further Reading
+
+- [EuroStat Data](https://ec.europa.eu/eurostat/web/main/data/database)
+- [EuroStat API](https://wikis.ec.europa.eu/display/EUROSTATHELP/API+-+Getting+started+with+statistics+API)
