@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+stc8isp/__init__.py
+stc8isp/stc8isp.py
+stc8isp.egg-info/PKG-INFO
+stc8isp.egg-info/SOURCES.txt
+stc8isp.egg-info/dependency_links.txt
+stc8isp.egg-info/entry_points.txt
+stc8isp.egg-info/requires.txt
+stc8isp.egg-info/top_level.txt

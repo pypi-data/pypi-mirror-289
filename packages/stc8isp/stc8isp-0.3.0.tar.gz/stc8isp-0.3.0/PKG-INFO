@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: stc8isp
+Version: 0.3.0
+Summary: Programming Tool for STC8G/8H Microcontrollers
+Home-page: https://github.com/wagiminator/MCU-Flash-Tools
+Author: Stefan Wagner
+Author-email: Stefan Wagner <wagiminator@web.de>
+Maintainer-email: Stefan Wagner <wagiminator@web.de>
+License: MIT License
+        
+        Copyright (c) 2023 Stefan Wagner
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://wagiminator.github.io/
+Project-URL: Repository, https://github.com/wagiminator/MCU-Flash-Tools
+Project-URL: Issues, https://github.com/wagiminator/MCU-Flash-Tools/issues
+Keywords: STC,STC8,STC8G,STC8H,microcontroller
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Embedded Systems
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyserial
+
+#  stc8isp - Programming Tool for STC8G/8H Microcontrollers
+## Description
+With this tool, STC8G/8H microcontrollers can be flashed via a simple USB-to-serial converter by utilizing the factory built-in embedded bootloader.
+
+## Preparations
+If necessary, a driver for the USB-to-serial converter used must be installed.
+
+## Installation
+- Install [Python3](https://www.pythontutorial.net/getting-started/install-python/).
+- Install [pip](https://pip.pypa.io/en/stable/installation/).
+- Install stc8isp: 
+
+```
+pip install stc8isp
+```
+
+## Usage
+- Connect your USB-to-serial converter to your MCU as shown below.
+- Run stc8isp.py (see below for arguments).
+- Perform a power cycle of your MCU (reconnect to power) when prompted.
+
+```
+USB2SERIAL         STC8G/8H
++--------+         +------+
+|     VCC| --/ --> |VCC   |    interruptible (for power cycle)
+|     RXD| --|R|-- |P3.1  |    resistor (100R - 1000R)
+|     TXD| --|<|-- |P3.0  |    diode (e.g. 1N5819)
+|     GND| ------- |GND   |    common ground
++--------+         +------+
+```
+
+```
+Usage: stc8isp [-h] [-p PORT] [-t TRIM] [-e] [-f FLASH]
+
+Optional arguments:
+  -h,       --help          show this help message and exit
+  -p PORT,  --port PORT     set COM port (default: /dev/ttyUSB0)
+  -t TRIM,  --trim TRIM     trim IRC to frequency in Hz (128000 - 36000000)
+  -e,       --erase         perform chip erase (implied with -f)
+  -f FLASH, --flash FLASH   write BIN file to flash
+
+Example:
+stc8isp -p /dev/ttyUSB0 -t 24000000 -f firmware.bin
+```
+
+## Links
+- [MCU Flash Tools](https://github.com/wagiminator/MCU-Flash-Tools)
+- [MCU Templates](https://github.com/wagiminator/MCU-Templates)
+- [MCU Development Boards](https://github.com/wagiminator/Development-Boards)
+- [AVR Development Boards](https://github.com/wagiminator/AVR-Development-Boards)
+- [AVR Programmers](https://github.com/wagiminator/AVR-Programmer)
+- [SAMD Development Boards](https://github.com/wagiminator/SAMD-Development-Boards)
