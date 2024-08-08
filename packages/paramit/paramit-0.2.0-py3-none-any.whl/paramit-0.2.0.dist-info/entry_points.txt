@@ -1,0 +1,3 @@
+[console_scripts]
+haipera = paramit.cli:main
+paramit = paramit.cli:main
