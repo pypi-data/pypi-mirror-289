@@ -1,0 +1,7 @@
+samotpravil_smtp/__init__.py,sha256=uicC9OcX4TMZ71yxprsePBZeJx3RIelsFs-UWzM5zuU,39
+samotpravil_smtp/client.py,sha256=qWGyYK7dyLgDjVg9mc70h9cvSx984tsIndv0Pu8prw0,2809
+samotpravil_smtp/exceptions.py,sha256=uWVnnG8bXpMnlOZ0QLWP_e4H6yqsNRwJbQPN_It4Qx0,277
+samotpravil_smtp-0.0.1a0.dist-info/METADATA,sha256=c3tVdb5s5jKG7pI8MZLPG424CuH1tyVSxGqneVB8jyY,462
+samotpravil_smtp-0.0.1a0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+samotpravil_smtp-0.0.1a0.dist-info/licenses/LICENSE,sha256=VZz2YxPv5Qp792TKrET1KPJxcLBn9NEdaVmS4bylRwA,1053
+samotpravil_smtp-0.0.1a0.dist-info/RECORD,,
