@@ -1,0 +1,7 @@
+jinja2
+python-sonarqube-api
+typer[all]
+
+[dev]
+coverage
+pytest
