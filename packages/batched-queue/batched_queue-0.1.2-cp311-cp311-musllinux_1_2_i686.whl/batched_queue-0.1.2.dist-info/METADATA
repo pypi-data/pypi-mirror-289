@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: batched-queue
+Version: 0.1.2
+Summary: Batched Queue
+License: MIT
+Author: Daniel Sullivan
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cython (>=3.0.10,<4.0.0)
+Description-Content-Type: text/markdown
+
+# Batched Queue
+
