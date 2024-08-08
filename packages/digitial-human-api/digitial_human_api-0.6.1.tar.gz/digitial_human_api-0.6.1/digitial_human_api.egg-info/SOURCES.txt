@@ -1,0 +1,8 @@
+README.md
+requirements.txt
+setup.py
+digitial_human_api.egg-info/PKG-INFO
+digitial_human_api.egg-info/SOURCES.txt
+digitial_human_api.egg-info/dependency_links.txt
+digitial_human_api.egg-info/requires.txt
+digitial_human_api.egg-info/top_level.txt
