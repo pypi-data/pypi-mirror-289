@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "mylistanalyzer"
+version = "0.1.2"
+description = "package to fetch and conduct ETL on your anime list from myanimelist"
+authors = ["Rahul <saihanumarahul66@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "mylistanalyzer"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+lxml = "^5.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
