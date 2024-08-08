@@ -1,0 +1,9 @@
+README.md
+setup.py
+face_similarity/__init__.py
+face_similarity/similarity.py
+face_similarity.egg-info/PKG-INFO
+face_similarity.egg-info/SOURCES.txt
+face_similarity.egg-info/dependency_links.txt
+face_similarity.egg-info/requires.txt
+face_similarity.egg-info/top_level.txt
