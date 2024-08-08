@@ -1,0 +1,11 @@
+birdwell/mapping/__init__.py,sha256=VoWi5ZrxQDqYFCsyEFYfw71nqisbt1CABoJvJkNQgEI,386
+birdwell/mapping/cache.py,sha256=RqSYsqqa4mxvfgONqLVquZbXwzfeyj_jkbXM250E0kA,1775
+birdwell/mapping/configure.py,sha256=oWitea1_9qRTUlGx_5dS9bJo1Pw_qeJ1Kqia1ACV8GA,1233
+birdwell/mapping/pickles.py,sha256=-F6hYeig23vl3oL7A8SlpGRM8zSbMDANZlphFtfvIAY,2165
+birdwell/mapping/redis_.py,sha256=627960vRxUUs9u92QK2rSlZ0xb8aX_gvv9SF0X4n5qk,1566
+birdwell/mapping/toml.py,sha256=p5tZheBlnS2nnA4xlIOzdqNSPdl5QBY1mTfsFA6daPU,538
+birdwell_mapping-0.1.1rc12.dev5.dist-info/LICENSE,sha256=mzweeCY8zaWtXNxtvIfZzeQHdR0fOOwBKFBBaC6DOeI,1066
+birdwell_mapping-0.1.1rc12.dev5.dist-info/METADATA,sha256=QWSDr-ikc3w6L7GOeV6sOA3bH17eByDf4KUXjBJoGpU,1879
+birdwell_mapping-0.1.1rc12.dev5.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+birdwell_mapping-0.1.1rc12.dev5.dist-info/top_level.txt,sha256=Zon4QWdHyx26ce7Ihzo8id4ZEPnXGPeecJdeBNhYPlQ,9
+birdwell_mapping-0.1.1rc12.dev5.dist-info/RECORD,,
