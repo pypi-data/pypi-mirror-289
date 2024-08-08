@@ -1,0 +1,72 @@
+[project]
+name = "moretunes-youtube"
+version = "0.2.6rc11.dev6"
+description = "Unofficial API for YouTube Music submodule for moretunes"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.8"
+authors = [{name = "jcbirdwell", email = "j.c.birdwell@gmail.com"}]
+license = {file="LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha"
+]
+dependencies = [
+    "requests >= 2.22",
+    "pydantic >= 2.6.1"
+]
+
+[project.scripts]
+ytmusicapi = "moretunes.youtube.setup:main"
+
+[build-system]
+requires = ["setuptools>=65", "setuptools_scm[toml]>=7"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst"]}
+
+[tool.setuptools]
+include-package-data=false
+
+[tool.setuptools.package-data]
+"*" = ["**.rst", "**.py", "**.mo"]
+
+###############
+# DEVELOPMENT #
+###############
+
+[tool.pytest.ini_options]
+python_functions = "test_*"
+testpaths = ["tests"]
+addopts = "--verbose --cov"
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+precision = 2
+
+[tool.ruff]
+line-length = 110
+ignore = [ "F403", "F405", "F821", "E731" ]
+extend-select = [
+    "I",   # isort
+]
+
+[tool.mypy]
+files = [
+    "src/"
+]
+mypy_path = "src"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "coverage>=7.4.0",
+    'sphinx<7',
+    'sphinx-rtd-theme',
+    "ruff>=0.1.9",
+    "mypy>=1.8.0",
+    "pytest>=7.4.4",
+    "pytest-cov>=4.1.0",
+]
