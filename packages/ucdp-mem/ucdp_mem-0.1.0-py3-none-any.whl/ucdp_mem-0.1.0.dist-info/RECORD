@@ -1,0 +1,14 @@
+ucdp_mem-0.1.0.dist-info/METADATA,sha256=gAOU1tmKpDHB5-npO8KKb8Hx26zSBdb_MMMdepXUqkU,1609
+ucdp_mem-0.1.0.dist-info/WHEEL,sha256=rSwsxJWe3vzyR5HCwjWXQruDgschpei4h_giTm0dJVE,90
+ucdp_mem-0.1.0.dist-info/licenses/LICENSE,sha256=C5dC7xMg5vdkSj6eKxdnX0qszqjdI49MsHgvMhGCIq4,1067
+ucdp_mem/__init__.py,sha256=4lijaxR2FVYQ2DFQOR_hqHjGAxH9rXm5epR3FtL2WpU,1665
+ucdp_mem/mem.py,sha256=IgH4jIaFCr8bAmlz31fdZ_h0JOe5EvxF5YXyNPrw8zs,6160
+ucdp_mem/memtechconstraints.py,sha256=i7HKxClSCuDvSUazBUGZt5KgzxI2dZNmvv2uGASw00E,1485
+ucdp_mem/otp.py,sha256=0imW3enlBLJm-DmjTBWx6kQjvNoafkWeaMFQjINPhxA,1709
+ucdp_mem/ram.py,sha256=wyc2K5v3D_uWFm_vVvMYsT6Y-aqXgVJ32Kkwir7yX70,1794
+ucdp_mem/rom.py,sha256=-bUjFxVZmT4iT3OR0q7dkOqz0KMmngRyfuo48aLRpPo,1688
+ucdp_mem/segmentation.py,sha256=pLYzYQwVX4jfIpp6QSALYSJo7WzFIk48covZHjyvziE,14325
+ucdp_mem/types.py,sha256=hVjK-WbvtaqDs3vqjTkTliQ_49NyE4t1_wFMmM---nM,2165
+ucdp_mem/util.py,sha256=zuMpwgB58K_H9KL9gP6YerlL3KBQFa2XToMN930u1p4,1435
+ucdp_mem/wordmasks.py,sha256=stZRQmCv1BlcJ62cOPXlZd3GNZF4upH9AK8dxGekyew,4759
+ucdp_mem-0.1.0.dist-info/RECORD,,
