@@ -1,0 +1,6 @@
+Add calibration task to compute accurate header values for
+CTYPE1, CUNIT1, CRPIX1, PV1_0, PV1_1, PV1_2, CRVAL1, CDELT1, PV1_2,
+CTYPE1A, CUNIT1A, CRPIX1A, PV1_0A, PV1_1A, PV1_2A, CRVAL1A, CDELT1A, PV1_2A.
+
+This is done by shifting the raw wavelength value (CRVAL1/A) to align with the FTS atlas, and
+then fitting a model to infer and correct the values of the aforementioned headers.
