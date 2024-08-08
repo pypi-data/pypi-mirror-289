@@ -1,0 +1,10 @@
+h2spacex/__init__.py,sha256=9aKuSTCFLOQkXctl_o98NITdywYQoahRwPFIxjV5HrM,160
+h2spacex/h2_connection.py,sha256=uTdt6J-aFl7ZMdzZyICVwXZegfGoy6ZqS-Ey2nbKz9c,16034
+h2spacex/h2_frames.py,sha256=FxJP5w35ZGEYK843Qi8EKZMNhLvgKrsofwQb6YnahF4,12923
+h2spacex/h2_tls_connection.py,sha256=a0it-XWnZCyfoBOaK1SD8Ys6wmOFbYJ7YvdxWR8wqNM,2247
+h2spacex/utils.py,sha256=L2XTi2e21YrCAZDRhXokIsrWUwc6cfu2CCNUbw7eSxQ,741
+h2spacex-1.0.2.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+h2spacex-1.0.2.dist-info/METADATA,sha256=pYWZE0PJZKO_nu18gtom1tLkbHWOIh7MZdZOCqOpuVM,4990
+h2spacex-1.0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+h2spacex-1.0.2.dist-info/top_level.txt,sha256=CddZkNY0uiHErjZstcK_C0gIETWs_YSj0f3RLS1Hyos,9
+h2spacex-1.0.2.dist-info/RECORD,,
