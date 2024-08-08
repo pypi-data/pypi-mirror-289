@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/insigen/__init__.py
+src/insigen/insigen.py
+src/insigen/scraper.py
+src/insigen.egg-info/PKG-INFO
+src/insigen.egg-info/SOURCES.txt
+src/insigen.egg-info/dependency_links.txt
+src/insigen.egg-info/requires.txt
+src/insigen.egg-info/top_level.txt
+src/insigen/resources/__init__.py
+src/insigen/resources/Data/__init__.py
+tests/test.py
