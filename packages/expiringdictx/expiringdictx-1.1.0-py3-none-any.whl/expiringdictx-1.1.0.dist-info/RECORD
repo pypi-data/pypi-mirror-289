@@ -1,0 +1,7 @@
+expiringdictx-1.1.0.dist-info/METADATA,sha256=iLd1a3kxpCpH7n2bX0AWIxk7GhyvDWvi0B5hSmbMjXw,4446
+expiringdictx-1.1.0.dist-info/WHEEL,sha256=rSwsxJWe3vzyR5HCwjWXQruDgschpei4h_giTm0dJVE,90
+expiringdictx-1.1.0.dist-info/licenses/LICENSE,sha256=oDZUPuxW9QbCHAr60BbyHERazgeq3osZmTM_UltFo1c,1068
+expiringdictx/__init__.py,sha256=dwdOPPApWOwvsy8N5RzJs1bm_Hx-ywZ7XBWArZwYMTQ,96
+expiringdictx/expire.py,sha256=xAT1fOVgcn5-lVuAzL6Vgd42owIwqlWPMIUOtgF4bvc,12755
+expiringdictx/simple.py,sha256=SDlNxvJ2zRvh6K_3W9XdV2VPC6kp8JF0-sEIv2gRN1o,1831
+expiringdictx-1.1.0.dist-info/RECORD,,
