@@ -1,0 +1,2 @@
+[console_scripts]
+mrnaScan = mrnaScan.__main__:main

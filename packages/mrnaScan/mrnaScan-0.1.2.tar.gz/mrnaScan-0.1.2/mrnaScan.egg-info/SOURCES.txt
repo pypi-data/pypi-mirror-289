@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+mrnaScan/__init__.py
+mrnaScan/__main__.py
+mrnaScan.egg-info/PKG-INFO
+mrnaScan.egg-info/SOURCES.txt
+mrnaScan.egg-info/dependency_links.txt
+mrnaScan.egg-info/entry_points.txt
+mrnaScan.egg-info/requires.txt
+mrnaScan.egg-info/top_level.txt
