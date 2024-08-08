@@ -1,0 +1,6 @@
+Pillow
+nonebot2
+nonebot-adapter-onebot
+nonebot-plugin-alconna
+nonebot-plugin-localstore
+nonebot_plugin_userinfo
