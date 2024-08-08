@@ -1,0 +1,14 @@
+governance/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+governance/main.py,sha256=Rw73jTJqk4cG8zKTETWESFglErnFm3LxvVX2bC6S4Kk,2241
+governance/checks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+governance/checks/column.py,sha256=9afASFFA3GQG655wDv3rqHYm4YNjcZN0TP68SLh0Swo,1059
+governance/checks/common.py,sha256=xkx-Yf-i-4uCK5iO_TUe9ZNOqZMwYK_WzTv7lRIcWj0,1553
+governance/checks/table.py,sha256=Wd-JoQt5gruOD5gVNYRO7jlT0tOhBSXwzCKqGujB6sA,4949
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_table_validation.py,sha256=5u2pR34Qla9BAy3KLGa4q5O2a8VI4QZLWbLKY_FVhxk,1204
+types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dask_felleskomponenter-0.0.12.dist-info/LICENSE,sha256=NAn3yxZAD2E7SxfeAzZ6B-g5tmGX1LYLBY2eEcCZAtY,1066
+dask_felleskomponenter-0.0.12.dist-info/METADATA,sha256=RiF6d4GQUPzCd1ccyEXGbWDU9h66dnzhdLEeVV5Y7sk,1657
+dask_felleskomponenter-0.0.12.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+dask_felleskomponenter-0.0.12.dist-info/top_level.txt,sha256=D4CbhEYaTQVpJXIsMYZXnV1S-DlxXH_dui5R_Iqc-x4,23
+dask_felleskomponenter-0.0.12.dist-info/RECORD,,
