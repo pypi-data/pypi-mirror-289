@@ -1,0 +1,10 @@
+emval-0.1.2.dist-info/METADATA,sha256=W9x7OCDJawD-uDXTvTxgYp8MB7bgWR9TeGgAiHQJLWQ,4986
+emval-0.1.2.dist-info/WHEEL,sha256=kuy7TJuGXgGu7Onl7FMSKH7fNi--MGM3taoaWz55xDw,104
+emval-0.1.2.dist-info/license_files/LICENSE,sha256=l5hQEXHZrdjJPlJEJBWaDJOLbqtOftRH6szSizD3Peo,1074
+emval/validator.py,sha256=J9XWn8navDAG8omUqSLvnag0QEs_xa1wonrbdCTATtw,3235
+emval/__init__.py,sha256=LXUMHGxTd3AAFuuJCTfR1IoDhctg_1hZiLra16Cerrs,203
+emval/pyvenv.cfg,sha256=SA9rxnx701krO1Bm0N04-U0wD1mAiWf2u8agrqawW8o,116
+emval/model.py,sha256=a5auiEERlomsszWACtTkamI7yhMwW4zeXH9fZrCtDWQ,2529
+emval/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+emval/_emval.cpython-310-darwin.so,sha256=Zmv1YxV_vI_j2nUsprJQvdPgoxVw8K7878kQtb6Iaos,2508112
+emval-0.1.2.dist-info/RECORD,,
