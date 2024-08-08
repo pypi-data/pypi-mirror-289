@@ -1,0 +1,1 @@
+from QuickColab.Console import Console
