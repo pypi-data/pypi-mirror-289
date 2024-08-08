@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: Crylearn
+Version: 0.1.5
+Summary: toolkit for embedding crystal to graphy
+Author: CaoBin
+Author-email: bcao686@connect.hkust-gz.edu.cn
+Maintainer: CaoBin
+Maintainer-email: bcao686@connect.hkust-gz.edu.cn
+License: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Requires-Dist: scipy ==1.13.0
+Requires-Dist: ase ==3.22.1
+Requires-Dist: spglib ==2.0.2
+Requires-Dist: pandas ==2.2.2
+Requires-Dist: numpy ==1.26.0
+Requires-Dist: pymatgen ==2024.4.13
+
+
+Maintained by Mr.Bin Cao, Please feel free to contact Bin Cao
+(bcao686@connect.hkust-gz.edu.cn) in case of any problems/comments/suggestions in using the code. 
+
