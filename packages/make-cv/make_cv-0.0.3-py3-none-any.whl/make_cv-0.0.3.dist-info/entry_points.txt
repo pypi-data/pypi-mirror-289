@@ -1,0 +1,3 @@
+[console_scripts]
+make_cv = make_cv.make_cv:main
+make_far = make_cv.make_far:main
