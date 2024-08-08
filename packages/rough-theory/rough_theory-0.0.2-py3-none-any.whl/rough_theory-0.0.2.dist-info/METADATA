@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: rough-theory
+Version: 0.0.2
+Summary: Various operations to analyze and leverage discernibility of knowledge. 
+Project-URL: Homepage, https://github.com/johnHostetter/rough-theory
+Project-URL: Issues, https://github.com/johnHostetter/rough-theory/issues
+Author-email: John Wesley Hostetter <jhostetter16@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# rough-theory
+The `rough-theory` library offers various operations to analyze and leverage discernibility of knowledge. It uses minimal dependencies to implement these features and has a graph theory backend (via `igraph`).
