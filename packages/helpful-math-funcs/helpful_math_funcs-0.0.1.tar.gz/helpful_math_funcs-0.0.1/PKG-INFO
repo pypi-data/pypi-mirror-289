@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: helpful_math_funcs
+Version: 0.0.1
+Summary: A package for mathematical calculations
+Home-page: https://github.com/yourusername/helpful_math_funcs
+Author: Niklas Knapp
+Author-email: niklas.knapp@telekom.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Helpful Math Funcs
+
+This is a small example package providing utilities for mathematical calculations.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install helpful_math_funcs.
+
+```bash
+pip install helpful_math_funcs
+
