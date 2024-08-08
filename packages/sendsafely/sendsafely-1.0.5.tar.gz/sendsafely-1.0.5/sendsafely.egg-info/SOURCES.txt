@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+NOTICE.txt
+README
+README.md
+requirements.txt
+setup.cfg
+setup.py
+sendsafely.egg-info/PKG-INFO
+sendsafely.egg-info/SOURCES.txt
+sendsafely.egg-info/dependency_links.txt
+sendsafely.egg-info/requires.txt
+sendsafely.egg-info/top_level.txt
