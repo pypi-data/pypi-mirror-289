@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+texpack/__init__.py
+texpack/__main__.py
+texpack/extractors.py
+texpack/utils.py
+texpack.egg-info/PKG-INFO
+texpack.egg-info/SOURCES.txt
+texpack.egg-info/dependency_links.txt
+texpack.egg-info/top_level.txt
