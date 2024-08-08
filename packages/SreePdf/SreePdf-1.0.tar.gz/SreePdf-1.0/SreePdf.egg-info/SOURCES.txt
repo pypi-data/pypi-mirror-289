@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+SreePdf.egg-info/PKG-INFO
+SreePdf.egg-info/SOURCES.txt
+SreePdf.egg-info/dependency_links.txt
+SreePdf.egg-info/top_level.txt
