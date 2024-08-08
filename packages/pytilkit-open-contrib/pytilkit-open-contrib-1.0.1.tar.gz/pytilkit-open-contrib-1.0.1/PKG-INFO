@@ -1,0 +1,210 @@
+Metadata-Version: 2.1
+Name: pytilkit-open-contrib
+Version: 1.0.1
+Summary: A utility package for various functionalities including math operations, JSON handling, and RSA encryption
+Home-page: https://github.com/yourusername/pyutilkit
+Author: Srijal Dutta
+Author-email: srijaldutta.official+pytilkit@gmail.com
+License: UNKNOWN
+Description: # pytilkit - V1.0.0
+        
+        ![LOGO](https://i.ibb.co/QrsjSgP/logo.png)
+        
+        pytilkit is a python library which contains many code snippets that one uses quite a lot. We pride ourselves on backwards compatibility.
+        We will not be deprecating any feature or removing it. All old snippet functions will work even if you update the package.
+        ## ðŸš€ About Me
+        
+        **ORC ID - 0009-0009-4487-4686**
+        
+        Hi, I'm ItzSCodez1467 A.K.A. Srijal Dutta. I consider myself an intermediate programmer. In usually work with python for backend and for the frontend which I rarely add to my projects I have made quite a few projects, but I don't want to really share them as they are not really that important. I'll keep adding some projects over time.
+        
+        ## Usage
+        
+        > Clear Screen
+        
+        - Directly call function
+        
+        ```python
+        import pytilkit as ptk
+        
+        ptk.clearScreen()
+        ```
+        
+        - Use alias function
+        
+        ```python
+        import pytilkit as ptk
+        
+        ptk.clsScreen()
+        ```
+        
+        > Maths
+        
+        - Add numbers
+        
+        ```python
+        import pytilkit as ptk
+        
+        z = ptk.add(1, 1)
+        print(z)
+        ```
+        
+        - Subtracting numbers
+        
+        ```python
+        import pytilkit as ptk
+        
+        z = ptk.sub(1, 1)
+        print(z)
+        ```
+        
+        - Multiplying numbers
+        
+        ```python
+        import pytilkit as ptk
+        
+        z = ptk.mul(1, 1)
+        print(z)
+        ```
+        
+        - Divide numbers
+        
+        ```python
+        import pytilkit as ptk
+        
+        z = ptk.div(1, 1)
+        print(z)
+        ```
+        
+        - Area of square
+        
+        ```python
+        import pytilkit as ptk
+        
+        z = ptk.area.square(5)
+        print(z)
+        ```
+        
+        - Area of Rectangle
+        
+        ```python
+        import pytilkit as ptk
+        
+        z = ptk.area.rect(5, 5)
+        print(z)
+        ```
+        
+        - Area of Circle
+        
+        ```python
+        import pytilkit as ptk
+        
+        z = ptk.area.circ(5)
+        print(z)
+        ```
+        
+        -  Area of Triangle 
+        
+        ```python
+        import pytilkit as ptk
+        
+        z = ptk.area.tri(5, 5, 5)
+        print(z)
+        ```
+        
+        >  Jsoned
+        
+        -  Read Data
+        
+        ```python
+        import pytilkit as ptk
+        
+        print(ptk.read_json("path/to/file.json"))
+        ```
+        
+        -  Write Data
+        
+        ```python
+        import pytilkit as ptk
+        
+        data = {"Data": True}
+        ptk.write_json("path/to/file.json", data) # Indentation option also available. Indent is 4 by default.
+        ```
+        
+        > File Size
+        
+        -  In MB
+        
+        ```python
+        import pytilkit as ptk
+        
+        print(ptk.fileSizeMB("path/to/file.txt"))
+        ```
+        
+        -  In GB
+        
+        ```python
+        import pytilkit as ptk
+        
+        print(ptk.fileSizeGB("path/to/file.txt"))
+        ```
+        
+        >  Encryption and Decryption(RSA)
+        
+        -  Generate Key Pairs
+        
+        ```python
+        import pytilkit as ptk
+        
+        private_pem, public_pem = ptk.generate_key_pair()
+        print("Private Key:\n", private_pem)
+        print("Public Key:\n", public_pem)
+        ```
+        
+        -  Encryption with Public Key
+        
+        ```python
+        import pytilkit as ptk
+        
+        message = "Hello, World!"
+        public_pem = """-----BEGIN PUBLIC KEY-----
+        ... (public key content here) ...
+        -----END PUBLIC KEY-----"""
+        
+        encrypted_message = ptk.encrypt_with_public_key(public_pem, message)
+        print("Encrypted message:", encrypted_message)
+        ```
+        
+        -  Decryption with Private Key
+        
+        ```python
+        import pytilkit as ptk
+        
+        # Generate key pairs
+        private_pem, public_pem = ptk.generate_key_pair()
+        print("Private Key:\n", private_pem)
+        print("Public Key:\n", public_pem)
+        
+        # Encrypt a message using the public key
+        message = "Hello, World!"
+        encrypted_message = ptk.encrypt_with_public_key(public_pem, message)
+        print("Encrypted message:", encrypted_message)
+        
+        # Decrypt the encrypted message using the private key
+        # Note: In an actual implementation, the private key should be securely input.
+        decrypted_message = ptk.decrypt_with_private_key(encrypted_message)
+        print("Decrypted message:", decrypted_message)
+        ```
+        ## License
+        
+        ## License
+        
+        [pytilkit](https://github.com/ItzSCodez1467/pytilkit) Â© 2024 by [Srijal Dutta](https://github.com/ItzSCodez1467) is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1).
+        
+        The license file is also available with the project.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
