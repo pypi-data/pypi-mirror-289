@@ -1,0 +1,7 @@
+kubernetes_secrets_keyring/__init__.py,sha256=tN2cWwJFXzyn9EevFbKMtfmTkqlDpFk2ia4tIQTKsFs,229
+kubernetes_secrets_keyring/k8s_keyring_backend.py,sha256=JNORM7aOv-hgwTZzOI3NQLIWvaoPk1emSgBWqSvVH_Q,4143
+kubernetes_secrets_keyring-0.2.3.dist-info/METADATA,sha256=LnR6mMSm2QW1BRmxwBDkMa7VjhwgLOvRuKUjaSDIvgA,1657
+kubernetes_secrets_keyring-0.2.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+kubernetes_secrets_keyring-0.2.3.dist-info/entry_points.txt,sha256=XfEKrhIC_7g1KlfR8oVFfx8UY1p8Nb5y6nRXe2DvEro,73
+kubernetes_secrets_keyring-0.2.3.dist-info/top_level.txt,sha256=vsFZGynFsLFl1m3oszmmN8vnVR0M-IreKn8uT8ra7tI,27
+kubernetes_secrets_keyring-0.2.3.dist-info/RECORD,,
