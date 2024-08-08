@@ -1,0 +1,19 @@
+matplotlib
+numpy
+pandas
+PySide6
+scipy
+rich
+pyyaml
+
+# my packages
+mpPy6
+confPy6
+PyADScopeControl>=1.1.4
+PySide6WidgetCollection>=1.0.2, # important, otherwise AboutDialog is not available
+
+
+# Local installs
+#../confighandler
+#../captdevicecontrol
+#../modules/cmp
