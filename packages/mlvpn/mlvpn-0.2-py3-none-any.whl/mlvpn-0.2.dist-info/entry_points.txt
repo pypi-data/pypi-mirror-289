@@ -1,0 +1,3 @@
+[console_scripts]
+mlvpn = cli.cli:cli
+
