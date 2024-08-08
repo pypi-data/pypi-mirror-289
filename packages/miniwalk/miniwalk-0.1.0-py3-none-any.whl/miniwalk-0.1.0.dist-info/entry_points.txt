@@ -1,0 +1,3 @@
+[console_scripts]
+miniwalk = miniwalk.main:main
+
