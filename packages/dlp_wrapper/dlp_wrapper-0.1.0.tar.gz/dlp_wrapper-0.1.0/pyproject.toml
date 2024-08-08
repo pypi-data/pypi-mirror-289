@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dlp_wrapper"
+version = "0.1.0"
+description = "Wrapper for yt-dlp, designed to download audio or video from provided URLs. "
+authors = ["RobertHue <robert.huem@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+yt-dlp = "^2024.8.1"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
