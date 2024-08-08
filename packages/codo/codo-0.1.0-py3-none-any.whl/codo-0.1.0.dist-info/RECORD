@@ -1,0 +1,9 @@
+codo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codo/__main__.py,sha256=B9LyEqZahVJrsfqYycoPnYtyxJimQYz41zEGIBnAitI,1055
+codo/core.py,sha256=UhjMIIa_gMuU3c01ANwVeqiG2QBdq1g2OXGedOcrJu4,131
+codo/engine.py,sha256=VOFtZ49UxCr_DIsQD_216jDcSuhzfHvnaRAQdZnB7V4,274
+codo/mongo.py,sha256=E-Iga40zMLoH6QrIk9KUsDVex93pvoHl7Mj3L1DWZqg,1081
+codo-0.1.0.dist-info/LICENSE,sha256=5oZn503laE6FZSw7lLbdAwOjnwpxyHMbu1jUUw1tMgA,1073
+codo-0.1.0.dist-info/METADATA,sha256=nAVGA52M5VeZgJTVB2zWScPBK6d_Kf0Iq8vodhAG32U,417
+codo-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+codo-0.1.0.dist-info/RECORD,,
