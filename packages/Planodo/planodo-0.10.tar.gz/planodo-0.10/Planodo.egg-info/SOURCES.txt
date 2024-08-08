@@ -1,0 +1,8 @@
+planodo.py
+pyproject.toml
+setup.py
+Planodo.egg-info/PKG-INFO
+Planodo.egg-info/SOURCES.txt
+Planodo.egg-info/dependency_links.txt
+Planodo.egg-info/requires.txt
+Planodo.egg-info/top_level.txt

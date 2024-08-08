@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Planodo
+Version: 0.10
+Summary: Utility library for creating large zoomable images
+Home-page: https://github.com/epoz/planodo
+Author: Etienne Posthumus
+Author-email: ep@epoz.org
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: progress
