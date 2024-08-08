@@ -1,0 +1,2 @@
+[console_scripts]
+hlayers = hlayers:cli

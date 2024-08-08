@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: hlayers
+Version: 0.1
+Requires-Dist: click
+Requires-Dist: InquirerPy
+Requires-Dist: ruamel.yaml
+Requires-Dist: datadog-api-client
+Requires-Dist: cachetools
+
