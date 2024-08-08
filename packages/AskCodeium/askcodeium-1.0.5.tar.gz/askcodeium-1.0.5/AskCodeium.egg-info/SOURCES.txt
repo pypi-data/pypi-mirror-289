@@ -1,0 +1,12 @@
+README.md
+setup.py
+AskCodeium/__init__.py
+AskCodeium.egg-info/PKG-INFO
+AskCodeium.egg-info/SOURCES.txt
+AskCodeium.egg-info/dependency_links.txt
+AskCodeium.egg-info/requires.txt
+AskCodeium.egg-info/top_level.txt
+AskCodeium/services/__init__.py
+AskCodeium/services/create_chat.py
+AskCodeium/utils/__init__.py
+AskCodeium/utils/browser_manager.py
