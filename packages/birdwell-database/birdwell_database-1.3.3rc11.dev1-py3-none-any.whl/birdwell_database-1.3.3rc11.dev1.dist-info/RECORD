@@ -1,0 +1,10 @@
+birdwell/database/__init__.py,sha256=fuUjtllFeedOn7mQ_YlKYrCNlZTRqR21U8c4xQA15Nw,143
+birdwell/database/base.py,sha256=-PRWGc5xtZbxtaW3n-te6ZxZcnETScDrOLMobxC29jI,13920
+birdwell/database/crypto.py,sha256=0snA8EOmKawx5GZ3teB6i2BsmvNJMMkhzt1IXdvY_1Y,2851
+birdwell/database/mapped.py,sha256=WO6Tds_V3UQo8U5_8kb8AkrMoKvUm2b9QunEqbzH-fE,2644
+birdwell/database/models.py,sha256=Y8HyvDMgVSR8r1zjJ874lL5Lv3X_dd-61bJCbkh_cLc,482
+birdwell_database-1.3.3rc11.dev1.dist-info/LICENSE,sha256=mzweeCY8zaWtXNxtvIfZzeQHdR0fOOwBKFBBaC6DOeI,1066
+birdwell_database-1.3.3rc11.dev1.dist-info/METADATA,sha256=8YObMXwnElYHZJeul0T7cojnkPxAsiEyAT949Dp9MMQ,1752
+birdwell_database-1.3.3rc11.dev1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+birdwell_database-1.3.3rc11.dev1.dist-info/top_level.txt,sha256=Zon4QWdHyx26ce7Ihzo8id4ZEPnXGPeecJdeBNhYPlQ,9
+birdwell_database-1.3.3rc11.dev1.dist-info/RECORD,,
