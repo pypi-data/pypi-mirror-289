@@ -1,0 +1,2 @@
+[console_scripts]
+uppercase = uppercase.__main__:main
