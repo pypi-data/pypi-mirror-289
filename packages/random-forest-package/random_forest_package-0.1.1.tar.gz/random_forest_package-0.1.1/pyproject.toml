@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "random-forest-package"
+version = "0.1.1"
+description = "A Python package to facilitate random forest modeling."
+authors = ["Karim Mirzaguliyev <kenanovkenan299@gmail.com>"]
+readme = "README.md"
+packages = [{include = "random_forest_package", from = "random_forest_package"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+scikit-learn = "^1.5.1"
+pandas = "^2.2.2"
+numpy = "^2.0.1"
+flake8 = "^7.1.1"
+lint = "^1.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
