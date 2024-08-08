@@ -1,0 +1,10 @@
+matplotlib
+openpyxl
+numpy>=1.15.2
+pandas
+pyarrow
+scipy
+chardet
+xarray
+pytest
+openseespy
