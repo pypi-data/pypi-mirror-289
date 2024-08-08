@@ -1,0 +1,10 @@
+insigen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+insigen/insigen.py,sha256=W-HExwCE27hBFYxLluskKdJkbatvHLPlNrJyQ0VYivs,27737
+insigen/scraper.py,sha256=2-lnV-n7H_XHocLYRS9kHQG_O4IsxRCZkHg8CWNDxM8,3683
+insigen/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+insigen/resources/Data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+insigen-0.1.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+insigen-0.1.1.dist-info/METADATA,sha256=gpy41oWTqWA69afhPIC5I88Hwo85Nw_PEwFy227hjVQ,19490
+insigen-0.1.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+insigen-0.1.1.dist-info/top_level.txt,sha256=t5k9GdFDTdbOd5Yq-0Fq7pn4J4S1D5RTH314muvvHjw,8
+insigen-0.1.1.dist-info/RECORD,,
