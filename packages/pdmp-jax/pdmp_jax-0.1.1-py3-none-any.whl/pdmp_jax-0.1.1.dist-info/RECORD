@@ -1,0 +1,16 @@
+pdmp_jax/__init__.py,sha256=jX_itU8KXnvQCN1zqW2O7pYp7Q9SCzQfTJUIXTV2_Rs,50
+pdmp_jax/brent.py,sha256=-VuctPozdPUbym7AgZfS6rE0AqagHr7ZspHTcT4Jwcc,8906
+pdmp_jax/namedtuples.py,sha256=z7kffG74rTXh1fisM9GcvmC6sD-a4cY5UAN40zSNrKo,4375
+pdmp_jax/samplers/Boomerang.py,sha256=cUCFF2w27lBe-Ov_dgzjUBrjr9rgLKeaa050R0W8vGA,3934
+pdmp_jax/samplers/BouncyParticle.py,sha256=CwdeAPTCCOZI_j6TSXWKEK6vUMEXIOypp9xRV9Q5KEM,3824
+pdmp_jax/samplers/ForwardEventChain.py,sha256=QQINPA2WZKV-lSCvXxylWnVvARKl6yDBNdFVtOrysWo,5125
+pdmp_jax/samplers/SpeedupZigZag.py,sha256=aov_2l6OQP-SkEjsWD5UKydJnqTGuXiVyDXZ8m5AvQU,4147
+pdmp_jax/samplers/ZigZag.py,sha256=CoO4woXLbiuo5OY_VDZTSwcHOy2RudwA6GbSyDQeEvI,3597
+pdmp_jax/samplers/__init__.py,sha256=_ZDJ1AP5qg2xVbruiDQ4jwZa4IUJROxJLg68jsw7aqU,232
+pdmp_jax/samplers/pdmp.py,sha256=DHukalm8aqBnOs1bpvWZ6Bp_vA_zt-1_y67RE_Olk5Y,12743
+pdmp_jax/sampling_loop.py,sha256=7tEnj2weEDc1wTlbjpiKVj9kcEOrvWYY2BNHCfvmcaI,5551
+pdmp_jax/upper_bound.py,sha256=7SLQLlj9x45TKoT8aUc_WBRjjeeQeYkywifEuWiiaMs,4577
+pdmp_jax-0.1.1.dist-info/LICENSE,sha256=zRwwml1o4TTAoUxZGdkQmcsoTKY8CS9yK8S0Lt3HxiM,1069
+pdmp_jax-0.1.1.dist-info/METADATA,sha256=oY2gQU-JqUKty-tN6qDptv4oqxteyt6DRoP8L7_tJbo,2645
+pdmp_jax-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pdmp_jax-0.1.1.dist-info/RECORD,,
