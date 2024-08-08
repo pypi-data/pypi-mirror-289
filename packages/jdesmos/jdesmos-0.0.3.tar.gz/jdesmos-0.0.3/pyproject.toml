@@ -1,0 +1,34 @@
+# Needed for local builds
+[tool.poetry]
+name = "jdesmos"
+version = "0.0.03"
+description = "Easily embed Desmos Graphs in Jupyter"
+authors = ["John Lockwood <john@codesolid.com>"]
+readme = "README.md"
+license = "GPL3.0"
+
+# Suggested for PyPI, unfortunately redundant.
+[project]
+name = "jdesmos"
+version = "0.0.03"
+description = "Easily embed Desmos Graphs in Jupyter"
+authors = ["John Lockwood <john@codesolid.com>"]
+readme = "README.md"
+license = "GPL3.0"
+dependencies = [
+	"python >= 3.9",
+	"ipython >= 5",
+]
+
+[project.urls]
+Repository = "https://github.com/CodeSolid/jdesmos/"
+"Demo Notebook" = "https://github.com/CodeSolid/jdesmos/blob/main/Demo.ipynb"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.2.4"
+sympy = "^1.13.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
