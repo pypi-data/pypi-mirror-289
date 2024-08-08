@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mqsrv.egg-info/PKG-INFO
+mqsrv.egg-info/SOURCES.txt
+mqsrv.egg-info/dependency_links.txt
+mqsrv.egg-info/requires.txt
+mqsrv.egg-info/top_level.txt
+tests/test_backend.py
