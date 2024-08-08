@@ -1,0 +1,12 @@
+quickllm/__init__.py,sha256=fjgrRul0vdhDVofvXYz8H2aWGN8t4uHwNAqk2HPVjdk,3645
+quickllm/chat.py,sha256=cGlTX8_fT3Udc3cX5LMQ67YC1lTy4W7-pFd9PrEQLrM,3104
+quickllm/finetune.py,sha256=mytlxnWODaL_5CvLr_W74zxYfqWkNpl1AuWeC2dhqy0,3797
+quickllm/gui.py,sha256=D8ePTaAzMU6K3c9YXyYqLbyiqNwN36May8Noagu5qnE,3200
+quickllm/models.py,sha256=EfcJdF59YTRHRTNKVLCEjgaybokNWZxydme-hJcwGWY,2171
+quickllm/utils.py,sha256=iOSE4nmRJsX2gtq1SvlkgTi2jUcamAzxt8SzKdRzNGU,3059
+quickllm/visualize.py,sha256=tLfFXWyAFR4vzRLxzf0cFlfHXd0aoDjSF_phadSPqAg,4592
+quickllm-1.0.1.dist-info/LICENSE,sha256=AyuGJA6hvZ8g-WksmIbvBE3daU9lS0dxbn3PiH8P3io,1070
+quickllm-1.0.1.dist-info/METADATA,sha256=AuA_4pQyuRXSrvK97XLZq79oFVS73xL2x7V7QKXWnY4,6581
+quickllm-1.0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+quickllm-1.0.1.dist-info/top_level.txt,sha256=bd-J55rTlsOIsGjDppzVBpJ_IOgYUi4n72uaEMCNSNg,9
+quickllm-1.0.1.dist-info/RECORD,,
