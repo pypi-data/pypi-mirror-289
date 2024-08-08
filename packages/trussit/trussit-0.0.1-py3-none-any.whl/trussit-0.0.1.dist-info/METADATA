@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: trussit
+Version: 0.0.1
+Summary: A basic graphical interface to solve truss problems
+Author: kunalgokhe
+Author-email: kunalgokhe@gmail.com
+Keywords: Truss,Force,FEA,Beam,Deformation Plot
+Requires-Dist: customtkinter ==5.2.2
+Requires-Dist: matplotlib ==3.6.3
+Requires-Dist: numpy ==2.0.1
+Requires-Dist: pandas ==2.2.2
+Requires-Dist: setuptools ==68.1.2
+Requires-Dist: tk ==0.1.0
+
+Program used to compute the deformation in the truss structure based on the input parameters.
