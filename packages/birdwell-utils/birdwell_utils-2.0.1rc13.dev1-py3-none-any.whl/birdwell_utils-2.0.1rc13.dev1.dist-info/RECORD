@@ -1,0 +1,11 @@
+birdwell/utils/__init__.py,sha256=MEvZWM9t8DeZwPt48oa0TVvQyyK8szZerSuqUAXo-Ys,80
+birdwell/utils/items.py,sha256=BShGNTa63U5PmwPIlyR2Ojygf_ALPOctj6KUgXgCWgU,239
+birdwell/utils/strings.py,sha256=IO2kDW7OIEckn4GHdguPbnhY_JA63GegnsKICkrgRUo,817
+birdwell/utils/thread.py,sha256=rEIy0hFxLJJRsrOsSWl08t_XlcH7SnE-FCvM7zEcbIs,5586
+birdwell/utils/time.py,sha256=OX7zblbkWGItO-L7EWnelTq31N0VPW82pN4i2tj3v30,452
+birdwell/utils/trigram.py,sha256=RkmaeFsGbbIDhnBQI21F4JeSM7W7-zWDRvLY-Q9WY-U,1536
+birdwell_utils-2.0.1rc13.dev1.dist-info/LICENSE,sha256=mzweeCY8zaWtXNxtvIfZzeQHdR0fOOwBKFBBaC6DOeI,1066
+birdwell_utils-2.0.1rc13.dev1.dist-info/METADATA,sha256=eF1pCCtDVXcEVYjrus5PRu2EUfcYEfqQtp-F_EDoQKk,1585
+birdwell_utils-2.0.1rc13.dev1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+birdwell_utils-2.0.1rc13.dev1.dist-info/top_level.txt,sha256=Zon4QWdHyx26ce7Ihzo8id4ZEPnXGPeecJdeBNhYPlQ,9
+birdwell_utils-2.0.1rc13.dev1.dist-info/RECORD,,
