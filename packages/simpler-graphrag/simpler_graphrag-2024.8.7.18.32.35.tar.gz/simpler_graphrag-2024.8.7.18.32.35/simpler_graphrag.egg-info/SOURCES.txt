@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+simpler_graphrag/__init__.py
+simpler_graphrag.egg-info/PKG-INFO
+simpler_graphrag.egg-info/SOURCES.txt
+simpler_graphrag.egg-info/dependency_links.txt
+simpler_graphrag.egg-info/entry_points.txt
+simpler_graphrag.egg-info/not-zip-safe
+simpler_graphrag.egg-info/requires.txt
+simpler_graphrag.egg-info/top_level.txt
