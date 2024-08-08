@@ -1,0 +1,7 @@
+zenetics/__init__.py,sha256=D8Li_VRXcQhKgFsVv6ds2AE-0mqxBhpYLaAikLAG0F4,34
+zenetics/client.py,sha256=supZ8yY_lCl8EeQhMKu7ErBFiEDPxHui2QJf2ODmlQw,632
+zenetics/llm.py,sha256=dRBBsy2VxCrMvRk1p4EPm7dp0-I0b5XilaL9TpMjL84,1706
+zenetics/openai_wrapper.py,sha256=94ctGywCO4DztEc8q0LIyoQIJu3hOPdfuD0jH0oTxZk,4006
+zenetics-0.0.7.dist-info/METADATA,sha256=yrlbCQQaQ7sUnaNkOyRYE-gBJ3dTwYnU98L_yiHIFV4,1050
+zenetics-0.0.7.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+zenetics-0.0.7.dist-info/RECORD,,
