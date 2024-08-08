@@ -1,0 +1,13 @@
+README.md
+setup.py
+pytilkit/__init__.py
+pytilkit/clearScreen.py
+pytilkit/crypted.py
+pytilkit/jsoned.py
+pytilkit/maths.py
+pytilkit/sized.py
+pytilkit.egg-info/PKG-INFO
+pytilkit.egg-info/SOURCES.txt
+pytilkit.egg-info/dependency_links.txt
+pytilkit.egg-info/requires.txt
+pytilkit.egg-info/top_level.txt
