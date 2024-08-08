@@ -1,0 +1,8 @@
+displaymath2equation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+displaymath2equation/config.py,sha256=hVRVFnY8KRbkbfNXUwHWXEj9fLRTZ0Ce5sBMzFlUm7g,1131
+displaymath2equation/main.py,sha256=IKYIcEvQOm4ahyRDtd7z6mO9vbL6xGFV4D3w-ZGzxHo,3005
+pandoc_displaymath2equation-0.0.0.3.dist-info/METADATA,sha256=mEzix4Qup0fF0_tZT-Lx_lJSmNNcR2ZBppsWkX9GotU,4140
+pandoc_displaymath2equation-0.0.0.3.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pandoc_displaymath2equation-0.0.0.3.dist-info/entry_points.txt,sha256=FAL_OgLFn2Jumex-XQ4TWyk-_haQW0DvVT_zgh_P-8A,79
+pandoc_displaymath2equation-0.0.0.3.dist-info/licenses/LICENSE,sha256=-0uzUEc3WTW1jVTqyzZnrq_EUjkr6rz4mLZ1_aDmFgY,1067
+pandoc_displaymath2equation-0.0.0.3.dist-info/RECORD,,
