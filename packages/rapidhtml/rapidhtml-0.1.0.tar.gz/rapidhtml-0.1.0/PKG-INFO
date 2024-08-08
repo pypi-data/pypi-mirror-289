@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: rapidhtml
+Version: 0.1.0
+Summary: Web framework to generate web-based applications in pure python
+Author: ThomasJRyan
+Author-email: 18319621+ThomasJRyan@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: starlette (>=0.38.2,<0.39.0)
+Requires-Dist: uvicorn[standard] (>=0.30.5,<0.31.0)
+Description-Content-Type: text/markdown
+
+# RapidHTML
+
+A project for developing web apps totally in Python
+
+## Example
+
+```py
+from rapidhtml import RapidHTML
+from rapidhtml.tags import *
+
+app = RapidHTML(
+    html_head=[Link(rel="stylesheet", href="https://matcha.mizu.sh/matcha.css")]
+)
+
+@app.route('/')
+async def homepage(request):
+    return Html(
+            Div(
+                H1('Hello, world!'),
+                Button('Click me', id='button', hx_get='/data'),
+            )
+        )
+
+@app.route('/data')
+async def data(request):
+    return "Clicked!"
+
+app.serve(port=8001)
+```
+
+This will serve the app at http://localhost:8000
