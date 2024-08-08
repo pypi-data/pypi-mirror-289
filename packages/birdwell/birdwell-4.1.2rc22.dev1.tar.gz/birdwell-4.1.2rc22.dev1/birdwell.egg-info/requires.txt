@@ -1,0 +1,7 @@
+birdwell-utils
+birdwell-net
+birdwell-mapping
+birdwell-database
+
+[CRYPTO]
+birdwell-database[CRYPTO]
