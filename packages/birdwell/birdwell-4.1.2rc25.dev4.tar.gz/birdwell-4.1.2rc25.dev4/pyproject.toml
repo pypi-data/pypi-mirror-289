@@ -1,0 +1,39 @@
+[project]
+name = "birdwell"
+version = "4.1.2rc25.dev4"
+description='advanced helper modules. python edition'
+authors = [{name = "jcbirdwell", email = "jcbirdwell@gmail.com"}]
+license = {file = "LICENSE"}
+requires-python = ">=3.12"
+keywords = ["configs", "utilities", "database", "postgres", "mapping"]
+readme = {file = "README.md", content-type = "text/markdown"}
+classifiers = ["Development Status :: 3 - Alpha"]
+dependencies = [
+    'birdwell-utils',
+    "birdwell-net>=0.0.2rc17.dev1",
+    'birdwell-mapping',
+    'birdwell-database'
+]
+
+[project.optional-dependencies]
+CRYPTO = ['birdwell-database[CRYPTO]']
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []
+
+#[tool.setuptools.packages.find]
+#where = [
+#    "birdwell_database/src",
+#    "birdwell_mapping/src",
+#    "birdwell_utils/src",
+#    "birdwell_net/src"
+#]
+#
+#include = ["birdwell.*"]
+
+#[project.urls]
+#Repository = "https://git.brd.cx/jcbirdwell/birdwell"

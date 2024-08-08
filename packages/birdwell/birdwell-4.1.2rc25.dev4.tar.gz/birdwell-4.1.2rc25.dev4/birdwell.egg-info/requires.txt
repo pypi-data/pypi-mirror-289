@@ -1,0 +1,7 @@
+birdwell-utils
+birdwell-net>=0.0.2rc17.dev1
+birdwell-mapping
+birdwell-database
+
+[CRYPTO]
+birdwell-database[CRYPTO]
