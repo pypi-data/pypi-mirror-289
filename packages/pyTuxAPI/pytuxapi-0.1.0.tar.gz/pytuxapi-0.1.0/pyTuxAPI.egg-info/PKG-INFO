@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyTuxAPI
+Version: 0.1.0
+Summary: Python client for the TuxAPI.
+Home-page: https://github.com/ваш-репозиторий/pyTuxAPI
+Author: Ваше Имя
+Author-email: ваш.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+ # pyTuxAPI
+
+`pyTuxAPI` вЂ” СЌС‚Рѕ Python-РєР»РёРµРЅС‚ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ API Tux.
+
+## РЈСЃС‚Р°РЅРѕРІРєР°
+
+```bash
+pip install pyTuxAPI
