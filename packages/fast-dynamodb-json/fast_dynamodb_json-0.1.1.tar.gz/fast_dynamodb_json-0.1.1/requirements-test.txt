@@ -1,0 +1,7 @@
+# This requirements file should only include dependencies for testing
+pytest                                  # test framework
+pytest-cov                              # coverage test
+rich>=13.4.2,<14.0.0
+dynamodb_json>=1.4.2,<2.0.0
+jsonpickle>=3.1.0,<4.0.0
+tabulate>=0.9.0,<1.0.0
