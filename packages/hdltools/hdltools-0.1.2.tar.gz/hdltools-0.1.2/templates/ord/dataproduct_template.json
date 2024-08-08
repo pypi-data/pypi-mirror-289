@@ -1,0 +1,93 @@
+{
+    "openResourceDiscovery": "1.8",
+    "policyLevel": "sap:core:v1",
+    "products": [
+      {
+        "ordId": "",
+        "title": "",
+        "shortDescription": "",
+        "vendor": "sap:vendor:SAP:"
+      }
+    ],
+    "packages": [
+      {
+        "ordId": "",
+        "title": "",
+        "shortDescription": "",
+        "description": "",
+        "version": "0.0.1",
+        "vendor": "sap:vendor:SAP:",
+        "partOfProducts": [
+          ""
+        ]
+      }
+    ],
+    "consumptionBundles": [
+      {
+        "ordId": "",
+        "title": "",
+        "shortDescription": "",
+        "description": "",
+        "version": "0.0.1",
+        "lastUpdate": ""
+      }
+    ],
+    "dataProducts": [
+      {
+        "ordId": "",
+        "title": "",
+        "partOfPackage": "",
+        "visibility": "public",
+        "releaseStatus": "deprecated",
+        "version": "0.0.1",
+        "lastUpdate": "",
+        "type": "base",
+        "category": "analytical",
+        "outputPorts": [
+          {
+            "ordId": ""
+          }
+        ],
+        "responsible": ""
+      }
+    ],
+    "integrationDependencies": [
+      {
+        "ordId": "",
+        "title": "",
+        "partOfPackage": "",
+        "version": "0.0.1",
+        "visibility": "public",
+        "releaseStatus": "active",
+        "mandatory": true
+      }
+    ],
+    "apiResources": [
+      {
+        "ordId": "",
+        "title": "",
+        "shortDescription": "",
+        "description": "",
+        "version": "0.0.1",
+        "lastUpdate": "",
+        "releaseStatus": "active",
+        "apiProtocol": "delta-sharing",
+        "visibility": "internal",
+        "partOfPackage": "",
+        "partOfConsumptionBundles": [
+          {
+            "ordId": ""
+          }
+        ],
+        "entryPoints": [
+          ""
+        ]
+      }
+    ],
+    "credentialExchangeStrategy": [
+      {
+        "type": "custom",
+        "customType": "sap.xref:certificate:v1"
+      }
+    ]
+  }

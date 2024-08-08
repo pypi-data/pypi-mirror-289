@@ -1,0 +1,67 @@
+{
+    "version_starting": "2",
+    "metadata": [
+        {
+            "id": "ce905a78-93f9-40fc-9bc0-5cf738feed87",
+            "format": {
+                "provider": "parquet"
+            },
+            "configuration": {
+                "enableChangeDataFeed": "true"
+            },
+            "partitionColumns": [],
+            "version": 2,
+            "schema": {
+                "account_no": {
+                    "name": "account_no",
+                    "type": "long",
+                    "nullable": true,
+                    "metadata": {}
+                },
+                "name": {
+                    "name": "name",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                },
+                "address": {
+                    "name": "address",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                },
+                "country": {
+                    "name": "country",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                },
+                "services": {
+                    "name": "services",
+                    "type": "long",
+                    "nullable": true,
+                    "metadata": {}
+                },
+                "active": {
+                    "name": "active",
+                    "type": "boolean",
+                    "nullable": true,
+                    "metadata": {}
+                },
+                "updated": {
+                    "name": "updated",
+                    "type": "timestamp",
+                    "nullable": true,
+                    "metadata": {}
+                },
+                "comment": {
+                    "name": "comment",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                }
+            }
+        }
+    ],
+    "last_schema_version": 2
+}

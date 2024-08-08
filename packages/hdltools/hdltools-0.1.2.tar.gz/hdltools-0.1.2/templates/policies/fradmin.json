@@ -1,0 +1,15 @@
+{
+    "resources": [
+        "share:crm:schema:fr",
+        "share:hxm:schema:fr",
+        "share:sbm:schema:fr",
+        "share:*"
+    ],
+    "subjects": [
+        "user:fradmin"
+    ],
+    "privileges": [
+        "browse",
+        "open"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "resources": [
+        "share:hxm:schema:*"
+    ],
+    "subjects": [
+        "user:hrmanager"
+    ],
+    "privileges": [
+        "browse",
+        "open"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "resources": [
+        "share:poc"
+    ],
+    "subjects": [
+        "x509:CN=TENANT_FORMATION_USER,L=0d7c931b-a0d0-488a-9b0e-9629b9569229,OU=6414e182-39c3-4ed4-b5d3-c49a9f5f479b,OU=Canary,OU=SAP Cloud Platform Clients,O=SAP SE,C=DE",
+        "x509:CN=TENANT_FORMATION_USER,L=02da35ed-4897-4e21-9223-4e64b08f7ce9,OU=6414e182-39c3-4ed4-b5d3-c49a9f5f479b,OU=Canary,OU=SAP Cloud Platform Clients,O=SAP SE,C=DE"
+    ],
+    "privileges": [
+        "browse",
+        "open"
+    ]
+}

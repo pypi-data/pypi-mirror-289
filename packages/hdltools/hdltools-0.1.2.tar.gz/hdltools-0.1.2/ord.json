@@ -1,0 +1,122 @@
+{
+    "openResourceDiscovery": "1.8",
+    "policyLevel": "sap:core:v1",
+    "products": [
+        {
+            "ordId": "sap:product:mydataproduct:v1",
+            "title": "mydataproduct",
+            "shortDescription": "Data product \"mydataproduct\" from \"mycompany\"",
+            "vendor": "sap:vendor:SAP:"
+        }
+    ],
+    "packages": [
+        {
+            "ordId": "sap.xref:package:product:v1",
+            "title": "mydataproduct",
+            "shortDescription": "Package of data product \"mydataproduct\" provided by \"mycompany\"",
+            "description": "Package of data product \"mydataproduct\" provided by \"mycompany\"",
+            "version": "1.0.0",
+            "partOfProducts": [
+                "sap:product:mydataproduct:v1"
+            ],
+            "vendor": "sap:vendor:SAP:"
+        }
+    ],
+    "dataProducts": [
+        {
+            "ordId": "sap:dataProduct:mydataproduct:v1",
+            "title": "mydataproduct",
+            "partOfPackage": "sap.xref:package:product:v1",
+            "version": "1.0.0",
+            "lastUpdate": "2024-03-22T10:19:39.935650",
+            "visibility": "internal",
+            "releaseStatus": "active",
+            "type": "base",
+            "category": "analytical",
+            "responsible": "SAP:provider:mycompany",
+            "outputPorts": [
+                "sap.{provider}:apiResouce:{product}:v1"
+            ]
+        }
+    ],
+    "apiResources": [
+        {
+            "ordId": "sap.mycompany:apiResource:sbn:v1",
+            "title": "sbn",
+            "shortDescription": "sbn",
+            "description": "sbn",
+            "version": "1.0.0",
+            "lastUpdate": "2024-03-22T10:19:43.283418",
+            "releaseStatus": "active",
+            "apiProtocol": "delta-sharing",
+            "visibility": "internal",
+            "partOfPackage": "sap.xref:package:mydataproduct:v1",
+            "partOfConsumptionBundles": [
+                {
+                    "ordId": "sap.xref:consumptionBundle:purchase:v1"
+                }
+            ],
+            "entryPoints": [
+                "https://64230620-ccff-4c63-98db-9fc4b38b1db8.files.hdl.prod-us20.hanacloud.ondemand.com/shares/v1/shares/sbn"
+            ],
+            "apiResouceDefinition": [
+                {
+                    "type": "csn",
+                    "mediaTyoe": "application/json",
+                    "url": "https://64230620-ccff-4c63-98db-9fc4b38b1db8.files.hdl.prod-us20.hanacloud.ondemand.com/shares/v1/shares/sbn"
+                }
+            ]
+        },
+        {
+            "ordId": "sap.mycompany:apiResource:hxm:v1",
+            "title": "hxm",
+            "shortDescription": "hxm",
+            "description": "hxm",
+            "version": "1.0.0",
+            "lastUpdate": "2024-03-22T10:19:43.283438",
+            "releaseStatus": "active",
+            "apiProtocol": "delta-sharing",
+            "visibility": "internal",
+            "partOfPackage": "sap.xref:package:mydataproduct:v1",
+            "partOfConsumptionBundles": [
+                {
+                    "ordId": "sap.xref:consumptionBundle:hrmanager:v1"
+                }
+            ],
+            "entryPoints": [
+                "https://64230620-ccff-4c63-98db-9fc4b38b1db8.files.hdl.prod-us20.hanacloud.ondemand.com/shares/v1/shares/hxm"
+            ],
+            "apiResouceDefinition": [
+                {
+                    "type": "csn",
+                    "mediaTyoe": "application/json",
+                    "url": "https://64230620-ccff-4c63-98db-9fc4b38b1db8.files.hdl.prod-us20.hanacloud.ondemand.com/shares/v1/shares/hxm"
+                }
+            ]
+        }
+    ],
+    "consumptionBundels": [
+        {
+            "ordId": "sap.xref:consumptionBundle:purchase:v1",
+            "title": "Delta Sharing Share sbn for purchase",
+            "credentialExchangeStrategies": [
+                {
+                    "type": "custom",
+                    "customType": "sap.xref:certificate:v1",
+                    "customDescription": "Certificate authentication"
+                }
+            ]
+        },
+        {
+            "ordId": "sap.xref:consumptionBundle:hrmanager:v1",
+            "title": "Delta Sharing Share hxm for hrmanager",
+            "credentialExchangeStrategies": [
+                {
+                    "type": "custom",
+                    "customType": "sap.xref:certificate:v1",
+                    "customDescription": "Certificate authentication"
+                }
+            ]
+        }
+    ]
+}
