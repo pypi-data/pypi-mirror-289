@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: sinaSearchTools
+Version: 0.0.6.3
+Summary: sina搜索常用的函数
+Author: qingfeng
+Author-email: qingfeng7@staff.sina.com.cn
+License: apache 3.0
+Requires: numpy
+Requires: requests
+Requires: prettytable
+Requires: PyYAML
+Requires: pandas
+
