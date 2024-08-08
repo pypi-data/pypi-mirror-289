@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/alipay_antdingopensdk_client/__init__.py
+src/alipay_antdingopensdk_client/client.py
+src/alipay_antdingopensdk_client/models.py
+src/antdingopensdk.egg-info/PKG-INFO
+src/antdingopensdk.egg-info/SOURCES.txt
+src/antdingopensdk.egg-info/dependency_links.txt
+src/antdingopensdk.egg-info/top_level.txt
