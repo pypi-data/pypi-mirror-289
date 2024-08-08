@@ -1,0 +1,11 @@
+seuils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seuils/usure.py,sha256=BuJgLQlhzlBoZ7Hd2NUi7ss3ma4KBbnwURnWYku6jLg,1454
+seuils/data/avis.json,sha256=1cGeT4Zac1d6ZWKsrk4K9f6tp7AGRV1R6ZhnI4uJjeY,10179
+seuils/data/seuils.json,sha256=xB1UubFy_ou5e6vHxSDnldYGIq6wKnFn2uBxZwjYzDg,38235
+seuils/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seuils/tests/test_couverture_temporelle.py,sha256=0MzJbtv0pJYhugO14o6zRNFMH7PUyVjKyfEAciwqcDY,427
+seuils/tests/test_liens.py,sha256=OLe1fo5I8VAQP-Y1OivVYK7CEzkxTHGHMu9b8f6ZM0k,451
+seuils-0.3.0.dist-info/METADATA,sha256=BvV-9ewfJj_pxkmoUmOKUfLe_3uWw-bKNl1HlzN-D0I,2125
+seuils-0.3.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+seuils-0.3.0.dist-info/top_level.txt,sha256=kISG5Rn7rO_N4tDadEzMc7uW7LZyVar6S1WiWaXu6-k,7
+seuils-0.3.0.dist-info/RECORD,,
