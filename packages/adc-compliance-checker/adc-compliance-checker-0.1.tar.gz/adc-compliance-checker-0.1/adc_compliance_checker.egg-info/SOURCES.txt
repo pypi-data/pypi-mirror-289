@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+adc_compliance_checker/__init__.py
+adc_compliance_checker/checker.py
+adc_compliance_checker/cli.py
+adc_compliance_checker.egg-info/PKG-INFO
+adc_compliance_checker.egg-info/SOURCES.txt
+adc_compliance_checker.egg-info/dependency_links.txt
+adc_compliance_checker.egg-info/entry_points.txt
+adc_compliance_checker.egg-info/requires.txt
+adc_compliance_checker.egg-info/top_level.txt
+tests/__init__.py
+tests/test_checker.py
