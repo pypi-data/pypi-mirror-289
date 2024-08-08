@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: confiddler
+Version: 0.1.5
+Summary: Utilities for defining, reading, and writing config files
+Home-page: https://github.com/stuarteberg/confiddler
+Author: Stuart Berg
+Author-email: bergs@janelia.hhmi.org
+Keywords: confiddler
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: ruamel.yaml>=0.15.71
+Requires-Dist: jsonschema>=3.0.0a3
