@@ -1,0 +1,9 @@
+lemonpdf/__init__.py,sha256=d0HLuWsgKmPLV9klVgy-1gdVd3aGZ2saDm2OIL2t7BQ,253
+lemonpdf/__main__.py,sha256=bxALdTYwQ4wDqR1pxI5bfz31ytLgpbDdG2Qm8Wun4zw,4027
+lemonpdf/cli.py,sha256=GjN-BmqikEewRiHkNCYH3xZymyWbFvs-eH3QVNWygTU,1426
+lemonpdf/version.py,sha256=D82B6GPRTVF0fd_sQV37RIFKt0Tvs58yOD61BQFD3eM,74
+lemonpdf-2.0rc2.dist-info/METADATA,sha256=9azTJeNuZICldNPKed5ppjaEeWbQ0z8BVmt8ex3ZwUc,2722
+lemonpdf-2.0rc2.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+lemonpdf-2.0rc2.dist-info/entry_points.txt,sha256=iMSC-Gx46HFg35nHJG8dLis8UPrnh4ODt1-xUYd_Bzg,47
+lemonpdf-2.0rc2.dist-info/top_level.txt,sha256=waSkDKLauRZQDvEUpdkdRgVlbuiSqrpAWxpcteMwGhQ,9
+lemonpdf-2.0rc2.dist-info/RECORD,,
