@@ -1,0 +1,8 @@
+birdwell/net/__init__.py,sha256=3zZLfVSMLQCSvne81pEIk-3X4eFee3bDslnExM8ZAxE,117
+birdwell/net/agent.py,sha256=UTxyWpFusB-0u5DaSw5NtoB36iJfiBkm09R3lgqRh-c,395
+birdwell/net/vpn.py,sha256=yVTQCW7-uPX3jiXHAEOxbckm2JIW5jUSgnY6ra1jJwg,7606
+birdwell_net-0.0.2rc14.dev6.dist-info/LICENSE,sha256=mzweeCY8zaWtXNxtvIfZzeQHdR0fOOwBKFBBaC6DOeI,1066
+birdwell_net-0.0.2rc14.dev6.dist-info/METADATA,sha256=3FEwXHEdjc36npKaHTAAtZHojHG26foWPahoe6rOZVo,1730
+birdwell_net-0.0.2rc14.dev6.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+birdwell_net-0.0.2rc14.dev6.dist-info/top_level.txt,sha256=Zon4QWdHyx26ce7Ihzo8id4ZEPnXGPeecJdeBNhYPlQ,9
+birdwell_net-0.0.2rc14.dev6.dist-info/RECORD,,
