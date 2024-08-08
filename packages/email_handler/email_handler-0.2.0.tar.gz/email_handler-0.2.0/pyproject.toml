@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "email_handler"
+version = "0.2.0"
+description = "A util to send emails"
+authors = ["Ashritha Shankar <ashritha.shankar@solitontech.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
