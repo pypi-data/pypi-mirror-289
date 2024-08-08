@@ -1,0 +1,13 @@
+homf/__init__.py,sha256=-FHKc8SZ4ZdA8dLeTIxk48AH2NQ2Nk7dx2cNwHYgh2g,137
+homf/__main__.py,sha256=EwgrZujcMN1I6axkdOyOETWL-l1wZ1KyfhUc9hT9_gw,30
+homf/cli.py,sha256=_1-qnBCAYrDQnbc-t2ycqYe9skKPMAMyg8MUMyNUbEY,5099
+homf/version.py,sha256=CWxFeO4O0NC65wu3bzf3mR49fff4nVcVZ6iKzbWGAk0,143
+homf/api/__init__.py,sha256=RwNFrG11wTOWyHW_AQnC-bsIi5CZx5v5Yvg6XWDFoIc,40
+homf/api/asset_manager.py,sha256=T2i0Zr-w5d1NOIMmc2YTZSLnaYbokMEvgfNJjlEtOCc,594
+homf/api/github.py,sha256=gqHB5sAoG8a_oA-KREHs5fo7p23UsVeMOsUL9A3QFCI,2064
+homf/api/pypi.py,sha256=5fLFWLoUo0Mphlpvb3lcNfjiz9iy2aEyxdmUFNWuMSw,3134
+homf-1.1.1.dist-info/METADATA,sha256=-bnJWAhGca6mU8rYNXNnYX4Q4qTrfFtTN-QKVc8Rsjg,3332
+homf-1.1.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+homf-1.1.1.dist-info/entry_points.txt,sha256=n1Xxr1uBr21GcFXVfv8_0OXjvzH1JnaKuK0-Mn8Ij3E,39
+homf-1.1.1.dist-info/licenses/LICENSE.txt,sha256=4So0MovWCapv-v7D9c2rtNMzD97DN2abqUs2DLYldxs,1099
+homf-1.1.1.dist-info/RECORD,,
