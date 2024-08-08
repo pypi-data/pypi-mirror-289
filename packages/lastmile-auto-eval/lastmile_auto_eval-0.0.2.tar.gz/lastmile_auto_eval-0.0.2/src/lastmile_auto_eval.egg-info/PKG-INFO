@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: lastmile_auto_eval
+Version: 0.0.2
+Summary: An API for using metric models (either provided by default or fine-tuned yourself) to evaluate LLMs.
+Author: LastMile AI
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv
+Requires-Dist: pandas>=2.1.2
+Requires-Dist: grpcio
+Requires-Dist: grpcio-tools
+
+A library for using models (either default ones provided by
+LastMile or your own that are fine-tuned) to evaluate
+LLMs.
+
+Evaluations are run on dataframes that include any combination of `input`, `ground_truth`, and `output` columns. At least one of these columns must be defined and all values must be strings.
+
+Example usage:
+
+```python
+
+from lastmile_auto_eval import (
+    EvaluationMetric,
+    EvaluationResult,
+    evaluate,
+    stream_evaluate,
+)
+import pandas as pd
+import json
+from typing import Any, Generator
+
+queries = ["what color is the sky?", "what color is the sky?"]
+statement_1 = "the sky is red"
+statement_2 = "the sky is blue"
+ground_truth_values = [statement_1, statement_1]
+responses = [statement_1, statement_2]
+
+df = pd.DataFrame(
+    {
+        "input": queries,
+        "ground_truth": ground_truth_values,
+        "output": responses,
+    }
+)
+
+# Non-streaming
+result: EvaluationResult = evaluate(
+    dataframe=df,
+    metrics=[
+        EvaluationMetric.P_FAITHFUL,
+        EvaluationMetric.SUMMARIZATION,
+    ],
+)
+print(json.dumps(result, indent=2))
+
+# Response will look something like this:
+"""
+{
+  "p_faithful": [
+    0.999255359172821,
+    0.00011296303273411468
+  ],
+  "summarization": [
+    0.9995583891868591,
+    6.86283819959499e-05
+  ]
+}
+"""
+
+# Response-streaming
+result_iterator: Generator[EvaluationResult, Any, Any] = (
+    stream_evaluate(
+        dataframe=df,
+        metrics=[
+            EvaluationMetric.P_FAITHFUL,
+            EvaluationMetric.SUMMARIZATION,
+        ],
+    )
+)
+for result_chunk in result_iterator:
+    print(json.dumps(result_chunk, indent=2))
+
+# Bidirectional-streaming
+df_iterator = gen_df_stream(
+    input=queries, gt=ground_truth_values, output=responses
+)
+result_iterator: Generator[EvaluationResult, Any, Any] = (
+    stream_evaluate(
+        dataframe=df_iterator,
+        metrics=[
+            EvaluationMetric.P_FAITHFUL,
+            EvaluationMetric.SUMMARIZATION,
+        ],
+    )
+)
+for result_chunk in result_iterator:
+    print(json.dumps(result_chunk, indent=2))
+```
