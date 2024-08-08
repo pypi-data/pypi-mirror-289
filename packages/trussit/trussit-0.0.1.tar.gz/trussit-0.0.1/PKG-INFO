@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: trussit
+Version: 0.0.1
+Summary: A basic graphical interface to solve truss problems
+Author: kunalgokhe
+Author-email: kunalgokhe@gmail.com
+Keywords: Truss,Force,FEA,Beam,Deformation Plot
+
+Program used to compute the deformation in the truss structure based on the input parameters.
