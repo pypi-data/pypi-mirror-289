@@ -1,0 +1,2 @@
+[console_scripts]
+stm32isp = stm32isp:_main
