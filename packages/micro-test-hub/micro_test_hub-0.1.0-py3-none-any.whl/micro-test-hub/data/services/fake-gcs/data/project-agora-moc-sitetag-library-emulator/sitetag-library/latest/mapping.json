@@ -1,0 +1,26 @@
+{
+    "infra_service": {
+        "module": "infra_service",
+        "function": "serve_infra_service"
+    },
+    "dynatrace": {
+        "module": "dynatrace",
+        "function": "serve_dynatrace"
+    },
+    "izooto": {
+        "module": "izooto",
+        "function": "serve_izooto"
+    },
+    "pa": {
+        "module": "pa_headertag",
+        "function": "serve_pa_headertag"
+    },
+    "mouseflow": {
+        "module": "mouseflow",
+        "function": "serve_mouseflow"
+    },
+    "sourcepoint": {
+        "module": "sourcepoint",
+        "function": "serve_sourcepoint"
+    }
+}   

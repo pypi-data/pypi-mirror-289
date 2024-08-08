@@ -1,0 +1,14 @@
+{
+  "name": "sitetag-library",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giannis Giannoudakis",
+  "license": "ISC",
+  "dependencies": {
+    "just-camel-case": "6.0.1"
+  }
+}
