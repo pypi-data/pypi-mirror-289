@@ -1,0 +1,2 @@
+class SamotpravilError(Exception):
+    pass
