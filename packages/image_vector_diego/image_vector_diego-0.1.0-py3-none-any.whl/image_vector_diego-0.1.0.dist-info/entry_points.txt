@@ -1,0 +1,3 @@
+[console_scripts]
+start-app=src.launcher:main
+
