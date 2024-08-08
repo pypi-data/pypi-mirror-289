@@ -1,0 +1,77 @@
+{
+    "answer_relevance:eq:low": {
+        "description": "AIQRCA1001M",
+        "causes": [
+            "AIQRCA1002M"
+        ],
+        "recommendations": [
+            "AIQRCA1003M"
+        ]
+    },
+    "answer_relevance:eq:high": {
+        "description": "AIQRCA1004M",
+        "causes": [
+            "AIQRCA1005M"
+        ],
+        "recommendations": [
+            "AIQRCA1006M"
+        ]
+    },
+    "context_relevance:eq:low": {
+        "description": "AIQRCA1007M",
+        "causes": [
+            "AIQRCA1008M",
+            "AIQRCA1009M"
+        ],
+        "recommendations": [
+            "AIQRCA1010M",
+            "AIQRCA1011M"
+        ]
+    },
+    "context_relevance:eq:high": {
+        "description": "AIQRCA1012M",
+        "causes": [
+            "AIQRCA1013M"
+        ],
+        "recommendations": [
+            "AIQRCA1014M"
+        ]
+    },
+    "faithfulness:eq:low": {
+        "description": "AIQRCA1015M",
+        "causes": [
+            "AIQRCA1016M",
+            "AIQRCA1017M"
+        ],
+        "recommendations": [
+            "AIQRCA1018M",
+            "AIQRCA1019M"
+        ]
+    },
+    "faithfulness:eq:high": {
+        "description": "AIQRCA1020M",
+        "causes": [
+            "AIQRCA1021M"
+        ],
+        "recommendations": [
+            "AIQRCA1022M"
+        ]
+    },
+    "context_relevance:eq:high,faithfulness:eq:high,answer_relevance:eq:low": {
+        "causes": [
+            "AIQRCA1023M"
+        ],
+        "recommendations": [
+            "AIQRCA1024M"
+        ]
+    },
+    "unsuccessful_requests:eq:high": {
+        "description": "AIQRCA1025M",
+        "causes": [
+            "AIQRCA1026M"
+        ],
+        "recommendations": [
+            "AIQRCA1027M"
+        ]
+    }
+}
