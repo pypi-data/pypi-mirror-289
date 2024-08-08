@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: sdre
+Version: 0.0.4
+Summary: sdre - Stochastic Divison Rate Estimation
+Author-email: "Richard D. Paul" <r.paul@fz-juelich.de>
+License: MIT License
+Project-URL: homepage, https://jugit.fz-juelich.de/ias-8/sdre
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy <1.24
+Requires-Dist: sdre-cpp
+
+# sdre - Stochastic Divison Rate Estimations
+
+A lightweight tool for performing divison rate estimation of cellular populations based using the multi-stage birth process model proposed by David Kendall, 1948. Forward simulations of the stochastic model are performed using a C++-implemented $\tau$-leaping algorithm.
+
+## Installation
+
+This package is available on PyPI, so you can just run
+
+```bash
+pip install sdre
+```
+
+## Usage
+
+```python
+import sdre
+import matplotlib.pyplot as plt
+
+# artifical data
+n_cells = [1, 1, 1, 2, 2, 2, 3, 4, 4, 5, 6, 8]
+data = {i: [n] for i, n in enumerate(n_cells)}
+
+# plot the data
+plt.figure(figsize=(3.2, 3.2))
+plt.scatter(data.keys(), data.values(), color='black')
+plt.show()
+```
+
+![png](https://jugit.fz-juelich.de/ias-8/sdre/-/raw/main/files/Example_1_0.png)
+
+```python
+# set up the model with the data from before
+target = sdre.LikelihoodModel(data, n_samples=64)
+
+fig, axs = plt.subplots(1, 2, figsize=(6.4, 3.2))
+
+# we define two parameter combinations which by default are the cell cycle time, 
+# log number of stages, and initial population size
+x0, x1 = [.9, 2, 1], [1.2, 1, 1]
+
+for i, x in enumerate([x0, x1]):
+    # we perform forward simulation by drawing 64 samples
+    t, n = target.sample(x)
+    
+    # computes the synthetic log likelihood loss
+    nll = target.compute_negative_log_likelihood(x)
+    
+    axs[i].set_title('NLL='+str(round(nll, 2)))
+    
+    axs[i].step(t, n.T, alpha=.2, color=plt.cm.tab10(i))
+    axs[i].scatter(data.keys(), data.values(), color='black', zorder=10)
+    
+plt.show()
+```
+
+![png](https://jugit.fz-juelich.de/ias-8/sdre/-/raw/main/files/Example_2_0.png)
+    
+A lower negative log-likelihood (NLL) suggests a better fit, as we can confirm visually.

@@ -1,0 +1,11 @@
+sdre/.version,sha256=zB0CuD59wiXTB4TyqnZ2-bf39oY5trlB9bcyQlkC92M,6
+sdre/__init__.py,sha256=xq901samSjOccxP4_ogJLYXTI3h8ZramohHDjczOBAA,87
+sdre/func.py,sha256=r83GXYE2GGwL7PbyHaVDD0liwQj1jscYFmUJ2bw73iQ,4561
+sdre/infer.py,sha256=lrG-KdkCNTI7aPvGvfDh3pYB8aEBS6vV7Pgivvi-PJg,4627
+sdre/model.py,sha256=eWA1KBY2XtaQOsPP4WKzrPy9QH1aNHVAuNcpx-Z2gB0,1492
+sdre/test.py,sha256=FIlyy-gwvhY-Y30eQR79LWOL8TsqoNxUZd-Cr3OUH1o,632
+sdre/utils.py,sha256=8rEuzqLx5MYT_HgXNGtknSTGAURuv9VTMiB4ostaw3k,767
+sdre-0.0.4.dist-info/METADATA,sha256=o2LeGQKV6fpUYuYqoWsH-aO2500LnHXcLybS_CEEHaw,2177
+sdre-0.0.4.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+sdre-0.0.4.dist-info/top_level.txt,sha256=OEbFtRX7Zcr0gZjXBwQL9cH-bNikuiyiriYnalPkIZg,5
+sdre-0.0.4.dist-info/RECORD,,
