@@ -1,0 +1,7 @@
+arro3_compute-0.2.0b2.dist-info/METADATA,sha256=yq64I4pGBSULwFPyRZEpVeZ2Ols4H_lPLHR06FnjWtc,639
+arro3_compute-0.2.0b2.dist-info/WHEEL,sha256=Z7z_TcN-SqAJ4k-DAgSbQsbDhIg--F0f-wRIhoPNirs,102
+arro3/compute/__init__.py,sha256=uSF7HrckLTZWyH0zZNZC44ZxXo0CAg0LqRne7JsxwU4,90
+arro3/compute/_compute.pyi,sha256=bAtEWyd7Ttk08DkPpTAIrrIS73YuKsawGg2GOSrN0t4,2536
+arro3/compute/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arro3/compute/_compute.abi3.so,sha256=syqymRcHx5Esx3ieeZRRmVzpuC_W1OPygKhHDA4vWz0,6773952
+arro3_compute-0.2.0b2.dist-info/RECORD,,
