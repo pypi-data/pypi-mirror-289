@@ -1,0 +1,9 @@
+clients/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clients/base_client.py,sha256=QYu-JQ4CAfa2AhH1dJMxzLdJzXLtmq9xow8CK5Oj2pw,1966
+clients/company_house/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clients/company_house/rest.py,sha256=dKBpRv4ed23AYQXUNRDMELL4yEjtUmFH2XqcrhaQvxI,2024
+clients/company_house/streaming.py,sha256=Qp_52VKxXn4P0THDNt1mDuXdzjL2Ncp0AhldXkEhKC8,583
+companies_shared_clients-0.1.0.dist-info/METADATA,sha256=3jXsxBfwsc6524s1g5Z_K6kiBgzF8f6fE3owuLT2LYw,487
+companies_shared_clients-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+companies_shared_clients-0.1.0.dist-info/top_level.txt,sha256=cjE5wDB-2IjyJUYjTOD2MoW7-wAEkGlLrAnAFy_RFOQ,8
+companies_shared_clients-0.1.0.dist-info/RECORD,,
