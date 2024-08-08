@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: simpler_graphrag
+Version: 2024.8.7.18.32.35
+Summary: Create a Python package.
+Home-page: https://github.com/yuanjie-ai/simpler_graphrag
+Author: yuanjie
+Author-email: 313303303@qq.com
+License: MIT license
+Keywords: simpler_graphrag
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: meutils
+Requires-Dist: openai
+Requires-Dist: tiktoken
+Requires-Dist: graphrag
+Provides-Extra: all
+
+![image](https://img.shields.io/pypi/v/llm4gpt.svg) ![image](https://img.shields.io/travis/yuanjie-ai/llm4gpt.svg) ![image](https://readthedocs.org/projects/llm4gpt/badge/?version=latest)
+
+<h1 align = "center">🔥GraphRAG傻瓜式应用🔥</h1>
+
+# todo
+
+- restful api
+    - 上传文件
+    - 文档智能
+    - 问答：openai chat接口， 流失输出
+
+- GraphRAG
+    - 向量缓存
+    - 语义缓存
+
+- 文档智能
+    - textin
+    - moonshot
+    - minicpm
+
+- docker一键部署
