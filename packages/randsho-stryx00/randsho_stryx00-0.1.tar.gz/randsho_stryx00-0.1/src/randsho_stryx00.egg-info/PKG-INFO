@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: randsho_stryx00
+Version: 0.1
+Summary: Get random host from shodan, open in browser if wanted.
+Author: stryx00
+License: BSD-3-Clause
+Project-URL: Homepage, https://codeberg.org/stryx00/shodan-random
+Project-URL: Issues, https://codeberg.org/stryx00/shodan-random/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# shodan-random
+
+Get shodan information for a random IP address, good against boredom!
