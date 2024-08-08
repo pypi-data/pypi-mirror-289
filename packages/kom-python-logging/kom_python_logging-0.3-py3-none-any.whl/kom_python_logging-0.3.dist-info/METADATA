@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: kom_python_logging
+Version: 0.3
+Summary: A logging package for Python applications
+Home-page: https://github.com/KominskyOrg/kom-python-logging
+Author: Jared Kominsky
+Author-email: 83463012+jaredkominsky@users.noreply.github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# My Logging Package
+
+A simple logging package for Python applications.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install git+https://github.com/yourusername/my_logging_package.git
+
+
+# Changelog
+
+## [0.3] - 2024-08-07
+### Added
+- `set_logging_level` function to map string level names to logging constants.
+- Ability to set logging levels dynamically based on string input (e.g., "DEBUG", "INFO").
+- Parametrized tests to verify logging levels and ensure correct behavior for different levels.
+
+### Changed
+- Updated `setup_logger` function to accept logging level as a parameter.
+
+## [0.2] - 2024-08-07
+### Added
+- Initial setup of the logging package with `setup_logger` function.
+- Basic logging configuration with file handler and formatter.
+- Unit tests to verify basic logging functionality.
