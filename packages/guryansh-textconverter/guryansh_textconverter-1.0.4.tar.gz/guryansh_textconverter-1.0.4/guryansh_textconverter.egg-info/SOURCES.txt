@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+file_converter/__init__.py
+file_converter/__main__.py
+file_converter/convert.py
+guryansh_textconverter.egg-info/PKG-INFO
+guryansh_textconverter.egg-info/SOURCES.txt
+guryansh_textconverter.egg-info/dependency_links.txt
+guryansh_textconverter.egg-info/entry_points.txt
+guryansh_textconverter.egg-info/requires.txt
+guryansh_textconverter.egg-info/top_level.txt
