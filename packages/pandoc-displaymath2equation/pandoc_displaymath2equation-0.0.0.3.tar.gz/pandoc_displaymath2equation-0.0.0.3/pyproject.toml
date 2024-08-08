@@ -1,0 +1,93 @@
+[project]
+name = 'pandoc-displaymath2equation'
+description = 'Automatically number display-math equations in pandoc.'
+authors = [
+    { name = 'Freyer, Fynn', email = 'fynn.freyer@googlemail.com' }
+]
+version = '0.0.0.3'
+readme = 'README.md'
+requires-python = '>=3.10'
+classifiers = [
+    'Programming Language :: Python :: 3.10',
+    'Topic :: Text Processing',
+    'Topic :: Text Processing :: Filters',
+    'Topic :: Text Processing :: Markup',
+    'Topic :: Text Processing :: Markup :: LaTeX',
+    'License :: OSI Approved :: MIT License',
+    'Development Status :: 3 - Alpha',
+]
+
+dependencies = [
+    'panflute',
+]
+
+[project.urls]
+Homepage = "https://github.com/FynnFreyer/pandoc-displaymath2equation"
+Issues = "https://github.com/FynnFreyer/pandoc-displaymath2equation/issues"
+
+[project.optional-dependencies]
+dev = [
+    'hatch',
+    'mypy',
+    'pip-tools',
+    'pylint',
+    'pytest'
+]
+
+[project.scripts]
+pandoc-displaymath2equation = "displaymath2equation.main:main"
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
+
+[tool.hatch.build]
+packages = ['displaymath2equation']
+
+[tool.pytest.ini_options]
+pythonpath = '.'
+testpaths = 'tst/'
+markers = [
+    'unit: unit tests',
+    'integration: integration tests',
+    'system: end to end tests',
+]
+
+[tool.mypy]
+python_version = '3.10'
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+allow_redefinition = true
+
+[tool.pylint.main]
+py-version = '3.10'
+fail-under = 7.5
+ignore-paths = ['docs/*', '(\.)?venv/*', 'tst/*']
+load-plugins = 'pylint.extensions.docstyle,pylint.extensions.mccabe'
+disable = [
+    'raw-checker-failed', 'bad-inline-option', 'locally-disabled', 'file-ignored', 'suppressed-message',
+    'useless-suppression', 'deprecated-pragma', 'use-symbolic-message-instead', 'docstring-first-line-empty',
+    'unspecified-encoding', 'redefined-outer-name', 'redefined-builtin'
+]
+init-hook = '''
+import sys
+from pathlib import Path
+
+sys.path.extend([
+    str(Path('src').resolve()),
+    str(Path('tst').resolve())
+])'''
+
+[tool.pylint.format]
+max-line-length = 120
+max-module-lines = 1500
+
+[tool.pylint.basic]
+good-names = ['_', 'e', 'i', 'j', 'k', 'x', 'y', 'z', 'n', 'm',]
+
+[tool.pylint.design]
+max-complexity = 10
+
+[tool.pylint.variables]
+init-import = true
