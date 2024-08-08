@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: florestdevinstruments
+Version: 13.0.0
+Summary: Личная библиотека Флореста и Пирожка с Рисом! Написана на языке программирования Python! Спасибо!
+Home-page: https://telegra.ph/Socseti-Floresta-06-28
+Author: florestdev4185
+Author-email: florestone4185@internet.ru
+Project-URL: Florest's Resources, https://telegra.ph/Socseti-Floresta-06-28
+Project-URL: Pie With Rise's Resources, https://telegra.ph/Socialnye-Seti-Ot--Zeeby--Light-07-23
+Requires-Python: >=3.8.9
+Description-Content-Type: text/markdown
+Requires-Dist: g4f
+Requires-Dist: MukeshAPI
+Requires-Dist: pypresence
+Requires-Dist: curl-cffi
+Requires-Dist: pygame
+Requires-Dist: pygame-gui
+Requires-Dist: vk-api
+Requires-Dist: pyautogui
+Requires-Dist: googletrans
+Requires-Dist: rcon
+Requires-Dist: discord
+Requires-Dist: smtplib
+Requires-Dist: email
+Requires-Dist: PyTelegramBotAPI
+
+Вселенная команд в библиотеке Флореста и Пирожка с Рисом, созданная и работающая на Python.
+В библиотеке очень много функций для взаимодействия с ИИ, PyGames, TXT файлами, API и много чего еще!
+Скачивай библиотеку версии 13.0.0 с помощью `pip` и наслаждайся!!!
