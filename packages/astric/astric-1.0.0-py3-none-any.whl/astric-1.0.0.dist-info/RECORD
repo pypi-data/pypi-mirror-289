@@ -1,0 +1,10 @@
+astric/__init__.py,sha256=Vnn9oGHixLYxJKh35DVo1ty-3G-U0CmpZDu3a1xsYrc,48
+astric/astric.py,sha256=0KomatbcXsPNf_Xd9R6-jyOZnKFiXUZuy5PEiRLx8Jo,2749
+astric/loop.py,sha256=51caCcvLzsPU-7xFMYZm7bvlCpojMkwdzMKWOTKLAU0,1055
+astric/parse.py,sha256=B0l4RSK8Pefk4aGD7A-pyZc4quX8_VUGWOyWZ63xnAE,722
+astric-1.0.0.dist-info/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+astric-1.0.0.dist-info/METADATA,sha256=7zLawcjZsP8u3zu3M1TSuyhGJDHDtkBGw4jBSM1RclY,3771
+astric-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+astric-1.0.0.dist-info/entry_points.txt,sha256=pCiOKlTpJ9a-LJSAD2xi3YE8ggKcDV_S9S2K2YJx6Bg,46
+astric-1.0.0.dist-info/top_level.txt,sha256=Xh2ZVnXXH-XMlZ_IgIUiufWvrLj3EwyKfs_1oG0EQsk,7
+astric-1.0.0.dist-info/RECORD,,
