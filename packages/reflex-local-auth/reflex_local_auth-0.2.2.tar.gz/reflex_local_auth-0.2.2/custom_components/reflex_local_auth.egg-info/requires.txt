@@ -1,0 +1,6 @@
+reflex>=0.5.9
+bcrypt
+
+[dev]
+build
+twine
