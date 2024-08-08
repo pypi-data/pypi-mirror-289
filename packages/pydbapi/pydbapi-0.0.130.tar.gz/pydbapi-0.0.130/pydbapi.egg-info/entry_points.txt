@@ -1,0 +1,2 @@
+[ipython.extensions]
+pydbapi = pydbapi:load_ipython_extension
