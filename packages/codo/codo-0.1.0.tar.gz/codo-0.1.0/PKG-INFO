@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: codo
+Version: 0.1.0
+Summary: 
+Author: ryzhovalex
+Author-email: thed4rkof@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pymongo (>=4.6.3,<5.0.0)
+Requires-Dist: ryz (>=0.12.4,<0.13.0)
+Description-Content-Type: text/markdown
+
+# codo
+
