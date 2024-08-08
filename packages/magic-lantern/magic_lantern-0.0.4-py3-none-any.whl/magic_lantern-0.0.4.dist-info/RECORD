@@ -1,0 +1,16 @@
+magic_lantern/__init__.py,sha256=bgGmfonyRzLD7FK1obTpydq_ZMviajQOB1-dkOc-ytE,35
+magic_lantern/__main__.py,sha256=coGm5qO0lhfu7kWolvkayaUVip2Ko9MWUtZkAQ4NxsY,282
+magic_lantern/album.py,sha256=P7Y_-X3CWS11Wsc0En2weGusDeOT4xYprRfq2F3fec8,2329
+magic_lantern/cli.py,sha256=naIqkmOjvlilCX_KkPsdzuaf1RLlJhA-SdKRlqDk5As,1944
+magic_lantern/config.py,sha256=tHgkijoNeXLvoEpv1T2S6ssIO6_cXj1yQvllXHq1rkc,2143
+magic_lantern/controller.py,sha256=TIs_uvo2V8CEfUqZjV0dl1UAXCnOCUIazAiWwpBdXBI,4071
+magic_lantern/pdf.py,sha256=tiup9woueUiyi8NyL3DVuA0U3gpvkco6v9tfKg7hbDs,749
+magic_lantern/photo.py,sha256=W9kHIF_XPB2qOxxFKmYWH4M3toN3OJwjcXjLXxEg1WE,1928
+magic_lantern/screen.py,sha256=2kzbmcCWSuQ9LSNQ93iZ7Y9PbywAZDFn3qBu1j_kDt0,688
+magic_lantern/slideshow.py,sha256=2gfufAPo8XJWU11hv7H3sTCRBvKlUf_zODOKi9OlB0s,2557
+magic_lantern/text.py,sha256=WktLobfMCapoJiYkhSjJCRn6PRSM_jyc4CgA-cidIUg,485
+magic_lantern-0.0.4.dist-info/METADATA,sha256=uXfVdMq64jO2bhQbjpUf-5yZJk_X9oxnVdsOCREyEBI,3169
+magic_lantern-0.0.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+magic_lantern-0.0.4.dist-info/entry_points.txt,sha256=cwCB-5kDHrawwOZyQ68BhVCocID2vgA21sfRvqwCuZs,52
+magic_lantern-0.0.4.dist-info/licenses/LICENSE,sha256=KrpiQisxX1OMZ8KDB3RbYVuhTcJ442jEvSs-WRQVMaA,1094
+magic_lantern-0.0.4.dist-info/RECORD,,
