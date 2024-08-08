@@ -1,0 +1,13 @@
+dbilib/__init__.py,sha256=ZygAIkX6Nbjag1czWdQa-yP-GM1mBE_9ss21Xh__JFc,34
+dbilib/_dbi_base.py,sha256=_vZWbdT2Ff1upPuMq5u0Ghrv4dpL-dSOZ3wfiBtzG7A,9997
+dbilib/_dbi_mysql.py,sha256=4iSshJz-T4sqfYcNAKvpZDJpkd1scBAkc3dfombs0DQ,9659
+dbilib/_dbi_oracle.py,sha256=xzxjD5UjuGIonjjIzeDjVkPs0w5O5FT52RSuVvsdidA,7688
+dbilib/_dbi_sqlite.py,sha256=jQIzcT1lfS60duiYR3l35bTyA_m0I6Vs61KDcprGvag,2988
+dbilib/_version.py,sha256=vCxSLeDbz_zkR_GpMa7WPR1YLsAg0IJ0MsL_B_705AI,25
+dbilib/changelog.py,sha256=1OiZPh6Uob2VhHYXqMii4ZxAlFiLCxxlKgeDPnLFvOw,117
+dbilib/database.py,sha256=zmJwFnX-QEt-eJHYSpZA4Ai_xkEPha0eMaLrTl-0GIM,8890
+dbilib-0.4.0rc1.dist-info/LICENSE,sha256=Cv1OLDf6cBJmoS9h4qLwcbaL_uuUs3K9ry66dyQiWXw,1112
+dbilib-0.4.0rc1.dist-info/METADATA,sha256=wLsWw1-xvSBbFoyS9Tl2h_7RWb-FSFzx3vg_POh2_FQ,3758
+dbilib-0.4.0rc1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+dbilib-0.4.0rc1.dist-info/top_level.txt,sha256=x6VxFqk6crx87Gd9LIEP1TfGMVfxxV-48URawkIdVGE,7
+dbilib-0.4.0rc1.dist-info/RECORD,,
