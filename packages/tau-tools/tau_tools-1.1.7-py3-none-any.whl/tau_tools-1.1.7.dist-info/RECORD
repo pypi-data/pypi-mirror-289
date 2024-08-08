@@ -1,0 +1,13 @@
+tau_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tau_tools/collect.py,sha256=LIB5NHe6i_w_TZYnWrkDV16I2WGXR8XtfsEkr31i69Q,1418
+tau_tools/courses.py,sha256=TftWwdI9DH6fgiFhA4HmBBHRiIwX2LI5SG4zR6LpufA,11957
+tau_tools/ims.py,sha256=Gqi241v9Ia-gmaVM2qp4TX7ILk3Jj2x5vMWfAagybvw,6213
+tau_tools/logging.py,sha256=Lr2euY3mnltnHBAooYswRcRjxLhcRMIC3YCQTgjTqec,794
+tau_tools/moodle.py,sha256=MCy-zb73O7MwCECFK4jI_FgFA6X1nn_OEvDWkoqVlAg,10638
+tau_tools/moodle_exams.py,sha256=QER4HlJ1p5ZC7jZxp6x-OTLz9chdL7W1n9TK7YvFeOI,3435
+tau_tools/plans.py,sha256=0vA2OvVq8cEyUUx4bQRx_XfHk_NWriz9oxdrs_ueudk,9477
+tau_tools/utilities.py,sha256=TZfgUSpmTe4qUWzfV9dytDBZkhF5NUz2fckHuHyL6Ys,1373
+tau_tools-1.1.7.dist-info/METADATA,sha256=iN0DNuAv31DXLsIvPvHjKlbyqOr7PYshGXTyzlk0nD8,4434
+tau_tools-1.1.7.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+tau_tools-1.1.7.dist-info/licenses/LICENSE.md,sha256=SJI6rPc16JCPWp645ZWFC1lW1pK7p7e1MPS1H57HvKs,2193
+tau_tools-1.1.7.dist-info/RECORD,,
