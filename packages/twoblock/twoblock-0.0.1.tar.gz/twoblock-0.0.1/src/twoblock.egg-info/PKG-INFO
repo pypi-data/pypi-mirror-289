@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: twoblock
+Version: 0.0.1
+Summary: A Scikit-Learn Compatible Library for Simultaneous Two-Block Sufficient Dimension Reduction Methods
+Home-page: https://github.com/SvenSerneels/twoblock
+Author: Sven Serneels
+Author-email: svenserneels@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.22.0
+Requires-Dist: scipy>=1.8.0
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: pandas>=1.4.0
+
+# twoblock
+Two-block simultaneous dimension reduction 
+
+A scikitlearn compatible implementation of simultaneous two-block dimension reduction as proposed in [1]. 
+
+References
+----------
+[1] Cook, R. Dennis, Liliana Forzani, and Lan Liu.
+    "Partial least squares for simultaneous reduction of response and predictor
+    vectors in regression." Journal of Multivariate Analysis 196 (2023): 105163.
