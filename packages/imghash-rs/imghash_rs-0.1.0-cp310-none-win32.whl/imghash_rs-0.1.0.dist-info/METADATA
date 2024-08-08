@@ -1,0 +1,36 @@
+Metadata-Version: 2.3
+Name: imghash-rs
+Version: 0.1.0
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+License-File: LICENSE
+Summary: Image hashing powered by Rust!
+Keywords: image,hashing
+Author-email: Yannick Alexander <yannick@alexanderdev.io>
+Requires-Python: >=3.9, <3.13
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: repository, https://github.com/yannickalex07/imghash-py
+
+# Image Hashing powered by Rust
+
+`imghash-py` is a package that contains Python bindings for the Rust crate `imghash-rs` that allows you to generate various image hashes. the following hashes are supported:
+
+* Average Hash
+* Difference Hash
+* Perceptual Hash
+
+If you want to know more about the different hashes or how they get encoded / decoded, check the documentation of [`imghash-rs`](https://github.com/YannickAlex07/imghash-rs).
+
+## Getting Started
+
+To get started add the package to your project:
+
+```shell
+pip install imghash
+```
+
+...
