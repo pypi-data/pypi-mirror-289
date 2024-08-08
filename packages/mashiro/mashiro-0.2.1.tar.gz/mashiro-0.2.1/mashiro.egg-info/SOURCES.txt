@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mashiro/__init__.py
+mashiro/__version__.py
+mashiro/core.py
+mashiro.egg-info/PKG-INFO
+mashiro.egg-info/SOURCES.txt
+mashiro.egg-info/dependency_links.txt
+mashiro.egg-info/requires.txt
+mashiro.egg-info/top_level.txt
