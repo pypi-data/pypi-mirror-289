@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: speckcn2
+Version: 0.1.4
+Summary: Estimate Cn2 from Speckle patterns using machine learning
+Author-email: Simone Ciarella <s.ciarella@esciencecenter.nl>
+License: Apache 2.0 License
+Project-URL: homepage, https://github.com/MALES-project/SpeckleCn2Profiler
+Project-URL: issues, https://github.com/MALES-project/SpeckleCn2Profiler/issues
+Project-URL: documentation, https://speckcn2.readthedocs.io
+Project-URL: changelog, https://github.com/MALES-project/SpeckleCn2Profiler/releases
+Keywords: python,machine learning,equivariant cnn,optical satelites,turbulence,laser communication
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: develop
+Provides-Extra: docs
+Provides-Extra: publishing
+License-File: LICENSE
+
+[![Python application test](https://github.com/MALES-project/SpeckleCn2Profiler/actions/workflows/test.yaml/badge.svg)](https://github.com/MALES-project/SpeckleCn2Profiler/actions/workflows/test.yaml)
+![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/SCiarella/ee30d5a40792fc1de92e9dcf0d0e092a/raw/covbadge.json)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/speckcn2)](https://pypi.org/project/speckcn2/)
+[![PyPI](https://img.shields.io/pypi/v/speckcn2)](https://pypi.org/project/speckcn2/)
+[![FAIR checklist badge](https://fairsoftwarechecklist.net/badge.svg)](https://fairsoftwarechecklist.net/v0.2?f=31&a=30110&i=21202&r=132)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11447921.svg)](https://doi.org/10.5281/zenodo.11447921)
+[![RSD](https://img.shields.io/badge/rsd-speckcn2-00a3e3.svg)](https://research-software-directory.org/software/speckcn2)
+
+![MALES banner](https://raw.githubusercontent.com/MALES-project/SpeckleCn2Profiler/main/src/speckcn2/assets/logo_on_white.png#gh-light-mode-only)
+![MALES banner](https://raw.githubusercontent.com/MALES-project/SpeckleCn2Profiler/main/src/speckcn2/assets/logo_on_black.png#gh-dark-mode-only)
+
+<!---
+![MALES banner](https://github.com/MALES-project/SpeckleCn2Profiler/blob/main/speckcn2/assets/logo_on_white.png#gh-light-mode-only)
+![MALES banner](https://github.com/MALES-project/SpeckleCn2Profiler/blob/main/speckcn2/assets/logo_on_black.png#gh-dark-mode-only)
+-->
+
+# SpeckleCn2Profiler:
+### Improving Satellite Communications with SCIDAR and Machine Learning
+
+![Graphical abstract](https://github.com/MALES-project/SpeckleCn2Profiler/blob/main/speckcn2/assets/cn2_profile.gif)
+## Overview
+
+Optical satellite communications is a growing research field with bright commercial perspectives. One of the challenges for optical links through the atmosphere is turbulence, which is also apparent by the twinkling of stars. The reduction of the quality can be calculated, but it needs the turbulence strength over the path the optical beam is running. Estimation of the turbulence strength is done at astronomic sites, but not at rural or urban sites. To be able to do this, a simple instrument is required. We want to propose to use a single star Scintillation Detection and Ranging (SCIDAR), which is an instrument that can estimate the turbulence strength, based on the observation of a single star. Here, reliable signal processing of the received images of the star is most challenging. We propose to solve this by Machine Learning.
+
+## Project Goals
+
+The primary objectives of this project are:
+
+1. **Turbulence Strength Estimation:** Develop a robust algorithm using Machine Learning to estimate turbulence strength based on SCIDAR data.
+
+2. **Signal Processing Enhancement:** Implement advanced signal processing techniques to improve the accuracy and reliability of turbulence strength calculations.
+
+3. **Adaptability to Various Sites:** Ensure the proposed solution is versatile enough to be deployed in diverse environments, including rural and urban locations.
+
+## Repository Contents
+
+This repository contains:
+
+- **Machine Learning Models:** Implementation of machine learning models tailored for turbulence strength estimation from SCIDAR data.
+
+- **Signal Processing Algorithms:** Advanced signal processing algorithms aimed at enhancing the quality of received star images.
+
+- **Dataset:** Sample datasets for training and testing the machine learning models.
+
+- **[Documentation](https://males-project.github.io/SpeckleCn2Profiler/):** In-depth documentation explaining the methodology, algorithms used, and guidelines for using the code.
+
+## Getting Started
+
+To get started with the project, follow these steps:
+
+1. **Install the package:**
+   ```bash
+   python -m pip install git+https://github.com/MALES-project/SpeckleCn2Profiler
+   ```
+while the above command works, `speckcn2` will be available on pypi as soon as its dependencies get updated.
+
+2. **Explore the Code:**
+    Dive into the codebase to understand the implementation details and customize it according to your needs.
+
+## Contribution Guidelines
+
+We welcome contributions to improve and expand the capabilities of this project. If you have ideas, bug fixes, or enhancements, please submit a pull request.
+Check out our [Contributing Guidelines](CONTRIBUTING.md#Getting-started-with-development) to get started with development.
+
+## How to cite
+
+Please consider citing this software that is published in Zenodo under the DOI [10.5281/zenodo.11447920](https://zenodo.org/records/11447920).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
