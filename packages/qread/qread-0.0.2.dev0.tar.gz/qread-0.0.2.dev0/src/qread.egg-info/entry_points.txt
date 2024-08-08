@@ -1,0 +1,2 @@
+[console_scripts]
+qread = qread.__main__:main
