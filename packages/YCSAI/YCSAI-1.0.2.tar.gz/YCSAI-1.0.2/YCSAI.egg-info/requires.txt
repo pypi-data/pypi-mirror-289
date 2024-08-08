@@ -1,0 +1,14 @@
+omegaconf
+numpy
+tqdm
+matplotlib
+requests
+pandas
+psutil
+hydra-core
+Pillow==9.5.0
+seaborn
+scipy
+torch
+torchvision
+torchaudio
