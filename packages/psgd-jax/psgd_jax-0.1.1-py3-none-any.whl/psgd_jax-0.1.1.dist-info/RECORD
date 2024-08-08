@@ -1,0 +1,11 @@
+psgd_jax/.DS_Store,sha256=jBMyhds9mgtopl6P1BWzrqKgmduFBR8p8OFETtLGpWA,6148
+psgd_jax/__init__.py,sha256=k_rrOhdLfjxkdba3UxADbA_sSRVTOMzzw4FQuEqMjmg,42
+psgd_jax/affine.py,sha256=bpH3nACmaciJf-23bpQy0RSf40FNfLXSIUOkVECHlEE,25550
+psgd_jax/low_rank_approximation.py,sha256=cI4tFc4ITe4e2qNBoXKv6pelrlqa8gaYTOlojYd-gvQ,14290
+psgd_jax/psgd_test.py,sha256=Uj5kP5GLtIgUnNfgF3QoJUzAS-QDgviLIgoMdauSI8k,7738
+psgd_jax/utils.py,sha256=yLVLMst7qx9BiQsocV9PDYXHgnNGyXPgWogXF-m4wR0,3427
+psgd_jax/xmat.py,sha256=hMTzGCbu0Ig9uV8B1eA-rfHU-7FicKi1B9lIave2ZSw,10383
+psgd_jax-0.1.1.dist-info/LICENSE,sha256=nl8bPGELnC2lwxO_gdV3p9Gs7Ghr2wOE7e-m3w-QzZQ,18656
+psgd_jax-0.1.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+psgd_jax-0.1.1.dist-info/METADATA,sha256=yyXMh0ofFGsJAeyCluvRd4lU1iGVp2PDfbiRPJocpfA,9050
+psgd_jax-0.1.1.dist-info/RECORD,,
