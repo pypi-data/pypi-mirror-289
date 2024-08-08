@@ -1,0 +1,3 @@
+[console_scripts]
+axeh=axeh.cli:app
+
