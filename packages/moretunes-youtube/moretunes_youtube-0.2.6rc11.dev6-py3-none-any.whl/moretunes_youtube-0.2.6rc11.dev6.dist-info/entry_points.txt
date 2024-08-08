@@ -1,0 +1,2 @@
+[console_scripts]
+ytmusicapi = moretunes.youtube.setup:main
