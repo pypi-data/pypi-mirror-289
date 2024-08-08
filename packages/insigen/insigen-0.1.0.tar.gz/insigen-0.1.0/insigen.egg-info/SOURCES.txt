@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+insigen.egg-info/PKG-INFO
+insigen.egg-info/SOURCES.txt
+insigen.egg-info/dependency_links.txt
+insigen.egg-info/top_level.txt
