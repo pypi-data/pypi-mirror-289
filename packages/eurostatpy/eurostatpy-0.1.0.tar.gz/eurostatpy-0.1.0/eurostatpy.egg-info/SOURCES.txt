@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+eurostatpy/__init__.py
+eurostatpy.egg-info/PKG-INFO
+eurostatpy.egg-info/SOURCES.txt
+eurostatpy.egg-info/dependency_links.txt
+eurostatpy.egg-info/requires.txt
+eurostatpy.egg-info/top_level.txt
+eurostatpy/jsonstatpy/__init__.py
+eurostatpy/jsonstatpy/collection.py
+eurostatpy/jsonstatpy/dataset.py
+eurostatpy/jsonstatpy/dimension.py
+eurostatpy/jsonstatpy/exceptions.py
+eurostatpy/jsonstatpy/schemas.py
+eurostatpy/jsonstatpy/utility.py
+eurostatpy/jsonstatpy/value.py
