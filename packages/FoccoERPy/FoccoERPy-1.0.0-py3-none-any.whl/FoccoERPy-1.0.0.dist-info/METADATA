@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: FoccoERPy
+Version: 1.0.0
+Summary: Biblioteca de funções que permitem se conectar à API do FoccoERP 
+Author-email: Gabriel Niziolek <ganiziolek@gmail.com>
+Project-URL: Homepage, https://github.com/GaNiziolek/FoccoERPy
+Project-URL: Bug Tracker, https://github.com/GaNiziolek/FoccoERPy/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-benedict ~=0.33.0
+Requires-Dist: requests ~=2.32.0
+Requires-Dist: numpy
+Requires-Dist: python-dotenv ~=1.0.0
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+
+# FoccoERPy
+Biblioteca de funções que permitem se conectar à API do FoccoERP
