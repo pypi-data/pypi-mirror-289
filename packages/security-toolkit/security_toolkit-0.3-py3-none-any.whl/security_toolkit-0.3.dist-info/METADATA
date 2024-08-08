@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: security-toolkit
+Version: 0.3
+Summary: A collection of tools for security analysis
+Author: Jonathen Cuvelier
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: requests (~=2.32.2)
+Requires-Dist: click (~=8.1.7)
+Requires-Dist: aiofiles (~=23.2.1)
+Requires-Dist: aiohttp (~=3.9.5)
+Requires-Dist: setuptools (~=70.0.0)
+
