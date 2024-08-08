@@ -1,0 +1,17 @@
+funcs_aux/__init__.py,sha256=EdwduXm7V-MraupbXZ9EXnP4zqwLwEE5hmJBbly27OE,3481
+funcs_aux/args.py,sha256=dmpiTcq4EMdqfwTlJaYTrCEdLpRsagy_KKLmTLNbc_8,4284
+funcs_aux/arrays.py,sha256=_sET7Bw6ozocaZ1WIL3kT0vSbjHcSutZGyb8NzJrbUM,1894
+funcs_aux/breeder_objects.py,sha256=P0FcUpFoeMcfKEMUOrm4wpCbzGy9KXobHYnpkKhV-XE,11092
+funcs_aux/breeder_str.py,sha256=F2XAOCuziikySEy7y4SNMNLaHq9fwgiyHbIealWTEE0,9485
+funcs_aux/iterables.py,sha256=zKsnodDykuUMLI9PFM8FS_TlxZSlZ-JXsRw78t5f7tM,5176
+funcs_aux/result_cum.py,sha256=y769OKJt6yeOLfyj4i9i2Oikmw62FjvHpVKUPpcRx_0,5124
+funcs_aux/strings.py,sha256=gVM-wFdbsvgA-LlfED5eRBKSLUSRXHLY1cuxkdeEen0,1918
+funcs_aux/valid.py,sha256=lN93TQxncdg_4YF3VvT3u8y4lMp9kR1Ijig5VZls_Jg,17242
+funcs_aux/value_explicit.py,sha256=moF0FMXnroqaSLx6k8NDpyRFBskTw4szrFfQcN7nsNs,2990
+funcs_aux/value_unit.py,sha256=AKOD2oD7wsFvnnju6iZutVR4uN9i0RRorG0FST4ZnRc,8268
+funcs_aux/value_variants.py,sha256=_7U-xhuzazSMPDPhN_8Pi7fEh0YsD04YOheA0pnG0T8,4131
+funcs_aux-0.4.16.dist-info/LICENSE,sha256=1aYUrsI8JgP7U2jnJSaksxIUGbynNUEqOQCKRBp3qNI,1180
+funcs_aux-0.4.16.dist-info/METADATA,sha256=o1oo7_fU2Ak0Rz8KEAWb_VQOMq70ntD8Ul0fVvBdhzA,3060
+funcs_aux-0.4.16.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+funcs_aux-0.4.16.dist-info/top_level.txt,sha256=wUcZwT-yuVBq71L_fYlH-VQhnue1BNlJ_Nkw1qffX1w,10
+funcs_aux-0.4.16.dist-info/RECORD,,
