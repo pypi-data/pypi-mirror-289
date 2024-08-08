@@ -1,0 +1,91 @@
+ThirdPartyNotices
+-----------------
+LearningHouseService/learninghouse-core uses third-party software or other resources that
+may be distributed under licenses different from LearningHouseService/learninghouse-core
+software.
+In the event that we overlooked to list a required notice, please bring this
+to our attention by opening an issue on:
+https://github.com/LearningHouseService/learninghouse/issues
+
+Components:
+-----------
+
+Component: Python3
+Licensor: Python Software Foundation
+Website: https://www.python.org
+License: PSF License
+
+Component: FastAPI
+Licensor: Sebastián Ramírez
+Website: https://fastapi.tiangolo.com/
+License: MIT License
+
+Component: Uvicorn
+Licensor: encode
+Website: https://www.uvicorn.org/
+License: BSD-3-Clause License
+
+Component: Pydantic
+Licensor: Pydantic Contributors
+Website: https://github.com/pydantic/pydantic
+License: MIT License
+
+Component: Pydantic-Settings
+Licensor: pydantic-settings Contributors
+Website: https://github.com/pydantic/pydantic-settings
+License: MIT License
+
+Component: Loguru
+Licensor: Loguru Contributors
+Website: https://github.com/Delgan/loguru
+License: MIT License
+
+Component: numpy
+Licensor: NumPy Developers
+Website: https://www.numpy.org/
+License: BSD-3-Clause License
+
+Component: pandas
+Licensor: Open source contributors
+Website: https://pandas.pydata.org/
+License: BSD-3-Clause License
+
+Component: scikit-learn
+Licensor: The scikit-learn developers
+Website: scikit-learn.org
+License: New BSD License
+
+Component: SwaggerUI
+Licensor: SmartBear
+Website: https://swagger.io/
+License: Apache-2.0 License
+
+Component: Parts of artwork
+Licensor: SVG Repo
+Website: https://www.svgrepo.com/
+License: CC0 License
+
+Component: Roboto Font
+Licensor: Googlefonts Team
+Website: https://fonts.google.com
+License: Apache-2.0 License
+
+Component: Angular
+Licensor: Google LLC
+Website: https://angular.io/
+License: MIT License
+
+Component: Angular Material
+Licensor: Google LLC
+Website: https://material.angular.io/
+License: MIT License
+
+Component: Angular
+Licensor: Google LLC
+Website: https://angular.io/
+License: MIT License
+
+Component: Material Icons Font
+Licensor: Googlefonts Team
+Website: https://fonts.google.com/icons
+License: Apache-2.0 License
