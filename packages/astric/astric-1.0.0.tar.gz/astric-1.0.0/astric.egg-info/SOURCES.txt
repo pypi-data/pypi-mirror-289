@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+astric/__init__.py
+astric/astric.py
+astric/loop.py
+astric/parse.py
+astric.egg-info/PKG-INFO
+astric.egg-info/SOURCES.txt
+astric.egg-info/dependency_links.txt
+astric.egg-info/entry_points.txt
+astric.egg-info/top_level.txt
