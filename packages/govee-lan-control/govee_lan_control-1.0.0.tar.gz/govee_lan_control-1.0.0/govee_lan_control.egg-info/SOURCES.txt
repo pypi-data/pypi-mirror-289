@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+govee_lan_control/__init__.py
+govee_lan_control/discover.py
+govee_lan_control/govee_lan_device.py
+govee_lan_control/udp.py
+govee_lan_control.egg-info/PKG-INFO
+govee_lan_control.egg-info/SOURCES.txt
+govee_lan_control.egg-info/dependency_links.txt
+govee_lan_control.egg-info/top_level.txt
