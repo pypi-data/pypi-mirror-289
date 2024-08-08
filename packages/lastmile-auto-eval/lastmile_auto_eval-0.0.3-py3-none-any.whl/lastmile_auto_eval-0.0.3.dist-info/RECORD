@@ -1,0 +1,10 @@
+lastmile_auto_eval/__init__.py,sha256=xrTsQDhLiW0M2LeeSUDSmSp-leZx6aLHrgrZxGBY6ug,312
+lastmile_auto_eval/api.py,sha256=YyQA4Fgm0NCqrf0Ukiw9ADUtc9bsxST8ba02IOCQlpg,7035
+lastmile_auto_eval/api_utils.py,sha256=9vQJM_PnjMctrRUayYGiq4VyPa5hFnWE7i-4nOn19YE,6549
+lastmile_auto_eval/eval_api_pb2.py,sha256=iCg7sM6PiGQso_6Q-x8R_IiM_y1NK4mBvPQqsH1BrK4,2942
+lastmile_auto_eval/eval_api_pb2.pyi,sha256=jLw1NiemItLzlVBjX6ZbU5p4pb6UO5BzD2om93RMuQc,2543
+lastmile_auto_eval/eval_api_pb2_grpc.py,sha256=ZjuhDxvGlp73n7fV34dns5jtL17VBkEylDeKGNAsTfk,5593
+lastmile_auto_eval-0.0.3.dist-info/METADATA,sha256=_6ptdKdQzJCh4_5bds_69IulI77GlLmIVpvRmlaslkA,2818
+lastmile_auto_eval-0.0.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+lastmile_auto_eval-0.0.3.dist-info/top_level.txt,sha256=weY7KgyOxGNTtEZ18QwWjw3MfmMkXFtgO_vfkKvZ-Ik,19
+lastmile_auto_eval-0.0.3.dist-info/RECORD,,
