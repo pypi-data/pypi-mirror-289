@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: yaml2toml
+Version: 1.1.0
+Summary: Convert YAML to TOML
+Home-page: https://github.com/booniepepper/yaml2toml
+Author: Justin "Boonie Pepper" Hill
+Author-email: justin@so.dang.cool
+Project-URL: Bug Tracker, https://github.com/booniepepper/yaml2toml/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+Requires-Dist: toml
+
+# yaml2toml
+
+Convert yaml files to toml files.
+
+```
+$ cat example.yml
+here
+  - we
+  - go
+
+$ yaml2toml example.yml
+
+$ cat example.toml
+here = [ "we", "go",]
+```
+
+### Install
+
+```shell
+pip install yaml2toml
+```
+
+### Etc
+
+Project: https://github.com/hiljusti/yaml2toml
+
+By: J.R. Hill
+
+License: MIT
+
+---
+
+_Note: This little script is nice for a one-off conversion. Check out [`yj`](https://github.com/sclevine/yj) for a tool with more formats, features, support, etc._
