@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+nonebot_plugin_web_bottle/__init__.py
+nonebot_plugin_web_bottle/config.py
+nonebot_plugin_web_bottle/data_deal.py
+nonebot_plugin_web_bottle/web_bottle.py
+nonebot_plugin_web_bottle.egg-info/PKG-INFO
+nonebot_plugin_web_bottle.egg-info/SOURCES.txt
+nonebot_plugin_web_bottle.egg-info/dependency_links.txt
+nonebot_plugin_web_bottle.egg-info/requires.txt
+nonebot_plugin_web_bottle.egg-info/top_level.txt
