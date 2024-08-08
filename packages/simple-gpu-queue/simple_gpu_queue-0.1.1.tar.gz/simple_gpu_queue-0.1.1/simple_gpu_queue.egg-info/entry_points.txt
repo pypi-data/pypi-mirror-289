@@ -1,0 +1,2 @@
+[console_scripts]
+simpleq_start = simple_gpu_queue.scripts:start_server
