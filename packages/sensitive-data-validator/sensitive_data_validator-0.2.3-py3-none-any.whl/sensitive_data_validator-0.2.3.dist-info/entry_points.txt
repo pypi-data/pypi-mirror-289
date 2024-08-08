@@ -1,0 +1,3 @@
+[console_scripts]
+sensitive_data_validator = sensitive_data_validator.main:main
+
