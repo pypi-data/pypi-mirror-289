@@ -1,0 +1,22 @@
+# SonarCloud report for **{{ project_name }}**
+
+- Project name: `{{ project_name }}`
+{% if branch_name %}
+- Branch name: `{{ branch_name }}`
+{% endif %}
+{% if tag_name %}
+- Tag name: `{{ tag_name }}`
+{% endif %}
+- Analysis date: {{ last_analysis_date }}
+- Analyzed commit ID: `{{ last_analysis_commit_id }}`
+
+
+## SonarCloud metrics
+
+| Metric name       | Description                                                                                          | Value                   |
+| ----------------- | ---------------------------------------------------------------------------------------------------- | ----------------------- |
+| Bugs              | A coding error that can break the code and needs to be fixed.                                        | {{ bugs }}              |
+| Code coverage     | The percentage of lines of code covered by tests.                                                    | {{ coverage }}%         |
+| Code smells       | Code that is confusing and can be difficult to maintain.                                             | {{ code_smells }}       |
+| Security hotspots | Security-sensitive code that requires manual review to assess whether or not a vulnerability exists. | {{ security_hotspots }} |
+| Vulnerabilities   | Code that can be exploited by hackers.                                                               | {{ vulnerabilities }}   |
