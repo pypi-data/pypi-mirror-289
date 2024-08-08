@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: wtok
+Version: 0.6.1
+Summary: Count and truncate whisper text based on tokens
+Home-page: https://github.com/proger/wtok
+Author: Vol Kyrylov thanks to Simon Willison
+License: Apache License, Version 2.0
+Project-URL: Issues, https://github.com/proger/wtok/issues
+Project-URL: CI, https://github.com/proger/wtok/actions
+Project-URL: Changelog, https://github.com/proger/wtok/releases
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: tiktoken
+Requires-Dist: openai-whisper
+
+# wtok: rebalance training sets for whisper
+
+[![PyPI](https://img.shields.io/pypi/v/wtok.svg)](https://pypi.org/project/wtok/)
+[![Changelog](https://img.shields.io/github/v/release/proger/wtok?include_prereleases&label=changelog)](https://github.com/proger/wtok/releases)
+[![Tests](https://github.com/proger/wtok/workflows/Test/badge.svg)](https://github.com/proger/wtok/actions?query=workflow%3ATest)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/proger/wtok/blob/master/LICENSE)
+
+Count and truncate text based on tokens one sentence at a time
+
+## Background
+
+Whisper models conditional distributions of a token given a sequence of past tokens
+
+This tool can count tokens, using OpenAI's [tiktoken](https://github.com/openai/tiktoken) library.
+
+It can also truncate text to a specified number of tokens.
+
+## Installation
+
+Install this tool using `pip`:
+```bash
+pip install wtok
+```
+
+## Development
+
+To contribute to this tool, first checkout the code. Then create a new virtual environment:
+
+```bash
+cd wtok
+python -m venv venv
+source venv/bin/activate
+```
+
+Now install for editing:
+
+```bash
+pip install -e .
+```
