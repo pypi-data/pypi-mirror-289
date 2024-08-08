@@ -1,0 +1,20 @@
+[workspace]
+members = ["crates/*", "python"]
+resolver = "2"
+
+[workspace.package]
+license = "MIT"
+edition = "2021"
+readme = "readme.md"
+version = "0.0.1"
+authors = ["Xavier Olive <git@xoolive.org>"]
+
+[profile.release]
+lto = true
+strip = true
+overflow-checks = true
+
+# The profile that 'cargo dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"

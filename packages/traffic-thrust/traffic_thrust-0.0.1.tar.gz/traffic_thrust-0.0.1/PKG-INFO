@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: traffic_thrust
+Version: 0.0.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: pandas >=2.2.0
+Requires-Dist: polars >=1.4.1
+Requires-Dist: mypy >=1.11.1 ; extra == 'dev'
+Requires-Dist: pytest >=8.3.2 ; extra == 'dev'
+Requires-Dist: ruff >=0.5.6 ; extra == 'dev'
+Provides-Extra: dev
+Summary: Python binding to trafficrs core functions (Rust version of traffic)
+Author: Xavier Olive <git@xoolive.org>
+Author-email: Xavier Olive <git@xoolive.org>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: repository, https://github.com/xoolive/traffic-rs
+
+# thrust
+
+thrust is the Python binding to the Rust version of the [traffic](https://github.com/xoolive/traffic) library. The name is a pun based on traffic and Rust, which relates well to the aviation world.
+
+In practice, thrust has not been designed to be used as is: it is supposed to be a dependency for the Python traffic library, and is imported for optimized sections of the code.
+
+Python version of traffic: https://github.com/xoolive/traffic
+(Documentation at https://traffic-viz.github.io)
+
+Rust version of traffic: https://github.com/xoolive/traffic-rs
+
