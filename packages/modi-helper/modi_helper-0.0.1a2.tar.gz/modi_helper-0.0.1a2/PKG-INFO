@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: modi-helper
+Version: 0.0.1a2
+Summary: A set of scripts and tools to help configure a MODI environment.
+Home-page: https://github.com/ucphhpc/modi-helper-scripts
+Author: Rasmus Munk
+Author-email: munk1@live.dk
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click==8.1.0
+Requires-Dist: jinja2
+Provides-Extra: dev
+Requires-Dist: black>=24.3.0; extra == "dev"
+Requires-Dist: flake8>=6.1.0; extra == "dev"
+Requires-Dist: black[jupyter]>=0.3.0; extra == "dev"
+
+===================
+modi-helper-scripts
+===================
+
+.. image:: https://readthedocs.org/projects/modi-helper-scripts/badge/?version=latest
+    :target: https://modi-helper-scripts.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+A set of helper scripts that can be used on MODI to setup environemnts and execute jobs.
