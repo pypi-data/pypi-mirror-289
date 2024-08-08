@@ -1,0 +1,12 @@
+django_http_debug/__init__.py,sha256=5ka_ue9d1DFAsiwX9HqEZhT0PvMv8rykVanHNYU1AYY,41
+django_http_debug/admin.py,sha256=znfJ-fQcC9dQLQsVKnGGtLF6jSXfVVZ1Qmd-7Am77hU,1305
+django_http_debug/middleware.py,sha256=6huJ5Q2l_xIauIZy2eXgeZQVrWLJfPz2WFq-4ckPNtU,478
+django_http_debug/models.py,sha256=nuy1hE4HXh4gtiXQ2H1BLp_DPML8GtZMaeYIesVkJTE,1245
+django_http_debug/views.py,sha256=nBezCaWXGmY6ncq55f2mvq9f6_VK6VDg5WsuuF5P8Hw,810
+django_http_debug/migrations/0001_initial.py,sha256=_b5HuzZTPe2RcHR-_RWZ_EtfXFI30rYXiQHPRDcayDs,1880
+django_http_debug/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_http_debug-0.1a0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+django_http_debug-0.1a0.dist-info/METADATA,sha256=15fxtzBedPkeMr1RmLgRcSTX960seMvHQiv3FzLIU5o,2629
+django_http_debug-0.1a0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+django_http_debug-0.1a0.dist-info/top_level.txt,sha256=Z-qEE3p96_kAVkecntu1IVc5E2HeBKr6rXQCjBcpvBM,18
+django_http_debug-0.1a0.dist-info/RECORD,,
