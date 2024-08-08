@@ -1,0 +1,3 @@
+[jac]
+graph_doc = jaclang_jaseci.plugins.graph_doc:JacPlugin
+walker_api = jaclang_jaseci.plugins.walker_api:JacPlugin
