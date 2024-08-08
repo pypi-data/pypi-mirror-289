@@ -1,0 +1,12 @@
+confiddler/__init__.py,sha256=ksJW6LjGLoC3tYkRKF1uzYV5SUw1g-7hmc01rBmE9KE,255
+confiddler/_version.py,sha256=KdLbrgd-pGomayqELKKdg0UyWDkJoQHEWfmlHi1Gi8U,497
+confiddler/core.py,sha256=rMmvkJlqFePL0mOw672fcYN6MjNuJZwsIsJphRO0O5o,21901
+confiddler/json.py,sha256=0Xd9d0ZojxCtTlrjRoS7NTf6s8wcxzJy6QnQwUkHDQs,1679
+confiddler/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+confiddler/tests/test_core.py,sha256=3PwCWkfirCjpdmrfAOSY5WGpc07HS4cPf0akhuhkGiY,7980
+confiddler/tests/test_json.py,sha256=YT1fftuoaYU-81-v51Z8UOXsdzssH15oX6J64NRUCzQ,700
+confiddler-0.1.5.dist-info/LICENSE,sha256=PF-nuCoFjWWi6X4dzAX2UI_43e3_IQtg87ELG8TTpcY,1462
+confiddler-0.1.5.dist-info/METADATA,sha256=H3xKlWBzBFLvx6QzYlKhYiXx7OTX1APzlukS_KpWZRw,371
+confiddler-0.1.5.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+confiddler-0.1.5.dist-info/top_level.txt,sha256=nWh6BoieIEtVGLzDa_QnKBScAMy2Y4WaByoO3_U9sR4,11
+confiddler-0.1.5.dist-info/RECORD,,
