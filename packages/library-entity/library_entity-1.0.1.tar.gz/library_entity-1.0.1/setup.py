@@ -1,0 +1,21 @@
+# setup.py
+from setuptools import setup, find_packages
+
+setup(
+    name='library_entity',
+    version='1.0.1',
+    packages=find_packages(),
+    install_requires=['sqlalchemy'],  # Lista de dependencias
+    author='goallteam',
+    author_email='kenan249@gmail.com',
+    description='Libreria de entidades para goallteam',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    url='https://github.com/kenan249/library-entity',  # Repositorio de GitHub u otro
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    python_requires='>=3.9',
+)
