@@ -1,0 +1,41 @@
+from .methods import (
+    StorefrontsLocalization,
+    Albums,
+    Artists,
+    Songs,
+    MusicVideos,
+    Playlists,
+    AppleMusicStations,
+    Search,
+    Ratings,
+    MusicGenres,
+    Charts,
+    Activities,
+    Curators,
+    RecordLabels,
+    Recommendations,
+    History,
+    AppleMusicAPI,
+)
+
+
+class MTAppleMusicAPI(
+    StorefrontsLocalization,
+    Albums,
+    Artists,
+    Songs,
+    MusicVideos,
+    Playlists,
+    AppleMusicStations,
+    Search,
+    Ratings,
+    MusicGenres,
+    Charts,
+    Activities,
+    Curators,
+    RecordLabels,
+    Recommendations,
+    History,
+    AppleMusicAPI,
+):
+    """Full API Object."""
