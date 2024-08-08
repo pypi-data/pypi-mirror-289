@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/csb_util/__init__.py
+src/csb_util/__main__.py
+src/csb_util/csb.py
+src/csb_util/py.typed
+src/csb_util.egg-info/PKG-INFO
+src/csb_util.egg-info/SOURCES.txt
+src/csb_util.egg-info/dependency_links.txt
+src/csb_util.egg-info/requires.txt
+src/csb_util.egg-info/top_level.txt
