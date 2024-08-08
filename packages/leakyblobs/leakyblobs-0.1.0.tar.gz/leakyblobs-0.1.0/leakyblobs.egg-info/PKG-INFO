@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: leakyblobs
+Version: 0.1.0
+Summary: Clustering leakage analysis library.
+Home-page: https://git.equancy.cloud/equancy/data-intelligence/clustering_leakage_analysis/-/tree/1_initial_dev_HF
+Author: Hady Fawal
+Author-email: hfawal@equancy.com
+License: Equancy All Rights Reserved
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: numpy>=1.26.1
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: pyvis>=0.3.2
+Requires-Dist: plotly>=5.20.0
+Requires-Dist: scipy>=1.14.0
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: setuptools>=72.1.0
