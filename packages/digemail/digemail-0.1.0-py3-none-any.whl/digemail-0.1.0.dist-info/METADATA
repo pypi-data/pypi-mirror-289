@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: digemail
+Version: 0.1.0
+Summary: Digest emails from rss
+Author-Email: reonokiy <reonokiy@gmail.com>
+License: MIT
+Requires-Python: >=3.9
+Requires-Dist: pydantic>=2.8.2
+Requires-Dist: feedparser>=6.0.11
+Requires-Dist: rich>=13.7.1
+Requires-Dist: confz>=2.0.1
+Requires-Dist: redmail>=0.6.0
+Requires-Dist: jinja2>=3.1.4
+Requires-Dist: typer>=0.12.3
+Requires-Dist: langchain-openai>=0.1.20
+Description-Content-Type: text/markdown
+
+# digemail
+
+Send digest email to your inbox. The name `digemail` comes from `digest email`.
+
+## features
+
+- customize email template
+- fetch data from rss via rsshub
+- ai features: extact keywords, translate, summarize, etc.
