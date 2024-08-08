@@ -1,0 +1,17 @@
+[project]
+name='birdwell-mapping'
+version="0.1.1rc13.dev1"
+description='file-object mapping submodule of the birdwell namespace package'
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [{name = "jcbirdwell", email = "jcbirdwell@gmail.com"}]
+classifiers = ["Development Status :: 3 - Alpha"]
+license = {file = "LICENSE"}
+requires-python = ">=3.12"
+dependencies = ['redis', 'tomlkit']
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
