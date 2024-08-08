@@ -1,0 +1,224 @@
+import os
+import logging
+import re
+import urllib.request
+import requests
+os.system("")
+
+from mkdocs.plugins import BasePlugin
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse, urljoin
+
+LOG             = logging.getLogger( "mkdocs.plugins." + __name__ )
+LOG.setLevel    ( logging.DEBUG )
+LOG.addHandler  ( logging.StreamHandler( ) )
+
+# ------------------------------------------------------------------------------------------------------------------------------------------
+#   Color ASCII
+# ------------------------------------------------------------------------------------------------------------------------------------------
+
+class clr():
+    BLACK = '\033[30m'
+    RED = '\033[31m'
+    GREEN = '\033[32m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[34m'
+    MAGENTA = '\033[35m'
+    CYAN = '\033[36m'
+    WHITE = '\033[37m'
+    UNDERLINE = '\033[4m'
+    RESET = '\033[0m'
+    GREY = '\033[90m'
+
+# ------------------------------------------------------------------------------------------------------------------------------------------
+#   Fetch metadata from url
+# ------------------------------------------------------------------------------------------------------------------------------------------
+
+class FetchURL:
+
+    # -----------------------------------------------------------------------------------------
+    #   Initialize
+    # -----------------------------------------------------------------------------------------
+
+    def __init__( self, config={} ):
+        self.html_parser    = 'html.parser'
+        self.encoding       = "utf-8"
+        self.agent          = { 'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0' }
+        self.config         = config
+        pass
+
+    # -----------------------------------------------------------------------------------------
+    #   Get Page
+    #   URLs without data should be handled in the same fashion as properly propogated sites
+    #   with valid metadata. 
+    # -----------------------------------------------------------------------------------------
+
+    def initialize( self, url ):
+        if self.config.get( 'verbose' ):
+            print(clr.MAGENTA + 'VERBOSE - ' + clr.WHITE + ' activate fetchurl->initialize()')
+
+        try:
+            opener              = urllib.request.build_opener( )
+            opener.addheaders   = [('User-agent', 'Mozilla/5.0')]
+            response            = opener.open( url )
+        except:
+            response            = ""
+
+        try:
+            encoding            = response.info( ).get_param( 'charset' )
+            soup                = BeautifulSoup( response, self.html_parser, from_encoding=encoding )
+        except:
+            soup                = BeautifulSoup( response, self.html_parser )
+            soup.prettify       ( "latin-1" )
+
+        return soup
+
+    # -----------------------------------------------------------------------------------------
+    #   Get > Title
+    # -----------------------------------------------------------------------------------------
+
+    def get_title( self, soup, title ):
+        if self.config.get( 'verbose' ):
+            print(clr.MAGENTA + 'VERBOSE - ' + clr.WHITE + ' activate fetchurl->get_title()')
+
+        if soup.findAll( "meta", property="og:title" ):
+            return soup.find( "meta", property="og:title")["content"]
+        elif soup.findAll( 'title' ):
+            return soup.find( 'title' ).string
+        else:
+            return title
+
+    # -----------------------------------------------------------------------------------------
+    #   Get > Description
+    # -----------------------------------------------------------------------------------------
+
+    def get_description( self, soup, desc, url ):
+        if self.config.get( 'verbose' ):
+            print(clr.MAGENTA + 'VERBOSE - ' + clr.WHITE + ' activate fetchurl->get_description()')
+
+        if soup.findAll( "meta", property="og:description" ):
+            return soup.find( "meta", property="og:description")["content"]
+        elif soup.findAll( 'meta', attrs={'name': 'description'} ):
+            return soup.find( 'meta', attrs={ 'name': 'description' } )["content"]
+        else:
+            return desc
+
+    # -----------------------------------------------------------------------------------------
+    #   Get > Name
+    # -----------------------------------------------------------------------------------------
+
+    def get_site_name( self, soup, name ):
+        if self.config.get( 'verbose' ):
+            print(clr.MAGENTA + 'VERBOSE - ' + clr.WHITE + ' activate fetchurl->get_site_name()')
+
+        if soup.findAll( "meta", property="og:site_name" ):
+            return soup.find( "meta", property="og:site_name")["content"]
+        elif soup.findAll( 'title' ):
+            return soup.find( 'title' ).string
+        else:
+            return name
+
+    # -----------------------------------------------------------------------------------------
+    #   Get > Image
+    # -----------------------------------------------------------------------------------------
+
+    def get_image( self, soup, image ):
+        if self.config.get( 'verbose' ):
+            print(clr.MAGENTA + 'VERBOSE - ' + clr.WHITE + ' activate fetchurl->get_image()')
+
+        if soup.findAll( "meta", property="og:image" ):
+            return soup.find( "meta", property="og:image")["content"]
+        elif soup.findAll( "meta", property="twitter:image" ):
+            return soup.find( "meta", property="twitter:image")["content"]
+        else:
+            return image
+
+    # -----------------------------------------------------------------------------------------
+    #   Get > Fav Icon
+    #
+    #   this is a very "step-by-step" manner of checking for fav icons. Just because there's
+    #   so many ways that a favicon can be added.
+    # -----------------------------------------------------------------------------------------
+
+    def get_favicon( self, soup, url, favicon, input_favicon ):
+        if self.config.get( 'verbose' ):
+            print(clr.MAGENTA + 'VERBOSE - ' + clr.WHITE + ' activate fetchurl->get_favicon()')
+
+        if input_favicon:
+            return input_favicon
+
+        lnk_favicon         = soup.find( 'link', rel='icon' ) or soup.find( 'link', rel='shortcut icon' )
+        pattern             = r"^(?P<scheme>[^:\/?#]+):(?:\/\/)?(?:(?:(?P<login>[^:]+)(?::(?P<password>[^@]+)?)?@)?(?P<host>[^@\/?#:]*)(?::(?P<port>\d+)?)?)?(?P<path>[^?#]*)(?:\?(?P<query>[^#]*))?(?:#(?P<fragment>.*))?"
+
+        if lnk_favicon:
+            if self.config.get( 'verbose' ):
+                print("\n")
+
+            url_favicon     = lnk_favicon.get( 'href' )
+            url_parsed      = urlparse( url_favicon )
+
+            if url_parsed.netloc != '':
+                return url_favicon
+            else:
+                match               = re.match( pattern, url )
+
+                url_http            = match.group( "scheme" ) or "https"
+
+                url_host            = ( match.group( "host" )[1:] if match.group( "host" ).startswith( '/' ) else match.group( "host" ) )   #   remove forward slash if 1st char
+                url_host            = url_host.rstrip( '//' ) # remove last slash
+
+                url_path            = ( match.group( "path" )[1:] if match.group( "path" ).startswith( '/' ) else match.group( "path" ) )   #   remove forward slash if 1st char
+                url_path            = url_path.rstrip( '//' ) # remove last slash
+
+                url_icon_local      = ( url_favicon[1:] if url_favicon.startswith('/') else url_favicon )   #   remove forward slash from local icon path if found
+                domain              = url_http + "://" + url_host                            #   https://domain.com
+
+                if self.config.get( 'verbose' ):
+                    LOG.debug( 'Favicon: URL HTTP ........ ' + url_http )
+                    LOG.debug( 'Favicon: URL HOST ........ ' + url_host )
+                    LOG.debug( 'Favicon: URL PATH ........ ' + url_path )
+                    LOG.debug( 'Favicon: URL ICON ........ ' + url_icon_local )
+                    LOG.debug( 'Favicon: DOMAIN .......... ' + domain )
+
+                if domain and url_icon_local:
+                    url_icon_local      = domain + "/" + url_icon_local     # create https://domain.com/ favicon.png
+                    response            = requests.get( url_icon_local, headers=self.agent, timeout=( 1, 1 ) )
+                    bSuccess            = False
+                
+                    if response.status_code == 404:
+                        bSuccess = False
+                        if self.config.get( 'verbose' ):
+                            LOG.debug( 'Favicon: 1st Try [FAIL] .. ' + url_icon_local )
+                    else:
+                        bSuccess = True
+                        if self.config.get( 'verbose' ):
+                            LOG.debug( 'Favicon: 1st Try [PASS] .. ' + url_icon_local )
+
+                    if not bSuccess:
+                        domain          = url_http + "://" + url_host + "/" + url_path       # add /path/ to end of domain
+                        url_icon_local  = domain + "/" + url_favicon
+
+                        response        = requests.get( url_icon_local, headers=self.agent, timeout=( 1, 1 ) )
+
+                        if response.status_code == 404:
+                            bSuccess = False
+                            if self.config.get( 'verbose' ):
+                                LOG.debug( 'Favicon: 2nd Try [FAIL] .. ' + url_icon_local )
+                        else:
+                            bSuccess = True
+                            if self.config.get( 'verbose' ):
+                                LOG.debug( 'Favicon: 2nd Try [PASS] .. ' + url_icon_local )
+
+                    if self.config.get( 'verbose' ):
+                        print("\n")
+
+                    if bSuccess:
+                        return url_icon_local
+                    else:
+                        return favicon
+
+                    return favicon
+                else:
+                    return favicon
+        else:
+            return favicon
