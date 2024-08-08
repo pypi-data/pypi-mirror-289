@@ -1,0 +1,3 @@
+[console_scripts]
+safe_sql=safe_sql.main:cli
+
