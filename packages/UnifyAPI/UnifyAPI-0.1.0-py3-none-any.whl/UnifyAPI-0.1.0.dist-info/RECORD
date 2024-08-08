@@ -1,0 +1,8 @@
+integrationapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+integrationapi/geolocation.py,sha256=N59wDEpSOi1ltw6_RlSqZ6pdC4CBKvd9BDVEUfuyfLQ,515
+integrationapi/payment.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+integrationapi/social_media.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+UnifyAPI-0.1.0.dist-info/METADATA,sha256=bTXGqfUFjd4jfq93FRT5n0Pv8_Jh6y9ZKdSUwX1isVE,1139
+UnifyAPI-0.1.0.dist-info/WHEEL,sha256=rWxmBtp7hEUqVLOnTaDOPpR-cZpCDkzhhcBce-Zyd5k,91
+UnifyAPI-0.1.0.dist-info/top_level.txt,sha256=sINVo2mKNbmANpitfrjrHh8V1uY-SRMpZ10wQ1NUEj8,15
+UnifyAPI-0.1.0.dist-info/RECORD,,
