@@ -1,0 +1,15 @@
+palettesnap/PaletteSnap.py,sha256=0bBZxCue7wjgFCTzlssrel-VFwxVuXeQx_UlWLiFR6k,15043
+palettesnap/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+palettesnap/cli.py,sha256=LSO6zAsWGGkMSY_FFTCoHywJSJOzejkaW3-gNniq-wk,3312
+palettesnap/colorClass.py,sha256=OIWVcsVQuucnsQ3xkbHJRqUfORqyQMQmRNkUkLvOgGI,3842
+palettesnap/colorOptimize.py,sha256=_zTNIjm3dcmr_T8FbW6S0vSw1z9MHLP1ot-UpPMvJws,4935
+palettesnap/console.py,sha256=PVYxK7so6jLnQ44TE_6layXY4TmVUjXN9XBnMz-1WsQ,125
+palettesnap/preview.py,sha256=9kEFfJ7xRgxoiSl7gp0W5AMOc9X7UehfoktrvglwIKk,3156
+palettesnap/refresh.py,sha256=RgohBJ9bfZkrBAOSmWDIcdW9rgFbcks4yw-6-mj2qZU,571
+palettesnap/setup.py,sha256=Z94RWermCaMuEQm--muXFwHo81Uz8-mZK_xeGbdEUDA,1553
+palettesnap/templating.py,sha256=dABf1HH1Bt_GFA5DX10wJWdG0dVDrOzy6T180VUSo-E,7316
+palettesnap/wallpaper.py,sha256=9fu7FPTCCezPfCSH29dIo1pb0z3p6gQ0y4tZFBNeRaM,2365
+palettesnap-0.0.1.dist-info/METADATA,sha256=Ck-3AqUzguCJ8YFrqMBe2JvxiiBWVPoRrutx8Fra1r8,11221
+palettesnap-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+palettesnap-0.0.1.dist-info/entry_points.txt,sha256=rfQKT60lo83sDAmbIkLEtbzcvkn1KdgSSrAxKj3AbsI,47
+palettesnap-0.0.1.dist-info/RECORD,,
