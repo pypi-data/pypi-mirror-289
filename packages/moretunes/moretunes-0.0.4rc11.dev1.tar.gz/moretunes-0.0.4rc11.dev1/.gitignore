@@ -1,0 +1,11 @@
+.venv
+.idea
+.birdwell
+dist
+**/dist
+venv
+**.egg-info**
+**/last_dist
+*.gz
+*.whl
+**/*.egg-info/

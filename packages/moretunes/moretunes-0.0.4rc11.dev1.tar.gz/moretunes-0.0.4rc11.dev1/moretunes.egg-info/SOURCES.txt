@@ -1,0 +1,9 @@
+.gitignore
+.gitmodules
+README.md
+pyproject.toml
+moretunes.egg-info/PKG-INFO
+moretunes.egg-info/SOURCES.txt
+moretunes.egg-info/dependency_links.txt
+moretunes.egg-info/requires.txt
+moretunes.egg-info/top_level.txt

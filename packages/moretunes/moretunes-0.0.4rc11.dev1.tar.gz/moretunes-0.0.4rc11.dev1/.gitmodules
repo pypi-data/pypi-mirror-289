@@ -1,0 +1,12 @@
+[submodule "moretunes_apple"]
+	path = moretunes_apple
+	url = https://git.brd.cx/jcbirdwell/moretunes_apple.git
+	branch = main
+[submodule "moretunes_youtube"]
+	path = moretunes_youtube
+	url = https://git.brd.cx/jcbirdwell/moretunes_youtube.git
+	branch = main
+[submodule "moretunes_spotify"]
+	path = moretunes_spotify
+	url = https://git.brd.cx/jcbirdwell/moretunes_spotify.git
+	branch = main
