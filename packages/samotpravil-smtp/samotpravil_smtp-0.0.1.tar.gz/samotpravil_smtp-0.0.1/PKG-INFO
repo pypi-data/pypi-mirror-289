@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: samotpravil_smtp
+Version: 0.0.1
+Author-email: Samotpravil <support@samotpravil.ru>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+
+# samotpravil_smtp
+
+Python client for Samotpravil SMTP API
+
+## Installation
+
+```bash
+pip install samotpravil_smtp
