@@ -1,0 +1,12 @@
+MANIFEST.in
+pyproject.toml
+setup.py
+mpiPython/__init__.py
+mpiPython/__main__.py
+mpiPython/mpiPython.py
+mpiPython.egg-info/PKG-INFO
+mpiPython.egg-info/SOURCES.txt
+mpiPython.egg-info/dependency_links.txt
+mpiPython.egg-info/requires.txt
+mpiPython.egg-info/top_level.txt
+mpiPython/lib/libcode.c
