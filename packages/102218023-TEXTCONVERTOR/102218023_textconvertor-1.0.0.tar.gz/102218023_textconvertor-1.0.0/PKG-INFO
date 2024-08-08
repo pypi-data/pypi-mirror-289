@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: 102218023_TEXTCONVERTOR
+Version: 1.0.0
+Summary: This package provides a simple tool to convert the contents of a file to uppercase.
+Home-page: 
+Author: JASHANDEEP SINGH
+Author-email: jashandeepgarry2003@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+# 102218023_TEXTCONVERTOR
+
+This package provides a simple tool to convert the contents of a file to uppercase.
+
+## Installation
+
+You can install the package via pip:
+
+
+pip install 102218023_TEXTCONVERTOR
+
+
+## Runinng
+
+After installing the package, you can use the topisi command to convert a file's contents to uppercase. The command takes two arguments: the input file and the output file.
+
+topisi input_file.txt output_file.txt

@@ -1,0 +1,9 @@
+README.md
+setup.py
+102218023_TEXTCONVERTOR.egg-info/PKG-INFO
+102218023_TEXTCONVERTOR.egg-info/SOURCES.txt
+102218023_TEXTCONVERTOR.egg-info/dependency_links.txt
+102218023_TEXTCONVERTOR.egg-info/entry_points.txt
+102218023_TEXTCONVERTOR.egg-info/top_level.txt
+uppercase/__init__.py
+uppercase/__main__.py
