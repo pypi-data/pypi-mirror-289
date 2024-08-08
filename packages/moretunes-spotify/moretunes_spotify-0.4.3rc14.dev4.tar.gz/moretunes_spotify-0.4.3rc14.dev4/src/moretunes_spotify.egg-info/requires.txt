@@ -1,0 +1,4 @@
+httpx
+requests
+pydantic
+tekore~=5.4.0
