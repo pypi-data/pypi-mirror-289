@@ -1,0 +1,6 @@
+@overload
+def kron(
+    A: spmatrix[Any, Any] | npt.ArrayLike,
+    B: spmatrix[Any, Any] | npt.ArrayLike,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_matrix[Any, Any]: ...

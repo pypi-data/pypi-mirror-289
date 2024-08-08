@@ -1,0 +1,50 @@
+@overload
+def eye(
+    m: SupportsIndex,
+    n: SupportsIndex | None,
+    k: SupportsIndex,
+    dtype: _DTypeLike[_SCT_co],
+    format: None = ...,
+) -> spmatrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def eye(
+    m: SupportsIndex,
+    n: SupportsIndex | None = ...,
+    k: SupportsIndex = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    format: None = ...,
+) -> spmatrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def eye(
+    m: tuple[SupportsIndex, SupportsIndex],
+    n: None,
+    k: SupportsIndex,
+    dtype: _DTypeLike[_SCT_co],
+    format: None = ...,
+) -> spmatrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def eye(
+    m: tuple[SupportsIndex, SupportsIndex],
+    n: None = ...,
+    k: SupportsIndex = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    format: None = ...,
+) -> spmatrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def eye(
+    m: SupportsIndex,
+    n: SupportsIndex | None = ...,
+    k: SupportsIndex = ...,
+    dtype: npt.DTypeLike = ...,
+    format: None = ...,
+) -> spmatrix[Any, Any]: ...
+@overload
+def eye(
+    m: tuple[SupportsIndex, SupportsIndex],
+    n: None = ...,
+    k: SupportsIndex = ...,
+    dtype: npt.DTypeLike = ...,
+    format: None = ...,
+) -> spmatrix[Any, Any]: ...

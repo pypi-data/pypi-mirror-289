@@ -1,0 +1,9 @@
+[project]
+name = "make-scipy-sparse-stubs"
+version = "0.1.0"
+description = "Internal package for generating scipy sparse stubs in type-scipy-sparse distribution"
+authors = [{ name = "Barak A. Katzir", email = "barakatzir@gmail.com" }]
+dependencies = []
+
+[tool.uv]
+no-build = true

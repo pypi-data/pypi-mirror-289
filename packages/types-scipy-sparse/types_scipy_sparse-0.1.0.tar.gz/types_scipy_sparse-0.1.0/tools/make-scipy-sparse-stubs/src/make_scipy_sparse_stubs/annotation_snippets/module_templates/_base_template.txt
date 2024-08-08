@@ -1,0 +1,75 @@
+from collections.abc import Iterator
+from typing import (
+    Any,
+    Literal,
+    Protocol,
+    SupportsIndex,
+    overload,
+    runtime_checkable,
+)
+from typing_extensions import Self, TypeIs
+
+import numpy as np
+from numpy import typing as npt
+
+from ._bsr import bsr_array
+from ._coo import coo_array
+from ._csc import csc_array
+from ._csr import csr_array
+from ._dia import dia_array
+from ._dok import dok_array
+from ._lil import lil_array
+from ._matrix import spmatrix
+from .typing import (
+    _SCT,
+    SparseArray,
+    _ArrayType,
+    _CastingKind,
+    _DType_co,
+    _DTypeLike,
+    _Formats,
+    _NumberLike_co,
+    _OrderType,
+    _SCT_uifcO,
+    _ShapeAnno,
+    _ShapeLike,
+)
+
+__all__ = [
+    "isspmatrix",
+    "issparse",
+    "sparray",
+    "SparseWarning",
+    "SparseEfficiencyWarning",
+]
+
+MAXPRINT: int
+
+class SparseWarning(Warning): ...
+class SparseFormatWarning(SparseWarning): ...
+class SparseEfficiencyWarning(SparseWarning): ...
+
+# Although sparray is not a Protocol, I hint it as such such that if
+# subclassed it is clear that the methods and attributes are meant to be
+# implemented. All methods and attributes are as in the private base class
+# _spbase (except for the missing `def __init__`)
+@runtime_checkable
+class sparray(Protocol[_ShapeAnno, _DType_co]):
+{cls_body}
+    # sparray format can be any value of its subclasses, which I leave as str
+    @property
+    def format(self) -> str: ...
+
+    ###########################################################################
+    # dunder methods that are different in sparray and spmatrix
+    ###########################################################################
+    def __mul__(
+        self, other: npt.NDArray[Any] | SparseArray[Any]
+    ) -> npt.NDArray[Any] | SparseArray[Any]: ...
+    def __rmul__(
+        self, other: npt.NDArray[Any] | SparseArray[Any]
+    ) -> npt.NDArray[Any] | SparseArray[Any]: ...
+    def __pow__(self, n: _NumberLike_co) -> sparray[_ShapeAnno, np.dtype[Any]]: ...
+
+def issparse(x: Any) -> TypeIs[SparseArray[Any]]: ...
+def isspmatrix(x: Any) -> TypeIs[spmatrix[Any, Any]]: ...

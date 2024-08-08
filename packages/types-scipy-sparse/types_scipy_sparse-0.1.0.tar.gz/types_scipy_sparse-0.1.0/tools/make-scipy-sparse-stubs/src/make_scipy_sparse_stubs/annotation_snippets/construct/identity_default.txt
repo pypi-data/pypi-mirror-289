@@ -1,0 +1,12 @@
+@overload
+def identity(
+    n: SupportsIndex,
+    dtype: _DTypeLike[_SCT_co],
+    format: None = ...,
+) -> dia_array[Any, np.dtype[_SCT_co]]: ...
+@overload
+def identity(
+    n: SupportsIndex,
+    dtype: npt.DTypeLike = ...,
+    format: None = ...,
+) -> dia_array[Any, Any]: ...

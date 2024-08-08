@@ -1,0 +1,111 @@
+[project]
+name = "types-scipy-sparse"
+version = "0.1.0"
+description = "Type hints for scipy sparse module"
+authors = [{ name = "Barak A. Katzir", email = "barakatzir@gmail.com" }]
+requires-python = ">=3.10"
+keywords = ["scipy", "sparse", "stubs", "type hint"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Stubs Only",
+]
+readme = "README.md"
+dependencies = [
+    "numpy >=1.23.5,<2",
+    "typing-extensions >=4.12",
+    "scipy >=1.14.0",
+]
+license = { file = "LICENSE" }
+
+[project.urls]
+homepage = "https://github.com/BarakKatzir/types-scipy-sparse"
+Repository = "https://github.com/BarakKatzir/types-scipy-sparse"
+source = "https://github.com/BarakKatzir/types-scipy-sparse"
+download = "https://github.com/BarakKatzir/types-scipy-sparse/releases"
+tracker = "https://github.com/BarakKatzir/types-scipy-sparse/issues"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest >=8,<9",
+    "mypy >=1.11,<2",
+    "ruff >=0.5,<0.6",
+    "tox-uv >=1,<2",
+    "tox >=4,<5",
+    "uv ==0.2.33",
+    "make-scipy-sparse-stubs ==0.1.0",
+]
+
+[tool.uv.sources]
+make-scipy-sparse-stubs = { workspace = true }
+
+[tool.uv.workspace]
+members = ["tools/make-scipy-sparse-stubs"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = ["*"]
+exclude = ["/.github/"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scipy-stubs"]
+
+[tool.hatch.envs.default]
+installer = "uv"
+
+[tool.hatch.envs.hatch-uv]
+dependencies = ["uv ==0.2.33"]
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "ICN001", "W292", "I001", "PYI"]
+ignore = ["PYI034"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["tests", "scipy-stubs", "scripts"]
+extra-standard-library = ["typing_extensions"]
+
+[tool.ruff.lint.flake8-import-conventions.aliases]
+numpy = "np"
+
+[tool.ruff.lint.per-file-ignores]
+# ignore undefined name reveal_type in test files
+# ignore line-too-long as tests require annotations inline to work
+"tests/reveal/*" = ["F821", "E501"]
+# common typevars and typealiases in stubs
+"src/scipy-stubs/sparse/typing.pyi" = ["PYI018", "PYI047"]
+# allow star imports in init
+"src/scipy-stubs/sparse/__init__.pyi" = ["F403", "F405"]
+
+[tool.mypy]
+disallow_any_unimported = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+warn_unused_ignores = true
+warn_return_any = true
+check_untyped_defs = true
+strict_equality = true
+extra_checks = true
+warn_unused_configs = true
+warn_redundant_casts = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+implicit_reexport = true
+
+[tool.pytest]
+minversion = 8
+testpaths = ["tests"]
+python_files = 'test*.py'

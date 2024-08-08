@@ -1,0 +1,20 @@
+@overload
+def kron(
+    A: sparray[Any, Any],
+    B: SparseArray[Any] | npt.ArrayLike,
+    format: None = ...,
+) -> bsr_array[Any, Any] | coo_array[Any, Any]: ...
+@overload
+def kron(
+    A: SparseArray[Any] | npt.ArrayLike,
+    B: sparray[Any, Any],
+    format: None = ...,
+) -> bsr_array[Any, Any] | coo_array[Any, Any]: ...
+{sparray_overloads}
+@overload
+def kron(
+    A: spmatrix[Any, Any] | npt.ArrayLike,
+    B: spmatrix[Any, Any] | npt.ArrayLike,
+    format: None = ...,
+) -> bsr_matrix[Any, Any] | coo_matrix[Any, Any]: ...
+{spmatrix_overloads}

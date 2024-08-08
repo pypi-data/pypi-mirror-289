@@ -1,0 +1,55 @@
+from collections.abc import Sequence
+from typing import (
+    TYPE_CHECKING,
+    Any,
+    Literal,
+    SupportsFloat,
+    SupportsIndex,
+    SupportsInt,
+    overload,
+)
+
+import numpy as np
+import numpy.typing as npt
+
+from ._base import sparray
+from ._bsr import bsr_array, bsr_matrix
+from ._coo import coo_array, coo_matrix
+from ._csc import csc_array, csc_matrix
+from ._csr import csr_array, csr_matrix
+from ._dia import dia_array, dia_matrix
+from ._dok import dok_array, dok_matrix
+from ._lil import lil_array, lil_matrix
+from ._matrix import spmatrix
+
+if TYPE_CHECKING:
+    from .typing import (
+        DataRVsType,
+        DataSamplerType,
+        SparseArray,
+        _ArrayLike1DIndex,
+        _DTypeLike,
+        _Formats,
+        _SCT_co,
+    )
+
+__all__ = [
+    "spdiags",
+    "eye",
+    "identity",
+    "kron",
+    "kronsum",
+    "hstack",
+    "vstack",
+    "bmat",
+    "rand",
+    "random",
+    "diags",
+    "block_diag",
+    "diags_array",
+    "block_array",
+    "eye_array",
+    "random_array",
+]
+
+{body}

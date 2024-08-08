@@ -1,0 +1,36 @@
+@overload
+def eye_array(
+    m: SupportsIndex,
+    n: SupportsIndex | None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    k: SupportsIndex = ...,
+    format: Literal["{_Spec_Format}"]{_Opt_None},
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]]: ...
+@overload
+def eye_array(
+    m: tuple[SupportsIndex, SupportsIndex],
+    n: None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    k: SupportsIndex = ...,
+    format: Literal["{_Spec_Format}"]{_Opt_None},
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]]: ...
+@overload
+def eye_array(
+    m: SupportsIndex,
+    n: SupportsIndex | None = ...,
+    *,
+    k: SupportsIndex = ...,
+    dtype: npt.DTypeLike = ...,
+    format: Literal["{_Spec_Format}"]{_Opt_None},
+) -> {_Spec_Format}_array[Any, Any]: ...
+@overload
+def eye_array(
+    m: tuple[SupportsIndex, SupportsIndex],
+    n: None = ...,
+    *,
+    k: SupportsIndex = ...,
+    dtype: npt.DTypeLike = ...,
+    format: Literal["{_Spec_Format}"]{_Opt_None},
+) -> {_Spec_Format}_array[Any, Any]: ...

@@ -1,0 +1,12 @@
+@overload
+def kron(
+    A: sparray[Any, Any],
+    B: SparseArray[Any] | npt.ArrayLike,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_array[Any, Any]: ...
+@overload
+def kron(
+    A: SparseArray[Any] | npt.ArrayLike,
+    B: sparray[Any, Any],
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_array[Any, Any]: ...

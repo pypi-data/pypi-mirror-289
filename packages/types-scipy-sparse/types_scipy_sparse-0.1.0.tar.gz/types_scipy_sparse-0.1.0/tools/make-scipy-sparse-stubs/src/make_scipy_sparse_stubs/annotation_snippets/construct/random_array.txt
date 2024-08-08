@@ -1,0 +1,24 @@
+@overload
+def random_array(
+    shape: SupportsIndex | tuple[SupportsIndex, SupportsIndex],
+    *,
+    density: SupportsFloat = ...,
+    format: Literal["{_Spec_Format}"]{_Opt_None},
+    dtype: _DTypeLike[_SCT_co],
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_sampler: DataSamplerType | None = ...,
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]]: ...
+@overload
+def random_array(
+    shape: SupportsIndex | tuple[SupportsIndex, SupportsIndex],
+    *,
+    density: SupportsFloat = ...,
+    format: Literal["{_Spec_Format}"]{_Opt_None},
+    dtype: npt.DTypeLike | None = ...,
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_sampler: DataSamplerType | None = ...,
+) -> {_Spec_Format}_array[Any, Any]: ...

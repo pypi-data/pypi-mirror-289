@@ -1,0 +1,8 @@
+scipy.sparse.*sparray.*
+scipy.sparse.*spmatrix.*
+scipy.sparse.tests
+scipy.sparse.tests.*
+scipy.sparse.typing
+scipy.sparse.linalg.*
+scipy.sparse.csgraph.*
+scipy.sparse.coo.upcast

@@ -1,0 +1,56 @@
+@overload
+def bmat(
+    blocks: (
+        Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]]
+    ),
+    format: None,
+    dtype: _DTypeLike[_SCT_co],
+) -> spmatrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def bmat(
+    blocks: (
+        Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]]
+    ),
+    format: None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+) -> spmatrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def bmat(
+    blocks: (
+        Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]]
+    ),
+    format: None = ...,
+    dtype: npt.DTypeLike | None = ...,
+) -> spmatrix[Any, Any]: ...
+@overload
+def bmat(
+    blocks: (
+        Sequence[SparseArray[Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[SparseArray[Any] | npt.NDArray[Any] | None]]
+    ),
+    format: None,
+    dtype: _DTypeLike[_SCT_co],
+) -> SparseArray[_SCT_co]: ...
+@overload
+def bmat(
+    blocks: (
+        Sequence[SparseArray[Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[SparseArray[Any] | npt.NDArray[Any] | None]]
+    ),
+    format: None = ...,
+    *,
+    dtype: np.dtype[_SCT_co],
+) -> SparseArray[_SCT_co]: ...
+@overload
+def bmat(
+    blocks: (
+        Sequence[SparseArray[Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[SparseArray[Any] | npt.NDArray[Any] | None]]
+    ),
+    format: None = ...,
+    dtype: npt.DTypeLike | None = ...,
+) -> SparseArray[Any]: ...

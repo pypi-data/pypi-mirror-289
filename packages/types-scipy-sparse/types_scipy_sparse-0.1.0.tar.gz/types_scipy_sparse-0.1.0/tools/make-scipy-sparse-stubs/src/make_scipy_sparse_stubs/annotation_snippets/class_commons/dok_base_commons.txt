@@ -1,0 +1,115 @@
+###########################################################################
+# common methods from _dok_base
+###########################################################################
+dtype: _DType_co
+@property
+def format(self) -> Literal["dok"]: ...
+
+# input is sparse array/matrix
+@overload
+def __init__(
+    self,
+    arg1: sparray[Any, _DType_co] | spmatrix[Any, _DType_co],
+    shape: _ShapeLike | None = ...,
+    dtype: None = ...,
+    copy: bool = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None = ...,
+    *,
+    dtype: npt.DTypeLike,
+    copy: bool = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None,
+    dtype: npt.DTypeLike,
+    copy: bool = ...,
+) -> None: ...
+# input is shape and dtype to init empty sparse
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: tuple[SupportsIndex] | tuple[SupportsIndex, SupportsIndex],
+    *,
+    dtype: _DTypeLike[_SCT_co],
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: tuple[SupportsIndex] | tuple[SupportsIndex, SupportsIndex],
+    *,
+    dtype: npt.DTypeLike | None = ...,
+) -> None: ...
+# input is array
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: npt.NDArray[_SCT_co],
+    *,
+    dtype: None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: npt.ArrayLike,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: npt.ArrayLike,
+    *,
+    dtype: npt.DTypeLike | None = ...,
+) -> None: ...
+def conjtransp(self) -> Self: ...
+
+# removed dict methods
+def update(self, val: Never) -> NoReturn: ...  # type: ignore[override]
+
+# modified dict methods:
+@overload
+def pop(self, key: Sequence[SupportsIndex], /) -> Any: ...
+@overload
+def pop(self, key: Sequence[SupportsIndex], default: Any, /) -> Any: ...
+@overload  # type: ignore[override]
+@classmethod
+def fromkeys(
+    cls, iterable: Iterable[Sequence[SupportsIndex]], value: _SCT, /
+) -> {_Self_Base}[Any, np.dtype[_SCT]]: ...
+@overload
+@classmethod
+def fromkeys(
+    cls, iterable: Iterable[Sequence[SupportsIndex]], value: Any = ..., /
+) -> Self: ...
+@overload  # type: ignore[override]
+def get(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    key: Sequence[SupportsIndex],
+    default: float = ...,
+) -> _SCT_co: ...
+@overload
+def get(self, key: Sequence[SupportsIndex], default: float = ...) -> Any: ...

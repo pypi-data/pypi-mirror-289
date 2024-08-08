@@ -1,0 +1,179 @@
+###########################################################################
+# common methods from _bsr_base
+###########################################################################
+@property
+def format(self) -> Literal["bsr"]: ...
+
+# input is sparse array/matrix
+@overload
+def __init__(
+    self,
+    arg1: sparray[Any, _DType_co] | spmatrix[Any, _DType_co],
+    shape: _ShapeLike | None = ...,
+    dtype: None = ...,
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None = ...,
+    *,
+    dtype: npt.DTypeLike,
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None,
+    dtype: npt.DTypeLike,
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+# input is shape and dtype to init empty sparse
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: tuple[SupportsIndex] | tuple[SupportsIndex, SupportsIndex],
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: tuple[SupportsIndex] | tuple[SupportsIndex, SupportsIndex],
+    *,
+    dtype: npt.DTypeLike | None = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+# input is data and indices
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: tuple[npt.NDArray[_SCT_co], tuple[_ArrayLike1DIndex, _ArrayLike1DIndex]],
+    shape: _ShapeLike | None = ...,
+    dtype: None = ...,
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: tuple[npt.ArrayLike, tuple[_ArrayLike1DIndex, _ArrayLike1DIndex]],
+    shape: _ShapeLike | None,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: tuple[npt.ArrayLike, tuple[_ArrayLike1DIndex, _ArrayLike1DIndex]],
+    shape: _ShapeLike | None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: tuple[npt.ArrayLike, tuple[_ArrayLike1DIndex, _ArrayLike1DIndex]],
+    shape: _ShapeLike | None = ...,
+    dtype: npt.DTypeLike | None = ...,
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+# input is data, indices, indptr
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: tuple[npt.NDArray[_SCT_co], _ArrayLike1DIndex, _ArrayLike1DIndex],
+    shape: _ShapeLike | None = ...,
+    dtype: None = ...,
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: tuple[npt.ArrayLike, _ArrayLike1DIndex, _ArrayLike1DIndex],
+    shape: _ShapeLike | None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: tuple[npt.ArrayLike, _ArrayLike1DIndex, _ArrayLike1DIndex],
+    shape: _ShapeLike | None,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: tuple[npt.ArrayLike, _ArrayLike1DIndex, _ArrayLike1DIndex],
+    shape: _ShapeLike | None = ...,
+    dtype: npt.DTypeLike | None = ...,
+    copy: bool = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+# input is array
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: npt.NDArray[_SCT_co],
+    *,
+    dtype: None = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: npt.ArrayLike,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: npt.ArrayLike,
+    *,
+    dtype: npt.DTypeLike | None = ...,
+    blocksize: tuple[SupportsIndex, SupportsIndex] | None = ...,
+) -> None: ...
+@property
+def blocksize(self) -> tuple[int, ...]: ...
+# These are not yet implemented:
+def __getitem__(self, key: Never) -> NoReturn: ...  # type: ignore[override]
+def __setitem__(  # type: ignore[override]
+    self, key: Never, val: Any
+) -> NoReturn: ...

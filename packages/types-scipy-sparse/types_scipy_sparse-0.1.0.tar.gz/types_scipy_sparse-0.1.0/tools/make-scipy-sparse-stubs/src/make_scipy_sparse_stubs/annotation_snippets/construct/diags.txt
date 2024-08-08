@@ -1,0 +1,51 @@
+@overload
+def diags(
+    diagonals: npt.NDArray[_SCT_co],
+    offsets: _ArrayLike1DIndex | SupportsIndex = ...,
+    shape: None | tuple[SupportsIndex, SupportsIndex] = ...,
+    *,
+    format: Literal["{_Spec_Format}"],
+    dtype: None = ...,
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def diags(
+    diagonals: npt.NDArray[_SCT_co],
+    offsets: _ArrayLike1DIndex | SupportsIndex,
+    shape: None | tuple[SupportsIndex, SupportsIndex],
+    format: Literal["{_Spec_Format}"],
+    dtype: None = ...,
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def diags(
+    diagonals: npt.ArrayLike,
+    offsets: _ArrayLike1DIndex | SupportsIndex,
+    shape: None | tuple[SupportsIndex, SupportsIndex],
+    format: Literal["{_Spec_Format}"],
+    dtype: _DTypeLike[_SCT_co] = ...,
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def diags(
+    diagonals: npt.ArrayLike,
+    offsets: _ArrayLike1DIndex | SupportsIndex = ...,
+    shape: None | tuple[SupportsIndex, SupportsIndex] = ...,
+    *,
+    format: Literal["{_Spec_Format}"],
+    dtype: _DTypeLike[_SCT_co] = ...,
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def diags(
+    diagonals: npt.ArrayLike,
+    offsets: _ArrayLike1DIndex | SupportsIndex,
+    shape: None | tuple[SupportsIndex, SupportsIndex],
+    format: Literal["{_Spec_Format}"],
+    dtype: npt.DTypeLike | None = ...,
+) -> {_Spec_Format}_matrix[Any, Any]: ...
+@overload
+def diags(
+    diagonals: npt.ArrayLike,
+    offsets: _ArrayLike1DIndex | SupportsIndex = ...,
+    shape: None | tuple[SupportsIndex, SupportsIndex] = ...,
+    *,
+    format: Literal["{_Spec_Format}"],
+    dtype: npt.DTypeLike | None = ...,
+) -> {_Spec_Format}_matrix[Any, Any]: ...

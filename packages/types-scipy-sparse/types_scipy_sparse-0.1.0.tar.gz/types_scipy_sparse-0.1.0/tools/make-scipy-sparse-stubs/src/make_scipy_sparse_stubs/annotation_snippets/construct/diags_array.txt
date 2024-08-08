@@ -1,0 +1,30 @@
+@overload
+def diags_array(
+    diagonals: npt.NDArray[_SCT_co],
+    /,
+    *,
+    offsets: _ArrayLike1DIndex | SupportsIndex = ...,
+    shape: None | tuple[SupportsIndex, SupportsIndex] = ...,
+    format: Literal["{_Spec_Format}"]{_Opt_None},
+    dtype: None = ...,
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]]: ...
+@overload
+def diags_array(
+    diagonals: npt.ArrayLike,
+    /,
+    *,
+    offsets: _ArrayLike1DIndex | SupportsIndex = ...,
+    shape: None | tuple[SupportsIndex, SupportsIndex] = ...,
+    format: Literal["{_Spec_Format}"]{_Opt_None},
+    dtype: _DTypeLike[_SCT_co] = ...,
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]]: ...
+@overload
+def diags_array(
+    diagonals: npt.ArrayLike,
+    /,
+    *,
+    offsets: _ArrayLike1DIndex | SupportsIndex = ...,
+    shape: None | tuple[SupportsIndex, SupportsIndex] = ...,
+    format: Literal["{_Spec_Format}"]{_Opt_None},
+    dtype: npt.DTypeLike | None = ...,
+) -> {_Spec_Format}_array[Any, Any]: ...

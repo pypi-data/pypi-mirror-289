@@ -1,0 +1,40 @@
+@overload
+def block_array(
+    blocks: (
+        Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]]
+    ),
+    *,
+    format: Literal["{_Spec_Format}"],
+    dtype: _DTypeLike[_SCT_co],
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def block_array(
+    blocks: (
+        Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[spmatrix[Any, Any] | npt.NDArray[Any] | None]]
+    ),
+    *,
+    format: Literal["{_Spec_Format}"],
+    dtype: npt.DTypeLike | None = ...,
+) -> {_Spec_Format}_matrix[Any, Any]: ...
+@overload
+def block_array(
+    blocks: (
+        Sequence[SparseArray[Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[SparseArray[Any] | npt.NDArray[Any] | None]]
+    ),
+    *,
+    format: Literal["{_Spec_Format}"],
+    dtype: _DTypeLike[_SCT_co],
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]] | {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def block_array(
+    blocks: (
+        Sequence[SparseArray[Any] | npt.NDArray[Any] | None]
+        | Sequence[Sequence[SparseArray[Any] | npt.NDArray[Any] | None]]
+    ),
+    *,
+    format: Literal["{_Spec_Format}"],
+    dtype: npt.DTypeLike | None = ...,
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]] | {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...

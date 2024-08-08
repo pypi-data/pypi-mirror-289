@@ -1,0 +1,50 @@
+@overload
+def random(
+    m: SupportsIndex,
+    n: SupportsIndex | None,
+    density: SupportsFloat,
+    format: Literal["{_Spec_Format}"],
+    dtype: _DTypeLike[_SCT_co],
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_rvs: DataRVsType | None = ...,
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def random(
+    m: SupportsIndex,
+    n: SupportsIndex | None,
+    density: SupportsFloat = ...,
+    *,
+    format: Literal["{_Spec_Format}"],
+    dtype: _DTypeLike[_SCT_co],
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_rvs: DataRVsType | None = ...,
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def random(
+    m: SupportsIndex,
+    n: SupportsIndex | None,
+    density: SupportsFloat,
+    format: Literal["{_Spec_Format}"],
+    dtype: npt.DTypeLike | None = ...,
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_rvs: DataRVsType | None = ...,
+) -> {_Spec_Format}_matrix[Any, Any]: ...
+@overload
+def random(
+    m: SupportsIndex,
+    n: SupportsIndex | None,
+    density: SupportsFloat = ...,
+    *,
+    format: Literal["{_Spec_Format}"],
+    dtype: npt.DTypeLike | None = ...,
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_rvs: DataRVsType | None = ...,
+) -> {_Spec_Format}_matrix[Any, Any]: ...

@@ -1,0 +1,48 @@
+from collections.abc import Iterator
+from typing import Any, Literal, SupportsIndex, overload
+from typing_extensions import Self, TypeIs
+
+import numpy as np
+import numpy.typing as npt
+
+from ._base import sparray
+from ._bsr import bsr_array, bsr_matrix
+from ._coo import coo_array, coo_matrix
+from ._csr import csr_array, csr_matrix
+from ._dia import dia_array, dia_matrix
+from ._dok import dok_array, dok_matrix
+from ._index import IndexMixin
+from ._lil import lil_array, lil_matrix
+from ._matrix import spmatrix
+from .typing import (
+    _SCT,
+    SparseArray,
+    _ArrayLike1DDual,
+    _ArrayLike1DIndex,
+    _ArrayType,
+    _BoolLike_co,
+    _CastingKind,
+    _DType_co,
+    _DTypeLike,
+    _Formats,
+    _NumberLike_co,
+    _OrderType,
+    _SCT_co,
+    _SCT_uifcO,
+    _ShapeAnno,
+    _ShapeLike,
+)
+
+__all__ = ["csc_array", "csc_matrix", "isspmatrix_csc"]
+
+def isspmatrix_csc(x: Any) -> TypeIs[csc_matrix[Any, Any]]: ...
+
+class csc_array(sparray[_ShapeAnno, _DType_co], IndexMixin):
+{array_body}
+    @property
+    def format(self) -> Literal["csc"]: ...
+
+class csc_matrix(spmatrix[_ShapeAnno, _DType_co], IndexMixin):
+{matrix_body}
+    @property
+    def format(self) -> Literal["csc"]: ...

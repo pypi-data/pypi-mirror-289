@@ -1,0 +1,49 @@
+from collections.abc import Iterator, Sequence
+from typing import Any, Literal, SupportsIndex, overload
+from typing_extensions import Self, TypeIs
+
+import numpy as np
+import numpy.typing as npt
+
+from ._base import sparray
+from ._bsr import bsr_array, bsr_matrix
+from ._csc import csc_array, csc_matrix
+from ._csr import csr_array, csr_matrix
+from ._dia import dia_array, dia_matrix
+from ._dok import dok_array, dok_matrix
+from ._lil import lil_array, lil_matrix
+from ._matrix import spmatrix
+from .typing import (
+    _SCT,
+    SparseArray,
+    _ArrayLike1DDual,
+    _ArrayLike1DIndex,
+    _ArrayLikeInt_co,
+    _ArrayType,
+    _CastingKind,
+    _DType_co,
+    _DTypeLike,
+    _Formats,
+    _NumberLike_co,
+    _OrderType,
+    _SCT_co,
+    _SCT_uifcO,
+    _ShapeAnno,
+    _ShapeLike,
+)
+
+__all__ = ["coo_array", "coo_matrix", "isspmatrix_coo"]
+
+def isspmatrix_coo(x: Any) -> TypeIs[coo_matrix[Any, Any]]: ...
+
+class coo_array(sparray[_ShapeAnno, _DType_co]):
+{array_body}
+
+class coo_matrix(spmatrix[_ShapeAnno, _DType_co]):
+{matrix_body}
+
+def _ravel_coords(
+    coords: _ArrayLikeInt_co,
+    shape: Sequence[SupportsIndex],
+    order: _OrderType = ...,
+) -> npt.NDArray[np.int_]: ...

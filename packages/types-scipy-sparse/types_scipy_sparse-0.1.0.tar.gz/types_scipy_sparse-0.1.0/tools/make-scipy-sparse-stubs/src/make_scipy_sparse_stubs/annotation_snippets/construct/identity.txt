@@ -1,0 +1,19 @@
+@overload
+def identity(
+    n: SupportsIndex,
+    dtype: _DTypeLike[_SCT_co],
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]]: ...
+@overload
+def identity(
+    n: SupportsIndex,
+    dtype: npt.DTypeLike,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_array[Any, Any]: ...
+@overload
+def identity(
+    n: SupportsIndex,
+    dtype: npt.DTypeLike = ...,
+    *,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_array[Any, Any]: ...

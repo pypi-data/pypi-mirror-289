@@ -1,0 +1,50 @@
+@overload
+def random(
+    m: SupportsIndex,
+    n: SupportsIndex | None,
+    density: SupportsFloat,
+    format: Literal["coo"] | None,
+    dtype: _DTypeLike[_SCT_co],
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_rvs: DataRVsType | None = ...,
+) -> coo_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def random(
+    m: SupportsIndex,
+    n: SupportsIndex | None,
+    density: SupportsFloat = ...,
+    format: Literal["coo"] | None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_rvs: DataRVsType | None = ...,
+) -> coo_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def random(
+    m: SupportsIndex,
+    n: SupportsIndex | None,
+    density: SupportsFloat,
+    format: Literal["coo"] | None,
+    dtype: npt.DTypeLike | None = ...,
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_rvs: DataRVsType | None = ...,
+) -> coo_matrix[Any, Any]: ...
+@overload
+def random(
+    m: SupportsIndex,
+    n: SupportsIndex | None,
+    density: SupportsFloat = ...,
+    format: Literal["coo"] | None = ...,
+    *,
+    dtype: npt.DTypeLike | None = ...,
+    random_state: (
+        np.random.RandomState | np.random.Generator | SupportsInt | None
+    ) = ...,
+    data_rvs: DataRVsType | None = ...,
+) -> coo_matrix[Any, Any]: ...

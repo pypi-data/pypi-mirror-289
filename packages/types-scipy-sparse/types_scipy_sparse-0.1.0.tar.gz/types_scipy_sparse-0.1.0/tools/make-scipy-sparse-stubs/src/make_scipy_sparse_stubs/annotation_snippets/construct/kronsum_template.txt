@@ -1,0 +1,20 @@
+@overload
+def kronsum(
+    A: sparray[Any, Any],
+    B: SparseArray[Any] | npt.ArrayLike,
+    format: None = ...,
+) -> coo_array[Any, Any]: ...
+@overload
+def kronsum(
+    A: SparseArray[Any] | npt.ArrayLike,
+    B: sparray[Any, Any],
+    format: None = ...,
+) -> coo_array[Any, Any]: ...
+{sparray_overloads}
+@overload
+def kronsum(
+    A: spmatrix[Any, Any] | npt.ArrayLike,
+    B: spmatrix[Any, Any] | npt.ArrayLike,
+    format: None = ...,
+) -> coo_matrix[Any, Any]: ...
+{spmatrix_overloads}

@@ -1,0 +1,92 @@
+###########################################################################
+# common methods from _lil_base
+###########################################################################
+dtype: _DType_co
+rows: npt.NDArray[np.object_]  # ndarray of lists
+data: np.ndarray[Any, _DType_co]
+@property
+def format(self) -> Literal["lil"]: ...
+
+# input is sparse array/matrix
+@overload
+def __init__(
+    self,
+    arg1: sparray[Any, _DType_co] | spmatrix[Any, _DType_co],
+    shape: _ShapeLike | None = ...,
+    dtype: None = ...,
+    copy: bool = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None,
+    dtype: _DTypeLike[_SCT_co],
+    copy: bool = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None = ...,
+    *,
+    dtype: npt.DTypeLike,
+    copy: bool = ...,
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: sparray[Any, Any] | spmatrix[Any, Any],
+    shape: _ShapeLike | None,
+    dtype: npt.DTypeLike,
+    copy: bool = ...,
+) -> None: ...
+# input is shape and dtype to init empty sparse
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: tuple[SupportsIndex] | tuple[SupportsIndex, SupportsIndex],
+    *,
+    dtype: _DTypeLike[_SCT_co],
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: tuple[SupportsIndex] | tuple[SupportsIndex, SupportsIndex],
+    *,
+    dtype: npt.DTypeLike | None = ...,
+) -> None: ...
+# input is array
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: npt.NDArray[_SCT_co],
+    *,
+    dtype: None = ...,
+) -> None: ...
+@overload
+def __init__(
+    self: {_Self_Base}[Any, np.dtype[_SCT_co]],
+    arg1: npt.ArrayLike,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+) -> None: ...
+@overload
+def __init__(
+    self,
+    arg1: npt.ArrayLike,
+    *,
+    dtype: npt.DTypeLike | None = ...,
+) -> None: ...
+# TODO: i can be any advanced indexing on 1D array
+def getrowview(self, i: SupportsIndex) -> Self: ...
+def getrow(self, i: SupportsIndex) -> Self: ...

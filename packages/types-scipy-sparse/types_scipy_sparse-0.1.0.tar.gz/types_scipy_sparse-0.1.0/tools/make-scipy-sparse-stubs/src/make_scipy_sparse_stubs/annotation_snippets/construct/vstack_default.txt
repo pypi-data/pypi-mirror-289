@@ -1,0 +1,38 @@
+@overload
+def vstack(
+    blocks: Sequence[spmatrix[Any, Any] | npt.NDArray[Any]],
+    format: None,
+    dtype: _DTypeLike[_SCT_co],
+) -> spmatrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def vstack(
+    blocks: Sequence[spmatrix[Any, Any] | npt.NDArray[Any]],
+    format: None = ...,
+    *,
+    dtype: _DTypeLike[_SCT_co],
+) -> spmatrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def vstack(
+    blocks: Sequence[spmatrix[Any, Any] | npt.NDArray[Any]],
+    format: None = ...,
+    dtype: npt.DTypeLike | None = ...,
+) -> spmatrix[Any, Any]: ...
+@overload
+def vstack(
+    blocks: Sequence[SparseArray[Any] | npt.NDArray[Any]],
+    format: None,
+    dtype: _DTypeLike[_SCT_co],
+) -> SparseArray[_SCT_co]: ...
+@overload
+def vstack(
+    blocks: Sequence[SparseArray[Any] | npt.NDArray[Any]],
+    format: None = ...,
+    *,
+    dtype: np.dtype[_SCT_co],
+) -> SparseArray[_SCT_co]: ...
+@overload
+def vstack(
+    blocks: Sequence[SparseArray[Any] | npt.NDArray[Any]],
+    format: None = ...,
+    dtype: npt.DTypeLike | None = ...,
+) -> SparseArray[Any]: ...

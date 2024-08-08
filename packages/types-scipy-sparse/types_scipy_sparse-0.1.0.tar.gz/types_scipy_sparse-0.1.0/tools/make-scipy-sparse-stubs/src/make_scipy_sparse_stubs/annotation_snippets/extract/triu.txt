@@ -1,0 +1,39 @@
+@overload
+def triu(
+    A: sparray[Any, np.dtype[_SCT]],
+    k: SupportsIndex,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT]]: ...
+@overload
+def triu(
+    A: sparray[Any, np.dtype[_SCT]],
+    k: SupportsIndex = ...,
+    *,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT]]: ...
+@overload
+def triu(
+    A: spmatrix[Any, np.dtype[_SCT]] | npt.NDArray[_SCT],
+    k: SupportsIndex,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT]]: ...
+@overload
+def triu(
+    A: spmatrix[Any, np.dtype[_SCT]] | npt.NDArray[_SCT],
+    k: SupportsIndex = ...,
+    *,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT]]: ...
+@overload
+def triu(
+    A: npt.ArrayLike,
+    k: SupportsIndex,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_matrix[Any, Any]: ...
+@overload
+def triu(
+    A: npt.ArrayLike,
+    k: SupportsIndex = ...,
+    *,
+    format: Literal["{_Spec_Format}"],
+) -> {_Spec_Format}_matrix[Any, Any]: ...

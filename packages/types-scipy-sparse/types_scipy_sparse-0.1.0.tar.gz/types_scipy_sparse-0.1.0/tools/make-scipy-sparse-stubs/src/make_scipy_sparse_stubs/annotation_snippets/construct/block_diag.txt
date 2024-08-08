@@ -1,0 +1,24 @@
+@overload
+def block_diag(
+    mats: Sequence[spmatrix[Any, Any] | npt.NDArray[Any]],
+    format: Literal["{_Spec_Format}"],
+    dtype: _DTypeLike[_SCT_co],
+) -> {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def block_diag(
+    mats: Sequence[spmatrix[Any, Any] | npt.NDArray[Any]],
+    format: Literal["{_Spec_Format}"],
+    dtype: npt.DTypeLike | None = ...,
+) -> {_Spec_Format}_matrix[Any, Any]: ...
+@overload
+def block_diag(
+    mats: Sequence[SparseArray[Any] | npt.NDArray[Any]],
+    format: Literal["{_Spec_Format}"],
+    dtype: _DTypeLike[_SCT_co],
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]] | {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...
+@overload
+def block_diag(
+    mats: Sequence[SparseArray[Any] | npt.NDArray[Any]],
+    format: Literal["{_Spec_Format}"],
+    dtype: npt.DTypeLike | None = ...,
+) -> {_Spec_Format}_array[Any, np.dtype[_SCT_co]] | {_Spec_Format}_matrix[Any, np.dtype[_SCT_co]]: ...

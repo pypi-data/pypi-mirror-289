@@ -1,0 +1,42 @@
+from collections.abc import Iterator
+from typing import Any, Literal, SupportsIndex, overload
+from typing_extensions import Self, TypeIs
+
+import numpy as np
+import numpy.typing as npt
+
+from ._base import sparray
+from ._bsr import bsr_array, bsr_matrix
+from ._coo import coo_array, coo_matrix
+from ._csc import csc_array, csc_matrix
+from ._csr import csr_array, csr_matrix
+from ._dok import dok_array, dok_matrix
+from ._lil import lil_array, lil_matrix
+from ._matrix import spmatrix
+from .typing import (
+    _SCT,
+    SparseArray,
+    _ArrayLike1DDual,
+    _ArrayLike1DIndex,
+    _ArrayType,
+    _CastingKind,
+    _DType_co,
+    _DTypeLike,
+    _Formats,
+    _NumberLike_co,
+    _OrderType,
+    _SCT_co,
+    _SCT_uifcO,
+    _ShapeAnno,
+    _ShapeLike,
+)
+
+__all__ = ["dia_array", "dia_matrix", "isspmatrix_dia"]
+
+def isspmatrix_dia(x: Any) -> TypeIs[dia_matrix[Any, Any]]: ...
+
+class dia_array(sparray[_ShapeAnno, _DType_co]):
+{array_body}
+
+class dia_matrix(spmatrix[_ShapeAnno, _DType_co]):
+{matrix_body}
