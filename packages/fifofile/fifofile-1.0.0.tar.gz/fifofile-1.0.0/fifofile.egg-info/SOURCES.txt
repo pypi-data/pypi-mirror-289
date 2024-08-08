@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+fifofile/__init__.py
+fifofile/fifofile.py
+fifofile.egg-info/PKG-INFO
+fifofile.egg-info/SOURCES.txt
+fifofile.egg-info/dependency_links.txt
+fifofile.egg-info/not-zip-safe
+fifofile.egg-info/top_level.txt
