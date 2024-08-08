@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: django-models-tools
+Version: 0.0.1
+Summary: Tools to help writing Django models easier and more convenient
+Author-email: Ramin-RX7 <rawmin.rx@gmail.com>
+License: LGPL
+Project-URL: Homepage, https://github.com/Ramin-RX7/django-model-tools
+Project-URL: Bug Tracker, https://github.com/Ramin-RX7/django-model-tools/issues
+Project-URL: documentation, https://github.com/Ramin-RX7/django-model-tools/wiki
+Project-URL: repository, https://github.com/Ramin-RX7/django-model-tools
+Project-URL: changelog, https://github.com/Ramin-RX7/django-model-tools/blob/master/CHANGELOG.md
+Keywords: django,utils
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# django-model-tools

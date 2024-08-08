@@ -1,0 +1,9 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+django_models_tools.egg-info/PKG-INFO
+django_models_tools.egg-info/SOURCES.txt
+django_models_tools.egg-info/dependency_links.txt
+django_models_tools.egg-info/top_level.txt
+model_tools/__init__.py

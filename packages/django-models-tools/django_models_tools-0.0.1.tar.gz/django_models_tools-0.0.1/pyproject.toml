@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "django-models-tools"
+version = "0.0.1"
+description = "Tools to help writing Django models easier and more convenient"
+license = {text = "LGPL"}
+readme = "README.md"
+requires-python = ">=3.6"
+
+dependencies = [
+
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+authors = [
+    {name = "Ramin-RX7", email = "rawmin.rx@gmail.com"},
+]
+
+keywords = ["django", "utils"]
+
+
+[tool.setuptools]
+packages = ["model_tools"]
+
+[project.urls]
+"Homepage" = "https://github.com/Ramin-RX7/django-model-tools"
+"Bug Tracker" = "https://github.com/Ramin-RX7/django-model-tools/issues"
+documentation = "https://github.com/Ramin-RX7/django-model-tools/wiki"
+repository = "https://github.com/Ramin-RX7/django-model-tools"
+changelog = "https://github.com/Ramin-RX7/django-model-tools/blob/master/CHANGELOG.md"
