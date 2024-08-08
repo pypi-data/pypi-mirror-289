@@ -1,0 +1,13 @@
+insigen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+insigen/insigen.py,sha256=XsDy2Xo5vp1vz4-oquMxxpDzStfv3O-R_iuAWjR7qJA,27625
+insigen/scraper.py,sha256=2-lnV-n7H_XHocLYRS9kHQG_O4IsxRCZkHg8CWNDxM8,3683
+insigen/Data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+insigen/Data/embeds.pickle,sha256=t2hvZJGYfjRPX1S8nnvsGZCJDun8N33Wvnn19qxmlGs,17412259
+insigen/Data/td.json,sha256=ZpVla-fuYHg1UWaBgluKe7-ZTwVkpNuxE9tIr5_xrUM,485853
+insigen/Data/topics.pickle,sha256=ISKxHy8kXhUroldbGfiMj5vKOEJxZlKOPuegX9ffw3o,1439
+insigen/Data/wiki.csv,sha256=0M4UC-K6_NkVAiARSC-_EjXE2UVH_Qw6RQqYcT5P2E0,223915318
+insigen-0.1.7.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+insigen-0.1.7.dist-info/METADATA,sha256=Igb3fTb-jK3xrk96qM4F8sXYHaoX-c4k8Txr0CtOJSE,19490
+insigen-0.1.7.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+insigen-0.1.7.dist-info/top_level.txt,sha256=t5k9GdFDTdbOd5Yq-0Fq7pn4J4S1D5RTH314muvvHjw,8
+insigen-0.1.7.dist-info/RECORD,,
