@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: VRCDataImporter
+Version: 0.1
+Requires-Dist: pandas>=2.2.0
