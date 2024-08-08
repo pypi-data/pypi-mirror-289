@@ -1,0 +1,10 @@
+qread/__init__.py,sha256=Qbv2EYaMSCkyx9npWSemgYJh7wu9hpaMwCOiaSkZ6S8,360
+qread/__main__.py,sha256=6DH8bUqGpuOa2hu5hz1RUDZtEfWH2B5corPItQOYBh4,1516
+qread/_version.py,sha256=22E2onXLwk0PcWaLZwcKM3umvGedfs7xdgJJ862RmWg,440
+qread/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qread-0.0.2.dev0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+qread-0.0.2.dev0.dist-info/METADATA,sha256=YJZCoczAaPY__Qww7JWxXilmMinJyyggu1zAC_fbL8A,44156
+qread-0.0.2.dev0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+qread-0.0.2.dev0.dist-info/entry_points.txt,sha256=WsNMGfTDDzS421Kd0QYyCumrQzjhDG-O-XI_5TInCTs,46
+qread-0.0.2.dev0.dist-info/top_level.txt,sha256=RahsGUV_peOp7di8I-0DmlaqRDQxnZ3CAf7-4FoFjNU,6
+qread-0.0.2.dev0.dist-info/RECORD,,
