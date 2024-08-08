@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "shiinobi"
+version = "0.0.1"
+description = ""
+authors = ["baseplate-admin <61817579+baseplate-admin@users.noreply.github.com>"]
+readme = "README.md"
+packages = [
+    { include = "shiinobi",from="./src" },
+]
+exclude = [
+    "src/shiinobi/cli.py"
+]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+selectolax = "^0.3.21"
+requests-cache = "^1.2.1"
+requests-ratelimiter = "^0.7.0"
+python-dateutil = "^2.9.0.post0"
+
+
+[tool.poetry.group.cli.dependencies]
+typer = "^0.12.3"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.2.6"
+myst-parser = ">=2"
+sphinx-reload = "^0.2.0"
+shibuya = "^2024.6.1"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.27.0"
+ruff = "^0.5.6"
+pyinstaller = "^6.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+"dev-cli" = "python ./src/shiinobi/cli.py"
+"build-cli" = "pyinstaller ./cli.spec"
