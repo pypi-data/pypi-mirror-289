@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: PyMHSS
+Version: 0.0.1
+Summary: Metropolis-Hastings with Scalable Subsampling
+Author: Estevao Prado, Christopher Nemeth, Chris Sherlock
+Author-email: <e.prado1@lancaster.ac.uk>
+Project-URL: Paper, https://arxiv.org/pdf/2407.19602
+Project-URL: GitHub, https://github.com/ebprado/MH-with-scalable-subsampling
+Keywords: Python package,Metropolis-Hastings with Scalable Subsampling,Tuna Metropolis-Hastings algorithm,Scalable Metropolis-Hastings
+Requires-Python: >=3.9.6
+Requires-Dist: time
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: statsmodels
+Requires-Dist: scipy
+Requires-Dist: tensorflow
+Requires-Dist: pickle
