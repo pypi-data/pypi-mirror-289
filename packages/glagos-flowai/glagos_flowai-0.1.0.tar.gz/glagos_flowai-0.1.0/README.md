@@ -1,0 +1,115 @@
+# FlowAI
+
+A CLI tool for multi-agent LLM tasks.
+
+## Installation
+
+1. Ensure you have Poetry installed.
+2. Clone this repository.
+3. Run `poetry install` in the project directory.
+
+## Usage
+
+First, initialize FlowAI:
+
+```
+poetry run flowai --init
+```
+
+This will guide you through an interactive setup process, allowing you to choose your default provider, model, quiet mode, stream mode, and other options using arrow keys for selection. The current settings will be displayed before the onboarding process starts, and you can preselect these values in the prompts.
+
+Check the current status (provider, model, quiet mode, stream mode, flow, template file, context file, and final check):
+
+```
+poetry run flowai --status
+```
+
+Basic usage:
+```
+poetry run flowai "Your prompt here"
+```
+
+Specify a provider and model:
+```
+poetry run flowai --provider openai --model gpt-4 "Your prompt here"
+```
+
+Use quiet mode (only shows timer and final response):
+```
+poetry run flowai --quiet "Your prompt here"
+```
+
+or use the short flag:
+```
+poetry run flowai -q "Your prompt here"
+```
+
+Stream the output directly without waiting for full response:
+```
+poetry run flowai --stream "Your prompt here"
+```
+
+or use the short flag:
+```
+poetry run flowai -s "Your prompt here"
+```
+
+List available models for the current provider:
+```
+poetry run flowai --list-models
+```
+
+List available models for a specific provider:
+```
+poetry run flowai --provider anthropic --list-models
+```
+
+Use multiple agents to complete the task:
+```
+poetry run flowai --flow "Your prompt here"
+```
+
+Use a template file containing sections:
+```
+poetry run flowai --template-file path/to/template "Your prompt here"
+```
+
+Use a context file for global context:
+```
+poetry run flowai --context-file path/to/context "Your prompt here"
+```
+
+Run a final check after response assembly:
+```
+poetry run flowai --final-check "Your final check prompt" "Your prompt here"
+```
+
+Run `poetry run flowai --help` for more usage instructions.
+
+## Features
+
+- Interactive provider, model, quiet mode, stream mode, flow, template file, context file, and final check selection during setup
+- Display of current configuration during initialization
+- Pre-selection of current settings in setup prompts
+- Support for multiple LLM providers (OpenAI, Anthropic, Ollama)
+- Real-time animation with elapsed time display while waiting for response
+- Markdown rendering of responses in the terminal
+- Display of total round-trip response time, including connection setup
+- Easy-to-read formatted output
+- Detailed error reporting and graceful error handling
+- Configuration validation to ensure correct provider-model pairing
+- Quiet mode: show only the timer and final response
+- Stream mode: output the response directly without waiting for completion
+- Ability to override and update default settings for quiet and stream modes
+
+## Supported Providers
+
+- OpenAI (default): Dynamically fetches available models
+- Anthropic: Fetches available models from Anthropic API
+- Ollama: Fetches available models from local Ollama instance
+
+You can easily extend FlowAI to support additional providers in the future.
+
+## Troubleshooting
+
+If you encounter any issues while fetching models or sending prompts, FlowAI will display detailed error messages. Check your API keys and internet connection if you're having trouble connecting to a provider. If you see a configuration error, try running `flowai --init` to reconfigure FlowAI.
