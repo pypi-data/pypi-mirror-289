@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+django_http_debug/__init__.py
+django_http_debug/admin.py
+django_http_debug/middleware.py
+django_http_debug/models.py
+django_http_debug/views.py
+django_http_debug.egg-info/PKG-INFO
+django_http_debug.egg-info/SOURCES.txt
+django_http_debug.egg-info/dependency_links.txt
+django_http_debug.egg-info/requires.txt
+django_http_debug.egg-info/top_level.txt
+django_http_debug/migrations/0001_initial.py
+django_http_debug/migrations/__init__.py
+tests/test_django_http_debug.py
