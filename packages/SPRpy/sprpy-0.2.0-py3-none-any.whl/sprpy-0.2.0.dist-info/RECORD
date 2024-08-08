@@ -1,0 +1,26 @@
+SPRpy/SPRpy.py,sha256=o8kNez97Ih5SilLGBX2p2GFYovAWrfjYZQTmSsWUW1Y,278760
+SPRpy/SPRpy_X_cal.py,sha256=2Pmo5izk8DYY5KY5scWVGscmMT7Rfvyky6EEVHsrVIE,2328
+SPRpy/SPRpy_X_cal_values_24-07-24.csv,sha256=bsYkaR4k9kmyLZpb_BkG8SS9ZuvCzF3npzdLM6IuJZs,712
+SPRpy/SPRpy_classes.py,sha256=HOqwZjNbJdkIpD-Q-YGXGuv9-UeXE446J9jFz5OmUcM,50330
+SPRpy/SPRpy_functions.py,sha256=j10aIZdRjwgeOiTg-Exdw1j8ddJGbThvEtszFSLjrkI,4339
+SPRpy/SPRpy_spr2_to_csv.py,sha256=40iY88s8dzzsVgFqNMCDjgPl_sGadFEZaNMphCFXKVk,10221
+SPRpy/__about__.py,sha256=MFUHAmbPYx6EKJe05TSYjDks2x9auOP2xlgB7U4E8vk,19
+SPRpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SPRpy/config.toml,sha256=V9B0PSkjusILJeCjs2Cdf0ZtDxYCUqbhanZuGuRgTsk,1832
+SPRpy/create_desktop_shortcut.py,sha256=WtzzhVDyxBvcDw84ljJcZugVCkTJI8zHML7Ki0YGmsM,821
+SPRpy/fresnel_transfer_matrix.py,sha256=uo6KlxEGnD03ps6v6y1N1At9gkn1YcL_RzwUU_2CBk8,9315
+SPRpy/assets/bootstrap_spacelab.css,sha256=TZ-aI08NGDhKWdSHMKvZJ21j7zYRXwrzFmDj7qQ4Fr4,202724
+SPRpy/assets/icon.ico,sha256=Lxw8oIZKDnG4GSEEzSyMpScmA3uiDJ5Sba0QjuJ5MbA,9662
+SPRpy/example data/Example_height_probing_data.spr2,sha256=0ivCY9AtZQQy_pL08iH7tRAXWL2z3bEWMNqzAIlFvGk,101732187
+SPRpy/static/images/SPR-sensor.PNG,sha256=eCn_muH1caE2d0nr1hD0A8-M4QcKE6qdQCR2FEIyPH4,422807
+SPRpy/static/images/SPR_angular_spectrum.svg,sha256=9yiR1KlPwyEnEp_j8GkdMjSuwoQ-3VrrXfUqB2GZyBg,51399
+SPRpy/static/images/SPR_principle.svg,sha256=FJynvuSuNPMZK8l2-lHUJ29w8APyUBWXHfQ_NVm742Y,40493
+SPRpy/static/images/fresnel_material.svg,sha256=9dMLXwb2WAUJleR6-h_UfO1744X7Iaeu5472qxEQB6k,50372
+SPRpy/static/images/icon.png,sha256=5yFCvfYqp_ooyNT4bEnhV8Qc49VqszLBtbFGkhRMxEE,1415
+SPRpy/static/images/icon.svg,sha256=mhM_hoipOw22F7ty_HbwMfd0wd-fi-XFShT07nIXfXo,15997
+SPRpy/static/images/non-interacting_height_probe.PNG,sha256=Yiecypa4f_f8j0s0OlvdEdRF4UJk2Q8tIT4mHUyH3b8,46396
+sprpy-0.2.0.dist-info/METADATA,sha256=s_CzKUGPNryjn-o3K9-AHfqgCnKpvU2eTgtU1oTQ_gM,25735
+sprpy-0.2.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+sprpy-0.2.0.dist-info/entry_points.txt,sha256=yTbrVeV4lgmEgmRQ7S-Cb71xKg_S82UKQsGuLfIt214,175
+sprpy-0.2.0.dist-info/licenses/LICENSE,sha256=hxqBAT2pnodiiBlgPSDxNabo35uXX-7pHqSuflyHdEE,1090
+sprpy-0.2.0.dist-info/RECORD,,
