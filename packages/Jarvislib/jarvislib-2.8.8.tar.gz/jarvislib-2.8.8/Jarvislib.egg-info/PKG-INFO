@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: Jarvislib
+Version: 2.8.8
+Summary: Импорт функции: from Jarvislib import status. Запуск главного цикла: statuss()
+Author-email: babadey.pl@gmail.com
