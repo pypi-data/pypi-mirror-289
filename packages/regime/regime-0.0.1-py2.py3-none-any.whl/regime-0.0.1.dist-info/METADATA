@@ -1,0 +1,6 @@
+Metadata-Version: 2.3
+Name: regime
+Version: 0.0.1
+Summary: Create and visualize workflows consisting of classes, functions, and resources; recognize hyperparameters when needed.
+Author-email: John Wesley Hostetter <jhostetter16@gmail.com>
+License-File: LICENSE
