@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ash-dendro
+Version: 0.0.6
+Summary: Ash dendrogram utilities
+Author-email: Nicole Aemilia Urban <urbanovni@natur.cuni.cz>
+Project-URL: Homepage, https://github.com/aemiliaurban/ash-interactive-dendrogram-tool
+Project-URL: Issues, https://github.com/aemiliaurban/ash-interactive-dendrogram-tool/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas ==2.2.2
+Requires-Dist: numpy ==1.25.2
+Requires-Dist: scipy ==1.9.3
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
