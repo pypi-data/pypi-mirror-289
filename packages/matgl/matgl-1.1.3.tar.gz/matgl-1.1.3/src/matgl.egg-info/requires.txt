@@ -1,0 +1,7 @@
+ase
+dgl>=2.0.0
+pymatgen
+lightning
+torch
+pydantic
+torchdata<0.8.0
