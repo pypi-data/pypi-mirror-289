@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+florestdevinstruments.egg-info/PKG-INFO
+florestdevinstruments.egg-info/SOURCES.txt
+florestdevinstruments.egg-info/dependency_links.txt
+florestdevinstruments.egg-info/requires.txt
+florestdevinstruments.egg-info/top_level.txt
+iLibrary7/__init__.py
+iLibrary7/piewithrise1.py

@@ -1,0 +1,6 @@
+# -*- coding: utf-8 -*-
+
+from setuptools import setup
+
+
+setup(name='florestdevinstruments', version='13.0.0', description='Личная библиотека Флореста и Пирожка с Рисом! Написана на языке программирования Python! Спасибо!', long_description=f'Вселенная команд в библиотеке Флореста и Пирожка с Рисом, созданная и работающая на Python.\nВ библиотеке очень много функций для взаимодействия с ИИ, PyGames, TXT файлами, API и много чего еще!\nСкачивай библиотеку версии 13.0.0 с помощью `pip` и наслаждайся!!!', long_description_content_type='text/markdown', packages=['iLibrary7'], author='florestdev4185', author_email='florestone4185@internet.ru', install_requires=['g4f', 'MukeshAPI', 'pypresence', 'curl_cffi', 'pygame', 'pygame_gui', 'vk_api', 'pyautogui', 'googletrans', 'rcon', 'discord', 'smtplib', 'email', 'PyTelegramBotAPI'], url='https://telegra.ph/Socseti-Floresta-06-28', python_requires='>=3.8.9',project_urls={"Florest's Resources": 'https://telegra.ph/Socseti-Floresta-06-28', "Pie With Rise's Resources":'https://telegra.ph/Socialnye-Seti-Ot--Zeeby--Light-07-23'})
