@@ -1,0 +1,13 @@
+docutils
+requests
+rich
+setuptools
+sqlalchemy>=1.4
+
+[doc]
+sphinx
+sphinx-rtd-theme
+
+[test]
+pytest
+pytest-cov
