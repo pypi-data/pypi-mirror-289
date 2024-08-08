@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dynamic-process-pool"
+version = "0.2.0"
+description = ""
+authors = ["Pulkith Paruchuri <pulkith.pa@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "dynamic_process_pool" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+uuid = "^1.30"
+asyncio = "^3.4.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
