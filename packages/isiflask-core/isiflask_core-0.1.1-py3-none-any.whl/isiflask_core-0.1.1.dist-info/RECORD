@@ -1,0 +1,17 @@
+isiflask_core/Environment.py,sha256=w9jn5m9_xpdjpONskaLyXMfOHhdLScNYQrlbQm8zxPM,1095
+isiflask_core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isiflask_core/app/Controllers/BaseController.py,sha256=TzZKssJTBpIqtLDIiNhogHv3LB2HWHBTxdTzXsRlMAU,6626
+isiflask_core/app/Data/BaseModel.py,sha256=DU4_D1-r_xUOwPBTxiF42An8LHmUm8KfUPGSVC1VPxk,10792
+isiflask_core/app/Data/Enum/http_status_code.py,sha256=JdZFQ5J3nTLCjpLvKSOfirVDt0OaX6KliyI1RzMtVD4,398
+isiflask_core/app/Data/Enum/request_parts.py,sha256=h-m_Di1regUMUSGfujNA5HhRjtBdjsMoc9Dku8OLP3o,143
+isiflask_core/app/Data/Interfaces/PaginationResult.py,sha256=9Wd0euXVR2aUzLWpO5MBRN9ADbRWC8qbaMLL84H4gvw,2424
+isiflask_core/app/Data/Interfaces/ResourceReference.py,sha256=RSxtH4rOLXyfJ273ifJMWNGHgYnO5zaOQdlux9phfLs,735
+isiflask_core/app/Exceptions/APIException.py,sha256=dfJLrarNR6EBdpmQ_t5u4eJwkTRL42yMq8BXB4sXr34,439
+isiflask_core/app/Services/BaseService.py,sha256=ilyVvVtONzKZzLrMpC_7R0SzvWYEIru2GpT-b6wPSjU,4117
+isiflask_core/app/Validators/RequestValidator.py,sha256=lezE91ogAJTaFvKmu-QDHKSiOnkM7bTI3oihBAiFPbQ,6435
+isiflask_core/config/database.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isiflask_core/database/DBConnection.py,sha256=mVBjenkocBWuF80ZE7cgU2yJHIEEPPE05PGopkuOO_0,3948
+isiflask_core/utils/http_utils.py,sha256=0CgbT4hqkZE3wda6ur22SvfC-SWTMt35ZhLrcAvOQ7k,4645
+isiflask_core-0.1.1.dist-info/METADATA,sha256=p3t_TRXDEZE6LTcVOxqamWtVus8VWYDtVob6ZGwEZIw,780
+isiflask_core-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+isiflask_core-0.1.1.dist-info/RECORD,,
