@@ -1,0 +1,8 @@
+setup.py
+VRCDataImporter/__init__.py
+VRCDataImporter/main.py
+VRCDataImporter.egg-info/PKG-INFO
+VRCDataImporter.egg-info/SOURCES.txt
+VRCDataImporter.egg-info/dependency_links.txt
+VRCDataImporter.egg-info/requires.txt
+VRCDataImporter.egg-info/top_level.txt
