@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: uzbekistanweather
+Version: 0.1.4
+Summary: A short description of your package
+Author: Your Name
+Author-email: farmonovsino@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+**UzbekistanWeather paketi haqida qo'llanma**
+
+ishlatilishi:
+```python
+from uzbekistanweather import UzbekistanWeather
+
+weather = UzbekistanWeather("hudud_nomi") # masalan toshkent yoki andijon
+```
+
+```python
+print(weather.today())
+```
+malumot json ko'rinishida qaytib keladi
+
+to'liq kod
+```python
+from uzbekistanweather import UzbekistanWeather
+
+weather = UzbekistanWeather("toshent")
+
+print(weather.today())
+```
+
+siz olishingiz mumkun bo'lgan viloyatlar va hududlar ro'yxati:
+**andijon, toshken, buxoro, guliston, jizzax, zarafshon, qarshi, navoiy, namangan, nukus, samarqand, termiz, urganch, farg'ona, xiva**
