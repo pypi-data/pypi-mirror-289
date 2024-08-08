@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: stc8usb
+Version: 0.2.0
+Summary: USB Programming Tool for STC8H8KxxU Microcontrollers
+Home-page: https://github.com/wagiminator/MCU-Flash-Tools
+Author: Stefan Wagner
+Author-email: Stefan Wagner <wagiminator@web.de>
+Maintainer-email: Stefan Wagner <wagiminator@web.de>
+License: MIT License
+        
+        Copyright (c) 2023 Stefan Wagner
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://wagiminator.github.io/
+Project-URL: Repository, https://github.com/wagiminator/MCU-Flash-Tools
+Project-URL: Issues, https://github.com/wagiminator/MCU-Flash-Tools/issues
+Keywords: STC,STC8,STC8H8K64U,microcontroller
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Embedded Systems
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: hid
+
+#  stc8usb - USB Programming Tool for STC8H8KxxU Microcontrollers
+## Description
+This tool allows you to flash STC8H8KxxU microcontrollers through their USB interface, using the pre-installed embedded USB bootloader.
+
+## Preparations
+Because the USB bootloader functions as a Human Interface Device (HID), there's no need to install drivers. However, Linux doesn't initially grant sufficient permissions to access the bootloader. To resolve this issue, open a terminal and execute the following commands:
+
+```
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="34bf", ATTR{idProduct}=="1001", MODE="666"' | sudo tee /etc/udev/rules.d/99-STC-ISP.rules
+sudo udevadm control --reload-rules
+```
+
+## Installation
+- Install [Python3](https://www.pythontutorial.net/getting-started/install-python/).
+- Install [pip](https://pip.pypa.io/en/stable/installation/).
+- Install stc8usb: 
+
+```
+pip install stc8usb
+```
+
+## Usage
+To initiate new uploads, the bootloader needs to be manually started. Begin by unplugging the board from the USB port and disconnecting all power sources. Then, press and hold the BOOT button while reconnecting the board to your PC's USB port. This action triggers the chip to enter bootloader mode. Once in this mode, you can release the BOOT button and proceed to upload new firmware via USB.
+
+If your board doesn't have a BOOT button, you'll need to short pin P3.2 to ground while connecting to achieve the same effect.
+
+```
+Usage: stc8usb [-h] [-t TRIM] [-e] [-f FLASH]
+
+Optional arguments:
+  -h,       --help          show this help message and exit
+  -t TRIM,  --trim TRIM     set MCU system frequency
+  -e,       --erase         perform chip erase (implied with -f)
+  -f FLASH, --flash FLASH   write BIN file to flash
+
+Example:
+stc8usb -t 24000000 -f firmware.bin
+```
+
+## Links
+- [MCU Flash Tools](https://github.com/wagiminator/MCU-Flash-Tools)
+- [MCU Templates](https://github.com/wagiminator/MCU-Templates)
+- [MCU Development Boards](https://github.com/wagiminator/Development-Boards)
+- [AVR Development Boards](https://github.com/wagiminator/AVR-Development-Boards)
+- [AVR Programmers](https://github.com/wagiminator/AVR-Programmer)
+- [SAMD Development Boards](https://github.com/wagiminator/SAMD-Development-Boards)

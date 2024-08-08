@@ -1,0 +1,2 @@
+[console_scripts]
+stc8usb = stc8usb:_main
