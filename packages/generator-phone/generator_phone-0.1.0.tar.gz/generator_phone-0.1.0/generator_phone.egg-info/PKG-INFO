@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: generator-phone
+Version: 0.1.0
+Summary: first patch commit
+Home-page: https://github.com/zhangdongxuan0227/generatorutils.git
+Author: zhangxingchen
+Author-email: zxcser@163.com
+License: UNKNOWN
+Description: # Example Package
+        
+        This is a simple example package. You can use
+        [GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+        to write your content.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

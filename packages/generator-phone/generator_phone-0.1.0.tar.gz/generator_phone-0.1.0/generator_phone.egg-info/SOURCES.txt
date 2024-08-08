@@ -1,0 +1,7 @@
+README.md
+setup.py
+generator_phone.egg-info/PKG-INFO
+generator_phone.egg-info/SOURCES.txt
+generator_phone.egg-info/dependency_links.txt
+generator_phone.egg-info/requires.txt
+generator_phone.egg-info/top_level.txt
