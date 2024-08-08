@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: greenthread
+Version: 0.1.1
+Summary: A simple green thread library compatible eventlet and gevent
+Home-page: https://github.com/tsinghtech-research/greenthread
+Author: tsinghtech
+Author-email: vision@qingtong.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# greenthread
+
+greenthread compatible gevent and eventlet
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+pip install greenthread
+
+<!-- ## Usage -->
+
+<!-- ## Contributing -->
+
+## License
+
+
+This project is released under the [Apache 2.0 License](LICENSE).
+
+
