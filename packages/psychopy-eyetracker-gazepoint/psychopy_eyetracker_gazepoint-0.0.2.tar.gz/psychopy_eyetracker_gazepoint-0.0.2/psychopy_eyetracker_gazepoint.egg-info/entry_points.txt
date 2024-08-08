@@ -1,0 +1,2 @@
+[psychopy.iohub.devices.eyetracker]
+gp3 = psychopy_eyetracker_gazepoint.gazepoint.gp3
