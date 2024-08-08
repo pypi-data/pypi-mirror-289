@@ -1,0 +1,10 @@
+README.md
+setup.py
+its_a_trial.egg-info/PKG-INFO
+its_a_trial.egg-info/SOURCES.txt
+its_a_trial.egg-info/dependency_links.txt
+its_a_trial.egg-info/requires.txt
+its_a_trial.egg-info/top_level.txt
+my_first_trial_model/__init__.py
+my_first_trial_model/model.py
+my_first_trial_model/utils.py
