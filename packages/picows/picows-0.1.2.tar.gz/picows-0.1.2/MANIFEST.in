@@ -1,0 +1,2 @@
+include picows/*.pxd
+exclude picows/*.c
