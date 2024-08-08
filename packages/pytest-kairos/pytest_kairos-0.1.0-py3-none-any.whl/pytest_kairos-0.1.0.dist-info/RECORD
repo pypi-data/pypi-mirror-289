@@ -1,0 +1,10 @@
+pytest_kairos/__init__.py,sha256=FktCsZ5tEFbzTg2jd8ul0kDIIL95OIRlSDpuiiXstYk,124
+pytest_kairos/_fake_module.py,sha256=p4pnbc82BO9JO1rtfNjwxqine5ac0ROx5g-uuYA1a8c,171
+pytest_kairos/_version.py,sha256=IMl2Pr_Sy4LVRKy_Sm4CdwUl1Gryous6ncL96EMYsnM,411
+pytest_kairos/plugin.py,sha256=RWOE_DJl_y_AjRAM0KXs9XtP921VWtUJti-6nbzyRrQ,5059
+pytest_kairos-0.1.0.dist-info/LICENSE,sha256=uxJzVvvqUgcqvVVBq9bpeObSvsfoWjPAB3lvjdqUn2Q,11354
+pytest_kairos-0.1.0.dist-info/METADATA,sha256=ERngnuWedZr-sEiCgT_sSThNzHbzZcYarQ0AUD_UvOQ,1869
+pytest_kairos-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+pytest_kairos-0.1.0.dist-info/entry_points.txt,sha256=NwrmAfaug16NlP1iCYXasTw7hx55WgMbT7bfR1zH-Ao,48
+pytest_kairos-0.1.0.dist-info/top_level.txt,sha256=UpNjHOk0-bnKGNszQygHvyUdSIsE2NL4wn3Exh8REZ8,14
+pytest_kairos-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: pytest-kairos
+Version: 0.1.0
+Summary: Pytest plugin with random number generation, reproducibility, and test repetition
+Author-email: Marcelo Duarte Trevisani <marceloduartetrevisani@gmail.com>
+License: Apache-2.0
+Project-URL: Source, https://github.com/marcelotrevisani/pytest-kairos
+Project-URL: GitHub, https://github.com/marcelotrevisani/pytest-kairos
+Keywords: pytest,random,plugin,unittest
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest>=5.0.0
+Provides-Extra: dev
+Requires-Dist: pytest-kairos[testing]; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Provides-Extra: numpy
+Requires-Dist: numpy; extra == "numpy"
+Provides-Extra: pandas
+Requires-Dist: pandas; extra == "pandas"
+Provides-Extra: polars
+Requires-Dist: polars; extra == "polars"
+Provides-Extra: testing
+Requires-Dist: pytest-kairos[numpy,pandas,polars]; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+
+# pytest-kairos
+The `pytest-kairos` enhances pytest with random number generation, reproducibility, and test repetition. It generates random numbers for tests, allows setting a seed for consistent results, and repeats tests multiple times.
