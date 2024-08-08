@@ -1,0 +1,15 @@
+Orange3_Azure_Data_Lake_Storage_Gen2-0.0.1-py3.11-nspkg.pth,sha256=UYCZtLWueceGiAlmXKRJUZ0TWQEubpPoQ1pVnAAsME0,502
+orangecontrib/adls/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+orangecontrib/adls/widgets/__init__.py,sha256=J01KdxB4EdwKZJSJw2anCWWRpulWyCE3Brkk2uSOMWc,991
+orangecontrib/adls/widgets/azure_utils.py,sha256=jhp5uQU7H7xigMv56S6ak9i5ikYjsLvwu-DseksW__w,1876
+orangecontrib/adls/widgets/owadlsload.py,sha256=QPHYPQY6UV5bfsiPA66bOZlr25bkQnYAH1TV8D4B0Ws,3825
+orangecontrib/adls/widgets/owadlssave.py,sha256=1L1OrJ-sKtLnV-3stYvBz18Brvw9Wz7rbtQiJhWpjog,4354
+orangecontrib/adls/widgets/icons/adls.svg,sha256=5_P13b62HalE9PTDmgnTr-SJngD81J__nLOvGuViGvY,11721
+orangecontrib/adls/widgets/icons/adls_load.svg,sha256=RVzE_bqD-1fd9UAc2vlJnjSPzziqswn1817n4VIZ1xA,16906
+orangecontrib/adls/widgets/icons/adls_save.svg,sha256=CDbD7hz0NmoCxmsHt3BgUHha7z-aBh4GCAwB-X0IfYM,16111
+Orange3_Azure_Data_Lake_Storage_Gen2-0.0.1.dist-info/METADATA,sha256=ImYM8oOiYQfP2FPfo6FZJxmzxG_7qQNLOPcavN45Dwg,1639
+Orange3_Azure_Data_Lake_Storage_Gen2-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+Orange3_Azure_Data_Lake_Storage_Gen2-0.0.1.dist-info/entry_points.txt,sha256=362zCMoBeSK2Fqg0eydQGUJ6ifHmexqVNaywdW_xlCw,205
+Orange3_Azure_Data_Lake_Storage_Gen2-0.0.1.dist-info/namespace_packages.txt,sha256=Iut-JTfT11SZHHm77_ZeszD7pZDWXcTweCbvrJpqDyQ,14
+Orange3_Azure_Data_Lake_Storage_Gen2-0.0.1.dist-info/top_level.txt,sha256=Iut-JTfT11SZHHm77_ZeszD7pZDWXcTweCbvrJpqDyQ,14
+Orange3_Azure_Data_Lake_Storage_Gen2-0.0.1.dist-info/RECORD,,
