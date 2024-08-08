@@ -1,0 +1,19 @@
+[workspace]
+members = ["arro3-compute", "pyo3-arrow"]
+resolver = "2"
+
+[workspace.dependencies]
+arrow = { version = "52", features = ["ffi"] }
+arrow-array = "52"
+arrow-buffer = "52"
+arrow-cast = "52"
+arrow-csv = "52"
+arrow-ipc = "52"
+arrow-schema = "52"
+arrow-select = "52"
+indexmap = "2"
+numpy = "0.21"
+parquet = "52"
+pyo3 = "0.21"
+pyo3-file = "0.8.1"
+thiserror = "1"
