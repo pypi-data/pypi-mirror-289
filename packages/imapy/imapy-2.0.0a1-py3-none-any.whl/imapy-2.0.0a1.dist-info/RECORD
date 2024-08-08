@@ -1,0 +1,16 @@
+imapy/__init__.py,sha256=0w59YX9Ivi1hcNomm8r1ejmmk_nFVRzPVxDk3OJpfm0,73
+imapy/connector.py,sha256=cGDZLyLcHauueoOVb9Yi32pZCYc3mMROdaFUdIubjJI,446
+imapy/email_message.py,sha256=xnHp7coICLche6Hkt0PhLDnkGAKE3Kz1nuAaBbigRa0,11244
+imapy/exceptions.py,sha256=kUOH9Cq-zEWgO0f6EBv8y4_xWlzfvbR47RqoE40hWYE,1962
+imapy/imap.py,sha256=1Xg92oGteeyUmRI2YA_qwWqhlBFI7WDB-nRv7wpm4GU,24112
+imapy/mail_folder.py,sha256=wjr5TB9URnOyd5PeLeRmthuamDS2IRye4Zmc77o__NM,5754
+imapy/packages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imapy/packages/imap_utf7.py,sha256=Lkyawl6147M6hTLp5JH1R2m2XlOemXuGbURk6KFWs1Y,4761
+imapy/query_builder.py,sha256=GbwpSniObPpbl35OdASBxx4GO5COlDByFehVbsp4t2U,10982
+imapy/structures.py,sha256=Q-adI0EWu0ZCN5nuKiY_LId70N-ippzQEuBPmMntFVU,1191
+imapy/utils.py,sha256=LZt_Tq8G3wAkB-axuddmSyCYh5xjQE6sCsAqtJiQNws,864
+imapy-2.0.0a1.dist-info/AUTHORS.rst,sha256=oS-KNFg6fIo_NfRs9hLmsKmg31strIP3FqAv08YzQvo,435
+imapy-2.0.0a1.dist-info/METADATA,sha256=qH7mivUk2MyB14CG75pmLocHAMrkGigHhEhAu5huG30,2402
+imapy-2.0.0a1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+imapy-2.0.0a1.dist-info/entry_points.txt,sha256=X3let8PS2urB6ioNV_mQyKPE70yfwh4bZk5Lu31wlVQ,41
+imapy-2.0.0a1.dist-info/RECORD,,
