@@ -1,0 +1,8 @@
+monosurf/__init__.py,sha256=C7VJwEkHSXlcTWACsaIXoMq_WpJJC0itBLN1DY5_rGU,597
+monosurf/client.py,sha256=VlATAi-H4VfuB1tovENfbLXX2kQg-R7D3dMxj3779FU,4405
+monosurf/endpoints.py,sha256=O7p7GkorV7hPOh95v7zYylb_j_uZhPb2uOU26KHeZ1s,648
+monosurf/schemas.py,sha256=SweiYBUNV8KRfXUkEZshgIdJwOgQlFQX7B1keZoOTtk,4000
+monosurf/settings.py,sha256=uiA6OAqfbo-6bUfQ2KXFx7MQ8ai1sCEeERy0DKl4Fwo,448
+monosurf-0.3.0.dist-info/METADATA,sha256=J7O8KCRVi1yR-awy2z36eURMy7wmEwNtbshdhfTRf8c,629
+monosurf-0.3.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+monosurf-0.3.0.dist-info/RECORD,,
