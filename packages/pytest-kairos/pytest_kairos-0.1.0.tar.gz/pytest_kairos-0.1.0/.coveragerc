@@ -1,0 +1,16 @@
+[run]
+omit =
+    .cache/*
+    */tests/*
+    docs/*
+    .pytest_cache/*
+    setup.py
+    _version.py
+    pytest_kairos.egg-info/*
+    .github/*
+    __init__.py
+    pytest_kairos/__init__.py
+    src/pytest_kairos/__init__.py
+
+[paths]
+source = src/
