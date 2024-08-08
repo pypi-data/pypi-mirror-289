@@ -1,0 +1,13 @@
+batched_queue/result.py,sha256=4ED6fScGojiiKxj2mOQYmRoFzeGqnSXisy1e6Ya7WkI,2123
+batched_queue/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+batched_queue/queue.py,sha256=nsKzzPrRpqF4_1HuctkIO3Kw6hoAkzA8Srm7vfaepKU,11344
+batched_queue/incrementer.cpython-311-x86_64-linux-gnu.so,sha256=GeYCd7B9adK6xkyu48xpANDUilVYAQfBSdWLTyOgJNQ,474136
+batched_queue/__init__.py,sha256=j6ojmtTnqZc2kJCzCddAZO98NB635SafvM3-Qvii2eY,27
+batched_queue/incrementer.pyx,sha256=vGbPTBNiEaBpzRB8wJu6zndpb37V5cDf_04kvvhe_uY,461
+batched_queue/incrementer.pyi,sha256=ZRzFHFjP0aaTYsav8RUV3c6Zs0NCEdCIPqMbiSh5p28,161
+batched_queue/incrementer.c,sha256=IoosRMwFuoeDMVeRdd_vm9U_Rsm4C7cmBHlqHpePUE0,371169
+batched_queue/types.py,sha256=4QSGq24VhdEUrsrAio-2xJTId8p91u8Fb-2gJi_cMHI,694
+batched_queue-0.1.2.dist-info/RECORD,,
+batched_queue-0.1.2.dist-info/WHEEL,sha256=h4e15qrbsieQq6wOyCqOib09spVeKA2Zkh49rLfLEnM,222
+batched_queue-0.1.2.dist-info/LICENSE,sha256=pebds694OgLqzISMvjCcwJQLSFmsZT6bGi4hpP6iJVI,1056
+batched_queue-0.1.2.dist-info/METADATA,sha256=BLuZWVapSwYZ47C99_gmHCAeQ8MB71dljc20bduzs8Q,496
