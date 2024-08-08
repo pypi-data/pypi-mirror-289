@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/birdwell/mapping/__init__.py
+src/birdwell/mapping/cache.py
+src/birdwell/mapping/configure.py
+src/birdwell/mapping/pickles.py
+src/birdwell/mapping/redis_.py
+src/birdwell/mapping/toml.py
+src/birdwell_mapping.egg-info/PKG-INFO
+src/birdwell_mapping.egg-info/SOURCES.txt
+src/birdwell_mapping.egg-info/dependency_links.txt
+src/birdwell_mapping.egg-info/requires.txt
+src/birdwell_mapping.egg-info/top_level.txt
