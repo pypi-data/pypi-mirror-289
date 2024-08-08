@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "codemie-client"
+version = "0.1.0"
+description = "CodeMie Client"
+authors = [
+    "Vadym Vlasenko <vadym_vlasenko@epam.com>",
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+PyGithub= "^2.2.0"
+requests = "^2.27.1"
+pydantic = "^1.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
