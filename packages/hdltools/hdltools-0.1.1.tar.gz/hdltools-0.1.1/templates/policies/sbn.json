@@ -1,0 +1,12 @@
+{
+    "resources": [
+        "share:sbn:schema:*"
+    ],
+    "subjects": [
+        "user:purchase"
+    ],
+    "privileges": [
+        "browse",
+        "open"
+    ]
+}

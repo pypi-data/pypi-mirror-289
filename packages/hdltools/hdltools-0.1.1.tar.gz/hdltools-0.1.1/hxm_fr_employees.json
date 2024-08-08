@@ -1,0 +1,59 @@
+{
+    "version": "1",
+    "id": "36023660-576d-442a-b514-f0dfc2dc4c5b",
+    "format": {
+        "provider": "parquet"
+    },
+    "configuration": {},
+    "partitionColumns": [],
+    "schema": {
+        "account_no": {
+            "name": "account_no",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+        },
+        "name": {
+            "name": "name",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+        },
+        "address": {
+            "name": "address",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+        },
+        "country": {
+            "name": "country",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+        },
+        "services": {
+            "name": "services",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+        },
+        "active": {
+            "name": "active",
+            "type": "boolean",
+            "nullable": true,
+            "metadata": {}
+        },
+        "updated": {
+            "name": "updated",
+            "type": "timestamp",
+            "nullable": true,
+            "metadata": {}
+        },
+        "comment": {
+            "name": "comment",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+        }
+    }
+}

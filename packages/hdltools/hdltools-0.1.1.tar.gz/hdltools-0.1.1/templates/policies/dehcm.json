@@ -1,0 +1,12 @@
+{
+    "resources": [
+        "share:hcm:schema:de:table:*"
+    ],
+    "subjects": [
+        "user:dehcm"
+    ],
+    "privileges": [
+        "browse",
+        "open"
+    ]
+}

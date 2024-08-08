@@ -1,0 +1,12 @@
+{
+    "resources": [
+        "share:hcm"
+    ],
+    "subjects": [
+        "user:dsadmin"
+    ],
+    "privileges": [
+        "browse",
+        "open"
+    ]
+}
