@@ -1,0 +1,8 @@
+setup.py
+quickweatherinfo/__init__.py
+quickweatherinfo/quickweatherinfo.py
+quickweatherinfo.egg-info/PKG-INFO
+quickweatherinfo.egg-info/SOURCES.txt
+quickweatherinfo.egg-info/dependency_links.txt
+quickweatherinfo.egg-info/requires.txt
+quickweatherinfo.egg-info/top_level.txt

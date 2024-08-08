@@ -1,0 +1,1 @@
+from quickweatherinfo.quickweatherinfo import Weather
