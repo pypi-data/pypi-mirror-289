@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+acadyne/__init__.py
+acadyne.egg-info/PKG-INFO
+acadyne.egg-info/SOURCES.txt
+acadyne.egg-info/dependency_links.txt
+acadyne.egg-info/requires.txt
+acadyne.egg-info/top_level.txt
+acadyne/tensores/__init__.py
+acadyne/tensores/dynamic_tensor.py
+acadyne/tensores/lorentz_tensor.py
+acadyne/tensores/set_tensor.py
+acadyne/test/__init__.py
