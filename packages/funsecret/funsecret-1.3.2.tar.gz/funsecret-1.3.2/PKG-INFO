@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: funsecret
+Version: 1.3.2
+Summary: 
+Author: farfun
+Author-email: 1007530194@qq.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fundrive (>=0.12.29,<0.13.0)
+Description-Content-Type: text/markdown
+
+# funsecret
+
+## 安装
+
+```bash
+pip install funsecret
+```
+
+## 写入或者更新
+
+```python
+from funsecret import read_secret, write_secret
+
+write_secret("your username", "wechat", "login", "username")
+read_secret("wechat", "login", "username", value="your username")
+```
+
+## 读取
+
+```python
+from funsecret import read_secret
+
+username = read_secret("wechat", "login", "username")
+password = read_secret("wechat", "login", "password")
+```
+
+## 快照
+
+快照功能需要单独安装
+
+```bash
+pip install funsecret_snapshot
+```
+
+目前只支持保存 lanzou
+
+### 保存
+
+```python
+from funsecret_snapshot import save_snapshot
+
+bin_id = '**'
+cipher_key = '******'
+security_key = "******"
+save_snapshot(bin_id, cipher_key, security_key)
+```
+
+### 读取
+
+```python
+from funsecret_snapshot import load_snapshot
+
+bin_id = '**'
+cipher_key = '******'
+security_key = "******"
+load_snapshot(bin_id, cipher_key, security_key)
+```
+
