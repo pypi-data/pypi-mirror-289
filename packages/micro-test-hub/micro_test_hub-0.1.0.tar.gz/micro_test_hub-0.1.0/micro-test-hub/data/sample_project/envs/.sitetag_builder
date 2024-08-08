@@ -1,0 +1,14 @@
+PUBSUB_EMULATOR_HOST=pub_sub_emulator:8085
+FIRESTORE_EMULATOR_HOST=firestore_emulator:8080
+STORAGE_EMULATOR_HOST=http://http_proxy:5050
+GOOGLE_CLOUD_PROJECT=your-project-id
+BOT_DETECTION_ENDPOINT=https://bot-detection.mediaownerscloud.com
+PROJECT_ID=your-project-id
+BUILD_SUCCESS_TOPIC_ID=projects/your-project-id/topics/moc-sitetag-builder
+CORE_LIBRARY_DEFAULT_VERSION=0.0.40
+EVENT_TRACKER_ENDPOINT=https://event-tracker.mediaownerscloud.com/
+EVENT_TRACKER_LIBRARY_DEFAULT_VERSION=1.0.4
+EVENT_TRACKER_LIBRARY_URL=https://event-tracker-library.mediaownerscloud.com/main/__VERSION__/pa_et.min.js
+IMOC_CORE_ARTIFACTS_BUCKET=project-agora-moc-sitetag-library-emulator
+SITETAG_STORE_BUCKET=prj-p-moc-a2c2-sitetags-emulator
+NODE_TLS_REJECT_UNAUTHORIZED=0
