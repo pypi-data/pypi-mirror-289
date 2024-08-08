@@ -1,0 +1,11 @@
+pgformat/__init__.py,sha256=bmw1EBqnA_fOUJsd6Z6C94nDDhz1iwInBXXSJQxHLIE,257
+pgformat/__main__.py,sha256=Huz0dExiaH0XTMLhfe3skkFD9-VH7ZUiWMbDR_J8TIY,28
+pgformat/cli.py,sha256=ckUVxbyigJV4iSOlsd6TIalpCdyPvqq5UXc1NVe9YsM,1297
+pgformat/grammar.lark,sha256=Tx2_5efnYuBCCyOvTnoL-jTv1ze0Zl9JdmMC1CzMNkE,2163
+pgformat/parser.py,sha256=Wx9yItgVlpKAwE8YcnhjGbrongNlWINjybBRKM04GGQ,5754
+pgformat/serializer.py,sha256=EuUAnx3I50XOTUVMogwI_PD6ouY9E2zPsssFUGOJyDk,1912
+pgformat-0.2.1.dist-info/entry_points.txt,sha256=rVpxzyYdT7qoQF41ZL8PZhLAWsSzZ3kqBJr1zX1EHm4,41
+pgformat-0.2.1.dist-info/LICENSE,sha256=4tiMpbdSaf3QBn6xKQpjyU1p29duzv3r2VWltnNVCKk,1061
+pgformat-0.2.1.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+pgformat-0.2.1.dist-info/METADATA,sha256=MJQBEIarqhf9wppmCEP36iEY-kUP4vXDSIxFvYZj9VI,3712
+pgformat-0.2.1.dist-info/RECORD,,
