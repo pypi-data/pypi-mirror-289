@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: team_comm_tools
+Version: 0.1.0
+Summary: A toolkit that generates a variety of features for team conversation data.
+Author-email: Xinlan Emily Hu <xehu@wharton.upenn.edu>, Yuxuan Zhang <yuxuanzh@seas.upenn.edu>
+License: MIT License
+        
+        Copyright (c) 2022 Xinlan Emily Hu
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://teamcommtools.seas.upenn.edu/
+Project-URL: Documentation, https://conversational-featurizer.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/Watts-Lab/team-comm-tools
+Keywords: computational social science,teams,communication,conversation,chat,analysis
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: chardet==3.0.4
+Requires-Dist: convokit==3.0.0
+Requires-Dist: emoji==1.7.0
+Requires-Dist: gensim==4.3.2
+Requires-Dist: nltk==3.8.1
+Requires-Dist: numpy==1.26.3
+Requires-Dist: pandas==2.2.2
+Requires-Dist: pyphen==0.14.0
+Requires-Dist: pytest==8.3.2
+Requires-Dist: pytest-runner==6.0.1
+Requires-Dist: python-dateutil==2.9.0
+Requires-Dist: pytz==2024.1
+Requires-Dist: regex==2023.12.25
+Requires-Dist: scikit-learn==1.5.1
+Requires-Dist: scipy==1.12.0
+Requires-Dist: sentence-transformers==2.3.1
+Requires-Dist: sentencepiece==0.2.0
+Requires-Dist: spacy==3.7.2
+Requires-Dist: spacy-legacy==3.0.12
+Requires-Dist: spacy-loggers==1.0.5
+Requires-Dist: textblob==0.17.1
+Requires-Dist: tokenizers==0.15.1
+Requires-Dist: torch==2.2.0
+Requires-Dist: torchaudio==2.2.0
+Requires-Dist: torchvision==0.17.0
+Requires-Dist: transformers==4.38.0
+Requires-Dist: tzdata==2023.3
+Requires-Dist: tzlocal==5.2
+
+[![Testing Features](https://github.com/Watts-Lab/team_comm_tools/workflows/Testing%20Features/badge.svg)](https://github.com/Watts-Lab/team_comm_tools/actions?query=workflow:"Testing+Features")
+[![GitHub release](https://img.shields.io/github/release/Watts-Lab/team_comm_tools?include_prereleases=&sort=semver&color=blue)](https://github.com/Watts-Lab/team_comm_tools/releases/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+
+# The Team Communication Toolkit
+The Team Communication Toolkit is a research project and Python package that aims to make it easier for social scientists to explore text-based conversational data.
+
+<div align="center">
+
+[![View - Home Page](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://teamcommtools.seas.upenn.edu/)
+
+[![View - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://conversational-featurizer.readthedocs.io/en/latest/ "Go to project documentation")
+
+</div>
+
+## Getting Started
+
+If you are new to this repository, welcome! Please follow the steps below to get started.
+
+### Step 1: Clone the Repo
+First, clone this repository into your local development environment: 
+
+```
+git clone https://github.com/Watts-Lab/team_comm_tools.git
+```
+
+### Step 2: Download Dependencies
+
+**Python Version**: We require >= `python3.10` when running this repository.
+
+We *strongly* recommend using a virtual environment to install the dependencies required for the project.
+
+Running the following script will install all required packages and dependencies:
+
+```
+./setup.sh
+```
+
+### Step 3: Run the Featurizer
+At this point, you should be ready to run the featurizer! Navigate to the `examples` folder, and use the following command:
+
+```
+python3 featurize.py
+```
+This calls the `featurizer.py` file, which declares a FeatureBuilder object for different dataset of interest, and featurizes them using our framework. The `featurize.py` file provides an end-to-end worked example of how you can declare a FeatureBuilder and call it on data; equally, you can replace this file with any file / notebook of your choosing, as long as you import the FeatureBuilder module.
+
+## Contributing Code and Automated Unit Testing
+If you would like to contribute to the repository, we have implemented a [Pull Request Template](https://github.com/Watts-Lab/team_comm_tools/blob/main/.github/pull_request_template.md) with a basic checklist that you should consider when adding code (e.g., improving documentation or developing a new feature).
+
+We have also implemented automated unit testing of all code (which runs upon every push to GitHub), allowing us to ensure that new features function as expected and do not break any previous features. The points below highlight key steps to using our automated test suite.
+
+1. Draft test inputs (`conversation_num`, `speaker`, `message`) and expected outputs for your feature. 
+
+- For example,  "This is a test message." should return 5 for `num_words` at the chat level (note that `conversation_num` and `speaker` have no effect on the ultimate result, so they can be chosen arbitrarily).
+- Testing a conversation level feature, say `discursive_diversity`, requires a series of chats rather than just one chat. For example, "This is a test message." (speaker 1), "This is a test message." (speaker 1), "This is a test message." (speaker 2), "This is a test message." (speaker 2), within the same conversation, should return 0. Note that the `conversation_num` for each new test should be distinct from all previous `conversation_num`, even if the feature being tested is different.
+
+2. Once you have test inputs, add each CHAT (and its associated conversation_num and speaker) as a separate row in either `test_chat_level.csv` or `test_conv_level.csv`, within `./tests/data/cleaned_data`. The format of the CSV is as follows: `id, conversation_num, speaker_nickname, message, expected_column, expected_value`, where `expected_column` is the feature name (i.e. num_words).
+
+3. Push all your changes to GitHub, including feature development and test dataset additions. Go under the "Actions" tab in the toolbar. Notice there's a new job running called "Testing-Features". A green checkmark at the conclusion of this job indicates all new tests have passed. A red cross means some test has failed. Navigate to the uploaded "Artifact" (near the bottom of the status page) for list of failed tests and their associated inputs/outputs.
+
+4. Debug and iterate!
