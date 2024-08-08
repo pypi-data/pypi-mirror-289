@@ -1,0 +1,11 @@
+mangapy/__init__.py,sha256=a8DhbJVpwutqp98GvKAMgHRobFtIHidojuvSeliPwEU,51
+mangapy/chapter_archiver.py,sha256=KAkg6ihZ5IgsSPtgSgggWkuwoc1SgUAaTdXvTvQ4Tn8,4527
+mangapy/cli.py,sha256=8BJuu19bSkmvvA5dfXaWQUIf66Gn5P1ntGnkWbwRDUs,9060
+mangapy/fanfox.py,sha256=dN-SpKOsSq5nz6bgodD4uMCyOkXtFKVRRXz9_i4fwg8,7412
+mangapy/mangarepository.py,sha256=BhHIidnMooKOHEzcbohLE2v4SWUZRjj2qF7ME46jmt0,994
+mangapy-2.0.4.dist-info/LICENSE,sha256=kIzjKSUn8JKr9oREmtWZ4QDedS01CCEe5YKETgcoE7w,1067
+mangapy-2.0.4.dist-info/METADATA,sha256=ZqZpF1D1CVhml9F-EYIvKy1av9YBpw4lsyZoSHrEYAc,2747
+mangapy-2.0.4.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+mangapy-2.0.4.dist-info/entry_points.txt,sha256=HPDyRew2Xa9BqA23JMZK8yz6vDTai1YbbUVJx0yVAZE,45
+mangapy-2.0.4.dist-info/top_level.txt,sha256=qOaq4ItBnb1_LXx6sYNSiO8UQ7IWi0d6c0S-vKDnBLs,8
+mangapy-2.0.4.dist-info/RECORD,,
