@@ -1,0 +1,60 @@
+[project]
+name = "digemail"
+version = "0.1.0"
+description = "Digest emails from rss"
+authors = [
+    { name = "reonokiy", email = "reonokiy@gmail.com" },
+]
+dependencies = [
+    "pydantic>=2.8.2",
+    "feedparser>=6.0.11",
+    "rich>=13.7.1",
+    "confz>=2.0.1",
+    "redmail>=0.6.0",
+    "jinja2>=3.1.4",
+    "typer>=0.12.3",
+    "langchain-openai>=0.1.20",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+dev = "python -m src.digemail"
+check = "ruff check"
+"check:fix" = "ruff check --fix"
+"check:watch" = "ruff check --watch"
+format = "ruff format"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.5.6",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    "A",
+    "PLC",
+    "PLE",
+    "PLW",
+    "I",
+]
+ignore = []
+fixable = [
+    "ALL",
+]
+unfixable = []
