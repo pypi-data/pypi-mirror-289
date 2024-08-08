@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+pyparseit/__init__.py
+pyparseit/cli.py
+pyparseit/code_snippet.py
+pyparseit/exceptions.py
+pyparseit/parser.py
+pyparseit/utils.py
+pyparseit.egg-info/PKG-INFO
+pyparseit.egg-info/SOURCES.txt
+pyparseit.egg-info/dependency_links.txt
+pyparseit.egg-info/entry_points.txt
+pyparseit.egg-info/top_level.txt
