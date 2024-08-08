@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: Housing-Forecast
+Version: 2.0
+Summary: Personal group work project for a personal project
+Home-page: https://github.com/NINJAGAMING107/ai_project
+Author: Sidharth S
+Author-email: sidharthsnair.8a@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
+# Housing Forecast Package
+
+Personal group work project for a personal project.
+
+## Installation
+
+You can install this package using pip:
+
+```bash
+pip install Housing_Forecast
