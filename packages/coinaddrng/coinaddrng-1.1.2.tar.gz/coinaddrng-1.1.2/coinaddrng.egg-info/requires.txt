@@ -1,0 +1,10 @@
+attrs<=22.1.0,>=17.4.0
+base58check>=1.0.1
+bech32
+blake256
+cbor
+crc16
+groestlcoin_hash2
+pycryptodome
+zope
+zope.interface>=4.4.3

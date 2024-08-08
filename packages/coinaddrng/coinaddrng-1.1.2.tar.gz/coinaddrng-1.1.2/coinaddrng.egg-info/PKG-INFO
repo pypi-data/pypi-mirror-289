@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: coinaddrng
+Version: 1.1.2
+Summary: A crypto-currency address inspection/validation library.
+Home-page: https://github.com/joeblackwaslike/coinaddr
+Download-URL: https://github.com/joeblackwaslike/coinaddr/tarball/v1.1.2
+Author: Joe Black
+Author-email: me@joeblack.nyc
+Maintainer: Joe Black
+Maintainer-email: me@joeblack.nyc
+License: MIT
+Keywords: bitcoin,litecoin,altcoin,ethereum,address,validation,inspection
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Requires-Dist: attrs<=22.1.0,>=17.4.0
+Requires-Dist: base58check>=1.0.1
+Requires-Dist: bech32
+Requires-Dist: blake256
+Requires-Dist: cbor
+Requires-Dist: crc16
+Requires-Dist: groestlcoin_hash2
+Requires-Dist: pycryptodome
+Requires-Dist: zope
+Requires-Dist: zope.interface>=4.4.3
