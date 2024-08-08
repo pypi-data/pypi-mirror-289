@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mrweb
+Version: 1.9
+Summary: Join @mrwebservice For API  Mrweb Library is python library to use easy channel api
+Author: vboxvm512
+Author-email: vboxvm512@gmail.com
+License: MIT
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: urllib3
+
+Built-in functions, exceptions, and other objects.
+
+Noteworthy: None is the `nil' object; Ellipsis represents `...' in slices.
