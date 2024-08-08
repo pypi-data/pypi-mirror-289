@@ -1,0 +1,15 @@
+eurostatpy/EuroStatPy.py,sha256=o_HbuFaNFVPfvwDWCuctxMaIT9eihTxvSzoZcvGAgoY,4456
+eurostatpy/__init__.py,sha256=EwT_6S_V-VdJUk6ZgIRpVpo1ndNBwq0kW-88EkgoZcY,60
+eurostatpy/jsonstatpy/__init__.py,sha256=yJ19H29h57jWo02Cxb-h-RfcDJPM8rxn3LXASpTfNTI,355
+eurostatpy/jsonstatpy/collection.py,sha256=ySbHQ_3IqOt5P0A_quZZjg0Jdb9siadDNUHfU9bFFLQ,4911
+eurostatpy/jsonstatpy/dataset.py,sha256=o4rqM4OhMWcFJ2JvwyYTXNTdIpAImt8AN0sDwtYA7gE,27923
+eurostatpy/jsonstatpy/dimension.py,sha256=3YzVDZglBpt-T8EzinLB_Xbm0YhJ3q-psWh9ugQ9Mdo,15031
+eurostatpy/jsonstatpy/exceptions.py,sha256=LuhwpQf9iWvDnKzy7BGsVzlVVbkIBlkMpBUafrlHjBg,213
+eurostatpy/jsonstatpy/schemas.py,sha256=sDQNYWyGqmjpFOdHHMC49gLI-rgLYnSXk1-zT1-BHtE,1127
+eurostatpy/jsonstatpy/utility.py,sha256=_r7TgrF7hLjuhxd3z6kVUv0wpb5aXPkHLsLBrBke2Zk,217
+eurostatpy/jsonstatpy/value.py,sha256=xZ1ZO0J3pM9JOw6hEWu4zh-kwf53E7WxnIglLkKcJds,202
+eurostatpy-0.5.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+eurostatpy-0.5.1.dist-info/METADATA,sha256=zDeBbylaxcWxZcoj3DeLAz_KqIPfLukT_8A5aZ5N2fE,903
+eurostatpy-0.5.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+eurostatpy-0.5.1.dist-info/top_level.txt,sha256=whC_0Yw1uvS3sAZzd2RKvDwm2oohP9jIYSlRzY4FRA8,11
+eurostatpy-0.5.1.dist-info/RECORD,,
