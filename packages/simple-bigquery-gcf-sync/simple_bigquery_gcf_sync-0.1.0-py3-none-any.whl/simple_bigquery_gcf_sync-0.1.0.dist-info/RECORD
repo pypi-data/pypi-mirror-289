@@ -1,0 +1,7 @@
+bigquery_connector/__init__.py,sha256=SWpqETZy32n7Jey9i0SPWIEA91tKGiOHniLvKx0laKk,41
+bigquery_connector/connector.py,sha256=cUMUi3Ko5N4SrKf9lLTVXSoXg6orEFr2L_xOKNMVUZs,3499
+simple_bigquery_gcf_sync-0.1.0.dist-info/LICENSE,sha256=ugqz8yqeO3_tVW3iV38OqBgn9BP5JS-LRkJD-L9sMbs,1067
+simple_bigquery_gcf_sync-0.1.0.dist-info/METADATA,sha256=va6HmOkX2CkHuukZR4qB_2EBxXw71Eq5po2cyd1wWNg,2500
+simple_bigquery_gcf_sync-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+simple_bigquery_gcf_sync-0.1.0.dist-info/top_level.txt,sha256=ihm-_yCX2o6OBWccyXmkhL041QYX7VMZwSzXsHWVNaI,19
+simple_bigquery_gcf_sync-0.1.0.dist-info/RECORD,,
