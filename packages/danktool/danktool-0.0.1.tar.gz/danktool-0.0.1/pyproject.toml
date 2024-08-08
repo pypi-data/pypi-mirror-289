@@ -1,0 +1,32 @@
+[project]
+name = "danktool"
+description = "Multipurpose Python Package"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+readme = "README.md"
+keywords = ["danktool", "tool", "dank", "multipurpose", "package"]
+authors = [
+    { name = "lndrdev" }
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dynamic = ["dependencies", "version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "danktool.__version__"}
+dependencies = {file = "requirements.txt"}
+
+[project.urls]
+Website = "https://lndrdev.xyz"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

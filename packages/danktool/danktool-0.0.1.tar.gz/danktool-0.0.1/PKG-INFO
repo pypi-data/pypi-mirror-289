@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: danktool
+Version: 0.0.1
+Summary: Multipurpose Python Package
+Author: lndrdev
+License: MIT
+Project-URL: Website, https://lndrdev.xyz
+Keywords: danktool,tool,dank,multipurpose,package
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+Requires-Dist: colorama
+Requires-Dist: requests
+Requires-Dist: pillow
+
+# 🚨 DankTool 🚨
+
+## Installation
+```
+pip install danktool
+```
