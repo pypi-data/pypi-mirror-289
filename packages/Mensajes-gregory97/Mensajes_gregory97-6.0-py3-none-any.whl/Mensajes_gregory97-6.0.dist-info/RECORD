@@ -1,0 +1,12 @@
+mensajes/__init__.py,sha256=-8H5W0Sre1mNWvNSdpdOYRdi5LSaVou3nOvKVscdAa8,37
+mensajes/adios/__init__.py,sha256=Vx5y-gnL_hUYdZJIb8pQLt6byGFyO6KjJms4xK9QLOQ,46
+mensajes/adios/despedidas.py,sha256=rZUMhZYLWM4xlthKXN7ODTGNxAxtBCDiJVwcjc7mnEg,197
+mensajes/hola/__init__.py,sha256=3XQIgStjjAkG5Gcap8VHMbJADF5ElVCicEE73WIHsr8,45
+mensajes/hola/saludos.py,sha256=mKpCcwf8rpuZshI-G4iRKjJhG8u2tf4TG1tEpOL3VNw,394
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_hola.py,sha256=j8nWvGJqj5Z0SdKkHNc3a-rHiwu5W75qcPANswVmc1k,284
+Mensajes_gregory97-6.0.dist-info/LICENSE,sha256=QzRg4rW65sHMWid_PBV_NHQ5gm2wuQIWsmy5nsmm7bg,1081
+Mensajes_gregory97-6.0.dist-info/METADATA,sha256=-RZiZEh3pMgJ5qFKfkrMJl0aL6NYBUEqHEFpe8pFGWU,725
+Mensajes_gregory97-6.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+Mensajes_gregory97-6.0.dist-info/top_level.txt,sha256=gD40JdIxiaPRvMl4iCu3Edq1ctVrOdqjON-Ms9kPSQk,15
+Mensajes_gregory97-6.0.dist-info/RECORD,,
