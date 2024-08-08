@@ -1,0 +1,10 @@
+codemie_client/__init__.py,sha256=2k_ZeqU7FvqZMFqGm-EYRiV98uxUxmiy5wXygvIobPU,13
+codemie_client/client.py,sha256=quxYCA_HHSPVlRY2xLxTDM2pcS4sqyFbkw376eqAxps,1668
+codemie_client/models.py,sha256=iLNlf7dEyl7sE_T71Cjhh0kh6kfeK8LyOc8ngIYkuMw,3032
+codemie_client/service/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codemie_client/service/assistants.py,sha256=BcxFC1mnzgwn6ur-OQjKv81UEowjuccIxmHFMrNwkWE,2074
+codemie_client/service/auth.py,sha256=Ygn32kO-cp3x93kpBwVYOjIJiXuVigVSst79TnE1wvs,2089
+codemie_client-0.1.11.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+codemie_client-0.1.11.dist-info/METADATA,sha256=ByRnYg69JeeRyRA8JVjGRXF7Mf0_9wezpt3nLbC3fbE,1446
+codemie_client-0.1.11.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+codemie_client-0.1.11.dist-info/RECORD,,
