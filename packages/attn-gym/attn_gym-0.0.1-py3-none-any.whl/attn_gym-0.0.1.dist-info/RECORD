@@ -1,0 +1,15 @@
+attn_gym/__init__.py,sha256=q1pnG6UQoynPcbB1qTMo8ELPK_I-Cc_M4EBnkXBAvUI,54
+attn_gym/utils.py,sha256=LzC68QUYFw5RFNRKGZ9kabZBMk9vjZD2TpXmKtQf2cI,5381
+attn_gym/masks/__init__.py,sha256=gm-mpMJAsaJ70bjIJN-8QJB_Qb36m4X1bdkkD7VkVWk,236
+attn_gym/masks/causal.py,sha256=_fxaMeGgIAy1u2wNwwB6-9ZuW_H6vJ8CeLWpyldUVbQ,811
+attn_gym/masks/document_mask.py,sha256=Fm3Lq-mD5NlGYkJyGBBMvuMeSN9IvxANowVWxYME-oo,3563
+attn_gym/masks/flamingo.py,sha256=RmjixPyPi8pEzcrWO8y-8Ha4B84nQKmWDlGShrJ5Okg,2843
+attn_gym/masks/prefix_lm.py,sha256=e7262LnzSnS4MsFhW7g-JtX-Hkz8WD_9uPTorpL1AFw,1637
+attn_gym/masks/sliding_window.py,sha256=T1blvMVX_BFykNqzY6lC4qM1amzCnzPDpTbeJ6IZuRQ,1580
+attn_gym/mods/__init__.py,sha256=T1vRoAx9ZyLZJ_qeWXa2kw2h4EyTY3RDomp69j6pIMA,112
+attn_gym/mods/alibi.py,sha256=-CtmZRqKssopE0pVoxWtkRibwCcIu5sGNSygFHcK84E,1450
+attn_gym/mods/softcapping.py,sha256=C5N14NUOhTobuOCGGShsH9zTeFButafjfEoQ3EINv1I,2802
+attn_gym-0.0.1.dist-info/METADATA,sha256=_wWcXFuwj8tlFtoZbYZ0u_BMiu8StdQ5-Ialc5mkbss,4679
+attn_gym-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+attn_gym-0.0.1.dist-info/licenses/LICENSE,sha256=zxEbkIPIQLB5X1Fmmc209oHgBh2TxbdupicAi0GVK2I,1501
+attn_gym-0.0.1.dist-info/RECORD,,
