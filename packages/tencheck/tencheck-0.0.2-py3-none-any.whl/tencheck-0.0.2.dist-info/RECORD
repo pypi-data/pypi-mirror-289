@@ -1,0 +1,13 @@
+tencheck/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencheck/checks.py,sha256=OCQgPwYtlDGfPBYOKZSniNrT0faxyHiZy-Oi4Ch1EDQ,488
+tencheck/examples.py,sha256=3bkPVzCk8TkIxbXBfdQ8yqLHzhZULpHJwOkzskbd9Ro,2096
+tencheck/harness.py,sha256=1_LjOOqQJbctJ0hv2f0wKfVfr_8PVu0u5pfhVNReHUw,2080
+tencheck/input.py,sha256=f7Spmg0h2oTv0nGpiQjMec2q0v-F-qdHv4vh2B91h44,2889
+tencheck/loss.py,sha256=vEQUEFJ8wN9V5vJtNn8VSVNMCSYlZFxnFlWBGnLMXcI,1100
+tencheck/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencheck/ttypes.py,sha256=pW9Kx5VOpOB3MorwWOSYBSv5JH-EyyTFRp6bntp5_io,358
+tencheck-0.0.2.dist-info/LICENSE,sha256=b95vdt-ECnG39FFI_4A_tkh2_vWSDXU2kxA1tUj7zkM,1062
+tencheck-0.0.2.dist-info/METADATA,sha256=gUgpPn-6O73jmqB8hGrbIUmA4NGogrYJ9P8kYr7JQhQ,2577
+tencheck-0.0.2.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+tencheck-0.0.2.dist-info/top_level.txt,sha256=I8MbfhI91BLEUNn7FJV7vt5-FfuU8zA_tGr_xU0FXdg,9
+tencheck-0.0.2.dist-info/RECORD,,
