@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: your_model_package
+Version: 1.0.0
+Summary: A package for your DL model
+Home-page: https://github.com/MM21B038/my_first_trial_model
+Author: Manav MM21B038
+Author-email: mm21b038@smail.iitm.ac.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow
+Requires-Dist: numpy
+Requires-Dist: Pillow
+
