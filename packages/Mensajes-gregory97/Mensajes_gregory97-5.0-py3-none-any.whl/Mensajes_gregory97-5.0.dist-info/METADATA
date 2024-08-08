@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: Mensajes-gregory97
+Version: 5.0
+Summary: Un paquete para saludar y despedir
+Home-page: https://www.gregory.dev
+Author: Gregory Ramirez
+Author-email: hola@gregory.dev
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=2.0.1
+
+# Mensajes
+
+El paquete de mensajerÃ­a para pruebas de Gregory Ramirez
