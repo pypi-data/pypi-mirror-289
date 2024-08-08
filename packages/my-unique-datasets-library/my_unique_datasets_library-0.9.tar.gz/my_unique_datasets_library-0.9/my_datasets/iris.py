@@ -1,0 +1,51 @@
+import os
+import pandas as pd
+from PIL import Image
+import tensorflow as tf
+from pkg_resources import resource_filename
+
+def load_dataset(dataset_name, as_tensorflow_dataset=False):
+    """
+    Load a specified dataset (tabular or image) from the library's data folder.
+    :param dataset_name: Name of the dataset (e.g., 'iris' or 'flipkart').
+    :param as_tensorflow_dataset: Whether to return images as a TensorFlow dataset.
+    :return: DataFrame for tabular data, TensorFlow dataset for images, or a list of images.
+    """
+    # Determine the base data path
+    data_dir = resource_filename(__name__, 'data')
+    
+    # Check if it's a tabular dataset (CSV file)
+    csv_path = os.path.join(data_dir, f'{dataset_name}.csv')
+    if os.path.exists(csv_path):
+        return pd.read_csv(csv_path)
+    
+    # Check if it's an image dataset (directory)
+    image_dir = os.path.join(data_dir, dataset_name)
+    if os.path.exists(image_dir) and os.path.isdir(image_dir):
+        image_paths = [os.path.join(image_dir, img_name) for img_name in os.listdir(image_dir) if img_name.endswith(('.jpg', '.png'))]
+        
+        if as_tensorflow_dataset:
+            # Load images as TensorFlow dataset
+            def load_image(img_path):
+                img = tf.io.read_file(img_path)
+                img = tf.image.decode_image(img, channels=3)
+                img = tf.image.resize(img, [224, 224])  # Resize images if needed
+                img = tf.cast(img, tf.float32) / 255.0  # Normalize to [0, 1] range
+                return img
+            
+            image_ds = tf.data.Dataset.from_tensor_slices(image_paths)
+            image_ds = image_ds.map(load_image)
+            return image_ds
+        else:
+            # Load images as PIL objects
+            images = [Image.open(img_path) for img_path in image_paths]
+            return images
+    
+    # If the dataset is not found
+    available_datasets = list_available_datasets()
+    print(f"Dataset '{dataset_name}' was not found.")
+    print("Available datasets:")
+    for dataset in available_datasets:
+        print(f" - {dataset}")
+    return None
+
