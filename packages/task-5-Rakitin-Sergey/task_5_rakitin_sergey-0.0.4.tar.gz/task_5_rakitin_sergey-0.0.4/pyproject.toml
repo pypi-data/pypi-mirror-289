@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+
+name = "task_5_Rakitin_Sergey"
+version = "0.0.4"
+authors = [{name="Rakitin Sergey", email="dronyx@inbox.ru"}]
+description = "A package for counting unique symbols in a string"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [ "Programming Language :: Python :: 3",
+                "Operating System :: OS Independent" ]
+keywords = ["unique", "symbols", "count"]
+dependencies = []
+
+
+[project.urls]
+
+Homepage = "https://git.foxminded.ua/rakitin-sergey/task_5"
+
+
+# Секция [tool.hatch.build] определяет настройки сборки, специфичные для hatch
+[tool.hatch.build]
+# Источники, которые нужно включить в дистрибутив (все файлы из директории src)
+sources = ["src"]
+# Включаем только директорию с основным кодом пакета
+only-include = ["src/task_5_Rakitin_Sergey"]
+
+# Секция [tool.hatch.build.targets.wheel] определяет настройки для сборки wheel-пакета
+[tool.hatch.build.targets.wheel]
+# Переопределяем пути для включения файлов из директории src
+sources = ["src"]
+
+
