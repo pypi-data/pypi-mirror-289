@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+my_custom_messagebox.egg-info/PKG-INFO
+my_custom_messagebox.egg-info/SOURCES.txt
+my_custom_messagebox.egg-info/dependency_links.txt
+my_custom_messagebox.egg-info/requires.txt
+my_custom_messagebox.egg-info/top_level.txt
