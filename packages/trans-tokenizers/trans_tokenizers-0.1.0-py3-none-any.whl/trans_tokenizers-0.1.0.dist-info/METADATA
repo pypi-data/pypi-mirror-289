@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: trans-tokenizers
+Version: 0.1.0
+Summary: Token translation for language models.
+Author-email: Pieter Delobelle <pieter.delobelle@kuleuven.be>, François Remy <Francois.Remy@UGent.be>
+License: MIT License
+        
+        Copyright (c) 2024, Pieter Delobelle, François Remy
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://github.com/LAGoM-NLP/transtokenizer
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch >=1.9.0
+Requires-Dist: transformers >=4.0.0
+Requires-Dist: datasets >=1.0.0
+Requires-Dist: tqdm >=4.60.0
+Requires-Dist: numpy >=1.19.2
+
+# transtokenizers
+
+
+[![pypi](https://img.shields.io/pypi/v/trans-tokenizers.svg)](https://pypi.org/project/trans-tokenizers/)
+[![python](https://img.shields.io/pypi/pyversions/trans-tokenizers.svg)](https://pypi.org/project/trans-tokenizers/)
+[![Build Status](https://github.com/ipieter/transtokenizer/actions/workflows/dev.yml/badge.svg)](https://github.com/ipieter/transtokenizer/actions/workflows/dev.yml)
+[![codecov](https://codecov.io/gh/ipieter/transtokenizer/branch/main/graphs/badge.svg)](https://codecov.io/github/ipieter/transtokenizer)
+
+
+
+Token translation for language models
+
+
+* Documentation: <https://ipieter.github.io/transtokenizer>
+* GitHub: <https://github.com/LAGoM-NLP/transtokenizer>
+* PyPI: <https://pypi.org/project/trans-tokenizers/>
+* Licence: MIT
+
+
+## Features
+
+* TODO
+
+## Usage
+
+```python
+from transtokenizers import transform_model
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+source_tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1")
+target_tokenizer = AutoTokenizer.from_pretrained("pdelobelle/robbert-2023-dutch-base")
+
+source_model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1")
+
+target_model = transform_model(source_model, source_tokenizer=source_tokenizer, target_tokenizer=target_tokenizer)
+```
+## 
+
+## Credits
+If this repo was useful to you, please cite the following paper
+
+```bibtex
+
+```
