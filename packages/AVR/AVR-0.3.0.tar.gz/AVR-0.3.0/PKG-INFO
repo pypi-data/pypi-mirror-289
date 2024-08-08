@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: AVR
+Version: 0.3.0
+Summary: AVR is a voice anti-spoofing system that uses deep learning models to detect spoofed audio files.
+Home-page: https://github.com/AshenPumpkin/AI-Voice-Recognition
+Author: Ynon Friedman & Guy Ben Ari
+Author-email: ynonfridman@gmail.com, Gbenari2@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# AI Voice Recognize (AVR) 🎙️
+Usage Instructions
+    download the .tar.gz from latest release release OR use pip install AVR
+    in your project use import AVR with your imports
+    in your code you can now call AVR.query_function(file_path). a function which returns a boolean value
+    make sure to use flush() after you finish your use of the AI models for the runtime. 
+
+common bugs and issues
+    if you encounter an error during import about a missing dll or being unable to get it's dependencies: run
+    'pip uninstall torch' followed by 'pip install torch==2.3.0' in your terminal/CMD
+
+Contact
+
+For inquiries or collaboration:
+
+    Guy Ben Ari: gbenari2@gmail.com
+    Ynon Friedman: ynonfridman@gmai.com
