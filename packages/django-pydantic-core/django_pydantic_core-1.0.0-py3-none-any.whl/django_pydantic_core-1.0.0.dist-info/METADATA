@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: django-pydantic-core
+Version: 1.0.0
+Summary: Pydantic support for Django and Django Rest Framework
+Author: Vijay Tiwari
+Author-email: rsvijaytiwari@gmail.com
+Requires-Dist: django
+Requires-Dist: pydantic
+Requires-Dist: djangorestframework
+

@@ -1,0 +1,7 @@
+django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django/pydantic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django/pydantic/decorators.py,sha256=jeAWk4EK60HZMd_bDRyZrWHAJ9ohW3gItuounmJh9L0,620
+django_pydantic_core-1.0.0.dist-info/METADATA,sha256=XxagTs03O7-4WSWeMZeqeMbjurFBY7QDVRDrZCOi0qQ,268
+django_pydantic_core-1.0.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+django_pydantic_core-1.0.0.dist-info/top_level.txt,sha256=V_goijg9tfO20ox_7os6CcnPvmBavbxu46LpJiNLwjA,7
+django_pydantic_core-1.0.0.dist-info/RECORD,,
