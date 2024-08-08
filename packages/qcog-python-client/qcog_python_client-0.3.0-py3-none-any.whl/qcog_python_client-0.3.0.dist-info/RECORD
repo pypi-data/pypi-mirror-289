@@ -1,0 +1,14 @@
+qcog_python_client/__init__.py,sha256=RT3LB8_jAM4ZO80p53EaKTsDhMubbIFsPvNeOiECAXE,361
+qcog_python_client/__version__.py,sha256=Jk2iAU7m-7Vx9XV1TtdD9ZoJraIncDq_4_Wd-qtUotg,411
+qcog_python_client/_jsonable_parameters.py,sha256=JpBaRa3bmf275jErcK53FuB2yz2uGF35WYr1y0GfyjQ,2279
+qcog_python_client/client.py,sha256=8zcf_83ZovGPXEqLj9wVEi8ZTCHxduvllY2rUwmNVCM,9310
+qcog_python_client/log.py,sha256=03fHhQh9Pq1hewXYnX48mzzymEo2YUjDtM0lf-6iXPI,892
+qcog_python_client/qcog.py,sha256=g3fchI6fHnGUpxwCxGUHToETwRk1iopFHgWixvul84w,34731
+qcog_python_client/schema/__init__.py,sha256=Zptk7DmueB3Qbiz4b4d-pN3krcdHcYqqCv4q0kXLBQY,836
+qcog_python_client/schema/common.py,sha256=hif8ZizuFBzFw_r0RHLJGVAqQpzD0Gvghmi0-CsXxqs,4206
+qcog_python_client/schema/generated_schema/models.py,sha256=LUgeq0Haxd2MQf18EKiQup7kQT1uIWLlDtoFavsYsJY,23981
+qcog_python_client-0.3.0.dist-info/LICENSE,sha256=jbL94Ei-VCDGmg6k42pB4fkPsQKJUjSBmpJxsXmtYto,1302
+qcog_python_client-0.3.0.dist-info/METADATA,sha256=AUqymrCnGJNm3NDGJftXdI-1zkSW5hCCU0aXWXmPb-8,2413
+qcog_python_client-0.3.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+qcog_python_client-0.3.0.dist-info/top_level.txt,sha256=QqM55o_azBwGKz7Xa_rMSIF05517G1GXpcikF0qHQUw,19
+qcog_python_client-0.3.0.dist-info/RECORD,,
