@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: py-abu
+Version: 1.0.8
+Summary: abu API
+Home-page: https://github.com/ChrisYP/abu
+Author: Chris
+Author-email: 10512@qq.com
+License: MIT
+Keywords: abu
+Platform: all
+
+Private API for abu
