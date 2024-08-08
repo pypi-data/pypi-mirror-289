@@ -1,0 +1,7 @@
+setup.py
+upper_102218038/__init__.py
+upper_102218038/lo2up.py
+upper_102218038.egg-info/PKG-INFO
+upper_102218038.egg-info/SOURCES.txt
+upper_102218038.egg-info/dependency_links.txt
+upper_102218038.egg-info/top_level.txt
