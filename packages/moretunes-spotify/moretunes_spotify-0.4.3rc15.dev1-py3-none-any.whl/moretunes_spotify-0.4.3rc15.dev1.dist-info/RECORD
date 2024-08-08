@@ -1,0 +1,14 @@
+moretunes/spotify/__init__.py,sha256=uzHcY0Hsd-kFNjdexhF9_3Qy4-dBE4TpyI5Q1xvCcK8,395
+moretunes/spotify/enhanced.py,sha256=I4CTtxTLZaOloPxYP7S1lOFTFDI4mrWTFs8efsmJYhQ,2191
+moretunes/spotify/exceptions.py,sha256=WyIM3FxuEVXKZSc5XNMZ-8HlkltKG0ec93E9gPzcPww,164
+moretunes/spotify/utils.py,sha256=WFSUJeZ44ZhUx955fsxNHcBGPROSvwdfyYqOuy9ZP3g,1491
+moretunes/spotify/web.py,sha256=v9gyLEu0d4DUL6_CbkQ_VHhHyggcpoG1W-R_O1cdMmc,8472
+moretunes/spotify/tokens/__init__.py,sha256=vAChtllLpnw-jQXz5tACG-rwOiv1OjokmeaeqY_KsK4,198
+moretunes/spotify/tokens/anon.py,sha256=DDgRF48wrP8ogS9FiIC3wRZWE7kHxL4BcyukJtKRINg,2382
+moretunes/spotify/tokens/extract.py,sha256=zFG_nNlQ8LsdRSxd9TvZuE7WjbbMrlekYbIQob3xFz8,974
+moretunes/spotify/tokens/web_user.py,sha256=ij-Rh_Vi4FkH3bZNiITxwpDgeBTSGg8c0VXgoGAoSxM,1361
+moretunes_spotify-0.4.3rc15.dev1.dist-info/LICENSE,sha256=uZbdGv3MGgE_bVZp69FGpYSwjDKZ9Dfh_RXsmIkIte0,1067
+moretunes_spotify-0.4.3rc15.dev1.dist-info/METADATA,sha256=-s8F09iARXYM8DEgCqOuFe2fzXUlKeNlk1NQcOCb1Hs,3008
+moretunes_spotify-0.4.3rc15.dev1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+moretunes_spotify-0.4.3rc15.dev1.dist-info/top_level.txt,sha256=bVNI2Xn-2Ly8ZFDIWqfvjPcYsM0_sdZt3KQOzT8aZlM,10
+moretunes_spotify-0.4.3rc15.dev1.dist-info/RECORD,,
