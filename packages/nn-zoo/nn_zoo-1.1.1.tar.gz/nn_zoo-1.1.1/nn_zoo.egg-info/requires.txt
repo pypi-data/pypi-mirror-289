@@ -1,0 +1,15 @@
+torch
+torchvision
+lightning
+wandb
+torchinfo
+
+[dev]
+pytest
+ruff
+
+[publish]
+setuptools>=61
+wheel
+setuptools_scm[toml]>=6.0.1
+build
