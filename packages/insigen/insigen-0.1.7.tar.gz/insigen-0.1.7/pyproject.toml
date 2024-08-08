@@ -1,0 +1,36 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "insigen"
+version = "0.1.7"
+description = "Generates Insights from text pieces such as Documents or Articles"
+readme = "README.md"
+authors = [{ name = "Aaryan Tyagi", email = "tyagiaaryan00@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["NLP", "Topic Modelling", "Text analysis", "Summary Extraction", "Keyword Extraction"]
+
+dependencies = [
+    "pandas",
+    "numpy",
+    "gensim",
+    "wordcloud",
+    "nltk",
+    "sentence-transformers",
+    "networkx",
+    "PyPDF2",
+    "beautifulsoup4",
+    "requests",
+    'tomli; python_version < "3.11"',
+]
+requires-python = ">=3.11"
+
+[project.urls]
+Homepage = "https://github.com/4RCAN3/insigen"
+Issues = "https://github.com/4RCAN3/insigen/issues"

@@ -1,0 +1,13 @@
+pandas
+numpy
+gensim
+wordcloud
+nltk
+sentence-transformers
+networkx
+PyPDF2
+beautifulsoup4
+requests
+
+[:python_version < "3.11"]
+tomli
