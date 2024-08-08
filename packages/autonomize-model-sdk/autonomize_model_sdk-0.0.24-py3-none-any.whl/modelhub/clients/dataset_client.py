@@ -1,0 +1,260 @@
+""" Client for interacting with datasets. """
+import os
+from urllib.parse import urlparse
+from typing import List, Optional, Dict, Any
+from datasets import load_dataset, DatasetDict
+from ..core import BaseClient
+from ..utils import setup_logger
+
+logger = setup_logger(__name__)
+
+class DatasetClient(BaseClient):
+    """Client for interacting with datasets."""
+
+    def __init__(self, base_url=None, client_id=None, client_secret=None, token=None):
+        """
+        Initialize the DatasetClient.
+
+        Args:
+            base_url (str): The base URL of the Dataset server.
+            client_id (str, optional): The client ID for authentication. Defaults to None.
+            client_secret (str, optional): The client secret for authentication. Defaults to None.
+            token (str, optional): The access token for authentication. Defaults to None.
+        """
+        super().__init__(base_url, client_id, client_secret, token)
+
+    def list_datasets(self) -> List[Dict[str, Any]]:
+        """
+        List all available datasets.
+
+        Returns:
+            List[Dict[str, Any]]: A list of available datasets.
+        """
+        response = self.get("datasets")
+        return response["data"]
+
+    def get_dataset_by_name(self, dataset_name: str) -> Dict[str, Any]:
+        """
+        Get a dataset by name.
+
+        Args:
+            dataset_name (str): The name of the dataset.
+
+        Returns:
+            Dict[str, Any]: The dataset.
+        """
+        response = self.get(f"datasets/{dataset_name}")
+        return response["data"]
+        
+    
+    def get_dataset_versions(self, dataset_id: str) -> List[Dict[str, Any]]:
+        """
+        Get all versions of a specific dataset.
+
+        Args:
+            dataset_id (str): The ID of the dataset.
+
+        Returns:
+            List[Dict[str, Any]]: A list of dataset versions.
+        """
+        response = self.get(f"datasets/{dataset_id}")
+        return response["data"]["versions"]
+
+    def get_signed_url(self, dataset_id: str, file_path: str, is_read: bool = True) -> str:
+        """
+        Get a signed URL for a file.
+
+        Args:
+            file_path (str): The path to the file.
+            is_read (bool): Whether the URL is for reading. Defaults to True.
+
+        Returns:
+            str: The signed URL.
+        """
+        endpoint = f"datasets/{dataset_id}/signedurl/read" if is_read else f"datasets/{dataset_id}/signedurl/upload"
+        response = self.post(endpoint, json={"file_path": file_path})
+        return response["data"]["signedUrl"]
+
+    def load_dataset(self, dataset_name: str, version: Optional[int] = None, split: Optional[str] = "train") -> DatasetDict:
+        """
+        Load a dataset by name and version.
+
+        Args:
+            dataset_name (str): The name of the dataset.
+            version (int, optional): The version of the dataset. Defaults to None.
+            split (str, optional): The split to load (e.g., "train", "validation"). Defaults to "train".
+
+        Returns:
+            DatasetDict: The loaded dataset.
+        """
+        dataset = self.get_dataset_by_name(dataset_name)
+        versions = dataset["versions"]
+        if version:
+            version_data = next((v for v in versions if v["version_id"] == version), None)
+        else:
+            version_data = versions[0]  # Default to latest version
+
+        if not version_data:
+            raise ValueError(f"Version {version} not found for dataset {dataset_name}.")
+
+        # Collect file URLs
+        file_urls = [self.get_signed_url(dataset_id=dataset["id"], file_path=file["file_path"]) for file in version_data["files"]]
+
+        # Load dataset using the `datasets` library
+        return self._load_dataset_by_format(file_urls, split)
+    
+    def load_datasets_by_folders(self, dataset_name: str, version: Optional[int] = None, split: Optional[str] = "train") -> Dict[str, DatasetDict]:
+        """
+        Load all folders as separate datasets.
+
+        Args:
+            dataset_name (str): The name of the dataset.
+            version (int, optional): The version of the dataset. Defaults to None.
+            split (str, optional): The split to load (e.g., "train", "validation"). Defaults to "train".
+
+        Returns:
+            Dict[str, DatasetDict]: A dictionary where keys are folder names and values are the loaded datasets.
+        """
+        dataset = self.get_dataset_by_name(dataset_name)
+        versions = dataset["versions"]
+        if version:
+            version_data = next((v for v in versions if v["version_id"] == version), None)
+        else:
+            version_data = versions[0]  # Default to latest version
+
+        if not version_data:
+            raise ValueError(f"Version {version} not found for dataset {dataset_name}.")
+
+        datasets = {}
+        folders = self._list_folders(version_data["files"])
+        for folder in folders:
+            file_urls = [self.get_signed_url(dataset["id"], file["file_path"]) for file in version_data["files"] if file["file_path"].startswith(folder)]
+            datasets[folder] = self._load_dataset_by_format(file_urls, split)
+        return datasets
+
+    def load_dataset_by_file(self, dataset_name: str, file_path: str, split: Optional[str] = "train") -> DatasetDict:
+        """
+        Load a dataset by specifying a file path.
+
+        Args:
+            dataset_name (str): The name of the dataset.
+            file_path (str): The path to the file to load the dataset from.
+            split (str, optional): The split to load (e.g., "train", "validation"). Defaults to "train".
+
+        Returns:
+            DatasetDict: The loaded dataset.
+        """
+        dataset = self.get_dataset_by_name(dataset_name)
+        if not dataset:
+            raise ValueError(f"Dataset {dataset_name} not found.")
+        dataset_id = dataset["id"]
+        file_url = self.get_signed_url(dataset_id, file_path)
+        return self._load_dataset_by_format([file_url], split)
+    
+    def load_dataset_by_folder_name(self, dataset_name: str, folder_name: str, version: Optional[int] = None, split: Optional[str] = "train") -> DatasetDict:
+        """
+        Load dataset by specifying a folder name.
+
+        Args:
+            dataset_name (str): The name of the dataset.
+            folder_name (str): The name of the folder to load the dataset from.
+            version (int, optional): The version of the dataset. Defaults to None.
+            split (str, optional): The split to load (e.g., "train", "validation"). Defaults to "train".
+
+        Returns:
+            DatasetDict: The loaded dataset.
+        """
+        dataset = self.get_dataset_by_name(dataset_name)
+        versions = dataset["versions"]
+        if version:
+            version_data = next((v for v in versions if v["version_id"] == version), None)
+        else:
+            version_data = versions[0]  # Default to latest version
+
+        if not version_data:
+            raise ValueError(f"Version {version} not found for dataset {dataset_name}.")
+
+        file_urls = [self.get_signed_url(dataset["id"], file["file_path"]) for file in version_data["files"] if file["file_path"].startswith(folder_name)]
+        return self._load_dataset_by_format(file_urls, split)
+
+    def _load_dataset_by_format(self, file_urls: List[str], split: str) -> DatasetDict:
+        """
+        Load a dataset from file URLs, determining the format and handling nested paths.
+
+        Args:
+            file_urls (List[str]): The list of file URLs.
+            split (str): The split to load (e.g., "train", "validation").
+
+        Returns:
+            DatasetDict: The loaded dataset.
+        """
+        data_files = {split: file_urls}
+        file_extensions = [self.get_file_extension(file) for file in file_urls]
+
+        if any(ext == ".csv" for ext in file_extensions):
+            return load_dataset("csv", data_files=data_files)
+        elif any(ext == ".json" for ext in file_extensions):
+            return load_dataset("json", data_files=data_files)
+        elif any(ext == ".parquet" for ext in file_extensions):
+            return load_dataset("parquet", data_files=data_files)
+        elif any(ext == ".txt" for ext in file_extensions):
+            return load_dataset("text", data_files=data_files)
+        else:
+            raise ValueError("Unsupported file format. Supported formats are CSV, JSON, Parquet, and Text.")
+
+    def _list_folders(self, files: List[Dict[str, Any]]) -> List[str]:
+        """
+        List all folders from the file paths.
+
+        Args:
+            files (List[Dict[str, Any]]): List of file metadata.
+
+        Returns:
+            List[str]: A list of folder names.
+        """
+        folders = set()
+        for file in files:
+            folder_path = os.path.dirname(file["file_path"])
+            folders.add(folder_path.split('/')[0])  # Assuming folders are at the top level
+        return list(folders)
+
+    def load_dataset_files(self, dataset_name: str, version: Optional[int] = None) -> List[str]:
+        """
+        List files in a dataset version.
+
+        Args:
+            dataset_name (str): The name of the dataset.
+            version (int, optional): The version of the dataset. Defaults to None.
+
+        Returns:
+            List[str]: A list of file URLs.
+        """
+        datasets = self.list_datasets()
+        dataset = next((ds for ds in datasets if ds["name"] == dataset_name), None)
+        if not dataset:
+            raise ValueError(f"Dataset {dataset_name} not found.")
+
+        dataset_id = dataset["id"]
+        versions = self.get_dataset_versions(dataset_id)
+        if version:
+            version_data = next((v for v in versions if v["version_id"] == version), None)
+        else:
+            version_data = versions[0]  # Default to latest version
+
+        if not version_data:
+            raise ValueError(f"Version {version} not found for dataset {dataset_name}.")
+        dataset_id = dataset["id"]
+        return [self.get_signed_url(dataset_id, file["file_path"]) for file in version_data["files"]]
+
+    def get_file_extension(self, file_url: str) -> str:
+        """
+        Extract the file extension from a URL.
+
+        Args:
+            file_url (str): The file URL.
+
+        Returns:
+            str: The file extension.
+        """
+        path = urlparse(file_url).path
+        return os.path.splitext(path)[1]
