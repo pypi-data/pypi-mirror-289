@@ -1,0 +1,14 @@
+nonebot_plugin_web_bottle-0.2.1.dist-info/METADATA,sha256=aRm_x61R9lktwOttSq3tmvdnvMMPEgnnADtW5JU4UfY,2719
+nonebot_plugin_web_bottle-0.2.1.dist-info/WHEEL,sha256=rSwsxJWe3vzyR5HCwjWXQruDgschpei4h_giTm0dJVE,90
+nonebot_plugin_web_bottle-0.2.1.dist-info/licenses/LICENSE.txt,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+nonebot_plugin_web_bottle/__init__.py,sha256=sDvT-28kVCtkkbOXo7gOvGsCSzppWtCTR4Qo6sz8xtE,10116
+nonebot_plugin_web_bottle/config.py,sha256=gvd2Aoi9FLP9n02ieDuOZaCHE6eHHVIBS24yOsgSNS0,546
+nonebot_plugin_web_bottle/data_deal.py,sha256=KgJgWI7YQ1OLx60k8CmjftZmKNCdyZsjM72U4YFjFV0,2551
+nonebot_plugin_web_bottle/templates/comments.html,sha256=ME274PNT9KRxod0LKOP7ZOOLMVjrF1iod3f24v-arsg,1513
+nonebot_plugin_web_bottle/templates/index.html,sha256=vrJJXfAA-VZT3Hi8j3By-9p3rSqEncJwbrcXV86lkGQ,3439
+nonebot_plugin_web_bottle/templates/static/comments_styles.css,sha256=1mwHQKa9EopYCt9ntTogTbvMn7ewQo1xH5RyRrKyYEg,1399
+nonebot_plugin_web_bottle/templates/static/images/background.jpg,sha256=r8S1ruYnP2HCdKJ9TRWOS7ZT674lsMtwqq-nMcW9AiA,2932933
+nonebot_plugin_web_bottle/templates/static/images/comments_background.jpg,sha256=r8S1ruYnP2HCdKJ9TRWOS7ZT674lsMtwqq-nMcW9AiA,2932933
+nonebot_plugin_web_bottle/templates/static/styles.css,sha256=lNBrKUflUh_RNmbmTeb53-c-J--jwlNWGfH52S5yNHk,1883
+nonebot_plugin_web_bottle/web_bottle.py,sha256=RS6DKsrFYfK9sWWTjD6f2N-NQjEhhzk9T5DV2fP7eYM,22515
+nonebot_plugin_web_bottle-0.2.1.dist-info/RECORD,,
