@@ -1,0 +1,8 @@
+mpiPython/__init__.py,sha256=AmVTaqUjSHd0X97AO8qRecZ-vvVfS7ecfEQqBiSzOIU,38
+mpiPython/__main__.py,sha256=7Ys4OmGrfsULCEbogRD7rN_nmNfU1R4jYoEp9wDk4qk,900
+mpiPython/mpiPython.py,sha256=HaQGis0934uvSYjNYk3gYBsMLmKe-JNfvl5FPZ7xd8w,17121
+mpiPython/lib/libcode.c,sha256=5ziF34iods9JGohpeJuWWrisooC3bGw7fSVCNL6iMkY,6368
+mpiPython-0.0.1.dist-info/METADATA,sha256=Y-wRlVZCLhGtGxo90DOdjyuaaZIoc0VXeMszgAZewbo,80
+mpiPython-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+mpiPython-0.0.1.dist-info/top_level.txt,sha256=ruBWTsICWIbFr0FdV7vCfNWWEb5wVBiLil--A8FuYZE,10
+mpiPython-0.0.1.dist-info/RECORD,,
