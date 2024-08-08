@@ -1,0 +1,11 @@
+README.md
+setup.py
+my_first_trial_model/__init__.py
+my_first_trial_model/model.py
+my_first_trial_model/utils.py
+tests/test_model.py
+your_model_package.egg-info/PKG-INFO
+your_model_package.egg-info/SOURCES.txt
+your_model_package.egg-info/dependency_links.txt
+your_model_package.egg-info/requires.txt
+your_model_package.egg-info/top_level.txt
