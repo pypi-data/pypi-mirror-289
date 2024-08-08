@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: seuils
+Version: 0.1.0
+Author-email: Thibaut_S <git@outils-jcp.fr>
+Project-URL: Homepage, https://gitlab.com/outils-jcp/seuils-usure
+Project-URL: Bug Tracker, https://gitlab.com/outils-jcp/seuils-usure/-/issues
+Description-Content-Type: text/markdown
+Requires-Dist: fr-date
+Provides-Extra: dev
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: requests ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+
+# usure
+[![](https://img.shields.io/pypi/v/seuils)](https://pypi.org/project/seuils/)
+[![](https://img.shields.io/pypi/dm/seuils)](https://pypi.org/project/seuils/)
+[![](https://gitlab.com/outils-jcp/seuils-usure/badges/main/pipeline.svg)](https://gitlab.com/outils-jcp/seuils-usure/-/pipelines)
+
