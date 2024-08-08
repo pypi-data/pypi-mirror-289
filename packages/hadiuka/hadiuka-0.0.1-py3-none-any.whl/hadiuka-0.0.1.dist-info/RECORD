@@ -1,0 +1,12 @@
+hadiuka/__init__.py,sha256=lmg9AMzPq6B7AW0qo4g44LXsH2fAKQgXVpQZHVHmvdQ,85
+hadiuka/__main__.py,sha256=3Q52s0hyuouhvSSqFEQFDr6mtJ-azkCwI2AD4c7f7A8,28
+hadiuka/config.py,sha256=JikWjNvachrK07bbcVdC46f0s2zK9F4FP_uBucAj2QI,22
+hadiuka/converter.py,sha256=w5-PbxQjyyb1NDIzhsQYrfMkNznqbnvTwlFpvhbbxB0,1008
+hadiuka/mapping.json,sha256=nATq6jtCpB2hIizskFYBZgdPywA0MrQpkVKr5YHnFh8,7679
+hadiuka/runner.py,sha256=zuCuqev19KDg9MlWuEWUdLr0fBaLd26edzE--WH4Gqg,1373
+hadiuka/translator.py,sha256=EQtXOBUq9druhZquUR9K0tyFBkYYOK6i1u61lcOOfDw,852
+hadiuka-0.0.1.dist-info/METADATA,sha256=X-hXUjSNaAd2Rc2rhbp6KjtylJSKFG9EBCTgEVL7jmU,897
+hadiuka-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+hadiuka-0.0.1.dist-info/entry_points.txt,sha256=P51yowsGhm_PCFssES5KL1j_am3CMDOltyx2UJcwN0g,82
+hadiuka-0.0.1.dist-info/top_level.txt,sha256=SLute9UvxMo66qtv9S26xFkGJuYP5_epNENofvW1qVo,8
+hadiuka-0.0.1.dist-info/RECORD,,
