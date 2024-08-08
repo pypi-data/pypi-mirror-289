@@ -1,0 +1,2 @@
+[console_scripts]
+simpleq_start = scripts:start_server
