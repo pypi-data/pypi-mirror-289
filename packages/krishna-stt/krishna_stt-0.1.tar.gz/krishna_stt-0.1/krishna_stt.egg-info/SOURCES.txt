@@ -1,0 +1,6 @@
+setup.py
+krishna_stt/__init__.py
+krishna_stt.egg-info/PKG-INFO
+krishna_stt.egg-info/SOURCES.txt
+krishna_stt.egg-info/dependency_links.txt
+krishna_stt.egg-info/top_level.txt
