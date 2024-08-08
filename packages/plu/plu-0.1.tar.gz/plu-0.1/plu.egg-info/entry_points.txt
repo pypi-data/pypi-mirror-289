@@ -1,0 +1,4 @@
+[console_scripts]
++balance = plu.balance:cli
++dataloader = plu.dataloader:cli
++soundcheck = plu.cli:cli
