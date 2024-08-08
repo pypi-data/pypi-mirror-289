@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+AVR/__init__.py
+AVR/models.py
+AVR/system.py
+AVR/voiceModel.py
+AVR.egg-info/PKG-INFO
+AVR.egg-info/SOURCES.txt
+AVR.egg-info/dependency_links.txt
+AVR.egg-info/requires.txt
+AVR.egg-info/top_level.txt
