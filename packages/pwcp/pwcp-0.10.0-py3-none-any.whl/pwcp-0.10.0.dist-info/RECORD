@@ -1,0 +1,15 @@
+pwcp/__init__.py,sha256=aBk8ww6jkCsDwP9SWC6Lk9G1YFBkDN-4yHXMlWz-zpA,340
+pwcp/__main__.py,sha256=ubt6XyZvcHwdjCQ90B_U4MeP-3YJduz5GWUC9yOgkrg,27
+pwcp/config.py,sha256=30CCjFnhz2hp1kiOYLi56oLT0WsBqeEusf_piJKm7D4,72
+pwcp/errors.py,sha256=GFKV303afLmYoVY9_pQUucsQWBrfQVd2LYcEk_NBBZw,45
+pwcp/hooks.py,sha256=l780djt8Q_meOsagHmJfyFRCysxPACjbAYqVeJEfExA,3825
+pwcp/monkeypatch.py,sha256=y87BlSnMpoIfSGA5MVixhtgLxO2VEv5lxJZtStJMK7s,7238
+pwcp/preprocessor.py,sha256=hWZJ8_7Ch23Xgm9t9II4BaJbseWkwJ_yqc1c06U3h_U,3546
+pwcp/runner.py,sha256=qDzy03ZQ7tOfVyVZc-O59Wpq4or1C0v-saZ2qJGji-k,2849
+pwcp/utils.py,sha256=Sdcdy4FRyBm3qbjGLvib_wzuoHT-UIffgwJtehQaAEU,2316
+pwcp/version.py,sha256=v4zmKjsKOPZbp6BrWoz7iK4ST0sdZdUh9bQSJmluZ5o,23
+pwcp-0.10.0.dist-info/METADATA,sha256=zBKtxKf6YvJqqdNCDoDkitBjhVN5NLI8cXdpLKcSz30,1589
+pwcp-0.10.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+pwcp-0.10.0.dist-info/entry_points.txt,sha256=8GOCoWccITR-Xi_fn0cEYgx7u3mdb2HwUn0VRj4PKfE,35
+pwcp-0.10.0.dist-info/top_level.txt,sha256=-qnOJIrcIJ0wTvGpj1Cedt8-O7cHS5nfk9MflXRF3CU,5
+pwcp-0.10.0.dist-info/RECORD,,
