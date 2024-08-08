@@ -1,0 +1,5 @@
+[project]
+name = "bode_logger"
+version = "0.0.4"
+dependencies = ["gunicorn", "flask"]
+description = "Logger for BODE framework"
