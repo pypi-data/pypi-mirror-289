@@ -1,0 +1,7 @@
+README.md
+setup.py
+library_entity.egg-info/PKG-INFO
+library_entity.egg-info/SOURCES.txt
+library_entity.egg-info/dependency_links.txt
+library_entity.egg-info/requires.txt
+library_entity.egg-info/top_level.txt
