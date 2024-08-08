@@ -1,0 +1,17 @@
+beautifulsoup4
+colorama
+fake_useragent
+requests
+serpapi
+google-search-results
+httpx
+tenacity
+requests_html
+aiohttp
+urllib3
+asyncio
+lxml_html_clean
+html_clean
+tqdm
+anyio>=4.4.0
+zipp>=3.19.1
