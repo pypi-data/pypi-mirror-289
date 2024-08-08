@@ -1,0 +1,8 @@
+plico>=0.30
+plico_dm>=1.1.0
+numpy
+scipy
+psutil
+six
+pi_gcs
+pillow
