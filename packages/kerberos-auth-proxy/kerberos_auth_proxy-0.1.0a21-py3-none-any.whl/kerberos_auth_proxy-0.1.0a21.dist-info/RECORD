@@ -1,0 +1,17 @@
+kerberos_auth_proxy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kerberos_auth_proxy/cmd.py,sha256=50UthqeKTLJLPu1rTJH7DNtYMq4wwCwcI4DMDJzMnsg,1092
+kerberos_auth_proxy/kerberos.py,sha256=vnMeROb_1Hy1xNRz_sCvPyOItd3Be4hyGczpv2xXk48,4028
+kerberos_auth_proxy/mitm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kerberos_auth_proxy/mitm/addons/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kerberos_auth_proxy/mitm/addons/bearer_spnego.py,sha256=xWZnEfhivTkXAZQav0zF2rDSfRb5xzc9q8mO778QizU,3530
+kerberos_auth_proxy/mitm/addons/setup.py,sha256=Y82KwVIa7zcZCPJh1Vq591r-kP-q5g6vTRBL7v-GDDg,489
+kerberos_auth_proxy/mitm/addons/spnego.py,sha256=DKB1-rvI5FWr3OoD1kPBJRz6y-NKDDtysDEqNcbvbGw,2214
+kerberos_auth_proxy/mitm/hostutils.py,sha256=8DJ5j2-HVHD-9UPfgZMy1rwYP6VBxKtpdZS9hWWmntA,8497
+kerberos_auth_proxy/mitm/username.py,sha256=RHrr0IIQkkFc3gZ2jn6D35r_ICdES0Ku5WooWPcry3g,588
+kerberos_auth_proxy/prepare.py,sha256=HOPWKFVsfNnhf5Bs4MLG99RBAmhDGbOLCJPHv_P-Vlo,3654
+kerberos_auth_proxy/utils.py,sha256=bD7G8ndV0o1ePbfIUx2HIumDz-JNrO74Bj56ypeEq-M,5132
+kerberos_auth_proxy-0.1.0a21.dist-info/LICENSE,sha256=Gw1JjOgHOzyW3_3qJXkkOG6ZpgHHPcoPJVPk1fWqaZ8,1075
+kerberos_auth_proxy-0.1.0a21.dist-info/METADATA,sha256=y3rKgJvbZhFBtVhSts6EizqBD1nLPc5d22eVbjZ1WBg,884
+kerberos_auth_proxy-0.1.0a21.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+kerberos_auth_proxy-0.1.0a21.dist-info/entry_points.txt,sha256=EhkvpZi5DSJb-J3jZOWAFhA3dH8QLR8QyhsP6cBIlTs,129
+kerberos_auth_proxy-0.1.0a21.dist-info/RECORD,,
