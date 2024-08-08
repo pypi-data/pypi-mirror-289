@@ -1,0 +1,33 @@
+[build-system]
+requires = ["maturin>=1.4.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "arro3-core"
+requires-python = ">=3.8"
+dependencies = []
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "arro3.core._core"
+python-source = "python"
+manifest-path = "arro3-core/Cargo.toml"
+
+[tool.poetry]
+name = "arro3-core"
+# Overwritten by version in Cargo.toml
+version = "0.0.0"
+description = ""
+authors = []
+packages = [{ include = "python/arro3/core" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+maturin = "^1.6.0"
