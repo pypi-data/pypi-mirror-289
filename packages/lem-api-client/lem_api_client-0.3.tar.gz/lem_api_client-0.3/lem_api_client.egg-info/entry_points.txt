@@ -1,0 +1,2 @@
+[console_scripts]
+lem-api-client = LEMApiClient.api_client:main
