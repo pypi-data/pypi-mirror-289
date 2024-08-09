@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+file_to_uppercase.egg-info/PKG-INFO
+file_to_uppercase.egg-info/SOURCES.txt
+file_to_uppercase.egg-info/dependency_links.txt
+file_to_uppercase.egg-info/entry_points.txt
+file_to_uppercase.egg-info/top_level.txt
+uppercase/__init__.py
+uppercase/__main__.py
