@@ -1,0 +1,12 @@
+myst_sphinx_gallery/__init__.py,sha256=Ep-rafdYLAH5vusQqaQ_2eBiWE8OO32YpZWERiUau2s,290
+myst_sphinx_gallery/config.py,sha256=6Paoy_HE07kmyhfv97VNvTx8fZX3AOd45uWCBfPotzY,3973
+myst_sphinx_gallery/gallery.py,sha256=N-6RhaTq3FSaKdb7ax2wUUMj8QLujpVrFxZVCOD0eG8,21583
+myst_sphinx_gallery/gen_gallery.py,sha256=jLO-m0aGJMhN_QMG_cMYFOwi2bUKsDq2WzSDvP5fRlc,1204
+myst_sphinx_gallery/images.py,sha256=e66Qj5WanpLguIUyOzHuojSF4eqRJl8yYZi7atdQf1M,8054
+myst_sphinx_gallery/patterns.py,sha256=pcjjg46Dp4NlWflHBkUL2DnvVRWk17nSrTWR1UXVi5E,293
+myst_sphinx_gallery/_static/no_image.png,sha256=J7j8lJLdYkABeaqAZoSGcxSE3yBPuH4EXrhWAd-wljs,4315
+myst_sphinx_gallery-0.1.dist-info/LICENSE,sha256=vhLp0X_U1aqLfVjD-swmrn6-PptAOSDIIPj3BXtAhLE,1068
+myst_sphinx_gallery-0.1.dist-info/METADATA,sha256=pZX-T1vks8oSzlb7wIyrFVogTiqk49Fv_W06h_7vLso,2180
+myst_sphinx_gallery-0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+myst_sphinx_gallery-0.1.dist-info/top_level.txt,sha256=iXVU53ds1Zqck7RSdGilUKK-o_Y5EiyBqfmd0V5ffoo,20
+myst_sphinx_gallery-0.1.dist-info/RECORD,,
