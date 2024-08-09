@@ -1,0 +1,10 @@
+geosub/__init__.py,sha256=jAymTAJex7mSUF8Pa_YVGr1TNfYhgtZvyM-I9sRCOWA,7917
+geosub/geolookup.py,sha256=ST6z1SKP6GnxgSAH01xJ9uy_6tZVJ9bXWqvQIm1rKG8,6219
+geosub/sublookup.py,sha256=jxFuk98zhIIqcxbWutHvLRKBd2q-VaEv8yp8envZ82g,3400
+geosub/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geosub/data/geonames_all_countries_sorted.tsv,sha256=OKGbMJdAcQ0k2f7XJg8Dqqti7yJgk53DGnkIZAcyGoI,120781013
+geosub-0.1.1a0.dist-info/LICENSE,sha256=BH-ZBguY8101PDVXWpOZQKcvj0jZgwgFmAb8mohvsCY,2124
+geosub-0.1.1a0.dist-info/METADATA,sha256=h9nfYMPZeO9__PeEzExnC5NS-JNVHKGDWzLkRBXf5Do,5963
+geosub-0.1.1a0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+geosub-0.1.1a0.dist-info/top_level.txt,sha256=wDZe6uqwaeymCD79aBjPXOENGLB2WthZfBB0V98rxb4,12
+geosub-0.1.1a0.dist-info/RECORD,,
