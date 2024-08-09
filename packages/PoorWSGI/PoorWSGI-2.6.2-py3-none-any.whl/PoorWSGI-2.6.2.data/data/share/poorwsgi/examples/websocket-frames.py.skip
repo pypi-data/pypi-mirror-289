@@ -1,0 +1,80 @@
+"""WebSocket example.
+
+to run with uWSGI (uWSGI needs SSL to working websockets):
+
+.. code:: sh
+
+    uwsgi --http-socket localhost:8080 \
+            --http-raw-body \
+            --gevent 100 \
+            --wsgi-file examples/websocket-frames.py
+
+Curl test:
+
+.. code:: sh
+
+    curl -i -N -H "Connection: Upgrade" \
+            -H "Upgrade: websocket" \
+            -H "Origin: http://localhost" \
+            -H "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" \
+            http://localhost:8080/ws
+
+"""
+# pylint: disable=consider-using-f-string
+
+import logging as log
+from hashlib import sha1
+from os import path
+from sys import path as python_path
+
+from gevent.select import select  # type: ignore
+from uwsgi import (  # type: ignore # pylint: disable=import-error
+    connection_fd, websocket_handshake, websocket_recv_nb, websocket_send
+)
+
+python_path.insert(0, path.abspath(
+    path.join(path.dirname(__file__), path.pardir)))
+
+# pylint: disable=wrong-import-position
+from poorwsgi import Application  # noqa
+from poorwsgi.response import Declined  # noqa
+
+logger = log.getLogger()
+logger.setLevel("DEBUG")
+
+app = application = Application(__name__)
+app.debug = True
+
+
+@app.route('/ws')
+def websocket(req):
+    """Websocket endpoint"""
+
+    websocket_handshake()
+    try:
+        websocket_fd = connection_fd()
+    except OSError as err:
+        log.info("Websocket was closed: %s", err)
+        return Declined()
+
+    while True:
+        try:
+            select([websocket_fd], [], [], 1)
+            msg = websocket_recv_nb()
+
+            if not msg:
+                log.info("\tping <-> pong")
+                continue
+            if len(msg) == 1 and msg == b'\0':
+                # Just recieve another frame
+                continue
+
+            hexdigest = sha1(msg).hexdigest()
+            answer = f"data[{len(msg)}] {hexdigest}"
+
+            log.info(">>> %s", answer)
+            websocket_send(answer.encode())
+
+        except OSError as err:
+            log.info("Websocket was closed: %s", err)
+            return Declined()

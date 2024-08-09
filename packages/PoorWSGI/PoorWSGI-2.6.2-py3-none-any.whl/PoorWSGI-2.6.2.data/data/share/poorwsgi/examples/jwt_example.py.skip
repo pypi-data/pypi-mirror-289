@@ -1,0 +1,86 @@
+"""JWT example"""
+import logging
+from functools import wraps
+from hashlib import sha256
+from http.cookies import SimpleCookie
+from os import path, urandom
+from sys import path as python_path
+from time import time
+from wsgiref.simple_server import make_server
+
+import jwt
+
+python_path.insert(
+    0, path.abspath(path.join(path.dirname(__file__), path.pardir)))
+
+# pylint: disable=wrong-import-position
+from poorwsgi import Application, state  # noqa
+from poorwsgi.response import RedirectResponse, abort, redirect  # noaq
+
+app = Application('test')
+app.secret_key = urandom(32)  # random secret_key
+
+
+def check_login(fn):
+
+    @wraps(fn)  # using wraps make right/better /debug-info page
+    def handler(req):
+        try:
+            encoded = req.cookies["JWT"].value
+            data = jwt.decode(encoded, app.secret_key, algorithms="HS256")
+            if 'login' not in data:
+                raise RuntimeError("loggin not in data")
+        except:
+            redirect("/login", message=b"Login required")
+
+        return fn(req)
+
+    return handler
+
+
+@app.route('/login', method=state.METHOD_GET_POST)
+def login(req):
+    if req.method == 'POST':
+        passwd = req.form.getfirst('passwd', fce=str)
+        if passwd != 'SecretPasswds':
+            redirect('/login', message='Bad password')
+
+        response = RedirectResponse("/private/path")
+        cookie = SimpleCookie()
+        data = {'login': True}
+        encoded = jwt.encode(data, app.secret_key, algorithm="HS256")
+        cookie["JWT"] = encoded
+        for header in cookie.output().split("\r\n"):
+            var = header[:10]  # Set-Cookie
+            val = header[12:]  # SID=###; expires=###; Path=/
+            response.add_header(var, val)
+
+        abort(response)
+
+    return 'some html login form'
+
+
+@app.route('/private/path')
+@check_login
+def private_path(req):
+    return 'Some private data'
+
+
+@app.route('/logout')
+def logout(req):
+    response = RedirectResponse("/login")
+    cookie = SimpleCookie()
+    cookie["JWT"]["expires"] = -1
+    for header in cookie.output().split("\r\n"):
+        var = header[:10]  # Set-Cookie
+        val = header[12:]  # SID=###; expires=###; Path=/
+        response.add_header(var, val)
+
+    return response
+
+
+if __name__ == '__main__':
+    # pylint: disable=invalid-name
+    httpd = make_server('127.0.0.1', 8080, app)
+    logging.info("Starting to serve on http://127.0.0.1:8080")
+    httpd.serve_forever()
