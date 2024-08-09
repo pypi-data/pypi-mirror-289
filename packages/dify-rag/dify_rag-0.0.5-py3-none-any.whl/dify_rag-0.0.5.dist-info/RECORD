@@ -1,0 +1,12 @@
+dify_rag/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dify_rag/extractor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dify_rag/extractor/extractor_base.py,sha256=5NU-PgjHU9yuohvnnvh4T1EA3HOXf4vgbSfQIF5h4yY,244
+dify_rag/extractor/html_extractor.py,sha256=H-H28pXERbQvZy729cItT7IAJM4-wyjRX3wFhsPQoCU,3165
+dify_rag/extractor/markdown_extractor.py,sha256=AUoS1ATJXT9Nsd4Q5L8jnLQ8LKpTSmdWuH7EfOkPlH0,5032
+dify_rag/extractor/pdf_extractor.py,sha256=ZhUwqmOeaMAwZdXeo0-Yf2Dsy2UvMtEl3jzFJ2PAOY8,2816
+dify_rag/extractor/utils.py,sha256=SiW8aWpKEWJU9Y7Aru8YwHSgfhqABkFh7dlGWjdWvqw,2689
+dify_rag/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dify_rag/models/document.py,sha256=-aQiddOYLzCihss1bs4Dd99ceqmuRx2T4S6V8RlIN34,2585
+dify_rag-0.0.5.dist-info/METADATA,sha256=6TNWxYYFCQQC_YpgVl1VwBhjZfDVfe-bJVuY8h_aBLk,905
+dify_rag-0.0.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dify_rag-0.0.5.dist-info/RECORD,,
