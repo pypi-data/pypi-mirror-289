@@ -1,0 +1,11 @@
+jh_scrapyd/__init__.py,sha256=swhDp57OpeSRBdstwXoYcpnibxEGYmDYTGCIJFdbOX0,635
+jh_scrapyd/scheduler.py,sha256=jawD4-eq3Vi9NaiN_AX1FhPVLonv1jR3NdY4lOq36sU,1247
+jh_scrapyd/spiderqueue.py,sha256=nZkg1VGpytzjNhEcqMKG_q1b2MGRLa4CBLfTY2EjR7U,1489
+jh_scrapyd/webservice.py,sha256=1eX7VnxNFSB3Bhr4hp9Wl0lJEvX71Dw2_x98BsQ1jsg,3271
+jh_scrapyd/common/__init__.py,sha256=3n47lx5tVvjJLJ909YoHgpCfmqIzSXWWJrw_alp-My0,1120
+jh_scrapyd/common/jh_queue.py,sha256=mt6KKi06asl9gHfaWL409HD3Bjc5x6GAkhfoWBgzQRA,6234
+jh_scrapyd/common/utils.py,sha256=zq4-hdxAwfvT_hNWRT4gpKKMmd6X2i2ZSzyEHSERm3Q,391
+jh_scrapyd-0.0.9.dist-info/METADATA,sha256=mv-qJFIRv3zH60qo3onTpQTnt-975FKnrgSbX5SkGSQ,1511
+jh_scrapyd-0.0.9.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+jh_scrapyd-0.0.9.dist-info/top_level.txt,sha256=KwgxZ6Kfe6AlzzL7fIj0lqXC1cfN4bsBI-tHTwMfdgs,11
+jh_scrapyd-0.0.9.dist-info/RECORD,,
