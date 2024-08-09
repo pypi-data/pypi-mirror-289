@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: classist
+Version: 0.0.1
+Summary: Pretty classist signature inheritance with decoration
+Home-page: https://github.com/sirno/classist
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+
+# Classist
+
+Pretty classist signature inheritance with decorators.
+
+## Features
+
+This is just a basic proof of concept. Currently, only very basic runtime
+signature inheritance is implemented. It may be possible to generate stubs to
+support static type checking.
+
+## Usage
+
+```python
+import classist
+import inspect
+
+class A:
+    def __init__(self, a: int):
+        self.a = a
+
+@classist.decorate
+class B:
+    def __init__(self, t: int, *args):
+        self.b = b
+        super().__init__(*args)
+
+print(inspect.signature(B.__init__))
+```
+
+## Installation
+
+```bash
+pip install classist
+```
+
+MIT License
+
+Copyright (c) 2024 Nicolas Ochsner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
