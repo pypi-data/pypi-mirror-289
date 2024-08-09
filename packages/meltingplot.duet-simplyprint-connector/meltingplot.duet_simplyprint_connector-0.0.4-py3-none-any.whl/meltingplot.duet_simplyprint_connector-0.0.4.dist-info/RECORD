@@ -1,0 +1,15 @@
+meltingplot/__init__.py,sha256=7xmdWJLrk0LBRqeftZCnd-9dYFcVQkFD3tfTFNfKnqY,41
+meltingplot/duet_simplyprint_connector/__init__.py,sha256=C3ysKHM8varb8-dNlEgWeKSNmUjBk8vWKqTVPmd1oNQ,129
+meltingplot/duet_simplyprint_connector/__main__.py,sha256=TbRdGDPbNOzrBhGKJRWloUXmKB0RDF2h56JwxUEL5Uk,1319
+meltingplot/duet_simplyprint_connector/_version.py,sha256=7IMS-x-Mpi1j-s15_8FQkguX--cO98saC2C8eMPoU00,497
+meltingplot/duet_simplyprint_connector/gcode.py,sha256=2hzPHzzr9V-ZVVER_3sca7fueCZnhXp_Z7HJr_0e3OE,3817
+meltingplot/duet_simplyprint_connector/virtual_client.py,sha256=fa_rh_S6DQtuY4pZpUjB9J0_4VUK4VTVgK00U7GvI1k,13532
+meltingplot/duet_simplyprint_connector/duet/__init__.py,sha256=VKiBZzKVuqduo4qVZpkXduRGx9Jxva0yDL7s8zoJwFA,81
+meltingplot/duet_simplyprint_connector/duet/api.py,sha256=ZT_gRVTHiFxGfTFrBpIjd96gAXJNkClL-YLFNJZNf3w,11414
+meltingplot.duet_simplyprint_connector-0.0.4.data/data/simplyprint-connector.service,sha256=cgvO24Hlqx_LxexUut41rXQBa3yaDorMNjIttb2GcZg,310
+meltingplot.duet_simplyprint_connector-0.0.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+meltingplot.duet_simplyprint_connector-0.0.4.dist-info/METADATA,sha256=YjtbnM0JCI8SP5_SUni53uJjpGAFY4L7FUHxn51negI,16653
+meltingplot.duet_simplyprint_connector-0.0.4.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+meltingplot.duet_simplyprint_connector-0.0.4.dist-info/entry_points.txt,sha256=fMGxiEEte824SH1NUAZqePlunncN1fuTGTv0-L3MeUA,85
+meltingplot.duet_simplyprint_connector-0.0.4.dist-info/top_level.txt,sha256=Flugb-9U0lxl5i6Lsq6PjWBeX7GpQRqcCN6ZRvW21yw,12
+meltingplot.duet_simplyprint_connector-0.0.4.dist-info/RECORD,,
