@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+goatfarm/Archive.zip
+goatfarm/test.csv
+goatfarm.egg-info/PKG-INFO
+goatfarm.egg-info/SOURCES.txt
+goatfarm.egg-info/dependency_links.txt
+goatfarm.egg-info/not-zip-safe
+goatfarm.egg-info/top_level.txt
