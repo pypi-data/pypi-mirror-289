@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <!-- 必须的 meta 标签 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="description" content="">
+  <meta name="author" content="Webpixels">
+
+  <!-- Bootstrap 的 CSS 文件 -->
+  <link rel="stylesheet" href="../../libs/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../libs/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./index.css">
+  <link href="../../libs/jquery-menu/jquery.contextMenu.min.css" rel="stylesheet" type="text/css">
+  <title>Hello, world!</title>
+
+  <script src="../../libs/jquery/jquery.js"></script>
+  <script src="../../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../libs/jquery-menu/jquery.contextMenu.js"></script>
+
+  <style>
+    .color_item_xy_color::placeholder {
+      font-size: small;
+      color: gainsboro;
+    }
+  </style>
+
+</head>
+
+<body class="container-fluid" style="padding: 0px; margin: 0px;">
+  <div id="gp_con" class="plug-list-con-header row col-12"
+    style="padding: 0px; margin: 0px;background-color: white; border-bottom: 1px solid #ebecf0; align-items: center;">
+    <span id="title" class="col-auto text-primary " style=" font-size: small; padding: 5px;">找图</span>
+      <span class="col-auto text-black-50 mr-auto" style="font-size:smaller;">给定区域小图,在完整图像中,找到小图的位置</span>
+  </div>
+  <div class="row col-12" style="width: 100%;">
+    <div class="col-6">
+
+      <div class="mt-1" style="padding: 0px; margin: 0px;">
+        <div class="col-12 d-flex align-items-center"
+          style="width: 100%;height: 100px;background-color: antiquewhite; align-items: center; padding: 0px; margin: 0px;">
+          <img id="img_des" src="../../img/ico/default.png" class=""
+            style="width: 100%;height: 100%;object-fit:contain;" />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <input id="img_name" type="text" class="form-control" placeholder="图片名称" aria-label="Recipient's username"
+            aria-describedby="button-addon2">
+
+            <div class="input-group-prepend">
+              <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <div id="img_names" class="dropdown-menu">
+                
+              </div>
+            </div>
+
+          <div class="input-group-prepend">
+            <button id="img_add_submit" class="btn btn-outline-info" type="button" id="button-addon2">添加</button>
+          </div>
+          <div class="input-group-append">
+            <button id="img_add_submit" class="btn btn-outline-danger" type="button" id="button-addon2">重置所有</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="image_list" class="colors_list">
+
+      </div>
+
+    </div>
+
+
+    <div class="col-6 mt-1">
+      <div class="input-group input-group-sm">
+        <div class="input-group-prepend">
+          <span class="input-group-text">找图范围</span>
+        </div>
+        <input id="find_img_rect" type="text" class="form-control" placeholder="在这个范围内寻找匹配的颜色点"
+          aria-describedby="button-addon4">
+      </div>
+
+      <div class="input-group input-group-sm mt-1">
+        <div class="input-group-prepend">
+          <span class="input-group-text">可信度</span>
+        </div>
+        <input id="find_img_diff" type="text" class="form-control" value="0.95" placeholder="0-1之间,默认0.98"
+          aria-describedby="button-addon4">
+      </div>
+
+      <div class="input-group input-group-sm mt-1">
+        <div class="input-group-prepend">
+          <span class="input-group-text">找图模式</span>
+        </div>
+        <select id="ori_select" class="custom-select form-control">
+          <option value="1" selected="true">灰度</option>
+          <option value="2">RGB</option>
+        </select>
+      </div>
+
+      <textarea id="findimg_code" placeholder="此为独立运行代码,不加入图形处理流程" class="form-control mt-1 text-primary" id="message-text"
+          style="min-height: 20vh; font-size: small;"></textarea>
+
+      <div class="input-group input-group-sm mt-1">
+        <select id="findimg_modules" class="custom-select form-control">
+
+        </select>
+
+        <div class="input-group-append">
+          <button id="findimg_save_to_module" type="button" class="btn btn-sm btn-success">
+            
+            保存图片至工程
+          </button>
+        </div>
+      </div>
+
+      <div class="input-group input-group-sm mt-1">
+
+        <select id="findimg_model" class="custom-select form-control">
+            <option value="1" >查找一个</option>
+            <option value="0" selected="true">查找全部</option>
+        </select>
+
+        <select id="findimg_mode" class="custom-select form-control">
+          <option value="0" selected="true" >模版匹配</option>
+          <option value="1">全分辨率</option>
+          <option value="2">混合</option>
+        </select>
+
+        <div class="input-group-append">
+          <button id="find_imgs_submit" type="button" class="btn btn-sm btn-info btn-block">
+            <span id="find_colors_test_loading" class="" style="display: none;" role="status">
+              <span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true"></span>
+            </span>
+
+            执行
+          </button>
+        </div>
+      
+      </div>
+
+<!--      <div class="input-group mt-2">-->
+<!--        <button id="find_imgs_test" type="button" class="btn btn-sm btn-info btn-block">-->
+<!--          <span id="find_colors_test_loading" class="" style="display: none;" role="status">-->
+<!--            <span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true"></span>-->
+<!--          </span>-->
+<!--          添加至图形处理-->
+<!--        </button>-->
+<!--      </div>-->
+      
+
+
+
+      <div class="card mt-1 find_res_con">
+        <div class="card-header bg-success row" style="height: 30px; padding: 5px; margin: 0px; font-size: small;  color: white;">
+          <span id="res_no" class="ml-2 mr-auto">找图结果</span>
+          <span class="mr-2 close_res">
+            <i class="bi bi-x-square"></i>
+          </span>
+        </div>
+        <ul class="find_res">
+            <li class="col-12 find_res_item text-black-50" style="font-size: small">点击执行,结果在这里展示</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  <div style="display: none;">
+
+    <a id="imgname-item" class="dropdown-item" href="#">Action</a>
+
+    <li id="find_res_item" class="col-12 find_res_item">
+      <span class="badge badge-pill badge-primary find_res_item_no">1</span>  
+      <span class="ml-2 text-info find_res_item_diff mr-auto" style="font-size:small;">0.95</span> 
+      <span class="ml-2 text-info find_res_item_rect" style="font-size:small;">[100,200,200,33]</span> 
+    </li>
+
+    <div id="image_list_item" class="row col-12 image_list_item">
+      <img id="" src="../../img/ico/default.png" class="img_item_des col-12"
+        style="height: 100%; max-height: 70px; object-fit:contain;" />
+      <div class="img_item_menu" style="padding: 0px; margin: 0px; position: absolute; right: 0px;">
+        <span class="mr-3 item_action img_item_des_name"></span>
+        <span class="mr-2 item_action img_item_des_del"><i class="bi bi-x-circle-fill"></i></span>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap 的 JS 文件 -->
+  <script src="../../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./gpapi.js"></script>
+
+</body>
