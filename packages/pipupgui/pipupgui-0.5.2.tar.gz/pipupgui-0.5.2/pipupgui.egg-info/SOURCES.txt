@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+pipupgui/__init__.py
+pipupgui/__main__.py
+pipupgui.egg-info/PKG-INFO
+pipupgui.egg-info/SOURCES.txt
+pipupgui.egg-info/dependency_links.txt
+pipupgui.egg-info/entry_points.txt
+pipupgui.egg-info/requires.txt
+pipupgui.egg-info/top_level.txt
+pipupgui/../github_logo.png
+pipupgui/../title_icon_python.png

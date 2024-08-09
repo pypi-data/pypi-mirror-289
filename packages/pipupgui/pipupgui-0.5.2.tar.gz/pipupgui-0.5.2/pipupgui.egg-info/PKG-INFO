@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: pipupgui
+Version: 0.5.2
+Summary: GUI tool for installing and managing pip packages
+Author-email: Dylan Taylor <dylan@shyapply.com>
+License: MIT License
+        
+        Copyright (c) 2024 Dylgod
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/Dylgod/pipupgui
+Keywords: python,pip,package-manager,gui,development-tools
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: async_tkinter_loop>=0.9.3
+Requires-Dist: customtkinter>=5.2.2
+Requires-Dist: Pillow>=10.4.0
+Requires-Dist: setuptools>=71.1.0
+
+# Pipupgui
+A simple GUI convenience tool that gives the user control over upgrading pip packages.
+## Features:
+Pip upgrade all - mass upgrade packages, including pip itself.
+
+Banning Packages - Remove a package from the upgrade queue forever until you unban it.
+
+## Installation
+```
+pip install pipupgui
+```
+
+To Run:
+in your project folder / venv run:
+```
+pipupgui
+```
+
+
+Currently supports windows only
+
+Coming soon:
+- specific version control
+- macOS support
+- args for no-gui, upgrade all, -ban <package>
