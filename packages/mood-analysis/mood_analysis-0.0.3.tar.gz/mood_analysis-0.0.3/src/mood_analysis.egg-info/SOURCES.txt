@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/mood_analysis/__Init__.py
+src/mood_analysis/detection.py
+src/mood_analysis/emotion.py
+src/mood_analysis/example.py
+src/mood_analysis/main.py
+src/mood_analysis/mainipcamera.py
+src/mood_analysis.egg-info/PKG-INFO
+src/mood_analysis.egg-info/SOURCES.txt
+src/mood_analysis.egg-info/dependency_links.txt
+src/mood_analysis.egg-info/top_level.txt
+tests/test_face_recognition.py
