@@ -1,0 +1,3 @@
+[console_scripts]
+pip-helloworld-test = pip_helloworld_test.main:main
+
