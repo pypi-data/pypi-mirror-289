@@ -1,0 +1,17 @@
+[console_scripts]
+list_roofs = obstechutils.roof:list_roofs
+monitor_aag1 = obstechutils.sensors.aag1:monitor_aag1
+monitor_aag2 = obstechutils.sensors.aag2:monitor_aag2
+monitor_nm150 = obstechutils.sensors.nm150:monitor_nm150
+mqtt_console = obstechutils.mqtt:console_script
+report_device_status = obstechutils.device_status:main_script
+report_pc_status = obstechutils.device_status:list_computers
+update_dimm_sql_rtable = obstechutils.db.weather:update_dimm_sql_rtable
+update_dimm_sql_table = obstechutils.db.weather:update_dimm_sql_table
+update_ninox_sql_rtable = obstechutils.db.weather:update_ninox_sql_rtable
+update_ninox_sql_table = obstechutils.db.weather:update_ninox_sql_table
+update_solar_sql_rtable = obstechutils.db.weather:update_solar_sql_rtable
+update_solar_sql_table = obstechutils.db.weather:update_solar_sql_table
+update_weather_sql_rtable = obstechutils.db.weather:update_weather_sql_rtable
+update_weather_sql_table = obstechutils.db.weather:update_weather_sql_table
+update_weather_test = obstechutils.db.weather:test_update
