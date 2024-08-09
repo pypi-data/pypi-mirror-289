@@ -1,0 +1,7 @@
+torch
+fastcore
+codecarbon
+torchprofile
+thop
+
+[dev]
