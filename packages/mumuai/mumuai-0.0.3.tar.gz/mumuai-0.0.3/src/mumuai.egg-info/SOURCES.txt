@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/mumuai.egg-info/PKG-INFO
+src/mumuai.egg-info/SOURCES.txt
+src/mumuai.egg-info/dependency_links.txt
+src/mumuai.egg-info/not-zip-safe
+src/mumuai.egg-info/top_level.txt
