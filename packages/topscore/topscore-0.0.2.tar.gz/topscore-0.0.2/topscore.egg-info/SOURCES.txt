@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+topscore/__init__.py
+topscore/client.py
+topscore.egg-info/PKG-INFO
+topscore.egg-info/SOURCES.txt
+topscore.egg-info/dependency_links.txt
+topscore.egg-info/requires.txt
+topscore.egg-info/top_level.txt
