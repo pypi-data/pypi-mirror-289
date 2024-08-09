@@ -1,0 +1,15 @@
+[project]
+name = "graph-kernel"
+version = "0.0.1"
+authors = [
+  { name="kernel_loophole", email="zulqarnain.shahid.iqbal@gmail.com" },
+]
+description = "graph gen from text"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
