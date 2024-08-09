@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "ntfy-jupyter"
+version = "0.1.0"
+description = ""
+authors = ["vali101 <valentin.peter@hotmail.de>"]
+readme = "README.md"
+packages = [
+    { include = "ntfy_jupyter" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ipython = "^8.26.0"
+requests = "^2.32.3"
+pytest = "^8.3.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+ntfy-jupyter = "ntfy_jupyter:load_ipython_extension"
