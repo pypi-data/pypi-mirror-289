@@ -1,0 +1,20 @@
+project: Example property change
+tags:
+   - 'example'
+roadway_property_change:
+  facility:
+    links:
+      modes: ['drive','bike']
+      osm_link_id:
+        - '1234'
+        - '2345'
+    from:
+      osm_node_id: '4321'
+    to:
+      osm_node_id: '4322'
+  property_changes:
+    lanes:
+      set: 2
+    bicycle_facility:
+      set: 3
+notes: Simple road diet

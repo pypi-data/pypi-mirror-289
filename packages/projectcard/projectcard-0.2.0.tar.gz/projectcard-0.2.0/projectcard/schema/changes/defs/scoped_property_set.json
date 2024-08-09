@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "$defs": {
+        "set_num": {"type": "number", "minimum": 0},
+        "change_num": {"type": "number"},
+        "scoped_property_set_item":{
+            "type": "object",
+            "examples": [
+              {"timespan":["7:00","9:00"],"set":0.50}
+            ],
+            "oneOf": [
+              {
+                "required": ["timespan","set"]
+              },
+              {
+                "required": ["timespan","change"]
+              },
+              {
+                "required": ["category","change"]
+              },
+              {
+                "required": ["category","set"]
+              }
+            ],
+            "properties":{
+              "set": {"$ref": "#/$defs/set_num"},
+              "change": {"$ref": "#/$defs/change_num"},
+              "category": {"type":"array"},
+              "timespan": {"$ref": "../../defs/timespan.json"}
+              }
+          }
+    },
+    "oneOf": [
+      {
+        "required": ["set","scoped"],
+        "not": {"required": ["change"]}
+      },
+      {
+        "required": ["change","group"],
+        "not": {"required": ["set"]}
+      }
+    ],
+    "properties" : {
+        "existing" : {"type": ["number", "string"]},
+        "set" : {"$ref": "#/$defs/set_num"},
+        "change" : {"$ref": "#/$defs/change_num"},
+        "scoped" : {"type":"array","items": {"$ref": "#/$defs/scoped_property_set_item"}}
+    }
+}
