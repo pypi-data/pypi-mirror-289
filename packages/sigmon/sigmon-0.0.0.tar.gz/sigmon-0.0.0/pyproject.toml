@@ -1,0 +1,8 @@
+[project]
+name = "sigmon"
+authors = [
+    {name = "Shameel Arafin", email = "shameel@signalfive.com"}
+]
+version = "0.0.0"
+description = "Coming soon"
+
