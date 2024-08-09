@@ -1,0 +1,29 @@
+[project]
+name = "raglan"
+version = "0.0.1a"
+description = "Python tools to create a custom top down raglan sweater"
+authors = [
+    { name = "Marie Roald", email = "roald.marie@gmail.com" },
+]
+dependencies = [
+    "pyknit>=0.0.9",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.5.7",
+]
