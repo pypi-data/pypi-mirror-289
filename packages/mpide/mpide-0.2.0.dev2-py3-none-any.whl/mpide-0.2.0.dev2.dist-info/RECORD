@@ -1,0 +1,13 @@
+mpide/__init__.py,sha256=6liz5ly4LBivHM4LVgEuI422To0lcdMlAilEalv992c,1489
+mpide/ide.py,sha256=9MLx1Xi1Wg0jffZkdE0NyvAjNKnLpycE4j-fjSKyUSE,23916
+mpide/mpide.css,sha256=O_iGx3bNmEeWsS6el58lDP2_8JPB0DrEre3NkIqgZ8c,944
+mpide/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mpide/target/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mpide/target/mpide/misc.py,sha256=Ix8kpfcK1NgoBsLORYwi3hH6lNHFa8QWFeVwdIyeIdI,1976
+mpide/target/mpide/setup_ramdisk.py,sha256=T0gPJswOCFyGR2nKQUA4VTOwOZmmeAe9b5uMPXr3u7w,2602
+mpide/target/mpide/unload_module.py,sha256=J3ojEUmffrYnASTtThgACIK7YRX-lyYvMIEH7eio50U,1014
+mpide/utils.py,sha256=4ohxJNCEOBXIS0a4UlaNPQlLehNP3S20EX3lGC38-Zo,4855
+mpide-0.2.0.dev2.dist-info/METADATA,sha256=-Iz70JAMWqot8SfjAAosYqk1mUZGVU_YTPMkXCAShEA,11829
+mpide-0.2.0.dev2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mpide-0.2.0.dev2.dist-info/entry_points.txt,sha256=wzSPDGVGkjFdj-3Anw11vtSYm90HX3SYSotGKQ05WMo,40
+mpide-0.2.0.dev2.dist-info/RECORD,,
