@@ -1,0 +1,6 @@
+pyproject.toml
+algebraist/__init__.py
+algebraist.egg-info/PKG-INFO
+algebraist.egg-info/SOURCES.txt
+algebraist.egg-info/dependency_links.txt
+algebraist.egg-info/top_level.txt
