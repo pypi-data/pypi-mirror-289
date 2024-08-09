@@ -1,0 +1,10 @@
+task_manager_sdk/__init__.py,sha256=jrwL_FztArAX06lJhfhR9UCNNmQ1C2djQdzqHe2hmdU,74
+task_manager_sdk/client.py,sha256=KNviBXVcVHMkz6NOc3H-nYhuMBf2P2jVttj-e_OtW5c,1148
+task_manager_sdk/tasks.py,sha256=Q32Oks1H74_i3XanXVr21sSco_JvydRjrkS2Z9LgbVg,665
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=elLTCbiefzAYkbsh6ioCGn6A13fSyg9d1bFxcc5qguU,425
+tests/test_tasks.py,sha256=X1Yps-hnWl_C9VzsFEcQNeVdMUlUZAwHtKXHnpvBPn8,556
+task_manager_sdk-0.2.1.dist-info/METADATA,sha256=HJ_ZUVWH--6TPPQCUobTFQSsaBZowgr0BKKYqbAi1dk,403
+task_manager_sdk-0.2.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+task_manager_sdk-0.2.1.dist-info/top_level.txt,sha256=J5lnEuw4Da333gEG0tX0GfLJvaJQeg3eJ_Obr8R-EpY,23
+task_manager_sdk-0.2.1.dist-info/RECORD,,
