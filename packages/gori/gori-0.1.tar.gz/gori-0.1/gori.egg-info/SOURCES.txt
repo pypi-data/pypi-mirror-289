@@ -1,0 +1,8 @@
+setup.py
+gori/__init__.py
+gori/content.py
+gori.egg-info/PKG-INFO
+gori.egg-info/SOURCES.txt
+gori.egg-info/dependency_links.txt
+gori.egg-info/not-zip-safe
+gori.egg-info/top_level.txt
