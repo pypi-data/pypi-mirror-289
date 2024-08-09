@@ -1,0 +1,10 @@
+ngql/__init__.py,sha256=jzsXqKN2Tf1tDA9f_Fu2Oje1uO-nqheajMhaleQ7Dig,111
+ngql/magic.py,sha256=kgTsO6BQnV0ZZADq-gguS_JL9H4BrkhfjAWQYUTvtNw,34641
+ngql/ng_load.py,sha256=qiICeC1hyU8C_QxZ-BvWMyG04iYRPrGXDQt9_E12Y9w,18291
+ngql/types.py,sha256=rCDDBKSY3UqdX0dO-ieWKra7__GTzitnFdllf_x58gw,471
+ngql/utils.py,sha256=QlHByL9Nlo8gxwtxwwKNx8HKWwWLENSDVznG1bqmbpA,1268
+ipython_ngql-0.14.1.dist-info/LICENSE,sha256=LFHqusTYfhMdoSAttNJPfMh-wA0z1h4hSg2tEuFB1-U,550
+ipython_ngql-0.14.1.dist-info/METADATA,sha256=524TITUwsnUf2mN8M7MQOLr4LFB5uo927xANDn5kj9U,11134
+ipython_ngql-0.14.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+ipython_ngql-0.14.1.dist-info/top_level.txt,sha256=SdTCgV_euqUc5GEevzybz33vAe_a7aCBZ4bif9o7i-s,5
+ipython_ngql-0.14.1.dist-info/RECORD,,
