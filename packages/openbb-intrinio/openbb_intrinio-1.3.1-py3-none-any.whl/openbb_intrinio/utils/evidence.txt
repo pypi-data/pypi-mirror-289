@@ -1,0 +1,398 @@
+
+
+  "taxonomy": "us-gaap",
+  "tag": "NoncurrentAssets",
+  "label": "Long-Lived Assets",
+  "description": "Long-lived assets other than financial instruments, long-term customer relationships of a financial institution, mortgage and other servicing rights, deferred policy acquisition costs, and deferred tax assets."
+
+  "taxonomy": "us-gaap",
+  "tag": "AssetsNoncurrent",
+  "ccp": "CY2023Q2I",
+  "uom": "USD",
+  "label": "Assets, Noncurrent",
+  "description": "Sum of the carrying amounts as of the balance sheet date of all assets that are expected to be realized in cash, sold or consumed after one year or beyond the normal operating cycle, if longer."
+
+  "taxonomy": "us-gaap",
+  "tag": "OtherAssets",
+  "uom": "USD",
+  "label": "Other Assets",
+  "description": "Amount of assets classified as other.",
+
+  "taxonomy": "us-gaap",
+  "tag": "Assets",
+  "uom": "USD",
+  "label": "Assets",
+  "description": "Sum of the carrying amounts as of the balance sheet date of all assets that are recognized. Assets are probable future economic benefits obtained or controlled by an entity as a result of past transactions or events."
+
+
+AAPL FY2023 Balance Sheet
+
+Standardized:
+
+https://api-v2.intrinio.com/fundamentals/AAPL-balance_sheet_statement-2023-FY/standardized_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+
+ {'data_tag': {'id': 'tag_jyRvly',
+   'name': 'Total Noncurrent Assets',
+   'tag': 'totalnoncurrentassets',
+   'parent': 'totalassets',
+   'sequence': 23,
+   'factor': '+',
+   'balance': 'debit',
+   'unit': 'usd'},
+  'value': 165302000000.0},
+
+
+Reported
+
+https://api-v2.intrinio.com/fundamentals/AAPL-balance_sheet_statement-2023-FY/reported_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+
+   {'xbrl_tag': {'tag': 'AssetsNoncurrent',
+   'name': 'Total non-current assets',
+   'balance': 'debit',
+   'unit': 'usd',
+   'abstract': False,
+   'sequence': 11,
+   'depth': 3},
+  'value': 209017000000.0,
+   }
+
+
+GM 2023-Q3 Balance Sheet
+
+Standardized
+
+    {
+      "data_tag": {
+        "id": "tag_jyRvly",
+        "name": "Total Noncurrent Assets",
+        "tag": "totalnoncurrentassets",
+        "parent": "totalassets",
+        "sequence": 23,
+        "factor": "+",
+        "balance": "debit",
+        "unit": "usd"
+      },
+      "value": 121586000000
+    }
+
+
+Reported
+
+https://api-v2.intrinio.com/fundamentals/GM-balance_sheet_statement-2023-Q3/reported_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+    {
+      "xbrl_tag": {
+        "tag": "AssetsNoncurrent",
+        "name": "Total non-current assets",
+        "balance": "debit",
+        "unit": "usd",
+        "abstract": false,
+        "sequence": 17,
+        "depth": 5
+      },
+      "value": 170984000000,
+      "dimensions": null
+    }
+
+
+TM FY-2023 Balance Sheet
+
+Standardized
+
+https://api-v2.intrinio.com/fundamentals/TM-balance_sheet_statement-2023-FY/standardized_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+
+    {
+      "data_tag": {
+        "id": "tag_jyRvly",
+        "name": "Total Noncurrent Assets",
+        "tag": "totalnoncurrentassets",
+        "parent": "totalassets",
+        "sequence": 23,
+        "factor": "+",
+        "balance": "debit",
+        "unit": "usd"
+      },
+      "value": 265231073447
+    }
+
+Reported
+
+https://api-v2.intrinio.com/fundamentals/TM-balance_sheet_statement-2023-FY/reported_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+    {
+      "xbrl_tag": {
+        "tag": "NoncurrentAssets",
+        "name": "Total non-current assets",
+        "balance": "debit",
+        "unit": "Unit_JPY",
+        "abstract": false,
+        "sequence": 24,
+        "depth": 5
+      },
+      "value": 360402252354,
+      "dimensions": null
+    }
+
+
+SONY FY-2022
+
+Standardized
+
+    {
+      "data_tag": {
+        "id": "tag_jyRvly",
+        "name": "Total Noncurrent Assets",
+        "tag": "totalnoncurrentassets",
+        "parent": "totalassets",
+        "sequence": 23,
+        "factor": "+",
+        "balance": "debit",
+        "unit": "usd"
+      },
+      "value": 196249555336
+    }
+
+
+Reported
+
+https://api-v2.intrinio.com/fundamentals/SONY-balance_sheet_statement-2022-FY/reported_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+    {
+      "xbrl_tag": {
+        "tag": "NoncurrentAssets",
+        "name": "Total non-current assets",
+        "balance": "debit",
+        "unit": "Unit_JPY",
+        "abstract": false,
+        "sequence": 19,
+        "depth": 3
+      },
+      "value": 205416329051,
+      "dimensions": null
+    }
+
+
+BUD FY-2022 Balance Sheet
+
+Standardized
+
+https://api-v2.intrinio.com/fundamentals/BUD-balance_sheet_statement-2022-FY/standardized_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+    {
+      "data_tag": {
+        "id": "tag_jyRvly",
+        "name": "Total Noncurrent Assets",
+        "tag": "totalnoncurrentassets",
+        "parent": "totalassets",
+        "sequence": 23,
+        "factor": "+",
+        "balance": "debit",
+        "unit": "usd"
+      },
+      "value": 162911000000
+    }
+
+
+Reported
+
+https://api-v2.intrinio.com/fundamentals/BUD-balance_sheet_statement-2022-FY/reported_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+    {
+      "xbrl_tag": {
+        "tag": "NoncurrentAssets",
+        "name": "Total non-current assets",
+        "balance": "debit",
+        "unit": "Unit_USD",
+        "abstract": false,
+        "sequence": 11,
+        "depth": 3
+      },
+      "value": 189757000000,
+      "dimensions": null
+    }
+
+
+USAW 2023-Q1 Balance Sheet
+
+Standardized
+
+https://api-v2.intrinio.com/fundamentals/USAU-balance_sheet_statement-2023-Q1/standardized_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+    {
+      "data_tag": {
+        "id": "tag_jyRvly",
+        "name": "Total Noncurrent Assets",
+        "tag": "totalnoncurrentassets",
+        "parent": "totalassets",
+        "sequence": 23,
+        "factor": "+",
+        "balance": "debit",
+        "unit": "usd"
+      },
+      "value": 17240712
+    }
+
+
+Reported
+
+https://api-v2.intrinio.com/fundamentals/USAU-balance_sheet_statement-2023-Q1/reported_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+    {
+      "xbrl_tag": {
+        "tag": "AssetsNoncurrent",
+        "name": "Total non - current assets",
+        "balance": "debit",
+        "unit": "USD",
+        "abstract": false,
+        "sequence": 8,
+        "depth": 5
+      },
+      "value": 17579049,
+      "dimensions": null
+    }
+
+
+
+TIO 2023-Q1 Balance Sheet
+
+Standardized
+https://api-v2.intrinio.com/fundamentals/TIO-balance_sheet_statement-2023-Q1/standardized_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+
+    {
+      "data_tag": {
+        "id": "tag_jyRvly",
+        "name": "Total Noncurrent Assets",
+        "tag": "totalnoncurrentassets",
+        "parent": "totalassets",
+        "sequence": 23,
+        "factor": "+",
+        "balance": "debit",
+        "unit": "usd"
+      },
+      "value": 560582000
+    }
+
+
+Reported
+
+https://api-v2.intrinio.com/fundamentals/TIO-balance_sheet_statement-2023-Q1/reported_financials?api_key=OmU1ZThiNGNkMDU0NzdiMzRkNDk0YmI3ODM2Nzk0NzM1
+
+    {
+      "xbrl_tag": {
+        "tag": "AssetsNoncurrent",
+        "name": "Total long-term assets",
+        "balance": "debit",
+        "unit": "usd",
+        "abstract": false,
+        "sequence": 14,
+        "depth": 3
+      },
+      "value": 1214666000,
+      "dimensions": null
+    }
+
+
+
+SEC Frames 
+
+https://data.sec.gov/api/xbrl/frames/us-gaap/AssetsNoncurrent/USD/CY2023Q1I.json
+{
+  "taxonomy": "us-gaap",
+  "tag": "AssetsNoncurrent",
+  "ccp": "CY2023Q1I",
+  "uom": "USD",
+  "label": "Assets, Noncurrent",
+  "description": "Sum of the carrying amounts as of the balance sheet date of all assets that are expected to be realized in cash, sold or consumed after one year or beyond the normal operating cycle, if longer.",
+  "pts": 448,
+}
+
+
+Cash Flow Statements Have Conflicting debit/credit and are missing "factor" when as-reported.
+
+
+{'data_tag': {'id': 'tag_NXn24X',
+   'name': 'Repurchase of Common Equity',
+   'tag': 'repurchaseofcommonequity',
+   'parent': 'netcashfromcontinuingfinancingactivities',
+   'sequence': 30,
+   'factor': '+',
+   'balance': 'debit',
+   'unit': 'usd'},
+  'value': -231584000.0}
+
+
+ {'xbrl_tag': {'tag': 'PaymentsForRepurchaseOfCommonStock',
+    'name': 'Share repurchase',
+    'balance': 'credit',
+    'unit': 'usd',
+    'abstract': False,
+    'sequence': 46,
+    'depth': 2},
+   'value': 231584000.0,
+   'dimensions': None}
+
+
+
+
+Standardized
+
+{'id': 'fun_EbvOv1',
+ 'statement_code': 'cash_flow_statement',
+ 'fiscal_year': 2021,
+ 'fiscal_period': 'FY',
+ 'type': 'restated',
+ 'start_date': '2021-01-01',
+ 'end_date': '2021-12-31',
+ 'filing_date': '2023-03-01T21:45:42.000Z',
+ 'is_latest': True,
+ 'updated_date': '2023-03-03T18:26:46.666Z',
+ 'company': {'id': 'com_zrNjkz',
+  'ticker': 'RKT',
+  'name': 'Rocket Companies, Inc.',
+  'lei': None,
+  'cik': '0001805284'}}
+
+
+  {'data_tag': {'id': 'tag_ByK4og',
+    'name': 'Net Cash From Investing Activities',
+    'tag': 'netcashfrominvestingactivities',
+    'parent': 'netchangeincash',
+    'sequence': 23,
+    'factor': '+',
+    'balance': 'debit',
+    'unit': 'usd'},
+   'value': -664852000.0},
+
+
+Reported
+
+{'id': 'fun_EbvOv1',
+ 'statement_code': 'cash_flow_statement',
+ 'fiscal_year': 2021,
+ 'fiscal_period': 'FY',
+ 'type': 'restated',
+ 'start_date': '2021-01-01',
+ 'end_date': '2021-12-31',
+ 'filing_date': '2023-03-01T21:45:42.000Z',
+ 'is_latest': True,
+ 'updated_date': '2023-03-03T18:26:46.666Z',
+ 'company': {'id': 'com_zrNjkz',
+  'ticker': 'RKT',
+  'name': 'Rocket Companies, Inc.',
+  'lei': None,
+  'cik': '0001805284'}}
+
+
+ {'xbrl_tag': {'tag': 'NetCashProvidedByUsedInInvestingActivities',
+   'name': 'Net cash provided by (used in) investing activities',
+   'balance': 'debit',
+   'unit': 'usd',
+   'abstract': False,
+   'sequence': 28,
+   'depth': 2},
+  'value': -664852000.0,
+  'dimensions': None},
+
