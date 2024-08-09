@@ -1,0 +1,20 @@
+site_name: echoSMs
+nav:
+    - Introduction: index.md
+    - Benchmarks: benchmark_data.md
+    - Contributing: contributing.md
+    - API Reference: api_reference.md
+
+theme: mkdocs # readthedocs 
+
+plugins:
+    - search
+    - mkdocstrings:
+        handlers:
+            python:
+                options:
+                    docstring_style: numpy
+                    show_submodules: true
+                    show_symbol_type_heading: true
+                    show_bases: true
+                    filters: ["!^__"] # exclude private Python class members
