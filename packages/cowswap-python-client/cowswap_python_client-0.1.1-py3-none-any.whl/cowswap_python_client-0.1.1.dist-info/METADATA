@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cowswap-python-client
+Version: 0.1.1
+Summary: 
+Author: gabrielfior
+Author-email: fior.gbm@gmail.com
+Requires-Python: >=3.10,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+
