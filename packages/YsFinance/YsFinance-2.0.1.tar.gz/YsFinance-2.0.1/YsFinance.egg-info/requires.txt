@@ -1,0 +1,8 @@
+pandas
+numpy
+scipy
+tushare
+scipy
+statsmodels
+joblib
+ipykernel
