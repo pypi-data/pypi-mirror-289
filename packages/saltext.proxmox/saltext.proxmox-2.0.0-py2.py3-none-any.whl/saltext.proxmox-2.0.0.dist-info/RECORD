@@ -1,0 +1,12 @@
+saltext/proxmox/__init__.py,sha256=D7LywTuuKOLBckMpBTKjqwuIS6PABYTo1qDO2n02Vus,863
+saltext/proxmox/loader.py,sha256=cBtcN5UfX_6Z2P_r6qAlnhiCW83bsl-p-ONJZLOkBIo,349
+saltext/proxmox/version.py,sha256=jfMYUkKiruYd9cM9tY-_mLygW0fRj75GOhW2tEhKhOI,21
+saltext/proxmox/clouds/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+saltext/proxmox/clouds/proxmox.py,sha256=wtrYiPkK6bM-Jof9TggjeM8OQl3QFEQ7lkaVsJ0up4o,17854
+saltext.proxmox-2.0.0.dist-info/LICENSE,sha256=nKMU40FWUvjmzBZRM6dvQhLCLf6pVOoy6C2OwxWzZlE,11352
+saltext.proxmox-2.0.0.dist-info/METADATA,sha256=rA89TeWEbwX7rV5HtEAn3JT8x2ZMXCW-HBTgNxPcupE,5169
+saltext.proxmox-2.0.0.dist-info/NOTICE,sha256=Wr8_8Y8z-BtFocA2a5x0gEBI5USOl2LQ8D_73P3eZ9M,470
+saltext.proxmox-2.0.0.dist-info/WHEEL,sha256=XRxW4r1PNiVhMpP4bT9oWtu3HyndxpJ84SkubFgzp_Y,109
+saltext.proxmox-2.0.0.dist-info/entry_points.txt,sha256=a5Qneqt-2dCevm3ODuCniGs0f4Z_tsndiMcz5Oil84A,48
+saltext.proxmox-2.0.0.dist-info/top_level.txt,sha256=6cynQgWBWnAPoXMnUaVitGzM6k7PzacwjLBPgrjOfi4,8
+saltext.proxmox-2.0.0.dist-info/RECORD,,
