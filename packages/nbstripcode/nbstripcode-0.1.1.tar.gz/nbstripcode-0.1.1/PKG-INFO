@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: nbstripcode
+Version: 0.1.1
+Summary: Remove all that pesky code, but keep those valuable outputs!
+Author: regraded0101
+Requires-Python: >=3.11

@@ -1,0 +1,10 @@
+pyproject.toml
+setup.py
+nbstripcode/__init__.py
+nbstripcode/__main__.py
+nbstripcode/main.py
+nbstripcode.egg-info/PKG-INFO
+nbstripcode.egg-info/SOURCES.txt
+nbstripcode.egg-info/dependency_links.txt
+nbstripcode.egg-info/entry_points.txt
+nbstripcode.egg-info/top_level.txt
