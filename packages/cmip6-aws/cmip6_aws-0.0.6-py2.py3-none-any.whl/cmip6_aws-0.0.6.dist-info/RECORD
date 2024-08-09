@@ -1,0 +1,13 @@
+cmip6_aws/__init__.py,sha256=anyXhZVABfKTtQcPkFeImb1cvMT4RQRU5lvUyGv4DCQ,182
+cmip6_aws/cmip6_aws.py,sha256=bNt8t4JiWovqdTed5rh-8L8vvDETsdtrdi66tZcUO6I,5774
+cmip6_aws/common.py,sha256=Si4ZvbkkaVGyKrOa7gmsVNWS2Abtji-V5nEsJhrIM3M,188
+cmip6_aws/main.py,sha256=uvOzacZdy90BXAQs0XFGwqormS-c6-BvsCO5W1Oz0dk,9921
+cmip6_aws/data/index_md5.txt,sha256=eCcDEG3PwUeLrlllc4mSIgsSgCrDXND-CnRb8L-Dibo,15164366
+cmip6_aws/data/index_v1.1_md5.txt,sha256=gH7GwrWLJebXk0sgAasrF0V9eJbptLEEgZbNJqNHf1g,4814531
+cmip6_aws/data/index_v1.2_md5.txt,sha256=EIEHstLUBTaf24DuvEoUY_hmAXaXJitXntuBfuQL-cw,1250612
+cmip6_aws-0.0.6.dist-info/LICENSE,sha256=4bN4XVO_MsnOb0MtDwQYTXd-4C2gqNkBgeR4-9ffAwk,1068
+cmip6_aws-0.0.6.dist-info/METADATA,sha256=7LYHF2WxvesKPLBXEakVShcJE78KcnOKP6Eh56JQbqU,1774
+cmip6_aws-0.0.6.dist-info/WHEEL,sha256=XRxW4r1PNiVhMpP4bT9oWtu3HyndxpJ84SkubFgzp_Y,109
+cmip6_aws-0.0.6.dist-info/entry_points.txt,sha256=dCBgKI9SQ83hV7o_axX98m19ybDJ16KsrPkQVq0SUT8,49
+cmip6_aws-0.0.6.dist-info/top_level.txt,sha256=oiPnXCxjxE5I0mmCDLQIJ11L0yr4kEiGKFYF_MC6Ink,10
+cmip6_aws-0.0.6.dist-info/RECORD,,
