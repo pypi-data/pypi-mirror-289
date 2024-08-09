@@ -1,0 +1,11 @@
+LICENSE
+LICENSE.txt
+README
+setup.cfg
+setup.py
+uncleflashcard/__init__.py
+uncleflashcard/flashcard.py
+uncleflashcard.egg-info/PKG-INFO
+uncleflashcard.egg-info/SOURCES.txt
+uncleflashcard.egg-info/dependency_links.txt
+uncleflashcard.egg-info/top_level.txt

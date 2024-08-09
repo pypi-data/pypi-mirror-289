@@ -1,0 +1,33 @@
+# โปรแกรม Uncle Flashcard สำหรับจำอะไรก็ได้ที่อยากจำ
+
+### วิธีติดตั้ง
+
+เปิด CMD / Terminal
+
+```sh
+pip install uncleflashcard
+```
+
+### วิธีใช้
+
+เปิด IDLE > File > New File ขึ้นมาแล้วพิมพ์...
+
+```sh
+>>> import uncleflashcard
+```
+
+จากนั้นเซฟลงไปในโฟลเดอร์ที่ต้องการ
+
+โปรแกรม Uncle Flashcard สำหรับจำอะไรก็ได้ที่อยากจำ
+
+โปรแกรมสำหรับจดจำสิ่งต่างๆที่อยากจำ เพียงแค่บันทึกคำศัพท์และคำตอบลงไป 
+วิธีการใช้ง่ายๆ > เพียงกดลูกศรขวาหรือซ้าย > อยากเพิ่มกดเครื่องหมาย + แล้วบันทึกได้เลย 
+
+
+
+พัฒนาโดย: ลุงวิศวกร สอนคำนวณ
+FB: https://www.facebook.com/UncleEngineer
+YouTube: https://www.youtube.com/UncleEngineer
+
+
+| เพจ "ลุงวิศวกร สอนคำนวณ"  | https://www.facebook.com/UncleEngineer] |
