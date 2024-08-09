@@ -1,0 +1,17 @@
+yc_django_celery/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yc_django_celery/admin.py,sha256=p6xop1PuuDG2Uwv3G_aRfldxOfBzTRfMaoZmORVkqyU,66
+yc_django_celery/apps.py,sha256=sDfQF1yEwocph32XX9dYCa--7pXdGq7CUw3KvCdB4tw,168
+yc_django_celery/models.py,sha256=4OVMcDDx9fVgBEJ91B7dfMEG2Ni1LRSLJOKzIkVPsKo,60
+yc_django_celery/settings.py,sha256=bsJfm4YJ0cVwUhgfpvJ9rY5fr9Q5vzQaXQGAW3rsN7U,379
+yc_django_celery/tasks.py,sha256=2xtrs-0UDSVj0udephaaVIr01yEoAJSiqSWjiEFTazQ,315
+yc_django_celery/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+yc_django_celery/urls.py,sha256=nKjRxQRYO1hfe7aoxFBYuvARcueMyTXoHSb0xG7KsSA,239
+yc_django_celery/views.py,sha256=u0FhL7RT5byf5IlcnZEMrcH2TOnQkdfRQU2SjtA26m0,66
+yc_django_celery/api/__init__.py,sha256=glAu3HfMxPXDNIbB0K3DFtg1obEDgDMaeZj4E1BPqa8,73
+yc_django_celery/api/celery_test.py,sha256=oEb4LTNvwLAgnwOGk-yvONNJey6guBjG8jVXRvO-N5o,458
+yc_django_celery/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yc_django_celery-0.0.1.dist-info/LICENSE,sha256=uBGs5rxQD16pUD5SpL3wIVV-bAgTSdufT86W-5afRKU,1128
+yc_django_celery-0.0.1.dist-info/METADATA,sha256=-tBK_6SIIjLrIsbKTnmETWa35eIO1jxkCEhZRHshoU4,832
+yc_django_celery-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+yc_django_celery-0.0.1.dist-info/top_level.txt,sha256=VRMA4agoujH6haTqlduj8pHVm5i8FFSPuA5b_BFxNdM,17
+yc_django_celery-0.0.1.dist-info/RECORD,,

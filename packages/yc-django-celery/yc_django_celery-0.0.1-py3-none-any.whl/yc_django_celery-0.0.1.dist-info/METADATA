@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: yc_django_celery
+Version: 0.0.1
+Summary: Django工具集开发
+Author: LiuFei
+Author-email: liufei-love@foxmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: yc-django-utils >=0.0.5
+Requires-Dist: celery >=5.4.0
+Requires-Dist: celery-progress >=0.4
+Requires-Dist: django-celery-beat >=2.6.0
+Requires-Dist: django-celery-results >=2.5.1
+
+# yc_django_celery
+
+
+
+![](https://img.shields.io/badge/python-3.12.4-brightgreen)
+
+
+
+## 简介
+
+
+
+    异步后台模块
+
+
+
+## 安装
+
+
+
+    pip install yc_django_celery
+
+
+
+## 使用方法
+
+    引入方法
+
+    from yc_django_celery import *
+
+
+
+## 参数说明：
+
