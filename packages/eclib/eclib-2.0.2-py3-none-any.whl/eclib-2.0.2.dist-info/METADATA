@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: eclib
+Version: 2.0.2
+Summary: Encrypted Control Library
+Home-page: https://github.com/KaoruTeranishi/EncryptedControl
+Author: Kaoru Teranishi
+Author-email: kaoruteranishi1005@gmail.com
+Project-URL: Bug Reports, https://github.com/KaoruTeranishi/EncryptedControl/issues
+Project-URL: Source, https://github.com/KaoruTeranishi/EncryptedControl
+Keywords: encrypted control,control,cryptography,encryption,homomorphic encryption
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: control
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+
+<img src="https://github.com/KaoruTeranishi/EncryptedControl/blob/master/logo.png?raw=true" align="center" width="400" alt="header pic"/>
+
+
+# ECLib
+
+ECLib is an easy-to-use open-source homomorphic encryption library for encrypted control.
+For more details, see [documentation](https://kaoruteranishi.github.io/EncryptedControl/index.html).
+
+
+## Supported encryption schemes
+
+- ElGamal
+- Dynamic-key ElGamal
+- Paillier
+- Regev (LWE)
+- GSW
+- GSW-LWE
+
+
+# License
+
+MIT license
+
+
+# Author
+
+Kaoru Teranishi
+- E-mail: kaoruteranishi1005 (at) gmail.com
+- Homepage: [https://kaoruteranishi.xyz](https://kaoruteranishi.xyz)
