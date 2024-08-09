@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+meros.egg-info/PKG-INFO
+meros.egg-info/SOURCES.txt
+meros.egg-info/dependency_links.txt
+meros.egg-info/requires.txt
+meros.egg-info/top_level.txt
+source/__init__.py
+source/meros.py
