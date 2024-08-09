@@ -1,0 +1,13 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/example_four.py
+src/example_one.py
+src/example_three.py
+src/example_two.py
+src/mathchecker.py
+src/pythonbasic.py
+src/pythonbasic.egg-info/PKG-INFO
+src/pythonbasic.egg-info/SOURCES.txt
+src/pythonbasic.egg-info/dependency_links.txt
+src/pythonbasic.egg-info/top_level.txt
