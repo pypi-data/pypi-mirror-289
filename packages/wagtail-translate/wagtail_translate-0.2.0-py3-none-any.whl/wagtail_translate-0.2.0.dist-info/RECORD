@@ -1,0 +1,16 @@
+wagtail_translate/__init__.py,sha256=R4tuJHMvySe2K9eKhyOk5rrSWoUh5X7VtoIOVSA_Y7Y,136
+wagtail_translate/apps.py,sha256=ydntMBtpNwGXjQVC2VhTCT2PL9uD4VSEmp9pFFZj1cE,544
+wagtail_translate/fields.py,sha256=ix9Ad_alrnJO7G6V8P3pthbAoxdu8iKfSmO0WFVWAaQ,5807
+wagtail_translate/monkeypatches.py,sha256=RlPOK4I_1RKylJRIvCf2_tQz3nA_87qNS_X1fc9mOv0,1960
+wagtail_translate/signals.py,sha256=DuVb5HhwbjnlBaq4_-Pi9F81-RWm4YJoQ6uRp9whfoA,78
+wagtail_translate/default_behaviour/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_translate/default_behaviour/apps.py,sha256=bIxMb6ZE7aHw2C1dFfXXrLgBkIjJYKY6Gj07TXx2uKw,180
+wagtail_translate/default_behaviour/signals.py,sha256=Yrdo-f-635OADfl5IGjWhfCN87cAyXI5NNIvAVvNHEU,1419
+wagtail_translate/translators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_translate/translators/base.py,sha256=XQeEIizBNDR6KaNZ-zNKJhsbXBAkFGAf-bEQks3EbIo,9444
+wagtail_translate/translators/deepl.py,sha256=BpjsGn6sfHn6wVkuPPMfNmqzERiAbS-zmmSkhWnA1t4,1141
+wagtail_translate/translators/rot13.py,sha256=zjhSRw_oSroSSJY96_YlVr3Lwv0BqPBltrEvsdbmmT4,666
+wagtail_translate-0.2.0.dist-info/LICENSE,sha256=KLRthvjDnQYZgcnTkIrIIbUJXe6Y19wMl2bwyBLP6Us,1075
+wagtail_translate-0.2.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+wagtail_translate-0.2.0.dist-info/METADATA,sha256=ylS3sT4XhsvNHA_A8N6nv2KCsLhVBKOAMF8MY2q1Kbc,7076
+wagtail_translate-0.2.0.dist-info/RECORD,,
