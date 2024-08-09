@@ -1,0 +1,9 @@
+ggca-1.0.0.dist-info/METADATA,sha256=_Fd58ToFsi1L4tv3S3jAkUWJDpIzisYARXfkQpFSdo4,7403
+ggca-1.0.0.dist-info/WHEEL,sha256=C_pPK7gIftwpDUnl6O1oIfluxjH_rHczf-F_Us9x20c,112
+ggca-1.0.0.dist-info/license_files/LICENSE,sha256=6Bm8Hlhl__v2Xu9kZC-A5Ieoo5lKkbXfWoDTFslTDJU,1072
+ggca.libs/libgcc_s-1e52349c.so.1,sha256=Ani0u_W_tB8ESsFePO4D2mn2lrgWLhyFdw6RETxBTYM,437537
+ggca/__init__.py,sha256=E8obpnEtLW4G1P7lBEvQufyzg53iqyj0Z11PFLhTFeI,99
+ggca/__init__.pyi,sha256=f6S7aHDDp1hb_MGVBdnyA6zSYRbY-MBmVyaiPfgaHNc,4036
+ggca/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ggca/ggca.pypy38-pp73-x86_64-linux-gnu.so,sha256=-lrp-wa2DrE3I9fJGPJa5fNwwjBT3TGJQZ1DGSA_G80,2788793
+ggca-1.0.0.dist-info/RECORD,,
