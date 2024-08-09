@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "micro_test_hub"
+version = "0.1.9"
+description = "A system to support the creation of integration tests for MOC microservices"
+authors = ["Damianos Damianidis"]
+readme = "README.md"
+packages = [
+    { include = "micro_test_hub" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "2.7.4"
+pyyaml = "6.0.1"
+Click = "8.1.7"
+gitpython = "3.1.43"
+google-cloud-pubsub = "2.10.0"
+
+[tool.poetry.scripts]
+micro-test-hub = "micro_test_hub.transports.cli.v1_0.main:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
