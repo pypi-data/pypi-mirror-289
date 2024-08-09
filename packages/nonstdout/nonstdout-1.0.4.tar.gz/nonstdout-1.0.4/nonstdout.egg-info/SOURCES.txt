@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+nonstdout/__init__.py
+nonstdout/core.py
+nonstdout.egg-info/PKG-INFO
+nonstdout.egg-info/SOURCES.txt
+nonstdout.egg-info/dependency_links.txt
+nonstdout.egg-info/requires.txt
+nonstdout.egg-info/top_level.txt
