@@ -1,0 +1,2 @@
+[console_scripts]
+pipupgui = pipupgui.__main__:main
