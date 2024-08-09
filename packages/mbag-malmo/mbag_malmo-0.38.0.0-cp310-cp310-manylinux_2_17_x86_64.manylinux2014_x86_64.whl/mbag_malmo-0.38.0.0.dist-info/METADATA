@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mbag-malmo
+Version: 0.38.0.0
+Summary: Project Malmo is a platform for Artificial Intelligence experimentation and research built on top of Minecraft
+Home-page: https://github.com/cassidylaidlaw/malmo
+Author: Cassidy Laidlaw
+Author-email: v-andkra@microsoft.com
+Project-URL: Bug Reports, https://github.com/Microsoft/malmo/issues
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Say Thanks!, http://saythanks.io/to/example
+Project-URL: Source, https://github.com/Microsoft/malmo/
+Keywords: AI Minecraft Reinforcement-Learning
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
