@@ -1,0 +1,3 @@
+[console_scripts]
+cmd_assist=cmd_assist.cli_manager:cli
+
