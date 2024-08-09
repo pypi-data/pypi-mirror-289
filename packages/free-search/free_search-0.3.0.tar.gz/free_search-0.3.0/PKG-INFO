@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: free-search
+Version: 0.3.0
+Summary: A simple vector database with CRUD and search functionality
+Home-page: https://github.com/AI-FREE-Team/free-search
+Author: Ken
+Author-email: ai.free.team@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy==1.26.4
+Requires-Dist: torch==2.3.1
+Requires-Dist: transformers==4.42.4
+Requires-Dist: faiss-cpu==1.8.0

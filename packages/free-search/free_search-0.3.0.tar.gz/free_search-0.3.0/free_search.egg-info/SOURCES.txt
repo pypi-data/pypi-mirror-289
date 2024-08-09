@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+free_search/__init__.py
+free_search/db.py
+free_search.egg-info/PKG-INFO
+free_search.egg-info/SOURCES.txt
+free_search.egg-info/dependency_links.txt
+free_search.egg-info/requires.txt
+free_search.egg-info/top_level.txt
