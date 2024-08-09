@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ips-mace
+Version: 0.1.0
+Summary: MACE IPSuite Plugin
+Author: zincwarecode
+Author-email: zincwarecode@gmail.com
+Requires-Python: >=3.10,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: ipsuite (>=0.1.3,<0.2.0)
+Requires-Dist: mace-torch (>=0.3.4,<0.4.0)
+Requires-Dist: torch-dftd (>=0.4.0,<0.5.0)
+Description-Content-Type: text/markdown
+
+# ips-mace
+IPSuite node(s) for the MACE model
+
