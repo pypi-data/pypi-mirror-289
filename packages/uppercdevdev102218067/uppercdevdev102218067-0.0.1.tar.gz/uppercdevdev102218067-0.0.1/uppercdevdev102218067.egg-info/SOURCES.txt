@@ -1,0 +1,7 @@
+setup.py
+upcase/__init__.py
+upcase/upcf.py
+uppercdevdev102218067.egg-info/PKG-INFO
+uppercdevdev102218067.egg-info/SOURCES.txt
+uppercdevdev102218067.egg-info/dependency_links.txt
+uppercdevdev102218067.egg-info/top_level.txt
