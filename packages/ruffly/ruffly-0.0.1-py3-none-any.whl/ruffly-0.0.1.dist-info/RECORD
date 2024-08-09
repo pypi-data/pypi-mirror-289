@@ -1,0 +1,10 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ruffly/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ruffly/cli.py,sha256=ujiGQhdtV9KrkensSiDCET5DvJuKXYOFRX3xIiPcdL4,1132
+ruffly/utils.py,sha256=a2-rcf4P8ASNlFQvv7zKzd7eUB_C36JO_FCR0T4AoKU,2057
+ruffly-0.0.1.dist-info/LICENSE,sha256=XapmKIOqntjvVoGBuiRhvI8qP3p3sU00nnqG-RtVAj8,1067
+ruffly-0.0.1.dist-info/METADATA,sha256=Rik7_FwhbloaVJN6ooeiu8dcMg5JfT05rvoZ51Dznys,1380
+ruffly-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+ruffly-0.0.1.dist-info/entry_points.txt,sha256=jIwwrWQ8lmozg7dHoW2LFWrZzRE6GaVu2AYgmbV3YfU,40
+ruffly-0.0.1.dist-info/top_level.txt,sha256=o9YL6wF7jtxgXXvRBaU4Kx8Ldc5wIQHNeMStHhxiPt0,16
+ruffly-0.0.1.dist-info/RECORD,,
