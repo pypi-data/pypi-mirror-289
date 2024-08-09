@@ -1,0 +1,13 @@
+from typing import Any, Dict, List, Optional
+
+def check_for_exceptions(resp: Dict, body: Dict, url: str): ...
+def append_query_strings(url: str, **query_strings): ...
+def quote_user_host(user: str, host: Optional[str]): ...
+
+class Paginated(list):
+    def __init__(
+        self,
+        items: Optional[List[Any]] = None,
+        next_marker: Any = None,
+        links: Optional[List[str]] = None,
+    ): ...
