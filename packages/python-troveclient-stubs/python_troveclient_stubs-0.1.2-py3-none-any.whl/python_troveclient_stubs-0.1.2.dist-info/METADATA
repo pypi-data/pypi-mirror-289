@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: python-troveclient-stubs
+Version: 0.1.2
+Summary: Type annotations for python-troveclient
+Home-page: https://github.com/tdeni/python-troveclient-stubs
+License: Apache Software License
+Author: Deni Tazurkaev
+Author-email: sha256deni@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Typing :: Stubs Only
+Project-URL: Repository, https://github.com/tdeni/python-troveclient-stubs
+Description-Content-Type: text/markdown
+
+# python-troveclient-stubs
+
+![PyPI - Downloads](https://img.shields.io/pypi/dm/python-troveclient-stubs)
+![PyPI - Version](https://img.shields.io/pypi/v/python-troveclient-stubs)
+
+Stub files for [python-troveclient](https://github.com/openstack/python-troveclient)
+
