@@ -1,0 +1,14 @@
+transformers==4.41.1
+torch<=2.4.0,>=2.3.0
+torch-xla[tpu]<=2.4.0,>=2.3.0
+loguru==0.6.0
+sentencepiece==0.2.0
+
+[quality]
+black
+ruff
+isort
+
+[tests]
+pytest
+safetensors

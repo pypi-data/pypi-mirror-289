@@ -1,0 +1,33 @@
+name: Optimum TPU / Test TGI on TPU
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "text-generation-inference/**"
+  pull_request:
+    branches: [ main ]
+    paths:
+      - "text-generation-inference/**"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  do-the-job:
+    name: Run TGI tests
+    runs-on: optimum-tpu
+    container:
+      # Use a nightly image that works with TPU (release was not working)
+      image: us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla@sha256:48b1d3ab080613fd88234019daf77ef7812b518acb13c54ddad03bf770d6ac57
+      options: --shm-size "16gb" --ipc host --privileged
+    env:
+      PJRT_DEVICE: TPU
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and test TGI server
+        run: |
+          HF_TOKEN=${{ secrets.HF_TOKEN_OPTIMUM_TPU_CI }} make tgi_test
