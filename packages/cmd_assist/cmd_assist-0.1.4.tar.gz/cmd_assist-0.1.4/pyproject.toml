@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "cmd_assist"
+version = "0.1.4"
+description = "A tool to save and retrieve frequently used commands."
+authors = ["Darren Rabbitt <dev@darrenrabbitt.com>"]
+readme = "README.md"
+packages = [{include = "cmd_assist"}]
+include = [
+    "resources/config.yaml",
+]
+
+[tool.poetry.scripts]
+cmd_assist = "cmd_assist.cli_manager:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+click = ">=7.1.2"
+boto3 = ">=1.17.49"
+PyYAML = ">=6.0.1"
+python-dotenv = ">=0.17.1"
+pydantic = "^2.8.2"
+pydantic-settings = "^2.3.4"
+argparse = "^1.4.0"
+asyncio = "^3.4.3"
+botocore = ">=1.34.70,<1.34.132"  # Adjusted version range to avoid conflict
+aioboto3 = "^13.1.1"
+requests = "^2.32.3"
+jsonschema = "^4.23.0"
+
+# Adding compatible version of types-requests to resolve dependency conflict with botocore
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.1"
+pytest-mock = ">=3.6.1"
+moto = "5.0.11"
+invoke = ">=1.5.0"
+flake8 = "^7.1.0"
+black = ">=21.5b0"
+mypy = "^1.11.0"
+safety = "^3.2.4"
+types-pyyaml = "^6.0.12.20240724"
+types-boto3 = "^1.0.2"
+bandit = "^1.7.9"
+types-requests = "^2.28.11.7"
+
+# Removing conflicting types-requests package
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.2.6"
+types-requests = "^2.28.11.7"
+
+[tool.mypy]
+files = "cmd_assist, tests"
+ignore_missing_imports = true
+disallow_untyped_calls = false
+disallow_untyped_defs = false
+disallow_untyped_decorators = false
+warn_return_any = true
+warn_unused_ignores = true
