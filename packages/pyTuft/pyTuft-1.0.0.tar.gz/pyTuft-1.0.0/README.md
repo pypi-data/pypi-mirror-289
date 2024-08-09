@@ -1,0 +1,56 @@
+# pyTuft
+
+A Truffle-like tool for managing Python smart contracts on Omne.
+
+## Installation
+
+### Prerequisites
+
+Make sure you have the following installed:
+- Python 3.6+
+
+## Installing pyTuft
+
+```sh
+pip install pyTuft
+```
+
+## Configuration
+
+Create a `pyTuft_user_config.py` file in your project directory with the following content:
+
+```python
+BLOCKCHAIN_URL = 'http://localhost:5000'
+DEPLOYER_ADDRESS = '0xYourAddress'
+```
+
+## Usage
+
+### Compile a Contract
+
+```sh
+pyTuft compile <contract>
+```
+
+## Deploy a Contract
+
+```sh
+pyTuft deploy <contract>
+```
+## Execute a Contract
+
+```sh
+pyTuft execute --contract_id <contract_id> --function_name <function_name> --args <arg1> <arg2>
+```
+
+## Byte-compiled / optimized / DLL files
+
+## Running Tests
+
+```sh
+pyTuft test
+```
+
+## License
+
+This project is licensed under the MIT License.
