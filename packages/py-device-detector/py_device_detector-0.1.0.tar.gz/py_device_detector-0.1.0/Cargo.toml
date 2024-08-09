@@ -1,0 +1,13 @@
+[package]
+name = "py-device-detector"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "py_device_detector"
+crate-type = ["cdylib"]
+
+[dependencies]
+rust-device-detector = { git = "https://github.com/simplecastapps/rust-device-detector.git", branch = "main", features = ["cache"]}
+pyo3 = { version = "0.22.0", features = ["anyhow"] }
