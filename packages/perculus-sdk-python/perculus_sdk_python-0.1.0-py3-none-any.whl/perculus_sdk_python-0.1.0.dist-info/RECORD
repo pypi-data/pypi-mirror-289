@@ -1,0 +1,10 @@
+attendee/__init__.py,sha256=CcYng2WQPCI5-QwDjUMV1mqEr0ALUbx6DvEc0Or76lY,34
+attendee/client.py,sha256=8nJXYI2XHJuQDvQSdht_R976kPeBkM24myzcIj3VIVA,2148
+session/__init__.py,sha256=yI0ku5JJwoT1gsBfJYoJ1-sqxDuNJiltp9CvXHJXeHQ,33
+session/client.py,sha256=O_eQwGqkBgLU-gaQ9ohcFQP59cg5X-hhYXzAJ-Fju8c,1115
+user/__init__.py,sha256=pvVg1q7dYQ2m7ikLbzan8O2ynTRBoBuo54Y6ZdUyfC4,30
+user/client.py,sha256=j8R70bQm5fD8jSeEVwBxXc6yW6hTOwW3dT13QFJOEAA,1096
+perculus_sdk_python-0.1.0.dist-info/METADATA,sha256=upO4IVD-Naim60g7vlhuFjf_fbCd7b4-LWnbhDeX2_8,582
+perculus_sdk_python-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+perculus_sdk_python-0.1.0.dist-info/top_level.txt,sha256=7jH28V5a2QE4si6ND1FjosYSwQ-I9_yqboK7JQEB3bw,22
+perculus_sdk_python-0.1.0.dist-info/RECORD,,
