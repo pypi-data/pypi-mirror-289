@@ -1,0 +1,9 @@
+fasterbench/__init__.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+fasterbench/_modidx.py,sha256=8V5YV4WCI3OzpcBmVX4nDkQK5FRcJGyJyUg_DuHXMPA,2076
+fasterbench/benchmark.py,sha256=Nflo7cnCRN-OIHrRdmLykzveCrl9qzYU0xaE14DiiFA,6569
+fasterbench-0.0.3.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+fasterbench-0.0.3.dist-info/METADATA,sha256=jHfETy8XfJc2G7lQ-7xj_H65HBLjk3wOeISYyzsC9Vo,1199
+fasterbench-0.0.3.dist-info/WHEEL,sha256=cpQTJ5IWu9CdaPViMhC9YzF8gZuS5-vlfoFihTBC86A,91
+fasterbench-0.0.3.dist-info/entry_points.txt,sha256=cbKPIW0FNrkRtyjht2Qm8JMYravNgvM8LwZ4QdIUa98,44
+fasterbench-0.0.3.dist-info/top_level.txt,sha256=rvh4_MuntOFNC_E9RmQaXbVZ7iafEx4y0_RIk98FAS8,12
+fasterbench-0.0.3.dist-info/RECORD,,
