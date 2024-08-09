@@ -1,0 +1,10 @@
+dar_backup/.darrc,sha256=0XSQ1XorEZqEt_p1gV-fardRzB_ZV2uJM3jeKGxVScY,2051
+dar_backup/cleanup.py,sha256=3Hx1uRryOdVLIF3iy0GiMcPmNM2pMKxFKo-4uzdoUBY,8004
+dar_backup/config_settings.py,sha256=jVFnP9MEtbJIS8QCsI_Eg-F44JfH504drtwAbXTexUc,3266
+dar_backup/dar_backup.py,sha256=eRkMOlh-395h0kXjp1J-1croAEhszUFgH8F4H6e8SNE,31667
+dar_backup/util.py,sha256=hEA2vf1Ryw15g_FFoRMaShatFKae3RMcv2STeP6fAYo,7099
+dar_backup-0.5.10.dist-info/METADATA,sha256=qtiD3HnPxBEJ9upyGcBt1l4CBLR1apZOovTEFysJzGs,19660
+dar_backup-0.5.10.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+dar_backup-0.5.10.dist-info/entry_points.txt,sha256=29xLVUDKaqwNOiBCmmTxHRDPi9LNT5SBwEO6De5eu50,92
+dar_backup-0.5.10.dist-info/top_level.txt,sha256=YFKV6QMD2db88iKGMHUYnRbcDOyncxr0Uh6ak3Ji_OI,11
+dar_backup-0.5.10.dist-info/RECORD,,
