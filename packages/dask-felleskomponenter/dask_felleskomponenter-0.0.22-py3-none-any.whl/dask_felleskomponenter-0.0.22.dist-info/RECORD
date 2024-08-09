@@ -1,0 +1,15 @@
+dask_felleskomponenter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dask_felleskomponenter/governance/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dask_felleskomponenter/governance/main.py,sha256=PadCa8fOVYsG75Dwoc5yjYjENbxvOStLQiKXQKoHa1k,2642
+dask_felleskomponenter/governance/checks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dask_felleskomponenter/governance/checks/column.py,sha256=PfwVRITZEaXVRfJUouiHCJVrTQruS2bmWzeUjlT_y5I,1689
+dask_felleskomponenter/governance/checks/common.py,sha256=2KT0ahWtaRpY8yAivY5ORKnS0jNHvUrVyy81fbxGHtU,1910
+dask_felleskomponenter/governance/checks/table.py,sha256=34znRpz5ZzgeXF3UKJdyTup06uSBbki4rbAl8MFalwo,4790
+dask_felleskomponenter/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dask_felleskomponenter/tests/test_table_validation.py,sha256=GS6aibqmHvYGU8JZ6u4jc-rJ2Bzs3aFNHuBUGAS_t7Q,1215
+dask_felleskomponenter/types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dask_felleskomponenter-0.0.22.dist-info/LICENSE,sha256=NAn3yxZAD2E7SxfeAzZ6B-g5tmGX1LYLBY2eEcCZAtY,1066
+dask_felleskomponenter-0.0.22.dist-info/METADATA,sha256=DTctgf22NHSvUvL64oNdg3f8drbwoMRib_RzPYytDj4,1754
+dask_felleskomponenter-0.0.22.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+dask_felleskomponenter-0.0.22.dist-info/top_level.txt,sha256=0EkEThOcKYhsuGKkwmBHJ5apo5SJCb_zp4Fb4EFgClg,23
+dask_felleskomponenter-0.0.22.dist-info/RECORD,,
