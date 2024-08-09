@@ -1,0 +1,16 @@
+tango_checkup/__init__.py,sha256=DLb9hiA33p4QyOiCyxplmnQ69KBrlkyePmUo0CcU4_8,117
+tango_checkup/_version.py,sha256=SFCDdrYA67D1Je-jHgVVh4LOopkPvuV6NMtqSJ7Tfhg,411
+tango_checkup/checks.py,sha256=rDct9vmVD6c7PWFyX5fg_2jfdvIOtKAxzBvETi6lMug,3360
+tango_checkup/decorators.py,sha256=0VpF1lucxEr6buvnKqPhT64o56zMzsj8L6nYEOXdL34,8191
+tango_checkup/fixtures.py,sha256=UDrXymOFgrKr-Mupf6Y1593nYvm9YOfgBTfJ9qnXeLY,5173
+tango_checkup/getters.py,sha256=1kpP_RPEMMbqWD6K3PyJaRfC0P7sXRpTZD_MoYCx_LE,2594
+tango_checkup/hooks.py,sha256=mZs9-BM5Tjfm9uijVqFGx4u1YHbTJfDdz2L7up7tnmk,3436
+tango_checkup/plugin.py,sha256=OU5csYAGE_EgLV9_ZNvPWC-l_Uc-Av92kjLkd3f5vxs,569
+tango_checkup/report.py,sha256=Zn94ehtiKg7eljPF2aD0BJnPYrk4eYux70kZEAaIfqg,8313
+tango_checkup/templates/base.html,sha256=zyPTW-Cwt4kjcetPmzMNj0Qtka3DSmjN4Am1RYhqkMs,4923
+tango_checkup-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tango_checkup-0.1.2.dist-info/METADATA,sha256=25QSfVvzA7MWGIr33rqyzSQaCgPIMzSMa7TYYhrvdcQ,47125
+tango_checkup-0.1.2.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+tango_checkup-0.1.2.dist-info/entry_points.txt,sha256=5Fk4kfGnity_Gf3RT40Izqk48qGtbKWKw5UjL8KRgJo,48
+tango_checkup-0.1.2.dist-info/top_level.txt,sha256=e5tqGdYWJ5s89py08ofnTb27PVY1EYONrD37kPr0Vt4,14
+tango_checkup-0.1.2.dist-info/RECORD,,
