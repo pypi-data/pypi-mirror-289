@@ -1,0 +1,49 @@
+backup_provider: local
+backup_providers:
+  aws:
+    bucket_acl: private
+    bucket_name: cmd-assist-bucket
+    region: us-east-1
+  local:
+    directory: /tmp/cmd_assist/
+    directory_name: backups
+bundles:
+- name: aws
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/aws/commands.json
+- name: gcp
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/gcp/commands.json
+- name: docker
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/docker/commands.json
+- name: helm
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/helm/commands.json
+- name: kubernetes
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/kubernetes/commands.json
+- name: bazel
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/bazel/commands.json
+- name: argocd
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/argocd/commands.json
+- name: terraform
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/terraform/commands.json
+- name: ansible
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/ansible/commands.json
+- name: pulumi
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/pulumi/commands.json
+- name: gradle
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/gradle/commands.json
+- name: poetry
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/poetry/commands.json
+- name: maven
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/maven/commands.json
+- name: awk
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/awk/commands.json
+- name: sed
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/sed/commands.json
+- name: shell
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/shell/commands.json
+- name: bash
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/bash/commands.json
+- name: windows
+  url: https://github.com/darrenrabbs/cmd_assist_bundles/raw/main/windows/commands.json
+commands_file: /tmp/commands.yaml
+config_path: /Users/darrenrabbitt/.cmd_assist/config.yaml
+object_name: commands.json
