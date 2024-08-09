@@ -1,0 +1,9 @@
+AskCodeium/__init__.py,sha256=89EDHQrteVoqd1u7Kf3xrKU1kGwplUoVCvtV7qc1K80,45
+AskCodeium/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AskCodeium/services/create_chat.py,sha256=ZNpl9-VQ_C-P_lzlPjQwZV6_tTx6bjsKw7AifvSAuXU,2018
+AskCodeium/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AskCodeium/utils/browser_manager.py,sha256=RjMSBUM-XZ_H12T8JDO1bnm0XgandQSNRpUSTNxTZ7Q,3444
+AskCodeium-1.0.6.dist-info/METADATA,sha256=00Awq7xuSFzNJrv1KH4KmWXLkuVy5-YH6wLfJFMqDDA,3864
+AskCodeium-1.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+AskCodeium-1.0.6.dist-info/top_level.txt,sha256=ZWeOlpKKyPJOlqoyJUexOHEcfG6tSCsrJEUnmClloeU,11
+AskCodeium-1.0.6.dist-info/RECORD,,
