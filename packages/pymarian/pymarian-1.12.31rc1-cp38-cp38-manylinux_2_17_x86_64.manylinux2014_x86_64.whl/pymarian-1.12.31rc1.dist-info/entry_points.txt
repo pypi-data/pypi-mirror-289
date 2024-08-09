@@ -1,0 +1,4 @@
+[console_scripts]
+pymarian-eval = pymarian.eval:main
+pymarian-mtapi = pymarian.mtapi_server:main
+pymarian-qtdemo = pymarian.qtdemo:main
