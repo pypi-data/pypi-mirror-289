@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: task_manager_sdk
+Version: 0.1.1
+Summary: Un SDK para interactuar con la API TaskManager
+Home-page: https://github.com/tuusuario/task_manager_sdk
+Author: Tu Nombre
+Author-email: tuemail@example.com
+Requires-Dist: requests >=2.25.1
+
+# TaskManager SDK
+
+Este es un SDK simple para interactuar con la API de TaskManager.
+
+## Instalación
+
+```bash
+pip install task_manager_sdk
+```
