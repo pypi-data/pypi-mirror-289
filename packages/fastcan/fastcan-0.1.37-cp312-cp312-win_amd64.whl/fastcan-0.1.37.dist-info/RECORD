@@ -1,0 +1,10 @@
+fastcan-0.1.37.dist-info/METADATA,sha256=fxoX-itovxqOJWmZlXdaS6r1MRWgPXHaEaSN_K8uGNE,4720
+fastcan-0.1.37.dist-info/WHEEL,sha256=50PeAbplA6PkI0hYOYoeacB9US1R6EguyfOnsccH0WU,85
+fastcan-0.1.37.dist-info/LICENSE,sha256=DhJ2a7YNQi2oeq5InSoLjrgV4sOsTM3nIYrT7X1MEqE,1089
+fastcan/_cancorr_fast.cp312-win_amd64.pyd,sha256=FtCVKW1pQc9km8fs8cxMB3C0Il0ClOl9ohPJGEYchMo,321589
+fastcan/_cancorr_fast.cp312-win_amd64.dll.a,sha256=Enj9sk4Lou9yR26wbPlwQ1MqA1q3PXDsMJOmu0MzZuA,1812
+fastcan/__init__.py,sha256=bdtG77zS78__Wi2cHX4L_o47aJPp5hD1rvSEh7_p5Ng,137
+fastcan/_cancorr_fast.pyx,sha256=YZgHRDKDWdETtc9hNTWoNt2Jd0YklGFZDbhmxRxMz-A,8839
+fastcan/_fastcan.py,sha256=NTF9r8fkz7Z65J1591Q1XZr_lPxJXaz7MKIctN6OLcY,9262
+fastcan/meson.build,sha256=tFGOKRtNRHkWJPJ2GRWK8BqPJrrt0If855r_Uu0PKlM,338
+fastcan-0.1.37.dist-info/RECORD,,
