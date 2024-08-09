@@ -1,0 +1,10 @@
+dask_memusage_gpus/__init__.py,sha256=AjnRFqARbtc0nBTkX2nGcxOymxq0Gmmt1F7Wy_UnhSo,72
+dask_memusage_gpus/definitions.py,sha256=ISMPepbP8rn88HCJmszfekquZeUHIR7HjtSMKQFYdCo,694
+dask_memusage_gpus/gpu_handler.py,sha256=-br80c4qkGONPsJsHqteO5a5sk2UruCZanYDHZ2CqIc,4306
+dask_memusage_gpus/plugin.py,sha256=ruICn-qB7hmDe0bEfWjivHNfE_mqDszJexeRfJ__qv0,5393
+dask_memusage_gpus/utils.py,sha256=zSb631aI-FZHl-C-USycMfeF-PeF4MfRpFMk-jqeN1k,3580
+dask_memusage_gpus_plugin.py,sha256=5KhLf915doPz3aNc_BOQ8AhneZFOh4k2Z5xgAwfHWpc,1974
+dask_memusage_gpus-1.0.1.dist-info/LICENSE,sha256=Xd2HYuCX6HKuty-2F3g841ZxYAod5CIsbdifZOADs3k,1074
+dask_memusage_gpus-1.0.1.dist-info/METADATA,sha256=JEug_TTFcdARz6skdFW8ak9IBLMdIOGZ_CGjlM1Id04,4749
+dask_memusage_gpus-1.0.1.dist-info/WHEEL,sha256=IrRNNNJ-uuL1ggO5qMvT1GGhQVdQU54d6ZpYqEZfEWo,92
+dask_memusage_gpus-1.0.1.dist-info/RECORD,,
