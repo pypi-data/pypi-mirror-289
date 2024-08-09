@@ -1,0 +1,14 @@
+mypythonlib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypythonlib/myfuncs.py,sha256=6hZkn2rIX2ktC63YZmp4dmFQS54_R3MWFu6vMFed32A,50
+mypythonlib_nasim_project/__init__.py,sha256=VV08TmNrrKZPtEdVTklaLb51yc-nz0VXJNbLTHLQ5ec,92
+mypythonlib_nasim_project/clean_text.py,sha256=5vWBiZUilqalb6FsmGXY0ULFbmvcfXfg4K3dAT_-_Pc,2241
+mypythonlib_nasim_project/fix_lines.py,sha256=p0AalJw3lpC766w0K4gn7SLE1Pv8jS0k_6u7rZ0TdCc,6154
+mypythonlib_nasim_project/liaisons.py,sha256=RSJNjRVwKcGgXxK75WPw2HM5WxdprpZ4RV9bMD_2GiY,7087
+mypythonlib_nasim_project/myfuncs.py,sha256=o3lTTPs_hnlc-ooO3hg-GqvLzFn7d4PZTq-l6s_yGsU,49
+mypythonlib_nasim_project/remove_pnum_hilight_title.py,sha256=KdsemG24m1FV_6_QNYU2CutCp9ysG7BhywL9sgldC5M,5987
+mypythonlib_nasim_project/replace_numbers.py,sha256=J1bzZTuSX1mVBNFnTZMpvHXH6jhL-2E-LtteMwVqovI,2001
+mypythonlib_nasim_project/split_chapters.py,sha256=6er2Cl8r0MAq2F0pdgC2Tc5MgBm7ruX2xDBY67xebjk,3017
+mypythonlib_nasim_project-0.1.9.dist-info/METADATA,sha256=My8OdjvnV3Pb4vtJIlKza5oVXvCb5l1-LD3qdz2gi_c,177
+mypythonlib_nasim_project-0.1.9.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+mypythonlib_nasim_project-0.1.9.dist-info/top_level.txt,sha256=HoVcmYsd4BQ-reBwyfIlG6CbYEgmnLchLQW9kiYZ8AA,26
+mypythonlib_nasim_project-0.1.9.dist-info/RECORD,,
