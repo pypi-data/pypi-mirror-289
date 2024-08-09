@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+transformers<5.0.0,>=4.43.1
+torch
+accelerate
+bitsandbytes>=0.39.0
+nest-asyncio
+click
+pandas
+matplotlib
+
+[dev]
+pytest<7.0.0,>=6.2.5
+pytest-cov<3.0.0,>=2.12.1
+mypy<1.0.0,>=0.910
