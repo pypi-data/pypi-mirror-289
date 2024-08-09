@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: styx-emulator
+Version: 0.1.0
+License-File: LICENSE.txt
+Summary: styx-emulator bindings in python
+Author-email: lockbox <lockbox@struct.foo>
+License: BSD-2-Clause
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# styx-emulator
+
+Describe your project here.
+* License: BSD-2-Clause
+
