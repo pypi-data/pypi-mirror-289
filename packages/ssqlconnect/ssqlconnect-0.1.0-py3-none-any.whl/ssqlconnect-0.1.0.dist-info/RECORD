@@ -1,0 +1,7 @@
+ssqlconnect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ssqlconnect/Data.py,sha256=LwRWB7inVYuXfFoqkO9lCnebFDViaysE1hMQ3o4hQnc,658
+ssqlconnect/logger.py,sha256=VP9o_ZTTMksckWAKsbewBkSoqltv7TTE_OBGtmWoL-Q,258
+ssqlconnect/SSQL.py,sha256=lXxWsuW51owe3Z4SN_BdYwSTxqpyOKmYJoepzMspctE,42982
+ssqlconnect-0.1.0.dist-info/METADATA,sha256=4SbXomWhet3OnXl0pFS2ZlAtILV3XFr2At90v5hmMVw,16778
+ssqlconnect-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ssqlconnect-0.1.0.dist-info/RECORD,,
