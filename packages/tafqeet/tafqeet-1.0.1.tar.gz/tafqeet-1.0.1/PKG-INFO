@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tafqeet
+Version: 1.0.1
+Summary: python pkg for converting numbers to arabic words
+Home-page: UNKNOWN
+Author: nader
+Author-email: nadernabilmansour@gmail.com
+License: UNKNOWN
+Project-URL: repository, https://github.com/Nadern96/tafqeet-py
+Description: python pkg for converting numbers to arabic words
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tafqeet/__init__.py
+tafqeet/tafqeet.py
+tafqeet.egg-info/PKG-INFO
+tafqeet.egg-info/SOURCES.txt
+tafqeet.egg-info/dependency_links.txt
+tafqeet.egg-info/not-zip-safe
+tafqeet.egg-info/top_level.txt
