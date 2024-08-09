@@ -1,0 +1,9 @@
+swissfit
+swissfit/empirical_bayes
+swissfit/interpolators
+swissfit/machine_learning
+swissfit/model_averaging
+swissfit/monte_carlo
+swissfit/numerical_tools
+swissfit/optimizers
+swissfit/other_tools
