@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: smart-nn
+Version: 0.0.1
+Summary: A library for making it easier to work with neural networks
+Home-page: https://github.com/jslegers/smart-nn
+Author: John Slegers
+License: GNU v3
+Requires-Python: >=3.8.0
+License-File: LICENSE
+
+A library for making it easier to work with neural networks
