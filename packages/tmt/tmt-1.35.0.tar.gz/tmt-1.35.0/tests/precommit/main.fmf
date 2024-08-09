@@ -1,0 +1,12 @@
+summary: pre-commit hook tmt-test-lint is working
+require:
+- pre-commit
+- git-core
+- tmt
+tier: 4
+adjust:
+    when: distro == fedora-rawhide
+    result: xfail
+    # Remove the xfail adjust once it starts passing.
+    # Dependent on https://github.com/crate-py/rpds/issues/72, PyO3 0.22
+    because: "Un-installable dependencies on Python 3.13"
