@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: TOPSIS-JASHANDEEP-102218023
+Version: 1.1.0
+Summary: This Python package implements the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) for multi-criteria decision-making.
+Home-page: 
+Author: Jashandeep Singh
+Author-email: jashandeepgarry2003@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Topsis Implementation in Python
+
+This Python package implements the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) for multi-criteria decision-making.
+
+## Features
+
+- Calculate TOPSIS scores and rank alternatives.
+- Input data via CSV files.
+- Comprehensive validation of inputs.
+
+## Installation
+
+To install the package, use the following command:
+pip install TOPSIS-JASHANDEEP-102218023
+
+## Usage
+
+from topsis.__main__ import 
+topsis("102218023-data.csv", "1,1,1,1,2" ,"+,+,-,-,-", "result-102218023.csv")
+
+
+
