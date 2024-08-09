@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/data_file
+src/GeometricKernelAttention.egg-info/PKG-INFO
+src/GeometricKernelAttention.egg-info/SOURCES.txt
+src/GeometricKernelAttention.egg-info/dependency_links.txt
+src/GeometricKernelAttention.egg-info/entry_points.txt
+src/GeometricKernelAttention.egg-info/requires.txt
+src/GeometricKernelAttention.egg-info/top_level.txt
+tests/test_simple.py
