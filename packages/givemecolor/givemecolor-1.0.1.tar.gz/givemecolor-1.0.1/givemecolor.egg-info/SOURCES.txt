@@ -1,0 +1,9 @@
+README.md
+setup.py
+givemecolor/__init__.py
+givemecolor/main.py
+givemecolor.egg-info/PKG-INFO
+givemecolor.egg-info/SOURCES.txt
+givemecolor.egg-info/dependency_links.txt
+givemecolor.egg-info/entry_points.txt
+givemecolor.egg-info/top_level.txt
