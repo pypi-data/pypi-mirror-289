@@ -1,0 +1,10 @@
+LICENCE
+MANIFEST.in
+setup.py
+TOPSIS_JASHANDEEP_102218023.egg-info/PKG-INFO
+TOPSIS_JASHANDEEP_102218023.egg-info/SOURCES.txt
+TOPSIS_JASHANDEEP_102218023.egg-info/dependency_links.txt
+TOPSIS_JASHANDEEP_102218023.egg-info/entry_points.txt
+TOPSIS_JASHANDEEP_102218023.egg-info/top_level.txt
+topsis/__init__.py
+topsis/__main__.py
