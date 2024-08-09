@@ -1,0 +1,43 @@
+# This file is used to run the sys-design-diagram service in a container
+# usage: docker compose up --build
+# The output will be saved in the sdd-output folder in the current directory
+# test-data folder contains the design files in puml and python format(diagrams library)
+services:
+  sdd-process-all:
+    image: sys-design-diagram:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./sdd-outputs/sdd-all:/home/sdd-user/sdd-all
+      - ./tests-data:/home/sdd-user/tests-data
+    networks:
+      - sys-design-diagram-network
+    command: ["process-all", -d, "/home/sdd-user/tests-data", -o, "/home/sdd-user/sdd-all"]
+
+  sdd-plantuml:
+    image: sys-design-diagram:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./sdd-outputs/sdd-plantuml:/home/sdd-user/sdd-plantuml
+      - ./tests-data:/home/sdd-user/tests-data
+    networks:
+      - sys-design-diagram-network
+    command: ["plantuml", -d, "/home/sdd-user/tests-data", -o, "/home/sdd-user/sdd-plantuml"]
+
+  sdd-diagrams:
+    image: sys-design-diagram:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./sdd-outputs/sdd-diagrams:/home/sdd-user/sdd-diagrams
+      - ./tests-data:/home/sdd-user/tests-data
+    networks:
+      - sys-design-diagram-network
+    command: ["diagrams", -d, "/home/sdd-user/tests-data", -o, "/home/sdd-user/sdd-diagrams"]
+
+networks:
+  sys-design-diagram-network: {}
