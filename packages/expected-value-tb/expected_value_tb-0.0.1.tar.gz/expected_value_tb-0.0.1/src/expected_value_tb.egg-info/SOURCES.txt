@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/expected_value/__init__.py
+src/expected_value/expected_value.py
+src/expected_value/outcome1.py
+src/expected_value/probability1.py
+src/expected_value_tb.egg-info/PKG-INFO
+src/expected_value_tb.egg-info/SOURCES.txt
+src/expected_value_tb.egg-info/dependency_links.txt
+src/expected_value_tb.egg-info/top_level.txt

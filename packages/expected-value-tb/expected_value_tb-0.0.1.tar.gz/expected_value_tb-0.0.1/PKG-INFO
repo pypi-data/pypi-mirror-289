@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: expected_value_tb
+Version: 0.0.1
+Summary: A simple package which calculates the total probability and expected value of the outcome data type
+Author-email: Thomas Brumbaugh <thomas.william.brumbaugh@gmail.com>
+Project-URL: Homepage, https://github.com/pypa/expected_value_tb
+Project-URL: Issues, https://github.com/pypa/expected_value_tb/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Expected Value Package
+
+This is a simple package which offers functions to calculate the expected value and the total probability for the outcome data type. 
+
+# Importing
+
+You can import the expected value package by:
+``` 
+from expected_value import expected_value
+```
+
+# Using Expected Value
+
+You can use the Expected Value command using:
+```
+o1 = outcome.Outcome("win", float(2), probability.Probability(.5))
+o2 = outcome.Outcome("tie", float(10), probability.Probability(.1))
+o3 = outcome.Outcome("lose", float(-1), probability.Probability(.4))
+
+os = [o1, o2, o3]
+
+print(expected_value(os))
+```
+which will output 1.6.
+
+You can use the permutations (where order does matter) command using:
+```
+o1 = outcome.Outcome("win", float(2), probability.Probability(.5))
+o2 = outcome.Outcome("tie", float(10), probability.Probability(.1))
+o3 = outcome.Outcome("lose", float(-1), probability.Probability(.4))
+
+os = [o1, o2, o3]
+
+print(total_probability(os))
+```
+which will output 1.0.
