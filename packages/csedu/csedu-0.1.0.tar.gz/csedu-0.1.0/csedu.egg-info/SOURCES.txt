@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+csedu_package_img_small.png
+setup.py
+csedu/__init__.py
+csedu/diagrams.py
+csedu/imageprocessing.py
+csedu.egg-info/PKG-INFO
+csedu.egg-info/SOURCES.txt
+csedu.egg-info/dependency_links.txt
+csedu.egg-info/requires.txt
+csedu.egg-info/top_level.txt
