@@ -1,0 +1,11 @@
+bencode2-0.2.4.dist-info/RECORD,,
+bencode2-0.2.4.dist-info/WHEEL,sha256=njIpio6-B0Dm_IeV3yjYeplRioXDteKz4Cn8oiH1dr8,108
+bencode2-0.2.4.dist-info/METADATA,sha256=K84WTZ_8OIwVxgAPOTgil53U16ofnA3ye_iDe6eh95k,3242
+bencode2-0.2.4.dist-info/licenses/LICENSE,sha256=WraLL2GWym7_6EnkH1Zi8kU_-2iPhXGv7yegTIEX3E8,1085
+bencode2/_decoder.cpython-38-aarch64-linux-gnu.so,sha256=HG94nP-PNATqLSe7Zd5uOuHO_71nPXvQS-6A2ErEE-8,669080
+bencode2/_encoder.cpython-38-aarch64-linux-gnu.so,sha256=z23TJnWRvA5cNkTcuvXUonVT5jDgmWFiL1ZZnrFqORA,615760
+bencode2/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bencode2/_encoder.py,sha256=hQG6Jy_6Mg3fT8LV9TAOymDTaYCUUSs_emKGLjACohU,3550
+bencode2/_decoder.py,sha256=-fYYZbUFSnotL5mgUDutpyXq3XFBSZJ5HU_Xx_cp1dg,5927
+bencode2/__init__.py,sha256=XMB_mPfZVWW5ofFxgJy0Byfd2jKVQiNHM7fDRAPdYtw,608
+bencode2/__init__.cpython-38-aarch64-linux-gnu.so,sha256=_njnsUYa-hSCg8SXkG5r1do4Ra_UlriE3oJJAiRspUU,218184
