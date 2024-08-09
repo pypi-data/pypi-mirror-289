@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+csedu_package_img_small.png
+setup.py
+informatikunterricht.egg-info/PKG-INFO
+informatikunterricht.egg-info/SOURCES.txt
+informatikunterricht.egg-info/dependency_links.txt
+informatikunterricht.egg-info/requires.txt
+informatikunterricht.egg-info/top_level.txt
