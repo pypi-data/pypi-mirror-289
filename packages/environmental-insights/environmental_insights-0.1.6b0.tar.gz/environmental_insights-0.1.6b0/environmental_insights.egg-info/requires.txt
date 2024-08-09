@@ -1,0 +1,11 @@
+geopandas
+lightgbm
+matplotlib
+overpy
+pandas
+pyarrow
+pyogrio
+requests
+rpy2
+scipy
+shapely
