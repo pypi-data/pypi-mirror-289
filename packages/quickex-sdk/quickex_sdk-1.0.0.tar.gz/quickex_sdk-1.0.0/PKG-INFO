@@ -1,0 +1,46 @@
+Metadata-Version: 2.3
+Name: quickex-sdk
+Version: 1.0.0
+Summary: Python SDK for the Quickex HTTP API
+Project-URL: Documentation, https://github.com/hakerkiler/quickex-sdk#readme
+Project-URL: Issues, https://github.com/hakerkiler/quickex-sdk/issues
+Project-URL: Source, https://github.com/hakerkiler/quickex-sdk
+Author-email: Quickex CTO <cto@quickex.io>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: pydantic
+Requires-Dist: requests
+Requires-Dist: responses
+Description-Content-Type: text/markdown
+
+# Quickex SDK
+
+[![PyPI - Version](https://img.shields.io/pypi/v/йquickex-sdk.svg)](https://pypi.org/project/йquickex-sdk)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/йquickex-sdk.svg)](https://pypi.org/project/йquickex-sdk)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install quickex-sdk
+```
+
+## License
+
+`quickex-sdk` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
