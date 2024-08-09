@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Topsis-sanchitm-102218071
+Version: 0.1
+Summary: A Python package for implementing the TOPSIS method
+Author: Sanchit2004
+Author-email: sanchitm990@gmail.com
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+
