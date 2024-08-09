@@ -1,0 +1,129 @@
+Metadata-Version: 2.1
+Name: gmfy
+Version: 0.0.1
+Summary: This is a simple library for working with the gmfy api.
+Home-page: https://gitlab.rdclr.ru/gmfy/python-gmfy_sdk
+Author: Evgeny Izvekov, Yuriy Belotserkovskiy
+Author-email: evgeny.izvekov@redcollar.ru, yuriy.belotserkovskiy@redcollar.ru
+Project-URL: GitLab, https://gitlab.rdclr.ru/gmfy/python-gmfy_sdk
+Keywords: gmfy API gamification
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: django-environ==0.11.2
+Requires-Dist: requests==2.32.3
+Requires-Dist: urllib3==2.2.2
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: pydantic==2.8.2
+Requires-Dist: pydantic_core==2.20.1
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: types-requests==2.32.0.20240712
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: idna==3.7
+Requires-Dist: certifi==2024.7.4
+Requires-Dist: packaging==24.1
+Requires-Dist: pluggy==1.5.0
+
+<div align="center">
+  <a href="https://gmfy.io/">
+    <img alt="GMFY" width="400" src="https://static.tildacdn.com/tild6136-3638-4632-b632-383132653436/logo.svg">
+  </a>
+</div>
+
+Our project is Python library that allows easy integration with
+gmfy API. With this SDK, you can conveniently manage mechanics
+that allow you to adjust user behavior, but also measure the
+effectiveness of such correction.
+
+## How it works 🎮
+GMFY receives events related to user actions in the gamified
+system. This allows you to analyze user behavior before and
+after the introduction of gamification.
+
+Through the administrative interface, various game mechanics
+are configured, taking into account incoming events. This is
+how ratings and leaderboards are built, user achievements are
+calculated and corporate currencies are awarded.
+
+In order to give users feedback, you need to visualize your
+achievements. This could be a block in an existing user
+profile, contextual widgets, or a separate page with
+achievement results, available to users authorized in the
+gamified system.
+
+# **Installation ⤵️**
+
+You can install the SDK via pip:
+
+```bash
+pip install gmfy
+```
+
+# **Quick Start ⭐**
+### 1️⃣ *Define Event Types and Actions:*
+
+Create custom classes inheriting from **BaseEventType** and **BaseEventAction**. For example:
+```python
+from gmfy_sdk.constants import BaseEventAction, BaseEventType
+
+class EventType(BaseEventType):
+    subscription = "subscription"
+    subscriber = "subscriber"
+    vote = "vote"
+    register = "register"
+
+class EventAction(BaseEventAction):
+    create = "create"
+    remove = "remove"
+    update = "update"
+    delete = "delete"
+```
+ - _**EventType** must inherit from **BaseEventType**_
+ - _**EventAction** must inherit from **BaseEventAction**_
+
+You can also expand these classes with your own functionality,
+for example likes or dislikes
+This needs to be done so that you can add your types and actions.
+
+### 2️⃣ *Initialize the SDK:*
+```python
+from gmfy_sdk.sdk import GMFYSDK
+
+gmfy_sdk = GMFYSDK(GMFY_API_KEY, GMFY_URL)
+```
+### __❗Replace GMFY_API_KEY and GMFY_URL with your actual credentials.❗__
+
+### 3️⃣ *Send Events:*
+
+Use the *create_batch_events* method to send data:
+
+```python
+data = [
+        {
+            "event_type": EventType.vote,
+            "user_id": f"{user.id}",
+            "event_action": EventAction.create,
+        },
+    ]
+gmfy_sdk.create_batch_events(data)
+```
+
+# **Contributors and Contact 💬**
+The GMFY SDK library were developed by *Evgeny Izvekov* and *Yuriy Belotserkovskiy*,
+and is actively maintained by our team. If you have any
+questions, suggestions, or feedback, feel free to reach out to us.
+
+- **Evgeny Izvekov**
+    - <a href=https://gitlab.rdclr.ru/evgeny.izvekov>*GitLab*</a>
+    - <a href=mailto:evgeny.izvekov@redcollar.ru>*Email*</a>
+
+
+- **Yuriy Belotserkovskiy**
+   - <a href=https://gitlab.rdclr.ru/yuriy.belotserkovskiy>*GitLab*</a>
+   - <a href=mailto:yuriy.belotserkovskiy@redcollar.ru>*Email*</a>
+
+### **Happy gamifying! 👾**
