@@ -1,0 +1,6 @@
+pyproject.toml
+signalfive/__init__.py
+signalfive.egg-info/PKG-INFO
+signalfive.egg-info/SOURCES.txt
+signalfive.egg-info/dependency_links.txt
+signalfive.egg-info/top_level.txt
