@@ -1,0 +1,21 @@
+environmental_insights_data/.DS_Store,sha256=f0NgBPjG4-u-eyIQcSapCz2kPhnckUdV5ii28YupcNY,10244
+environmental_insights_data/air_pollution/.DS_Store,sha256=USycEgnN0ZW_472oa-_rmz1xTO3O7-mEmKPFIWA_Y90,6148
+environmental_insights_data/air_pollution/global_complete_set/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+environmental_insights_data/air_pollution/global_complete_set/07-02-2022 080000.feather,sha256=4-6qbGeOU5pRqUP1nl2n0vD7lOR3kmpz-qeh0k7kDws,13692674
+environmental_insights_data/air_pollution/uk_complete_set/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+environmental_insights_data/air_pollution/uk_complete_set/2018-01-01 080000.feather,sha256=ap48euGBnDuQF0OUqqptCwfBu72cZ-ecqjgAo081ZdM,22790090
+environmental_insights_data/air_pollution/uk_complete_set/2018-01-01 090000.feather,sha256=5w73uVAHKoOPaXxF7mWq6ankyx-lg-Xcr7HpJBt-8P8,22790762
+environmental_insights_data/air_pollution/uk_typical_day/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+environmental_insights_data/feature_vector/uk_typical_day/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+environmental_insights_data/supporting_data/.DS_Store,sha256=1lFlJ5EFymdzGAUAaI30vcaaLHt3F1LwpG7xILf9jsM,6148
+environmental_insights_data/supporting_data/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+environmental_insights_data/supporting_data/025latlong_world_grids.gpkg,sha256=XUwYzy-wu2_w1MleLNGwB2n-7LA3HHATxx2jKrrJ-jc,73883648
+environmental_insights_data/supporting_data/1km_uk_grids.gpkg,sha256=q7yNpsOsni6uJGVC95IS4Hih2dI_eU7_Houojq8zmzo,73011200
+environmental_insights_models/global/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+environmental_insights_models/uk/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+environmental_insights-0.1.4b0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+environmental_insights-0.1.4b0.dist-info/METADATA,sha256=Gc_ZUEeKiXZGzc_rOw9VbqjLaColNBvW1_gRT5FtTl8,9278
+environmental_insights-0.1.4b0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+environmental_insights-0.1.4b0.dist-info/entry_points.txt,sha256=hEHrIgPM9JePhE2HHpzA99Qf6Rc_RP9VH5peY5nnYMI,76
+environmental_insights-0.1.4b0.dist-info/top_level.txt,sha256=sFWW2kMgqoqKxPIO3eWFcDO6PiIxQLBQPLAK3bM8vws,58
+environmental_insights-0.1.4b0.dist-info/RECORD,,
