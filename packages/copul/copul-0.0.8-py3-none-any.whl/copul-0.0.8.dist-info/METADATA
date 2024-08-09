@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: copul
+Version: 0.0.8
+Summary: Mathematical computation and visualization of bivariate copulas.
+Home-page: https://github.com/Corrram/copul
+Author: Marcus Rockel
+Author-email: marcus.rockel@finance.uni-freiburg.de
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: interval (>=1.0,<2.0)
+Requires-Dist: matplotlib (>=3.8,<4.0)
+Requires-Dist: numpy (>=2.0,<3.0)
+Requires-Dist: pandas (>=2.2,<3.0)
+Requires-Dist: pillow (>=10.3,<11.0)
+Requires-Dist: scipy (>=1.14,<2.0)
+Requires-Dist: statsmodels (>=0.14,<0.15)
+Requires-Dist: sympy (>=1.12,<2.0)
+Requires-Dist: sympy-plot-backends (>=3.1,<4.0)
+Project-URL: Documentation, https://github.com/Corrram/copul
+Project-URL: Repository, https://github.com/Corrram/copul
