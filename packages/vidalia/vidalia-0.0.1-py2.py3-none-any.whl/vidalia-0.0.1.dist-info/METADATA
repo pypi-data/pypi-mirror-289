@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: vidalia
+Version: 0.0.1
+Summary: This package does nothing yet.
+Author-email: Carlos Albors <cralbors@gmail.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Project-URL: Home, https://github.com/cralbors/vidalia
+
+
