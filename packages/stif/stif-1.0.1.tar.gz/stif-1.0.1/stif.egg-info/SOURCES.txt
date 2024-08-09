@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+stif/__init__.py
+stif/data.py
+stif/predictor.py
+stif/utils.py
+stif/variogram_models.py
+stif.egg-info/PKG-INFO
+stif.egg-info/SOURCES.txt
+stif.egg-info/dependency_links.txt
+stif.egg-info/requires.txt
+stif.egg-info/top_level.txt
+tests/test_occurence_data.py
+tests/test_predictor.py
+tests/test_utils.py
