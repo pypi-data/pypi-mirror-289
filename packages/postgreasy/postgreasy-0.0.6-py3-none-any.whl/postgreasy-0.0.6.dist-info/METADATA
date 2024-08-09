@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: postgreasy
+Version: 0.0.6
+Summary: A simple package for interacting with a Postgres Database.
+Author-email: Casper Kole <casper@voltgoed.nl>
+Project-URL: Homepage, https://github.com
+Project-URL: Issues, https://github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: psycopg2
+Requires-Dist: psycopg2-binary
+Requires-Dist: python-dotenv
+Requires-Dist: pytz
+
+# Cacheasy
+
+This package contains some simple helper functions to cache data files. It makes use of pickle to store and load files.
