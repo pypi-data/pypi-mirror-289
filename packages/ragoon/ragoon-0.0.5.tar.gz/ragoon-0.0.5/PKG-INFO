@@ -1,0 +1,176 @@
+Metadata-Version: 2.1
+Name: ragoon
+Version: 0.0.5
+Summary: RAGoon : High level library for batched embeddings generation, blazingly-fast web-based RAG and quantitized indexes processing ⚡
+Keywords: language-models,retrieval,web-scraping,few-shot-learning,nlp,machine-learning,retrieval-augmented-generation,RAG,groq,generative-ai,llama,Mistral
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: docs
+Requires-Dist: sphinx>=6.0.0; extra == "docs"
+Requires-Dist: sphinx-book-theme>=1.0.1; extra == "docs"
+Requires-Dist: sphinxcontrib-katex; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Requires-Dist: ipython>=8.8.0; extra == "docs"
+Requires-Dist: myst-nb>=1.0.0; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Requires-Dist: matplotlib>=3.5.0; extra == "docs"
+Requires-Dist: sphinx_book_theme==1.1.3; extra == "docs"
+Requires-Dist: sphinx-gallery>=0.14.0; extra == "docs"
+Requires-Dist: sphinx-collections>=0.0.1; extra == "docs"
+Requires-Dist: tensorflow>=2.4.0; extra == "docs"
+Requires-Dist: tensorflow-datasets>=4.2.0; extra == "docs"
+Requires-Dist: flax; extra == "docs"
+Requires-Dist: sphinx_contributors; extra == "docs"
+
+![Plot](https://github.com/louisbrulenaudet/ragoon/blob/main/thumbnail.png?raw=true)
+
+# RAGoon : High level library for batched embeddings generation, blazingly-fast web-based RAG and quantitized indexes processing ⚡
+[![Python](https://img.shields.io/pypi/pyversions/tensorflow.svg)](https://badge.fury.io/py/tensorflow) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Maintainer](https://img.shields.io/badge/maintainer-@louisbrulenaudet-blue)
+
+RAGoon is a set of NLP utilities for multi-model embedding production, high-dimensional vector visualization, and aims to improve language model performance by providing contextually relevant information through search-based querying, web scraping and data augmentation techniques.
+
+## Quick install
+The reference page for RAGoon is available on the official page of PyPI: [RAGoon](https://pypi.org/project/ragoon/).
+
+```python
+pip install ragoon
+```
+
+## Usage
+
+This section provides an overview of different code blocks that can be executed with RAGoon to enhance your NLP and language model projects.
+
+### Embeddings production
+
+This class handles loading a dataset from Hugging Face, processing it to add embeddings using specified models, and provides methods to save and upload the processed dataset.
+
+```python
+from ragoon import EmbeddingsDataLoader
+from datasets import load_dataset
+
+# Initialize the dataset loader with multiple models
+loader = EmbeddingsDataLoader(
+    token="hf_token",
+    dataset=load_dataset("louisbrulenaudet/dac6-instruct", split="train"),  # If dataset is already loaded.
+    # dataset_name="louisbrulenaudet/dac6-instruct",  # If you want to load the dataset from the class.
+    model_configs=[
+        {"model": "bert-base-uncased", "query_prefix": "Query:"},
+        {"model": "distilbert-base-uncased", "query_prefix": "Query:"}
+        # Add more model configurations as needed
+    ]
+)
+
+# Uncomment this line if passing dataset_name instead of dataset.
+# loader.load_dataset()
+
+# Process the splits with all models loaded
+loader.process(
+    column="output",
+    preload_models=True
+)
+
+# To access the processed dataset
+processed_dataset = loader.get_dataset()
+print(processed_dataset[0])
+```
+
+You can also embed a single text using multiple models:
+
+```python
+from ragoon import EmbeddingsDataLoader
+
+# Initialize the dataset loader with multiple models
+loader = EmbeddingsDataLoader(
+    token="hf_token",
+    model_configs=[
+        {"model": "bert-base-uncased"},
+        {"model": "distilbert-base-uncased"}
+    ]
+)
+
+# Load models
+loader.load_models()
+
+# Embed a single text with all loaded models
+text = "This is a single text for embedding."
+embedding_result = loader.batch_encode(text)
+
+# Output the embeddings
+print(embedding_result)
+```
+
+### Embeddings visualization
+
+This class provides functionality to load embeddings from a FAISS index, reduce their dimensionality using PCA and/or t-SNE, and visualize them in an interactive 3D plot.
+
+```python
+from ragoon import EmbeddingsVisualizer
+
+visualizer = EmbeddingsVisualizer(
+    index_path="path/to/index", 
+    dataset_path="path/to/dataset"
+)
+
+visualizer.visualize(
+    method="pca",
+    save_html=True,
+    html_file_name="embedding_visualization.html"
+)
+```
+
+![Plot](https://github.com/louisbrulenaudet/ragoon/blob/main/assets/embeddings_visualization.gif?raw=true)
+
+### Dynamic web search
+
+RAGoon is a Python library that aims to improve the performance of language models by providing contextually relevant information through retrieval-based querying, web scraping, and data augmentation techniques. It integrates various APIs, enabling users to retrieve information from the web, enrich it with domain-specific knowledge, and feed it to language models for more informed responses.
+
+RAGoon's core functionality revolves around the concept of few-shot learning, where language models are provided with a small set of high-quality examples to enhance their understanding and generate more accurate outputs. By curating and retrieving relevant data from the web, RAGoon equips language models with the necessary context and knowledge to tackle complex queries and generate insightful responses.
+
+```python
+from groq import Groq
+# from openai import OpenAI
+from ragoon import WebRAG
+
+# Initialize RAGoon instance
+ragoon = WebRAG(
+    google_api_key="your_google_api_key",
+    google_cx="your_google_cx",
+    completion_client=Groq(api_key="your_groq_api_key")
+)
+
+# Search and get results
+query = "I want to do a left join in Python Polars"
+results = ragoon.search(
+    query=query,
+    completion_model="Llama3-70b-8192",
+    max_tokens=512,
+    temperature=1,
+)
+
+# Print results
+print(results)
+```
+
+## Citing this project
+If you use this code in your research, please use the following BibTeX entry.
+
+```BibTeX
+@misc{louisbrulenaudet2024,
+	author = {Louis Brulé Naudet},
+	title = {RAGoon : High level library for batched embeddings generation, blazingly-fast web-based RAG and quantitized indexes processing},
+	howpublished = {\url{https://github.com/louisbrulenaudet/ragoon}},
+	year = {2024}
+}
+```
+
+## Feedback
+If you have any feedback, please reach out at [louisbrulenaudet@icloud.com](mailto:louisbrulenaudet@icloud.com).
