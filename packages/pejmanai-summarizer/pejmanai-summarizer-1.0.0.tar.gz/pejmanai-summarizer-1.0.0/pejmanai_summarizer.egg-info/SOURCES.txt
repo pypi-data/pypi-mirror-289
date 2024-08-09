@@ -1,0 +1,9 @@
+README.md
+setup.py
+pejmanai-summarizer/__init__.py
+pejmanai-summarizer/summarizer.py
+pejmanai_summarizer.egg-info/PKG-INFO
+pejmanai_summarizer.egg-info/SOURCES.txt
+pejmanai_summarizer.egg-info/dependency_links.txt
+pejmanai_summarizer.egg-info/requires.txt
+pejmanai_summarizer.egg-info/top_level.txt
