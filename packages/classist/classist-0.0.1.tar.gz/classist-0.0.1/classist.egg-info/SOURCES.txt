@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+classist/__init__.py
+classist.egg-info/PKG-INFO
+classist.egg-info/SOURCES.txt
+classist.egg-info/dependency_links.txt
+classist.egg-info/requires.txt
+classist.egg-info/top_level.txt
