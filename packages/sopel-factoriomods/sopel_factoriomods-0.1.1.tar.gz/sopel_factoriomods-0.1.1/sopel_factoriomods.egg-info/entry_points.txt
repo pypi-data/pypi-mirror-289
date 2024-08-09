@@ -1,0 +1,2 @@
+[sopel.plugins]
+factoriomods = sopel_factoriomods

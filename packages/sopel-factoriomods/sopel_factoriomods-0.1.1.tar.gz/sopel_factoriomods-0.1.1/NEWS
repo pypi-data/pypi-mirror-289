@@ -1,0 +1,10 @@
+## Changelog
+
+### 0.1.1
+
+Modernized packaging & release automation; require stable version of Sopel 8.0.
+
+
+### 0.1.0
+
+First release of `sopel-factoriomods`.

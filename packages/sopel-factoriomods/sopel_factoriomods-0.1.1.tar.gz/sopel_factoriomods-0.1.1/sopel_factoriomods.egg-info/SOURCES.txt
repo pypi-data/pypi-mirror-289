@@ -1,0 +1,12 @@
+COPYING
+MANIFEST.in
+NEWS
+README.md
+pyproject.toml
+sopel_factoriomods/__init__.py
+sopel_factoriomods.egg-info/PKG-INFO
+sopel_factoriomods.egg-info/SOURCES.txt
+sopel_factoriomods.egg-info/dependency_links.txt
+sopel_factoriomods.egg-info/entry_points.txt
+sopel_factoriomods.egg-info/requires.txt
+sopel_factoriomods.egg-info/top_level.txt
