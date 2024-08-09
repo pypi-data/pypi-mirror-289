@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+informatikunterricht.egg-info/PKG-INFO
+informatikunterricht.egg-info/SOURCES.txt
+informatikunterricht.egg-info/dependency_links.txt
+informatikunterricht.egg-info/requires.txt
+informatikunterricht.egg-info/top_level.txt
