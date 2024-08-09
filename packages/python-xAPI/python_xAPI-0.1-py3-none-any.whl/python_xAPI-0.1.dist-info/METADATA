@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: python-xAPI
+Version: 0.1
+Summary: A simple python package that post tweets using X.com API Free Tier
+Home-page: https://github.com/redianmarku/python-xAPI
+Author: Redian Marku
+Author-email: redian@topnotch-programmer.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
