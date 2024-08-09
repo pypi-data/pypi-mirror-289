@@ -1,0 +1,2 @@
+[console_scripts]
+convert-to-upper = uppercase_converter.converter:main
