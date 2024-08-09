@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: crackeduuid
+Version: 0.1
+Summary: Fetches online and offline UUIDs for Minecraft usernames.
+Author: Your Name
+Author-email: proxdegaming@gmail.com
+Requires-Dist: requests
+
