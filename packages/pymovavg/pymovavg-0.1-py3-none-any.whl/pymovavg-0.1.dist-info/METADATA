@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pymovavg
+Version: 0.1
+Summary: A simple Python library to calculate moving averages
+Home-page: https://github.com/GalangLatief/pymovavg
+Author: Galang Latief
+Author-email: galangallatief@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: unittest ; extra == 'test'
+
