@@ -1,0 +1,69 @@
+[project]
+name = "geosub"
+version = "0.1.1a0"
+
+description = "Lookup ISO 3166-2 geographic subdivisions from postal and country codes, using GeoNames and pycountry."
+
+requires-python = ">= 3.9"
+readme = "README.rst"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+keywords = [
+    "geo",
+    "country",
+    "subdivision",
+    "postal code",
+    "ISO 3166-1",
+    "ISO 3166-2",
+]
+dependencies = ["pycountry ~= 24.6"]
+
+[project.optional-dependencies]
+docs = ["sphinx-rtd-theme >= 1.2.0"]
+
+[project.urls]
+Source = "https://github.com/dmayo3/geosub"
+Docs = "http://geosub.readthedocs.io/"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"geosub.data" = ["*.tsv"]
+
+[tool.setuptools.packages.find]
+exclude = ["docs*", "tests*", "*.gz"]
+
+[tool.bumpver]
+current_version = "0.1.1a0"
+version_pattern = "MAJOR.MINOR.PATCH[PYTAGNUM]"
+commit_message = "Bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+"geosub/__init__.py" = ["{version}"]
+"docs/index.rst" = ["geosub v{version}"]
+"README.rst" = ["{version}"]

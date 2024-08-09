@@ -1,0 +1,4 @@
+pycountry~=24.6
+
+[docs]
+sphinx-rtd-theme>=1.2.0

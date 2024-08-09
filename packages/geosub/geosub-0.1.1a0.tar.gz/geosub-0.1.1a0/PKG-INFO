@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: geosub
+Version: 0.1.1a0
+Summary: Lookup ISO 3166-2 geographic subdivisions from postal and country codes, using GeoNames and pycountry.
+License: ## License for included geographic data
+        
+        The geographic data provided with this package is derived from GeoNames
+        (www.geonames.org), which is licensed under the Creative Commons Attribution
+        4.0 International License (CC BY 4.0).
+        
+        A summary of this license and the full license text are available at
+        https://creativecommons.org/licenses/by/4.0/.
+        
+        Further redistribution of the geographic data bundled with this package must
+        provide attribution to GeoNames. Redistribution includes any form of sharing
+        the data with third parties in original or modified form, including publishing,
+        distributing, or embedding it within other software. A simple link to
+        www.geonames.org is considered sufficient attribution under the terms of the
+        license.
+        
+        Simply using this library to lookup data from pycountry does not produce
+        outputs that directly copy or modify the original licensed geographic data.
+        Thus, using the library to find pycountry data should not constitute a
+        derivative work that requires direct attribution under the terms of the
+        license.
+        
+        ## Main license
+        
+        MIT License
+        
+        Copyright (c) 2024 Daniel Mayo
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Source, https://github.com/dmayo3/geosub
+Project-URL: Docs, http://geosub.readthedocs.io/
+Keywords: geo,country,subdivision,postal code,ISO 3166-1,ISO 3166-2
+Classifier: Development Status :: 3 - Alpha
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: pycountry~=24.6
+Provides-Extra: docs
+Requires-Dist: sphinx-rtd-theme>=1.2.0; extra == "docs"
+
+.. image:: https://github.com/dmayo3/geosub/actions/workflows/ci.yaml/badge.svg
+    :target: https://github.com/dmayo3/geosub/actions/workflows/ci.yaml?query=branch%3Amain
+    :alt: Github Actions Status
+.. image:: https://codecov.io/github/dmayo3/geosub/graph/badge.svg?token=A0WO17S0KD
+ :target: https://codecov.io/github/dmayo3/geosub
+.. image:: https://readthedocs.org/projects/geosub/badge/?version=latest
+    :target: https://geosub.readthedocs.io/en/stable/?badge=latest
+    :alt: Documentation Status
+.. image:: https://badge.fury.io/py/geosub.svg
+    :target: https://badge.fury.io/py/geosub
+    :alt: PyPI Package
+.. image:: https://img.shields.io/pypi/pyversions/geosub.svg
+    :target: https://pypi.org/project/geosub
+    :alt: Supported versions
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+    :alt: Code style: black
+.. image:: http://www.mypy-lang.org/static/mypy_badge.svg
+    :target: http://mypy-lang.org/
+    :alt: Type checked by mypy
+.. image:: https://img.shields.io/badge/License-CC%20BY%204.0%20%2B%20MIT-yellow
+   :target: https://github.com/dmayo3/geosub/blob/main/LICENSE
+   :alt: License
+
+
+geosub v0.1.1a0
+---------------
+
+Docs: https://geosub.readthedocs.io/
+
+Lookup ISO 3166-2 geographic subdivisions from postal and country codes, using GeoNames and pycountry.
+
+Adapted from a very similar library for looking up timezones: https://github.com/dmayo3/geotz
+
+Motivation
+----------
+
+1. Easy to use. No API key or external API service required.
+
+2. Fast offline lookup.
+
+3. No downloads required; the necessary data comes bundled with the package.
+
+4. No network requests.
+
+5. I tried to keep the extra dependencies to a minimum. Only pycountry is required.
+
+6. Data is loaded from disk on demand, so as to not use unnecessary memory.
+
+Development
+-----------
+
+To run the build, there's the GitHub actions workflows as well as the option to run locally.
+
+For running the build locally, use `pip install tox` and the run `tox` in the repository base
+directory (or `tox -p` to run the build in parallel).
+
+1. Ensure you have `tox` installed e.g. by running `pip install tox`
+
+2. Extract data `tox -e extract_data`
+
+3. Run the build: `tox`
