@@ -1,0 +1,14 @@
+djangorestframework-simplejwt
+django
+djangorestframework
+cryptography
+boto3
+python-dateutil
+pytz
+requests
+redis
+django-environ
+pycryptodome
+prometheus_client
+django-pgcrypto
+django-pgcrypto-fields
