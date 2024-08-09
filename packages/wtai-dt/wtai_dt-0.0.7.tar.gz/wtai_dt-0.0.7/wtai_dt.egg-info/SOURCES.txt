@@ -1,0 +1,15 @@
+LICENCE
+README.md
+setup.py
+tests/test_run.py
+wtai_dt/Demo.py
+wtai_dt/__init__.py
+wtai_dt/cut_video.py
+wtai_dt/wtai_dt.py
+wtai_dt.egg-info/PKG-INFO
+wtai_dt.egg-info/SOURCES.txt
+wtai_dt.egg-info/dependency_links.txt
+wtai_dt.egg-info/requires.txt
+wtai_dt.egg-info/top_level.txt
+wtai_dt/dataplot/__init__.py
+wtai_dt/dataplot/fun.py
