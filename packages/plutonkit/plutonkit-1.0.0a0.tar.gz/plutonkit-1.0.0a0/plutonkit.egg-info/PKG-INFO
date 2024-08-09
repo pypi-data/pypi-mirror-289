@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: plutonkit
+Version: 1.0.0a0
+Summary: Start kit for python for building application
+Home-page: https://plutonkit.codehyouka.xyz/
+Author: Codehyouka
+Author-email: plants.coordinators@gmail.com
+License: MIT
+Project-URL: Documentation, https://plutonkit.codehyouka.xyz/
+Project-URL: Source, https://github.com/fonipts/pluton-kit
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+
