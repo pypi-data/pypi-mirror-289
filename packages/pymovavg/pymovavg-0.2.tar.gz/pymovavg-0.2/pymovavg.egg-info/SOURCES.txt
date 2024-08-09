@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pymovavg/__init__.py
+pymovavg/movavg.py
+pymovavg.egg-info/PKG-INFO
+pymovavg.egg-info/SOURCES.txt
+pymovavg.egg-info/dependency_links.txt
+pymovavg.egg-info/requires.txt
+pymovavg.egg-info/top_level.txt
+tests/test_movavg.py
