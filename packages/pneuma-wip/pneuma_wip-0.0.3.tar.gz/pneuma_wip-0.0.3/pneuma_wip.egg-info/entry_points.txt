@@ -1,0 +1,2 @@
+[console_scripts]
+pneuma = pneuma.pneuma:main
