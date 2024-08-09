@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+python-xAPI/__init__.py
+python-xAPI/python_xAPI.py
+python_xAPI.egg-info/PKG-INFO
+python_xAPI.egg-info/SOURCES.txt
+python_xAPI.egg-info/dependency_links.txt
+python_xAPI.egg-info/top_level.txt
