@@ -1,0 +1,8 @@
+README.md
+setup.py
+oliark/__init__.py
+oliark/io.py
+oliark.egg-info/PKG-INFO
+oliark.egg-info/SOURCES.txt
+oliark.egg-info/dependency_links.txt
+oliark.egg-info/top_level.txt
