@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: propo
+Version: 0.0.1
+Summary: A python package to create proposal templates for wood and forest health projects
+Author-email: Vance Russell <vance@3point.xyz>
+License: MIT License
+Project-URL: Homepage, https://github.com/VRConservation/propo
+Keywords: propo
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: propo[extra]; extra == "all"
+Provides-Extra: extra
+Requires-Dist: pandas; extra == "extra"
+
+# propo
+
+
+[![image](https://img.shields.io/pypi/v/propo.svg)](https://pypi.python.org/pypi/propo)
+[![image](https://img.shields.io/conda/vn/conda-forge/propo.svg)](https://anaconda.org/conda-forge/propo)
+
+
+**A python package to create proposal templates for wood and forest health projects**
+
+
+-   Free software: MIT License
+-   Documentation: https://VRConservation.github.io/propo
+    
+
+## Features
+
+-   TODOS las caracteristicas del repo son gratis
