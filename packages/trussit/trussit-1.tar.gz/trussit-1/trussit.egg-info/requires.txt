@@ -1,0 +1,5 @@
+numpy>2
+tk==0.1.0
+customtkinter==5.2.2
+matplotlib==3.9.1
+pybind11>=2.12
