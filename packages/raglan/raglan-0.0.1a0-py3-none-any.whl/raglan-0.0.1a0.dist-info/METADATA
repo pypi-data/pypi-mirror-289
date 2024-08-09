@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: raglan
+Version: 0.0.1a0
+Summary: Python tools to create a custom top down raglan sweater
+Author-Email: Marie Roald <roald.marie@gmail.com>
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: pyknit>=0.0.9
+Description-Content-Type: text/markdown
+
+# Raglan
