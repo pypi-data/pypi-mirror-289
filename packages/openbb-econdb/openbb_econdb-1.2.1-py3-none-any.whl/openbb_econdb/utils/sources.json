@@ -1,0 +1,732 @@
+[
+  {
+    "source": "Banco de la República, Colombia",
+    "description": "Banco de la República, Colombia",
+    "prefix": "BRC"
+  },
+  {
+    "source": "European Automobile Manufacturers",
+    "description": "European Automobile Manufacturers' Association (ACEA)",
+    "prefix": "ACEA"
+  },
+  {
+    "source": "State Bank of Pakistan",
+    "description": "State Bank of Pakistan",
+    "prefix": "SBP"
+  },
+  {
+    "source": "Eurostat",
+    "description": "Eurostat",
+    "prefix": "EU"
+  },
+  {
+    "source": "European Central Bank",
+    "description": "European Central Bank",
+    "prefix": "ECB"
+  },
+  {
+    "source": "World Bank",
+    "description": "World Bank",
+    "prefix": "WB"
+  },
+  {
+    "source": "United Nations Data",
+    "description": "United Nations Data",
+    "prefix": "UN"
+  },
+  {
+    "source": "OECD",
+    "description": "Organisation for Economic Co-operation and Development",
+    "prefix": "OECD"
+  },
+  {
+    "source": "Office for National Statistics",
+    "description": "Office for National Statistics",
+    "prefix": "ONS"
+  },
+  {
+    "source": "Bureau of Economic Analysis",
+    "description": "U.S. Bureau of Economic Analysis",
+    "prefix": "BEA"
+  },
+  {
+    "source": "Bureau of Labor Statistics",
+    "description": "U.S. Bureau of Labor Statistics",
+    "prefix": "BLS"
+  },
+  {
+    "source": "INEGI",
+    "description": "Instituto Nacional de Estadística y Geografía (Mexico)",
+    "prefix": "INEG"
+  },
+  {
+    "source": "International Monetary Fund",
+    "description": "International Monetary Fund",
+    "prefix": "IMF"
+  },
+  {
+    "source": "U.S. Census Bureau",
+    "description": "United States Census Bureau",
+    "prefix": "USC"
+  },
+  {
+    "source": "Federal State Statistics Service, Russia",
+    "description": "Federal State Statistics Service (Russia)",
+    "prefix": "ROS"
+  },
+  {
+    "source": "Banco Central de Reserva del Perú",
+    "description": "Banco Central de Reserva del Perú",
+    "prefix": "BCRP"
+  },
+  {
+    "source": "Statistics Canada",
+    "description": "Statistics Canada",
+    "prefix": "CA"
+  },
+  {
+    "source": "Australian Bureau of Statistics",
+    "description": "Australian Bureau of Statistics",
+    "prefix": "ABS"
+  },
+  {
+    "source": "Board of Governors of the Federal Reserve",
+    "description": "Board of Governors of the Federal Reserve System",
+    "prefix": "FRB"
+  },
+  {
+    "source": "Statistics South Africa",
+    "description": "Statistics South Africa",
+    "prefix": "SSA"
+  },
+  {
+    "source": "Bank of Thailand",
+    "description": "Bank of Thailand",
+    "prefix": "BOT"
+  },
+  {
+    "source": "Official Statistics of Japan",
+    "description": "Official Statistics of Japan",
+    "prefix": "SJ"
+  },
+  {
+    "source": "Federal Housing Finance Agency, US",
+    "description": "Federal Housing Finance Agency (US)",
+    "prefix": "FHFA"
+  },
+  {
+    "source": "National Bureau of Statistics, China",
+    "description": "National Bureau of Statistics, China",
+    "prefix": "NBS"
+  },
+  {
+    "source": "National Statistics, Taiwan",
+    "description": "National Statistics, Republic of China (Taiwan)",
+    "prefix": "TW"
+  },
+  {
+    "source": "Census and Statistics Department, Hong Kong",
+    "description": "Census and Statistics Department, Hong Kong",
+    "prefix": "HK"
+  },
+  {
+    "source": "Central Bank of Philippines",
+    "description": "Central Bank of Philippines",
+    "prefix": "BSP"
+  },
+  {
+    "source": "Reserve Bank of New Zealand",
+    "description": "Reserve Bank of New Zealand",
+    "prefix": "RBNZ"
+  },
+  {
+    "source": "Federal Statistical Office, Switzerland",
+    "description": "Federal Statistical Office, Switzerland",
+    "prefix": "FSO"
+  },
+  {
+    "source": "Reserve Bank of India",
+    "description": "Reserve Bank of India",
+    "prefix": "RBI"
+  },
+  {
+    "source": "Ministry of Statistics and Program Implementation, India",
+    "description": "Ministry of Statistics and Program Implementation, India",
+    "prefix": "MOS"
+  },
+  {
+    "source": "The Central Bank of the Russian Federation",
+    "description": "The Central Bank of the Russian Federation",
+    "prefix": "CBR"
+  },
+  {
+    "source": "Instituto Brasileiro de Geografia e Estatística",
+    "description": "Instituto Brasileiro de Geografia e Estatística",
+    "prefix": "IBGE"
+  },
+  {
+    "source": "INDEC, Argentina",
+    "description": "Instituto Nacional de Estadística y Censos de la República Argentina",
+    "prefix": "IEAR"
+  },
+  {
+    "source": "Banco Central, Argentina",
+    "description": "Banco Central de la República Argentina",
+    "prefix": "BCRA"
+  },
+  {
+    "source": "Central Bank of Sri Lanka",
+    "description": "Central Bank of Sri Lanka",
+    "prefix": "CBLK"
+  },
+  {
+    "source": "Philippine Statistics Authority",
+    "description": "Philippine Statistics Authority",
+    "prefix": "PSA"
+  },
+  {
+    "source": "Turkish Statistical Institute",
+    "description": "Turkish Statistical Institute",
+    "prefix": "TSI"
+  },
+  {
+    "source": "State Statistics Service, Ukraine",
+    "description": "State Statistics Service, Ukraine",
+    "prefix": "UA"
+  },
+  {
+    "source": "Bank Indonesia",
+    "description": "Bank Indonesia",
+    "prefix": "IDB"
+  },
+  {
+    "source": "Central Bank of Chile",
+    "description": "Central Bank of Chile",
+    "prefix": "BCC"
+  },
+  {
+    "source": "State Statistics Committee, Azerbaijan",
+    "description": "State Statistics Committee of Azerbaijan Republic",
+    "prefix": "AZST"
+  },
+  {
+    "source": "General Authority for Statistics, Saudi Arabia",
+    "description": "General Authority for Statistics, Saudi Arabia",
+    "prefix": "GAS"
+  },
+  {
+    "source": "Central Bank of Brazil",
+    "description": "Central Bank of Brazil",
+    "prefix": "BCB"
+  },
+  {
+    "source": "National Bureau of Statistics, Nigeria",
+    "description": "National Bureau of Statistics, Nigeria",
+    "prefix": "NG"
+  },
+  {
+    "source": "DANE, Colombia",
+    "description": "Departamento Administrativo Nacional de Estadística, Colombia",
+    "prefix": "DANE"
+  },
+  {
+    "source": "INEI, Peru",
+    "description": "Instituto Nacional de Estadística e Informática, Peru",
+    "prefix": "INEI"
+  },
+  {
+    "source": "ChinaBond",
+    "description": "ChinaBond",
+    "prefix": "CCDC"
+  },
+  {
+    "source": "Statistical Center of Iran",
+    "description": "Statistical Center of Iran",
+    "prefix": "SCI"
+  },
+  {
+    "source": "Central Bank of Egypt",
+    "description": "Central Bank of Egypt",
+    "prefix": "CBE"
+  },
+  {
+    "source": "Korean Statistical Information Service",
+    "description": "Korean Statistical Information Service",
+    "prefix": "KOS"
+  },
+  {
+    "source": "Department of Statistics Singapore",
+    "description": "Department of Statistics Singapore",
+    "prefix": "SSG"
+  },
+  {
+    "source": "Central Bank of Paraguay",
+    "description": "Central Bank of Paraguay",
+    "prefix": "BCP"
+  },
+  {
+    "source": "Central Bureau of Statistics, Israel",
+    "description": "Central Bureau of Statistics, Israel",
+    "prefix": "IL"
+  },
+  {
+    "source": "Bank of Japan",
+    "description": "Bank of Japan",
+    "prefix": "BOJ"
+  },
+  {
+    "source": "ANSD, Senegal",
+    "description": "Agence Nationale de Statistique et de la Démographie, Senegal",
+    "prefix": "SN"
+  },
+  {
+    "source": "Statistics Tunisia",
+    "description": "Statistics Tunisia",
+    "prefix": "TN"
+  },
+  {
+    "source": "Central Bank of Morocco",
+    "description": "Central Bank of Morocco",
+    "prefix": "BKAM"
+  },
+  {
+    "source": "C.A. of Statistics Lebanon",
+    "description": "Central Administration of Statistics Lebanon",
+    "prefix": "CAS"
+  },
+  {
+    "source": "NBS Tanzania",
+    "description": "National Bureau of Statistics Tanzania",
+    "prefix": "TZ"
+  },
+  {
+    "source": "Statistics Sierra Leone",
+    "description": "Statistics Sierra Leone",
+    "prefix": "SSL"
+  },
+  {
+    "source": "Reserve Bank of South Africa",
+    "description": "Reserve Bank of South Africa",
+    "prefix": "RBZA"
+  },
+  {
+    "source": "Namibia Statistics Agency",
+    "description": "Namibia Statistics Agency",
+    "prefix": "NA"
+  },
+  {
+    "source": "U.S. Treasury",
+    "description": "U.S. Department of the Treasury",
+    "prefix": "UST"
+  },
+  {
+    "source": "Bank of Bangladesh",
+    "description": "Bank of Bangladesh",
+    "prefix": "BB"
+  },
+  {
+    "source": "Statistics Botswana",
+    "description": "Statistics Botswana",
+    "prefix": "SBW"
+  },
+  {
+    "source": "Bank of Korea",
+    "description": "Bank of Korea",
+    "prefix": "BOK"
+  },
+  {
+    "source": "National Stat. Institute of Cameroon",
+    "description": "Institut National de la Statistique du Cameroun",
+    "prefix": "INSC"
+  },
+  {
+    "source": "National Stat. Office of Mongolia",
+    "description": "National Statistical Office of Mongolia",
+    "prefix": "MNG"
+  },
+  {
+    "source": "Bank Negara Malaysia",
+    "description": "Bank Negara Malaysia",
+    "prefix": "BNM"
+  },
+  {
+    "source": "Ministry of Economy, Trade, and Ind., Japan",
+    "description": "Ministry of Economy, Trade, and Industry, Japan",
+    "prefix": "METI"
+  },
+  {
+    "source": "Reserve Bank of Australia",
+    "description": "Reserve Bank of Australia",
+    "prefix": "RBA"
+  },
+  {
+    "source": "Joint Organisations Data Initiative",
+    "description": "Joint Organisations Data Initiative",
+    "prefix": "JODI"
+  },
+  {
+    "source": "Saudi Arabian Monetary Authority",
+    "description": "Saudi Arabian Monetary Authority",
+    "prefix": "SAMA"
+  },
+  {
+    "source": "NESDC, Thailand",
+    "description": "Office of the National Economic and Social Development Council, Thailand",
+    "prefix": "NCTH"
+  },
+  {
+    "source": "Bank for International Settlements",
+    "description": "Bank for International Settlements",
+    "prefix": "BIS"
+  },
+  {
+    "source": "Banco de México",
+    "description": "Banxico, Banco de México",
+    "prefix": "BXC"
+  },
+  {
+    "source": "FCSA - Statistics of United Arab Emirates",
+    "description": "Federal Competitiveness And Statistics Authority, United Arab Emirates",
+    "prefix": "FCSA"
+  },
+  {
+    "source": "Cabinet Office, Japan",
+    "description": "Cabinet Office, Japan",
+    "prefix": "ESRI"
+  },
+  {
+    "source": "Statistics New Zealand",
+    "description": "Statistics New Zealand",
+    "prefix": "SNZ"
+  },
+  {
+    "source": "Central Bank of the Republic of Turkey",
+    "description": "Central Bank of the Republic of Turkey",
+    "prefix": "TCMB"
+  },
+  {
+    "source": "Ministry of Treasury and Finance, Turkey",
+    "description": "Ministry of Treasury and Finance, Turkey",
+    "prefix": "HMB"
+  },
+  {
+    "source": "Banco Central de Venezuela",
+    "description": "Banco Central de Venezuela",
+    "prefix": "BCV"
+  },
+  {
+    "source": "Agency of Statistics of the Republic of Kazakhstan",
+    "description": "Agency of Statistics of the Republic of Kazakhstan",
+    "prefix": "KZST"
+  },
+  {
+    "source": "National Statistical Committee of Belarus",
+    "description": "National Statistical Committee of Belarus",
+    "prefix": "NSCB"
+  },
+  {
+    "source": "Pakistan Bureau of Statistics",
+    "description": "Pakistan Bureau of Statistics",
+    "prefix": "PK"
+  },
+  {
+    "source": "National Statistics Bureau of Bhutan",
+    "description": "National Statistics Bureau of Bhutan",
+    "prefix": "BT"
+  },
+  {
+    "source": "Banco Central de Honduras",
+    "description": "Banco Central de Honduras",
+    "prefix": "BCH"
+  },
+  {
+    "source": "National Bank of Cambodia",
+    "description": "National Bank of Cambodia",
+    "prefix": "NBC"
+  },
+  {
+    "source": "Banco Central de la República Dominicana",
+    "description": "Banco Central de la República Dominicana",
+    "prefix": "BCRD"
+  },
+  {
+    "source": "Ghana Statistical Service",
+    "description": "Ghana Statistical Service",
+    "prefix": "GSS"
+  },
+  {
+    "source": "Kenya National Bureau of Statistics",
+    "description": "Kenya National Bureau of Statistics",
+    "prefix": "KNBS"
+  },
+  {
+    "source": "Lao Statistics Bureau",
+    "description": "Lao Statistics Bureau",
+    "prefix": "LSB"
+  },
+  {
+    "source": "Central Statistical Organization, Myanmar",
+    "description": "Central Statistical Organization, Myanmar",
+    "prefix": "CSOM"
+  },
+  {
+    "source": "Ministry of National Economy, Oman",
+    "description": "Ministry of National Economy, Oman",
+    "prefix": "NCSI"
+  },
+  {
+    "source": "Dirección de Estadística y Censo, Panama",
+    "description": "Dirección de Estadística y Censo, Panama",
+    "prefix": "CGPA"
+  },
+  {
+    "source": "Central Bureau of Statistics, Nepal",
+    "description": "Central Bureau of Statistics, Nepal",
+    "prefix": "CBS"
+  },
+  {
+    "source": "Statistical Office of Serbia",
+    "description": "Statistical Office of the Republic of Serbia",
+    "prefix": "SORS"
+  },
+  {
+    "source": "State Committee Statistics, Uzbekistan",
+    "description": "State Committee of the Republic of Uzbekistan on Statistics",
+    "prefix": "SCUS"
+  },
+  {
+    "source": "General Statistics Office of Vietnam",
+    "description": "General Statistics Office of Vietnam",
+    "prefix": "GSOV"
+  },
+  {
+    "source": "Bank of Canada",
+    "description": "Bank of Canada",
+    "prefix": "BOC"
+  },
+  {
+    "source": "Ministry of Development Planing and Statistics, Qatar",
+    "description": "Ministry of Development Planing and Statistics, Qatar",
+    "prefix": "MDPS"
+  },
+  {
+    "source": "Japan Securities Dealers Association",
+    "description": "Japan Securities Dealers Association",
+    "prefix": "JSDA"
+  },
+  {
+    "source": "National Bank of Ukraine",
+    "description": "National Bank of Ukraine",
+    "prefix": "NBU"
+  },
+  {
+    "source": "Central Bank of Azerbaijan",
+    "description": "Central Bank Azerbaijan Republic",
+    "prefix": "CBAR"
+  },
+  {
+    "source": "Controller general of accounts, India",
+    "description": "Controller general of accounts, India",
+    "prefix": "CGAI"
+  },
+  {
+    "source": "Pakistan Automotive Manufacturers Association",
+    "description": "Pakistan Automotive Manufacturers Association",
+    "prefix": "PAMA"
+  },
+  {
+    "source": "Fiscal Policy Office, Thailand",
+    "description": "Fiscal Policy Office, Thailand",
+    "prefix": "FPO"
+  },
+  {
+    "source": "Bureau of the Treasury, Philippines",
+    "description": "Bureau of the Treasury, Philippines",
+    "prefix": "BTPH"
+  },
+  {
+    "source": "National Statistical Office of Thailand",
+    "description": "National Statistical Office of Thailand",
+    "prefix": "SNGT"
+  },
+  {
+    "source": "Office of Industrial Economics, Thailand",
+    "description": "Office of Industrial Economics, Thailand",
+    "prefix": "OEI"
+  },
+  {
+    "source": "Chinamoney",
+    "description": "Chinamoney",
+    "prefix": "CNM"
+  },
+  {
+    "source": "Ministry of Finance, Japan",
+    "description": "Ministry of Finance, Japan",
+    "prefix": "MFJP"
+  },
+  {
+    "source": "Ministerio de Hacienda de Argentina",
+    "description": "Ministerio de Hacienda de Argentina",
+    "prefix": "MEAR"
+  },
+  {
+    "source": "Czech National Bank",
+    "description": "Czech National Bank",
+    "prefix": "CZSO"
+  },
+  {
+    "source": "Central Bank of Nigeria",
+    "description": "Central Bank of Nigeria",
+    "prefix": "CBN"
+  },
+  {
+    "source": "Monetary Authority of Singapore",
+    "description": "Monetary Authority of Singapore",
+    "prefix": "MAS"
+  },
+  {
+    "source": "National Statistics Institute, Spain",
+    "description": "National Statistics Institute, Spain",
+    "prefix": "ES"
+  },
+  {
+    "source": "Petroleum Planning & Analysis Cell",
+    "description": "Petroleum Planning & Analysis Cell",
+    "prefix": "PPAC"
+  },
+  {
+    "source": "Office of the Economic Adviser",
+    "description": "Office of the Economic Adviser",
+    "prefix": "EAI"
+  },
+  {
+    "source": "Ministry of Economic Affairs, R.O.C.",
+    "description": "Ministry of Economic Affairs, R.O.C.",
+    "prefix": "MOEA"
+  },
+  {
+    "source": "Ministry of Commerce, Thailand",
+    "description": "Ministry of Commerce, Thailand",
+    "prefix": "MOC"
+  },
+  {
+    "source": "Higher Planning Commission in Morocco",
+    "description": "Higher Planning Commission in Morocco",
+    "prefix": "HCP"
+  },
+  {
+    "source": "",
+    "description": "",
+    "prefix": "GFK"
+  },
+  {
+    "source": "Badan Pusat Statistik",
+    "description": "Statistics Indonesia",
+    "prefix": "BPS"
+  },
+  {
+    "source": "NBS Moldova",
+    "description": "The National Bureau of Statistics of the Republic of Moldova",
+    "prefix": "SMD"
+  },
+  {
+    "source": "Investing",
+    "description": "Investing",
+    "prefix": "INVS"
+  },
+  {
+    "source": "China Customs",
+    "description": "China Customs",
+    "prefix": "CC"
+  },
+  {
+    "source": "Gambia Bureau of Statistics",
+    "description": "Gambia Bureau of Statistics",
+    "prefix": "GM"
+  },
+  {
+    "source": "National Institute of Statistics of Rwanda",
+    "description": "National Institute of Statistics of Rwanda",
+    "prefix": "RW"
+  },
+  {
+    "source": "Uganda Bureau of Statistics",
+    "description": "Uganda Bureau of Statistics",
+    "prefix": "UBOS"
+  },
+  {
+    "source": "Statistics Norway",
+    "description": "Statistics Norway",
+    "prefix": "SSB"
+  },
+  {
+    "source": "People's Bank of China",
+    "description": "People's Bank of China",
+    "prefix": "PBC"
+  },
+  {
+    "source": "Indonesia Stock Exchange",
+    "description": "Indonesia Stock Exchange",
+    "prefix": "IDX"
+  },
+  {
+    "source": "Saudi Exchange",
+    "description": "Saudi Exchange",
+    "prefix": "EXSA"
+  },
+  {
+    "source": "National Bank of Poland",
+    "description": "National Bank of Poland",
+    "prefix": "NBP"
+  },
+  {
+    "source": "Swiss National Bank",
+    "description": "Swiss National Bank",
+    "prefix": "SNB"
+  },
+  {
+    "source": "Hungarian Central Statistical Office",
+    "description": "Hungarian Central Statistical Office",
+    "prefix": "KSH"
+  },
+  {
+    "source": "",
+    "description": "",
+    "prefix": "NNV"
+  },
+  {
+    "source": "Federal Statistical Office of Germany",
+    "description": "Federal Statistical Office of Germany",
+    "prefix": "DES"
+  },
+  {
+    "source": "The National Institute of Statistics and Economic Studies",
+    "description": "The National Institute of Statistics and Economic Studies",
+    "prefix": "SF"
+  },
+  {
+    "source": "National Statistics Institute",
+    "description": "National Statistics Institute",
+    "prefix": "INE"
+  },
+  {
+    "source": "National Institute of Statistics, Italy",
+    "description": "National Institute of Statistics, Italy",
+    "prefix": "IST"
+  },
+  {
+    "source": "Statistics Poland",
+    "description": "Statistics Poland",
+    "prefix": "POL"
+  },
+  {
+    "source": "Statistics Sweden",
+    "description": "Statistics Sweden",
+    "prefix": "SCB"
+  },
+  {
+    "source": "Banco Central Uruguay",
+    "description": "Banco Central Uruguay",
+    "prefix": "BCU"
+  }
+]
