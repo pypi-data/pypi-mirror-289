@@ -1,0 +1,2 @@
+[console_scripts]
+techx = techx.main:main
