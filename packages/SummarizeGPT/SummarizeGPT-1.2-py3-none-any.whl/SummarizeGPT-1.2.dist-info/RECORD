@@ -1,0 +1,10 @@
+summarizeGPT/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+summarizeGPT/summarizeGPT.py,sha256=vkQkyQkmUFeGw1DBDXIHj8ap-L4zy45mR17sP7eugIc,5653
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_summarize_gpt.py,sha256=el_lsEYIETGqsbZfEIHMM1IkdBPELMlBylWnA0W6EWo,2331
+SummarizeGPT-1.2.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+SummarizeGPT-1.2.dist-info/METADATA,sha256=BpMRYiSMW1xZIChEGjmR09uqhZlB-DllOygXbCFhpEo,8849
+SummarizeGPT-1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+SummarizeGPT-1.2.dist-info/entry_points.txt,sha256=wVwOiXlPP0faEbyOiwDYG35IfqRWfuvxWH7zVqQEg-I,64
+SummarizeGPT-1.2.dist-info/top_level.txt,sha256=gf7NddIBJaJCjy1ul5Cu7Yamb5DYiTD7LMO4huW4cuw,19
+SummarizeGPT-1.2.dist-info/RECORD,,
