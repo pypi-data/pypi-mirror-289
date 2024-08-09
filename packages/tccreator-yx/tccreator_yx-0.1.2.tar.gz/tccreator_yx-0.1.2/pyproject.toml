@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "tccreator-yx"
+version = "0.1.2"
+description = "update applied python version"
+authors = ["Your Name <you@example.com>"]
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
