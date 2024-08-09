@@ -1,0 +1,42 @@
+[project]
+name = 'esy-osm-topology'
+description = 'Construct topologies from visual data, like OpenStreetMap'
+version = '0.1'
+license = {text = 'BSD-3-Clause'}
+readme = 'README.md'
+requires-python = '>= 3.9'
+dependencies = [
+    'numpy >= 1.23', 'scipy >= 1.10', 'shapely >= 2', 'pyproj >= 3.6.1',
+    'esy-osm-shape >= 0.2',
+]
+keywords = ['OSM', 'OpenStreetMap', 'shapely', 'topology', 'graph']
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Console',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Education',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: BSD License',
+    'Natural Language :: English',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Topic :: Scientific/Engineering',
+]
+authors = [
+    {name = 'Ontje Lünsdorf', email = 'ontje.luensdorf@dlr.de'},
+]
+
+[project.urls]
+homepage = 'https://gitlab.com/dlr-ve/esy/esy.osm.topology'
+documentation = 'https://dlr-ve.gitlab.io/esy/esy.osm.topology/'
+tracker = 'https://gitlab.com/dlr-ve/esy/esy.osm.topology/issues'
+
+[project.optional-dependencies]
+dev = ['pdoc', 'matplotlib']
+
+[tool.setuptools]
+package-dir = {'' = 'src'}
+
+[tool.pytest.ini_options]
+addopts = ['--doctest-modules']
