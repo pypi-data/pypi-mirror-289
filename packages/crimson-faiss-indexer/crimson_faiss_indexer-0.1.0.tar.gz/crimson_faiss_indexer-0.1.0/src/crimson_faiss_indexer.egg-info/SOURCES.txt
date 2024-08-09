@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/crimson/faiss_indexer/__init__.py
+src/crimson/faiss_indexer/retriever.py
+src/crimson_faiss_indexer.egg-info/PKG-INFO
+src/crimson_faiss_indexer.egg-info/SOURCES.txt
+src/crimson_faiss_indexer.egg-info/dependency_links.txt
+src/crimson_faiss_indexer.egg-info/requires.txt
+src/crimson_faiss_indexer.egg-info/top_level.txt
+test/test_example.py
