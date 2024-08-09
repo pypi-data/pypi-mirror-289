@@ -1,0 +1,5 @@
+[console_scripts]
+ed.x = edrixs.scripts:ed
+opavg.x = edrixs.scripts:opavg
+rixs.x = edrixs.scripts:rixs
+xas.x = edrixs.scripts:xas
