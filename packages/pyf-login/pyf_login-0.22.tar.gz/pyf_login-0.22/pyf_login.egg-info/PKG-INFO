@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pyf_login
+Version: 0.22
+Summary: A reusable Django login package
+Home-page: https://kessho.dev/spark-python-core/spark-auth
+Author: ycx
+Author-email: ycx3030@126.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: djangorestframework
+Requires-Dist: PyJWT
+
+# Pyf Login
+
+This is a reusable Django login package that includes a JWT-based login view.
+
+## 在 django 中应用
+
+1、下载
+
+```bash
+pip install pyf_login
+```
+
+2、配置
+INSTALLED_APPS 中添加 "pyf_login",
+
+3、在 urls.py 中添加
+path("auth/", include("pyf_login.urls")),
+
+4、访问
+url 为：auth/login （auth 前如果有前缀，请添加自己的前缀）
