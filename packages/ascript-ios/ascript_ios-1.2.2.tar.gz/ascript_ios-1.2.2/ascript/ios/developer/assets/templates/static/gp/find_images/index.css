@@ -1,0 +1,63 @@
+#img_des{
+  background: linear-gradient(90deg, rgba(100, 100, 100, 0.3) 5%, transparent 0), 
+    /*0度直线，100灰度，0.1透明度，5%宽度，0透明度背景*/
+                 linear-gradient(rgba(100, 100, 100, 0.3) 5%, transparent 0);
+    /*横纵向宽距*/
+  background-size: 10px 10px;
+}
+
+
+.image_list_item{
+    margin: 0px;
+    padding: 0px;
+}
+
+.item_action{
+    font-size: medium;
+    cursor: pointer;
+}
+
+.item_action:hover{
+    color: rgba(233, 45, 45, 0.802);
+    font-size: medium;
+    
+    /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); */
+}
+
+.image_list_item{
+    /* background-color: antiquewhite; */
+    /* border-bottom: 1px solid gray; */
+}
+
+.find_res{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.find_res_item{
+    min-height: 35px;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    align-items: center;
+  }
+
+  .find_res_item:hover{
+    min-height: 35px;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .close_res{
+    cursor: pointer;
+  }
+  .close_res:hover{
+    color:#d95b2f
+  }
+
+  .img_item_des{
+    cursor: pointer;
+  }
