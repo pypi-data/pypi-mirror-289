@@ -1,0 +1,17 @@
+textureminer/__init__.py,sha256=BwyIrT3LT-pwPHprTddqQEXt5H1RPAvHuRF4Z1DLomo,476
+textureminer/__main__.py,sha256=JTOUj821sqBwH2skBKlkLfCleO_aip9bM49jrTZyyh4,78
+textureminer/_metadata.py,sha256=i2h4A-zBq1z9ZRrc6Kso_mAbm_p1oSJsr_i7cYT9R6o,22
+textureminer/cli.py,sha256=HTEckrsKrrdnLGdnzy1XZyAU7T6QoXjcv6EOLLsEuMw,5185
+textureminer/exceptions.py,sha256=FYC2MFy6iUW30iBtwBvsUe9TNknij2Nmg1MPCqTFYWU,167
+textureminer/file.py,sha256=elaQkTNGETa673l6CKyIH6wFsfOwpCEiaKpiM0ZFdPk,1425
+textureminer/options.py,sha256=oMeeuX-foL23KMp6N_eiehxbgQQayEsjIIEs6QAlYLY,2370
+textureminer/texts.py,sha256=Hh4j6Ih8GcZdtU78SgpJAYeMc8GD4L3p9sItL4Xt5uo,2037
+textureminer/edition/Bedrock.py,sha256=VoLOrvQDp_yUgJ_YrfuH0lno-tnfFhLs1bsjGLl-R5A,16166
+textureminer/edition/Edition.py,sha256=D9u9XPS8QhHNyP0mZQNKnI-67bw0tGSnMGYg6HY-8zg,13696
+textureminer/edition/Java.py,sha256=H8eVDDHjecSjfrBgP2j5NkvHpNP58CrbyvJNxSYBRuk,15521
+textureminer/edition/__init__.py,sha256=cqDemCUjxGa4ttnJ5ZJDy_eeMh73VWgqZd3YcOHlhnk,191
+textureminer-3.1.0.dist-info/METADATA,sha256=ZltP4A_iFnwULBMnsLnqyroYEYPS1isUHCQ_yv67ayo,4842
+textureminer-3.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+textureminer-3.1.0.dist-info/entry_points.txt,sha256=SnVRVfMMJD5Xj5mP7YfeSB4U2XZx_U2yFH0EFYx2_9I,54
+textureminer-3.1.0.dist-info/licenses/LICENSE,sha256=YnFVN9M9TQofAv4D6GHt3_HaxidppGpjN9qQF8EcJ4w,1080
+textureminer-3.1.0.dist-info/RECORD,,
