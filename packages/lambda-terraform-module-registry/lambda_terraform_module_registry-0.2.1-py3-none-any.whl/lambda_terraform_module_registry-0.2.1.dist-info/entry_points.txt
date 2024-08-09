@@ -1,0 +1,3 @@
+[console_scripts]
+get-registry-token=registry.cli.iam_token_fetcher:main
+
