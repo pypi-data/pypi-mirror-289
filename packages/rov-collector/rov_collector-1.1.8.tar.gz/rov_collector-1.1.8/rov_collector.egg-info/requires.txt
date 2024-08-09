@@ -1,0 +1,13 @@
+matplotlib==3.9.1.post1
+requests-cache==1.2.1
+tqdm==4.66.5
+
+[test]
+black==24.8.0
+pre-commit==3.8.0
+types-requests==2.32.0.20240712
+mypy==1.11.1
+flake8==7.1.1
+tox==4.17.1
+pytest-xdist==3.6.1
+ruff==0.5.7
