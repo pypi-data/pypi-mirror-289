@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: sqlitelib
+Version: 1.0.0
+Summary: A sqlite lib that encapsulate common sqlite operations
+Home-page: https://github.com/kejun91/sqlite-lib
+Author: Jun Ke
+Author-email: kejun91@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# sqlitelib
+
+`sqlitelib` is a Python library that provides an easy-to-use interface for common SQLite database operations. It simplifies database interactions, making it easier to perform tasks like creating tables, inserting records, querying data, and more.
+
+## Features
+
+- Connect to SQLite databases
+- Create tables
+- Insert, update, and delete records
+- Query data with flexible options
+- Simple and intuitive API
+
+## Installation
+
+You can install `sqlitelib` using pip:
+
+```bash
+pip install sqlitelib
