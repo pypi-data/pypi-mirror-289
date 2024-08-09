@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: Jarvislib
+Version: 2.9.5
+Summary: no
+Author: PlatonPython
+Author-email: babadey.pl@gmail.com
+Keywords: example python
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
