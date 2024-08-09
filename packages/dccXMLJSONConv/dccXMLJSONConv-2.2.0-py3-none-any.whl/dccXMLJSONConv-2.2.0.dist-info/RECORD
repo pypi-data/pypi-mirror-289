@@ -1,0 +1,11 @@
+dccXMLJSONConv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dccXMLJSONConv/dccConv.py,sha256=FS49u9WwaRbt9nC8NmeoEsS3PcujaxncRF0ZzQY46KA,18668
+dccXMLJSONConv/dccServer.py,sha256=e7UAUzXmM9PgAHS3qctIBS4YcZ28pY2v2IoBP9Hy4qw,3893
+dccXMLJSONConv/listTypeFinder.py,sha256=F1Jm7D9yfU8lWW77fRCEk5CvsHsenYGSPlPLVnH71FA,12252
+dccXMLJSONConv/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dccXMLJSONConv/data/listDCCElements.json,sha256=w9FEDQO_KCiVyh5LJk_aZTzMtbCleMCktjUZ38JMNIw,10050
+dccXMLJSONConv-2.2.0.dist-info/LICENSE,sha256=ListzFM7LvlJ1cYCe2QW70teXZrN6P6k-aDimwPO2Ko,26516
+dccXMLJSONConv-2.2.0.dist-info/METADATA,sha256=IgDkiZqoDnrnHSr7kKYWVMszcdK0UwCEguLDxO3d-1U,12564
+dccXMLJSONConv-2.2.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+dccXMLJSONConv-2.2.0.dist-info/top_level.txt,sha256=pbPMYBa-h8qTxZmqGmf1QmvxMGKL5uDUYphGYVTj2Zo,15
+dccXMLJSONConv-2.2.0.dist-info/RECORD,,

@@ -1,0 +1,315 @@
+{
+    "schemaUrls": [
+        "https://ptb.de/si/v2.1.0/SI_Format.xsd",
+        "https://ptb.de/dcc/v3.2.1/dcc.xsd"
+    ],
+    "listTypeElements": [
+        "unitPhaseXMLListType",
+        "charsXMLListType",
+        "dateTimeXMLListType",
+        "uncertaintyValueXMLListType",
+        "kValueXMLListType",
+        "booleanXMLListType",
+        "unitXMLListType",
+        "stringXMLListType",
+        "probabilityValueXMLListType",
+        "stringConformityStatementStatusXMLListType",
+        "decimalXMLListType"
+    ],
+    "listTypeElementsDetails": [
+        {
+            "name": "unitXMLListType",
+            "itemType": "si:unitType"
+        },
+        {
+            "name": "unitPhaseXMLListType",
+            "itemType": "si:unitPhaseType"
+        },
+        {
+            "name": "decimalXMLListType",
+            "itemType": "si:decimalType"
+        },
+        {
+            "name": "uncertaintyValueXMLListType",
+            "itemType": "si:uncertaintyValueType"
+        },
+        {
+            "name": "kValueXMLListType",
+            "itemType": "si:kValueType"
+        },
+        {
+            "name": "probabilityValueXMLListType",
+            "itemType": "si:probabilityValueType"
+        },
+        {
+            "name": "dateTimeXMLListType",
+            "itemType": "xs:dateTime"
+        },
+        {
+            "name": "stringXMLListType",
+            "itemType": "xs:string"
+        },
+        {
+            "name": "charsXMLListType",
+            "itemType": "xs:string"
+        },
+        {
+            "name": "dateTimeXMLListType",
+            "itemType": "xs:dateTime"
+        },
+        {
+            "name": "booleanXMLListType",
+            "itemType": "xs:boolean"
+        },
+        {
+            "name": "stringConformityStatementStatusXMLListType",
+            "itemType": "dcc:stringConformityStatementStatusType"
+        }
+    ],
+    "repeatedFieldNames": [
+        "software",
+        "measuringEquipment",
+        "formula",
+        "itemQuantity",
+        "refTypeDefinition",
+        "identification",
+        "reference",
+        "file",
+        "covariance",
+        null,
+        "influenceCondition",
+        "result",
+        "metaData",
+        "complex",
+        "countryCodeISO3166_1",
+        "content",
+        "mandatoryLangCodeISO639_1",
+        "column",
+        "list",
+        "usedMethod",
+        "measurementResult",
+        "norm",
+        "real",
+        "equipmentClass",
+        "realListXMLList",
+        "respPerson",
+        "statement",
+        "complexList",
+        "measuringEquipmentQuantity",
+        "item",
+        "realList",
+        "usedLangCodeISO639_1",
+        "constant"
+    ],
+    "repeatedFieldNamesDetails": {
+        "real": "si:realQuantityType",
+        "complex": "si:complexQuantityType",
+        "list": "si:listType",
+        "realList": "si:realListType",
+        "realListXMLList": "si:realListXMLListType",
+        "complexList": "si:complexListType",
+        "constant": "si:constantQuantityType",
+        "column": null,
+        "covariance": null,
+        "null": null,
+        "software": "dcc:softwareType",
+        "refTypeDefinition": "dcc:refTypeDefinitionType",
+        "equipmentClass": "dcc:equipmentClassType",
+        "measuringEquipment": "dcc:measuringEquipmentType",
+        "measuringEquipmentQuantity": "dcc:primitiveQuantityType",
+        "usedLangCodeISO639_1": "dcc:stringISO639Type",
+        "mandatoryLangCodeISO639_1": "dcc:stringISO639Type",
+        "item": "dcc:itemType",
+        "itemQuantity": "dcc:primitiveQuantityType",
+        "identification": "dcc:identificationType",
+        "respPerson": "dcc:respPersonType",
+        "statement": "dcc:statementMetaDataType",
+        "measurementResult": "dcc:measurementResultType",
+        "usedMethod": "dcc:usedMethodType",
+        "norm": "dcc:notEmptyStringType",
+        "reference": "dcc:notEmptyStringType",
+        "influenceCondition": "dcc:conditionType",
+        "result": "dcc:resultType",
+        "metaData": "dcc:statementMetaDataType",
+        "countryCodeISO3166_1": "dcc:stringISO3166Type",
+        "content": "dcc:stringWithLangType",
+        "file": "dcc:byteDataType",
+        "formula": "dcc:formulaType"
+    },
+    "spaceSeparatedListTypes": {
+        "spaceSeparatedStrListTypes": [
+            {
+                "name": "unitXMLListType",
+                "type": "si:unitType",
+                "cast_type": "str"
+            },
+            {
+                "name": "unitPhaseXMLListType",
+                "type": "si:unitPhaseType",
+                "cast_type": "str"
+            },
+            {
+                "name": "dateTimeXMLListType",
+                "type": "xs:dateTime",
+                "cast_type": "str"
+            },
+            {
+                "name": "stringXMLListType",
+                "type": "xs:string",
+                "cast_type": "str"
+            },
+            {
+                "name": "charsXMLListType",
+                "type": "xs:string",
+                "cast_type": "str"
+            },
+            {
+                "name": "dateTimeXMLListType",
+                "type": "xs:dateTime",
+                "cast_type": "str"
+            },
+            {
+                "name": "booleanXMLListType",
+                "type": "xs:boolean",
+                "cast_type": "str"
+            },
+            {
+                "name": "stringConformityStatementStatusXMLListType",
+                "type": "dcc:stringConformityStatementStatusType",
+                "cast_type": "str"
+            }
+        ],
+        "spaceSeparatedNumberListTypes": [
+            {
+                "name": "decimalXMLListType",
+                "type": "si:decimalType",
+                "cast_type": "float"
+            },
+            {
+                "name": "uncertaintyValueXMLListType",
+                "type": "si:uncertaintyValueType",
+                "cast_type": "float"
+            },
+            {
+                "name": "kValueXMLListType",
+                "type": "si:kValueType",
+                "cast_type": "float"
+            },
+            {
+                "name": "probabilityValueXMLListType",
+                "type": "si:probabilityValueType",
+                "cast_type": "float"
+            }
+        ]
+    },
+    "spaceSeparatedDict": {
+        "unitXMLListType": {
+            "namespace": "si",
+            "cast_type": "str"
+        },
+        "unitPhaseXMLListType": {
+            "namespace": "si",
+            "cast_type": "str"
+        },
+        "dateTimeXMLListType": {
+            "namespace": "xs",
+            "cast_type": "str"
+        },
+        "stringXMLListType": {
+            "namespace": "xs",
+            "cast_type": "str"
+        },
+        "charsXMLListType": {
+            "namespace": "xs",
+            "cast_type": "str"
+        },
+        "booleanXMLListType": {
+            "namespace": "xs",
+            "cast_type": "str"
+        },
+        "stringConformityStatementStatusXMLListType": {
+            "namespace": "dcc",
+            "cast_type": "str"
+        },
+        "decimalXMLListType": {
+            "namespace": "si",
+            "cast_type": "float"
+        },
+        "uncertaintyValueXMLListType": {
+            "namespace": "si",
+            "cast_type": "float"
+        },
+        "kValueXMLListType": {
+            "namespace": "si",
+            "cast_type": "float"
+        },
+        "probabilityValueXMLListType": {
+            "namespace": "si",
+            "cast_type": "float"
+        }
+    },
+    "repeatedTypesDict": {
+        "real": "si:realQuantityType",
+        "complex": "si:complexQuantityType",
+        "list": "si:listType",
+        "realList": "si:realListType",
+        "realListXMLList": "si:realListXMLListType",
+        "complexList": "si:complexListType",
+        "constant": "si:constantQuantityType",
+        "column": null,
+        "covariance": null,
+        "null": null,
+        "software": "dcc:softwareType",
+        "refTypeDefinition": "dcc:refTypeDefinitionType",
+        "equipmentClass": "dcc:equipmentClassType",
+        "measuringEquipment": "dcc:measuringEquipmentType",
+        "measuringEquipmentQuantity": "dcc:primitiveQuantityType",
+        "usedLangCodeISO639_1": "dcc:stringISO639Type",
+        "mandatoryLangCodeISO639_1": "dcc:stringISO639Type",
+        "item": "dcc:itemType",
+        "itemQuantity": "dcc:primitiveQuantityType",
+        "identification": "dcc:identificationType",
+        "respPerson": "dcc:respPersonType",
+        "statement": "dcc:statementMetaDataType",
+        "measurementResult": "dcc:measurementResultType",
+        "usedMethod": "dcc:usedMethodType",
+        "norm": "dcc:notEmptyStringType",
+        "reference": "dcc:notEmptyStringType",
+        "influenceCondition": "dcc:conditionType",
+        "result": "dcc:resultType",
+        "metaData": "dcc:statementMetaDataType",
+        "countryCodeISO3166_1": "dcc:stringISO3166Type",
+        "content": "dcc:stringWithLangType",
+        "file": "dcc:byteDataType",
+        "formula": "dcc:formulaType"
+    },
+    "castingHintsDict": {
+        "unitXMLListType": "str",
+        "unitPhaseXMLListType": "str",
+        "dateTimeXMLListType": "str",
+        "stringXMLListType": "str",
+        "charsXMLListType": "str",
+        "booleanXMLListType": "str",
+        "stringConformityStatementStatusXMLListType": "str",
+        "decimalXMLListType": "float",
+        "uncertaintyValueXMLListType": "float",
+        "kValueXMLListType": "float",
+        "probabilityValueXMLListType": "float"
+    },
+    "spaceSeperatedFieldNamesAndTypes": {
+        "labelXMLList": "str",
+        "valueXMLList": "float",
+        "unitXMLList": "str",
+        "dateTimeXMLList": "str",
+        "uncertaintyXMLList": "float",
+        "coverageFactorXMLList": "float",
+        "coverageProbabilityXMLList": "float",
+        "distributionXMLList": "str",
+        "standardUncXMLList": "float",
+        "intervalMinXMLList": "float",
+        "intervalMaxXMLList": "float",
+        "charsXMLList": "str",
+        "validXMLList": "str",
+        "conformityXMLList": "str"
+    }
+}
