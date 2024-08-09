@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+fwpods_py/__init__.py
+fwpods_py/fwpods.py
+fwpods_py/swn_tree_manager.py
+fwpods_py/utils.py
+fwpods_py/weights_manager.py
+fwpods_py/window_manager.py
+fwpods_py.egg-info/PKG-INFO
+fwpods_py.egg-info/SOURCES.txt
+fwpods_py.egg-info/dependency_links.txt
+fwpods_py.egg-info/requires.txt
+fwpods_py.egg-info/top_level.txt
