@@ -1,0 +1,10 @@
+roblox_requests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+roblox_requests/__main__.py,sha256=cbE9u54FMC2Aztz866xJLGIKahvhckUqdO1_eyDK2mc,150
+roblox_requests/base.py,sha256=-0q_6bdTQVuz1zAik2r36F74P8AdUXmNRv4pf2JE8To,338
+roblox_requests/cli.py,sha256=Td4LuYvt-hYyLcq-I7kBqSxKTHmf8cU5vV3RsM4bawM,755
+roblox_requests-3.0.0.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+roblox_requests-3.0.0.dist-info/METADATA,sha256=s447TeM53PYEOhh-fNTHfsP9jTUNNgUlJV45yy5zn6k,4904
+roblox_requests-3.0.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+roblox_requests-3.0.0.dist-info/entry_points.txt,sha256=a5PhfdrwCGUCe7_lomhv5vWaDXkvt9CeX08Qyy1A5uc,60
+roblox_requests-3.0.0.dist-info/top_level.txt,sha256=gJzwCNu6-6oPcZo0V9_3A-5uyvBP_BUztoHgrar-saM,16
+roblox_requests-3.0.0.dist-info/RECORD,,
