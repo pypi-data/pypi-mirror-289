@@ -1,0 +1,13 @@
+matplotlib
+PySide6
+pyvista
+pyvistaqt
+click
+pymatgen>2023.3.10
+gcoreutils
+
+[dev]
+jupyter-book
+ghp-import
+jupytext
+multipie
