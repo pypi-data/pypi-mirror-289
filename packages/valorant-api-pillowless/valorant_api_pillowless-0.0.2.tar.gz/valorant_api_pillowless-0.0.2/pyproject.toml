@@ -1,0 +1,23 @@
+[project]
+name = "valorant-api-pillowless"
+version = "0.0.2"
+authors = [
+  { name="Whitelisted" },
+]
+description = "Sync/Async Python wrapper for valorant-api.com without the pillow dependency"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "python-dateutil==2.8.1",
+    "aiohttp>=3.10.1",
+    "requests>=2.32.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/Whitelisted1/valorant-api-pillowless"
+Issues = "https://github.com/Whitelisted1/valorant-api-pillowless/issues"
