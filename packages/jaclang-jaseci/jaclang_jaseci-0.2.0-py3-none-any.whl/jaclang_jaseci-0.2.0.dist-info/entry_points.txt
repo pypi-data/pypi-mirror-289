@@ -1,0 +1,2 @@
+[jac]
+jac = jaclang_jaseci.plugin.jaseci:JacPlugin
