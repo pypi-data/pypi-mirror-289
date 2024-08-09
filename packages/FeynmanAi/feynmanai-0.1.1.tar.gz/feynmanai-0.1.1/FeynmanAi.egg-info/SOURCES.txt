@@ -1,0 +1,8 @@
+README.md
+setup.py
+FeynmanAi.egg-info/PKG-INFO
+FeynmanAi.egg-info/SOURCES.txt
+FeynmanAi.egg-info/dependency_links.txt
+FeynmanAi.egg-info/entry_points.txt
+FeynmanAi.egg-info/requires.txt
+FeynmanAi.egg-info/top_level.txt
