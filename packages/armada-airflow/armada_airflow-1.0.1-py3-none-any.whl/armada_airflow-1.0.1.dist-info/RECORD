@@ -1,0 +1,9 @@
+armada/auth.py,sha256=KkRjZMeMkrC7gJxFUhE33et4KBRHfQ_M-V2nOWjlhjI,316
+armada/log_manager.py,sha256=n2b2dcp4oddVmsQJwYZdYAaVrKKA5YgqRG4ec0-uSdE,5059
+armada/model.py,sha256=pPHmS4V80Ru2BDTvReRAAyEs2t-0LZue8VwejR_RR_I,2845
+armada/operators/armada.py,sha256=5QXk-24RUaEy_RtZCoU6tL7ATUqbEslxTc-SdXdeDTs,17654
+armada_airflow-1.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+armada_airflow-1.0.1.dist-info/METADATA,sha256=X_5ECw6rpt3x8UA9EdHckA0zBsGDrlj9LuLVeXQvCUM,9933
+armada_airflow-1.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+armada_airflow-1.0.1.dist-info/top_level.txt,sha256=SaKoRDJJ1bkA2Lly_EYCX5D9VxncOV0eEI5NYBHU-bs,7
+armada_airflow-1.0.1.dist-info/RECORD,,
