@@ -1,0 +1,7 @@
+README.md
+setup.py
+knowledgekit/semantics.py
+knowledgekit.egg-info/PKG-INFO
+knowledgekit.egg-info/SOURCES.txt
+knowledgekit.egg-info/dependency_links.txt
+knowledgekit.egg-info/top_level.txt
