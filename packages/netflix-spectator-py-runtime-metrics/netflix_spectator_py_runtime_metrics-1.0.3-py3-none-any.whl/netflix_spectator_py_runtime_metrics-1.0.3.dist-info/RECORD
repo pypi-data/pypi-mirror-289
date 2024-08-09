@@ -1,0 +1,7 @@
+runmetrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+runmetrics/stats_collector.py,sha256=aTlhzCs6KA145cJFLtlpooPexmybz0ssAeERHHwzX4g,6465
+netflix_spectator_py_runtime_metrics-1.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+netflix_spectator_py_runtime_metrics-1.0.3.dist-info/METADATA,sha256=eiUYupweviiOYWYYdfoAFNV43NmhxZdD4p-5EfK1VHA,3266
+netflix_spectator_py_runtime_metrics-1.0.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+netflix_spectator_py_runtime_metrics-1.0.3.dist-info/top_level.txt,sha256=O60tWnyfLuFhhmI2JefxoJFHCAtLT2UbBPES-XrYncU,11
+netflix_spectator_py_runtime_metrics-1.0.3.dist-info/RECORD,,
