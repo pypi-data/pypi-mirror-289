@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: lsidentity
+Version: 1.0.0
+Summary: resource locking system
+Author: IT
+Author-email: it@electronic-shop.lu
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pytest (>=7.4.4,<8.0.0)
