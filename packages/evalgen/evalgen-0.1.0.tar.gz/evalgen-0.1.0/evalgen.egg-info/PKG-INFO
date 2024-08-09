@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: evalgen
+Version: 0.1.0
+Summary: A description of the evalgen package
+Home-page: https://github.com/scribbledata/evalgen
+Author: Scribble Data, Inc
+Author-email: support@scribbledata.io
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: sqlalchemy
+Requires-Dist: langchain
+Requires-Dist: openai
+Requires-Dist: mkdocs
+Requires-Dist: mkdocstrings[python]
+Requires-Dist: mkdocs-material
+Requires-Dist: python-dotenv
+Requires-Dist: pandas
+Requires-Dist: pyyaml
+Requires-Dist: tabulate
