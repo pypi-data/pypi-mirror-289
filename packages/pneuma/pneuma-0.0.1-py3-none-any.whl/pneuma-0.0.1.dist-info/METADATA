@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pneuma
+Version: 0.0.1
+Summary: Pneuma is a Python package for indexing and querying tables.
+Home-page: https://github.com/TheDataStation/Pneuma
+Author: University of Chicago
+Author-email: davidalexander@uchicago.edu
+License: TODO License
+Description-Content-Type: text/markdown
+
+# Pneuma
