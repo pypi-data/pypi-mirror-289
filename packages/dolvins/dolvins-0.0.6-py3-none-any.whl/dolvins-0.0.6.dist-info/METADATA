@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: dolvins
+Version: 0.0.6
+Summary: Dolvin's Math and Stats Library
+Author: Landon Dolvin
+Author-email: landondolvin@gmail.com
+Keywords: python,distributions,probability,linear algebra,statistics,mathematics
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: psutil
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Requires-Dist: scipy
+Requires-Dist: mpmath
+
+
+# Dolvins
+
+
+
+This project provides a set of functions and classes for optimization, probability, and statistical analysis, with a focus on handling multi-dimensional data, hyperplanes, and distribution analysis.
+
+<br/>
+
+
+
+## Table of Contents
+
+
+
+- [Installation](#installation)
+
+- [Usage](#usage)
+
+- [Examples](#examples)
+
+- [License](#license)
+
+  <br/>
+
+
+
+## Installation
+
+
+
+Dolvins is built on the following packages:
+
+
+
+- `psutil`
+
+- `numpy`
+
+- `pandas`
+
+- `tqdm`
+
+- `scipy`
+
+- `mpmath`
+
+
+
+To install Dolvins automatically with all its dependencies, please run:
+
+
+
+```
+
+pip install dolvins
+
+```
+
+
+
+<br/>
+
+
+
+## Usage
+
+
+
+Coming Soon
+
+
+
+## License
+
+
+
+This project is licensed under the MIT License.
+
+
+
+This README file provides detailed documentation for each function and class, including arguments, return values, and example usage. You can adjust the details based on your specific project and needs.
+
+
+
+> Written with [StackEdit](https://stackedit.io/).
+
