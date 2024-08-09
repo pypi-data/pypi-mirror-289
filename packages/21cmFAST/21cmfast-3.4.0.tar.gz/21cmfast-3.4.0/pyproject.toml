@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.black]
+include = '\.pyi?$'
+target-version = ['py39', 'py310', 'py311']
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.tox
+  | \.venv
+  | _build
+  | build
+  | dist
+)/
+'''
