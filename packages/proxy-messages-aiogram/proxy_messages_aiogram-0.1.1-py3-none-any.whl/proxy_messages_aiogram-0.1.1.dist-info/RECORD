@@ -1,0 +1,15 @@
+proxy_messages_aiogram/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proxy_messages_aiogram/permissions_managers.py,sha256=xLmQ8DtlfiYaIrueF0C2Ucw5TuaTyyEhm-mhc6qPS5A,1847
+proxy_messages_aiogram/proxy_managers.py,sha256=hPQZqyUrx3Zh7plwXFuvXbx1NPTngBN32zYcMUl9PFY,5655
+proxy_messages_aiogram/storages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proxy_messages_aiogram/storages/base.py,sha256=kjqlfUiB9V3OeuLqVY9J8FX5Hsp3GafLzWf03iroy4E,820
+proxy_messages_aiogram/storages/memory_storage.py,sha256=zQ3KA3alyOFj9wCLcb55oVPpgMQ5RF8gSjeHlCXft0Q,1157
+proxy_messages_aiogram/storages/redis_storage.py,sha256=r2_T9fXoXDIrPQgt_ndMdaM3d8vMq6UnqXhPPf_aew0,2314
+proxy_messages_aiogram/storages/sqlite_storage.py,sha256=q_T08MkgZnd4Q7zg_Ns-PK3ml5YiN7WaNANPRqPdmBE,3931
+proxy_messages_aiogram/storages/types.py,sha256=ELRQXMKVEbohUx0QRTdhGtXRByOPY_vLxFS-9z3ZX_A,1058
+proxy_messages_aiogram/texts.py,sha256=lUQ7iR1TVONu4KTEsBh-hK6n782gk-P8THdsXPrRYIw,1344
+proxy_messages_aiogram/utils.py,sha256=qmTDTacxOsGVBAbuEibY2ofVYWJ-WwGB8drE2Usszlc,135
+proxy_messages_aiogram-0.1.1.dist-info/LICENSE,sha256=6UZxYEivrMurbnYH8vCOplVfWBqeFQFyHyqOOP8jO_o,1056
+proxy_messages_aiogram-0.1.1.dist-info/METADATA,sha256=FJQ5_btcpbHw0ij7u1MFB7dGhkhKzE1yHPuJ6CKpJ8A,3168
+proxy_messages_aiogram-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+proxy_messages_aiogram-0.1.1.dist-info/RECORD,,
