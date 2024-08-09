@@ -1,0 +1,3 @@
+[console_scripts]
+micro-test-hub=micro_test_hub.transports.cli.v1_0.main:cli
+

@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: micro_test_hub
+Version: 0.1.9
+Summary: A system to support the creation of integration tests for MOC microservices
+Author: Damianos Damianidis
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Click (==8.1.7)
+Requires-Dist: gitpython (==3.1.43)
+Requires-Dist: google-cloud-pubsub (==2.10.0)
+Requires-Dist: pydantic (==2.7.4)
+Requires-Dist: pyyaml (==6.0.1)
+Description-Content-Type: text/markdown
+
+# team-moc-micro-test-hub
+A system to support the creation of integration tests for MOC microservices
+
+## GCP Artifacts Registry authentication
+
+To authenticate with Google Cloud Platform's Artifact Registry, follow these steps:
+
+1. **Install the Google Cloud SDK**: If you haven't already, download and install the Google Cloud SDK from [https://cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install).
+
+2. **Authenticate your Google Cloud account**:
+    Run the following command and follow the on-screen instructions to log in with your Google account:
+    
+    ```bash
+    gcloud auth login
+
+3. **Configure artifacts registry for region**: 
+   
+    ```bash
+    gcloud auth configure-docker europe-west1-docker.pkg.dev
+
+4. **Install micro-test-hub**:
+	
+	```bash
+	python3 setup.py install
+
+5. **Run micro-test-hub - no params**:
+
+	```bash
+	micro-test-hub
+
+6. **Run micro-test-hub - with file param**:
+
+	```bash
+	micro-test-hub -f config.js	
