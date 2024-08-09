@@ -1,0 +1,8 @@
+py_device_detector-0.1.0.dist-info/METADATA,sha256=rc62i6h0cDafCRtO7rYhTedQaiWug5oNfDANWtUGn4k,741
+py_device_detector-0.1.0.dist-info/WHEEL,sha256=Z9Pap_pj6BEB8D8KpO9f5hp4_VmsJFvzofbms3NXpmE,108
+py_device_detector.libs/libgcc_s-e52197c3.so.1,sha256=vkPW1Auw6CH9Bjk7frmX3hry_1H9c0tRI0Ncyg71WUI,724137
+py_device_detector/__init__.py,sha256=f_4L16nbDLEr1fPssXkm9y-HylL-peNuHbcchrK0mqk,155
+py_device_detector/__init__.pyi,sha256=QH6vU_u_gm9OgpE1IHx3B7pqiGXhgkKR0blLucqLSKg,145
+py_device_detector/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_device_detector/py_device_detector.cpython-311-aarch64-linux-musl.so,sha256=1Zt-xaXRaYHQhNQqBWn4INlkdhywVH-N6sIqiX7Kn54,6228857
+py_device_detector-0.1.0.dist-info/RECORD,,
