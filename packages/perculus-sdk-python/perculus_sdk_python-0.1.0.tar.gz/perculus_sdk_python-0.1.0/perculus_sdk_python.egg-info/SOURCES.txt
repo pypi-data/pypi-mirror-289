@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+attendee/__init__.py
+attendee/client.py
+perculus_sdk_python.egg-info/PKG-INFO
+perculus_sdk_python.egg-info/SOURCES.txt
+perculus_sdk_python.egg-info/dependency_links.txt
+perculus_sdk_python.egg-info/requires.txt
+perculus_sdk_python.egg-info/top_level.txt
+session/__init__.py
+session/client.py
+user/__init__.py
+user/client.py
