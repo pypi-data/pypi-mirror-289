@@ -1,0 +1,9 @@
+scdeed/__init__.py,sha256=7dGzDJEDmUFrHlTZRF1efmXCAgkLXHf4xWDz2RdYD5o,138
+scdeed/common.py,sha256=Si4ZvbkkaVGyKrOa7gmsVNWS2Abtji-V5nEsJhrIM3M,188
+scdeed/scdeed.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+scdeed-0.0.4.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+scdeed-0.0.4.dist-info/METADATA,sha256=wRkCJ6ONsrC_XslBjVh1f4cJ-yZrsg5vnmr2qb3z6M0,1141
+scdeed-0.0.4.dist-info/WHEEL,sha256=XRxW4r1PNiVhMpP4bT9oWtu3HyndxpJ84SkubFgzp_Y,109
+scdeed-0.0.4.dist-info/entry_points.txt,sha256=KYQ0G93qo_iE2QrBFf6-ImOWKi_YAjSEk8tbzOAn8wk,43
+scdeed-0.0.4.dist-info/top_level.txt,sha256=UUHzWBqu-w1KhB4gIosoid4isGXvRSJP_tMWg8rsY20,7
+scdeed-0.0.4.dist-info/RECORD,,
