@@ -1,0 +1,6 @@
+biopython>=1.83
+snakemake>=8.16.0
+black>=21.5b2
+flake8>=3.8.3
+isort>=5.13.2
+sphinx>=4.1.0
