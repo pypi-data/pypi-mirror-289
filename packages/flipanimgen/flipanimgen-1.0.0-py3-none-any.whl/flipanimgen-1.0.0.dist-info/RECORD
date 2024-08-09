@@ -1,0 +1,12 @@
+flipanimgen/__init__.py,sha256=VHfyg95ugLvpiIfBWDkkILqkK6s0iNOcu3p0nvY_Djg,59
+flipanimgen/__main__.py,sha256=1OQiQV4kK5Hg4kjrFhkKpaU4mdm4lKBp_I784B4uERU,39
+flipanimgen/cli.py,sha256=ZxGmavx3Z61JkCpT-qFbMt1KLEZCPgNs65rdd8d9F_U,707
+flipanimgen/dithering.py,sha256=30Hh7iROGCrWjB6W5A0i4Vm6YPSvYsITrtIG1IkSeQQ,972
+flipanimgen/main.py,sha256=6ng2qz_-_5_9PuyJ8cclEwRXMS6QU14uMGtiV_OeFpc,2718
+flipanimgen/metadata.py,sha256=7lPHNa_rEkczCn5f22Y0IFh7szphPq6HqxUzAijYlvg,865
+flipanimgen/ofw.py,sha256=WVs7Zhs0OdMiG333slmcmgft5IvnwnDmr2agLWHxTZ0,2652
+flipanimgen-1.0.0.dist-info/LICENSE,sha256=4EiC4BcGfABfGMzPFa5Gpt3g7QJnPX1EfuaAyuYSUhk,34515
+flipanimgen-1.0.0.dist-info/METADATA,sha256=EuisAHJdxTMFEI_55_Vx0fqrYakiqN0ZjZEt5a7zewA,2085
+flipanimgen-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+flipanimgen-1.0.0.dist-info/entry_points.txt,sha256=LQGCRIeh2XfDSwH3tigh6yHuNlrS9mg3lnCL3TtF_ec,51
+flipanimgen-1.0.0.dist-info/RECORD,,
