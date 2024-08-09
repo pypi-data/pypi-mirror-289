@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/vale_cli/__init__.py
+src/vale_cli/vale_config.py
+src/vale_cli.egg-info/PKG-INFO
+src/vale_cli.egg-info/SOURCES.txt
+src/vale_cli.egg-info/dependency_links.txt
+src/vale_cli.egg-info/top_level.txt
