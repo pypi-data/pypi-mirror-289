@@ -1,0 +1,14 @@
+echosms/__init__.py,sha256=bdI4ioPz6JknQTga17tnwn88HzCcungV0falfK3I61Y,305
+echosms/benchmarkdata.py,sha256=E5EESQxYnsyWLxZJRLkRIElMVFG6q51rRbb-ZEwHfRk,1436
+echosms/mssmodel.py,sha256=gLWN8Imy2i9Ll_BjHlOofM5TbWiHdM6noG2YKEfTFTo,10331
+echosms/psmsmodel.py,sha256=FK0GUwQi4Dxp29ZWeFKOgNOYWmEEfWxa-QIElmD26fc,9761
+echosms/referencemodels.py,sha256=x36jjczl1R6r3nWCXpfJ64ZQ5gLcDdBLedqOIBKVLwg,1992
+echosms/scattermodelbase.py,sha256=HHCrZ1kROtGqRxaBncZkdc4PUqKEtoCnHM21-BuzSCI,771
+echosms/utils.py,sha256=7kvcutBlzYnuK05-zgwBAlMV7cfbzHFma6AEdpR5Cq4,2701
+echosms/resources/target definitions.toml,sha256=R1xqdkpGKmIQVqDORclO-2taQU9MthMseGRjKCdjRd4,9216
+echosms/resources/BenchMark_Data/Benchmark_Angle_TS.csv,sha256=Hy6nBENl8VG-PFcREBo96ACV0xTJFakcaP6t1liYExY,2780
+echosms/resources/BenchMark_Data/Benchmark_Frequency_TS.csv,sha256=xcFRC1h2by0RnqDNCyCDmnqdW-7oFsYa0WYPAnTPRWE,19467
+echosms-0.0.2.dist-info/METADATA,sha256=PsIvMUEl5qftF_E3MSTJVVyqRi4a7-l-eg5CyTNaB7U,10525
+echosms-0.0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+echosms-0.0.2.dist-info/licenses/LICENSE,sha256=KO2-SLw9gvXxJvbOQMVosoB4iqgwqFGrDKj7ublsP5k,1107
+echosms-0.0.2.dist-info/RECORD,,
