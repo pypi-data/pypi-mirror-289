@@ -1,0 +1,2 @@
+[console_scripts]
+klingon-deps = klingon_deps.cli:main

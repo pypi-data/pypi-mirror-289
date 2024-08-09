@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+klingon_deps/__init__.py
+klingon_deps/cli.py
+klingon_deps/config_manager.py
+klingon_deps/dependency_manager.py
+klingon_deps/language_detector.py
+klingon_deps.egg-info/PKG-INFO
+klingon_deps.egg-info/SOURCES.txt
+klingon_deps.egg-info/dependency_links.txt
+klingon_deps.egg-info/entry_points.txt
+klingon_deps.egg-info/requires.txt
+klingon_deps.egg-info/top_level.txt
