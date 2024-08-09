@@ -1,0 +1,17 @@
+geovalidator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geovalidator/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geovalidator/validators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geovalidator/validators/completeness.py,sha256=xtNrmD2ItTu4bl_VgJ_uYZUeIJqAx1y_14CbnCFyIV8,661
+geovalidator/validators/crs.py,sha256=c0Q8dqbehZ1QOApTOEurRH3d91_F3VLuQi_5lqgT1ps,473
+geovalidator/validators/topology.py,sha256=EMM5xV7Xn2tcE-MXDjMdcTVLhlm8m9jzn6VP7rFFG1A,2697
+polyvalidator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+polyvalidator/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+polyvalidator/validators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+polyvalidator/validators/completeness.py,sha256=xtNrmD2ItTu4bl_VgJ_uYZUeIJqAx1y_14CbnCFyIV8,661
+polyvalidator/validators/crs.py,sha256=c0Q8dqbehZ1QOApTOEurRH3d91_F3VLuQi_5lqgT1ps,473
+polyvalidator/validators/topology.py,sha256=EMM5xV7Xn2tcE-MXDjMdcTVLhlm8m9jzn6VP7rFFG1A,2697
+poly_validator-0.1.0.dist-info/LICENSE,sha256=9i6_3o-ZiSL3arU6eVsQeLwrYOoeeMJ9ftKvDGCRdSU,1091
+poly_validator-0.1.0.dist-info/METADATA,sha256=CIaOYrELY4yGkEqcetSWHRTe53d8baxHXIyi4lbxjmI,3830
+poly_validator-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+poly_validator-0.1.0.dist-info/top_level.txt,sha256=muWZC2hPIB8b6Deyz4n4EQAdGUhsJx4zp4oi0apPC-g,14
+poly_validator-0.1.0.dist-info/RECORD,,
