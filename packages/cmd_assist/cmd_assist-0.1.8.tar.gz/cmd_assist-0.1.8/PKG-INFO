@@ -1,0 +1,185 @@
+Metadata-Version: 2.1
+Name: cmd_assist
+Version: 0.1.8
+Summary: A tool to save and retrieve frequently used commands.
+Author: Darren Rabbitt
+Author-email: dev@darrenrabbitt.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: PyYAML (>=6.0.1)
+Requires-Dist: aioboto3 (>=13.1.1,<14.0.0)
+Requires-Dist: argparse (>=1.4.0,<2.0.0)
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: boto3 (>=1.17.49)
+Requires-Dist: botocore (>=1.34.70,<1.34.132)
+Requires-Dist: click (>=7.1.2)
+Requires-Dist: jsonschema (>=4.23.0,<5.0.0)
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.3.4,<3.0.0)
+Requires-Dist: python-dotenv (>=0.17.1)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Command Assist Tool
+
+A CLI tool for managing and organizing commands with support for saving, listing, exporting, importing, and backing up commands to AWS S3. This tool is designed to help developers quickly store useful commands and retrieve them later, saving time that would otherwise be spent searching through command history.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+    - [Setting Up](#setting-up)
+    - [Commands](#commands)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Additional Information](#additional-information)
+
+## Python Versions
+This project supports Python versions specified in the `pyproject.toml` file:
+toml
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+## Features
+- Save commands with categories and descriptions.
+- List saved commands with filtering options.
+- Import commands from JSON or YAML files.
+- Backup commands to Local Storage or AWS S3 bucket.
+- Restore commands from an AWS S3 bucket.
+- Override and Show Configuration
+
+## Installation
+Ensure you are using Python 3.9 and above. Recommended list between 3.9 and 4.0.
+bash
+python -m pip install ca
+### Setting Up
+Configure AWS: Create a `config.yaml` file in the root directory with the following structure:
+yaml
+aws:
+    region: your-aws-region
+    bucket_name: your-s3-bucket-name
+    bucket_privacy: private # or public-read
+## Commands
+- Register commands:
+    - `set_config`: Set the configuration.
+    - `show_config`: Show the configuration.
+    - `export_config`: Export the configuration.
+    - `show_bundles`: Show the bundles.
+    - `save_command`: Save a command.
+    - `list_commands`: List all commands.
+    - `list_all_commands`: List all commands.
+    - `list_categories`: List categories.
+    - `import_commands`: Import commands.
+    - `create_backup`: Create a backup.
+    - `destroy_backup`: Destroy a backup.
+    - `remove`: Remove a command.
+    - `backup`: Backup commands.
+    - `fetch`: Fetch commands.
+    - `restore`: Restore commands.
+
+Please note that the above commands are placeholders and need to be implemented with their respective functionalities.
+
+## Commands
+Here are some examples of commands and their expected outputs:
+```bash
+ca --help
+Usage: ca [OPTIONS] COMMAND [ARGS]...
+Options:
+--help  Show this message and exit.
+Commands:
+backup
+create-backup
+destroy-backup   Command function to destroy the backup.
+export-config
+fetch
+import
+list
+list-all
+list-categories  Command function to list all categories.
+remove           Command function to remove commands based on provided...
+restore
+save
+set-config
+show-bundles
+show-config
+```
+
+- `set_config`:
+    - Description: Set the configuration.
+    - Output: The configuration is successfully set. Additional bundles to different repos can be added. Just ensure to follow the same schema convention, and if it's a public repo, it will be fetched. Pre-configured bundles for this tool are available from [cmd_assist_bundles](https://github.com/darrenrabbs/cmd_assist_bundles).
+  
+- `show_config`:
+    - Description: Show the configuration.
+    - Output: The current configuration is displayed. A list of pre-configured bundles which can be fetched.
+
+- `export_config`:
+    - Description: Export the configuration.
+    - Output: The configuration is exported to a file.
+
+- `show_bundles`:
+    - Description: Show the bundles.
+    - Output: The available bundles are listed.
+
+- `save_command`:
+    - Description: Save a command.
+    - Output: The command is successfully saved.
+```bash
+    ca save git log "commit log for all branches" "git log --all --graph --oneline --decorate"
+    Saved command: git log --all --graph --oneline --decorate
+```
+- `list_commands`:
+    - Description: List all commands.
+    - Output: All saved commands are displayed.
+```bash
+    ca list git
+    {
+        "log": {
+            "commit log for all branches": "git log --all --graph --oneline --decorate"
+        }
+    }
+```
+- `list_all_commands`:
+    - Description: List all commands.
+    - Output: All saved commands are displayed.
+- `list_categories`:
+    - Description: List categories.
+    - Output: All available categories are listed.
+- `import_commands`:
+    - Description: Import commands.
+    - Output: The commands are successfully imported.
+- `create_backup`:
+    - Description: Create a backup.
+    - Output: A backup of the commands is created. This is required if you are using AWS bucket. Ensure you are authenticated.
+- `destroy_backup`:
+    - Description: Destroy a backup.
+    - Output: The backup is successfully destroyed. 
+
+- `remove`:
+    - Description: Remove a command.
+    - Output: The command is successfully removed.
+```bash
+    ca remove git
+    Are you sure you want to remove the commands? This action cannot be undone. [y/N]: n
+```
+- `backup`:
+    - Description: Backup commands.
+    - Output: The commands are backed up depending on what you have configured, local or AWS.
+```bash
+    ca backup
+    File /tmp/commands.yaml backed up to /tmp/cmd_assist/backups/backups/commands_20240807_235241.txt.
+```
+- `fetch`:
+    - Description: Fetch commands.
+    - Output: The commands are fetched from the configured bundles.
+```bash
+    ca fetch poetry
+    Commands saved to fetched/poetry_commands.json
+    Commands successfully imported from fetched/poetry_commands.json
+```
+- `restore`:
+    - Description: Restore commands.
+    - Output: The commands are successfully restored from backup.
