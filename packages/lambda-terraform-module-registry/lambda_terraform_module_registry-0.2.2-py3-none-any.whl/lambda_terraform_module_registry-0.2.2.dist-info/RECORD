@@ -1,0 +1,17 @@
+registry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+registry/auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+registry/auth/exceptions.py,sha256=umQQz3PX_fxukhp0fCvTdPbmlxF3RU4lAn1DcFI8K4c,312
+registry/auth/middleware.py,sha256=sFfG0d7a0vvogdE4HrmyfMbR-PzKKdZU1iI5Nl72i0s,2260
+registry/auth/types.py,sha256=XGneXw4uMkLvkmY4b2QiVVrhbxcEjaE7D3QX8i1U8Lk,6496
+registry/aws_lambda/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+registry/aws_lambda/iam_auth_lambda.py,sha256=3RFrluDinbPRgUklFm9xu4aax4ea9pH5FPunNttLqDc,2126
+registry/aws_lambda/registry_lambda.py,sha256=XVEo9JufLxO3mmc7jmpJDWiO5Tml9DJcXw5UAs98laY,3245
+registry/cli/iam_permissions_manager.py,sha256=Qn8uRp5d2flzk4YCjnyATFbqmTb6mgUc8Y8F3pVrVOU,2339
+registry/cli/iam_token_fetcher.py,sha256=cnGclXJfS0J6aMoffZeo8PuZbxCGiz98faHxHRSnt6Q,1561
+registry/config.py,sha256=j2mEROKMCo4y8CIf2lPkdhTsnpAJw1Resw0zaU51fUw,1352
+registry/models.py,sha256=21HmugggAXwGkVv8Ig8kAMqzxzaE_J8HwfvCI-gRP60,2613
+registry/routes.py,sha256=v9x897h3M6VwqWDsnEA_zqX6WtzkAzSE9gPUHaqDckg,342
+lambda_terraform_module_registry-0.2.2.dist-info/METADATA,sha256=xL3s5Z9Jx7QAkc6YzOGJQF6Gv69xBaVl245mVMD_L_k,387
+lambda_terraform_module_registry-0.2.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+lambda_terraform_module_registry-0.2.2.dist-info/entry_points.txt,sha256=dnvwHHN_Q6_oQ-2NwIdDCrGEn7vsp4TRuz5euw2e1QE,144
+lambda_terraform_module_registry-0.2.2.dist-info/RECORD,,
