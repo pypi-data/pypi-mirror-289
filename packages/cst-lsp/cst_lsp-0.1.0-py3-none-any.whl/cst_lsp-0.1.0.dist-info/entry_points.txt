@@ -1,0 +1,2 @@
+[console_scripts]
+lspowerup = cst_lsp.server:main
