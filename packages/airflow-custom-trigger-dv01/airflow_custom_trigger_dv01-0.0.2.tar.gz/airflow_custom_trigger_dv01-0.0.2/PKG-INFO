@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: airflow_custom_trigger_dv01
+Version: 0.0.2
+Summary: airflow_custom_trigger_dv01
+Project-URL: Homepage, https://github.com/zhijie-dv01/airflow_custom_triggert
+Project-URL: Issues, https://github.com/zhijie-dv01/airflow_custom_trigger/issues
+Author-email: zhijie <zhijie@dv01.co>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.

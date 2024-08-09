@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "airflow_custom_trigger_dv01"
+version = "0.0.2"
+authors = [
+  { name="zhijie", email="zhijie@dv01.co" },
+]
+description = "airflow_custom_trigger_dv01"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/zhijie-dv01/airflow_custom_triggert"
+Issues = "https://github.com/zhijie-dv01/airflow_custom_trigger/issues"
