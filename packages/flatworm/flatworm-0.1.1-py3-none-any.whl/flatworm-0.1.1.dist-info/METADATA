@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: flatworm
+Version: 0.1.1
+Summary: Tools designed for non-techy people who must write code.
+Author: Eryk Krusinski
+Author-email: <eryk@krus.co.uk>
+Keywords: python,machine learning,version control,minimalism
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: os
+Requires-Dist: joblib
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+
+
+# flatworm
+Tools designed for non-techy people who must write code.
