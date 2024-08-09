@@ -1,0 +1,10 @@
+README.md
+setup.py
+legendador/__init__.py
+legendador/main.py
+legendador.egg-info/PKG-INFO
+legendador.egg-info/SOURCES.txt
+legendador.egg-info/dependency_links.txt
+legendador.egg-info/entry_points.txt
+legendador.egg-info/requires.txt
+legendador.egg-info/top_level.txt

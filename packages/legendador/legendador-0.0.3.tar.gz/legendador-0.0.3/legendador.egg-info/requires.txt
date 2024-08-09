@@ -1,0 +1,7 @@
+pathlib
+click
+opencv-python
+ffmpeg-python
+googletrans==4.0.0-rc1
+numpy
+sh
