@@ -1,0 +1,4 @@
+include perculus-sdk-python/*
+recursive-include perculus-sdk-python/user *
+recursive-include perculus-sdk-python/session *
+recursive-include perculus-sdk-python/attendee *
