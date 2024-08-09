@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: COPEX_high_rate_compression_quality_metrics
+Version: 0.0.2
+Summary: COPEX high rate compression quality metrics
+Home-page: https://github.com/VisioTerra/COPEX_high_rate_compression_quality_metrics
+Author: VisioTerra
+Author-email: info@visioterra.fr
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: matplotlib>=3.9.1
+Requires-Dist: torch>=2.4.0
+Requires-Dist: scikit-image>=0.24.0
+Requires-Dist: lpips>=0.1.4
+Requires-Dist: matplotlib>=3.9.1.post1
+
+# COPEX High Rate Compression Quality Metrics
+
+This package provides quality metrics for high rate compression.
+
+## Installation
+
+```console
+pip install COPEX_high_rate_compression_quality_metrics
+```
