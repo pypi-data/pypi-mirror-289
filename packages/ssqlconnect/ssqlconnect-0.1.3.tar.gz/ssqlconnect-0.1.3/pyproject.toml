@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ssqlconnect"
+version = "0.1.3"
+description = "Simplify MySQL"
+authors = ["BazzoniEdoardo <bazzoni.edoardo@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+maintainers = [
+    "bazzoniEdoardo <bazzoni.edoardo@gmail.com>"
+]
+repository = "https://github.com/BazzoniEdoardo/SSQL"
+homepage = "https://pypi.org/project/ssqlconnect/"
+documentation = "https://github.com/BazzoniEdoardo/SSQL/blob/main/README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mysql-connector-python = "^9.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
