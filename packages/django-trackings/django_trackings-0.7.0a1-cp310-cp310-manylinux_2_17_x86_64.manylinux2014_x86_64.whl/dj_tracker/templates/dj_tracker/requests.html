@@ -1,0 +1,24 @@
+{% extends "dj_tracker/list.html" %}
+
+{% block title %}Requests{% endblock %}
+{% block h1 %}Requests{% endblock %}
+
+{% block objects %}
+    <ol>
+        {% for request in page_obj %}
+            <li>
+                <a href="{{ request.get_absolute_url }}" class="p-3 flex justify-between">
+                    <div class="w-11/12 break-all">
+                        {{ request }}
+                        <div class="text-muted">
+                            {{ request.latest_occurrence|date:"D d M Y" }} at {{ request.latest_occurrence|time:"H:i" }}
+                        </div>
+                    </div>
+                    <span class="rounded-pill">{{ request.num_trackings }}</span>
+                </a>
+            </li>
+        {% empty %}
+            <p>No request(s) yet.</p>
+        {% endfor %}
+    </ol>
+{% endblock %}
