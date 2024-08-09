@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: noplaintext_Sluke950
+Version: 0.2.0
+Summary: An application for generating and managing encryption keys and encrypting/decrypting messages.
+Author-email: Luke Shuttleworth <Sluke950@gmail.com>
+Project-URL: Homepage, https://github.com/Sluke950/noplaintext
+Project-URL: Issues, https://github.com/Sluke950/noplaintext/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography>=39.0.1
+
+# noplaintext
+
+## Description
+
+noplaintext is a Python application for generating and managing encryption keys, as well as encrypting and decrypting messages. This tool uses the `cryptography` library to ensure secure encryption and decryption operations.
+
+## Features
+
+- **Generate Key**: Create and save a new encryption key.
+- **Load Key**: Load an existing encryption key from a file.
+- **Encrypt Message**: Encrypt messages using a provided key file.
+- **Decrypt Message**: Decrypt messages using a provided key file.
+
+## Installation
+
+To set up the project, follow these steps:
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/Sluke950/crypto_app.git
+   cd crypto_app
