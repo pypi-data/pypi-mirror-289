@@ -1,0 +1,5 @@
+GLFW
+Numba
+Numpy
+PyGLM
+ModernGL
