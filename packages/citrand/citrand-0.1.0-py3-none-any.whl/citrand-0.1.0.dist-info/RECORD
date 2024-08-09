@@ -1,0 +1,11 @@
+citrand/__init__.py,sha256=ywXbVKfyOqNb5XaQY211Xrbpg0wzOrd2oBt9nNzBpD8,1118
+citrand/__main__.py,sha256=GKGv_1dFNAYQnEcvjmT9xDI_u3HUfKFZEF8yvCYrIdo,797
+citrand/errors.py,sha256=PK9YGPy3jPKh-zSCuQCR5tAKrYidiFIyavxnp7PkbaY,1104
+citrand/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+citrand/timeout.py,sha256=iupdQl527ElOFI3STnXvFI3WfJqfkf5wM24YkdKFEyI,2797
+citrand/tui.py,sha256=gR7VXD-ZmWoTQW95GLDj_rPAcl4AFUcws1SDlGDtMD4,984
+citrand-0.1.0.dist-info/LICENSE,sha256=cGDDvyo3poWUlANAS3f1LxCj_QnatCNCAFX6F1eDvmA,34656
+citrand-0.1.0.dist-info/METADATA,sha256=I8XsPzukMk7LwIW1aFSS4yvgooAgmw6fdnJUakDCSVI,2502
+citrand-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+citrand-0.1.0.dist-info/entry_points.txt,sha256=h6GJIO7-9jVQykVApAUOqhShqyQpXVeOixC-37FaMfE,44
+citrand-0.1.0.dist-info/RECORD,,

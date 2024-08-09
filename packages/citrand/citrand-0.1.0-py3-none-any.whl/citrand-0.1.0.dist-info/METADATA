@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: citrand
+Version: 0.1.0
+Summary: PRNG manipulation aide for emulated Pokémon 3DS titles
+Home-page: https://codeberg.org/ViteByte/citrand
+License: GPLv3+
+Author: Taylor Rodríguez
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Typing :: Typed
+Requires-Dist: typing-extensions (>=4.12.2,<5.0.0)
+Project-URL: Repository, https://codeberg.org/ViteByte/citrand
+Description-Content-Type: text/markdown
+
+# Citrand
+
+PRNG manipulation aide for emulated Pokémon 3DS titles.
+
+[![Codeberg](https://img.shields.io/badge/Repository-Codeberg-blue?logo=codeberg&labelColor=white&style=plastic)](https://codeberg.org/ViteByte/citrand/)
+[![CPython 3.10+](https://img.shields.io/badge/CPython-3.10_|_3.11_|_3.12-blue?style=plastic)](https://www.python.org/downloads/)
+[![PyPI Version](https://img.shields.io/pypi/v/citrand?label=PyPI&color=blue&style=plastic)](https://pypi.org/project/citrand)
+[![GPLv3+ License](https://img.shields.io/pypi/l/citrand?label=License&color=blue&style=plastic)](https://codeberg.org/ViteByte/citrand/raw/branch/main/LICENSE)
+
+## Installation
+
+Requirements for running Citrand:
+- [Python](https://www.python.org/downloads/) (version `3.10` or greater)
+- [Pipx](https://pypi.org/project/pipx/) or [Pip](https://pypi.org/project/pip/)
+- [Git](https://git-scm.com/) (optional)
+
+### Codeberg (recommended)
+
+The Codeberg repository contains the latest improvements for Citrand, but it
+may include bugs or stability issues.
+
+This method requires `git` in order to download the package files from the
+repository.
+
+```bash
+# SSH
+python3 -m pipx install git+ssh://git@codeberg.org/ViteByte/citrand.git
+# HTTPS
+python3 -m pipx install git+https://codeberg.org/ViteByte/citrand.git
+```
+
+### Python Package Index
+
+PyPI provides the most stable release, but may lack newer features or
+bug fixes.
+
+```shell
+python3 -m pipx install citrand
+```
+

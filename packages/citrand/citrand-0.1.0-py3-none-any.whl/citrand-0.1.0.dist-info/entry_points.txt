@@ -1,0 +1,3 @@
+[console_scripts]
+citrand=citrand.tui:main
+
