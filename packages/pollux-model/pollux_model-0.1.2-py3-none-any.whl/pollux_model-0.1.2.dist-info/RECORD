@@ -1,0 +1,7 @@
+pollux_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pollux_model/model_abstract.py,sha256=yJXyxmM5UchQBdD4XHYoDsbRqJFfA2yFhWoN3KUvRns,1192
+pollux_model/model_example/model_example.py,sha256=3W2jbx-_X0CV4Ie0gO7AL4ZWcJpWEE8pYF6vm6fgIp4,1294
+pollux_model-0.1.2.dist-info/LICENSE,sha256=Y_zDMUosI56de95GVglpC19GilDg_0qu5kgmy4XiwKE,33092
+pollux_model-0.1.2.dist-info/METADATA,sha256=hgghqNNyZnaHG19muK8HxYOUwRet728l8lhnQ5xs5Ls,1713
+pollux_model-0.1.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pollux_model-0.1.2.dist-info/RECORD,,
