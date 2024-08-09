@@ -1,0 +1,3 @@
+[console_scripts]
+hextech=hextech_muscle.__main__:run
+
