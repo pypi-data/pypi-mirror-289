@@ -1,0 +1,15 @@
+README.md
+setup.py
+vegmod/__init__.py
+vegmod/__main__.py
+vegmod/base.py
+vegmod/cli.py
+vegmod/ingress.py
+vegmod/serializer.py
+vegmod.egg-info/PKG-INFO
+vegmod.egg-info/SOURCES.txt
+vegmod.egg-info/dependency_links.txt
+vegmod.egg-info/entry_points.txt
+vegmod.egg-info/requires.txt
+vegmod.egg-info/top_level.txt
+vegmod/pycall/__init__.py
