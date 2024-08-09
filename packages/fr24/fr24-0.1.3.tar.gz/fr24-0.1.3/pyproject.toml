@@ -1,0 +1,84 @@
+[tool.poetry]
+name = "fr24"
+homepage = "https://github.com/cathaypacific8747/fr24/"
+version = "0.1.3"
+description = "Parse gRPC and JSON data from FlightRadar24"
+authors = [
+  "Abraham Cheung <abraham@ylcheung.com>",
+  "Xavier Olive <git@xoolive.org>",
+]
+license = "MIT"
+include = ["LICENSE", "py.typed", "*.proto", "style.tcss"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+fr24 = 'fr24.cli:app'
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+pandas = "^2.2.2"
+pyarrow = "^17.0.0"
+httpx = { extras = ["brotli", "http2"], version = "^0.27.0" }
+protobuf = ">=5.27.2"
+appdirs = "^1.4.4"
+textual = ">=0.58,<0.75"
+loguru = "^0.7.2"
+typer = "^0.12.3"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.26.0"
+pytest = "^8.2.0"
+pytest-asyncio = "^0.23.7"
+ruff = ">=0.5.0,<0.6.0"
+mypy = "^1.10.1"
+textual-dev = "^1.5.1"
+types-protobuf = "^5.26.0.20240422"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.0"
+pytest-asyncio = "^0.23.7"
+pydantic = "^2.8.0"
+eval-type-backport = "^0.2.0" # for pydantic, <3.10 syntax
+
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = { extras = ["imaging"], version = "^9.5.27" }
+mkdocstrings-python = "^1.10.5"
+black = "^24.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+lint.select = [
+  "E",
+  "W",   # pycodestyle
+  "F",   # pyflakes
+  "I",   # isort
+  "NPY", # numpy
+  # "PD",  # pandas
+  "DTZ", # flake8-datetimez
+  "RUF",
+]
+exclude = ["proto"]
+line-length = 80
+target-version = "py39"
+
+[tool.ruff.lint.isort]
+known-first-party = ["numpy", "pandas"]
+
+[tool.mypy]
+python_version = "3.9"
+exclude = ["proto"]
+platform = "posix"
+
+color_output = true
+pretty = true
+show_column_numbers = true
+strict = true
+check_untyped_defs = true
+ignore_missing_imports = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
