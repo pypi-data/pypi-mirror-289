@@ -1,0 +1,10 @@
+pollux_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pollux_model/electrolyser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pollux_model/electrolyser/pem_electrolyser.py,sha256=b6e-JEjW1WxGHgrF_Ms7DHETAS7YZ7AWsomnNXSqtb4,1742
+pollux_model/model_abstract.py,sha256=yJXyxmM5UchQBdD4XHYoDsbRqJFfA2yFhWoN3KUvRns,1192
+pollux_model/model_example/correlation/correlation_example.py,sha256=iwJxsKQ9EuhNitTN4DQJSFbwWWYCRmAyAGMEkTfVcNg,123
+pollux_model/model_example/model_example.py,sha256=syYypcrb6tscolWeKiE8x-wqZsL02iJedxqMbz2DUIw,1199
+pollux_model-0.1.1.dist-info/LICENSE,sha256=Y_zDMUosI56de95GVglpC19GilDg_0qu5kgmy4XiwKE,33092
+pollux_model-0.1.1.dist-info/METADATA,sha256=52LrdXMMHB4lz8M-sDwLT-oiLX9Y5YeDnXSP_guhy4s,2818
+pollux_model-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pollux_model-0.1.1.dist-info/RECORD,,
