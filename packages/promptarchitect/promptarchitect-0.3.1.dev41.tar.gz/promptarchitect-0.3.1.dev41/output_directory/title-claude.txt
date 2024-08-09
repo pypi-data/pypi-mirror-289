@@ -1,0 +1,11 @@
+Hier zijn 5 titels voor een AI podcast gericht op business mensen met een IT-achtergrond, met focus op MLOps, Explainable AI en Large Language Models:
+
+1. "AI Insights: Navigating MLOps, XAI, and LLMs for Business"
+
+2. "The Intelligent Enterprise: Decoding AI for IT Professionals"
+
+3. "TechAI Talk: From MLOps to Large Language Models"
+
+4. "AI Decoded: Business Strategies in the Era of Explainable AI"
+
+5. "Future-Proof IT: Mastering MLOps and Language Models for Business Success"
