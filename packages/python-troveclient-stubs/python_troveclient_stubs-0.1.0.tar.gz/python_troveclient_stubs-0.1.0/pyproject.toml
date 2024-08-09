@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "python-troveclient-stubs"
+version = "0.1.0"
+description = ""
+authors = ["Deni Tazurkaev <sha256deni@gmail.com>"]
+license = "Apache-2.0 license"
+readme = "README.md"
+repository = "https://github.com/tdeni/python-troveclient-stubs"
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+packages = [{ "include" = "troveclient-stubs" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.0"
+black = "^24.4.2"
+isort = "^5.13.2"
+python-troveclient = "8.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
