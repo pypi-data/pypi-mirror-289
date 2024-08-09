@@ -1,0 +1,201 @@
+name: gateway_sfm_sm_postgress
+platform: DOCKER-COMPOSE
+services:
+- container_command: ''
+  container_command_args: ''
+  container_port: 80
+  dependencies:
+  - simple_feature_management
+  - service_management
+  downstream: true
+  env_vars:
+    ALERTING_API_URL: https://alerting-api-zeagr7syxa-ew.a.run.app
+    CLOUDSDK_CONFIG: /gcp/config
+    ENV: local
+    FLASK_DEBUG: '1'
+    GOOGLE_APPLICATION_CREDENTIALS: /gcp/config/application_default_credentials.json
+    GOOGLE_CLOUD_PROJECT: prj-d-moc-88cd
+    INVITE_USERS_MODULE_URL: https://invite-users-eijc2s7hda-ew.a.run.app
+    LOGIN_EXPERIENCE_MODULE_URL: https://europe-west1-prj-d-moc-pc-login-8666.cloudfunctions.net
+    NOTIFICATION_SERVICE_URL: http://notifications:80
+    OVERVIEW_METRICS_COLLECTION: overview_metrics_2
+    PROJECT_ID: prj-n-moc-qa-cb2f
+    PUBLISHER_MODULE_URL: https://pub-gateway-63ktzcqh7a-ew.a.run.app
+    SELLERS_MODULE_URL: https://gateway-redzm37n6a-ew.a.run.app
+    SERVICE_CATALOG_ASSETS_BUCKET: prj-d-moc-88cd-service-catalog-assets
+    SERVICE_CATALOG_ASSETS_URL_PREFIX: servicecatalogassets
+    SERVICE_MANAGEMENT_URL: http://service_management:80
+    SIMPLE_FEATURE_MANAGEMENT_SERVICE_URL: http://simple_feature_management
+    SITETAG_BUILDER_TOPIC_ID: moc-sitetag-builder
+    SITETAG_CONFIGER_TOPIC_ID: moc-sitetag-configer
+    TABLEAU_SERVER_URL: http://34.77.115.69
+    USER_MANAGEMENT_MODULE_URL: https://authentication-eijc2s7hda-ew.a.run.app
+    X_PA_GCP_JWT: eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ1MjljNDA5Zjc3YTEwNmZiNjdlZTFhODVkMTY4ZmQyY2ZiN2MwYjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTEyNjE3OTEyOTk2MzM4MjE1MTc5IiwiaGQiOiJwcm9qZWN0YWdvcmEuY29tIiwiZW1haWwiOiJkYW1pYW5vc2RAcHJvamVjdGFnb3JhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiT3VuLUhqNHZBUHZpN0Q5RjFVSk1rZyIsImlhdCI6MTcyMzA0NTc0MywiZXhwIjoxNzIzMDQ5MzQzfQ.fHccmB8XtHKzDtuVM1jSpbF7QbFT1Ra4cKW_STmlakGqT-QPt3pj6dXL6gUMJiEBFVBARTozt-A1nk-rJYmeXf1yji1TDVPjvNd1Jg6iugiib_fcutV2GeQidgyfg8OuWd5KMLSYxqQHyAcPfLQUzZ6sHA4xy314kd3ixxhf4inSLqF7u2gcByxaTH6xL3FVidGMoV9w66Z5nRd7UgGaUH7YRMaV9h1sTCn8-NVbOJ-TcsSg4qpf8uOiY-f50QVYCMHaQYPwVUcO4T5SHBEyfe21Hk1x_X8nTuC1trXfBKRDo1uwX5D5-loY8NrT74fDVrEuN2KHDAbJVdF0AjpD9A
+  host_port: 5051
+  image_uri: europe-west1-docker.pkg.dev/prj-p-artifacts-787f/moc/web-gateway:0.2.0-rc10
+  name: web_gateway
+  type: DOCKER
+  volumes:
+  - container: /gcp/config/application_default_credentials.json
+    host: ~/.config/gcloud/application_default_credentials.json
+- container_command: ''
+  container_command_args: ''
+  container_port: 80
+  dependencies:
+  - postgres_sfm
+  - pub_sub_emulator
+  downstream: false
+  env_vars:
+    AKAMAI_ACCESS_TOKEN: akab-5vtmouzutdrza4ih-stdpuw6z6hl44bul
+    AKAMAI_CLIENT_SECRET: DaX7ZFdSqEsq7MK8Am4cZlRmHoyDSxielroOLI31zVU=
+    AKAMAI_CLIENT_TOKEN: akab-voauhvy2p2eyfobn-v4xsqmq57nosfke3
+    AKAMAI_PURGE_CACHE_URL: akab-6m7iw3znzxn3bnpa-7phcjfc6hnueexkf.luna.akamaiapis.net
+    CLOUDSDK_CONFIG: /gcp/config
+    ENV: local
+    ENVIRONMENT: local
+    FLASK_DEBUG: '1'
+    GOOGLE_APPLICATION_CREDENTIALS: /gcp/config/application_default_credentials.json
+    JENKINS_PROJECT_ID: jenkins-193214
+    MOC_CONTROL_CHANNEL_TOPIC_ID: your-topic-id
+    MOC_HOMEPAGE_URL: https://moc-dev.projectagora.info/home/dashboard
+    NOTIFICATIONS_MODULE_URL: https://cr-notifications-uf4qgb3whq-ew.a.run.app
+    PA_ADMIN_EMAIL: 15e9e2d2.thinkdigital.net@emea.teams.ms
+    PROJECT_ID: your-project-id
+    PYTHONUNBUFFERED: '1'
+    SENDGRID_TOPIC_ID: sendgrid-service-staging
+    SIMPLE_FEATURE_MANAGER_MODULE_URL: http://simple_feature_management:80
+    SITETAG_BUILDER_TOPIC_ID: moc-sitetag-builder
+    SITETAG_CONFIGER_TOPIC_ID: moc-sitetag-configer
+    SITETAG_SERVER_URL: https://moc-sitetags-dev.projectagora.info
+    SQLALCHEMY_DATABASE_URI: postgresql://postgres:123456!@postgres_sfm/postgres_sfm
+    TEMP_SITETAG_SERVER_URL: https://moc-sitetags-dev.projectagora.info
+    X_PA_GCP_JWT: eyJhbGciOiJSUzI1NiIsImtpZCI6IjNkNTgwZjBhZjdhY2U2OThhMGNlZTdmMjMwYmNhNTk0ZGM2ZGJiNTUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTEyNjE3OTEyOTk2MzM4MjE1MTc5IiwiaGQiOiJwcm9qZWN0YWdvcmEuY29tIiwiZW1haWwiOiJkYW1pYW5vc2RAcHJvamVjdGFnb3JhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiNEdsUVFoQU5meGlWb2pFQVFfX0NLUSIsImlhdCI6MTcxOTQ4Njk2NywiZXhwIjoxNzE5NDkwNTY3fQ.Nog1z7bTE5JfD2vZZfFA9WoGvyUGz4ujyu8xHXef5mHoEGVqOrm_SvayAbvcvBF73JzdgAUP4aMEmSeUqY4I_ggy6-f4yqqsZiVXqmHS6VSL3S7C5WLlx81uYjT3naZYzQs2GY9qAbHfvFhRtkiKH0w7TlGyaRPHwX_97GCJGWhNnSA94G1EBdaWnS1i80VLSDVe5xgOtBw0NNcpNTnjVzdyG6IpGF73lZ3gIJyGSs2eQelMhL3xV-SHld2m8RS8IpEfc1DD63OotR7NAFyfRbbLvMZ8kvoCu1bjpEuhFGTSNUIdIgehGecTHRM4rUA4nlCgkwWyuxjCCDqVrQglag
+  host_port: 5050
+  image_uri: europe-west1-docker.pkg.dev/prj-p-artifacts-787f/moc/simple-feature-management:0.2.0-rc12
+  name: simple_feature_management
+  type: DOCKER
+  volumes:
+  - container: /gcp/config/application_default_credentials.json
+    host: ~/.config/gcloud/application_default_credentials.json
+- container_command: ''
+  container_command_args: ''
+  container_port: 80
+  dependencies:
+  - postgres_sm
+  - pub_sub_emulator
+  downstream: false
+  env_vars:
+    AKAMAI_ACCESS_TOKEN: akab-5vtmouzutdrza4ih-stdpuw6z6hl44bul
+    AKAMAI_CLIENT_SECRET: DaX7ZFdSqEsq7MK8Am4cZlRmHoyDSxielroOLI31zVU=
+    AKAMAI_CLIENT_TOKEN: akab-voauhvy2p2eyfobn-v4xsqmq57nosfke3
+    AKAMAI_PURGE_CACHE_URL: akab-6m7iw3znzxn3bnpa-7phcjfc6hnueexkf.luna.akamaiapis.net
+    CLOUDSDK_CONFIG: /gcp/config
+    ENV: local
+    ENVIRONMENT: local
+    FLASK_DEBUG: '1'
+    GOOGLE_APPLICATION_CREDENTIALS: /gcp/config/application_default_credentials.json
+    JENKINS_PROJECT_ID: jenkins-193214
+    MOC_CONTROL_CHANNEL_TOPIC_ID: your-topic-id
+    MOC_HOMEPAGE_URL: https://moc-dev.projectagora.info/home/dashboard
+    NOTIFICATIONS_MODULE_URL: https://cr-notifications-uf4qgb3whq-ew.a.run.app
+    PA_ADMIN_EMAIL: 15e9e2d2.thinkdigital.net@emea.teams.ms
+    PROJECT_ID: your-project-id
+    PYTHONUNBUFFERED: ' 1'
+    SENDGRID_TOPIC_ID: sendgrid-service-staging
+    SIMPLE_FEATURE_MANAGER_MODULE_URL: http://simple_feature_management:80
+    SITETAG_BUILDER_TOPIC_ID: moc-sitetag-builder
+    SITETAG_CONFIGER_TOPIC_ID: moc-sitetag-configer
+    SITETAG_SERVER_URL: https://moc-sitetags-dev.projectagora.info
+    SQLALCHEMY_DATABASE_URI: postgresql://postgres:123456!@postgres_sm/postgres_sm
+    TEMP_SITETAG_SERVER_URL: https://moc-sitetags-dev.projectagora.info
+    X_PA_GCP_JWT: eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyNmQ5MTdiMWZlOGRlMTMzODJhYTdjYzlhMWQ2ZTkzMjYyZjMzZTIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTEyNjE3OTEyOTk2MzM4MjE1MTc5IiwiaGQiOiJwcm9qZWN0YWdvcmEuY29tIiwiZW1haWwiOiJkYW1pYW5vc2RAcHJvamVjdGFnb3JhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiZXZiMWJjUmxwM0VYQkV3SWxjcnNmQSIsImlhdCI6MTcyMjk0ODk5MiwiZXhwIjoxNzIyOTUyNTkyfQ.x2sXh42mknuKxg26hD_sVgsNSLWvwYRuuK0oA1JT1hdthe8gD1PrFW19VbM9IxjTHRrcbRqLZHL5gQD27HFh4BkSVKxZAz1B5zk6L79xWhbKvdlGdgmFtweO6At47KLr2qPbdGrhPS7NnYMg2SEWVLYZu6mZxl5tcdKAShc-oLx_jdb3mD8fGEUTKIH4uL8QSOqEsIMCXo4YbkqByz3PXzQm5H6O9nmc-bs2ryiSR_FOEQN-1S83cRmAdBaKq1LwA7U0fjpPOc7JjzxXgRbJmIWbXiePimzhVfCzdsfVt1EiAWCbAOGoPsHrQjIJWKcDNOBFg3unAPzkPsCJCMVInw
+  host_port: 6000
+  image_uri: europe-west1-docker.pkg.dev/prj-p-artifacts-787f/moc/service-management:0.2.0-rc7
+  name: service_management
+  type: DOCKER
+  volumes:
+  - container: /gcp/config/application_default_credentials.json
+    host: ~/.config/gcloud/application_default_credentials.json
+- db_type: POSTGRESS
+  downstream: false
+  name: postgres_sfm
+  sql_init_file: ./data/services/db-init/init-schema.sql
+  type: DB
+- db_type: POSTGRESS
+  downstream: false
+  name: postgres_sm
+  sql_init_file: ./data/services/db-init/sm/init-schema.sql
+  type: DB
+- code_branch: main
+  code_folder: sitetag-builder
+  code_repo: git@github.com:thinkdigitalgroupprojectagora/team-moc-sitetag-builder.git
+  dependencies:
+  - service_management
+  - firestore-emulator
+  - pub_sub_emulator
+  - gcp-storage
+  downstream: false
+  env_vars:
+    BOT_DETECTION_ENDPOINT: https://bot-detection.mediaownerscloud.com
+    BUILD_SUCCESS_TOPIC_ID: projects/your-project-id/topics/moc-sitetag-builder-success
+    CORE_LIBRARY_DEFAULT_VERSION: 0.0.40
+    EVENT_TRACKER_ENDPOINT: https://event-tracker.mediaownerscloud.com/
+    EVENT_TRACKER_LIBRARY_DEFAULT_VERSION: 1.0.4
+    EVENT_TRACKER_LIBRARY_URL: https://event-tracker-library.mediaownerscloud.com/main/__VERSION__/pa_et.min.js
+    GOOGLE_CLOUD_PROJECT: your-project-id
+    IMOC_CORE_ARTIFACTS_BUCKET: project-agora-moc-sitetag-library-emulator
+    NODE_TLS_REJECT_UNAUTHORIZED: '0'
+    PROJECT_ID: your-project-id
+    SITETAG_STORE_BUCKET: prj-p-moc-a2c2-sitetags-emulator
+  lang_type: NODEJS
+  name: cloud_function_sitetag_builder
+  type: FUNCTION
+- buckets:
+  - location: null
+    name: prj-p-moc-a2c2-sitetags-emulator
+  - location: /home/damianosd/project_agora_repos/moc/team-moc-micro-test-hub/data/services/fake-gcs/data/project-agora-moc-sitetag-library-emulator
+    name: project-agora-moc-sitetag-library-emulator
+  downstream: false
+  name: gcp-storage
+  service_type: STORAGE
+  type: GCP
+- downstream: false
+  name: pub_sub_emulator
+  service_type: PUBSUB
+  topics:
+  - name: your-topic-id
+    subscriptions:
+    - name: your-subscription-id
+      push_endpoint: http://service_management/v1.0/configuration
+  - name: moc-sitetag-builder
+    subscriptions:
+    - name: your-subscription-build-id
+      push_endpoint: http://cloud_function_sitetag_builder:8080
+  - name: moc-sitetag-builder-success
+    subscriptions:
+    - name: your-subscription-build-success-id
+      push_endpoint: http://service_management/v1.0/products/sitetag/build
+  - name: moc-sitetag-configer
+    subscriptions:
+    - name: your-subscription-config-id
+      push_endpoint: http://cloud_function_sitetag_configer:8080
+  type: GCP
+- downstream: false
+  name: firestore-emulator
+  service_type: FIRESTORE
+  type: GCP
+- code_branch: development_branch
+  code_folder: sitetag-configer
+  code_repo: git@github.com:thinkdigitalgroupprojectagora/team-moc-sitetag-builder.git
+  dependencies:
+  - pub_sub_emulator
+  - firestore-emulator
+  downstream: false
+  env_vars:
+    GOOGLE_CLOUD_PROJECT: your-project-id
+    NODE_TLS_REJECT_UNAUTHORIZED: '0'
+    PROJECT_ID: your-project-id
+  lang_type: NODEJS
+  name: cloud_function_sitetag_configer
+  type: FUNCTION
+tests_path: data/tests
