@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+UppercaseConverter.egg-info/PKG-INFO
+UppercaseConverter.egg-info/SOURCES.txt
+UppercaseConverter.egg-info/dependency_links.txt
+UppercaseConverter.egg-info/entry_points.txt
+UppercaseConverter.egg-info/top_level.txt
+uppercase_converter/__init__.py
+uppercase_converter/converter.py

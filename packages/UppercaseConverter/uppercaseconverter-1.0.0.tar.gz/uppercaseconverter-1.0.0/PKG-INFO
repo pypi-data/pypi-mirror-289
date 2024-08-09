@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: UppercaseConverter
+Version: 1.0.0
+Summary: A simple package to convert file content to uppercase
+Home-page: https://github.com/sidharthd7/UppercaseConverter
+Author: Sidharth Dhawan
+Author-email: sidharthdhawan17@gmail.com
+Keywords: python,converter,lower to upper,uppercase converter,uppercase,textfile
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# UppercaseConverter
+
+UppercaseConverter is a simple Python package to convert the content of a file to uppercase.
+
+## Installation
+
+```sh
+pip install UppercaseConverter
