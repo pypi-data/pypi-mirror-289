@@ -1,0 +1,18 @@
+[project]
+name = "odds_conversion_tb"
+version = "0.0.1"
+authors = [
+  { name="Thomas Brumbaugh", email="thomas.william.brumbaugh@gmail.com" },
+]
+description = "This is a simple package which offers data types for odds and functions to convert between odds data type"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/odds_conversion_tb"
+Issues = "https://github.com/pypa/odds_conversion_tb/issues"

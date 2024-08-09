@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/odds_conversion_tb.egg-info/PKG-INFO
+src/odds_conversion_tb.egg-info/SOURCES.txt
+src/odds_conversion_tb.egg-info/dependency_links.txt
+src/odds_conversion_tb.egg-info/top_level.txt
+src/odds_conversions/__init__.py
+src/odds_conversions/american_odds.py
+src/odds_conversions/decimal_odds.py
+src/odds_conversions/fractional_odds.py
+src/odds_conversions/odds_conversion.py
+src/odds_conversions/pot_odds.py

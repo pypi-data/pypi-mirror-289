@@ -1,0 +1,54 @@
+# Odds Conversion Package
+
+This is a simple package which offers data types for odds and functions to convert between odds data type. 
+
+# Importing
+
+You can import the odds conversion package by:
+``` 
+from odds_conversion import odds_conversion
+from odds_conversion import american_odds
+from odds_conversion import fractional_odds
+from odds_conversion import decimal_odds
+```
+
+# Using Odds Conversion
+
+You can use the Odds Conversion command using:
+```
+a = american_odds.AmericanOdds(float(200))
+f = fractional_odds.FractionalOdds(float(2))
+d = decimal_odds.DecimalOdds(float(3))
+
+ai = convert_american_odds_to_implied_odds(a)
+fi = convert_fractional_odds_to_implied_odds(f)
+di = convert_decimal_odds_to_implied_odds(d)
+
+print(ai, convert_implied_odds_to_american_odds(ai))
+print(fi, convert_implied_odds_to_fractional_odds(fi))
+print(di, convert_implied_odds_to_decimal_odds(di))
+```
+which will output
+```
+0.3333333333333333 AmericanOdds(odd=200.00000000000003)
+0.3333333333333333 FractionalOdds(odd=2.0000000000000004)
+0.3333333333333333 DecimalOdds(odd=3.0)
+```
+
+# Using Pot Odds
+
+You can use the following commands to calculate pot odds using:
+```
+pot = float(10000)
+call = float(3000)
+
+odds = .5
+
+print(implied_odds_to_call(pot, call))
+print(bet_for_implied_odds(pot, odds))
+```
+which will output
+```
+0.23076923076923078
+10000.0
+```
