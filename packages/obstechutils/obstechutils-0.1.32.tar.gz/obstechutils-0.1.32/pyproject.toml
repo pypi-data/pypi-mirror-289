@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obstechutils"
+description = "Utilities for obstech"
+readme = "README.md"
+authors = [
+  { name="Régis Lachaume", email="regis.lachaume@gmail.com" },
+]
+requires-python = ">=3.9"
+dynamic=["dependencies", "classifiers", "version"]
+
+[project.scripts]
+list_roofs = "obstechutils.roof:list_roofs"
+mqtt_console = "obstechutils.mqtt:console_script"
+report_device_status = "obstechutils.device_status:main_script"
+report_pc_status = "obstechutils.device_status:list_computers"
+monitor_nm150 = "obstechutils.sensors.nm150:monitor_nm150"
+monitor_aag1 = "obstechutils.sensors.aag1:monitor_aag1"
+monitor_aag2 = "obstechutils.sensors.aag2:monitor_aag2"
+update_weather_sql_table = "obstechutils.db.weather:update_weather_sql_table"
+update_dimm_sql_table = "obstechutils.db.weather:update_dimm_sql_table"
+update_ninox_sql_table = "obstechutils.db.weather:update_ninox_sql_table"
+update_solar_sql_table = "obstechutils.db.weather:update_solar_sql_table"
+update_weather_sql_rtable = "obstechutils.db.weather:update_weather_sql_rtable"
+update_dimm_sql_rtable = "obstechutils.db.weather:update_dimm_sql_rtable"
+update_ninox_sql_rtable = "obstechutils.db.weather:update_ninox_sql_rtable"
+update_solar_sql_rtable = "obstechutils.db.weather:update_solar_sql_rtable"
+update_weather_test = "obstechutils.db.weather:test_update"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+classifiers = {file = ["classifiers.txt"]}
+version = {attr = "obstechutils.__version__"}
