@@ -1,0 +1,191 @@
+Metadata-Version: 2.1
+Name: sqlalchemy-snowpark
+Version: 0.4
+Summary: A package for database session management using sqlalchemy and snowpark libraries
+Home-page: https://ChandaniStepFunction@bitbucket.org/ChandaniStepFunction/sqlalchemy-snowpark.git
+Author: Chandani Kumari
+Author-email: chandani@stepfunction.ai
+License: UNKNOWN
+Description: # Sqlalchemy - Snowpark Connector
+        A Python module to establish connections to various data warehouses like Snowflake, Redshift, and PostgreSQL using sqlalchemy orm module or using snowpark python connector to snowflake.
+        
+        # Overview
+        
+        This `README.md` file provides comprehensive instructions for installing, setting up, and using the `Sqlalchemy-Snowpark` module, ensuring users can easily establish connections to their data warehouses and use inbuilt methods to query the datawarehouse and manage results.
+        
+        ---
+        
+        ## Installation
+        
+        You can install the module using pip:
+        
+        ```bash
+        pip install sqlalchemy-snowpark
+        ```
+        
+        # Sqlalchemy - Snowpark
+        
+        ## Snowflake
+        This Python module helps establish a database session to Snowflake using SQLAlchemy or using Snowpark python connector. It supports creating connections via a provided connection string or by using environment variables for credentials.
+        
+        Requires `DB_SOURCE`, `USERNAME`, `HOST`, `PASSWORD`, `ROLE`, `WAREHOUSE`, and `DATABASE`.
+        
+        If you want to create a session using SQLAlchemy then set the following environment variables
+        ```bash
+        export DB_ENGINE=sqlalchemy
+        ```
+        
+        and if you want to create a Snowpark session the set the following environment variables
+        ```bash
+        export DB_ENGINE=snowpark
+        ```
+        
+        ### 1. Create DB Session Using a Connection String
+        If you have a connection string, you can create a session like this:
+        
+        ```python
+        from sqlalchemy_snowpark.connection import get_db_session
+        
+        connection_string = "snowflake://user:password@account/database/schema?warehouse=warehouse&role=role"
+        session = get_db_session(snowflake_creds)
+        session.close()
+        ```
+        
+        ### 2. Create DB Session Using environment variables
+        Environment Variables
+        The following environment variables are required if no connection string is provided:
+        
+            `user`
+            `password`
+            `account`
+            `database`
+            `schema`
+            `warehouse`
+            `role`
+        
+        ```python
+        from sqlalchemy_snowpark.connection import get_db_session
+        
+        session = get_db_session()
+        ```
+        
+        ### Whitelisting
+        If network policy is activated in the snowflake account and incoming ips are not allowed or restricted then need to whitelist our StepFunction IP : 
+        
+        Please follow the below steps for the same :
+        1. Navigate to the Admin->Security section by clicking on "Admin" in the left navigation panel
+        2. Switch to Network Rules. Create a new rule by clicking on + Network Rule button
+           a. Name: SFN_RULE
+           b. Choose Type: IPv4 and Mode: Ingress
+           c. Under Identifiers -> Add IP 18.210.244.167
+        3. Switch to Network Policy. Create a new policy by clicking on + Network Policy button
+           a. Name: SFN_POLICY
+           b. Under Allowed Section & Under Select Rule Dropdown select SFN_RULE then click on Create button to create the policy.
+           c. Click on the dotted icon(...) at the end of the policy name and click Activate to start the policy. 
+        4.   Navigate back to the worksheet and replace placeholder <IP> with the StepFunctions public IP address.
+        	
+             ALTER NETWORK POLICY SFN_POLICY SET ALLOWED_IP_LIST=('18.210.244.167')
+        
+        ## Redshift
+        
+        Requires `USERNAME`, `HOST`, `PASSWORD`, and `DATABASE`.
+        
+        ### 1. Create DB Session Using a Connection String
+        
+        ```python
+        ### Direct Connection (Redshift in Public Subnet)
+        from sqlalchemy_snowpark.connector import get_db_session
+        from sqlalchemy.engine.url import URL
+        
+        # Define the connection parameters
+        redshift_connection_string = URL.create(
+            drivername="redshift+redshift_connector",  # The driver to use
+            username="your_username",  # Your Redshift username
+            password="your_password",  # Your Redshift password
+            host="your_redshift_cluster_host",  # Redshift cluster endpoint
+            port=5439,  # Default port for Redshift
+            database="your_database_name",  # The name of your Redshift database
+            query={"sslmode": "verify-ca"}  # Optional: to ensure the connection is encrypted
+        )
+        
+        session = get_db_session(redshift_connection_string)
+        session.close()
+        ```
+        ### 2. Create DB Session Using Environment Variables
+        Environment Variables
+        The following environment variables are required if no connection string is provided:
+        
+            `user`
+            `password`
+            `host`
+            `database`
+            
+        
+        ```python
+        from sqlalchemy_snowpark.connection import get_db_session
+        
+        session = get_db_session()
+        ```
+        
+        
+        ## PostgreSQL
+        
+        Requires `USERNAME`, `HOST`, `PASSWORD`, and `DATABASE`.
+        
+        ### 1. Create DB Session Using a Connection String
+        
+        ```python
+        from sqlalchemy_snowpark.connection import get_db_session
+        
+        postgresql_connection_string = f"postgresql+psycopg2://{username}:{password}@{host}:5432/{database}"
+        session = get_session(postgresql_connection_string)
+        session.close()
+        ```
+        
+        ### 2. Create DB Session Using Environment Variables
+        Environment Variables
+        The following environment variables are required if no connection string is provided:
+        
+            `user`
+            `password`
+            `database`
+            `host`
+        
+        ```python
+        from sqlalchemy_snowpark.connection import get_db_session
+        
+        session = get_db_session()
+        ```
+        
+        ---
+        
+        # Handling Connection
+        
+        Once the session is established, you can interact with your data warehouse using most of the SQLAlchemy's ORM capabilities.
+        
+        ---
+        
+        # Troubleshooting
+        
+        ## Common Issues
+        
+        - Invalid Credentials: Ensure that the USERNAME and PASSWORD are correct.
+        - Host Unreachable: Verify the HOST address and network connectivity.
+        - Unsupported Data Source: Check if the DB_SOURCE is among the supported ones (snowflake, redshift, postgresql).
+        
+        ## Error Handling
+        
+        The `get_session` method prints exceptions to help identify issues during the connection process. Ensure that the provided connection details are accurate and the data warehouse is accessible.
+        
+        ---
+        
+        # Conclusion
+        
+        This module simplifies the process of connecting to various data warehouses. Follow the setup instructions carefully, and refer to the examples for guidance on using the `get_session` function. For further assistance, check the documentation or raise an issue on the project's GitHub repository.
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
