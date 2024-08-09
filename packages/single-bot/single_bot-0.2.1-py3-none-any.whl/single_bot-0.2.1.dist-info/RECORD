@@ -1,0 +1,12 @@
+single_bot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+single_bot/bot.py,sha256=vcBz405xbkdzTMTd5k81FoCSX2u45cGm_752nP-7dqE,1735
+single_bot/bot_factory.py,sha256=q1__XP4cdp9W57T4GupjIsUajhgkNBGRazMh2fP_uos,1165
+single_bot/data_types.py,sha256=BytgzjQtpY4UROvsWOGHgH5tjAoMd57bdKcVGSSPVjs,910
+single_bot/messengers.py,sha256=xWgoRsNxj_s-sNxHx44O1IL7y36NqLrDc1ywDGsX3pE,4605
+single_bot/user_id_storage.py,sha256=6er1fKbEvBwpQd6PKCISNLS3XJsfq20yl0kz8l3vRs4,2086
+single_bot/user_state.py,sha256=HrbrfOvco9c-6WMIsybS6vGu_X5JTJL8OZmwCTr1qYQ,6173
+single_bot/user_state_storage.py,sha256=b4nvBy5BWf-itqlj-MA1hADB1iDTTWsh1N3Tt6fV-v8,716
+single_bot-0.2.1.dist-info/METADATA,sha256=7ElCAaiBIt0Loy1GCO1rUeXgZECeGPG5NSBqQCQ6-BA,4481
+single_bot-0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+single_bot-0.2.1.dist-info/top_level.txt,sha256=VXGDok8P-9bTRg6GwthSEdqi931xrpezxWw_sRXOdBI,11
+single_bot-0.2.1.dist-info/RECORD,,
