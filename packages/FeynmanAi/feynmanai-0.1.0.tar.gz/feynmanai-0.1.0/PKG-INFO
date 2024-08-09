@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: FeynmanAi
+Version: 0.1.0
+Summary: A command-line tool for using RAG model on Local documents
+Home-page: https://github.com/oscar066/FeynmanAI.git
+Author: Oscar Karuga
+Author-email: oscarkaruga1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: haystack-ai
+Requires-Dist: datasets>=2.6.1
+Requires-Dist: sentence-transformers>=2.2.0
+Requires-Dist: python-dotenv
+Requires-Dist: pypdf
+Requires-Dist: python-docx
+Requires-Dist: python-pptx
+Requires-Dist: colorlog
+Requires-Dist: colorama
