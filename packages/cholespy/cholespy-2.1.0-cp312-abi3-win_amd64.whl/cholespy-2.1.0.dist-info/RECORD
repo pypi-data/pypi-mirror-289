@@ -1,0 +1,13 @@
+cholespy/__init__.py,sha256=FRgUS6VF0ac4kchC94wzPxeL-kZSSw9MI0g0sa-43Ok,98
+cholespy/_cholespy_core.cp312-win_amd64.pyd,sha256=RhZO2oRtPf7e9sJINHBCinv4h968hjw6MmlYHJk4fJY,590848
+cholespy/libblas.dll,sha256=Hf5uK2ozDkzlEKiu7jNDFZBxZ6mxnMmTss1b0yrl1O8,833648
+cholespy/libgcc_s_sjlj-1.dll,sha256=9OZCeB9nuNFMDwjCdOhFw6aTqFcVASx5YV_8EL9qCtI,81920
+cholespy/libgfortran-3.dll,sha256=n6vzQUxto5c3eUXkXyfPDGwTr3chtPhuunv3owsr5vc,7337949
+cholespy/liblapack.dll,sha256=mBAsABy_zkX_n6OsCuisDLzEX_lBlg89BTSFOo6Cafg,8273163
+cholespy/libquadmath-0.dll,sha256=Cq3bPUWi4_Q11IjMTfi5qJtGznDagMLPUeOY4Gnf-kI,1310056
+include/metis.h,sha256=tHAI2_xm_w8UJILoKXsJxw8yVt76_gIy2zDJPqGvMGo,12657
+lib/metis.lib,sha256=Wb3YeonTJxtA98SXvjOUrMq_F5DAYQUEKwlMlsMwD58,1348168
+cholespy-2.1.0.dist-info/METADATA,sha256=aSr3UD6IVwe44YtZmOg4HWwKk79hIUaeBspBMzqrPTw,5162
+cholespy-2.1.0.dist-info/WHEEL,sha256=QP42S4Cxo0telP75VHd_oztoDmOJY0Jer8Opa-fnass,105
+cholespy-2.1.0.dist-info/licenses/LICENSE,sha256=Kz4ybSR4my5gQ0aPTng6TkQ_zGC6tBS29JU4OUGNPos,1580
+cholespy-2.1.0.dist-info/RECORD,,
