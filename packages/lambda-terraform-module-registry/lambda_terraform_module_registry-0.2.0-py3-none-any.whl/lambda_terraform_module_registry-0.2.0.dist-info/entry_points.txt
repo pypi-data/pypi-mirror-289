@@ -1,0 +1,3 @@
+[console_scripts]
+make-kms-token=registry.cli.get_kms_token:main
+
