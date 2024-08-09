@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: InsightApps
+Version: 0.1.0
+Summary: A Django backend with an Angular frontend
+Home-page: https://github.com/yourusername/your-repo
+Author: Rajashekar
+Author-email: rajashekarreddypr24@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django
+
+# Analytical Application
+
+This is an open-source analytical application similar to Apache Superset.
+
+## Technology Stack
+
+- Backend: Django
+- Frontend: Angular
+- Containerization: Docker, Docker Compose
+
+## Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/analytics-app.git
+   cd analytics-app
