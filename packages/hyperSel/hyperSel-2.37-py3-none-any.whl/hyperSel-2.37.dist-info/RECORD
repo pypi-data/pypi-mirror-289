@@ -1,0 +1,17 @@
+hyperSel/__init__.py,sha256=zDr350exO14Ii8Pj3TXwPuRxIDrEjrg43CpjYABDqh4,19
+hyperSel/general_util.py,sha256=8Zizsfr_2rVHeJ9e2d1Jb2glYwiEuEyl9fYhJAI-pF8,3169
+hyperSel/log.py,sha256=2hcF6QdNKxqGNxB7_wwusRSYg78_F1dYAHOUMf8Ze2g,1412
+hyperSel/main.py,sha256=BGhZQAcHtWSi5yUjPhQgI1V4tMR9HXK1e__T2oYo984,35
+hyperSel/nodriver_utilities.py,sha256=sZqWy2C0cfSD-8hJf8c5xyeNiOiuW7ojZFVmVoCcIn0,1088
+hyperSel/playwright_utilites.py,sha256=sGeUhMnsZgmFu6XhBG7mMzHdnRsqRnXewKf0nXIIaOI,4119
+hyperSel/proxies_util.py,sha256=OdUA2qhSRIfxCsT0joiWS0IRelNH-H9EvaV0_TZIQBQ,9356
+hyperSel/request_utilities.py,sha256=QndqE8NkWGfBPLOjiQDi7StbQUiKjFLhF2h1d3U7K4E,797
+hyperSel/selenium_utilities.py,sha256=yP9o6QJO35U16A3DMVMpIQTM3isyeiyR3QpAZVCNFxE,9314
+hyperSel/soup_utilities.py,sha256=l92dIrmKxlR_nVyViQuhyciE8N-h7ZyKK8YHfmJsFZ8,4258
+hyperSel/spider_universal.py,sha256=ngHwNzz_QMC79tg9YkEM2_SIJynOhVXuc_3YPZbwFJs,2457
+hyperSel/spider_utilities.py,sha256=KIT85m_y5M7b9USr0cgxht-b1X8DPKlYHotMpTrIk-U,1880
+hyperSel/test_utilities.py,sha256=YO-xO0e6Tmg6m-fH8HTkbXFr_dG1-wOxiKyM-F_o4VU,2108
+hyperSel-2.37.dist-info/METADATA,sha256=4dnHmlsuvJbtitOVw7nmrA58C6bvDVaiUj0FkeGDyO0,291
+hyperSel-2.37.dist-info/WHEEL,sha256=Wyh-_nZ0DJYolHNn1_hMa4lM7uDedD_RGVwbmTjyItk,91
+hyperSel-2.37.dist-info/top_level.txt,sha256=hpRqix-rYhaiCw57CNiX8bqZxScSIrSQWa8iof-lPcI,9
+hyperSel-2.37.dist-info/RECORD,,
