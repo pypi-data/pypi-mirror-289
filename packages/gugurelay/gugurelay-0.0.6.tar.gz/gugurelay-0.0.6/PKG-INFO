@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: gugurelay
+Version: 0.0.6
+Summary: DESCRIPTION
+Author: wangzc
+Author-email: 
+Keywords: python,can
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-can
+Requires-Dist: python-can[canalystii]
+Requires-Dist: pywin32
+Requires-Dist: pywin32-ctypes
+
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+
+def main():
+    gugurelay = GuGuRelay()
+    # gugurelay.getCanDeviceList()
+    gugurelay.startCanDevice("canalystii", 0, 500000)
+
+    print(gugurelay.getCanDeviceList())
+
+    for i in range(15):
+        print(gugurelay.recvCanMessage("canalystii", 0, 1))
+
+
+    gugurelay.stopCanDevice("canalystii", 0)
+
+
+if __name__ == "__main__":
+    main()
