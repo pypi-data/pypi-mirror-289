@@ -1,0 +1,10 @@
+tokenized/__init__.py,sha256=tJqta5_QeBB-op-l0azKALu__1mLuxSyoAsm-eaYt4o,53
+tokenized/tokenizer.py,sha256=sSnLhjDG2dbMTQxHm76jYOzWQMovIogsv-5UI0o-nuI,1464
+tokenized/dist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokenized/dist/protected_functions.py,sha256=h1w5Hl4eacS_KgB9QCHfUcxySOZLfw-h3169POqX4H4,8185
+tokenized/dist/pytransform/__init__.py,sha256=wADzFDVqqkBm5PI3cWGH_mlwvMxnucLUxxlhjkgEe_I,13586
+tokenized/dist/pytransform/_pytransform.so,sha256=osQMxQNa4WTHCW-6TeyO6VG4GlIRJI47eHA1SZSRw-I,1198080
+tokenize_text-0.2.22.dist-info/METADATA,sha256=-duSUifp5TZiV1mOylkAxnIQp4VCoY4azJ1zC-mZnqY,732
+tokenize_text-0.2.22.dist-info/WHEEL,sha256=rWxmBtp7hEUqVLOnTaDOPpR-cZpCDkzhhcBce-Zyd5k,91
+tokenize_text-0.2.22.dist-info/top_level.txt,sha256=PMFkihAlPkzdlht20Uta-w5JggKbS7fGAa1ORHDJIpo,10
+tokenize_text-0.2.22.dist-info/RECORD,,
