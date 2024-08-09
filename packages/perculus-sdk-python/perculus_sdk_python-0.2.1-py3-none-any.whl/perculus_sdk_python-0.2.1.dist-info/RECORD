@@ -1,0 +1,13 @@
+perculus_sdk_python/__init__.py,sha256=kVaXncO8SmrJDaG-GYpL_8BBIl3IfPesGC5RKLRu_Kk,29
+perculus_sdk_python/auth.py,sha256=W2tpGMqV_aEjr7t5MLXgayZjB75DM-5Yi9QKy9U5CeU,1213
+perculus_sdk_python/client.py,sha256=yS9B5lmL1g1OyHWLSVTw7USHjOIbvl86mPDqElFmnIw,2410
+perculus_sdk_python/attendee/__init__.py,sha256=dgWr9Xh5zSPUiGcagALPR9yLHILYnSX93ZgQFlm_HO4,34
+perculus_sdk_python/attendee/client.py,sha256=2Uv8sQF8Ub8ZCfTtQwFC3Hn86IgQ3CEhe9uuNJTo6vU,2336
+perculus_sdk_python/session/__init__.py,sha256=DHBRVmP2yoIYj2KJTktiz8yQsM2n1r0RdKJ8X5ptJhg,33
+perculus_sdk_python/session/client.py,sha256=d7qfDIM24ucsmyY6y4pZuJIKMaT8d35rlX5lcsORtoA,1304
+perculus_sdk_python/user/__init__.py,sha256=0TKi6VQRJVrX9SyTYF644VqR39AxJpnpesLps8yZUMA,30
+perculus_sdk_python/user/client.py,sha256=mB0HWkPosQYNbwxvR3wWqHqzHwbgLqY-JI9fNVYEtoU,1284
+perculus_sdk_python-0.2.1.dist-info/METADATA,sha256=469Q6McmNUp7uKygP6bUeMD3Yvlt16nPR0E5F30RHPc,582
+perculus_sdk_python-0.2.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+perculus_sdk_python-0.2.1.dist-info/top_level.txt,sha256=DdAxKe7dr_bm_0FWRaLwWfkd8JElgC7RuVYoyfdym6I,20
+perculus_sdk_python-0.2.1.dist-info/RECORD,,
