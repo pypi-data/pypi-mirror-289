@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: funcrpn
+Version: 0.1.2
+Summary: functional rpn calculator
+Author-email: Elia Toselli <elia.toselli@outlook.it>
+Requires-Python: >= 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Project-URL: Home, https://funcrpn.sourceforge.io
+Project-URL: Issues, https://github.com/hilcon222/funcrpn/issues
+Project-URL: Repository, https://github.com/hilcon222/funcrpn
