@@ -1,0 +1,13 @@
+pandas
+xarray
+pyinstaller
+s3fs
+urllib3==1.26.15
+h5netcdf
+h5py
+
+[all]
+cmip6_aws[extra]
+
+[extra]
+pandas
