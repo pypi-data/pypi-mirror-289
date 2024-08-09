@@ -1,0 +1,9 @@
+README.md
+setup.py
+SAFT_model_implementation_package.egg-info/PKG-INFO
+SAFT_model_implementation_package.egg-info/SOURCES.txt
+SAFT_model_implementation_package.egg-info/dependency_links.txt
+SAFT_model_implementation_package.egg-info/entry_points.txt
+SAFT_model_implementation_package.egg-info/top_level.txt
+model_implementation_package/__init__.py
+model_implementation_package/project_setup.py
