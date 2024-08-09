@@ -1,0 +1,13 @@
+techx/__init__.py,sha256=aGoVaGA0B0t-ntsFYLJleSEB_LsVdnIoE9PjCsUDuZc,180
+techx/html_renderer.py,sha256=cvIWTEqsht9IoiWRfxvUEpIIYe7HLd-mRhbB6l27Wb4,1650
+techx/intermediate.py,sha256=__NGzuBbZtlNd75eHAEBGIOj8g5nj-jTE_-bnscZiNg,521
+techx/main.py,sha256=FaVnzwwwHEDuB18lAJtIwksbyjC5ulcNkcZAxANewxM,1193
+techx/parser.py,sha256=msX7loQ0MAXW42gs_GgviLgSTcH_8Dfq6JozeMygnMU,2783
+techx/pdf_renderer.py,sha256=a9YSBQCqbdO8dYCIq3EvgKnheOSPtOvTYWpnvEubJzA,1591
+techx/tokenizer.py,sha256=XMnhtq2g8x6Q-WAotqLZ4tcsetefnXy-PJGSOj728MI,992
+techx-0.1.dist-info/LICENSE,sha256=jYQxG_WovFko8uw_gpjMdsAEnKTWwBL5opZdQxZUYLM,1072
+techx-0.1.dist-info/METADATA,sha256=TeRWsecSBpvjyZpnysqO8U5ujnjCtgUaQNARHzwNDGQ,4897
+techx-0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+techx-0.1.dist-info/entry_points.txt,sha256=71vudrSomb2thLQ9qbvZ319OpKJ19BMMgK47R3IvSoQ,42
+techx-0.1.dist-info/top_level.txt,sha256=wFSiTRJBBlzHsghP8ch3A3SUOpnMDB_dEEN3uCVInV0,6
+techx-0.1.dist-info/RECORD,,
