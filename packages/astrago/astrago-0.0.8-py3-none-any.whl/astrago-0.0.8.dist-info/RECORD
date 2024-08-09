@@ -1,0 +1,14 @@
+astrago/__init__.py,sha256=7Xx_h-oIuX-hIfHYRA86zsUPSL_PCZed1229STSKe9w,220
+astrago/dataSender.py,sha256=28GDLNqEDs0KmGgH70VLnmXjnSCUq_Y6BfHYby37lB4,577
+astrago/tracking.py,sha256=fvUwNt50d6asLGGqHaANbzE9R8AdZe3iXfrfyHq-IFA,1616
+astrago/val.py,sha256=MIIUa6_jnwqBYcnQZbxLMZgZLujeGpfajVJKpbDbUns,230
+astrago/integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+astrago/integration/keras.py,sha256=MAuLWxAjiOOlDWIZHquxaCIK7qcQiI5FxS4E8l1v0QE,2117
+astrago/integration/pytorchLightning.py,sha256=Oq6uysMlCc39thVp49taLsy2cxv01LGbXEcng-5rdus,2477
+astrago/resource/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+astrago/resource/resourceCollector.py,sha256=ysvFb5J2YErxcqB9Yonqcx-0D9WQvtuL77kMEEqxm6M,433
+astrago/resource/resourceDTO.py,sha256=FkAI3WZaGHQG3QPNzQOp8bh1TnvQNTZG_mju2nDcM_g,147
+astrago-0.0.8.dist-info/METADATA,sha256=cAzqRkzhOvI4_Zh_BfEeMq0UIT0LFaOD00_TvPZlJKI,400
+astrago-0.0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+astrago-0.0.8.dist-info/top_level.txt,sha256=_IYtVtH8Hbvn3BSvBc7I_Tkxh-l6YlE4j2UYDw8rYNQ,8
+astrago-0.0.8.dist-info/RECORD,,
