@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+azrail/__init__.py
+azrail/azrail.py
+azrail.egg-info/PKG-INFO
+azrail.egg-info/SOURCES.txt
+azrail.egg-info/dependency_links.txt
+azrail.egg-info/top_level.txt
