@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: sasacommon
+Version: 0.1.1
+Summary: Common sasa library for.
+Home-page: https://gitlab.com:dev-team-sasa/sasa_common.git
+Author: http://www.sasabz.it
+Author-email: support@sasabz.it
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+# sasa_common
+
+## Install
+
+Local installation.
+
