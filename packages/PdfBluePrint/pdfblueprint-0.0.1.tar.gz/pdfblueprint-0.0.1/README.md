@@ -1,0 +1,31 @@
+# Beauty your PDF Blue Print effects. Erase (Blac)K Color from your  CMYK.
+
+## Source
+
+  - `PdfBluePrint.py`:  Excecute all 1-4 functions together and show the working status. Include: 
+  - `1-pdf2img.py`: split your PDF files into images. 1st step.
+  - `2-black2final.py`:  erase the K color from images. 2nd step.
+  - `3-img2pdf.py`: combine the images into PDF format. 3rd step.
+  - `4-dir_clr.py`: clean the temporary files in working folder. 4th step.
+You can comments any step as you need.
+ 
+###### Output
+
+- A pdf file with the name YYYY-MM-DD-hh-mm-ss.pdf; the time is from local computer, the processing end time point.
+
+## Usage
+
+```bash
+# Clone project
+$ git clone https://github.com/jomoly/pdfblueprint.git
+$ cd PdfBluePrint/
+
+# Install dependencies
+$ python3 setup.py install
+
+# Run default decipherment (Caesar cipher with hint, alphabet size = 5, hint always at the first place)
+$ python3 PdfBluePrint.py
+	No More parameters needed.
+```
+This work is under LGPL agreement.
+Enjoy.Your feedback is welcomed.

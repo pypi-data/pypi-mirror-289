@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+PdfBluePrint/1-pdf2img.py
+PdfBluePrint/2-black2final.py
+PdfBluePrint/3-img2pdf.py
+PdfBluePrint/4-dir_clr.py
+PdfBluePrint/PdfBluePrint.py
+PdfBluePrint/__init__.py
+PdfBluePrint.egg-info/PKG-INFO
+PdfBluePrint.egg-info/SOURCES.txt
+PdfBluePrint.egg-info/dependency_links.txt
+PdfBluePrint.egg-info/entry_points.txt
+PdfBluePrint.egg-info/requires.txt
+PdfBluePrint.egg-info/top_level.txt

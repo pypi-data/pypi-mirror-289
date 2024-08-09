@@ -1,0 +1,2 @@
+[console_scripts]
+pdfblueprint = PdfBluePrint.PdfBluePrint:execute_all
