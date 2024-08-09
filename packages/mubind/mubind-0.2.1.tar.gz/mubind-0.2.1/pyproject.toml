@@ -1,0 +1,100 @@
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = [
+    "flit_core >=3.4,<4",
+    "importlib_metadata>=0.7; python_version < '3.8'",
+]
+
+
+[project]
+name = "mubind"
+description = "ML for biomolecular binding"
+authors = [
+    {name = "Ignacio Ibarra"},
+]
+maintainers = [
+    {name = "Ignacio Ibarra", email = "ignacio.ibarra@helmholtz-muenchen.de"},
+    {name = "Johanna Schneeberger", email = "johanna.schneeberger@tum.de"},
+]
+
+urls.Documentation = "https://mubind.readthedocs.io/"
+urls.Source = "https://github.com/theislab/mubind"
+urls.Home-page = "https://github.com/theislab/mubind"
+version = "0.2.1"
+requires-python = ">=3.9" # for GPU-rapids
+license = {file = "LICENSE"}
+readme = "README.md"
+dependencies = ["seaborn", "scikit-learn", "pandas", "unidecode", "matplotlib", "scipy", "numpy>=1.22", "torch",
+                "logomaker", "biopython", "numba", "pytest", "pytest-cov", "openpyxl", "tqdm", "anndata"]
+
+[project.optional-dependencies]
+dev = [
+    # dev version generation
+    "bump2version",
+]
+doc = [
+    "ipython",
+    "ipywidgets>=8.0.0",
+    "sphinx>=5.3",
+    "sphinx-autodoc-annotation",
+    "sphinx-autodoc-typehints>=1.10.3",
+    "sphinx-gallery",
+    "sphinx_rtd_theme",
+    "sphinxcontrib-bibtex>=2.3.0",
+    "sphinxcontrib-spelling>=7.6.2",
+    "nbsphinx>=0.8.1",
+    "myst-nb>=0.17.1",
+    "sphinx_copybutton>=0.5.0",
+    "scanpydoc",
+]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.coverage.run]
+source = ["mubind"]
+omit = [
+    "**/test_*.py",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+xfail_strict = true
+addopts = [
+    "-Werror",  # if 3rd party libs raise DeprecationWarnings, just use filterwarnings below
+    "--import-mode=importlib",  # allow using test files with same name
+]
+filterwarnings = [
+    "ignore:.*U.*mode is deprecated:DeprecationWarning",
+]
+
+[tool.isort]
+include_trailing_comma = true
+multi_line_output = 3
+profile = "black"
+skip_glob = ["docs/*"]
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''
+
+[tool.jupytext]
+formats = "ipynb,md"
