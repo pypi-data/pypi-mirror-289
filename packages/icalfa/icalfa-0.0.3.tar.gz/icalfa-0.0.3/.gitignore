@@ -1,0 +1,18 @@
+part3-venv/
+**.safetensors
+model/
+ollama/
+llama3/
+llama3_ft/
+**.log
+
+results/
+logs/
+
+nl2sh/
+InterCode-ALFA-Data/
+
+**.png
+**.jpg
+# git rm --cached chart1.png chart3.png
+**.csv
