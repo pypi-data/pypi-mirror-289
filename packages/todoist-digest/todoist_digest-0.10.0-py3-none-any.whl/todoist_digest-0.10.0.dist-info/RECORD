@@ -1,0 +1,10 @@
+todoist_digest/__init__.py,sha256=KpQPBsQGRWGEOg2hqE6wPu_wcwXkAE_Fa1Og5cTC5w4,15079
+todoist_digest/email.py,sha256=7BW_Qjvidnyzd1X_I20ryOeYZJSjhnajzhzBsbhAFHk,2252
+todoist_digest/patch.py,sha256=nFhEk6kYeoN7zGTyyI44xSRJkVQIZog14WwmmwL31Mw,1411
+todoist_digest/templates.py,sha256=vhIe782HXZcrpuj55qnIzt1mzfxtKqvGg3hoD5a7fuY,3106
+todoist_digest/todoist.py,sha256=u_zc5sLURvuDkXpXDHtcDiC6AjDR2nVvMyDCp53nzKQ,1661
+todoist_digest/util.py,sha256=Vk5gkn9gHlt4wyKDar9HnhNSuf7y_NJnAu7Bj3Zzf_I,2000
+todoist_digest-0.10.0.dist-info/METADATA,sha256=WO1ejNUZ3VBmv3fdanCQuXMZgw1x-Rkkm319K0GxegE,4724
+todoist_digest-0.10.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+todoist_digest-0.10.0.dist-info/entry_points.txt,sha256=OMRh0VQSe1P5xryw83Uc2Ty42q-SUc5UyJyRmz8Z04Y,53
+todoist_digest-0.10.0.dist-info/RECORD,,
