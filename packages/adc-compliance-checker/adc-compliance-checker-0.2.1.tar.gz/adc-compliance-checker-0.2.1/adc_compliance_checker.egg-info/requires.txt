@@ -1,0 +1,4 @@
+h5netcdf
+netCDF4
+pathlib
+xarray
