@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mcar-analysis
+Version: 0.1
+Summary: A library for MCAR analysis with additional statistical tests
+Home-page: https://github.com/Jahanzeb-git/mcar_analysis
+Author: Jahanzeb Ahmed
+Author-email: jahanzebahmed.mail@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: scipy
+Requires-Dist: pyampute
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+
