@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: zetta-py-client
+Version: 0.0.19
+Summary: zetta python client for AI network
+Author: ZettaBlock Labs
+Author-email: support@zettablock.com
+Project-URL: Homepage, https://zettablock.com
+Description-Content-Type: text/markdown
+Requires-Dist: zetta (==0.0.19)
+
