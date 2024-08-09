@@ -1,0 +1,6 @@
+setup.py
+hr_commons.egg-info/PKG-INFO
+hr_commons.egg-info/SOURCES.txt
+hr_commons.egg-info/dependency_links.txt
+hr_commons.egg-info/top_level.txt
+hrcommons/__init__.py
