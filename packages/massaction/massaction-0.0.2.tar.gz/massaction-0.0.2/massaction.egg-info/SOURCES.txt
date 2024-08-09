@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+massaction/__init__.py
+massaction/model.py
+massaction.egg-info/PKG-INFO
+massaction.egg-info/SOURCES.txt
+massaction.egg-info/dependency_links.txt
+massaction.egg-info/requires.txt
+massaction.egg-info/top_level.txt
+tests/test_model.py
