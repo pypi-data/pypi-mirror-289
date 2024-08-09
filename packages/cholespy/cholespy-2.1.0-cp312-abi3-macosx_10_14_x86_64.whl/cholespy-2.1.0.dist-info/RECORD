@@ -1,0 +1,14 @@
+bin/ndmetis,sha256=LzPxhMWmniTtZdHOS9_kRhYFHrvQR19e3mNvJyB_b3o,341768
+bin/cmpfillin,sha256=nkjBthI0R-iVAqqOUbwcoLdbS1Sqo0U3ZQQXuYQ-7_g,162856
+bin/m2gmetis,sha256=7_RJLRe5JYXVAsBH7iUvseZrG3-_3sdkpTlYGqFWQnw,172264
+bin/mpmetis,sha256=CcO9P4UCW5z3VR6f34sX42U8FGEU9OaNbfs1pN3fpq8,341952
+bin/graphchk,sha256=nnh8kGT4HSkljwj_yuRqDOoKw6oV8ioS9GpWXmYVaKM,163000
+bin/gpmetis,sha256=aUyXMkHXMtT_2MOMZ44FLCDio0akZFPR3EVan1hiLYg,337584
+include/metis.h,sha256=tO2a7UpwVs3xbaexMtNFnjBR1HZqkDbkPNYMWQIuIVc,12271
+cholespy-2.1.0.dist-info/RECORD,,
+cholespy-2.1.0.dist-info/WHEEL,sha256=l61etiZN6N7cCdjzWLYQWfMgeN0rQRMl4uLSkAn2C_w,115
+cholespy-2.1.0.dist-info/METADATA,sha256=aSr3UD6IVwe44YtZmOg4HWwKk79hIUaeBspBMzqrPTw,5162
+cholespy-2.1.0.dist-info/licenses/LICENSE,sha256=LY6hRlGrkILDvWVQKRymVXSjHzri9yNG5mqazEDeyUs,1551
+cholespy/_cholespy_core.cpython-312-darwin.so,sha256=dCA5DqlXKvku36ZrD3hcwSUlF8FZbz-TCV4GYS2iztc,749376
+cholespy/__init__.py,sha256=FTqXeBNJRzTsT4g7KBSaJWyignrTeb7fakyyJJKH4pY,95
+lib/libmetis.a,sha256=Msds-5HHl2IQ1mU5dqxvvPjOL0taHqoF70MTc39ayc0,632984
