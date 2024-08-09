@@ -1,0 +1,10 @@
+stif/__init__.py,sha256=6jDc_ehr5GicdNzZVuJ8oIhdUKYXBkO0WI8AlBSkVvI,103
+stif/data.py,sha256=giIcWbovV_L4mAIt4A6arDn64_yZNn0LtNPFMTtq-1Q,7019
+stif/predictor.py,sha256=g1saCO211DBiN0aRB4GvbpcCmJUPdiDOWN56XJPirCo,44891
+stif/utils.py,sha256=p_pr06SIEtHDHAC2Pb-gaw1AK91hPLBV09mKFSqso0M,7425
+stif/variogram_models.py,sha256=ZhBtKW3wlhvXL7OfLM0Il1NPQAfop_5lsjb6WawH26g,10541
+stif-1.0.1.dist-info/LICENSE,sha256=J5Iet_1AvDfpNb94nMGm6hiiTWhABlQKlfm9_xmxDyk,1063
+stif-1.0.1.dist-info/METADATA,sha256=_bmj5hxdivBvV1eDZEXc1joooYf3fn-aJysD4wAdQyA,8140
+stif-1.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+stif-1.0.1.dist-info/top_level.txt,sha256=bc4gGXotgpJlLfY9nqbwdHASThwCqyQvBE-4vglkwUQ,5
+stif-1.0.1.dist-info/RECORD,,
