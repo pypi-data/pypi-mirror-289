@@ -1,0 +1,2 @@
+[console_scripts]
+extract_moodle = extract_moodle.main:wrapper
