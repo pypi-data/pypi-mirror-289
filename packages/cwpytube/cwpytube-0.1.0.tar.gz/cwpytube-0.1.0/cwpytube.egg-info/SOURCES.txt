@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+cwPytube/__init__.py
+cwPytube/module1.py
+cwpytube.egg-info/PKG-INFO
+cwpytube.egg-info/SOURCES.txt
+cwpytube.egg-info/dependency_links.txt
+cwpytube.egg-info/requires.txt
+cwpytube.egg-info/top_level.txt
+tests/__init__.py
+tests/test_module1.py
