@@ -1,0 +1,9 @@
+opentelemetry/instrumentation/aliyun_ons_http/__init__.py,sha256=JRo-NXLwRtAzdCsOk3IS3SgBItykY8Xki5PQh-FVg7w,5753
+opentelemetry/instrumentation/aliyun_ons_http/package.py,sha256=Xo-ththeLsQ_h_6rNrWJXViR-9b8V4K3U7y2auz1bt8,46
+opentelemetry/instrumentation/aliyun_ons_http/version.py,sha256=s-z_I27a-y_Lcf9JxqWcje94VbFBmdM9GgGlpDQUSK4,23
+opentelemetry_instrumentation_aliyun_ons_http-0.47b0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+opentelemetry_instrumentation_aliyun_ons_http-0.47b0.dist-info/METADATA,sha256=mh7trbibHXJgIAMNkpwIDTSzypiImcc-8FHZsPFrZR8,2084
+opentelemetry_instrumentation_aliyun_ons_http-0.47b0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+opentelemetry_instrumentation_aliyun_ons_http-0.47b0.dist-info/entry_points.txt,sha256=Hv3h8SQCWmYqjaHcWEG-pW2ub-qJAWZYk5wZeHRvnwQ,119
+opentelemetry_instrumentation_aliyun_ons_http-0.47b0.dist-info/top_level.txt,sha256=5p97iTMneNm1LAKDalzEVpYhvPZsaqJZzdLuD_upSaQ,14
+opentelemetry_instrumentation_aliyun_ons_http-0.47b0.dist-info/RECORD,,
