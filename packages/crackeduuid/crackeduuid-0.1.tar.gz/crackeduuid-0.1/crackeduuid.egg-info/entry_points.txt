@@ -1,0 +1,2 @@
+[console_scripts]
+crackeduuid = mcuuid.cli:main
