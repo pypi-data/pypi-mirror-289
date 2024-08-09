@@ -1,0 +1,2 @@
+[console_scripts]
+sbcli-dm-alsh = simplyblock_cli.cli:main
