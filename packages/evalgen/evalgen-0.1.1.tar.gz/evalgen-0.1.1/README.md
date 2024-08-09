@@ -1,0 +1,86 @@
+# EvalGen
+
+EvalGen is a Python package designed to generate evaluation datasets from various sources. It includes modules for database access, specification generation, and integration with OpenAI's language models.
+
+## Features
+- Connect to databases using environment variables
+- Navigate tables and columns interactively
+- Generate specifications and transformation code using OpenAI
+- Apply specifications to transform data
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/evalgen.git
+   cd evalgen
+
+## Execution
+```bash
+$ evalgen
+Usage: evalgen [OPTIONS] COMMAND [ARGS]...
+
+  EvalGen CLI: A command-line interface for generating and applying data
+  transformation specifications.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  apply-spec     Apply a specification to transform data.
+  generate-spec  Generate a specification by interacting with the user to..
+```
+## Example
+
+First generate the code snippet for transformation specification and store it in `spec.py`
+
+```
+$ evalgen generate-spec --loader-param .../data.csv
+Available columns:
+-------  -------  ------------------------------------------------------------------------
+dt       object   ['2024-06-01 06:33:18.', '2024-06-01 07:13:22.', '2024-06-02 03:01:08.']
+xid      object   ['XL000093954855', 'XY000093954855', 'MY000093954855']
+status   object   ['R2', 'D2']
+source   object   ['alpha', 'beta', 'theta']
+content  object   ['After removing used ', 'End connection', '[Alpha] St']
+-------  -------  ------------------------------------------------------------------------
+Enter comma-separated column names to include [dt,xid,status,source,content]: source, content
+Describe the transformation you want to apply
+select rows that have transaction mentioned in them. Select both the source and content columns
+
+Generated Code Snippet:
+
+from evalgen import Specification
+
+class GeneratedSpecification(Specification):
+
+    def transform(self, df):
+        transformed_df = df[df['content'].str.contains('transaction')][['source', 'content']]
+        return transformed_df
+
+```
+
+Now apply the specific 
+
+```
+$ evalgen apply-spec  --spec-class spec --loader-param .../data.csv
+{"source":"alpha","content":"Transaction to Chile : amount 1000 "}
+{"source":"alpha","content":"checking the route availability"}
+...
+```
+
+## Setup
+
+Set up environment:
+
+1. Create a .env file in the project root
+   a. Add DB_URL=your_database_url_here to the file
+   b. Add OPENAI_API_KEY=your_openai_api_key_here to the file
+b. evalgen.yaml in the local directory 
+    ```yaml
+    module_paths:
+      - /path/to/your/modules
+      - /another/path/to/modules
+    ```
+    
+    These modifications include the new functionality for loading subclasses of `Specification` and generating a sample YAML configuration.
+    
