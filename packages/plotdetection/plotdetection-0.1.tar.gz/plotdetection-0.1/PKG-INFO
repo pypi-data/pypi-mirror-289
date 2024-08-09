@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: plotdetection
+Version: 0.1
+Summary: A library for real-time data visualization on a polar plot.
+Home-page: https://github.com/anvai0304/plotdetection
+Author: Anvai Shrivastava
+Author-email: anvaishrivastava@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# plotdetection
+
+`plotdetection` is a Python library for visualizing real-time data on a polar plot.
+
+## Installation
+
+Clone the repository and install the library:
+
+```bash
+pip install .

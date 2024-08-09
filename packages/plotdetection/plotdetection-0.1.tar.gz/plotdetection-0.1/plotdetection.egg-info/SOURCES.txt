@@ -1,0 +1,9 @@
+README.md
+setup.py
+plotdetection/__init__.py
+plotdetection/visualization.py
+plotdetection.egg-info/PKG-INFO
+plotdetection.egg-info/SOURCES.txt
+plotdetection.egg-info/dependency_links.txt
+plotdetection.egg-info/requires.txt
+plotdetection.egg-info/top_level.txt
