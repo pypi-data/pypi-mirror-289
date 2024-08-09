@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: jp2curvtest
+Version: 0.0.1
+Summary: A module to validate jp2images
+Author-email: Kim Pham <kimpham54@gmail.com>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# jp2curvtest
+
+This is a simple example module.
+
+`python3 -m build`
+`python3 -m twine upload --repository testpypi dist/*`
+`python3 -m twine upload --repository pypi dist/*`
+
+## Installation
+
+```bash
+pip install jp2curvtest
