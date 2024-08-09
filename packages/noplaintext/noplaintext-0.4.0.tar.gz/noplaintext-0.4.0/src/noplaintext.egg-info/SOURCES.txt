@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/noplaintext/__init__.py
+src/noplaintext/crypto_utils.py
+src/noplaintext.egg-info/PKG-INFO
+src/noplaintext.egg-info/SOURCES.txt
+src/noplaintext.egg-info/dependency_links.txt
+src/noplaintext.egg-info/requires.txt
+src/noplaintext.egg-info/top_level.txt
+src/noplaintext/gui_app/__init__.py
+src/noplaintext/gui_app/gui_app.py
+tests/test_crypto_utils.py
