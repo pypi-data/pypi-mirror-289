@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gmap2baidu"
+dynamic = [
+  "version"
+]
+description = "Wrapper for prcoords library to convert Google / Bing Maps / Sat imagery coordinates in decimal degrees (WGS-84 or GCJ-02) to Baidu Map (BD-09) or other chinese maps."
+authors = [
+  { name = "balestek"},
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["google-maps", "baidu-map", "google", "baidu", "wsg-84", "bd-09", "GCJ-02", "wsg84", "bd09", "gcj02", "googlemaps", "baidumap", "prcoords", "qqmap", "amap", "qq-map", "amap.com", "python", "pypi", "pipx"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+    "Environment :: Console"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "prcoords",
+    "colorama",
+    "easygoogletranslate",
+    "requests"
+]
+
+[tool.hatch.version]
+path = "gmap2baidu/__about__.py"
+
+[project.scripts]
+gmap2baidu  = "gmap2baidu.gmap2baidu:main"
+
+[project.urls]
+"Homepage" = "https://github.com/balestek/gmap2baidu"
+"Bug Tracker" = "https://github.com/balestek/gmap2baidu/issues"
