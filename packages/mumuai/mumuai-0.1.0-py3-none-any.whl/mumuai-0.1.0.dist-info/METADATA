@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mumuai
+Version: 0.1.0
+Summary: A small example package
+Home-page: https://github.com/dltdnfrk/psh
+Author: Mumu Hong
+Author-email: mumuai@goatfarm.ai
+License: MIT
+Keywords: mumuai
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Office/Business :: Scheduling
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+외부환경 데이터와 온실제어데이터를 활용한 온실 내부환경 데이터 예측 모델 제작
