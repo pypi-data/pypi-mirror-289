@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README-CN.md
+README.md
+setup.cfg
+setup.py
+alibabacloud_retailadvqa20230417/__init__.py
+alibabacloud_retailadvqa20230417/client.py
+alibabacloud_retailadvqa20230417/models.py
+alibabacloud_retailadvqa20230417.egg-info/PKG-INFO
+alibabacloud_retailadvqa20230417.egg-info/SOURCES.txt
+alibabacloud_retailadvqa20230417.egg-info/dependency_links.txt
+alibabacloud_retailadvqa20230417.egg-info/requires.txt
+alibabacloud_retailadvqa20230417.egg-info/top_level.txt
