@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gptquery
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Alex Havrilla
+Author-email: alexdahoas@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: litellm
+
+UNKNOWN
+
