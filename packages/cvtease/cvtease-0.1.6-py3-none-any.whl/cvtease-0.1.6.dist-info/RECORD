@@ -1,0 +1,11 @@
+cvtease/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cvtease/cli.py,sha256=1YgQnY_8AsMlkkeg8teBd6vtcivtXzHaC4_oS4p9ys8,998
+cvtease/game.py,sha256=-TaXnFF7yA43n9N0HYnsRR8SdPmyGtTYz3VtoY9_6_8,3270
+cvtease/gui.py,sha256=rr84b_g9C2vn5Y6vCDUO53ilCMVtmrrOXFX9m3TVclE,6409
+cvtease/recoface.py,sha256=wShr6Qzqefq8vVl-6J_vZlJwfABwFkwA8n3RMMSKzNk,3235
+cvtease-0.1.6.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+cvtease-0.1.6.dist-info/METADATA,sha256=EXR4yl-h3unpsUC5Frkvg1MzhSjNNm9sEjjYrwCu6DQ,3504
+cvtease-0.1.6.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+cvtease-0.1.6.dist-info/entry_points.txt,sha256=EAgvhvy9tZmPYz_lodDbsjMHssVjhyYR0fy5FEZ3Tu4,45
+cvtease-0.1.6.dist-info/top_level.txt,sha256=7zkGer8LpzqnS6AeIzuuobYE3IekRDO-51GLHBHrZYk,8
+cvtease-0.1.6.dist-info/RECORD,,
