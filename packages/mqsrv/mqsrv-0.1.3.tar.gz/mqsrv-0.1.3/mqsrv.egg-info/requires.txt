@@ -1,0 +1,8 @@
+greenthread>=0.1.1
+kombu>=5.1
+tblib>=3.0
+jsonpickle>=3.0
+msgpack-python
+msgpack-numpy
+loguru>=0.5
+gevent
