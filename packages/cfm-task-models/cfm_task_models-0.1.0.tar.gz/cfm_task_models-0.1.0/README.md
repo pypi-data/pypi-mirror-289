@@ -1,0 +1,60 @@
+# CFM-Task-Models
+
+Popular CV models modified for various approaches of Compression for Machines (aka Coding for Machines)
+
+### Installation
+
+The easiest way to install CFM-Task-Models is through PyPI, to do this simply use `pip install cfm-task-models`
+However, CFM-Task-Models has requirements that currently cannot be handled by pip, thus before using CFM-Task-Models for the first time please run `miminstaller.py` in your virutal environment. If using poetry consider:
+`poetry run python -m cfm_task_models.miminstaller`
+
+###### Requirements
+
+CFM-Task-Models currently relies on several tools from OpenMMLab, which require custom installation using the openmim installer. Openmim is a tool provided by OpenMMLab which installs their libraries based on the user's pytorch and cuda versions.
+
+See pyproject.toml for standard requirements and miminstaller.py for OpenMMLAB requirements
+
+#### Using conda
+``` conda env create -f environment.yml ```
+
+### Usage
+
+To test Swin_Transformer, run the following command from the root directory:
+
+```python models/Swin-Transformer/models/swin_transformer_v2.py```
+
+
+## Semantic Segmentation
+
+### Dataset
+To downald the ADE20K dataset, run the following command from the root directory:
+
+```python cfm_task_models/dataset_download.py --dataset-name ade20k_2016 --save-dir data/ade --unzip --delete```
+
+### Model Zoo
+The model configs can be found in configs/segmentation.
+
+#### ADE20K dataset
+
+| Model | Backbone | config | checkpoint | mIoU |   |
+|---|---|--------|------------|---|---|
+| UperNet | Swin-T | [UPerNet](configs/segmentation/swin-tiny-patch4-window7-in1k-pre_upernet_8xb2-160k_ade20k-512x512.py)  | [download model](https://download.openmmlab.com/mmsegmentation/v0.5/swin/upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K/upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K_20210531_112542-e380ad3e.pth)         |  44.41 |   |
+| Mask2Former | Swin-T | [Mask2Former](configs/segmentation/mask2former_swin-t_8xb2-160k_ade20k-512x512.py)  | [download model](https://download.openmmlab.com/mmsegmentation/v0.5/mask2former/mask2former_swin-t_8xb2-160k_ade20k-512x512/mask2former_swin-t_8xb2-160k_ade20k-512x512_20221203_234230-7d64e5dd.pth)         | 48.66 |   |
+| KNet + UperNet | Swin-T | [KNet](/configs/segmentation/knet-s3_swin-t_upernet_8xb2-adamw-80k_ade20k-512x512.py)  | [download model](https://download.openmmlab.com/mmsegmentation/v0.5/knet/knet_s3_upernet_swin-t_8x2_512x512_adamw_80k_ade20k/knet_s3_upernet_swin-t_8x2_512x512_adamw_80k_ade20k_20220303_133059-7545e1dc.pth)         | 45.84 |   |
+
+Download from mim (#archive):
+    
+```mim download mmsegmentation --config swin-tiny-patch4-window7-in1k-pre_upernet_8xb2-160k_ade20k-512x512 --dest ./configs/segmentation```
+
+```mim download mmsegmentation --config mask2former_swin-t_8xb2-160k_ade20k-512x512 --dest ./configs/segmentation```
+
+```mim download mmsegmentation --config knet-s3_swin-t_upernet_8xb2-adamw-80k_ade20k-512x512 --dest ./configs/segmentation```
+
+### Evaluation 
+
+To evaluate the model on the ADE20K dataset, run the following command from the root directory:
+
+``` python cfm_task_models/run_mmseg_swin_ade20k_eval.py --device cuda --checkpoint path/to/checkpoint --config path/to/config --output result/file/path --data-root path/to/data ```
+
+For example :
+``` python cfm_task_models/run_mmseg_swin_ade20k_eval.py --device cuda --checkpoint checkpoints/mask2former_swin-t_8xb2-160k_ade20k-512x512_20221203_234230-7d64e5dd.pth --config configs/segmentation/mask2former_swin-t_8xb2-160k_ade20k-512x512.py --output result.json --data-root /home/data/ade/ADEChallengeData2016/ ```
