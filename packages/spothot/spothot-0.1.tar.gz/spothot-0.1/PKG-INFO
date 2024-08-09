@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: spothot
+Version: 0.1
+Summary: Spothot is a Python package designed to transform a Raspberry Pi into a Wi-Fi hotspot with an easy-to-use Flask web interface. Users can configure the hotspot and connect to available Wi-Fi networks directly through the web interface. Ideal for creating a portable Wi-Fi solution or for network testing purposes.
+Home-page: https://github.com/skshadan/SpotHot
+Author: Shadan
+Author-email: shadankhantech@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Spothot
+
+Spothot is a Python package that configures a Raspberry Pi as a Wi-Fi hotspot with a simple Flask web interface. Users can set up and manage the hotspot directly through their browser.
+
+## Installation
+
+To install the package, run:
+
+pip install spothot
+
+
+## Usage
+
+To set up the Wi-Fi hotspot, run:
+
+
+## Configuration
+
+The SSID and password for the Wi-Fi hotspot are specified through command line arguments.
+
+spothot --ssid YourSSID --password YourPassword
