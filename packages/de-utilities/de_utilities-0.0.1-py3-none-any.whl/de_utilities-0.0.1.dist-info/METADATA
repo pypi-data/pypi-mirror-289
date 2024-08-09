@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: de_utilities
+Version: 0.0.1
+Summary: Sciene Data Engineering internal library
+Home-page: https://sciene.com
+Author: Sciene
+Author-email: rodrigo@sciene.com
+Requires-Dist: setuptools
+
+This package is an internal library for Sciene developers, specially to assist with activities related to data engineering.
