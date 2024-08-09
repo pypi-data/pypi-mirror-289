@@ -1,0 +1,5 @@
+transformers
+textblob
+requests
+json5
+pyarmor
