@@ -1,0 +1,17 @@
+pspm/__init__.py,sha256=TnInvi-j9mQs7ZyNdu2kDL_4lT68BKO2EQiOSPDy9Lw,25
+pspm/cli.py,sha256=qDcjhpF8-49ag1rqvluGcpd1lNOf846e3dSE2euU9ic,509
+pspm/entities/__init__.py,sha256=0L9c8NRR87tng7QvNkSdezh97R38Mj2GiaCJflTMoyg,31
+pspm/entities/installer.py,sha256=ihkIMKlyCEsGkuEkNbwRqDzTy9MHhGchiNoZNBn9W7U,1449
+pspm/entities/package_manager.py,sha256=9jDYhErTqasv9AIByHFQoKadlmLl4qyXltoVEYvWdrw,1801
+pspm/entities/pyproject.py,sha256=2M-xxVCCI7xtJMo8bnCFQb4J1mZTSYkcHt8D1JpUEb0,2825
+pspm/entities/resolver.py,sha256=D0yfRQISzMgf7LKYsRRAXCDgsVoTo9QITXF4RNlRCLo,1595
+pspm/entities/toml.py,sha256=TxsbALY7uWT2eVS4OND_JVO2GCm_c-K030_21rOSkP0,1350
+pspm/errors/__init__.py,sha256=0b06OCJ_1vrayPJF453jge02JS8KaY0FjMaFY9kLW8Q,21
+pspm/errors/dependencies.py,sha256=EzGRzy1oJilxpb-hMWlfVFI-9RlZQ1qOQbDgcz6KDHE,423
+pspm/services/__init__.py,sha256=W2yR5mj0uQrTqB58tnfsNtlj1vcqaApqtRd1oucsZ_o,28
+pspm/services/dependencies.py,sha256=_YKcs2WV4N617oE6lsDbaIVdvd42L_wouC5Z1ydOGps,1115
+pspm-1.0.1.dist-info/METADATA,sha256=4iZHy9jUoJLndQTHuo7yUFl2KPgGyAeC7g5lPREt_EM,41508
+pspm-1.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pspm-1.0.1.dist-info/entry_points.txt,sha256=9nTR78qO5VXlcYiYkJ7cmLpNcJE05jFSzimfwFI06Is,37
+pspm-1.0.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pspm-1.0.1.dist-info/RECORD,,
