@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: HydroSnap
+Version: 0.0.1
+Summary: DEM reconditioning for hydrological applications
+Author: Pascal Horton
+Author-email: pascal.horton@unibe.ch
+License: MIT
+Project-URL: Source Code, https://github.com/pascalhorton/HydroSnap
+Project-URL: Bug Tracker, https://github.com/pascalhorton/HydroSnap/issues
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# HydroSnap
+HydroSnap is a precise and efficient tool for seamlessly aligning digital elevation models (DEMs) with mapped stream networks, ensuring accurate hydrological flow paths with minimal terrain alteration.
