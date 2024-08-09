@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: lambda-terraform-module-registry
+Version: 0.1.0
+Summary: A Terraform module registry implemented as an AWS Lambda Function
+Author: Mathew Moon
+Author-email: me@mathewmoon.net
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
