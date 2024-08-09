@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/ascii7io.py
+src/prefscript.py
+src/cantorpairs/__init__.py
+src/cantorpairs/src/cantorpairs.py
+src/cantorpairs/src/cp_ex.py
+src/prefscript.egg-info/PKG-INFO
+src/prefscript.egg-info/SOURCES.txt
+src/prefscript.egg-info/dependency_links.txt
+src/prefscript.egg-info/entry_points.txt
+src/prefscript.egg-info/requires.txt
+src/prefscript.egg-info/top_level.txt
+tests/test.py
+tests/test_fact.py
