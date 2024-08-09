@@ -1,0 +1,11 @@
+mood_analysis/__Init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mood_analysis/detection.py,sha256=WftlcZMCpF6vzQaxt2waksE5_j2ceO7L9lJ_osc2XK0,8170
+mood_analysis/emotion.py,sha256=TDdxmK7vFCzccYoobcRkzPWTYghrAL65mliCFAPxTdY,1552
+mood_analysis/example.py,sha256=X8MPB275LbdlIVf8Mawtah11TDi5cPI8aDrkduPD7y8,42
+mood_analysis/main.py,sha256=7JPxsXf9Qdd7DhfWjdRZfuaqE6xvGyH6rgJ8z60y2W4,252
+mood_analysis/mainipcamera.py,sha256=44-NiwNLExr8DqScrCpHyk21LmDTYBBFv7IgRoyW8t8,9319
+mood_analysis-0.0.3.dist-info/LICENSE,sha256=gY4zR4qV1xi9yy2e57gJmI75xWkv8s3aGznsd3Qym64,1070
+mood_analysis-0.0.3.dist-info/METADATA,sha256=DqED9RDH9CunODrAWvMfGTmx9yf9zf6jWSaF2Bl1RqY,669
+mood_analysis-0.0.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+mood_analysis-0.0.3.dist-info/top_level.txt,sha256=poaQ7ujsCp1k6cY6stGA8ck01hbFU760uV7YdOassVI,14
+mood_analysis-0.0.3.dist-info/RECORD,,
