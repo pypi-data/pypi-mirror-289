@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: icalfa
+Version: 0.0.1
+Summary: A fork of the InterCode benchmark used to evaluate natural language to Bash command translation.
+Author-email: Finn Westenfelder <finnw@mit.edu>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# InterCode-ALFA
+
+## Description
+TODO
+![InterCode-ALFA Diagram](icalfa.jpg)
+
+## Installation
+TODO
+
+## Usage
+TODO
+
+## Credits
+InterCode-ALFA is a fork of the InterCode benchmark developed by the Princeton NLP group.
+[InterCode Website](https://intercode-benchmark.github.io/)
+[InterCode PyPI Package](https://pypi.org/project/intercode-bench/#description)
