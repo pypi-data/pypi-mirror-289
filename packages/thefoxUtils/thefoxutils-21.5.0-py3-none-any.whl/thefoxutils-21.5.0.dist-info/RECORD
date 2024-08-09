@@ -1,0 +1,14 @@
+thefoxUtils/__init__.py,sha256=IlYpFJ8S9MxQlaQJnrTiRv_1oDulFGoSU5DrAiH5fBk,47
+thefoxUtils/composites.py,sha256=eAihdZSQYy9wjwSwQxYwtOacGASk2Ub5fTFGVkdmCSM,2119
+thefoxUtils/ftml2txt.py,sha256=SSL6GxI4nSYqX6XxRXU5yCd9H-jp3ktJl6nCKS-e6pQ,5958
+thefoxUtils/glyphdata.py,sha256=kT_AHWXu4VA3RF5k85K-nFPsKpMSqhA0TnkxjCiDgWE,5411
+thefoxUtils/linespacing.py,sha256=i8fsDcn16-9uXCrcV03Jdm0MI3bBm8UnYp8zmX5jcNg,4154
+thefoxUtils/tf.py,sha256=zOKVXjHz8kQJDtgaI7ZZSAwsQ-Uj5OEb4ORyLz2XwEM,5435
+thefoxUtils/unidata.py,sha256=l9Dfu6b1NxuwKtxEajc11tTtxZUFr1hYg0fClLRN8Z4,1152
+thefoxUtils/unidump.py,sha256=rblpwKDK70VbBDx6qgGmmYGSfpskXt7fBDPTSTQCgKo,7958
+thefoxUtils/unikey.py,sha256=_JHv4SG8ozlyTKQneoKrj3xgorgv2fWaGhRFzIGXJ8U,1456
+thefoxutils-21.5.0.dist-info/entry_points.txt,sha256=uVpbWLwqSRjOeK-QawItGKtUYlAeqQXi9h5kYV70Abc,291
+thefoxutils-21.5.0.dist-info/LICENSE,sha256=S3R3mg8lpo7vxKJPkHtS_z52PDxTZqzSRy5iYe03VcU,1111
+thefoxutils-21.5.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+thefoxutils-21.5.0.dist-info/METADATA,sha256=1JSoObFZLAl2QFqeAciwajK9f4r_Ea0nD2i6UNMiUqw,948
+thefoxutils-21.5.0.dist-info/RECORD,,
