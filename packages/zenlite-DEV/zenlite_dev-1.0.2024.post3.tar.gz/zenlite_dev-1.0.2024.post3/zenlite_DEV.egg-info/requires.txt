@@ -1,0 +1,6 @@
+GLFW
+Numba
+Numpy
+PyGLM
+ModernGL
+Pygame-CE

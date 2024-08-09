@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: zenlite_DEV
+Version: 1.0.2024.post3
+Summary: the python engine
+Home-page: https://github.com/stozak
+Author: Izaiyah Stokes
+Author-email: zeroth.bat@gmail.com
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: GLFW
+Requires-Dist: Numba
+Requires-Dist: Numpy
+Requires-Dist: PyGLM
+Requires-Dist: ModernGL
+Requires-Dist: Pygame-CE
+
+zenlite
+
+- 3d rendering pipeline
+- 2d rendering pipeline
+- raycasting rendering pipeline
