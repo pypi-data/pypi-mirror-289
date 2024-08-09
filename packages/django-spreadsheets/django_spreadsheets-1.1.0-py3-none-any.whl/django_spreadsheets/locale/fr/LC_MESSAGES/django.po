@@ -1,0 +1,328 @@
+# DJANGO-SPREADSHEET TRANSLATIONS.
+# Copyright (C) 2024 KAPT
+# This file is distributed under the same license as the DJANGO-SPREADSHEET package.
+# Adrien DELHORME <ad@kapt.mobi>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-08 17:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrien DELHORME <ad@kapt.mobi>\n"
+"Language-Team: Kapt <dev@kapt.mobi>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: apps.py:15
+msgid "Spreadsheet"
+msgstr "Classeur"
+
+#: conf/settings.py:5 templates/spreadsheets/export_index.html:4
+#: templates/spreadsheets/import_index.html:4
+msgid "Configuration"
+msgstr "Configuration"
+
+#: conf/settings.py:21
+#, python-brace-format
+msgid "export {config_name} {date}.xlsx"
+msgstr "export {config_name} {date}.xlsx"
+
+#: conf/settings.py:25
+#, python-brace-format
+msgid "{config_name} template file.xlsx"
+msgstr "modèle import {config_name}.xlsx"
+
+#: constants.py:6
+msgid "Yes"
+msgstr "Oui"
+
+#: constants.py:7
+msgid "No"
+msgstr "Non"
+
+#: errors.py:22
+#, python-brace-format
+msgid "Sheet \"{self.sheet_name}\""
+msgstr "Feuille « {self.sheet_name} »"
+
+#: errors.py:34
+msgid "{message}, cell {get_column_letter(self.column)}{self.row}"
+msgstr "{message}, cellule {get_column_letter(self.column)}{self.row}"
+
+#: errors.py:40
+#, python-brace-format
+msgid "The sheet \"{self.sheet_name}\" is missing"
+msgstr "La feuille « {self.sheet_name} » est manquante"
+
+#: errors.py:44
+#, python-brace-format
+msgid ""
+"The sheet \"{self.sheet_name}\" is missing from the file you supplied. Check "
+"that the sheet has not been deleted or renamed."
+msgstr ""
+"La feuille « {self.sheet_name} » est manquante dans le fichier fourni. "
+"Veuillez vérifier que la feuille n’a pas été renommée ou supprimée."
+
+#: errors.py:55
+#, python-brace-format
+msgid "The sheet \"{self.sheet_name}\" will be ignored when importing"
+msgstr "La feuille « {self.sheet_name} » sera ignorée lors de l’import"
+
+#: errors.py:59
+msgid ""
+"The sheet \"{self.sheet_name}\" in the file you have supplied does not "
+"correspond to a sheet in the template ({\", \".join(self."
+"config_sheets_names)}). It will be ignored."
+msgstr ""
+"La feuille « {self.sheet_name} » dans le fichier fourni ne correspond à "
+"aucune feuille dans le modèle ({\", \".join(self.config_sheets_names)}). "
+"Elle sera ignorée."
+
+#: errors.py:72
+msgid "The column name does not match the model"
+msgstr "Le nom de la colonne ne correspond pas au modèle"
+
+#: errors.py:77
+#, python-brace-format
+msgid ""
+"{message} : the column name is \"{self.column_header}\" when it should be "
+"\"{self.expected_column_header}\""
+msgstr ""
+"{message} : le nom de la colonne est « {self.column_header} » alors qu’il "
+"devrait être « {self.expected_column_header} »"
+
+#: errors.py:91
+#, python-brace-format
+msgid ""
+"{message}, column \"{self.column_header}\", type is invalid. {self."
+"error_message}"
+msgstr ""
+"{message}, colonne « {self.column_header} », le type est invalide. {self."
+"error_message}"
+
+#: errors.py:97
+#, python-brace-format
+msgid ""
+"Column \"{self.column_header}\" must be of the type: {self.expected_type}"
+msgstr ""
+"La colonne « {self.column_header} » doit être de type : {self.expected_type}"
+
+#: errors.py:108
+#, python-brace-format
+msgid "{message} : cell must no be empty"
+msgstr "{message} : la cellule ne doit pas être vide"
+
+#: errors.py:112
+#, python-brace-format
+msgid "Column \"{self.column_header}\" is required"
+msgstr "La colonne « {self.column_header} » est requise"
+
+#: errors.py:125
+#, python-brace-format
+msgid ""
+"{message} at least one of the columns \"{self.column_header}\" or \"{self."
+"unless_column_header}\" must be completed"
+msgstr ""
+"{message} au moins une des colonne « {self.column_header} » ou « {self."
+"unless_column_header} » doit être remplie"
+
+#: errors.py:131
+#, python-brace-format
+msgid ""
+"At least one of the columns \"{self.column_header}\" or \"{self."
+"unless_column_header}\" must be completed"
+msgstr ""
+"Au moins une des colonnes « {self.column_header} » ou « {self."
+"unless_column_header} » doit être remplie"
+
+#: errors.py:145
+#, python-brace-format
+msgid ""
+"{message} column \"{self.column_header}\" must be completed if column "
+"\"{self.required_if_column_header}\" is completed"
+msgstr ""
+"{message} la colonne « {self.column_header} » doit être remplie si la "
+"colonne « {self.required_if_column_header} » est remplie"
+
+#: errors.py:151
+#, python-brace-format
+msgid ""
+"Columns \"{self.column_header}\" and \"{self.required_if_column_header}\" "
+"must be completed"
+msgstr ""
+"Les colonnes « {self.column_header} » et « {self.required_if_column_header} "
+"» doivent être remplies"
+
+#: errors.py:163
+#, python-brace-format
+msgid "Line {self.line_number} is a duplicate of line {self.is_duplicate_of}"
+msgstr ""
+"La ligne {self.line_number} est un doublon de la ligne {self.is_duplicate_of}"
+
+#: errors.py:168
+msgid "Duplicated lines"
+msgstr "Lignes dupliquées"
+
+#: errors.py:179
+#, python-brace-format
+msgid "The object \"{self.object}\" will be deleted during import"
+msgstr "L’objet « {self.object} » sera supprimé lors de l’import"
+
+#: errors.py:184
+#, python-brace-format
+msgid ""
+"The object \"{self.object}\" will be deleted during import because it does "
+"not exist in the imported file."
+msgstr ""
+"L’objet « {self.object} » sera supprimé lors de l’import car il n’existe pas "
+"dans le fichier fourni."
+
+#: errors.py:192
+msgid "unknown"
+msgstr "inconnu"
+
+#: errors.py:196
+msgid "The configuration version of the file is incorrect"
+msgstr "La version de configuration du fichier est incorrecte"
+
+#: errors.py:200
+#, python-brace-format
+msgid ""
+"The configuration version of the file ({self.found}) is different from that "
+"expected ({self.expected})"
+msgstr ""
+"La version de configuration du fichier ({self.found}) est différente de "
+"celui attendu ({self.expected})"
+
+#: exceptions.py:11
+#, python-brace-format
+msgid "`{model_name}.{field_name}` received an unknown value: \"{value}\"."
+msgstr "`{model_name}.{field_name}` a reçu une valeur inconnue: « {value} »."
+
+#: forms.py:14
+msgid "Choose a configuration"
+msgstr "Choisissez une configuration"
+
+#: forms.py:29
+msgid "File to import"
+msgstr "Fichier à importer"
+
+#: forms.py:38
+#, python-brace-format
+msgid ""
+"Your file must be formatted as in the template version {config_version}: <a "
+"href=\"{url}?config={config_name}\">Download import file template version "
+"{config_version}</a>."
+msgstr ""
+"Votre fichier doit être formaté comme le modèle version {config_version} : "
+"<a href=\"{url}?config={config_name}\">Télécharger le modèle de fichier "
+"d’import version {config_version}</a>."
+
+#: forms.py:56
+msgid "No file were provided."
+msgstr "Aucun fichier n’a été fourni."
+
+#: forms.py:74
+msgid ""
+"There are errors in the file. Please correct them and try importing the file "
+"again."
+msgstr ""
+"Il y a des erreurs dans le fichier. Veuillez les corriger et essayer "
+"d’importer le fichier de nouveau."
+
+#: importer.py:472
+#, python-brace-format
+msgid ""
+"Sheet \"{sheet_title}\", column \"{column_header}\" select an existing value "
+"corresponding to \"{cell_value}\""
+msgstr ""
+"Feuille « {sheet_title} », colonne « {column_header} » choisissez une valeur "
+"existante correspondant à « {cell_value} »"
+
+#: importer.py:481
+msgid "Please select an existing element."
+msgstr "Veuillez choisir une valeur existante."
+
+#: templates/spreadsheets/done.html:4
+msgid "Completed"
+msgstr "Terminé"
+
+#: templates/spreadsheets/done.html:7
+msgid "The import is complete."
+msgstr "L’import est terminé."
+
+#: templates/spreadsheets/done.html:9
+msgid "New import"
+msgstr "Nouvel import"
+
+#: templates/spreadsheets/export_index.html:10
+msgid "Export"
+msgstr "Exporter"
+
+#: templates/spreadsheets/import_index.html:10
+msgid "Start"
+msgstr "Démarrer"
+
+#: templates/spreadsheets/wizard.html:4 templates/spreadsheets/wizard.html:12
+msgid "Import a file"
+msgstr "Importer un fichier"
+
+#: templates/spreadsheets/wizard.html:12
+msgid "for"
+msgstr "pour"
+
+#: templates/spreadsheets/wizard.html:25
+msgid ""
+"No errors or warnings identified in the file, click ‘Next’ to confirm data "
+"import."
+msgstr ""
+"Aucune erreur ou avertissement trouvé dans le fichier, cliquez sur « Suivant "
+"» pour confirmer l’import des données."
+
+#: templates/spreadsheets/wizard.html:56
+msgid "Problems"
+msgstr "Problèmes"
+
+#: templates/spreadsheets/wizard.html:62 templates/spreadsheets/wizard.html:94
+msgid "Sheet"
+msgstr "Feuille"
+
+#: templates/spreadsheets/wizard.html:87
+msgid "Warnings"
+msgstr "Avertissements"
+
+#: templates/spreadsheets/wizard.html:96
+msgid "General"
+msgstr "Général"
+
+#: templates/spreadsheets/wizard.html:103
+msgid "warnings"
+msgstr "avertissements"
+
+#: templates/spreadsheets/wizard.html:122
+msgid "Next"
+msgstr "Suivant"
+
+#: templates/spreadsheets/wizard.html:124
+#, python-format
+msgid "Step %(step_number)s/%(steps_total)s"
+msgstr "Étape %(step_number)s/%(steps_total)s"
+
+#: views.py:52
+msgid "Import/Export"
+msgstr "Importer/Exporter"
+
+#: views.py:171
+#, python-brace-format
+msgid "{count} items has been imported from sheet {sheet_name}."
+msgstr "{count} éléments ont été importés depuis la feuille {sheet_name}."
+
+#: views.py:257
+#, python-brace-format
+msgid "No config found with name: \"{config_name}\""
+msgstr "Aucune configuration trouvée avec le nom : « {config_name} »"
