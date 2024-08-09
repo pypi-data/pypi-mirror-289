@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>philander.stc311x &#8212; philander 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b3523f8e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=039e1c02" />
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for philander.stc311x</h1><div class="highlight"><pre>
+<span></span><span class="c1"># TODO: all the comments</span>
+
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;A module to provide base classes and data types for gas gauge driver implementations.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Carl Bellgardt&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.1&quot;</span>
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;STC311x&quot;</span><span class="p">,</span> <span class="s2">&quot;ChipType&quot;</span><span class="p">]</span>
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">auto</span>
+<span class="kn">from</span> <span class="nn">.serialbus</span> <span class="kn">import</span> <span class="n">SerialBusDevice</span>
+<span class="kn">from</span> <span class="nn">.gasgauge</span> <span class="kn">import</span> <span class="n">GasGauge</span><span class="p">,</span> <span class="n">SOCChangeRate</span>
+<span class="kn">from</span> <span class="nn">.battery</span> <span class="kn">import</span> <span class="n">Status</span> <span class="k">as</span> <span class="n">BatStatus</span><span class="p">,</span> <span class="n">Level</span> <span class="k">as</span> <span class="n">BatLevel</span>
+<span class="kn">from</span> <span class="nn">.primitives</span> <span class="kn">import</span> <span class="n">Current</span><span class="p">,</span> <span class="n">Voltage</span><span class="p">,</span> <span class="n">Percentage</span><span class="p">,</span> <span class="n">Temperature</span>
+<span class="kn">from</span> <span class="nn">.systypes</span> <span class="kn">import</span> <span class="n">ErrorCode</span><span class="p">,</span> <span class="n">RunLevel</span><span class="p">,</span> <span class="n">Info</span>
+<span class="kn">from</span> <span class="nn">.interruptable</span> <span class="kn">import</span> <span class="n">Interruptable</span><span class="p">,</span> <span class="n">Event</span>
+<span class="kn">from</span> <span class="nn">.gpio</span> <span class="kn">import</span> <span class="n">GPIO</span>
+<span class="kn">from</span> <span class="nn">.stc311x_reg</span> <span class="kn">import</span> <span class="n">_STC311x_Reg</span><span class="p">,</span> <span class="n">STC3115_Reg</span><span class="p">,</span> <span class="n">STC3117_Reg</span><span class="p">,</span> <span class="n">ChipType</span>
+
+
+<span class="k">class</span> <span class="nc">OperatingMode</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">opModeUnknown</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">opModeStandby</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">opModeVoltage</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">opModeMixed</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="STC311x">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x">[docs]</a>
+<span class="k">class</span> <span class="nc">STC311x</span><span class="p">(</span><span class="n">GasGauge</span><span class="p">,</span> <span class="n">SerialBusDevice</span><span class="p">,</span> <span class="n">Interruptable</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Driver implementation for the stc3117 and stc3118 gas gauge chips by ST microelectronics.</span>
+<span class="sd">    </span>
+<span class="sd">    A gas gauge allows to keep track of the state of charge</span>
+<span class="sd">    (SOC), remaining capacity, current voltage etc. of a battery.</span>
+<span class="sd">    Info about the specific gas gauge ICs can be found at https://www.st.com/en/power-management/stc3117.html</span>
+<span class="sd">    This class was tested using a STC3117 but should also work for STC3118 and possibly other similar chips.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># chip specific register information, set in open() via a parameter</span>
+
+    <span class="n">ADDRESSES_ALLOWED</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x70</span><span class="p">]</span>
+    <span class="n">pin_int</span> <span class="o">=</span> <span class="n">GPIO</span><span class="p">()</span>
+
+<div class="viewcode-block" id="STC311x.Params_init">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.Params_init">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">Params_init</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">paramDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initializes configuration parameters with defaults.</span>
+<span class="sd">        </span>
+<span class="sd">        The following settings are supported:</span>
+<span class="sd">        </span>
+<span class="sd">        =================================    ==========================================================================================================</span>
+<span class="sd">        Key name                             Value type, meaning and default</span>
+<span class="sd">        =================================    ==========================================================================================================</span>
+<span class="sd">        TODO: See def_dict</span>
+<span class="sd">        ===============================================================================================================================================</span>
+<span class="sd">        </span>
+<span class="sd">        Also see: :meth:`.Gasgauge.Params_init`, :meth:`.SerialBusDevice.Params_init`, :meth:`.GPIO.Params_init`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">def_dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;SerialBusDevice.address&quot;</span><span class="p">:</span> <span class="bp">cls</span><span class="o">.</span><span class="n">ADDRESSES_ALLOWED</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="s2">&quot;Gasgauge.chip_type&quot;</span><span class="p">:</span> <span class="n">ChipType</span><span class="o">.</span><span class="n">STC3115</span><span class="p">,</span>  <span class="c1"># TODO: implement auto</span>
+            <span class="s2">&quot;Gasgauge.gpio_alarm_idx&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># GPIO index for the reset pin</span>
+            <span class="s2">&quot;Gasgauge.gpio_cd_idx&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># PIO index for the charger driver pin</span>
+            <span class="s2">&quot;Gasgauge.battery_idx&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># TODO: what is this pin used for?</span>
+            <span class="s2">&quot;Gasgauge.senseResistor&quot;</span><span class="p">:</span> <span class="n">_STC311x_Reg</span><span class="o">.</span><span class="n">CONFIG_RSENSE_DEFAULT</span><span class="p">,</span>  <span class="c1"># Sense resistor in milli Ohm</span>
+            <span class="s2">&quot;Gasgauge.cc_cnf&quot;</span><span class="p">:</span> <span class="n">_STC311x_Reg</span><span class="o">.</span><span class="n">CC_CNF_DEFAULT</span><span class="p">,</span>  <span class="c1"># Coulomb-counter mode configuration</span>
+            <span class="s2">&quot;Gasgauge.vm_cnf&quot;</span><span class="p">:</span> <span class="n">_STC311x_Reg</span><span class="o">.</span><span class="n">VM_CNF_DEFAULT</span><span class="p">,</span>  <span class="c1"># Voltage mode configuration</span>
+            <span class="s2">&quot;Gasgauge.alarm_soc&quot;</span><span class="p">:</span> <span class="n">_STC311x_Reg</span><span class="o">.</span><span class="n">ALARM_SOC_DEFAULT</span><span class="p">,</span>  <span class="c1"># SOC lower threshold; SOC alarm level [0.5%]</span>
+            <span class="s2">&quot;Gasgauge.alarm_voltage&quot;</span><span class="p">:</span> <span class="n">_STC311x_Reg</span><span class="o">.</span><span class="n">ALARM_VOLTAGE_DEFAULT</span><span class="p">,</span>  <span class="c1"># Voltage lower threshold; 3.0 V</span>
+            <span class="s2">&quot;Gasgauge.current_thres&quot;</span><span class="p">:</span> <span class="n">_STC311x_Reg</span><span class="o">.</span><span class="n">CURRENT_THRES_DEFAULT</span><span class="p">,</span>  <span class="c1"># Current monitoring threshold; +/-470 V drop</span>
+            <span class="s2">&quot;Gasgauge.cmonit_max&quot;</span><span class="p">:</span> <span class="n">_STC311x_Reg</span><span class="o">.</span><span class="n">CMONIT_MAX_DEFAULT</span>  <span class="c1"># Monitoring timing threshold; CC-VM: 4 minutes; VM-&gt;CC: 1 minute</span>
+            <span class="c1"># TODO: GPIO options should be available to be configured and in docs</span>
+        <span class="p">}</span>
+        <span class="n">def_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">paramDict</span><span class="p">)</span>
+        <span class="n">paramDict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">def_dict</span><span class="p">)</span>  <span class="c1"># update again to apply changes to original reference</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="STC311x.open">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.open">[docs]</a>
+    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Opens the instance and sets it in a usable state.</span>
+
+<span class="sd">        Allocate necessary hardware resources and configure</span>
+<span class="sd">        user-adjustable parameters to meaningful defaults.</span>
+<span class="sd">        In this case the registers for the specific chip are defined</span>
+<span class="sd">        and optionally the GPIO-Pin for interrupts is initialized.</span>
+<span class="sd">        This function must be called prior to any further usage of the</span>
+<span class="sd">        instance. Involving it in the system ramp-up procedure could be</span>
+<span class="sd">        a good choice. After usage of this instance is finished, the</span>
+<span class="sd">        application should call :meth:`close`.</span>
+<span class="sd">        </span>
+<span class="sd">        :param paramDict(str, object) paramDict: Configuration parameters as obtained from :meth:`Params_init`, possibly.</span>
+<span class="sd">        :return: An error code indicating either success or the reason of failure.</span>
+<span class="sd">        :rtype: ErrorCode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Params_init</span><span class="p">(</span><span class="n">paramDict</span><span class="p">)</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errOk</span>
+        <span class="k">if</span> <span class="n">paramDict</span><span class="p">[</span><span class="s2">&quot;Gasgauge.chip_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">ChipType</span><span class="o">.</span><span class="n">STC3115</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span> <span class="o">=</span> <span class="n">STC3115_Reg</span><span class="p">(</span><span class="n">paramDict</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">paramDict</span><span class="p">[</span><span class="s2">&quot;Gasgauge.chip_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">ChipType</span><span class="o">.</span><span class="n">STC3117</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span> <span class="o">=</span> <span class="n">STC3117_Reg</span><span class="p">(</span><span class="n">paramDict</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errInvalidParameter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_setup</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>  <span class="c1"># Extend ErrorCode class to have a ok() function to replace all these occurrences</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramDict</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>  <span class="c1"># TODO: should I check for err or use .isAttached?</span>
+            <span class="c1"># SerialBusDevice is attached</span>
+            <span class="c1"># setup GPIO pin for interrupts</span>
+            <span class="n">pin_int_params</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">paramDict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;Gasgauge.pinInt.gpio.&quot;</span><span class="p">):</span>
+                    <span class="n">pin_int_params</span><span class="p">[</span><span class="n">key</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Gasgauge.pinInt.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="c1"># open GPIO pin</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pin_int</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">pin_int_params</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enableInterrupt</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">err</span></div>
+
+
+<div class="viewcode-block" id="STC311x.close">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.close">[docs]</a>
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Shut down the device after usage.</span>
+<span class="sd">        </span>
+<span class="sd">        This method should be called when the device is not used, anymore,</span>
+<span class="sd">        e.g. as part of the application exit procedure.</span>
+<span class="sd">        The following steps are executed:</span>
+
+<span class="sd">        * close I2C-Bus connection</span>
+<span class="sd">        * close GPIO pin for interrupts</span>
+<span class="sd">        </span>
+<span class="sd">        After return, the device can still be re-used, by calling</span>
+<span class="sd">        :meth:`.open` again.</span>
+<span class="sd">        </span>
+<span class="sd">        Also see: :meth:`.GPIO.close`, :meth:`.Module.close`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setRunLevel</span><span class="p">(</span><span class="n">RunLevel</span><span class="o">.</span><span class="n">shutdown</span><span class="p">)</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">pin_int</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># TODO: should GPIO be closed, even if close of SerialBusDevice failed?</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pin_int</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">err</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getInfo">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getInfo">[docs]</a>
+    <span class="k">def</span> <span class="nf">getInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves an information block from the gas gauge device.</span>
+<span class="sd">        </span>
+<span class="sd">        Typically, this kind of information is rather static in that,</span>
+<span class="sd">        it does not change over time. Usually, this information is</span>
+<span class="sd">        somewhat unique for the charger origin, manufacturing date,</span>
+<span class="sd">        hardware/firmware revision, product/model ID, chip series and alike.</span>
+<span class="sd">        For that reason, this function can be used to see,</span>
+<span class="sd">        if communication works reliably.</span>
+
+<span class="sd">        For more dynamic meta-information see :meth:`getStatus`.</span>
+<span class="sd">        </span>
+<span class="sd">        The method returns both, an instance of :class:`Info`, carrying</span>
+<span class="sd">        the information block as well as an error code, indicating</span>
+<span class="sd">        success or failure. The info block shall be evaluated only, if</span>
+<span class="sd">        the method returned successfully.</span>
+<span class="sd">        Even then, the caller should still evaluate the ``validity``</span>
+<span class="sd">        attribute of the returned info block to find out, which of the</span>
+<span class="sd">        information is actually valid.</span>
+<span class="sd">        </span>
+<span class="sd">        :return: The information object and an error code indicating either success or the reason of failure.</span>
+<span class="sd">        :rtype: Info, ErrorCode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="n">Info</span><span class="p">()</span>
+        <span class="n">chip_id</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_ID</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">info</span><span class="o">.</span><span class="n">chipID</span> <span class="o">=</span> <span class="n">chip_id</span>
+            <span class="k">if</span> <span class="n">chip_id</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CHIP_ID</span><span class="p">:</span>
+                <span class="n">info</span><span class="o">.</span><span class="n">validity</span> <span class="o">=</span> <span class="n">Info</span><span class="o">.</span><span class="n">validChipID</span>
+        <span class="k">return</span> <span class="n">info</span><span class="p">,</span> <span class="n">err</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getStatus">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getStatus">[docs]</a>
+    <span class="k">def</span> <span class="nf">getStatus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">statusID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves status data from the device.</span>
+<span class="sd">        </span>
+<span class="sd">        Typically, this kind of information is more dynamic in that, it</span>
+<span class="sd">        changes (much) over time. Usually, it further describes the</span>
+<span class="sd">        IC&#39;s current shape and condition, such as the availability of</span>
+<span class="sd">        new data, the cause of an interrupt or the status of</span>
+<span class="sd">        certain hardware functions. Also, secondary measurements such as</span>
+<span class="sd">        the die temperature could be subject to status data.</span>
+<span class="sd">        </span>
+<span class="sd">        For more static meta-information see :meth:`getInfo`.</span>
+<span class="sd">        </span>
+<span class="sd">        The given ``statusID`` parameter specifies, exactly which status</span>
+<span class="sd">        information should be retrieved. Its type and interpretation</span>
+<span class="sd">        depends on the implementation.</span>
+<span class="sd">        </span>
+<span class="sd">        The method returns both, resulting status data and an error code</span>
+<span class="sd">        indicating success or failure. The status data should be considered</span>
+<span class="sd">        valid only, if the error code indicates a successful execution</span>
+<span class="sd">        of this method.</span>
+<span class="sd">        </span>
+<span class="sd">        The type and interpretation of the status data depends on the</span>
+<span class="sd">        specific implementation.</span>
+
+<span class="sd">        :param int statusID: Identifies the status information to be retrieved.</span>
+<span class="sd">        :return: The status object and an error code indicating either success or the reason of failure.</span>
+<span class="sd">        :rtype: Object, ErrorCode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: not implemented yet</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errNotSupported</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getBatteryVoltage">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getBatteryVoltage">[docs]</a>
+    <span class="k">def</span> <span class="nf">getBatteryVoltage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves the battery voltage in milli Volt.</span>
+<span class="sd">        </span>
+<span class="sd">        :return: A on-negative integer value [mV] or :attr:`Voltage.invalid`\</span>
+<span class="sd">        to indicate that this information could not be retrieved.</span>
+<span class="sd">        :rtype: Voltage</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">voltage</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_VOLTAGE</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transferVoltage</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">Voltage</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getBatteryCurrent">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getBatteryCurrent">[docs]</a>
+    <span class="k">def</span> <span class="nf">getBatteryCurrent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves the battery current in micro Ampere at the time this\</span>
+<span class="sd">        function is executed.</span>
+<span class="sd">        </span>
+<span class="sd">        See also: :meth:`getBatteryCurrentAvg`</span>
+<span class="sd">        </span>
+<span class="sd">        :return: A non-negative integer value [micro A] or :attr:`Current.invalid`\</span>
+<span class="sd">        to indicate that this information could not be retrieved.</span>
+<span class="sd">        :rtype: Current</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">current</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_CURRENT</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transferCurrent</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">Current</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getBatteryCurrentAvg">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getBatteryCurrentAvg">[docs]</a>
+    <span class="k">def</span> <span class="nf">getBatteryCurrentAvg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves the average battery current.</span>
+<span class="sd">        </span>
+<span class="sd">        The average is taken over some time interval, e.g. 2 seconds.</span>
+<span class="sd">        The length of the time window is at the discretion of the</span>
+<span class="sd">        implementation and cannot be adjusted by the caller.</span>
+<span class="sd">        </span>
+<span class="sd">        See also: :meth:`getBatteryCurrent`</span>
+
+<span class="sd">        :return: A non-negative integer value [micro A] or :attr:`Current.invalid`\</span>
+<span class="sd">        to indicate that this information could not be retrieved.</span>
+<span class="sd">        :rtype: Current</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">Current</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CHIP_TYPE</span> <span class="o">==</span> <span class="n">ChipType</span><span class="o">.</span><span class="n">STC3117</span><span class="p">:</span>  <span class="c1"># Function is STC3117 exclusive</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getOperatingMode</span><span class="p">()</span> <span class="o">==</span> <span class="n">OperatingMode</span><span class="o">.</span><span class="n">opModeMixed</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_AVG_CURRENT</span><span class="p">)</span>  <span class="c1"># TODO: implement this register properly</span>
+                <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+                    <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transferCurrentAvg</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+    <span class="c1"># Local functions for internal use</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_transferSOC</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="c1"># LSB is 1/512 %, so shift by 9 bits.</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">data</span> <span class="o">+</span> <span class="mh">0x0100</span> <span class="o">&gt;&gt;</span> <span class="mi">9</span>
+        <span class="k">return</span> <span class="n">Percentage</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_transferChangeRate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>  <span class="c1"># STC3117 exclusive</span>
+        <span class="c1"># LSB is 8.789 mC, scaling factor is 8.789 = 8789/1000</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">*</span> <span class="mi">8789</span> <span class="o">+</span> <span class="mi">500</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_transferVoltage</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="c1"># LSB is 2.2mV, so scale by factor 2.20 = 22/10</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">*</span> <span class="mi">22</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span>
+        <span class="k">return</span> <span class="n">Voltage</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_transferCurrent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="c1"># Actually, we read out the voltage drop over the sense resistor.</span>
+        <span class="c1"># LSB is 5.88V, so first scaling factor is 5.88 = 294/50</span>
+        <span class="c1"># Value is signed!</span>
+        <span class="c1"># R = U/I  so we get I = U/R; Note that R is given in milliOhm!</span>
+        <span class="c1"># So, finally we scale by 294 / 50 * 1000 / rs = 294 * 20 / rs = 5880 / rs.</span>
+        <span class="n">rs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CONFIG_GASGAUGE_0_RSENSE</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">*</span> <span class="mi">5880</span> <span class="o">+</span> <span class="p">(</span><span class="n">rs</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="n">rs</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">*</span> <span class="mi">5880</span> <span class="o">-</span> <span class="p">(</span><span class="n">rs</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="n">rs</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="c1"># /**</span>
+    <span class="c1">#  * AVG_CURRENT transfer function</span>
+    <span class="c1">#  */</span>
+    <span class="k">def</span> <span class="nf">_transferCurrentAvg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>  <span class="c1"># STC3117 exclusive</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CHIP_TYPE</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">ChipType</span><span class="o">.</span><span class="n">STC3117</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">Current</span><span class="o">.</span><span class="n">invalid</span>  <span class="c1"># Function is not implemented for this chip</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Again, we actually read out the voltage drop over the sense resistor.</span>
+            <span class="c1"># LSB is 1.47V, partial scaling factor is 1.47 = 147/100</span>
+            <span class="c1"># Value is signed!</span>
+            <span class="c1"># Total scaling factor is: 147 / 100 * 1000 / rs = 147 * 10 / rs = 1470 / rs.</span>
+            <span class="n">rs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CONFIG_GASGAUGE_0_RSENSE</span>
+            <span class="k">if</span> <span class="n">data</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">*</span> <span class="mi">1470</span> <span class="o">+</span> <span class="n">rs</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">rs</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">*</span> <span class="mi">1470</span> <span class="o">-</span> <span class="n">rs</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">rs</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">Current</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_transferTemperature</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="c1"># LSB is 1 °C, so we don&#39;t need any scaling.</span>
+        <span class="k">return</span> <span class="n">Temperature</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_transfertOCV</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="c1"># LSB is 0.55 mV, so scale by factor 0.55 = 55/100 = 11/20.</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">*</span> <span class="mi">11</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span> <span class="o">/</span> <span class="mi">20</span>
+        <span class="k">return</span> <span class="n">Voltage</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_invTransferOCV</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="c1"># LSB is 0.55 mV, so scale by factor 1/0.55 = 100/55 = 20/11.</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">value</span> <span class="o">*</span> <span class="mi">20</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">11</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_crc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+            <span class="n">ret</span> <span class="o">^=</span> <span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_checkRamConsistency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="c1"># check if RAM test register value is correct</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">length</span> <span class="ow">or</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_TEST</span><span class="p">]</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">RAM_TEST</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errCorruptData</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_crc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">RAM_SIZE</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_CRC</span><span class="p">]:</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errCorruptData</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errOk</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">def</span> <span class="nf">_getOperatingMode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">err</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">data</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_GG_RUN</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">data</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_VMODE</span><span class="p">:</span>
+                    <span class="n">ret</span> <span class="o">=</span> <span class="n">OperatingMode</span><span class="o">.</span><span class="n">opModeVoltage</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ret</span> <span class="o">=</span> <span class="n">OperatingMode</span><span class="o">.</span><span class="n">opModeMixed</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="n">OperatingMode</span><span class="o">.</span><span class="n">opModeStandby</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">OperatingMode</span><span class="o">.</span><span class="n">opModeUnknown</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">def</span> <span class="nf">_checkID</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_ID</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errOk</span> <span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CHIP_ID</span><span class="p">)</span> <span class="k">else</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errFailure</span>
+        <span class="k">return</span> <span class="n">err</span>
+
+    <span class="k">def</span> <span class="nf">_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># TODO: implement this function into open()?</span>
+        <span class="c1"># TODO: this function is still Work In Progress and will not work at all</span>
+        <span class="k">return</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errNotImplemented</span>
+        <span class="n">ramContent</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># TODO: where does RAM content come from?</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># TODO: insert according confs where params is used</span>
+        <span class="n">memset</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># TODO: see original implementation</span>
+        <span class="n">buffer</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># TODO: see original implementation</span>
+
+        <span class="c1"># check communication</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_checkID</span><span class="p">()</span>
+        <span class="c1"># read RAM</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readWriteBuffer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">RAM_SIZE</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># check RAM consistency</span>
+        <span class="n">canRestore</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># disable RAM restoration</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_checkRamConsistency</span><span class="p">(</span><span class="n">ramContent</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">RAM_SIZE</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+                <span class="c1"># check CTRL_PORDET and CTRL_BATFAIL</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_CTRL</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="n">data</span> <span class="o">&amp;</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CTRL_BATFAIL</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CTRL_PORDET</span><span class="p">):</span>
+                        <span class="c1"># battery removed / voltage dropped below threshold</span>
+                        <span class="c1"># no restoration, start anew, instead!</span>
+                        <span class="n">canRestore</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">canRestore</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">err</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errOk</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="c1"># common steps (pre-phase)</span>
+            <span class="k">if</span> <span class="n">canRestore</span><span class="p">:</span>
+                <span class="c1"># restore configuration from RAM</span>
+                <span class="c1"># ensure that GG_RUN is cleared</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_OFF</span><span class="p">)</span>
+                <span class="c1"># restore REG_CC_CNF</span>
+                <span class="n">data16</span> <span class="o">=</span> <span class="p">(</span><span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_CC_CNF_H</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_CC_CNF_L</span><span class="p">]</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_CC_CNF</span><span class="p">,</span> <span class="n">data16</span><span class="p">)</span>
+                <span class="c1"># restore REG_VM_CNF</span>
+                <span class="n">data16</span> <span class="o">=</span> <span class="p">(</span><span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_VM_CNF_H</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_VM_CNF_L</span><span class="p">]</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_VM_CNF</span><span class="p">,</span> <span class="n">data16</span><span class="p">)</span>
+                <span class="c1"># restore REG_SOC</span>
+                <span class="n">data16</span> <span class="o">=</span> <span class="p">(</span><span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_SOC_H</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_SOC_L</span><span class="p">]</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_SOC</span><span class="p">,</span> <span class="n">data16</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># initialize configuration with defaults</span>
+                <span class="c1"># run gas gauge to get first OCV and current measurement</span>
+                <span class="n">data8</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_OFF</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_GG_RUN</span> <span class="o">|</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_FORCE_CC</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">,</span> <span class="n">data8</span><span class="p">)</span>
+                <span class="c1"># read OCV</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_OCV</span><span class="p">)</span>
+                <span class="n">ocv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transfertOCV</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="c1"># read current</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_CURRENT</span><span class="p">)</span>
+                <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transferCurrent</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="c1"># ensure that GG_RUN is cleared</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_OFF</span><span class="p">)</span>
+                <span class="c1"># REG_CC_CNF</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_CC_CNF</span><span class="p">,</span> <span class="n">params</span><span class="o">.</span><span class="n">regCCcnf</span><span class="p">)</span>  <span class="c1"># TODO: get from params</span>
+                <span class="c1"># REG_VM_CNF</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_VM_CNF</span><span class="p">,</span> <span class="n">params</span><span class="o">.</span><span class="n">regVMcnf</span><span class="p">)</span>  <span class="c1"># TODO: same as above</span>
+                <span class="c1"># compensate OCV</span>
+                <span class="k">if</span> <span class="n">current</span> <span class="o">&gt;</span> <span class="mi">1000000</span><span class="p">:</span>
+                    <span class="n">current</span> <span class="o">/=</span> <span class="mi">1000</span>
+                    <span class="n">ocv</span> <span class="o">=</span> <span class="n">ocv</span> <span class="o">-</span> <span class="n">current</span> <span class="o">*</span> <span class="n">CFG_SUBSECTATR</span><span class="p">(</span> <span class="n">BATTERY</span><span class="p">,</span> <span class="n">CONFIG_GASGAUGE_0_BATTERY_IDX</span><span class="p">,</span> <span class="n">IMPEDANCE</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ocv</span> <span class="o">=</span> <span class="n">ocv</span> <span class="o">-</span> <span class="n">current</span> <span class="o">*</span> <span class="n">CFG_SUBSECTATR</span><span class="p">(</span><span class="n">BATTERY</span><span class="p">,</span> <span class="n">CONFIG_GASGAUGE_0_BATTERY_IDX</span><span class="p">,</span> <span class="n">IMPEDANCE</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+                <span class="n">data16</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invTransferOCV</span><span class="p">(</span><span class="n">ocv</span><span class="p">)</span>
+                <span class="c1"># write OCV back</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_OCV</span><span class="p">,</span> <span class="n">data16</span><span class="p">)</span>
+                <span class="c1"># wait 1ßßms to get valid SOC</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_SOC</span><span class="p">)</span>
+                <span class="c1"># store new backup to RAM</span>
+                <span class="n">memset</span><span class="p">(</span><span class="n">ramContent</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">RAM_SIZE</span><span class="p">)</span>
+                <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_TEST</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">RAM_TEST</span>
+                <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_SOC_L</span><span class="p">]</span> <span class="o">=</span> <span class="n">data16</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
+                <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_SOC_H</span><span class="p">]</span> <span class="o">=</span> <span class="n">data16</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span>
+                <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_CC_CNF_L</span><span class="p">]</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">regCCcnf</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
+                <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_CC_CNF_H</span><span class="p">]</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">regCCcnf</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span>
+                <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_VM_CNF_L</span><span class="p">]</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">regVMcnf</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
+                <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_VM_CNF_H</span><span class="p">]</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">regVMcnf</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span>
+                <span class="n">ramContent</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">IDX_RAM_CRC</span><span class="p">]</span> <span class="o">=</span> <span class="n">crc</span><span class="p">(</span><span class="n">ramContent</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">RAM_SIZE</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_RAM_FIRST</span>
+                <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeBuffer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">RAM_SIZE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># API functions exported to the outside</span>
+
+    <span class="k">def</span> <span class="nf">_setRunLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+        <span class="n">mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_OFF</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="ow">in</span> <span class="p">[</span><span class="n">RunLevel</span><span class="o">.</span><span class="n">active</span><span class="p">,</span> <span class="n">RunLevel</span><span class="o">.</span><span class="n">idle</span><span class="p">]:</span>  <span class="c1"># TODO: not sure if this is the best &quot;pythonic^TM&quot; way</span>
+            <span class="c1"># Mixed mode: coulomb counter + voltage gas gauge -&gt; Leave VMODE off</span>
+            <span class="n">mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_OFF</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_GG_RUN</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_FORCE_CC</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pin_int</span><span class="o">.</span><span class="n">_fIntEnabled</span><span class="p">:</span>
+                <span class="n">mode</span> <span class="o">|=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_ALM_ENA</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errOk</span>
+        <span class="k">elif</span> <span class="n">level</span> <span class="ow">in</span> <span class="p">[</span><span class="n">RunLevel</span><span class="o">.</span><span class="n">relax</span><span class="p">,</span> <span class="n">RunLevel</span><span class="o">.</span><span class="n">snooze</span><span class="p">,</span> <span class="n">RunLevel</span><span class="o">.</span><span class="n">nap</span><span class="p">,</span> <span class="n">RunLevel</span><span class="o">.</span><span class="n">sleep</span><span class="p">,</span> <span class="n">RunLevel</span><span class="o">.</span><span class="n">deepSleep</span><span class="p">]:</span>
+            <span class="c1"># Power saving mode: voltage gas gauge, only. -&gt; VMODE = 1</span>
+            <span class="n">mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_OFF</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_VMODE</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_GG_RUN</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_FORCE_VM</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pin_int</span><span class="o">.</span><span class="n">_fIntEnabled</span><span class="p">:</span>
+                <span class="n">mode</span> <span class="o">|=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_ALM_ENA</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errOk</span>
+        <span class="k">elif</span> <span class="n">level</span> <span class="o">==</span> <span class="n">RunLevel</span><span class="o">.</span><span class="n">shutdown</span><span class="p">:</span>
+            <span class="c1"># ret = backupRam(self)</span>
+            <span class="n">mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_VMODE</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_FORCE_VM</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errOk</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errNotSupported</span>
+        <span class="c1"># set mode and return ErrorCode</span>
+        <span class="k">if</span> <span class="n">ret</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="c1"># Gas gauge specific API implementation</span>
+
+<div class="viewcode-block" id="STC311x.reset">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.reset">[docs]</a>
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Soft resets the device.</span>
+
+<span class="sd">        The device is in some default state, afterwards and must be</span>
+<span class="sd">        re-configured according to the application&#39;s needs.</span>
+<span class="sd">        :return: An error code indicating either success or the reason of failure.</span>
+<span class="sd">        :rtype: ErrorCode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># UNDOCUMENTED: At the end of the reset phase, the MODE_GG_RUN bit is cleared.</span>
+        <span class="c1"># In order to detect this, we have to set it, first:</span>
+        <span class="n">mode_data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">mode_data</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_GG_RUN</span><span class="p">):</span>
+            <span class="n">mode_data</span> <span class="o">|=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_GG_RUN</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">,</span> <span class="n">mode_data</span><span class="p">)</span>
+            <span class="c1"># same applies for beneath</span>
+        <span class="c1"># Do a soft reset by asserting CTRL:PORDET</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="c1"># TODO: consider adding a set_ctrl / get_ctrl / add_ctrl method for this purpose; same for mdoe</span>
+            <span class="n">ctrl_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CTRL_IO0DATA</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CTRL_GG_RST</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CTRL_PORDET</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_CTRL</span><span class="p">,</span> <span class="n">ctrl_data</span><span class="p">)</span>
+        <span class="c1"># Delay: Loop until we see the MODE_GG_RUN bit cleared:</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">has_timed_out</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">POR_DELAY_LOOPS_MAX</span><span class="p">):</span>
+                <span class="n">mode_data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">()</span> <span class="ow">and</span> <span class="p">(</span><span class="n">mode_data</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_GG_RUN</span><span class="p">)):</span>
+                    <span class="n">has_timed_out</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># loop ended before i == POR_DELAY_LOOPS_MAY</span>
+                    <span class="k">break</span>
+            <span class="k">if</span> <span class="n">has_timed_out</span><span class="p">:</span>
+                <span class="n">err</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errMalfunction</span>
+        <span class="c1"># Then, re-initialize the device</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">STC311x</span><span class="o">.</span><span class="n">_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">err</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getID">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getID">[docs]</a>
+    <span class="k">def</span> <span class="nf">getID</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_ID</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">data</span> <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">()</span> <span class="k">else</span> <span class="n">err</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getStateOfCharge">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getStateOfCharge">[docs]</a>
+    <span class="k">def</span> <span class="nf">getStateOfCharge</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves the state of charge.</span>
+<span class="sd">        That is the fraction of electric energy from the total capacity,</span>
+<span class="sd">        that is still or already stored in the battery. This information</span>
+<span class="sd">        is valid for both, the charging and the discharging process.</span>
+
+<span class="sd">        :return: A percentage [0...100] value or :attr:`Percentage.invalid`\</span>
+<span class="sd">        to indicate that this information could not be retrieved.</span>
+<span class="sd">        :rtype: Percentage</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># SOC is a 16bit value with LSB = 1/512 %</span>
+        <span class="c1"># But reading just the high-byte results in an inconsistent response.</span>
+        <span class="c1"># So, read the full word.</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_SOC</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transferSOC</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="c1"># future RAM-functions could be implemented here</span>
+            <span class="c1"># if ret != Percentage.invalid:</span>
+            <span class="c1">#    updateRamWord(self,  self.REGISTER._IDX_RAM_SOC)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">Percentage</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getChangeRate">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getChangeRate">[docs]</a>
+    <span class="k">def</span> <span class="nf">getChangeRate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># function is STC3117 exclusive</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves the SOC change rate in milli C.</span>
+
+<span class="sd">        Remember that 1C = 100% in 1 hour. This information may be used</span>
+<span class="sd">        to estimate the remaining stamina or how long the charging</span>
+<span class="sd">        process will still take.</span>
+<span class="sd">        :return: A SOC change rate (non-negative) or :attr:&#39;SOCChangeRate.invalid`\</span>
+<span class="sd">        to indicate that this information could not be retrieved.</span>
+<span class="sd">        :rtype: SOCChangeRate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CHIP_TYPE</span> <span class="o">!=</span> <span class="n">ChipType</span><span class="o">.</span><span class="n">STC3117</span><span class="p">:</span>  <span class="c1"># STC3117 exclusive</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">SOCChangeRate</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">opMode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getOperatingMode</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">opMode</span> <span class="o">==</span> <span class="n">opMode</span><span class="o">.</span><span class="n">opModeVoltage</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readWordRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_AVG_CURRENT</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+                    <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transferChangeRate</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ret</span> <span class="o">=</span> <span class="n">SOCChangeRate</span><span class="o">.</span><span class="n">invalid</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="n">SOCChangeRate</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getBatteryTemperature">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getBatteryTemperature">[docs]</a>
+    <span class="k">def</span> <span class="nf">getBatteryTemperature</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># This device does not measure any temperature data</span>
+        <span class="k">return</span> <span class="n">Temperature</span><span class="o">.</span><span class="n">invalid</span></div>
+
+
+<div class="viewcode-block" id="STC311x.getChipTemperature">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.getChipTemperature">[docs]</a>
+    <span class="k">def</span> <span class="nf">getChipTemperature</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve the current temperature of the chip.</span>
+
+<span class="sd">        :return: Temperature value.</span>
+<span class="sd">        :rtype: Temperature</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_TEMPERATURE</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transferTemperature</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">Temperature</span><span class="o">.</span><span class="n">invalid</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+    <span class="c1"># Interruptable API implementation</span>
+
+<div class="viewcode-block" id="STC311x.registerInterruptHandler">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.registerInterruptHandler">[docs]</a>
+    <span class="k">def</span> <span class="nf">registerInterruptHandler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">onEvent</span><span class="o">=</span><span class="n">Event</span><span class="o">.</span><span class="n">evtInt1</span><span class="p">,</span> <span class="n">callerFeedBack</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">handler</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># Enable; from app (=sink) to hardware (=source)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pin_int</span><span class="o">.</span><span class="n">registerInterruptHandler</span><span class="p">(</span><span class="n">onEvent</span><span class="p">,</span> <span class="n">callerFeedBack</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pin_int</span><span class="o">.</span><span class="n">enableInterrupt</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+                    <span class="n">data</span> <span class="o">|=</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_ALM_ENA</span>
+                    <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>  <span class="c1"># check if there already is an interrupt present</span>
+                    <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_CTRL</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">data</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">CTRL_IO0DATA</span><span class="p">:</span>
+                        <span class="n">handler</span><span class="p">(</span><span class="n">Event</span><span class="o">.</span><span class="n">evtInt1</span><span class="p">,</span> <span class="n">callerFeedBack</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">disableInterrupt</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">err</span> <span class="o">=</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errInvalidParameter</span>  <span class="c1"># TODO: is this the right error code?</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># Disable; from hardware to app.</span>
+            <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">readByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">err</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+                <span class="n">data</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">MODE_ALM_ENA</span>  <span class="c1"># TODO: ModeValues class need to be adjusted to work with all binary operations as expected</span>
+                <span class="n">err</span> <span class="o">=</span> <span class="n">SerialBusDevice</span><span class="o">.</span><span class="n">writeByteRegister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">REGISTER</span><span class="o">.</span><span class="n">REG_MODE</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">disableInterrupt</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">err</span></div>
+
+
+<div class="viewcode-block" id="STC311x.enableInterrupt">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.enableInterrupt">[docs]</a>
+    <span class="k">def</span> <span class="nf">enableInterrupt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># err = GPIO.enableInterrupt(self, self.REGISTER.CONFIG_GASGAUGE_0_GPIO_ALARM)  # TODO: implement GPIO interrupt, check if it does infact return an error (not sure)</span>
+        <span class="c1"># if err.is_ok():  # TODO: do we really want these lines to override this error, and not just return the given error?</span>
+        <span class="c1">#     ret = ErrorCode.errOk</span>
+        <span class="c1"># else:</span>
+        <span class="c1">#     ret = ErrorCode.errInvalidParameter</span>
+        <span class="c1"># return ret</span>
+        <span class="k">return</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errOk</span>  <span class="c1"># TODO: why doesn&#39;t this function do anything (see max77960)</span></div>
+
+
+<div class="viewcode-block" id="STC311x.disableInterrupt">
+<a class="viewcode-back" href="../../philander.html#philander.stc311x.STC311x.disableInterrupt">[docs]</a>
+    <span class="k">def</span> <span class="nf">disableInterrupt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># err = GPIO_disableInterrupt(self)  # TODO: implement GPIO interrupt, check if it does infact return an error (not sure)</span>
+        <span class="c1"># if err.is_ok():  # TODO: do we really want these lines to override this error, and not just return the given error?</span>
+        <span class="c1">#     ret = ErrorCode.errOk</span>
+        <span class="c1"># else:</span>
+        <span class="c1">#     ret = ErrorCode.errInvalidParameter</span>
+        <span class="c1"># return ret</span>
+        <span class="k">return</span> <span class="n">ErrorCode</span><span class="o">.</span><span class="n">errOk</span>  <span class="c1"># TODO: why doesn&#39;t this function do anything (see max77960)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_getEventContext</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">pass</span>  <span class="c1"># TODO: this function, see original implementation</span></div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">philander</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">philander</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Oliver Maye.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
