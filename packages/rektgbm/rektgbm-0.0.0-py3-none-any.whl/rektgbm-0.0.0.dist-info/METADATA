@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: rektgbm
+Version: 0.0.0
+Summary: 
+License: LICENSE
+Author: RektPunk
+Author-email: rektpunk@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: lightgbm (>=4.5.0,<5.0.0)
+Requires-Dist: numpy (>=2.0.1,<3.0.0)
+Requires-Dist: optuna (>=3.6.1,<4.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: scikit-learn (>=1.5.1,<2.0.0)
+Requires-Dist: xgboost (>=2.1.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# RektGBM
+
+
+<p align="center">
+  <a href="https://github.com/RektPunk/RektGBM/releases/latest">
+    <img alt="Release" src="https://img.shields.io/github/v/release/RektPunk/rektgbm.svg">
+  </a>
+  <a href="https://github.com/RektPunk/RektGBM/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/RektPunk/RektGBM.svg">
+  </a>
+  <a href="https://pypi.org/project/rektgbm">
+    <img alt="Pythonv" src="https://img.shields.io/pypi/pyversions/rektgbm.svg?logo=python&logoColor=white">
+  </a>
+  <a href="https://github.com/RektPunk/RektGBM/actions/workflows/lint.yaml">
+    <img alt="Lint" src="https://github.com/RektPunk/RektGBM/actions/workflows/lint.yaml/badge.svg?branch=main">
+  </a>
+</p>
+
+I'm sick and tired of endless model comparisons and hyperparameter tuning. It's time to create a no-brainer model combining LightGBM, XGBoost, and Optuna. This repository aims to simplify and streamline the process of building and optimizing machine learning models, providing a straightforward yet powerful solution.
+
