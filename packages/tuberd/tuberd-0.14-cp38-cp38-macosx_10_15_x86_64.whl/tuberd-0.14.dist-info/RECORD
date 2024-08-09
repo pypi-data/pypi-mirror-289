@@ -1,0 +1,16 @@
+tuberd-0.14.data/scripts/tuberd,sha256=FcxxaHvx9wmoiiz0WGCaTb-zVoC59SUbix3Bn3sy-lo,1954800
+tuberd-0.14.dist-info/RECORD,,
+tuberd-0.14.dist-info/LICENSE,sha256=gPVBWwHmbdy4JXECSjtv00KnrJZKt0OLq2g8O-R6vWY,1535
+tuberd-0.14.dist-info/WHEEL,sha256=goyfqUUeGfGivM-VYxhRhiteBeVUbNqqNfrtgFd53UE,109
+tuberd-0.14.dist-info/top_level.txt,sha256=UfvsdRcmIhMoqKQyx_okatPbuRvfK9i-9QZpUu8VFsI,13
+tuberd-0.14.dist-info/METADATA,sha256=_rKsRtRE5shVxaSusY5IluwbEr12fiVaIVo_qX-Pzl0,9038
+tuber/server.py,sha256=eMpkDKFYMi2OwDA9MFQ353dQRflw4izSOdEzkUq5ASk,2976
+tuber/_version.py,sha256=lmFPHiet63Bn9h104yd9q0T6i7C2c0WCbizqrpAtSuk,408
+tuber/client.py,sha256=5fXw3AeUDDakcpZ3Xc-1zhTuabTXYLggUEVHLMiVcdw,20059
+tuber/codecs.py,sha256=UQpXAb9QPt_Eu3vUt16zqaZSSjSYjsj-UL1S71YjHe4,8238
+tuber/__init__.py,sha256=tu0MmDGh-j9WEvDSYNQk4_Qfiqmr-4EsMOBc8xQGQIk,944
+tuber/include/tuber_support.hpp,sha256=swgbcYnstSl21XZXsYnCeyigrTbdLwOg7WFiy0QyBOY,5328
+tuber/tests/conftest.py,sha256=bJFMCrbDeNkybZAWhuMH6LUQASuTUh7xpnG3NhvpspU,1102
+tuber/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tuber/tests/test.py,sha256=UlsxoJ0b6Ic7qPzrEQC5Hqiepkqcy8nfGc4nJV6aw3Q,22508
+tuber/tests/test_module.cpython-38-darwin.so,sha256=Sh8K2k5LI3DIasbWD7eilJhv0kOfNUjAWg1qCdItyIM,435184
