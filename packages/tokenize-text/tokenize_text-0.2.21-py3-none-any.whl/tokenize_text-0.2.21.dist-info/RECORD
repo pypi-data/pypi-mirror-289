@@ -1,0 +1,9 @@
+tokenized/__init__.py,sha256=tJqta5_QeBB-op-l0azKALu__1mLuxSyoAsm-eaYt4o,53
+tokenized/tokenizer.py,sha256=O9Y8I7tCIO8Erjuu0STWnfSCRgZjoBjLL8qhDgKXHZM,1461
+tokenized/dist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokenized/dist/protected_functions.py,sha256=h1w5Hl4eacS_KgB9QCHfUcxySOZLfw-h3169POqX4H4,8185
+tokenized/dist/pytransform/__init__.py,sha256=wADzFDVqqkBm5PI3cWGH_mlwvMxnucLUxxlhjkgEe_I,13586
+tokenize_text-0.2.21.dist-info/METADATA,sha256=czyZnwvLNOGNHdQPYtLQaUOCGdGCRKh4ZAsxsGELcU8,732
+tokenize_text-0.2.21.dist-info/WHEEL,sha256=rWxmBtp7hEUqVLOnTaDOPpR-cZpCDkzhhcBce-Zyd5k,91
+tokenize_text-0.2.21.dist-info/top_level.txt,sha256=PMFkihAlPkzdlht20Uta-w5JggKbS7fGAa1ORHDJIpo,10
+tokenize_text-0.2.21.dist-info/RECORD,,
