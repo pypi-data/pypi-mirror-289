@@ -1,0 +1,14 @@
+[project]
+name = "cloudteam_servicebus"
+version = "1.0.0"
+authors = [
+    { name="CloudTeam.AI", email="devops@cloudteam.ai" },
+]
+description = "A service bus module for cloudteam"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
