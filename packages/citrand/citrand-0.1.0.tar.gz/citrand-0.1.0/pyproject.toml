@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "citrand"
+version = "0.1.0"
+description = "PRNG manipulation aide for emulated Pokémon 3DS titles"
+authors = ["Taylor Rodríguez"]
+license = "GPLv3+"
+readme = "README.markdown"
+repository = "https://codeberg.org/ViteByte/citrand"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Natural Language :: English",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typing-extensions = "^4.12.2"
+
+[tool.poetry.scripts]
+citrand = "citrand.tui:main"
+
+[tool.black]
+line-length = 79
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
