@@ -1,0 +1,57 @@
+# Giveme Color
+
+Giveme Color is a simple Python package that generates a random color and copies it to the clipboard. It’s a handy tool for quickly obtaining a random color code for your projects.
+
+## Features
+
+- Generates a random color.
+- Automatically copies the color code to your clipboard.
+
+## Installation
+
+You can install Giveme Color via pip:
+
+```bash
+pip install giveme-color
+```
+
+## How to Use
+
+First, import the package in your Python script:
+
+```python
+import giveme_color
+```
+
+Then, call the function to generate a random color:
+
+```python
+giveme_color.get_color()
+```
+
+The color code will be copied to your clipboard automatically, so you can easily paste it wherever needed.
+
+### Example:
+
+```python
+import giveme_color
+
+# Generate a random color and copy it to the clipboard
+giveme_color.get_color()
+```
+
+## About the Author
+
+Giveme Color is created by Parth Dudhatra (imParth), a passionate software engineer, developer advocate, and content creator known for his contributions to the tech community. Parth is dedicated to frontend development, open-source software, and sharing knowledge with others.
+
+You can connect with Parth on social media:
+
+- [Portfolio](https://imparth.me)
+- [X/Twitter](https://x.com/imparth73)
+- [Instagram](https://instagram.com/imparth.dev)
+- [GitHub](https://github.com/imparth7)
+- [LinkedIn](https://linkedin.com/in/imparth7)
+- [Medium](https://imparth7.medium.com)
+- [Dev.to](https://dev.to/imparth)
+
+If you have any questions, feedback, or suggestions, feel free to reach out on any platform!
