@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: lume_py
+Version: 0.2.0
+Summary: An SDK to connect to the Lume API
+License: MIT
+Author: Aryan Panda
+Author-email: aryan@lume.ai
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Requires-Dist: pydantic_settings (>=2.8.2,<3.0.0)
+Project-URL: repository, https://github.com/Lume-ai/lume_py
+Description-Content-Type: text/markdown
+
+# Lume Python SDK (`lume_py`)
+
+## Overview
+
+`lume_py` is a Python SDK designed to facilitate seamless interaction with the Lume API. It provides an intuitive and straightforward interface for developers to integrate Lume's services into their Python applications, enabling efficient access to Lume's powerful features.
+
+## Features
+
+- **Easy API Integration:** Quickly connect to and interact with the Lume API.
+- **Asynchronous Support:** Built on top of `httpx`, offering asynchronous capabilities for better performance.
+- **Pydantic Integration:** Utilizes `Pydantic` for data validation and settings management.
+- **Extensible:** Modular design allows for easy customization and extension.
+
+## Installation
+<!-- 
+bash
+pip install lume-py -->
