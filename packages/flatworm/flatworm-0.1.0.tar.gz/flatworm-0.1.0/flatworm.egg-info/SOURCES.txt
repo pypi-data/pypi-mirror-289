@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+flatworm.egg-info/PKG-INFO
+flatworm.egg-info/SOURCES.txt
+flatworm.egg-info/dependency_links.txt
+flatworm.egg-info/requires.txt
+flatworm.egg-info/top_level.txt
