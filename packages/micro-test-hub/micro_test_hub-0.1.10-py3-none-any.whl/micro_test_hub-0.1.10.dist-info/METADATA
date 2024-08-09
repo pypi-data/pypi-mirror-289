@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: micro_test_hub
+Version: 0.1.10
+Summary: A system to support the creation of integration tests for MOC microservices
+Author: Damianos Damianidis
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Click (==8.1.7)
+Requires-Dist: gitpython (==3.1.43)
+Requires-Dist: google-cloud-pubsub (==2.10.0)
+Requires-Dist: pydantic (==2.7.4)
+Requires-Dist: pyyaml (==6.0.1)
+Description-Content-Type: text/markdown
+
+# Introduction to Micro-Test-Hub
+
+**Micro-Test-Hub** is a versatile CLI tool designed to facilitate debugging and the creation of integration tests for systems built on the microservices architecture. It offers robust support for testing various types of services, categorized as follows:
+
+1. **Application Services**:
+   - **Container-Based Services**
+   - **Function-Based Services**
+
+2. **Cloud Services**:
+   - **GCP Firestore**
+   - **GCP Pub/Sub**
+   - **GCP Storage**
+
+3. **Databases**:
+   - **PostgreSQL**
+
+Micro-Test-Hub is designed with cross-platform compatibility in mind, making it adaptable to various environments where services may be deployed. Currently, the tool supports Docker Compose, with plans to extend support to additional platforms, including:
+
+- GCP Platform
+- Amazon Platform
+- Minikube
+
+To get started with Micro-Test-Hub, simply install the CLI tool using the following command:
+
+```bash
+pip install micro-test-hub
+```
+
+# Run your first integration tests
+You can start using Micro-Test-Hub by running the sample project, which includes basic integration tests for the moc system. Follow these steps:
+
+## GCP Artifacts Registry authentication
+
+To authenticate with Google Cloud Platform's Artifact Registry, follow these steps:
+
+1. **Install the Google Cloud SDK**: If you haven't already, download and install the Google Cloud SDK from [https://cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install).
+
+2. **Authenticate your Google Cloud account**:
+    Run the following command and follow the on-screen instructions to log in with your Google account:
+    
+    ```bash
+    gcloud auth login
+
+3. **Configure artifacts registry for region**: 
+   
+    ```bash
+    gcloud auth configure-docker europe-west1-docker.pkg.dev
+
+## Install micro-test-hub
+1. **Install micro-test-hub**:
+	
+	```bash
+	pip install micro-test-hub
+    ```
+
+2. **Copy the moc_integration_tests folder from repo to your local machine**:
+
+3. **change directory to the moc_integration_tests**:
+
+	```bash
+	cd moc_integration_tests
+4. **copy your application_default_credentials.json to moc_integration_tests/credentials folder**
+   ```bash
+   cp -f ~/.config/gcloud/application_default_credentials.json ./credentials
+5. copy the ouput of the following command and add it to gateway_sfm_sm_postgress.microhub file (line 13)
+   ```bash
+   export gcloud_id_token=$(gcloud auth print-identity-token) && echo $gcloud_id_token
+
+## Run micro-test-hub
+1. Detached mode (default)
+```bash
+micro-test-hub run-test
+```
+2. Attached mode
+```bash
+micro-test-hub run-test --mode attached
+```
+
+## Build Your Own Project from Scratch
+
+With Micro-Test-Hub, you can create your own project from scratch, defining the services, their types, and the dependencies they require. You can also specify a path for your Python tests, which must have `main.py` as the entry point module. Here’s a summary of the dependencies you need to define for each type of service:
+
+1. **Container/Docker Service**:
+   - `image_uri`
+   - `environment vars`
+
+2. **Function Service**:
+   - `code repo`
+   - `environment vars`
+
+3. **GCP Service**:
+   - The type of service (Firestore, Pub/Sub, Storage)
+
+4. **Database**:
+   - The initialization SQL file
+
+You can start by using the help command to see the supported commands:
+```bash
+micro-test-hub --help
+
