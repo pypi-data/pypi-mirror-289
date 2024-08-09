@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: goatfarm
+Version: 0.0.2
+Summary: TBD
+Home-page: https://github.com/tonythefreedom/goatfarm
+Author: tonythefreedom
+Author-email: tonymustbegreat@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+This is a test README file...
+
