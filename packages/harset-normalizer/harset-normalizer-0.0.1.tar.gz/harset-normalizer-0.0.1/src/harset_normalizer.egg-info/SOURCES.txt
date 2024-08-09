@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/data_file
+src/harset_normalizer.egg-info/PKG-INFO
+src/harset_normalizer.egg-info/SOURCES.txt
+src/harset_normalizer.egg-info/dependency_links.txt
+src/harset_normalizer.egg-info/entry_points.txt
+src/harset_normalizer.egg-info/requires.txt
+src/harset_normalizer.egg-info/top_level.txt
+tests/test_simple.py
