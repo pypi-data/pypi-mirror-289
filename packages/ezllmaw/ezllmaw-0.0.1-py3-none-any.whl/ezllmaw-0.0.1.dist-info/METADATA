@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ezllmaw
+Version: 0.0.1
+Summary: Easy LLM-Agentic Workflow
+Home-page: https://github.com/datanooblol/ezllmaw
+Author: data.noob.lol
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Easy LLM-Agentic Workflow
+
+Here is a wrapper library that will help you develop your LLM-Agentic workflow faster and easier.
+
+
