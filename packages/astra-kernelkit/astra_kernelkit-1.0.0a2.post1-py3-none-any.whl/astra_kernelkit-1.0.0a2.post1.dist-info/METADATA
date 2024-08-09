@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: astra-kernelkit
+Version: 1.0.0a2.post1
+Summary: CuPy-based Projectors for Computed Tomography
+Author: Adriaan Graas
+License: GPLv3
+Keywords: ASTRA,CUDA,GPU,Tomography,CT,Reconstruction,KernelKit
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE.md
+Requires-Dist: tqdm
+Requires-Dist: transforms3d
+Requires-Dist: jinja2
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: jupyter-sphinx ; extra == 'dev'
+Requires-Dist: numpydoc ; extra == 'dev'
+Requires-Dist: myst-parser ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-book-theme ; extra == 'dev'
+Requires-Dist: sphinxcontrib-bibtex ; extra == 'dev'
+
