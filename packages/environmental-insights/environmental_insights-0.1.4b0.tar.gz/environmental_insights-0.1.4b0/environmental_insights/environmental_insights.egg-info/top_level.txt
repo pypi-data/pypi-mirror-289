@@ -1,0 +1,6 @@
+environmental_insights
+environmental_insights_data
+environmental_insights_models
+environmental_insights_visulisations
+package
+temp_downloads
