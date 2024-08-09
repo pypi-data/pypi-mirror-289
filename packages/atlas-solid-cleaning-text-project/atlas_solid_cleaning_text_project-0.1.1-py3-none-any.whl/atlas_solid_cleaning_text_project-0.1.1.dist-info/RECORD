@@ -1,0 +1,16 @@
+scripts/__init__.py,sha256=vfF7HuQFz4gSTLxbQJWvF0JWjmFJLeuGKbFeEpz1xdk,458
+scripts/clean_text.py,sha256=udzY7aNRwbxFvhhTuKDccU4jpsxELACJkp2Xp3WJxbI,2456
+scripts/ent_ait_fix.py,sha256=nBivf9eyAfy925KdVd06W9sHoGKQZHgUj6oqtniGOK4,4433
+scripts/fix_lines.py,sha256=qR5B8U0XHkggo3RzyRPqTP4DENhEBfRz3KUF5pjSy5s,6359
+scripts/liaisons.py,sha256=dvLkPoKmI34WCY1sy4SrRWjFkgKX1av8SACJ8eKHZi4,7292
+scripts/name_correction.py,sha256=JC5HAhu4ht4ACR7nzqKJcn-lQaa77xuzquSZuwhgj9A,4022
+scripts/pdf_2_txt.py,sha256=2faox0THEm0Bp_2FqvgVe1Yegi3kPJV3QfVdpcTvwwM,2090
+scripts/remove_pnum_hilight_title.py,sha256=bDquO6WbzOVybx9P2yJCPZ89PdsPECtO70-eO5hh00s,6186
+scripts/replace_numbers.py,sha256=JYDg8WfojLFg5hw2pQlMgzta0DOLeQeG82BgkiXRgOs,2217
+scripts/replace_special_chars.py,sha256=RTWcVon8t5x908Kc_NcYhV5qkTL6rZYxrfIFXt1213I,2123
+scripts/replace_words.py,sha256=4WoBspmA5OWiQ-KmraV9SQ8S5LwDFtQUi5rO79oix04,3222
+scripts/split_chapters.py,sha256=_p8N235ywlZWfvO70X_UINV5yKJWQB25-pzXD0sZif4,3236
+atlas_solid_cleaning_text_project-0.1.1.dist-info/METADATA,sha256=1eshNds8n6_bOCvvhojc6QUp3oCWZLuSmosydPpX9NE,205
+atlas_solid_cleaning_text_project-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+atlas_solid_cleaning_text_project-0.1.1.dist-info/top_level.txt,sha256=rmzd5mewlrJy4sT608KPib7sM7edoY75AeqJeY3SPB4,8
+atlas_solid_cleaning_text_project-0.1.1.dist-info/RECORD,,
