@@ -1,0 +1,2 @@
+[console_scripts]
+awesome-script = my_awesome_module.awesome_code:main
