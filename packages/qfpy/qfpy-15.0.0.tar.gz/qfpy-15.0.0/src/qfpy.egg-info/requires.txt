@@ -1,0 +1,8 @@
+zhconv
+psutil
+chepy
+pycryptodome
+loguru
+pymupdf
+pyautogui
+pillow
