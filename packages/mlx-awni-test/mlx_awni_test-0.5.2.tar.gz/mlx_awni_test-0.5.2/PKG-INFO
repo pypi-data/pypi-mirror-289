@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mlx-awni-test
+Version: 0.5.2
+Summary: LLMs on Apple silicon with MLX and the Hugging Face Hub
+Home-page: https://github.com/ml-explore/mlx-examples
+Author: MLX Contributors
+Author-email: mlx@group.apple.com
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: testing
+Requires-Dist: datasets; extra == "testing"
+
+Description
