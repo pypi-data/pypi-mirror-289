@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+companies_shared_clients.egg-info/PKG-INFO
+companies_shared_clients.egg-info/SOURCES.txt
+companies_shared_clients.egg-info/dependency_links.txt
+companies_shared_clients.egg-info/top_level.txt
+company_house_clients/__init__.py
+company_house_clients/base_client.py
+company_house_clients/company_house/__init__.py
+company_house_clients/company_house/rest.py
+company_house_clients/company_house/streaming.py
