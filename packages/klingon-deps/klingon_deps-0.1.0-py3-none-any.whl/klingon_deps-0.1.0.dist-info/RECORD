@@ -1,0 +1,11 @@
+klingon_deps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+klingon_deps/cli.py,sha256=cRp4Qqrw-WjZo1DZ1DK_Ij1fH-feGDkqrrCq1U4-Lmo,1583
+klingon_deps/config_manager.py,sha256=vYnERAXDwDw3wMFso507BXJumNKgpYnMh_7wwITiyTQ,2608
+klingon_deps/dependency_manager.py,sha256=oUSTDhwpMuj_vpQmhLgA5hyGSCSDTeqaRrtAlXXdA9A,1873
+klingon_deps/language_detector.py,sha256=g_MWDngCs-dd76O3XDM_BVy6oP8OyQ65RjUvu1QMnek,4274
+klingon_deps-0.1.0.dist-info/LICENSE,sha256=q8k-8vmY4wNDPTvNefucEVGl8iKiqWyYeextbBKdlIg,1067
+klingon_deps-0.1.0.dist-info/METADATA,sha256=niu4sMdEzjbbzOnGXUBVzWH_AYTToom3gnBiaXxtT-w,101
+klingon_deps-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+klingon_deps-0.1.0.dist-info/entry_points.txt,sha256=9FdI_pdiHA6MNmdrHFAyp2AuWBEkz9OQG3Ez5a2vF4I,55
+klingon_deps-0.1.0.dist-info/top_level.txt,sha256=IljLeH0b0hfuPSG4ZChy7jpmSTcrm26McXKWf4Au6VE,13
+klingon_deps-0.1.0.dist-info/RECORD,,
