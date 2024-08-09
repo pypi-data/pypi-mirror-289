@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: neuscitk
+Version: 1.0.0
+Summary: Toolkit for companion course to UW Neusci 30x courses
+Home-page: https://github.com/jeremyschroeter/neuscitk
+Author: Jeremy Schroeter
+Author-email: jeremyschroeter@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
