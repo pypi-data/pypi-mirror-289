@@ -1,0 +1,12 @@
+PdfBluePrint/1-pdf2img.py,sha256=B218gdxqyBe5MxkiVPxpc-PrvI6nc95DklpTMc9T-sA,1625
+PdfBluePrint/2-black2final.py,sha256=eJWtJAFwRcLODYpAXZakKqns0uldS9WRmwWPoOoxxtY,1011
+PdfBluePrint/3-img2pdf.py,sha256=o1E5J3SvpWNbDDkMNp9QG3gn_ikIw0EHsjBgRGc4n5A,1452
+PdfBluePrint/4-dir_clr.py,sha256=53TnoMPGIA8GeQFcE-NZndEMk-nkLTiX4a7IGCMSa30,727
+PdfBluePrint/PdfBluePrint.py,sha256=TsnVeqn2OQA4n6hOEtO1f4FSeWOiEvMAYPYoNItH5rM,1326
+PdfBluePrint/__init__.py,sha256=LFSecRwatF2jzgyRB7cDth5vLH1qi6Zgj9iOmKbKDUw,90
+PdfBluePrint-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+PdfBluePrint-0.0.1.dist-info/METADATA,sha256=vnAqkdHofO7AIW3ogcfjii4jnEdCedcHuguRrfEsSgU,1444
+PdfBluePrint-0.0.1.dist-info/WHEEL,sha256=Wyh-_nZ0DJYolHNn1_hMa4lM7uDedD_RGVwbmTjyItk,91
+PdfBluePrint-0.0.1.dist-info/entry_points.txt,sha256=q2TsNFvwZ80lCTt-ndJRMOPI8KkQkl4zKoT0W5EsjbQ,71
+PdfBluePrint-0.0.1.dist-info/top_level.txt,sha256=wt95utI37UqLsIt_RCL19VhTbZn6poz3TyCLrORFDjs,13
+PdfBluePrint-0.0.1.dist-info/RECORD,,
