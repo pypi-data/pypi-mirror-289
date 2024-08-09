@@ -1,0 +1,84 @@
+[project]
+name = "roa_collector"
+version = "2.0.2"
+description = "Downloads ROA info solely for research purposes"
+readme = "README.md"
+authors = [
+    {name = "Justin Furuness", email = "jfuruness@gmail.com"},
+    {name = "Arvind Kasiliya", email = "arvind.kasiliya@uconn.edu"}
+]
+license = {file = "LICENSE.txt"}
+keywords = [
+    "Furuness",
+    "BGP",
+    "Hijack",
+    "ROA",
+    "ROV",
+]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3"
+]
+requires-python = ">=3.10"
+dependencies = [
+    "roa_checker==3.0.1",
+    "requests-cache==1.2.1",
+]
+
+[project.urls]
+homepage = "https://github.com/jfuruness/roa_collector.git"
+
+
+[project.optional-dependencies]
+test = [
+    "black==24.8.0",
+    "pre-commit==3.8.0",
+    "types-requests==2.32.0.20240712",
+    "types-PyYAML==6.0.12.20240808",
+    "mypy==1.11.1",
+    "flake8==7.1.1",
+    "tox==4.17.1",
+    "pytest-xdist==3.6.1",
+    "ruff==0.5.7",
+]
+
+[tool.setuptools.package-data]
+roa_collector = ["py.typed"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[project.scripts]
+roa_collector = "roa_collector.__main__:main"
+
+[tool.pytest.ini_options]
+python_files = "test*"
+python_classes = "Test*"
+python_functions = "test*"
+filterwarnings = [
+    "ignore::urllib3.exceptions.InsecureRequestWarning"
+]
+markers = [
+    "slow: All slow tests"
+]
+
+[tool.mypy]
+mypy_path = "roa_collector"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
