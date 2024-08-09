@@ -1,0 +1,9 @@
+README.md
+setup.py
+extract_moodle/__init__.py
+extract_moodle/main.py
+extract_moodle.egg-info/PKG-INFO
+extract_moodle.egg-info/SOURCES.txt
+extract_moodle.egg-info/dependency_links.txt
+extract_moodle.egg-info/entry_points.txt
+extract_moodle.egg-info/top_level.txt

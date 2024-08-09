@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: extract_moodle
+Version: 0.1.1
+Summary: A tool to extract Moodle files and organize them based on questions.
+Author: Your Name
+Author-email: your_email@example.com
+Requires-Python: >=3.6
