@@ -1,0 +1,7 @@
+1. alle übersetzungen mit genau 2 pfaden auf 1 zeile durchgehen
+2. alle übersetzungen mit >= 2 pfaden durchgehen
+3. noch mal auf übersetzngen mit == 2 pfaden checken
+3. alle übersetzungen mit == 1 vorkommen durchgehen, ob sie zusammengefasst werden können
+4. commit
+5. generate translations
+6. unfuck translations
