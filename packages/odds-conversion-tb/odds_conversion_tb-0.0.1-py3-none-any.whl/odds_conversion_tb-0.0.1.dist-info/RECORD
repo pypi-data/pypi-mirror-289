@@ -1,0 +1,11 @@
+odds_conversions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odds_conversions/american_odds.py,sha256=aJQDJHzSn3KCufnY7G0LfHs5WR-yGPWNx1uEWqex1_I,943
+odds_conversions/decimal_odds.py,sha256=MFaOcrBNNX5RggnZLtk-gL2Gc9AX297f0QdEo12KHCI,812
+odds_conversions/fractional_odds.py,sha256=bFW6x1c2F8A7NzV6cjV43jOA4F2POPPj4Vj5QIWVc64,963
+odds_conversions/odds_conversion.py,sha256=BQv9u4gjW-8ICetw60JHnpOefN5J8YIdiwG3zbmlpe4,2332
+odds_conversions/pot_odds.py,sha256=g-63P_IkVbIxzrp52IDHYcwZsKU6p6bLQkEPVQV-bVw,810
+odds_conversion_tb-0.0.1.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+odds_conversion_tb-0.0.1.dist-info/METADATA,sha256=JSgEFmYnzXDW8q6om-B1pytbry7kcq5gpDY-fvBFybA,1952
+odds_conversion_tb-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+odds_conversion_tb-0.0.1.dist-info/top_level.txt,sha256=VVGnItBkcGIa7uVhzVFi3rvUO55gm6-jzXVbCJfgVjE,17
+odds_conversion_tb-0.0.1.dist-info/RECORD,,
