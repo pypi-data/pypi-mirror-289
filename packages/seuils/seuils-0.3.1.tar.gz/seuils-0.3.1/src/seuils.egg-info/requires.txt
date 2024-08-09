@@ -1,0 +1,10 @@
+importlib
+fr-date
+
+[dev]
+wheel
+requests
+pytest
+ruff
+black
+pip-tools
