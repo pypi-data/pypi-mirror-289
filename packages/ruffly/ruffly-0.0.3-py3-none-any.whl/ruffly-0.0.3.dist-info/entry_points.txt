@@ -1,0 +1,2 @@
+[console_scripts]
+ruffly = ruffly.cli:run

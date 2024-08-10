@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: ruffly
+Version: 0.0.3
+Summary: Cli tool to add common config to pyroject.toml
+Author-email: Lewis Harvey <123@gmail.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: toml
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-mock ; extra == 'dev'
+Requires-Dist: types-toml ; extra == 'dev'
+Requires-Dist: pytest-random-order ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: poethepoet ; extra == 'dev'
+
+# Ruffly
+
+### Usage
+
+Cli tool to add common config to pyroject.toml.
+
+Basic usage:
+```commandline
+cd/project/with/pyrojecttoml ruffly
+```
+will add default config to pyproject.toml found in working directory.
+
+Additional arguments:
+
+- ```--dst``` The path to the target pytroject.toml to modify
+- ```--src``` The path to the source pytroject.toml to copy from (can be url)
+- ```--only-existing``` Only copies config for tools that exist int the target pyproject.toml
+- ```--tools``` A list of tools to copy config for
+- ```--dry-run``` Only prints the changes that would be made
+
+Current tools supported:
+- ruff
+- mypy
+- pytest
+- coverage
+- poe (poethepoet)
+
+### Installation
+
+```commandline
+pip install ruffly
+```
+
+### Development
+To setup the development environment and run linting and testing:
+
+```commandline
+python -m venv .venv
+source .venv/Scripts/activate  # or .venv/bin/activate on linux
+pip install -e .[dev]
+poe all
+```
+
+To test the install with pipx ```pipx install . --force```
+
+To build the package: ```python -m build --wheel```
