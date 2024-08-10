@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/moveread_table_detector.egg-info/PKG-INFO
+src/moveread_table_detector.egg-info/SOURCES.txt
+src/moveread_table_detector.egg-info/dependency_links.txt
+src/moveread_table_detector.egg-info/requires.txt
+src/moveread_table_detector.egg-info/top_level.txt
+src/table_detector/__init__.py
+src/table_detector/__init__.pyi
+src/table_detector/model.py
+src/table_detector/data/__init__.py
+src/table_detector/data/data.py
