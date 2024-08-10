@@ -1,0 +1,9 @@
+.DS_Store,sha256=2R_rk_Kfc8iEF0TdJocAOlTWUMzxqXUl-QPLlqOwRPw,6148
+facemood/__init__.py,sha256=i9bXKxqPu7VvyuVxv8zeivh5aiQIb1npohRv0s8egxU,78
+facemood/emotion_predictor.py,sha256=h2Da1A97MF-LE4colAKTfkhFwjiVDlj0j9Gx0UK6ISw,2164
+facemood/model__version1.0.0__.h5,sha256=dfVWGPpf-dO84AtdsAN_P7pVQeMvCsx0P1X2XcwP-do,4709704
+facemood-1.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+facemood-1.0.1.dist-info/METADATA,sha256=IqSEXsM56GJAQjyvb9qvTv_3zVOw72fAXVyaG2OfHUA,1145
+facemood-1.0.1.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+facemood-1.0.1.dist-info/top_level.txt,sha256=WhwUzS4oukzjvzkQrUTH36uULlGDZPiwC44j95aK0wg,9
+facemood-1.0.1.dist-info/RECORD,,
