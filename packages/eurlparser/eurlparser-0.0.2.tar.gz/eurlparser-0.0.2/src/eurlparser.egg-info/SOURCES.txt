@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/eurlparser/__init__.py
+src/eurlparser/eurlparser.py
+src/eurlparser.egg-info/PKG-INFO
+src/eurlparser.egg-info/SOURCES.txt
+src/eurlparser.egg-info/dependency_links.txt
+src/eurlparser.egg-info/requires.txt
+src/eurlparser.egg-info/top_level.txt
+tests/test_eurlparser.py
