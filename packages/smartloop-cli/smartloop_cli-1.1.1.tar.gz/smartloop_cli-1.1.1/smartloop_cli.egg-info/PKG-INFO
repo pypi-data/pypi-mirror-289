@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: smartloop-cli
+Version: 1.1.1
+Summary: smartloop-cli is now smartloop
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+Requires-Dist: smartloop
+
+# smartloop-cli is now smartloop
+
+This package has been renamed. Use `pip install smartloop` instead.
+
+New package: https://pypi.org/project/smartloop/

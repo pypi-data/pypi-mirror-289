@@ -1,0 +1,7 @@
+README.md
+setup.py
+smartloop_cli.egg-info/PKG-INFO
+smartloop_cli.egg-info/SOURCES.txt
+smartloop_cli.egg-info/dependency_links.txt
+smartloop_cli.egg-info/requires.txt
+smartloop_cli.egg-info/top_level.txt
