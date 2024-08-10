@@ -1,0 +1,9 @@
+_plibflac.pypy39-pp73-win_amd64.pyd,sha256=4HPRsZZU-wVsJyXPSWBZ-aBLGP_JB85OgH6jlrduQio,176640
+plibflac/__init__.py,sha256=moD-dLiGnatmgk7A2PQCzo2Z6Txpvzy0Nu4LdVuDNNA,274
+plibflac/_decoder.py,sha256=OdQc6wQX6b_hc2KyBpQan9KAwUBhV0vMmiKLjZ1SCSQ,2405
+plibflac/_encoder.py,sha256=eYsi94WAgxicS0480rd88hY0lZBWUr8plNLNUMJT0a4,2879
+plibflac-0.0.2.dist-info/LICENSE,sha256=Czg9WmPaZE9ijZnDOXbqZIftiaqlnwsyV5kt6sEXHms,35821
+plibflac-0.0.2.dist-info/METADATA,sha256=FNqnbQegOq-G0vdwnLWMCQqa5NDx9DlZi84HISScgXc,2300
+plibflac-0.0.2.dist-info/WHEEL,sha256=-wAfbAyAfAeht6wQxmDEiJvyA9C4FxNBdR0GU-KBusQ,106
+plibflac-0.0.2.dist-info/top_level.txt,sha256=Ekfy2QRYtfDD7vSTnYXnRhuMs2E_Z5KCmJXZofQbHio,19
+plibflac-0.0.2.dist-info/RECORD,,
