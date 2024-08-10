@@ -1,0 +1,8 @@
+bode_testing/__init__.py,sha256=athZVdwLsC6MczpZ8T16Qi3DXujKRHc7mhRWyreumBQ,182
+bode_testing/_bode_testing.py,sha256=5cLJ5gG8zvCH2obffiSf1HZDWrRM8X7jJKfeihd6Ij4,874
+bode_testing/requester/__init__.py,sha256=5oeWi99_1T2Yr9V2sL2KZJAj0eNYHkxgcdJWtQ_CdPk,34
+bode_testing/requester/_requester.py,sha256=qDYwzje4wJmbLhTx3XwfkHOU_TqJg--CnqlfD_tkYkA,335
+bode_testing-0.0.9.dist-info/METADATA,sha256=mBnPGONCfk92OLrZdw9r4L2GebE1VPPMxHs-2hGN48k,242
+bode_testing-0.0.9.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+bode_testing-0.0.9.dist-info/top_level.txt,sha256=h9hFjItYL0l-2oZ0md7esEUq2HICqSGD_DkwD_ptaps,13
+bode_testing-0.0.9.dist-info/RECORD,,
