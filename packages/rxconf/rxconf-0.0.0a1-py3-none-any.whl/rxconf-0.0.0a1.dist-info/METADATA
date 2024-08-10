@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: rxconf
+Version: 0.0.0a1
+Summary: Powerful and flexible library for dynamic configuration management in Python
+Home-page: https://github.com/realkarych/rxconf/
+License: MIT
+Keywords: config,configuration,settings,python
+Author: Andrey Karchevsky
+Author-email: karych@karych.ru
+Requires-Python: >=3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Project-URL: Documentation, https://realkarych.github.io/rxconf/
+Project-URL: Repository, https://github.com/realkarych/rxconf/
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <a href="https://github.com/realkarych/rxconf">
+  <img src="https://github.com/user-attachments/assets/bf4685c0-0d4b-4700-b56f-af751368bca0" alt="RxConf"></a>
+</p>
+
+<p align="center">
+    <em>RxConf library, easy to use, powerful and flexible for configuration management in Python</em>
+</p>
+
+---
+
+**Documentation:** <https://realkarych.github.io/rxconf/>
+
+**Source code:** <https://github.com/realkarych/rxconf/>
+
+---
+
+<h1 align="center">
+Currently in develop...
+</h1>
+
+- [ ] Implement config loaders:
+  - [x] Implement base class which will be inherited by concrete loaders
+  - [ ] Implement Environment Variables & `dotenv` loader
+  - [ ] Implement `yaml` loader
+  - [ ] Implement `toml` loader
+  - [ ] Implement `ini` loader
+  - [ ] Implement `json` loader
+
+  *Here in-need to minimize deps not from standart library.*
+
+- [ ] Implement reactive config-state observer.
+- [ ] Implement async reactive config-state observer.
+- [ ] Intruduce testing strategy: validation, race conditions etc.
+- [ ] Introduce core API structure and interfaces.
+- [ ] Provide examples and usecases for all public interfaces.
+
