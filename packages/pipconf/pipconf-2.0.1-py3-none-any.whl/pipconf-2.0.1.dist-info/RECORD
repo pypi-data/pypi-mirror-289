@@ -1,0 +1,11 @@
+pipconf/__init__.py,sha256=VHVPVFJQyZCiPd0hZCOiyScKopCRBN-Rw_DuNI9IksM,610
+pipconf/__main__.py,sha256=WydGoMTuvjYXA4ND6-H2Zk4FrxTMHatPyyEjGIBci2E,66
+pipconf/cli.py,sha256=Gxz79T4kXbEWajsFKOpij_KPm9ndwfm-bjmgP4mQfug,4088
+pipconf/configs.py,sha256=48252AnxGJ3C5g0mzvJMVo3MR7r8_Cxzv6Oc3rqqrjI,2680
+pipconf/consts.py,sha256=zrf1joUnep3jAFLbSwW-31ttYiKbCVJDTOt9MNBJrWg,316
+pipconf/templates/pip.conf,sha256=eNFkRsyLW1tPG8v8Kt89s_NeYzF9ZSsQKloefS6gL20,1324
+pipconf-2.0.1.dist-info/LICENSE,sha256=YCjq3cENrR_Uobw8hjOL-ohkCIPwbmwcTuQu4H8stEw,1330
+pipconf-2.0.1.dist-info/METADATA,sha256=UE2S1ntxJQcQ0LKo2NBg8fFaHuJefNUWa2KPZ-UvCTY,6683
+pipconf-2.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pipconf-2.0.1.dist-info/entry_points.txt,sha256=-Lnz6FCyVaCJc7eoaYY9SNhdPiU_lz0BNIImZ_b3wro,48
+pipconf-2.0.1.dist-info/RECORD,,
