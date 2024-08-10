@@ -1,0 +1,2 @@
+[console_scripts]
+buck = BuckTheDuck.__main__:main
