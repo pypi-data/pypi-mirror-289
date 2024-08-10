@@ -1,0 +1,12 @@
+COPYING
+MANIFEST.in
+NEWS
+README.md
+pyproject.toml
+sopel_norris/__init__.py
+sopel_norris.egg-info/PKG-INFO
+sopel_norris.egg-info/SOURCES.txt
+sopel_norris.egg-info/dependency_links.txt
+sopel_norris.egg-info/entry_points.txt
+sopel_norris.egg-info/requires.txt
+sopel_norris.egg-info/top_level.txt

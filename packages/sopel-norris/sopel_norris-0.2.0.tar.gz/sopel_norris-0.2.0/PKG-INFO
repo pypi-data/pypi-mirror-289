@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: sopel-norris
+Version: 0.2.0
+Summary: Chuck Norris joke plugin for Sopel IRC bots.
+Author-email: dgw <dgw@technobabbl.es>
+License: EFL-2.0
+Project-URL: Homepage, https://github.com/dgw/sopel-norris
+Project-URL: Bug Tracker, https://github.com/dgw/sopel-norris/issues
+Keywords: sopel,plugin,bot,irc
+Platform: Linux x86, x86-64
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: Eiffel Forum License (EFL)
+Classifier: License :: OSI Approved :: Eiffel Forum License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Python: <4,>=3.8
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: sopel>=7.1
+Requires-Dist: requests
+
+# sopel-norris
+
+Chuck Norris joke plugin for Sopel IRC bots.
+
+## Installing
+
+Releases are hosted on PyPI, so after installing Sopel, all you need is `pip`:
+
+```shell
+$ pip install sopel-norris
+```
+
+## Changelog
+
+### 0.2.0
+
+Updated for Sopel 8 + modern Python packaging. Now requires Sopel 7.1+ running
+on Python 3.8 or higher.
+
+
+### 0.1.0
+
+First release of `sopel-norris`.

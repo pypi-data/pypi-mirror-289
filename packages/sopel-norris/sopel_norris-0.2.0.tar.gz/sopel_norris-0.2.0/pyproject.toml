@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=63.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+platforms = ["Linux x86, x86-64"]
+
+[tool.setuptools.packages.find]
+include = ["sopel_norris", "sopel_norris.*"]
+namespaces = false
+
+[tool.setuptools.dynamic]
+readme = { file=["README.md", "NEWS"], content-type="text/markdown" }
+
+[project]
+name = "sopel-norris"
+version = "0.2.0"
+description = "Chuck Norris joke plugin for Sopel IRC bots."
+
+authors = [
+  { name="dgw", email="dgw@technobabbl.es" },
+]
+
+license = { text="EFL-2.0" }
+dynamic = ["readme"]
+
+classifiers = [
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: Eiffel Forum License (EFL)",
+  "License :: OSI Approved :: Eiffel Forum License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Communications :: Chat :: Internet Relay Chat",
+]
+keywords = [
+  "sopel",
+  "plugin",
+  "bot",
+  "irc",
+]
+
+requires-python = ">=3.8, <4"
+dependencies = [
+  "sopel>=7.1",
+  "requests",  # Sopel itself requires this, but 'tis better to be explicit
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dgw/sopel-norris"
+"Bug Tracker" = "https://github.com/dgw/sopel-norris/issues"
+
+[project.entry-points."sopel.plugins"]
+"norris" = "sopel_norris"

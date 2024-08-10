@@ -1,0 +1,11 @@
+## Changelog
+
+### 0.2.0
+
+Updated for Sopel 8 + modern Python packaging. Now requires Sopel 7.1+ running
+on Python 3.8 or higher.
+
+
+### 0.1.0
+
+First release of `sopel-norris`.
