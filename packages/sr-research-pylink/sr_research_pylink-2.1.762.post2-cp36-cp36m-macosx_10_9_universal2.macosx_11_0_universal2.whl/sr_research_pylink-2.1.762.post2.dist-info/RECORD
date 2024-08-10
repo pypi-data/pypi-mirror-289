@@ -1,0 +1,12 @@
+pylink/pylink_c.cpython-36m-darwin.so,sha256=FN-rN3TcfMGbZuGg0k1aU9GUoji3afNzNggLJ4EKINY,409680
+pylink/eyelink_core.dylib,sha256=dPQ85DVIbDXDCuFawEohVEtIOCkrxFYqkAhIqdIMck0,485184
+pylink/__version__.py,sha256=3Blmw8ZOxHoyjFHVkWCwEB5WqCN4MY2J5RUdNl7DjcQ,342
+pylink/constants.py,sha256=GhcLM6pGJCVrKlaUo8eHil9XesOO2XeXQbzNLXQgkTk,11185
+pylink/__init__.py,sha256=TpbhTbqBpIe6qTuvHR8oycjbC9w7zJb2MnD8rvg3eNc,5194
+pylink/eyelink.py,sha256=4ZbEAItB6Eaqg3nf_CPBEFrdluz3OgWcb6Mr59nPUKI,49216
+pylink/tracker.py,sha256=18wjGbCOe3e3f7t8y5-Zb4uZFocByJY_rwiYAdjTWUM,62621
+pylink/pylink_cg.cpython-36m-darwin.so,sha256=OhvRfpe3khmeGH3kCaABjtUt5eZZYI3cz5oPF9QbEyg,63376
+sr_research_pylink-2.1.762.post2.dist-info/WHEEL,sha256=SCcPaD1xriZouD6EXl7AgcYiQmH1NgiskymVTsykSG4,110
+sr_research_pylink-2.1.762.post2.dist-info/METADATA,sha256=IF9NqpuRRNyCcgFah0uMqNTbIMoafWJide8BsC2xAK0,2358
+sr_research_pylink-2.1.762.post2.dist-info/top_level.txt,sha256=rp5dBRqXy7bWI5KAjVS5tGv8hvFdYQt-jiJBmFBwgn0,7
+sr_research_pylink-2.1.762.post2.dist-info/RECORD,,
