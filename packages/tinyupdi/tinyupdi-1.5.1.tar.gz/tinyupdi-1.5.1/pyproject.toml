@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name         = "tinyupdi"
+version      = "1.5.1"
+description  = "Minimal UPDI Programming Tool for tinyAVR"
+keywords     = ["ISP", "AVR", "Microchip", "ATtiny", "tinyAVR", "UPDI", "microcontroller"]
+dependencies = ["pyserial"]
+requires-python = ">=3.8"
+authors = [
+    { name="Stefan Wagner", email="wagiminator@web.de" },
+]
+maintainers = [
+    { name="Stefan Wagner", email="wagiminator@web.de" },
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Embedded Systems",
+]
+
+[project.scripts]
+tinyupdi = "tinyupdi.tinyupdi:_main"
+
+[project.urls]
+Homepage   = "https://wagiminator.github.io/"
+Repository = "https://github.com/wagiminator/MCU-Flash-Tools"
+Issues     = "https://github.com/wagiminator/MCU-Flash-Tools/issues"

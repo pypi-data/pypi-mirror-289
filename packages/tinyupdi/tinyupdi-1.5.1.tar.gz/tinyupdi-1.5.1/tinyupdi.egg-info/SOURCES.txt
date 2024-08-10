@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+tinyupdi/tinyupdi.py
+tinyupdi.egg-info/PKG-INFO
+tinyupdi.egg-info/SOURCES.txt
+tinyupdi.egg-info/dependency_links.txt
+tinyupdi.egg-info/entry_points.txt
+tinyupdi.egg-info/requires.txt
+tinyupdi.egg-info/top_level.txt
