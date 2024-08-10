@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pytorch-bio-transformations
+Version: 0.0.2
+Summary: Pytorch Biologically Motivated Transformations>
+Home-page: https://github.com/CeadeS/BioLearn
+Author: Martin Hofmann
+Author-email: Martin.Hofmann@tu-ilmenau.de
+License: MIT License
+Keywords: python,biomodule,pytorch
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3
+License-File: LICENSE
+
+UNKNOWN
+

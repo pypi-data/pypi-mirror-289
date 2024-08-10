@@ -1,0 +1,12 @@
+LICENSE
+pyproject.toml
+setup.py
+bio_transformations/__init__.py
+bio_transformations/bio_config.py
+bio_transformations/bio_converter.py
+bio_transformations/bio_module.py
+pytorch_bio_transformations.egg-info/PKG-INFO
+pytorch_bio_transformations.egg-info/SOURCES.txt
+pytorch_bio_transformations.egg-info/dependency_links.txt
+pytorch_bio_transformations.egg-info/requires.txt
+pytorch_bio_transformations.egg-info/top_level.txt
