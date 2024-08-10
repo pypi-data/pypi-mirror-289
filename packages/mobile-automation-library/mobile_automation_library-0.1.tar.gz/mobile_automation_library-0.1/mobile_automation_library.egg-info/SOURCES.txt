@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+mobile_automation_library/AppKeyword.py
+mobile_automation_library/__init__.py
+mobile_automation_library.egg-info/PKG-INFO
+mobile_automation_library.egg-info/SOURCES.txt
+mobile_automation_library.egg-info/dependency_links.txt
+mobile_automation_library.egg-info/requires.txt
+mobile_automation_library.egg-info/top_level.txt

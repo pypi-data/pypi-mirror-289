@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: mobile_automation_library
+Version: 0.1
+Summary: Uma biblioteca para automação mobile com Robot Framework
+Home-page: https://github.com/Skisperd/libray_robotframework
+Author: Tiago Dias
+Author-email: tiagooliveira.qa@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Robot Framework
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: robotframework
+Requires-Dist: Appium-Python-Client
+Requires-Dist: robotframework-appiumlibrary
+
+# Mobile Automation Library
+
+Esta é uma biblioteca para automação de testes mobile utilizando Robot Framework e Appium.
+
+## Instalação
+
+Você pode instalar a biblioteca utilizando o pip:
+
+```bash
+pip install mobile-automation-library
+```
+
+## Uso
+
+Aqui está um exemplo de como usar a biblioteca no Robot Framework:
+
+```robot
+*** Settings ***
+Library    MobileAutomationLibrary
+
+*** Test Cases ***
+Teste Verificação de Elemento
+    FW Verificar Localizador Visível e Habilitado    xpath=//button[@id='submit']
+```
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com este projeto. Basta fazer um fork e enviar um pull request.
