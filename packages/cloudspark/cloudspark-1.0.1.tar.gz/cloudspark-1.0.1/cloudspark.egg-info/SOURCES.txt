@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+app/__init__.py
+app/aws_connect.py
+app/lambda_connect.py
+app/s3_connect.py
+app/utils.py
+cloudspark.egg-info/PKG-INFO
+cloudspark.egg-info/SOURCES.txt
+cloudspark.egg-info/dependency_links.txt
+cloudspark.egg-info/requires.txt
+cloudspark.egg-info/top_level.txt
