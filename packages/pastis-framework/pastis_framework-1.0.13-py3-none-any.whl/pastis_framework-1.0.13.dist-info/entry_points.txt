@@ -1,0 +1,4 @@
+[console_scripts]
+pastis-aflpp = pastisaflpp.__main__:main
+pastis-honggfuzz = pastishonggfuzz.__main__:main
+pastis-tritondse = pastistritondse.__main__:main
