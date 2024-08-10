@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: jiav-backend-command
+Version: 0.2.0
+Summary: Command backed for jiav
+Home-page: https://github.com/vkhitrin/jiav-backend-command
+License: BSD-3-Clause
+Author: Vadim Khitrin
+Author-email: me@vkhitrin.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+Project-URL: Documentation, https://jiav.readthedocs.io
+Project-URL: Repository, https://github.com/vkhitrin/jiav-backend-command
+Description-Content-Type: text/markdown
+
+# jiav-backend-command
+
+> [!WARNING]
+> This backend is risky since it allows users to execute arbitrary commands, and use it at your own risk.
+
+> [!NOTE]
+> This package does not install Ansible itself;
+
+A command backend for [jiav](https://github.com/vkhitrin/jiav).
+
+## Documentation
+
+Visit <https://jiav.readthedocs.io/en/latest/command_backend.html>.
+
+## Requirements
+
+Install [jiav](<[jiav](https://github.com/vkhitrin/jiav)>).  
+`jiav` requires Python `>= 3.8`.
+
+
+## Installation
+
+### Remote
+
+Install from remote:
+
+```bash
+pip3 install jiav-backend-command
+```
+
+Inject to a `pipx` environment:
+
+```bash
+pipx inject jiav jiav-backend-command
+```
+
+### Local
+
+Install from the local repository:
+
+```bash
+pip3 install .
+```
+
+Inject to a `pipx` environment:
+
+```bash
+pipx inject jiav ../jiav-backend-command
+```
+
+## Contributing
+
+**All contributions are welcome!**
+

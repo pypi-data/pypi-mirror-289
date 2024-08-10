@@ -1,0 +1,3 @@
+[jiav.backend]
+command=jiav_command.CommandBackend
+
