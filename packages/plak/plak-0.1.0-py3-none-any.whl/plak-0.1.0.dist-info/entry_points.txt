@@ -1,0 +1,3 @@
+[console_scripts]
+plak=plak.main:app
+

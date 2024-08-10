@@ -1,0 +1,12 @@
+plak/.DS_Store,sha256=potM1IA_VYsscWmNzc96ljmRQAoAKMlyRj2VHwyq3cU,6148
+plak/__init__.py,sha256=Wv6QatM0qEsfQRUogeVkPdFfKf_5Eg-517zPI41SIOc,43
+plak/__main__.py,sha256=TcwATvOWo8CCP4NB7zytHxidbBHajW12bisTn9OJVVQ,79
+plak/domain.py,sha256=xp_Qzz_ae77i8yxKBoPDYGqngp4UwHiUPzcL4YvvCd4,603
+plak/main.py,sha256=Cl7MSska4cYPu20akrTIwmDOWrWOP7TOFJVutc3LXOE,847
+plak/server.py,sha256=04Fxl9cs9X_uCN4Zet4QoDiCS5RuXt2cVV4YuL_Qfbk,668
+plak/sshkey.py,sha256=C6esuENHRw6ICHQmgB3enM3nHkyDRd9-LGjOYvipkJk,365
+plak-0.1.0.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+plak-0.1.0.dist-info/METADATA,sha256=FbuNnR1Uyarash26xPxBy_MDkFjJ_sq1aAd_qnt6Kw4,3073
+plak-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+plak-0.1.0.dist-info/entry_points.txt,sha256=hiRUmOohsd0RVIFW9B2ZBAXLWJYH_Ii4hSqP8luyfII,38
+plak-0.1.0.dist-info/RECORD,,
