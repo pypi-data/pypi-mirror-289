@@ -1,0 +1,8 @@
+bin
+dist
+docs
+logs
+release_notes
+shared_kernel
+test_logs
+venv
