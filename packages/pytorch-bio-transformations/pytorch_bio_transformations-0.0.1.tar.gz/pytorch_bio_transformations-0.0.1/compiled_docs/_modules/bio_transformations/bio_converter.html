@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bio_transformations.bio_converter &mdash; Bio Transformations 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Bio Transformations
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts.html">Biological Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_usage.html">Advanced Usage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">bio_transformations</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Bio Transformations</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">bio_transformations.bio_converter</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for bio_transformations.bio_converter</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+
+<span class="kn">from</span> <span class="nn">bio_transformations.bio_config</span> <span class="kn">import</span> <span class="n">BioConfig</span><span class="p">,</span> <span class="n">DEFAULT_BIO_CONFIG</span>
+<span class="kn">from</span> <span class="nn">bio_transformations.bio_module</span> <span class="kn">import</span> <span class="n">BioModule</span>
+
+
+<div class="viewcode-block" id="BioConverter">
+<a class="viewcode-back" href="../../bio_transformations.html#bio_transformations.bio_converter.BioConverter">[docs]</a>
+<span class="k">class</span> <span class="nc">BioConverter</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A utility class to convert standard PyTorch modules to BioNet modules with bio-inspired modifications.</span>
+
+<span class="sd">    This class implements modifications inspired by dendritic spine dynamics observed in our research,</span>
+<span class="sd">    potentially enhancing the learning and adaptability of artificial neural networks.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">BioConfig</span> <span class="o">=</span> <span class="n">DEFAULT_BIO_CONFIG</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the BioConverter with flexible parameters.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            config: BioConfig object containing the parameters.</span>
+<span class="sd">            **kwargs: Additional keyword arguments to override config parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BioConverter.from_dict">
+<a class="viewcode-back" href="../../bio_transformations.html#bio_transformations.bio_converter.BioConverter.from_dict">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">config_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BioConverter</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a BioConverter instance from a dictionary of parameters.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            config_dict: Dictionary of parameter names and values.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A BioConverter instance with the specified parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">BioConfig</span><span class="p">(</span><span class="o">**</span><span class="n">config_dict</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="BioConverter.get_config">
+<a class="viewcode-back" href="../../bio_transformations.html#bio_transformations.bio_converter.BioConverter.get_config">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_config</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BioConfig</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the current configuration of the BioConverter.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The current BioConfig object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span></div>
+
+
+<div class="viewcode-block" id="BioConverter.update_config">
+<a class="viewcode-back" href="../../bio_transformations.html#bio_transformations.bio_converter.BioConverter.update_config">[docs]</a>
+    <span class="k">def</span> <span class="nf">update_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Updates the configuration of the BioConverter.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **kwargs: Keyword arguments to update in the configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BioConverter.convert">
+<a class="viewcode-back" href="../../bio_transformations.html#bio_transformations.bio_converter.BioConverter.convert">[docs]</a>
+    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_class_or_instance</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">],</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">],</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Converts a given module class or instance by adding bio-inspired modifications.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            module_class_or_instance: The module class or instance to convert.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The converted module class or instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module_class_or_instance</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_instance</span><span class="p">(</span><span class="n">module_class_or_instance</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module_class_or_instance</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">module_class_or_instance</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_class</span><span class="p">(</span><span class="n">module_class_or_instance</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported type for module_class_or_instance: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">module_class_or_instance</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_convert_instance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Converts an initialized module instance by adding bio-inspired modifications.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            module: The initialized module instance to convert.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The converted module instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">automark_last_module_for_weight_split_skip</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+        <span class="n">module</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bio_modulize</span><span class="p">)</span>
+
+        <span class="c1"># Add BioModule functions to the instance</span>
+        <span class="k">for</span> <span class="n">func_name</span> <span class="ow">in</span> <span class="n">BioModule</span><span class="o">.</span><span class="n">exposed_functions</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">func_name</span><span class="p">,</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_create_instance_method</span><span class="p">(</span><span class="n">func_name</span><span class="p">),</span> <span class="n">module</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">module</span>
+
+    <span class="k">def</span> <span class="nf">_create_instance_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a method that applies a BioModule function to all submodules.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            func_name: The name of the BioModule function to apply.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A callable that applies the BioModule function to all submodules.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">instance_method</span><span class="p">(</span><span class="n">module</span><span class="p">):</span>
+            <span class="k">def</span> <span class="nf">apply_func</span><span class="p">(</span><span class="n">_self</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">_self</span><span class="p">,</span> <span class="s1">&#39;bio_mod&#39;</span><span class="p">):</span>
+                    <span class="nb">getattr</span><span class="p">(</span><span class="n">_self</span><span class="o">.</span><span class="n">bio_mod</span><span class="p">,</span> <span class="n">func_name</span><span class="p">)()</span>
+
+            <span class="n">module</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">apply_func</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">instance_method</span>
+
+<div class="viewcode-block" id="BioConverter.automark_last_module_for_weight_split_skip">
+<a class="viewcode-back" href="../../bio_transformations.html#bio_transformations.bio_converter.BioConverter.automark_last_module_for_weight_split_skip">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">automark_last_module_for_weight_split_skip</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+        <span class="n">learn_modules</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">module</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">children</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">)):</span>
+                <span class="n">learn_modules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">learn_modules</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">BioConverter</span><span class="o">.</span><span class="n">mark_skip_weight_splitting</span><span class="p">(</span><span class="n">learn_modules</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_convert_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Converts a given module class by adding bio-inspired modifications.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            module_class: The module class to convert.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The converted module class.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module_class</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;module_class must be a class; instead got: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">module_class</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">_apply_to_submodules</span><span class="p">(</span><span class="n">method_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">],</span> <span class="kc">None</span><span class="p">]:</span>
+            <span class="k">def</span> <span class="nf">_apply_method</span><span class="p">(</span><span class="n">module</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s1">&#39;bio_mod&#39;</span><span class="p">):</span>
+                    <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">bio_mod</span><span class="p">,</span> <span class="n">method_name</span><span class="p">)()</span>
+
+            <span class="k">return</span> <span class="n">_apply_method</span>
+
+        <span class="k">def</span> <span class="nf">wrap_init</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+            <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+            <span class="k">def</span> <span class="nf">wrapped_init</span><span class="p">(</span><span class="n">_self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+                <span class="n">func</span><span class="p">(</span><span class="n">_self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">automark_last_module_for_weight_split_skip</span><span class="p">(</span><span class="n">_self</span><span class="p">)</span>
+                <span class="n">_self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bio_modulize</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">wrapped_init</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">module_class</span><span class="p">,</span> <span class="s2">&quot;__inner__init__&quot;</span><span class="p">):</span>
+            <span class="n">module_class</span><span class="o">.</span><span class="n">__inner__init__</span> <span class="o">=</span> <span class="n">module_class</span><span class="o">.</span><span class="fm">__init__</span>
+
+        <span class="n">module_class</span><span class="o">.</span><span class="fm">__init__</span> <span class="o">=</span> <span class="n">wrap_init</span><span class="p">(</span><span class="n">module_class</span><span class="o">.</span><span class="n">__inner__init__</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">func_name</span> <span class="ow">in</span> <span class="n">BioModule</span><span class="o">.</span><span class="n">exposed_functions</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">module_class</span><span class="p">,</span> <span class="n">func_name</span><span class="p">,</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="n">func_name</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">_apply_to_submodules</span><span class="p">(</span><span class="n">fn</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="n">module_class</span>
+
+<div class="viewcode-block" id="BioConverter.__call__">
+<a class="viewcode-back" href="../../bio_transformations.html#bio_transformations.bio_converter.BioConverter.__call__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Makes the BioConverter callable, allowing for convenient conversion of module classes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">module_class</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_bio_modulize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds bio-inspired modifications to a module.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            module: The module to modify.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s1">&#39;bio_mod&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_update_bio_mod</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handle_linear</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handle_conv2d</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_handle_linear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds bio-inspired modifications to an nn.Linear module.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s1">&#39;bio_mod&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_validate_weight_splitting_neurons</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">weight_splitting_Gamma</span><span class="p">,</span> <span class="n">module</span><span class="o">.</span><span class="n">in_features</span><span class="p">)</span>
+            <span class="n">module</span><span class="o">.</span><span class="n">add_module</span><span class="p">(</span><span class="s1">&#39;bio_mod&#39;</span><span class="p">,</span> <span class="n">BioModule</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">module</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">))</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_requires_weight_splitting</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">in_features</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s2">&quot;weight_splitting_skip&quot;</span><span class="p">):</span>
+                <span class="n">module</span><span class="o">.</span><span class="n">forward</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wrap_forward_with_weight_splitting</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">forward</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_handle_conv2d</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds bio-inspired modifications to an nn.Conv2d module.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s1">&#39;bio_mod&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_validate_weight_splitting_neurons</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">weight_splitting_Gamma</span><span class="p">,</span> <span class="n">module</span><span class="o">.</span><span class="n">out_channels</span><span class="p">)</span>
+            <span class="n">module</span><span class="o">.</span><span class="n">add_module</span><span class="p">(</span><span class="s1">&#39;bio_mod&#39;</span><span class="p">,</span> <span class="n">BioModule</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">module</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">))</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_requires_weight_splitting</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">out_channels</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s2">&quot;weight_splitting_skip&quot;</span><span class="p">):</span>
+                <span class="n">module</span><span class="o">.</span><span class="n">forward</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wrap_forward_with_weight_splitting</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">forward</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_update_bio_mod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Updates an existing bio_mod in the module.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            module: The module containing bio_mod to update.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">module</span><span class="o">.</span><span class="n">bio_mod</span> <span class="o">=</span> <span class="n">BioModule</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">module</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_requires_weight_splitting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_features</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Checks if weight_splitting is required based on the number of features.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            num_features: The number of features in the module.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            True if weight_splitting is required, False otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">weight_splitting_Gamma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">weight_splitting_Gamma</span>
+        <span class="k">return</span> <span class="n">weight_splitting_Gamma</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">num_features</span> <span class="o">%</span> <span class="n">weight_splitting_Gamma</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">_wrap_forward_with_weight_splitting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forward_func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Wraps the forward function with the weight_splitting step.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            forward_func: The original forward function.</span>
+<span class="sd">            dim: The dimension of the input tensor (2 for linear layers, 4 for convolutional layers).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The wrapped forward function with weight_splitting.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">weight_splitting_func</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+            <span class="n">weight_splitting_Gamma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">weight_splitting_Gamma</span>
+            <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">assert</span> <span class="n">x</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Input tensor must be 2D&quot;</span>
+                <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">repeat_interleave</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">weight_splitting_Gamma</span><span class="p">,</span> <span class="n">weight_splitting_Gamma</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+                    <span class="n">weight_splitting_Gamma</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="k">assert</span> <span class="n">x</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Input tensor must be 4D&quot;</span>
+                <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">repeat_interleave</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">weight_splitting_Gamma</span><span class="p">,</span> <span class="n">weight_splitting_Gamma</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
+                        <span class="mi">2</span><span class="p">),</span> <span class="n">weight_splitting_Gamma</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">forward_func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">wrapped_forward</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">forward_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">weight_splitting_activation_function</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">weight_splitting_func</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">wrapped_forward</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_validate_weight_splitting_neurons</span><span class="p">(</span><span class="n">weight_splitting_Gamma</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num_features</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validates that the number of weight_splitting neurons is appropriate.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            weight_splitting_Gamma: Number of neurons to weight_splitting.</span>
+<span class="sd">            num_features: Number of features in the module.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If weight_splitting_Gamma is greater than 1 and does not evenly divide num_features.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">weight_splitting_Gamma</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">num_features</span> <span class="o">%</span> <span class="n">weight_splitting_Gamma</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;weight_splitting_Gamma (</span><span class="si">{</span><span class="n">weight_splitting_Gamma</span><span class="si">}</span><span class="s2">) must evenly divide the number of features (</span><span class="si">{</span><span class="n">num_features</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BioConverter.mark_skip_weight_splitting">
+<a class="viewcode-back" href="../../bio_transformations.html#bio_transformations.bio_converter.BioConverter.mark_skip_weight_splitting">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">mark_skip_weight_splitting</span><span class="p">(</span><span class="n">module</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Marks a module to skip weight_splitting.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            module: The module to mark.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The marked module.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">module</span><span class="o">.</span><span class="n">weight_splitting_skip</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="n">module</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Your Name.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bio_transformations package &mdash; Bio Transformations 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="bio_transformations" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Bio Transformations
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Biological Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Usage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">bio_transformations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">bio_transformations package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#key-components">Key Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-bio_transformations.bio_converter">bio_transformations.bio_converter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-bio_transformations.bio_module">bio_transformations.bio_module module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-bio_transformations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Bio Transformations</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">bio_transformations</a></li>
+      <li class="breadcrumb-item active">bio_transformations package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bio_transformations.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="bio-transformations-package">
+<h1>bio_transformations package<a class="headerlink" href="#bio-transformations-package" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The <cite>bio_transformations</cite> package implements biologically inspired modifications to artificial neural networks. It enhances the learning capabilities of neural networks by mimicking the plasticity and stability characteristics observed in biological synapses.</p>
+</section>
+<section id="key-components">
+<h2>Key Components<a class="headerlink" href="#key-components" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><a class="reference internal" href="#bio-converter"><span class="std std-ref">BioConverter</span></a></p>
+<p>The main interface for converting standard PyTorch modules to bio-inspired versions.</p>
+</li>
+<li><p><a class="reference internal" href="#bio-module"><span class="std std-ref">BioModule</span></a></p>
+<p>The core class implementing biologically inspired modifications.</p>
+</li>
+</ol>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<section id="module-bio_transformations.bio_converter">
+<span id="bio-transformations-bio-converter-module"></span><span id="bio-converter"></span><h3>bio_transformations.bio_converter module<a class="headerlink" href="#module-bio_transformations.bio_converter" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="bio_transformations.bio_converter.BioConverter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bio_transformations.bio_converter.</span></span><span class="sig-name descname"><span class="pre">BioConverter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(Identity(),</span> <span class="pre">0.16,</span> <span class="pre">0.6,</span> <span class="pre">4.5e-05,</span> <span class="pre">8.0,</span> <span class="pre">0,</span> <span class="pre">False,</span> <span class="pre">0.1,</span> <span class="pre">2.0,</span> <span class="pre">0.2)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_converter.html#BioConverter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_converter.BioConverter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A utility class to convert standard PyTorch modules to BioNet modules with bio-inspired modifications.</p>
+<p>This class implements modifications inspired by dendritic spine dynamics observed in our research,
+potentially enhancing the learning and adaptability of artificial neural networks.</p>
+<dl class="field-list simple">
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_converter.BioConverter.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_class</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_converter.html#BioConverter.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_converter.BioConverter.__call__" title="Link to this definition"></a></dt>
+<dd><p>Makes the BioConverter callable, allowing for convenient conversion of module classes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Type</em>[<em>Module</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_converter.BioConverter.automark_last_module_for_weight_split_skip">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">automark_last_module_for_weight_split_skip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_converter.html#BioConverter.automark_last_module_for_weight_split_skip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_converter.BioConverter.automark_last_module_for_weight_split_skip" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_converter.BioConverter.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_class_or_instance</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_converter.html#BioConverter.convert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_converter.BioConverter.convert" title="Link to this definition"></a></dt>
+<dd><p>Converts a given module class or instance by adding bio-inspired modifications.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>module_class_or_instance</strong> (<em>Type</em><em>[</em><em>Module</em><em>] </em><em>| </em><em>Module</em>) – The module class or instance to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The converted module class or instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Type</em>[<em>Module</em>] | <em>Module</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_converter.BioConverter.from_dict">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_converter.html#BioConverter.from_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_converter.BioConverter.from_dict" title="Link to this definition"></a></dt>
+<dd><p>Creates a BioConverter instance from a dictionary of parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config_dict</strong> (<em>dict</em>) – Dictionary of parameter names and values.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A BioConverter instance with the specified parameters.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#bio_transformations.bio_converter.BioConverter" title="bio_transformations.bio_converter.BioConverter"><em>BioConverter</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_converter.BioConverter.get_config">
+<span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_converter.html#BioConverter.get_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_converter.BioConverter.get_config" title="Link to this definition"></a></dt>
+<dd><p>Returns the current configuration of the BioConverter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current BioConfig object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BioConfig</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_converter.BioConverter.mark_skip_weight_splitting">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mark_skip_weight_splitting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_converter.html#BioConverter.mark_skip_weight_splitting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_converter.BioConverter.mark_skip_weight_splitting" title="Link to this definition"></a></dt>
+<dd><p>Marks a module to skip weight_splitting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>module</strong> (<em>Module</em>) – The module to mark.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The marked module.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Module</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_converter.BioConverter.update_config">
+<span class="sig-name descname"><span class="pre">update_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_converter.html#BioConverter.update_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_converter.BioConverter.update_config" title="Link to this definition"></a></dt>
+<dd><p>Updates the configuration of the BioConverter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> (<em>Any</em>) – Keyword arguments to update in the configuration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p>The <cite>BioConverter</cite> class is responsible for converting standard PyTorch modules to BioNet modules with bio-inspired modifications. It provides methods for:</p>
+<ul class="simple">
+<li><p>Converting entire model architectures</p></li>
+<li><p>Configuring bio-inspired parameters</p></li>
+<li><p>Applying weight splitting techniques</p></li>
+</ul>
+</section>
+<section id="module-bio_transformations.bio_module">
+<span id="bio-transformations-bio-module-module"></span><span id="bio-module"></span><h3>bio_transformations.bio_module module<a class="headerlink" href="#module-bio_transformations.bio_module" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="bio_transformations.bio_module.BioModule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bio_transformations.bio_module.</span></span><span class="sig-name descname"><span class="pre">BioModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(Identity(),</span> <span class="pre">0.16,</span> <span class="pre">0.6,</span> <span class="pre">4.5e-05,</span> <span class="pre">8.0,</span> <span class="pre">0,</span> <span class="pre">False,</span> <span class="pre">0.1,</span> <span class="pre">2.0,</span> <span class="pre">0.2)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_module.html#BioModule"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_module.BioModule" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<p>A module that provides bio-inspired modifications to standard PyTorch modules.</p>
+<p>This module implements various biologically-inspired learning mechanisms,
+including volume-dependent learning rates, fuzzy learning rates, and weight crystallization.</p>
+<dl class="field-list simple">
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_module.BioModule.crystallize">
+<span class="sig-name descname"><span class="pre">crystallize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_module.html#BioModule.crystallize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_module.BioModule.crystallize" title="Link to this definition"></a></dt>
+<dd><p>Crystallizes the weights of the parent module by adjusting gradient scaling.</p>
+<p>This process mimics the biological phenomenon of synaptic stabilization,
+where frequently used synapses become less plastic over time.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_module.BioModule.dalian_network_initialization">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dalian_network_initialization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_module.html#BioModule.dalian_network_initialization"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_module.BioModule.dalian_network_initialization" title="Link to this definition"></a></dt>
+<dd><p>Initializes the network weights according to Dale’s principle.</p>
+<p>Dale’s principle states that neurons release the same neurotransmitters
+at all of their synapses, which is reflected here by enforcing consistent
+sign for all outgoing weights from each neuron.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>module</strong> (<em>Module</em>) – The module to initialize.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_module.BioModule.enforce_dales_principle">
+<span class="sig-name descname"><span class="pre">enforce_dales_principle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_module.html#BioModule.enforce_dales_principle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_module.BioModule.enforce_dales_principle" title="Link to this definition"></a></dt>
+<dd><p>Enforces Dale’s principle on the weights of the parent module.</p>
+<p>This ensures that all outgoing weights from a neuron have the same sign,
+consistent with the biological principle that neurons release the same
+neurotransmitters at all of their synapses.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bio_transformations.bio_module.BioModule.exposed_functions">
+<span class="sig-name descname"><span class="pre">exposed_functions</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('rejuvenate_weights',</span> <span class="pre">'crystallize',</span> <span class="pre">'fuzzy_learning_rates',</span> <span class="pre">'volume_dependent_lr')</span></em><a class="headerlink" href="#bio_transformations.bio_module.BioModule.exposed_functions" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_module.BioModule.fuzzy_learning_rates">
+<span class="sig-name descname"><span class="pre">fuzzy_learning_rates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_module.html#BioModule.fuzzy_learning_rates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_module.BioModule.fuzzy_learning_rates" title="Link to this definition"></a></dt>
+<dd><p>Scales the gradients of the parent module with random values.</p>
+<p>This method introduces stochasticity into the learning process,
+mimicking the variability observed in biological synaptic plasticity.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_module.BioModule.l1_reg">
+<span class="sig-name descname"><span class="pre">l1_reg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_module.html#BioModule.l1_reg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_module.BioModule.l1_reg" title="Link to this definition"></a></dt>
+<dd><p>Computes the L1 regularization of the module’s parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The L1 regularization value.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Tensor</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_module.BioModule.rejuvenate_weights">
+<span class="sig-name descname"><span class="pre">rejuvenate_weights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_module.html#BioModule.rejuvenate_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_module.BioModule.rejuvenate_weights" title="Link to this definition"></a></dt>
+<dd><p>Rejuvenates the weights of the parent module.</p>
+<p>This function replaces weights below a certain threshold with random values,
+mimicking the biological process of synaptic pruning and regrowth.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bio_transformations.bio_module.BioModule.volume_dependent_lr">
+<span class="sig-name descname"><span class="pre">volume_dependent_lr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bio_transformations/bio_module.html#BioModule.volume_dependent_lr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bio_transformations.bio_module.BioModule.volume_dependent_lr" title="Link to this definition"></a></dt>
+<dd><p>Applies a volume-dependent learning rate to the weights of the parent module.</p>
+<p>This method implements a biologically-inspired learning rate adjustment based on
+observations of dendritic spine dynamics. It reflects the following key findings:
+1. Larger weights (analogous to larger spines) are more stable and less plastic.
+2. Smaller weights (analogous to smaller spines) are more dynamic and plastic.
+3. There is significant variability in plasticity among weights of similar sizes.
+4. The relationship between weight size and plasticity is continuous, not discrete.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p>The <cite>BioModule</cite> class implements the core biologically inspired modifications. It includes the following key functions:</p>
+<section id="synaptic-plasticity-functions">
+<h4>Synaptic Plasticity Functions<a class="headerlink" href="#synaptic-plasticity-functions" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="#bio_transformations.bio_module.BioModule.volume_dependent_lr" title="bio_transformations.bio_module.BioModule.volume_dependent_lr"><code class="xref py py-func docutils literal notranslate"><span class="pre">volume_dependent_lr()</span></code></a>: Implements learning rates based on weight magnitude.</p></li>
+<li><p><a class="reference internal" href="#bio_transformations.bio_module.BioModule.fuzzy_learning_rates" title="bio_transformations.bio_module.BioModule.fuzzy_learning_rates"><code class="xref py py-func docutils literal notranslate"><span class="pre">fuzzy_learning_rates()</span></code></a>: Applies diverse learning rates to individual synapses.</p></li>
+<li><p><a class="reference internal" href="#bio_transformations.bio_module.BioModule.crystallize" title="bio_transformations.bio_module.BioModule.crystallize"><code class="xref py py-func docutils literal notranslate"><span class="pre">crystallize()</span></code></a>: Simulates synaptic stabilization over time.</p></li>
+</ul>
+</section>
+<section id="structural-plasticity-functions">
+<h4>Structural Plasticity Functions<a class="headerlink" href="#structural-plasticity-functions" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="#bio_transformations.bio_module.BioModule.rejuvenate_weights" title="bio_transformations.bio_module.BioModule.rejuvenate_weights"><code class="xref py py-func docutils literal notranslate"><span class="pre">rejuvenate_weights()</span></code></a>: Mimics spine turnover in biological networks.</p></li>
+</ul>
+</section>
+<section id="homeostatic-plasticity-functions">
+<h4>Homeostatic Plasticity Functions<a class="headerlink" href="#homeostatic-plasticity-functions" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">scale_grad()</span></code>: Implements synaptic scaling for overall network stability.</p></li>
+</ul>
+</section>
+<section id="additional-functions">
+<h4>Additional Functions<a class="headerlink" href="#additional-functions" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="#bio_transformations.bio_module.BioModule.l1_reg" title="bio_transformations.bio_module.BioModule.l1_reg"><code class="xref py py-func docutils literal notranslate"><span class="pre">l1_reg()</span></code></a>: Computes L1 regularization of module parameters.</p></li>
+<li><p><a class="reference internal" href="#bio_transformations.bio_module.BioModule.enforce_dales_principle" title="bio_transformations.bio_module.BioModule.enforce_dales_principle"><code class="xref py py-func docutils literal notranslate"><span class="pre">enforce_dales_principle()</span></code></a>: Enforces Dale’s principle on module weights.</p></li>
+<li><p><a class="reference internal" href="#bio_transformations.bio_module.BioModule.dalian_network_initialization" title="bio_transformations.bio_module.BioModule.dalian_network_initialization"><code class="xref py py-func docutils literal notranslate"><span class="pre">dalian_network_initialization()</span></code></a>: Initializes network weights according to Dale’s principle.</p></li>
+</ul>
+<p>For detailed information on each function, please refer to the individual function documentation.</p>
+</section>
+<section id="extending-biomodule">
+<h4>Extending BioModule<a class="headerlink" href="#extending-biomodule" title="Link to this heading"></a></h4>
+<p>To add a new biologically motivated function:</p>
+<ol class="arabic simple">
+<li><p>Implement the new function in the <cite>BioModule</cite> class.</p></li>
+<li><p>Add the function name to the <cite>exposed_functions</cite> list.</p></li>
+<li><p>Update <cite>__init__</cite> methods if new parameters are required.</p></li>
+<li><p>Create a test case in <cite>test_biomodule.py</cite>.</p></li>
+<li><p>Update this documentation to include details about the new function.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="module-bio_transformations">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-bio_transformations" title="Link to this heading"></a></h2>
+<p>For a practical guide on using these components, please refer to the <a class="reference internal" href="tutorials.html"><span class="doc">Tutorials</span></a> section.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="bio_transformations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Your Name.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
