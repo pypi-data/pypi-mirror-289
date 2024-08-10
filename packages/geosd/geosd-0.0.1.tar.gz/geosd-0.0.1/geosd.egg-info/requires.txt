@@ -1,0 +1,7 @@
+numpy
+
+[all]
+geosd[extra]
+
+[extra]
+pandas
