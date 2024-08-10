@@ -1,0 +1,1 @@
+((python-base-mode . ((fill-column . 120))))
