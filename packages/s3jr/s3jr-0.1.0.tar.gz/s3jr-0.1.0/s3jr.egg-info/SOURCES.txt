@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+setup.py
+s3jr/__init__.py
+s3jr.egg-info/PKG-INFO
+s3jr.egg-info/SOURCES.txt
+s3jr.egg-info/dependency_links.txt
+s3jr.egg-info/requires.txt
+s3jr.egg-info/top_level.txt
