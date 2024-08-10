@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+stm32isp/stm32isp.py
+stm32isp.egg-info/PKG-INFO
+stm32isp.egg-info/SOURCES.txt
+stm32isp.egg-info/dependency_links.txt
+stm32isp.egg-info/entry_points.txt
+stm32isp.egg-info/requires.txt
+stm32isp.egg-info/top_level.txt
