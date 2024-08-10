@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+phtcloud_pkg_pycrand/__init__.py
+phtcloud_pkg_pycrand/crand.dll
+phtcloud_pkg_pycrand/crand.py
+phtcloud_pkg_pycrand.egg-info/PKG-INFO
+phtcloud_pkg_pycrand.egg-info/SOURCES.txt
+phtcloud_pkg_pycrand.egg-info/dependency_links.txt
+phtcloud_pkg_pycrand.egg-info/top_level.txt
