@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: griffe-sphinx
+Version: 0.0.0
+Summary: Parse Sphinx-comments above attributes as docstrings.
+Author-email: Timothée Mazzucotelli <dev@pawamoy.fr>
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# griffe-sphinx
+
+Parse Sphinx-comments above attributes as docstrings.
