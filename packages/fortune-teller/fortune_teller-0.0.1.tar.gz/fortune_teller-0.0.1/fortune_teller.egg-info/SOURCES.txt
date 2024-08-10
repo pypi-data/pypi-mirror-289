@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+fortune_teller.egg-info/PKG-INFO
+fortune_teller.egg-info/SOURCES.txt
+fortune_teller.egg-info/dependency_links.txt
+fortune_teller.egg-info/top_level.txt

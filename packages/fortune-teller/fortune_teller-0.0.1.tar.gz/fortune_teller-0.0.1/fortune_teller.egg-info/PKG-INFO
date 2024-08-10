@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: fortune-teller
+Version: 0.0.1
+Summary: Description of my first Python package
+Author: Chine Meston
+Author-email: <cmeston@student.42.fr>
+Keywords: python,first package
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE
+
+Longer description of my first Python package
