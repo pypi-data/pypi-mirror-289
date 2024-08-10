@@ -1,0 +1,7 @@
+
+[http]
+Flask==3.0.2
+swagger-ui-py==23.9.23
+
+[zeroconf]
+zeroconf==0.88.0
