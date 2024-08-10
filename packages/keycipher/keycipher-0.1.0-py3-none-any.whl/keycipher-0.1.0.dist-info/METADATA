@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: keycipher
+Version: 0.1.0
+Summary: A Python package for AES-GCM encryption and decryption with a key.
+Home-page: https://github.com/imparth7/keycipher-py
+Author: imparth
+Project-URL: Source, https://github.com/imparth7/keycipher-py
+Project-URL: Bug Reports, https://github.com/imparth7/keycipher-py/issues
+Project-URL: Homepage, https://github.com/imparth7/keycipher-py#readme
+Keywords: encryption,decryption,AES-GCM,cryptography
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography>=3.4.7
+
