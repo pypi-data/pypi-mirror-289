@@ -1,0 +1,2 @@
+[console_scripts]
+generate-uml = uml_generator.main:main
