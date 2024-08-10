@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+jwallet.egg-info/PKG-INFO
+jwallet.egg-info/SOURCES.txt
+jwallet.egg-info/dependency_links.txt
+jwallet.egg-info/entry_points.txt
+jwallet.egg-info/requires.txt
+jwallet.egg-info/top_level.txt
