@@ -1,0 +1,11 @@
+pytorchfwd/__init__.py,sha256=ZdP8bNXeDWV86LH2Kg_3QZ1cmHM_TYIrVQtWmKn_o8M,24
+pytorchfwd/__main__.py,sha256=u9t1y3yz5gsxVlMIfXcG8n7ooj0CL0Wt0zRawFlMssU,83
+pytorchfwd/freq_math.py,sha256=JzXCBu4IArQomusc1gEav5J5x2ii_jgHhjrQGSYzyCI,6528
+pytorchfwd/fwd.py,sha256=hgYWvezC5TfyvR-YQOKQ98iDwINSOXmu-wb57cIl4wA,6920
+pytorchfwd/utils.py,sha256=tuEHyHlqrfmF19h-MbebufmltQmAIGDPeQjA5nXmScM,1862
+pytorchfwd/version.py,sha256=uxy7ZpvzqB3vGZTPfgRBIwyBAjXzY2_5644XePXttCI,53
+pytorchfwd-0.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pytorchfwd-0.0.2.dist-info/METADATA,sha256=xeYul7cmeuUjZAlxFxhh9sbc_1T4nxiwAyn4vc9vY4Y,6570
+pytorchfwd-0.0.2.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+pytorchfwd-0.0.2.dist-info/top_level.txt,sha256=gpMEo1Oohe2y2Vnc-J0OZD5Ikvtp6nT2LLR_4NTANN0,11
+pytorchfwd-0.0.2.dist-info/RECORD,,
