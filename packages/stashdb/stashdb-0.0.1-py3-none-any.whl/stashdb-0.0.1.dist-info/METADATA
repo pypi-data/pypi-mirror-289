@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: stashdb
+Version: 0.0.1
+Summary: An extremly lightweight json database for small Python projects.
+Author: Monday David Osakpawan
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+An extremly lightweight json database for small Python projects.
