@@ -1,0 +1,2 @@
+[console_scripts]
+postman_sync = postman_sync.main_script:main
