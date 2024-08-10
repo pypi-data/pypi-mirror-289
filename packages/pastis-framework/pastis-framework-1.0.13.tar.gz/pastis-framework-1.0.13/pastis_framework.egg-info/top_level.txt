@@ -1,0 +1,6 @@
+libpastis
+pastisaflpp
+pastisbenchmark
+pastisbroker
+pastishonggfuzz
+pastistritondse
