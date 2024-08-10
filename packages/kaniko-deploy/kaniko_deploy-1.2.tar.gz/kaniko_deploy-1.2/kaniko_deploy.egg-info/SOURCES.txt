@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+kaniko_deploy/__init__.py
+kaniko_deploy/__main__.py
+kaniko_deploy/main.py
+kaniko_deploy.egg-info/PKG-INFO
+kaniko_deploy.egg-info/SOURCES.txt
+kaniko_deploy.egg-info/dependency_links.txt
+kaniko_deploy.egg-info/entry_points.txt
+kaniko_deploy.egg-info/requires.txt
+kaniko_deploy.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py
