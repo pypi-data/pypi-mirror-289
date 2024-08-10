@@ -1,0 +1,19 @@
+version: 1
+formatters:
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+handlers:
+  file:
+    class: logging.FileHandler
+    formatter: simple
+    filename: 'app.log'
+    level: DEBUG
+    encoding: 'utf-8'  # 指定编码为 utf-8
+loggers:
+  DIDI:
+    handlers: [file]
+    level: DEBUG
+    propagate: no
+root:
+  handlers: [file]
+  level: DEBUG
