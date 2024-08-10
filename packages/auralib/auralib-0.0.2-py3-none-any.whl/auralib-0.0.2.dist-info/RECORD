@@ -1,0 +1,13 @@
+auralib/__init__.py,sha256=C_62fd3RGsvpaB51-_nZcNA-rndlgYvfoMYI2lEFLro,581
+auralib/aura_cmd.py,sha256=HnGaN9HClx8fgG6fScLhthO4zTzutCRrYjlebXly4QU,1173
+auralib/aura_config.py,sha256=zeomafagKLEFV8MRdRoFhZ-XkAVf9YPmJyEkMeSPV7o,3453
+auralib/aura_files.py,sha256=44tL8xvkc6RbO_0KpPM8fTbgP-LM59iPqerMpY0ejz4,12116
+auralib/aura_json.py,sha256=iXsJWRwHcD-In5KYwTlaO1c5Kyts-t46Ci3iIFHls_c,414
+auralib/aura_skyrim.py,sha256=NQRnvIqzkG3Vug0oYzXCLAjplxusGn4t65pMc7O9DZU,650
+auralib/aura_type.py,sha256=-vf32qLAs0-8vHwvN8dVdcy4DatYJR79OTCoAJJ7rmI,5838
+auralib/aura_xml.py,sha256=0vOEOf9pDBvgAmKGL8C8xf6MhOPG0KgdOM0PW9NHhuA,571
+auralib-0.0.2.dist-info/LICENSE.txt,sha256=ZL8hTrnVV9tOi6L0hdzboXkNERVtnl4imFrnXFjaffk,1682
+auralib-0.0.2.dist-info/METADATA,sha256=0qbfqbnSUOx1g2EnYF6bBbb8pU5cpUbEhm-sS4cqYxo,7684
+auralib-0.0.2.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+auralib-0.0.2.dist-info/top_level.txt,sha256=BYw660VxzeAi5RM8GtZ34xaa0NoQdxg6cxgEaxQ80n0,8
+auralib-0.0.2.dist-info/RECORD,,
