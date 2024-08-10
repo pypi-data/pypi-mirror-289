@@ -1,0 +1,4 @@
+numpy==1.26.4
+vnpy
+importlib_metadata
+PySide6-Fluent-Widgets
