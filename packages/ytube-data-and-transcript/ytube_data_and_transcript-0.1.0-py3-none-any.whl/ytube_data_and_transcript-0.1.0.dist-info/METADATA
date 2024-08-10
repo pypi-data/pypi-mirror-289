@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: ytube-data-and-transcript
+Version: 0.1.0
+Summary: A python package that utilizes the YouTube Data V3 API to get all transcripts from a given channel/playlist.
+Home-page: https://github.com/DevanshL/youtube-channel-transcript-api
+Author: Devansh Lingamaneni
+Author-email: l.devansh2073@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.32.3
+Requires-Dist: google-api-python-client>=2.138.0
+Requires-Dist: youtube-transcript-api>=0.6.2
+
+# YouTube-Data-and-Transcript-API
+
+## Overview
+
+This project provides a Python-based tool that interacts with the YouTube Data API to retrieve video data and transcripts. The goal is to enable easy access to video metadata and subtitles for analysis, research, or other applications.
+
+## Features
+
+- Retrieve video metadata such as title, description, view count, like count, and more.
+- Fetch video transcripts (subtitles) when available.
+- Easy-to-use command-line interface.
+
+## Requirements
+
+-  Python 3.6 or higher
+- `requests` library
+- `google-auth` library (for authenticated API access)
+- `youtube-transcript-api` library
+
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/DevanshL/YouTube-Data-and-Transcript-API.git
+   cd YouTube-Data-and-Transcript-API
+   ```
+   
+2. **Create a virtual environment:**
+  ```bash
+  python -m venv venv
+  ```
+
+3. Activate the virtual environment:
+   * On Windows:
+   ```bash
+   venv\Scripts\activate
+   ```
+   * On macOS and Linux:
+   ```bash
+   source venv/bin/activate
+   ```
+   
+4. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. Create a Google Cloud project and enable the YouTube Data API v3:
+
+    * Visit the Google Cloud Console.
+    * Create a new project (or use an existing one).
+    * Enable the YouTube Data API v3 for your project.
+    * Create API credentials and obtain your API key.
+
+6. Setting Up the config.json File:
+
+    * Create a config.json file in the testing folder of the project.
+    * The config.json file should contain your API key. Here’s an example structure:
+    ```bash
+      {
+    "api_key": "YOUR_YOUTUBE_API_KEY"
+    }
+    ```
+    * Replace YOUR_YOUTUBE_API_KEY with your actual API key.
+
+
+## Usage
+
+* Create a testing,.py file and use below code
+```bash
+from working.data import fetch_video_info
+from working.transcript import fetch_transcript
+import json
+
+def load_api_key_from_json(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+        return data['youtube_api_key']
+
+api_key = load_api_key_from_json('filepath')
+video_id = ''                 # example H9dCIPzRf
+details = fetch_video_info(video_id, api_key)
+transcript = fetch_transcript(video_id)
+
+# print(details)
+# print(transcript)        check for yourself
+```
+
+## Contributing
+
+If you would like to contribute to this project, feel free to open an issue or submit a pull request. Please ensure that your contributions align with the coding style and standards used in this project.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+     
