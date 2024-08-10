@@ -1,0 +1,2 @@
+[gui_scripts]
+sten-gui = sten_gui.__main__:main
