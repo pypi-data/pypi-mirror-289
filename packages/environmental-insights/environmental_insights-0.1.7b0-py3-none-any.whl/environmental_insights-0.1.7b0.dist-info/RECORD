@@ -1,0 +1,15 @@
+environmental_insights/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+environmental_insights/air_pollution_functions.py,sha256=R5Vh3A8mQZSzY0o5mQoHGW2nMHZBWXaAaIzaXEH0pbg,24008
+environmental_insights/data.py,sha256=l8W9U7R9XxDPQJJc4iFYfu_JbLObqrjckZyZ277Yv1I,22497
+environmental_insights/download.py,sha256=jUSj2jsDXr_Vp4iPwk_sFA-O4l_35Os2q5oGFvtdP5o,6389
+environmental_insights/models.py,sha256=_fTFL3F0YMRfRsBIq50P3oPosfpTAy5Jh-2hnKLYEFw,5719
+environmental_insights/variables.py,sha256=S613QuXOLZeNQk_X379nbcMPz3MdG2EMYKDrV2hIocs,31697
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_air_pollution_functions.py,sha256=4zWmoZppD2jIZOzgRqGWU6RkCmtxWjm3wmIHO15Q7zc,12408
+tests/test_data.py,sha256=2q_S9kfD4rpY5-Q5tPEYw42pt-8EpxMvgR59-m07s30,474
+tests/test_models.py,sha256=LRvVLE2JpT3wBKuGhHcKQtRMVJ1ITXg82dXN-TlIX0g,514
+environmental_insights-0.1.7b0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+environmental_insights-0.1.7b0.dist-info/METADATA,sha256=Lb-FEVrHt5PwOrjsnmtESTTfduYl3-yYgkb1OyuXrOw,8822
+environmental_insights-0.1.7b0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+environmental_insights-0.1.7b0.dist-info/top_level.txt,sha256=AoQksUz__tLrBHdXCv4zlwQxCx6nlGqE4F1MRBveXFg,29
+environmental_insights-0.1.7b0.dist-info/RECORD,,
