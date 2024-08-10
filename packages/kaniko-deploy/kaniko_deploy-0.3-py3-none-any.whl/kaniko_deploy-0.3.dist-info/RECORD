@@ -1,0 +1,11 @@
+kaniko_deploy/__init__.py,sha256=hP_Gfsk5DLqdjRtQGjE94YND05dZU54qQpZPaJKcC3E,86
+kaniko_deploy/__main__.py,sha256=7tTIWchqsd_9l8ZhwjkTMYqpjvkZGolJCyZJmyK1MtI,75
+kaniko_deploy/main.py,sha256=5ieyTEXZoBPFVgdAM8Gd09F0AQDmpIyNWSPVGJ_N4Kw,29327
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_main.py,sha256=-0UwZZqFZQVNDe1NpUXfzyldaJiEmb5ilkzIPnfpKKE,974
+kaniko_deploy-0.3.dist-info/LICENSE,sha256=4HjmzL3SElplebWHAHvtqeI50XEHOjRD4IGUcE2ndqc,1088
+kaniko_deploy-0.3.dist-info/METADATA,sha256=tkq1zAeqEqhfihb_D0jP4bOrf0fA2eBZZH49BQTO5QE,1765
+kaniko_deploy-0.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+kaniko_deploy-0.3.dist-info/entry_points.txt,sha256=Fyf_rS3Lyn9fgHIRjzRkxj_4TGiqyd5_48YG56WMvrY,58
+kaniko_deploy-0.3.dist-info/top_level.txt,sha256=xzNae-jed3cey3XTnne45MPKcejrYPNs1HqXNr49le8,20
+kaniko_deploy-0.3.dist-info/RECORD,,
