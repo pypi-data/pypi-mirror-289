@@ -1,0 +1,12 @@
+airflow_ollama/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_ollama/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_ollama/operators/ngrok_exposer_operator.py,sha256=xJ3lgWmuPWKFrqVfFSZEzC3LBGaEnJoFnJypHs-u7rk,1924
+airflow_ollama/operators/ollama_operator.py,sha256=2XYYL_cdB2aHXYC-BC3CkXEaUkcoTUYdG1usGSOy3Zw,2057
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_ngrok_exposer_operator.py,sha256=OsY6ZoeR4E7dGV1hOXV9kZeiA-7WPvvmUsnwqd1FdsE,2281
+tests/test_ollama_operator.py,sha256=DyktNIrllydGVbxC6GYJXFwxzCSEejdecW--4Ffetoo,2379
+airflow_ollama-0.1.0.dist-info/LICENSE,sha256=Z11iQJ5W6cUy9ttycHrEX7FTRQLNoqig9wLSj4DcABY,1069
+airflow_ollama-0.1.0.dist-info/METADATA,sha256=3uwrva7wIQo9WJZTf0kMeGnh_DlyDjcwjSwuxfUWmS4,3984
+airflow_ollama-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+airflow_ollama-0.1.0.dist-info/top_level.txt,sha256=c8TWw2tber60SmYBjfgEahnpcaaiUpr2XNx7bmvCVoA,21
+airflow_ollama-0.1.0.dist-info/RECORD,,
