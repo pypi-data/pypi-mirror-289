@@ -1,0 +1,2 @@
+[console_scripts]
+build-flask-webapp = FlaskWebApp.build_flask_webapp:main

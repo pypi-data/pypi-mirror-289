@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+FlaskWebApp/__init__.py
+FlaskWebApp/build_flask_webapp.py
+flask_webapp_builder.egg-info/PKG-INFO
+flask_webapp_builder.egg-info/SOURCES.txt
+flask_webapp_builder.egg-info/dependency_links.txt
+flask_webapp_builder.egg-info/entry_points.txt
+flask_webapp_builder.egg-info/requires.txt
+flask_webapp_builder.egg-info/top_level.txt
