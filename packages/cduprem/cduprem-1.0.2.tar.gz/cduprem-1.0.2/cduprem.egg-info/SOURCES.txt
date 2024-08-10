@@ -1,0 +1,7 @@
+setup.py
+cduprem/push.py
+cduprem/simple.py
+cduprem.egg-info/PKG-INFO
+cduprem.egg-info/SOURCES.txt
+cduprem.egg-info/dependency_links.txt
+cduprem.egg-info/top_level.txt
