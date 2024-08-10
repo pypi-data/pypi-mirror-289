@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+digifoam/__init__.py
+digifoam/api.py
+digifoam/cli.py
+digifoam/constants.py
+digifoam/types.py
+digifoam/utils.py
+digifoam.egg-info/PKG-INFO
+digifoam.egg-info/SOURCES.txt
+digifoam.egg-info/dependency_links.txt
+digifoam.egg-info/entry_points.txt
+digifoam.egg-info/requires.txt
+digifoam.egg-info/top_level.txt
