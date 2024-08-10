@@ -1,0 +1,12 @@
+omnifold/__init__.py,sha256=JHKPul3yWyWmyg1dKISQqiiA7GM7dsCCQPbtJgRaJxU,165
+omnifold/dataloader.py,sha256=Dc_v-TwvmmyQ-9T4hEVUVnOoYFtuWBq2uxN_LCYwsVQ,1580
+omnifold/net.py,sha256=PYxPFZ12yfv-uBLD1tqTHxNygo4e27658L0OGMR4ZNE,602
+omnifold/omnifold.py,sha256=uPY_FzlSGXmHEyo0wy48Hc_psnEqVt-D6-kJFsFMWLY,11632
+omnifold/utils.py,sha256=VHAXspM56qmPysJpXJnLXPwgri3QX6nSHeBQEf6ub9E,4700
+omnifold/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omnifold/tests/test_dataloader.py,sha256=2Bf10ZHkfw_22P3k21lg1oxC-_oMlikqXHkySPyVs5E,403
+omnifold/tests/test_omnifold.py,sha256=KgbbgHDGSAgopHCjpQXjXaYFFrnbn0YwHURTlZCoMok,1344
+unbinned_unfold-0.1.6.dist-info/METADATA,sha256=69yTg_yDf7QSFOQpppFzBsg9Q8FfBB172Dv8kntCJ0g,634
+unbinned_unfold-0.1.6.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+unbinned_unfold-0.1.6.dist-info/top_level.txt,sha256=SekDA_qs45G4VfY4xlx2vO661pOS4iSIq4LYuNTm0Jg,9
+unbinned_unfold-0.1.6.dist-info/RECORD,,
