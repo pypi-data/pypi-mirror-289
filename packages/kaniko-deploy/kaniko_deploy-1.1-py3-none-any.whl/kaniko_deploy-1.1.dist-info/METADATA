@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: kaniko_deploy
+Version: 1.1
+Author-email: nurdslab99@gmail.com
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: black ==24.8.0
+Requires-Dist: build ==1.2.1
+Requires-Dist: cachetools ==5.4.0
+Requires-Dist: certifi ==2024.7.4
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: click ==8.1.7
+Requires-Dist: colorama ==0.4.6
+Requires-Dist: docutils ==0.21.2
+Requires-Dist: google-auth ==2.33.0
+Requires-Dist: idna ==3.7
+Requires-Dist: importlib-metadata ==8.2.0
+Requires-Dist: iniconfig ==2.0.0
+Requires-Dist: jaraco.classes ==3.4.0
+Requires-Dist: jaraco.context ==5.3.0
+Requires-Dist: jaraco.functools ==4.0.2
+Requires-Dist: keyring ==25.3.0
+Requires-Dist: kubernetes ==30.1.0
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: more-itertools ==10.4.0
+Requires-Dist: mypy-extensions ==1.0.0
+Requires-Dist: nh3 ==0.2.18
+Requires-Dist: oauthlib ==3.2.2
+Requires-Dist: packaging ==24.1
+Requires-Dist: pathspec ==0.12.1
+Requires-Dist: pkginfo ==1.10.0
+Requires-Dist: platformdirs ==4.2.2
+Requires-Dist: pluggy ==1.5.0
+Requires-Dist: pyasn1 ==0.6.0
+Requires-Dist: pyasn1-modules ==0.4.0
+Requires-Dist: Pygments ==2.18.0
+Requires-Dist: pyproject-hooks ==1.1.0
+Requires-Dist: pytest ==8.3.2
+Requires-Dist: python-dateutil ==2.9.0.post0
+Requires-Dist: pywin32-ctypes ==0.2.2
+Requires-Dist: PyYAML ==6.0.2
+Requires-Dist: readme-renderer ==44.0
+Requires-Dist: requests ==2.32.3
+Requires-Dist: requests-oauthlib ==2.0.0
+Requires-Dist: requests-toolbelt ==1.0.0
+Requires-Dist: rfc3986 ==2.0.0
+Requires-Dist: rich ==13.7.1
+Requires-Dist: rsa ==4.9
+Requires-Dist: setuptools ==72.1.0
+Requires-Dist: six ==1.16.0
+Requires-Dist: twine ==5.1.1
+Requires-Dist: urllib3 ==2.2.2
+Requires-Dist: websocket-client ==1.8.0
+Requires-Dist: zipp ==3.19.2
+
+
+## README.md
+
+# About tool
+This tool can be used to create and push a docker image from local or open remote directory to docker hub(can be private).
+For local directories, tool will create a persistent-volume, persitent-volume-claim, and kaniko-pod temporary and all will be deleted once the image has been pushed to the docker hub.
+
+# Installation
+pip install kaniko_deploy
+
+# pre-requisites 
+Make sure you have connection with kubernetes : 
+*for remote kubenetes obtain kubernetes config file and set it's path to env var KUBECONFIG ,(else keep it at respective OS ~/.kube/config path)
+
+For local dirs, the directories should be mounted
+if using minikube, then mount using `minikube mount $WORKDIR:/<your-kube-work-dir>`
+
+# steps
+    1. For local directories open the terminal wherever your project is (anywhere for remote directories)
+    2. either create python3.12 virtual env and then install the kaniko_build(recommended) or can be installed globally also 
+    3. you can opt to create volume.yaml, volume-claim.yaml (once for each project) so to provide configs as user's requirements or wish else you by default some values will be taken if not provided by optional flags (like pvc storage, pod name, ..etc)
+    4. refer the below mentioned few example commands as per your requirements or you can use --help flag
+
+replace the username, email and docker repo with yours (if docker secrets are not present then password will be asked for first time)
+
+# Exmaple command 
+1. for remote directories
+`python -m kaniko_deploy deploy --context_dir=git://github.com//Imoustak/kaniko-build-demo.git --docker_filepath=dockerfile --docker_username=<your-docker-username> --docker_email=<your-docker-email> --docker_repo=<your-repo>`
+
+2. Running in you current dir WITH volume.yaml & volume-claim.yaml files
+`python -m kaniko_deploy deploy --context_dir=. --docker_filepath=Dockerfile --docker_username=<your-docker-username> --docker_email=<your-docker-email> --docker_repo=<your-repo> --read_manifest`
+
+3.
+Running in you current dir WITHOUT volume.yaml & volume-claim.yaml files
+`python -m kaniko_deploy deploy --context_dir=. --docker_filepath=Dockerfile --docker_username=<your-docker-username> --docker_email=<your-docker-email> --docker_repo=<your-repo>`
+
+
+Note:
+Currently this is desgined for namespace default only, can be further editted to handle dynamic namespaces
+Secret name for docker-registry is considered as "docker-registry-secret" ans it is not deleted after process
+
+
+# to do 
+- add function to get logs if got any errors from k8 while in process
+- add caching for kaniko
+- add custom exceptions and terminate gracefully
+- add functionality for aws or any other cloud volume mount
+- check other kaniko flags(or features) to imporve this tool
+- write test cases
+- logs
