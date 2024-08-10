@@ -1,0 +1,36 @@
+[project]
+name = "csp_slack"
+description = "A csp adapter for slack"
+version = "0.1.0"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+authors = [{name = "the csp authors", email = "CSPOpenSource@point72.com"}]
+keywords = [
+    "csp",
+    "stream-processing",
+    "slack",
+    "chat",
+    "chatbot",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Jupyter",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "csp-adapter-slack",
+]
+
+[project.optional-dependencies]
+
+[project.urls]
+Repository = "https://github.com/point72/csp-adapter-slack"
+Homepage = "https://github.com/point72/csp-adapter-slack"
