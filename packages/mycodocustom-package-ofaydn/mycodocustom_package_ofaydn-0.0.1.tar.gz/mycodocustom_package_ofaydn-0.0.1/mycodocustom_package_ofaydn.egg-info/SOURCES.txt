@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+mycodocustom_package_ofaydn/__init__.py
+mycodocustom_package_ofaydn/mycodocustom.py
+mycodocustom_package_ofaydn.egg-info/PKG-INFO
+mycodocustom_package_ofaydn.egg-info/SOURCES.txt
+mycodocustom_package_ofaydn.egg-info/dependency_links.txt
+mycodocustom_package_ofaydn.egg-info/top_level.txt
