@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+StreamSYS/streamsys.egg-info/PKG-INFO
+StreamSYS/streamsys.egg-info/SOURCES.txt
+StreamSYS/streamsys.egg-info/dependency_links.txt
+StreamSYS/streamsys.egg-info/entry_points.txt
+StreamSYS/streamsys.egg-info/top_level.txt

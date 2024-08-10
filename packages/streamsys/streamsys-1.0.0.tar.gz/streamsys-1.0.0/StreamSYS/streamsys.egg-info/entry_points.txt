@@ -1,0 +1,2 @@
+[console_scripts]
+streamsys = StreamSYS.StreamSYS:main
