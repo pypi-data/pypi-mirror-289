@@ -1,0 +1,3 @@
+[jiav.backend]
+ansible=jiav_ansible.AnsibleBackend
+
