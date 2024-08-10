@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/KRidge_INFO/KRidge_INFO.py
+src/KRidge_INFO/__init__.py
+src/KRidge_INFO/kernel_ridge_regression.py
+src/KRidge_INFO/objective_function.py
+src/KRidge_INFO.egg-info/PKG-INFO
+src/KRidge_INFO.egg-info/SOURCES.txt
+src/KRidge_INFO.egg-info/dependency_links.txt
+src/KRidge_INFO.egg-info/top_level.txt
