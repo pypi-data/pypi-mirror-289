@@ -1,0 +1,11 @@
+petbox/dca/__init__.py,sha256=_xulyRqETxOutE4ZcrXQykE1u0zAdcSjasq5rCOFdoU,454
+petbox/dca/associated.py,sha256=sO0DLQC-WwPi8fe5lawppgAx4kfJwv9bJRtgVrMixoA,6770
+petbox/dca/base.py,sha256=azRXKYcDr8r1aEkuG_3p2IwhIXSghUR6mHwo_iyaJBM,20098
+petbox/dca/bourdet.py,sha256=ZpzTvwyiqo-yNBkJcsyrmhcumoumXBx6Ftya3aHLsl8,5144
+petbox/dca/primary.py,sha256=_TZ4vw1D8i08nuaXq15z_5OEdexIN0dpwOh3paWTfiM,36628
+petbox/dca/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+petbox_dca-1.1.1.dist-info/LICENSE,sha256=pCSB_sC6y_r3SQNgzG-2LZ4YXb9FAC7kO3KbUVd-T_0,1094
+petbox_dca-1.1.1.dist-info/METADATA,sha256=c___KGKHF9iDyEQgUeQWt24imQf2p9yYrA-wVKHaWD8,15027
+petbox_dca-1.1.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+petbox_dca-1.1.1.dist-info/top_level.txt,sha256=yp4OTxa8Bf4k92S9Ff_ZWsSd1s8IQOWfK5uyMKokfOA,7
+petbox_dca-1.1.1.dist-info/RECORD,,
