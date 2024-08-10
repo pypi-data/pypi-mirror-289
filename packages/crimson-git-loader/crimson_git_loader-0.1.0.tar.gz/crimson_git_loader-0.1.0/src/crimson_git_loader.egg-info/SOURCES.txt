@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/crimson/git_loader/__init__.py
+src/crimson/git_loader/loader.py
+src/crimson/git_loader/reader.py
+src/crimson/git_loader/structure.py
+src/crimson_git_loader.egg-info/PKG-INFO
+src/crimson_git_loader.egg-info/SOURCES.txt
+src/crimson_git_loader.egg-info/dependency_links.txt
+src/crimson_git_loader.egg-info/requires.txt
+src/crimson_git_loader.egg-info/top_level.txt
