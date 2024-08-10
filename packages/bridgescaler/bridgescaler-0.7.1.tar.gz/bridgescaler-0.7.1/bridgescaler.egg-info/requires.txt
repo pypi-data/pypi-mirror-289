@@ -1,0 +1,9 @@
+scikit-learn>=1.0
+numpy
+pandas
+crick
+scipy
+xarray
+numba
+sphinx
+sphinx-book-theme
