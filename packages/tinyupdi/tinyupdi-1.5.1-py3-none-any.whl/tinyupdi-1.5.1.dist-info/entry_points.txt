@@ -1,0 +1,2 @@
+[console_scripts]
+tinyupdi = tinyupdi.tinyupdi:_main
