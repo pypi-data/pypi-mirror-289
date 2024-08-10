@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: thapar-102218071-topsis
+Version: 0.1
+Summary: A Python package for implementing the TOPSIS method
+Author: Sanchit2004
+Author-email: sanchitm990@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# thapar-102218071-topsis
+
+## Description
+
+`thapar-102218071-topsis` is a Python package that implements the TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) method. This method is used for ranking and decision-making tasks. The package allows users to apply TOPSIS on datasets with multiple criteria, providing a score and rank for each alternative.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install thapar-102218071-topsis
+
+## Command Line Usage
+
+python -m my_topsis_package.__main__ <InputDataFile> <Weights> <Impacts> <ResultFileName>
+eg 
+>python -m my_topsis_package.__main__ 102218071.csv "1,1,1,1,1" "+,+,+,+,+" st.csv

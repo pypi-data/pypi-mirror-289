@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+my_topsis_package/__init__.py
+my_topsis_package/__main__.py
+my_topsis_package/topsis.py
+thapar_102218071_topsis.egg-info/PKG-INFO
+thapar_102218071_topsis.egg-info/SOURCES.txt
+thapar_102218071_topsis.egg-info/dependency_links.txt
+thapar_102218071_topsis.egg-info/entry_points.txt
+thapar_102218071_topsis.egg-info/requires.txt
+thapar_102218071_topsis.egg-info/top_level.txt
