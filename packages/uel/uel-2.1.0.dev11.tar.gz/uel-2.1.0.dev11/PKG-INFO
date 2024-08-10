@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: uel
+Version: 2.1.0.dev11
+Summary: A programming language
+Home-page: https://user-11150.github.io/puel
+Author: uel
+Author-email: 3584434540@qq.com
+Keywords: language,uel,puel,programming
+License-File: LICENSE
+Requires-Dist: executing
+
+UEL is a programming language.
+
+See more: https://user-11150.github.io/puel
