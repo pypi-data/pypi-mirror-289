@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: SimplePythonSocket
+Version: 0.1.0
+Summary: Make your python socket coding more easier
+Home-page: https://github.com/DWL-stu/SimpleSocket
+Author: LamentXU
+Author-email: 1372449351@qq.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cryptography
+
+Make your python socket coding more easier
