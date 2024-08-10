@@ -1,0 +1,14 @@
+LICENSE
+setup.py
+mogit/__init__.py
+mogit/cli.py
+mogit/ignorefile.py
+mogit/objs.py
+mogit/repo.py
+mogit/server.py
+mogit.egg-info/PKG-INFO
+mogit.egg-info/SOURCES.txt
+mogit.egg-info/dependency_links.txt
+mogit.egg-info/entry_points.txt
+mogit.egg-info/requires.txt
+mogit.egg-info/top_level.txt
