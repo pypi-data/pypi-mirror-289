@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+src/NumLex.egg-info/PKG-INFO
+src/NumLex.egg-info/SOURCES.txt
+src/NumLex.egg-info/dependency_links.txt
+src/NumLex.egg-info/top_level.txt
