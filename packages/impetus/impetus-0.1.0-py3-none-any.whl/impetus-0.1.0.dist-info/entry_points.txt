@@ -1,0 +1,3 @@
+[console_scripts]
+impetus=impetus.__main__:cli
+
