@@ -1,0 +1,3 @@
+[console_scripts]
+describerr=describerr.describerr:main
+
