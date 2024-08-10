@@ -1,0 +1,135 @@
+Metadata-Version: 2.1
+Name: sylva
+Version: 0.1.2
+Summary: Identity discovery simplified
+Home-page: https://sylva.pfeister.dev
+Author-Email: Paul Pfeister <code@pfeister.dev>
+License: AGPL-3.0-or-later
+Project-URL: Homepage, https://sylva.pfeister.dev
+Project-URL: Repository, https://github.com/ppfeister/sylva
+Project-URL: Bug-tracker, https://github.com/ppfeister/sylva/issues
+Requires-Python: >=3.10
+Requires-Dist: sherlock-project>=0.15.0
+Requires-Dist: platformdirs>=4.2.2
+Requires-Dist: requests>=2.28.0
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: phonenumbers>=8.13.40
+Requires-Dist: tldextract>=3.5.0
+Requires-Dist: BeautifulSoup4>=4.12.3
+Requires-Dist: aiohttp>=3.9.5
+Requires-Dist: bottle>=0.12.25
+Requires-Dist: certifi>=2023.5.7
+Requires-Dist: charset-normalizer>=3.3.2
+Requires-Dist: click>=8.1.7
+Requires-Dist: cssselect>=1.1.0
+Requires-Dist: et-xmlfile>=1.1.0
+Requires-Dist: filelock>=3.15.4
+Requires-Dist: func-timeout>=4.3.5
+Requires-Dist: idna>=3.7
+Requires-Dist: lxml>=4.9.3
+Requires-Dist: openpyxl>=3.1.2
+Requires-Dist: pefile==2023.2.7; platform_system == "Windows"
+Requires-Dist: prometheus-client>=0.17.1
+Requires-Dist: psutil>=5.9.5
+Requires-Dist: requests-file>=1.5.1
+Requires-Dist: urllib3>=1.26.19
+Requires-Dist: waitress>=2.1.2
+Requires-Dist: websocket-client>=1.3.3
+Requires-Dist: websockets>=11.0.3
+Requires-Dist: xvfbwrapper>=0.2.9; platform_system != "Windows"
+Requires-Dist: cryptography>=3.3.2
+Requires-Dist: pyasn1>=0.5.1
+Requires-Dist: mkdocs-material>=9.5.30; extra == "mkdocs"
+Requires-Dist: mkdocs-minify-plugin>=0.8.0; extra == "mkdocs"
+Requires-Dist: mkdocs-git-revision-date-plugin>=0.3.2; extra == "mkdocs"
+Requires-Dist: mkdocstrings[python]>=0.25.2; extra == "mkdocs"
+Provides-Extra: mkdocs
+Description-Content-Type: text/markdown
+
+<p align="center">
+<img width="144" height="144" src="https://img.icons8.com/pulsar-gradient/144/tree.png" alt="tree"/>
+</p>
+
+<h1 align="center">Sylva identity discovery</h1>
+
+<p align="center">
+<a href="https://codeclimate.com/github/ppfeister/sylva/maintainability"><img src="https://api.codeclimate.com/v1/badges/4884eb85ac21a8426edc/maintainability" /></a> &nbsp;
+<a href="https://codeclimate.com/github/ppfeister/sylva/test_coverage"><img src="https://api.codeclimate.com/v1/badges/4884eb85ac21a8426edc/test_coverage" /></a>
+</p>
+
+<p align="center">
+Note that Sylva is undergoing rapid development and documentation may be quickly obsoleted.
+</p>
+<p align="center">
+Visit the <strong><a href="https://sylva.pfeister.dev">Sylva Wiki</a></strong> for more information.
+</p>
+
+## Summary
+
+### Useful Integrations
+
+| Name | Description | API Key |
+| --- | --- | --- |
+| Endato | Person data source (phone, address, cell, etc) | Req [ T \| $ ] |
+| ~~IntelX~~ | ~~Data leak source~~ | ~~Req [ T \| $ ]~~ |
+| ProxyNova | COMB API (cleartext passwords, usernames) | Native |
+| Veriphone | Phone number lookup | Req [ F+ ] |
+| GitHub | See detail below | Opt [ F ] |
+
+$ : paid | T : trial | F : Free | F+ : Freemium
+
+Most development was done without any paid access -- so despite some integrations requiring an account, the full experience can be attained without any subscriptions.
+
+#### GitHub Integration
+
+Query GitHub for any known PGP keys, scrape both the oldest and newest 1000 commit authorships (2000 total) for leaked identifying information, and search for identities based on full name, email, or username.
+
+Personal Access Token (PAT) is required for PGP scraping, but all other functions work out of the box. PAT is _recommended_ for higher rate limits on other functions. PAT does not require any permissions assigned to it whatsoever.
+
+### Generic modules
+
+| Name | Description |
+| --- | --- |
+| PGP Search | Search for identities through discovered PGP keys |
+| [__Sherlock__][sherlock] | Sherlock extended for discovery of additional identities and branching
+| Voter Records | Geographical, relation, and age lookup in 18 US States |
+
+
+## Quick Start
+
+Docker is the preferred method of installation, providing the most consistent and predictable user experience.
+
+```bash
+docker run --rm -it sylva/sylva --help
+```
+
+> [!TIP]
+> Some users may opt to add an alias to their shell for ease of use.
+>
+> Adding `alias sd="docker run --rm -it sylva/sylva"` to your ~/.bashrc or ~/.zshrc will allow you to simply type `sd branch user123` rather than the entire docker command.
+
+Other installation methods are described on the [__Sylva Wiki__][wiki-install].
+
+### Packagers
+
+It's recommended that you don't package Sylva yet. Changes are happening at rates quicker than most release cycles allow. If you'd like to package Sylva, feel free to reach out for info!
+
+## Contributing
+
+Contributors should refer to our [contributing guidelines][wiki-contributing] for information on how to contribute to the project. Note that since the project is still in its infancy, there isn't yet a formal roadmap.
+
+Contributors opening a pull request are assumed to have read and agreed to the guidelines.
+
+
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/ppfeister/sylva.svg?variant=adaptive)](https://starchart.cc/ppfeister/sylva)
+
+
+[wiki-install]: https://sylva.pfeister.dev/install/
+[wiki-contributing]: https://sylva.pfeister.dev/contributing/introduction/
+
+[sherlock]: https://github.com/sherlock-project/sherlock
+[flaresolverr]: https://github.com/flaresolverr/flaresolverr
+
+[xorg-x11-server-Xvfb]: https://packages.fedoraproject.org/pkgs/xorg-x11-server/xorg-x11-server-Xvfb/
