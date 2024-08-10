@@ -1,0 +1,25 @@
+{
+    "version": "0.1.0a1",
+    "devDependencies": {
+        "npm-run-all": "^4.1.5",
+        "cross-env": "^7.0.3",
+        "husky": "^8.0.0"
+    },
+    "scripts": {
+        "start": "pyright && pytest && yarn style",
+        "test": "nodemon -w tests -w src -e .py -x cross-env LOGURU_LEVEL=TRACE rye run pytest",
+        "publish": "rye build && rye publish",
+        "pyright": "nodemon -w lmtr_agents -w .venv -e .py -x pyright lmtr_agents tests",
+        "pytest": "nodemon -w tests -w lmtr_agents -e .py -x pytest tests lmtr_agents",
+        "style": "nodemon -w lmtr_agents -w tests -x \"black tests lmtr_agents && python -m flake8\"",
+        "docstyle": "nodemon -w lmtr_agents -w tests -x pydocstyle --convention=google tests lmtr_agents",
+        "pylint": "nodemon -w lmtr_agents -e .py -x pylint lmtr_agents",
+        "test:lmtr_agents": "nodemon -w tests -e .py -x pytest -k lmtr_agents tests",
+        "black": "black tests lmtr_agents",
+        "flake8": "flake8 tests lmtr_agents",
+        "pflake8": "pflake8 tests lmtr_agents",
+        "pep257": "pep257 tests lmtr_agents",
+        "final": "run-s docstyle black flake8 pytest",
+        "prepare": "husky install"
+    }
+}
