@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+userfolders/__init__.py
+userfolders/__main__.py
+userfolders/unix.py
+userfolders/windows.py
+userfolders.egg-info/PKG-INFO
+userfolders.egg-info/SOURCES.txt
+userfolders.egg-info/dependency_links.txt
+userfolders.egg-info/top_level.txt

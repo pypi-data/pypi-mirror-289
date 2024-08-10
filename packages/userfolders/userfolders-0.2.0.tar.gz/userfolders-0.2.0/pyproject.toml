@@ -1,0 +1,39 @@
+[project]
+name = "userfolders"
+description = "Cross-platform access to a user's special folders"
+version = "0.2.0"
+requires-python = ">=3.12"
+readme = "README.md"
+keywords = [
+    "documents folder",
+    "images folder",
+    "downloads folder",
+    "user folders",
+    "userpaths",
+    "winpaths",
+    "csidl",
+    "xdg",
+    "freedesktop",
+    "folders",
+]
+authors = [
+    { name = "João H. L. Corrêa", email = "joaohlc@duck.com" },
+    { name = "Benjamin Johnson", email = "bmjcode@gmail.com" },
+]
+maintainers = [{ name = "João H. L. Corrêa", email = "joaohlc@duck.com" }]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/jhenriquelc/userpaths"
+Repository = "https://github.com/jhenriquelc/userpaths.git"
+Issues = "https://github.com/jhenriquelc/userpaths/issues"
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
