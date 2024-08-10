@@ -1,0 +1,9 @@
+setuptools
+importlib_resources
+pygit2
+unidiff
+google-generativeai
+IPython
+throttle
+openai
+py_mini_racer
