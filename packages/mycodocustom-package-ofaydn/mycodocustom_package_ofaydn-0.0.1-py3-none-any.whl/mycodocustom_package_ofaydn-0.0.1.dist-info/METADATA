@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mycodocustom_package_ofaydn
+Version: 0.0.1
+Summary: A small example package
+Author-email: Omer Faruk Aydin <o.faduzce@gmail.com>
+Project-URL: Homepage, https://github.com/ofaydn/mycodocustom_ofaydn
+Project-URL: Issues, https://github.com/ofaydn/mycodocustom_ofaydn/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+#This is a python library to test how does pypi work.
