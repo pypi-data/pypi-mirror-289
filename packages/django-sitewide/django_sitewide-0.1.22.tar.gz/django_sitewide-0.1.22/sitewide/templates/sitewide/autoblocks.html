@@ -1,0 +1,8 @@
+{% extends 'sitewide/layout.html' %}
+{% load static %}
+{% block 'app-css' %}
+    {% if sitewide.css %}<link rel="stylesheet" href="{% static sitewide.css %}">{% endif %}
+{% endblock %}
+{% block banner %}
+    {% if sitewide.banner.show %}<div class="banner" {% if sitewide.banner.image.path %}style="background-image: {{ sitewide.banner.image.path }}"{% endif %}></div>{% endif %}
+{% endblock %}
