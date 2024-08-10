@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ultravox-vllm"
+version = "0.5.4.1"
+description = ""
+authors = ["Peter Salas <peter@fixie.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+vllm = "0.5.4"
+torchaudio = "^2.4.0"
+librosa = "^0.10.2.post1"
+wrapt = "^1.16.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
