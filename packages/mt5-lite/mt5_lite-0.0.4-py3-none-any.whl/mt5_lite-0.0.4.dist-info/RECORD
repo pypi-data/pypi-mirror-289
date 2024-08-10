@@ -1,0 +1,10 @@
+mt5/__init__.py,sha256=eQBrVmIvlOzpRpCobAUeYIJthKKLnIEeONkpw-CqOuE,86
+mt5/account.py,sha256=rX7B_V4kUGppE8Uk_b10cbepqsADMA7N3NShsukcKoA,1819
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/context.py,sha256=neYjK6i2zzxkijWC7SSYShDS9B4BZBr7CZ24b7yuQTA,157
+tests/test_accounts.py,sha256=IX14hibyUGrwJ-ogrij72ap1Fi03wTR6Zq3On1G_5Ew,1808
+mt5_lite-0.0.4.dist-info/LICENCE,sha256=hnChAaY45D6uz_Gr3cncbYOy4jJUqRUourImMXhV5OM,1072
+mt5_lite-0.0.4.dist-info/METADATA,sha256=vWc4XZxVkjQQZFTMOOu0LPmo_SmtpY-n0XcqHtWGdPE,614
+mt5_lite-0.0.4.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+mt5_lite-0.0.4.dist-info/top_level.txt,sha256=Az6odeggFCb7ZTjGg769dt0bCEWdsw_irlpoJwVs2KQ,10
+mt5_lite-0.0.4.dist-info/RECORD,,
