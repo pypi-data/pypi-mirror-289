@@ -1,0 +1,13 @@
+COPYING.md
+README.md
+setup.cfg
+setup.py
+pkg_depgraph/__init__.py
+pkg_depgraph/dnf.py
+pkg_depgraph/protocols.py
+pkg_depgraph/repo_diff.py
+pkg_depgraph.egg-info/PKG-INFO
+pkg_depgraph.egg-info/SOURCES.txt
+pkg_depgraph.egg-info/dependency_links.txt
+pkg_depgraph.egg-info/requires.txt
+pkg_depgraph.egg-info/top_level.txt
