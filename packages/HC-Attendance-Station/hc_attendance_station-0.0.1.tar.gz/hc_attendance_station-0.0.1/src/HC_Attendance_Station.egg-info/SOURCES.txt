@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/HCAttendanceStation/AutomatedAttendance.py
+src/HCAttendanceStation/__init__.py
+src/HC_Attendance_Station.egg-info/PKG-INFO
+src/HC_Attendance_Station.egg-info/SOURCES.txt
+src/HC_Attendance_Station.egg-info/dependency_links.txt
+src/HC_Attendance_Station.egg-info/top_level.txt

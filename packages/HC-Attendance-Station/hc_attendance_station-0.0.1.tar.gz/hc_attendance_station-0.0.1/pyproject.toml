@@ -1,0 +1,16 @@
+[project]
+name = "HC_Attendance_Station"
+version = "0.0.1"
+authors = [
+  { name="Joseph Deer", email="python@hocking.edu" },
+]
+description = "Classroom attendance using a USB magstripe reader"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.urls]
