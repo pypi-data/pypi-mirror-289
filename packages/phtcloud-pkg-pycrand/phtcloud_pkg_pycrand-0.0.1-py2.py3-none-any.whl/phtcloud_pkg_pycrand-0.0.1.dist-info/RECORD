@@ -1,0 +1,8 @@
+phtcloud_pkg_pycrand/__init__.py,sha256=KBCD9F76IINSnZ4w87DW11Gg7eLXM2pK10Q_0HGtlvc,20
+phtcloud_pkg_pycrand/crand.dll,sha256=2rj-Gu2AkdRuGbVSpZgyT6B3huV0ePBbfyXsG8FBP9c,74725
+phtcloud_pkg_pycrand/crand.py,sha256=uDRLYQVT1Vhr1Mnvb50P7O5gJ3qUddMUswSZXIo7Hk0,191
+phtcloud_pkg_pycrand-0.0.1.dist-info/LICENSE.txt,sha256=eTAMrQxkyw6ApSsWH9vJdyVXchbASCr9kEPFfwQzv-c,1091
+phtcloud_pkg_pycrand-0.0.1.dist-info/METADATA,sha256=8tyeYCHZUjsH5UJlClD_9csZC5akibppdqbL0M_djQo,626
+phtcloud_pkg_pycrand-0.0.1.dist-info/WHEEL,sha256=fS9sRbCBHs7VFcwJLnLXN1MZRR0_TVTxvXKzOnaSFs8,110
+phtcloud_pkg_pycrand-0.0.1.dist-info/top_level.txt,sha256=IYlSP9WUWJuowvyXczRbZqitR_vSXTnIRnBuQcNMrQo,21
+phtcloud_pkg_pycrand-0.0.1.dist-info/RECORD,,

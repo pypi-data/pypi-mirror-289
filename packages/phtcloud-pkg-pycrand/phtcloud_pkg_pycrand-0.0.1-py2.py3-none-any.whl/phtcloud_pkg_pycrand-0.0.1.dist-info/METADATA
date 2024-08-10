@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: phtcloud-pkg-pycrand
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/phtcloud-dev
+Author: phtcloud
+Author-email: phtcloud@foxmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Made by phtcloud
+该程序为方便使用python生成c语言的随机数
+使用方法
+csrand(<seed>)	使用<seed>作为随机数种子
+crand()			生成随机数返回类型为int
