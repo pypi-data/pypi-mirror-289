@@ -1,0 +1,11 @@
+pydantic
+addict
+
+[docs]
+sphinx
+myst-parser
+sphinx-book-theme
+sphinx-design
+
+[test]
+pytest
