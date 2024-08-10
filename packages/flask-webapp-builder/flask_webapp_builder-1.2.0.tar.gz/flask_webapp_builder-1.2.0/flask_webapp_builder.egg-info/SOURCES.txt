@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+FlaskWebApp/__init__.py
+FlaskWebApp/build_flask_webapp.py
+FlaskWebApp/data_assets/Rubik-Regular.ttf
+FlaskWebApp/data_assets/icon.jpg
+FlaskWebApp/data_assets/logo.png
+flask_webapp_builder.egg-info/PKG-INFO
+flask_webapp_builder.egg-info/SOURCES.txt
+flask_webapp_builder.egg-info/dependency_links.txt
+flask_webapp_builder.egg-info/entry_points.txt
+flask_webapp_builder.egg-info/requires.txt
+flask_webapp_builder.egg-info/top_level.txt

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: flask-webapp-builder
+Version: 1.2.0
+Summary: A Flask Webapp Builder is designed to generate a basic fully flask project structure. Including the directory folders and files also run-server script to execute the webapp server.
+Home-page: https://github.com/christiangarcia0311/flask-webapp-builder
+Author: Christian Garcia
+Author-email: iyaniyan03112003@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask
+
+Full Documentation: [Github](https://github.com/christiangarcia0311/flask-webapp-builder)
