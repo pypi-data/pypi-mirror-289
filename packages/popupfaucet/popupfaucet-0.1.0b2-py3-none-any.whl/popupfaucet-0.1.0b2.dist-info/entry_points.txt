@@ -1,0 +1,2 @@
+[console_scripts]
+popupfaucet = popupfaucet:popupfaucet
