@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>/*
+ * Monkeypatch URLSearchParams
+ *
+ * Sphinx documents that use `searchtool.js` rely on passing information via
+ * GET parameters (aka search parameters). Unfortunately, this doesn't work
+ * in our approach due to the same origin policy, so we have to get ...
+ * creative.
+ *
+ * Here, we patch the `URLSearchParams` class so it returns the information
+ * stored in `window.global_context.get_parameters`.
+ *
+ */
+
+const originalGet = URLSearchParams.prototype.get;
+
+var myGet = function (arg) {
+    const originalResult = originalGet.apply(this, [arg]);
+    // If searchtools.js of sphinx is used
+    if (
+        window.global_context.get_parameters &&
+        (window.location.search === "") &&
+        (Array.from(this.entries()).length == 0)
+    ) {
+        const params = new URLSearchParams('?' + window.global_context.get_parameters);
+        const result = params.get(arg);
+        // console.log("Return virtual get parameter:", arg, result);
+        return result;
+    } else {
+        return originalResult;
+    }
+};
+
+URLSearchParams.prototype.get = myGet;
+
+/*
+ * Monkeypatch fetch
+ */
+
+const { fetch: originalFetch } = window;
+
+window.fetch = async (...args) => {
+    let [resource, config ] = args;
+    var path = normalize_path(resource);
+    var response;
+    if (is_virtual(path)) {
+        var data = retrieve_file(path);
+        response = new Response(data);
+
+    } else {
+        response = await originalFetch(resource, config);
+    }
+    return response;
+};
+//# sourceURL=inject_pre.js</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>Sphinx’s release process — Sphinx documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/basic.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx13.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<link href="https://www.sphinx-doc.org/en/master/internals/release-process.html" rel="canonical"/>
+<link href="../_static/opensearch.xml" rel="search" title="Search within Sphinx documentation" type="application/opensearchdescription+xml"/>
+<link href="../_static/favicon.svg" rel="shortcut icon"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="organization.html" rel="next" title="Organization of the Sphinx project"/>
+<link href="contributing.html" rel="prev" title="Contributing to Sphinx"/>
+</head><body>
+<div class="pageheader">
+<a href="../index.html">
+<img alt="SPHINX" src="../_static/sphinxheader.png"/>
+</a>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li><a href="../index.html">Documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="index.html">Contribute to Sphinx</a> »</li>
+<li class="nav-item nav-item-this"><a href="">Sphinx’s release process</a></li>
+</ul>
+</div>
+<div class="document">
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div id="searchbox" role="search" style="display: none">
+<h3 id="searchlabel">Quick search</h3>
+<div class="searchformwrapper">
+<form action="../search.html" class="search" method="get">
+<input aria-labelledby="searchlabel" autocapitalize="off" autocomplete="off" autocorrect="off" name="q" spellcheck="false" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<div class="sphinxsidebar-navigation__contents">
+<h3>On this page</h3>
+<ul>
+<li><a class="reference internal" href="#">Sphinx’s release process</a><ul>
+<li><a class="reference internal" href="#versioning">Versioning</a></li>
+<li><a class="reference internal" href="#deprecating-a-feature">Deprecating a feature</a></li>
+<li><a class="reference internal" href="#deprecation-policy">Deprecation policy</a><ul>
+<li><a class="reference internal" href="#deprecation-warnings">Deprecation warnings</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#python-version-support-policy">Python version support policy</a></li>
+<li><a class="reference internal" href="#release-procedures">Release procedures</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sphinxsidebar-navigation__pages">
+<h3>Site navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installing Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial: Build your first project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Using Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Extending Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templating.html">Templating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex.html">LaTeX customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extdev/index.html">Developing extensions for Sphinx</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Get support</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Contribute to Sphinx</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contributing to Sphinx</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sphinx’s release process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="organization.html">Organization of the Sphinx project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code-of-conduct.html">Sphinx Code of Conduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authors.html">Sphinx authors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Sphinx FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../man/index.html">Command-Line Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Projects using Sphinx</a></li>
+</ul>
+</div>
+</div>
+<div class="body" role="main">
+<section id="sphinx-s-release-process">
+<h1>Sphinx’s release process<a class="headerlink" href="#sphinx-s-release-process" title="Permalink to this heading">¶</a></h1>
+<section id="versioning">
+<h2>Versioning<a class="headerlink" href="#versioning" title="Permalink to this heading">¶</a></h2>
+<p>Sphinx adheres to <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0440/"><strong>PEP 440</strong></a> versions, with a <code class="docutils literal notranslate"><span class="pre">major.minor.micro</span></code> scheme for
+the <em>release segment</em> (e.g. 1.2.3).
+The major, minor, and micro version parts should be altered as follows:</p>
+<ul class="simple">
+<li><p>The major version part should be incremented for incompatible behavior change and
+public API updates.</p></li>
+<li><p>The minor version part should be incremented for most releases of Sphinx, where
+backwards-compatibility of API and features are preserves.</p></li>
+<li><p>The micro version part should only be incremented for urgent bugfix-only releases.</p></li>
+</ul>
+<p>When the major version part is incremented, the minor and micro version parts
+must be set to <code class="docutils literal notranslate"><span class="pre">0</span></code>.
+When the minor version part is incremented, the micro version part must be set
+to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>New major versions should come with a beta-testing period before the final
+release.</p>
+</section>
+<section id="deprecating-a-feature">
+<h2>Deprecating a feature<a class="headerlink" href="#deprecating-a-feature" title="Permalink to this heading">¶</a></h2>
+<p>There are a couple reasons that code in Sphinx might be deprecated:</p>
+<ul class="simple">
+<li><p>If a feature has been improved or modified in a backwards-incompatible way,
+the old feature or behavior will be deprecated.</p></li>
+<li><p>Sometimes Sphinx will include a backport of a Python library that’s not
+included in a version of Python that Sphinx currently supports. When Sphinx
+no longer needs to support the older version of Python that doesn’t include
+the library, the library will be deprecated in Sphinx.</p></li>
+</ul>
+<p>As the <a class="reference internal" href="#deprecation-policy"><span class="std std-ref">Deprecation policy</span></a> describes, the first release of Sphinx that
+deprecates a feature (<code class="docutils literal notranslate"><span class="pre">A.B</span></code>) should raise a <code class="docutils literal notranslate"><span class="pre">RemovedInSphinxXXWarning</span></code>
+(where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the Sphinx version where the feature will be removed) when the
+deprecated feature is invoked. Assuming we have good test coverage, these
+warnings are converted to errors when running the test suite with warnings
+enabled:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="o">-</span><span class="n">Wall</span>
+</pre></div>
+</div>
+<p>Thus, when adding a <code class="docutils literal notranslate"><span class="pre">RemovedInSphinxXXWarning</span></code> you need to eliminate or
+silence any warnings generated when running the tests.</p>
+</section>
+<section id="deprecation-policy">
+<span id="id1"></span><h2>Deprecation policy<a class="headerlink" href="#deprecation-policy" title="Permalink to this heading">¶</a></h2>
+<p>MAJOR and MINOR releases may deprecate certain features from previous
+releases. If a feature is deprecated in a release A.x, it will continue to
+work in all A.x.x versions (for all versions of x). It will continue to work
+in all B.x.x versions but raise deprecation warnings. Deprecated features
+will be removed at the C.0.0. It means the deprecated feature will work during
+2 MAJOR releases at least.</p>
+<p>So, for example, if we decided to start the deprecation of a function in
+Sphinx 2.x:</p>
+<ul class="simple">
+<li><p>Sphinx 2.x will contain a backwards-compatible replica of the function
+which will raise a <code class="docutils literal notranslate"><span class="pre">RemovedInSphinx40Warning</span></code>.
+This is a subclass of <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#PendingDeprecationWarning" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">PendingDeprecationWarning</span></code></a>, i.e. it
+will not get displayed by default.</p></li>
+<li><p>Sphinx 3.x will still contain the backwards-compatible replica, but
+<code class="docutils literal notranslate"><span class="pre">RemovedInSphinx40Warning</span></code> will be a subclass of
+<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#DeprecationWarning" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> then, and gets displayed by default.</p></li>
+<li><p>Sphinx 4.0 will remove the feature outright.</p></li>
+</ul>
+<section id="deprecation-warnings">
+<h3>Deprecation warnings<a class="headerlink" href="#deprecation-warnings" title="Permalink to this heading">¶</a></h3>
+<p>Sphinx will enable its <code class="docutils literal notranslate"><span class="pre">RemovedInNextVersionWarning</span></code> warnings by default, if
+<span class="target" id="index-1"></span><a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONWARNINGS" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">PYTHONWARNINGS</span></code></a> is not set.  Therefore you can disable them
+using:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PYTHONWARNINGS=</span> <span class="pre">make</span> <span class="pre">html</span></code> (Linux/Mac)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PYTHONWARNINGS=</span></code> and do <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> (Linux/Mac)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">PYTHONWARNINGS=</span></code> and do <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> (Windows)</p></li>
+</ul>
+<p>But you can also explicitly enable the pending ones using e.g.
+<code class="docutils literal notranslate"><span class="pre">PYTHONWARNINGS=default</span></code> (see the <a class="reference external" href="https://docs.python.org/3/library/warnings.html#describing-warning-filters" title="(in Python v3.10)"><span class="xref std std-ref">Python docs on configuring warnings</span></a>) for more details.</p>
+</section>
+</section>
+<section id="python-version-support-policy">
+<h2>Python version support policy<a class="headerlink" href="#python-version-support-policy" title="Permalink to this heading">¶</a></h2>
+<p>Sphinx supports at all minor versions of Python released in the past 42 months
+from the anticipated release date with a minimum of 3 minor versions of Python.
+This policy is derived from <a class="reference external" href="https://numpy.org/neps/nep-0029-deprecation_policy.html">NEP 29</a>, a scientific Python domain standard.</p>
+<p>For example, a version of Sphinx released in May 2024 would support Python 3.10,
+3.11, and 3.12.</p>
+<p>This is a summary table with the current policy:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 65%"/>
+<col style="width: 35%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Date</p></th>
+<th class="head"><p>Python</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>26 Dec 2021</p></td>
+<td><p>3.8+</p></td>
+</tr>
+<tr class="row-odd"><td><p>14 Apr 2023</p></td>
+<td><p>3.9+</p></td>
+</tr>
+<tr class="row-even"><td><p>05 Apr 2024</p></td>
+<td><p>3.10+</p></td>
+</tr>
+<tr class="row-odd"><td><p>04 Apr 2025</p></td>
+<td><p>3.11+</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-procedures">
+<h2>Release procedures<a class="headerlink" href="#release-procedures" title="Permalink to this heading">¶</a></h2>
+<p>The release procedures are listed in <code class="docutils literal notranslate"><span class="pre">utils/release-checklist</span></code>.</p>
+</section>
+</section>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+  © <a href="../copyright.html">Copyright</a> 2007-2022, the Sphinx developers.
+  Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+</div>
+<script>var embed_css = function() {
+    Array.from(document.querySelectorAll("link")).forEach( link => {
+        if (link.getAttribute('rel') == 'stylesheet') {
+            const style = document.createElement("style");
+            var href = link.getAttribute('href');
+            let [path, get_parameters, anchor] = split_url(href);
+            path = normalize_path(path);
+            style.innerText = retrieve_file(path);
+            link.replaceWith(style);
+        };
+    });
+};
+
+
+var embed_js = function() {
+    Array.from(document.querySelectorAll("script")).forEach( oldScript => {
+        const newScript = document.createElement("script");
+        Array.from(oldScript.attributes).forEach( attr => {
+            newScript.setAttribute(attr.name, attr.value);
+        });
+        try {
+            if (newScript.hasAttribute('src') && is_virtual(newScript.getAttribute('src'))) {
+                var src = newScript.getAttribute('src');
+                let [path, get_parameters, anchor] = split_url(src);
+                path = normalize_path(path);
+                var src = retrieve_file(path) + ' //# sourceMap=' + path;
+                newScript.appendChild(document.createTextNode(src));
+                newScript.removeAttribute('src');
+                oldScript.parentNode.replaceChild(newScript, oldScript);
+            }
+        } catch (e) {
+            // Make sure all scripts are loaded
+            console.error("Caught error in " + oldScript.getAttribute("src"), e);
+        }
+    });
+};
+
+
+var split_url = function(url) {
+    // Return a list of three elements: path, GET parameters, anchor
+    var anchor = url.split('#')[1] || "";
+    var get_parameters = url.split('#')[0].split('?')[1] || "";
+    var path = url.split('#')[0];
+    path = path.split('?')[0];
+    let result = [path, get_parameters, anchor];
+    // console.log("Split URL", url, result);
+    return result;
+}
+
+
+var virtual_click = function(evnt) {
+    // Handle GET parameters and anchors
+    // console.log("Virtual click", evnt);
+
+    var el = evnt.currentTarget;
+    var name = el.tagName.toLowerCase();
+
+    if (name == 'a') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('href'));
+    } else if (name == 'form') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('action'));
+        const formData = new FormData(el);
+        get_parameters = new URLSearchParams(formData).toString();
+    } else {
+        console.error("Invalid element", el);
+    }
+
+    path = normalize_path(path);
+
+    window.parent.postMessage({
+        action: "virtual_click",
+        argument: {
+            path: path,
+            get_parameters: get_parameters,
+            anchor: anchor,
+        }
+    }, '*');
+    evnt.preventDefault();
+    evnt.stopPropagation();
+    return false;
+};
+
+var fix_links = function() {
+    Array.from(document.querySelectorAll("a")).forEach( a => {
+        fix_link(a);
+    });
+};
+
+var fix_link = function(a) {
+    if (is_virtual(a.getAttribute('href'))) {
+        a.addEventListener('click', virtual_click);
+    } else if (a.getAttribute('href').startsWith('#')) {
+        a.setAttribute('href', "about:srcdoc" + a.getAttribute('href'))
+    } else {
+        // External links should open in a new tab. Browsers block links to
+        // sites of different origin within an iframe for security reasons.
+        a.setAttribute('target', "_blank");
+    }
+};
+
+var fix_form = function(form) {
+    var href = form.getAttribute('action');
+    if (is_virtual(href) && form.getAttribute('method').toLowerCase() == 'get') {
+        form.addEventListener('submit', virtual_click);
+    }
+};
+
+
+var fix_forms = function() {
+    Array.from(document.querySelectorAll("form")).forEach( form => {
+        fix_form(form);
+    });
+};
+
+
+var embed_img = function(img) {
+    if (img.hasAttribute('src')) {
+        const src = img.getAttribute('src');
+        if (is_virtual(src)) {
+            var path = normalize_path(src);
+            const file = retrieve_file(path);
+            const mime_type = window.global_context.file_tree[path].mime_type;
+            if (mime_type == 'image/svg+xml') {
+                img.setAttribute('src', "data:image/svg+xml;charset=utf-8;base64, " + btoa(file));
+            } else {
+                img.setAttribute('src', `data:${mime_type};base64, ${file}`);
+            }
+        };
+    };
+};
+
+var embed_imgs = function() {
+    Array.from(document.querySelectorAll("img")).forEach( img => {
+        embed_img(img);
+    });
+};
+
+var is_virtual = function(url) {
+    // Return true if the url should be retrieved from the virtual file tree
+    var _url = url.toString().toLowerCase();
+    return (! (
+        _url == "" ||
+        _url[0] == "#" ||
+        _url.startsWith('https://') ||
+        _url.startsWith('http://') ||
+        _url.startsWith('data:') ||
+        _url.startsWith('blob:')
+    ));
+};
+
+var retrieve_file = function(path) {
+    // console.log("Retrieving file: " + path);
+    var file_tree = window.global_context.file_tree;
+    var file = file_tree[path];
+    if (!file) {
+        console.warn("File not found: " + path);
+        return "";
+    } else {
+        return file.data;
+    }
+};
+
+var normalize_path = function(path) {
+    // make relative paths absolute in context of our virtual file tree
+
+    while (path && path[0] == '/') {
+        path = path.substr(1);
+    }
+
+    var result = window.global_context.current_path;
+    result = result.split('/');
+    result.pop();
+    result = result.concat(path.split('/'));
+
+    // resolve relative directories
+    var array = [];
+    Array.from(result).forEach( component => {
+        if (component == '..') {
+            if (array) {
+                array.pop();
+            }
+        } else if (component == '.') {
+        } else {
+            if (component) { array.push(component); }
+        }
+    });
+
+    result = array.join('/');
+    // console.log(`Normalized path: ${path} -> ${result} (@${window.global_context.current_path})`);
+    return result;
+};
+
+
+var fix_document = function() {
+    embed_js(); // This might change the DOM, so do this first
+    monkey_patch();
+    embed_css();
+    embed_imgs();
+    fix_links();
+    fix_forms();
+};
+
+
+var on_set_data = function(argument) {
+    window.global_context = argument;
+    console.log("Received data from parent", window.global_context);
+    // dynamically fix elements on this page
+    try {
+        fix_document();
+        // Trigger DOMContentLoaded again, some scripts that have just
+        // been executed expect it.
+        window.document.dispatchEvent(new Event("DOMContentLoaded", {
+            bubbles: true,
+            cancelable: true
+        }));
+    } finally {
+        observer.observe(window.document.body, {subtree: true, childList: true});
+        window.parent.postMessage({
+            action: "show_iframe",
+            argument: "",
+        }, '*');
+    }
+}
+
+
+var on_scroll_to_anchor = function(argument) {
+    if (window.global_context.anchor) {
+        document.location.replace("about:srcdoc#" + window.global_context.anchor);
+    }
+}
+
+
+const observer = new MutationObserver((mutationList) => {
+    // console.log("Fix mutated elements...", mutationList);
+    mutationList.forEach((mutation) => {
+        if (mutation.type == 'childList') {
+            Array.from(mutation.target.querySelectorAll("a")).forEach( a => {
+                fix_link(a);
+            });
+            Array.from(mutation.target.querySelectorAll("img")).forEach( img => {
+                embed_img(img);
+            });
+            Array.from(mutation.target.querySelectorAll("form")).forEach( form => {
+                fix_form(form);
+            });
+        }
+    });
+});
+
+
+var monkey_patch = function() {
+    if (typeof jQuery === 'undefined') {return;} // Only for jQuery at the moment
+    /**
+     * Monkey patch getQueryParameters
+     * This function is defined in Sphinx' (v4) doctools.js and incompatible with our
+     * approach.
+     * This is a copy with effectively only the third line changed.
+     * See: https://github.com/sphinx-doc/sphinx/blob/2329fdef8c20c6c75194f5d842b8f62ebad5c79d/sphinx/themes/basic/static/doctools.js#L54
+     */
+    jQuery._getQueryParameters = jQuery.getQueryParameters;
+    jQuery.getQueryParameters = function(s) {
+      if (typeof s === 'undefined')
+        s = '?' + window.global_context.get_parameters;
+      return jQuery._getQueryParameters(s);
+    };
+
+    /**
+     * Monkey patch jQuery.ajax
+     * Only settings.url and settings.complete are supported for virtual
+     * URLs.
+     */
+    jQuery._ajax = jQuery.ajax;
+    jQuery.ajax = function(settings) {
+        url = normalize_path(settings.url);
+        if (is_virtual(url)) {
+            var result;
+            var data;
+            data = retrieve_file(url);
+            result = settings.complete({responseText: data}, "");
+            return; // Return value not actually needed in searchtools.js
+        } else {
+            return jQuery.ajax(settings);
+        };
+    };
+}
+
+
+var on_load = function() {
+    // Set up message listener
+    window.addEventListener("message", (evnt) => {
+        console.log("Received message in iframe", evnt);
+        if (evnt.data.action == 'set_data') {
+            on_set_data(evnt.data.argument);
+        } else if (evnt.data.action == 'scroll_to_anchor') {
+            on_scroll_to_anchor(evnt.data.argument);
+        }
+    }, false);
+
+    // Set parent window title and trigger data transmission
+    var favicon = window.document.querySelector("link[rel*='icon']");
+    if (favicon) { favicon = favicon.getAttribute('href'); }
+    var title = window.document.querySelector('head>title');
+    if (title) { title = title.innerText; }
+
+    window.parent.postMessage({
+        action: "set_title",
+        argument: {
+            title: title,
+            favicon: favicon
+        }
+    }, '*');
+
+};
+
+
+window.addEventListener('load', on_load);
+//# sourceURL=inject_post.js</script></body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>/*
+ * Monkeypatch URLSearchParams
+ *
+ * Sphinx documents that use `searchtool.js` rely on passing information via
+ * GET parameters (aka search parameters). Unfortunately, this doesn't work
+ * in our approach due to the same origin policy, so we have to get ...
+ * creative.
+ *
+ * Here, we patch the `URLSearchParams` class so it returns the information
+ * stored in `window.global_context.get_parameters`.
+ *
+ */
+
+const originalGet = URLSearchParams.prototype.get;
+
+var myGet = function (arg) {
+    const originalResult = originalGet.apply(this, [arg]);
+    // If searchtools.js of sphinx is used
+    if (
+        window.global_context.get_parameters &&
+        (window.location.search === "") &&
+        (Array.from(this.entries()).length == 0)
+    ) {
+        const params = new URLSearchParams('?' + window.global_context.get_parameters);
+        const result = params.get(arg);
+        // console.log("Return virtual get parameter:", arg, result);
+        return result;
+    } else {
+        return originalResult;
+    }
+};
+
+URLSearchParams.prototype.get = myGet;
+
+/*
+ * Monkeypatch fetch
+ */
+
+const { fetch: originalFetch } = window;
+
+window.fetch = async (...args) => {
+    let [resource, config ] = args;
+    var path = normalize_path(resource);
+    var response;
+    if (is_virtual(path)) {
+        var data = retrieve_file(path);
+        response = new Response(data);
+
+    } else {
+        response = await originalFetch(resource, config);
+    }
+    return response;
+};
+//# sourceURL=inject_pre.js</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>Appendix: Deploying a Sphinx project online — Sphinx documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/basic.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx13.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<link href="https://www.sphinx-doc.org/en/master/tutorial/deploying.html" rel="canonical"/>
+<link href="../_static/opensearch.xml" rel="search" title="Search within Sphinx documentation" type="application/opensearchdescription+xml"/>
+<link href="../_static/favicon.svg" rel="shortcut icon"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="end.html" rel="next" title="Where to go from here"/>
+<link href="automatic-doc-generation.html" rel="prev" title="Automatic documentation generation from code"/>
+</head><body>
+<div class="pageheader">
+<a href="../index.html">
+<img alt="SPHINX" src="../_static/sphinxheader.png"/>
+</a>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li><a href="../index.html">Documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="index.html">Tutorial: Build your first project</a> »</li>
+<li class="nav-item nav-item-this"><a href="">Appendix: Deploying a Sphinx project online</a></li>
+</ul>
+</div>
+<div class="document">
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div id="searchbox" role="search" style="display: none">
+<h3 id="searchlabel">Quick search</h3>
+<div class="searchformwrapper">
+<form action="../search.html" class="search" method="get">
+<input aria-labelledby="searchlabel" autocapitalize="off" autocomplete="off" autocorrect="off" name="q" spellcheck="false" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<div class="sphinxsidebar-navigation__contents">
+<h3>On this page</h3>
+<ul>
+<li><a class="reference internal" href="#">Appendix: Deploying a Sphinx project online</a><ul>
+<li><a class="reference internal" href="#sphinx-friendly-deployment-options">Sphinx-friendly deployment options</a></li>
+<li><a class="reference internal" href="#embracing-the-docs-as-code-philosophy">Embracing the “Docs as Code” philosophy</a></li>
+<li><a class="reference internal" href="#publishing-your-documentation-sources">Publishing your documentation sources</a><ul>
+<li><a class="reference internal" href="#id1">GitHub</a></li>
+<li><a class="reference internal" href="#id2">GitLab</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#publishing-your-html-documentation">Publishing your HTML documentation</a><ul>
+<li><a class="reference internal" href="#id4">Read the Docs</a></li>
+<li><a class="reference internal" href="#id5">GitHub Pages</a></li>
+<li><a class="reference internal" href="#id6">GitLab Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sphinxsidebar-navigation__pages">
+<h3>Site navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installing Sphinx</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorial: Build your first project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps.html">First steps to document your project using Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-sphinx-customization.html">More Sphinx customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="narrative-documentation.html">Narrative documentation in Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="describing-code.html">Describing code in Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatic-doc-generation.html">Automatic documentation generation from code</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Appendix: Deploying a Sphinx project online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="end.html">Where to go from here</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Using Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Extending Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templating.html">Templating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex.html">LaTeX customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extdev/index.html">Developing extensions for Sphinx</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Get support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internals/index.html">Contribute to Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Sphinx FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../man/index.html">Command-Line Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Projects using Sphinx</a></li>
+</ul>
+</div>
+</div>
+<div class="body" role="main">
+<section id="appendix-deploying-a-sphinx-project-online">
+<h1>Appendix: Deploying a Sphinx project online<a class="headerlink" href="#appendix-deploying-a-sphinx-project-online" title="Permalink to this heading">¶</a></h1>
+<p>When you are ready to show your documentation project to the world, there are
+many options available to do so. Since the HTML generated by Sphinx is static,
+you can decouple the process of building your HTML documentation from hosting
+such files in the platform of your choice. You will not need a sophisticated
+server running Python: virtually every web hosting service will suffice.</p>
+<p>Therefore, the challenge is less how or where to serve the static HTML, but
+rather how to pick a workflow that automatically updates the deployed
+documentation every time there is a change in the source files.</p>
+<p>The following sections describe some of the available options to deploy
+your online documentation, and give some background information. If you want
+to go directly to the practical part, you can skip to <a class="reference internal" href="#publishing-sources"><span class="std std-ref">Publishing your documentation sources</span></a>.</p>
+<section id="sphinx-friendly-deployment-options">
+<h2>Sphinx-friendly deployment options<a class="headerlink" href="#sphinx-friendly-deployment-options" title="Permalink to this heading">¶</a></h2>
+<p>There are several possible options you have to host your Sphinx documentation.
+Some of them are:</p>
+<dl class="simple">
+<dt><strong>Read the Docs</strong></dt><dd><p><a class="reference external" href="https://readthedocs.org/">Read the Docs</a> is an online service specialized in hosting technical
+documentation written in Sphinx, as well as MkDocs. They have a
+number of extra features, such as versioned documentation, traffic and
+search analytics, custom domains, user-defined redirects, and more.</p>
+</dd>
+<dt><strong>GitHub Pages</strong></dt><dd><p><a class="reference external" href="https://pages.github.com/">GitHub Pages</a> is a simple static web hosting tightly integrated with
+<a class="reference external" href="https://github.com/">GitHub</a>: static HTML is served from one of the branches of a project,
+and usually sources are stored in another branch so that the output
+can be updated every time the sources change (for example using <a class="reference external" href="https://github.com/features/actions">GitHub
+Actions</a>). It is free to use and supports custom domains.</p>
+</dd>
+<dt><strong>GitLab Pages</strong></dt><dd><p><a class="reference external" href="https://about.gitlab.com/stages-devops-lifecycle/pages/">GitLab Pages</a> is a similar concept to GitHub Pages, integrated with
+<a class="reference external" href="https://gitlab.com/">GitLab</a> and usually automated with <a class="reference external" href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/">GitLab CI</a> instead.</p>
+</dd>
+<dt><strong>Netlify</strong></dt><dd><p><a class="reference external" href="https://www.netlify.com/">Netlify</a> is a sophisticated hosting for static sites enhanced by
+client-side web technologies like JavaScript (so-called <a class="reference external" href="https://jamstack.org/">“Jamstack”</a>).
+They offer support for headless content management systems and
+serverless computing.</p>
+</dd>
+<dt><strong>Your own server</strong></dt><dd><p>You can always use your own web server to host Sphinx HTML documentation.
+It is the option that gives more flexibility, but also more complexity.</p>
+</dd>
+</dl>
+<p>All these options have zero cost, with the option of paying for extra features.</p>
+</section>
+<section id="embracing-the-docs-as-code-philosophy">
+<h2>Embracing the “Docs as Code” philosophy<a class="headerlink" href="#embracing-the-docs-as-code-philosophy" title="Permalink to this heading">¶</a></h2>
+<p>The free offerings of most of the options listed above require your
+documentation sources to be publicly available. Moreover, these services
+expect you to use a <a class="reference external" href="https://en.wikipedia.org/wiki/Version_control">Version Control System</a>, a technology that tracks the
+evolution of a collection of files as a series of snapshots (“commits”).
+The practice of writing documentation in plain text files with the same tools
+as the ones used for software development is commonly known as <a class="reference external" href="https://www.writethedocs.org/guide/docs-as-code/">“Docs as Code”</a>.</p>
+<p>The most popular Version Control System nowadays is <a class="reference external" href="https://git-scm.com/">Git</a>, a free and open
+source tool that is the backbone of services like GitHub and GitLab.
+Since both Read the Docs and Netlify have integrations with GitHub and GitLab,
+and both GitHub and GitLab have an integrated Pages product, the most effective
+way of automatically build your documentation online is to upload your sources
+to either of these Git hosting services.</p>
+</section>
+<section id="publishing-your-documentation-sources">
+<span id="publishing-sources"></span><h2>Publishing your documentation sources<a class="headerlink" href="#publishing-your-documentation-sources" title="Permalink to this heading">¶</a></h2>
+<section id="id1">
+<h3>GitHub<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<p>The quickest way to upload an existing project to GitHub is to:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.com/signup">Sign up for a GitHub account</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/new">Create a new repository</a>.</p></li>
+<li><p>Open <a class="reference external" href="https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository">the “Upload files” page</a> of your new repository.</p></li>
+<li><p>Select the files on your operating system file browser (in your case
+<code class="docutils literal notranslate"><span class="pre">README.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">lumache.py</span></code>, the makefiles under the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory,
+and everything under <code class="docutils literal notranslate"><span class="pre">docs/source</span></code>) and drag them to the GitHub interface
+to upload them all.</p></li>
+<li><p>Click on the <span class="guilabel">Commit changes</span> button.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you don’t upload the <code class="docutils literal notranslate"><span class="pre">docs/build</span></code> directory, as it contains the
+output generated by Sphinx and it will change every time you change the
+sources, complicating your workflow.</p>
+</div>
+<p>These steps do not require access to the command line or installing any
+additional software. To learn more, you can:</p>
+<ul class="simple">
+<li><p>Follow <a class="reference external" href="https://lab.github.com/githubtraining/introduction-to-github">this interactive GitHub course</a> to learn more about how the GitHub
+interface works.</p></li>
+<li><p>Read <a class="reference external" href="https://docs.github.com/en/get-started/quickstart">this quickstart tutorial</a> to install extra software on your machine
+and have more flexibility. You can either use the Git command line, or the
+GitHub Desktop application.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>GitLab<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<p>Similarly to GitHub, the fastest way to upload your project to GitLab is
+using the web interface:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://gitlab.com/users/sign_up">Sign up for a GitLab account</a>.</p></li>
+<li><p><a class="reference external" href="https://gitlab.com/projects/new">Create a new blank project</a>.</p></li>
+<li><p>Upload the project files (in your case <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">lumache.py</span></code>, the
+makefiles under the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory, and everything under
+<code class="docutils literal notranslate"><span class="pre">docs/source</span></code>) one by one using the <span class="guilabel">Upload File</span> button <a class="footnote-reference brackets" href="#f1" id="id3">1</a>.</p></li>
+</ol>
+<p>Again, these steps do not require additional software on your computer. To
+learn more, you can:</p>
+<ul class="simple">
+<li><p>Follow <a class="reference external" href="https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html">this tutorial</a> to install Git on your machine.</p></li>
+<li><p>Browse the <a class="reference external" href="https://docs.gitlab.com/ee/user/index.html">GitLab User documentation</a> to understand the possibilities of
+the platform.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you don’t upload the <code class="docutils literal notranslate"><span class="pre">docs/build</span></code> directory, as it contains the
+output generated by Sphinx and it will change every time you change the
+sources, complicating your workflow.</p>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p>At the time of writing, <a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/228490">uploading whole directories to GitLab using
+only the web
+interface</a> is
+not yet implemented.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="publishing-your-html-documentation">
+<h2>Publishing your HTML documentation<a class="headerlink" href="#publishing-your-html-documentation" title="Permalink to this heading">¶</a></h2>
+<section id="id4">
+<h3>Read the Docs<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="https://readthedocs.org/">Read the Docs</a> offers integration with both GitHub and GitLab. The quickest
+way of getting started is to follow <a class="reference external" href="https://docs.readthedocs.io/en/stable/tutorial/index.html" title="(in Read the Docs user documentation v8.7.0)"><span class="xref std std-doc">the RTD
+tutorial</span></a>, which is loosely based on this one.
+You can publish your sources on GitHub as explained <a class="reference internal" href="#publishing-sources"><span class="std std-ref">in the previous
+section</span></a>, then skip directly to
+<a class="reference external" href="https://docs.readthedocs.io/en/stable/tutorial/index.html#sign-up-for-read-the-docs" title="(in Read the Docs user documentation v8.7.0)"><span>Sign up for Read the Docs</span></a>.
+If you choose GitLab instead, the process is similar.</p>
+</section>
+<section id="id5">
+<h3>GitHub Pages<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="https://pages.github.com/">GitHub Pages</a> requires you to <a class="reference internal" href="#publishing-sources"><span class="std std-ref">publish your
+sources</span></a> on <a class="reference external" href="https://github.com/">GitHub</a>. After that, you will need an
+automated process that performs the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> step every time the sources
+change. That can be achieved using <a class="reference external" href="https://github.com/features/actions">GitHub Actions</a>.</p>
+<p>After you have published your sources on GitHub, create a file named
+<code class="docutils literal notranslate"><span class="pre">.github/workflows/sphinx.yml</span></code> in your repository with the following
+contents:</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">.github/workflows/</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sphinx build</span><span class="w"></span>
+
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">push</span><span class="w"></span>
+
+<span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"></span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build HTML</span><span class="w"></span>
+<span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ammaraskar/sphinx-action@master</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload artifacts</span><span class="w"></span>
+<span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/upload-artifact@v3</span><span class="w"></span>
+<span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">html-docs</span><span class="w"></span>
+<span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs/build/html/</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy</span><span class="w"></span>
+<span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3</span><span class="w"></span>
+<span class="w">      </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == 'refs/heads/main'</span><span class="w"></span>
+<span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span><span class="w"></span>
+<span class="w">        </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs/build/html</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>This contains a GitHub Actions workflow with a single job of four steps:</p>
+<ol class="arabic simple">
+<li><p>Checkout the code.</p></li>
+<li><p>Build the HTML documentation using Sphinx.</p></li>
+<li><p>Attach the HTML output the artifacts to the GitHub Actions job, for easier
+inspection.</p></li>
+<li><p>If the change happens on the default branch, take the contents of
+<code class="docutils literal notranslate"><span class="pre">docs/build/html</span></code> and push it to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p></li>
+</ol>
+<p>Next, you need to specify the dependencies for the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> step to be
+successful. For that, create a file <code class="docutils literal notranslate"><span class="pre">docs/requirements.txt</span></code> and add the
+following contents:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">docs/requirements.txt</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">furo</span><span class="o">==</span><span class="mf">2021.11.16</span>
+</pre></div>
+</div>
+</div>
+<p>And finally, you are ready to <a class="reference external" href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">enable GitHub Pages on your repository</a>. For
+that, go to <span class="guilabel">Settings</span>, then <span class="guilabel">Pages</span> on the left sidebar,
+select the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch in the “Source” dropdown menu, and click
+<span class="guilabel">Save</span>. After a few minutes, you should be able to see your HTML at
+the designated URL.</p>
+</section>
+<section id="id6">
+<h3>GitLab Pages<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="https://about.gitlab.com/stages-devops-lifecycle/pages/">GitLab Pages</a>, on the other hand, requires you to <a class="reference internal" href="#publishing-sources"><span class="std std-ref">publish your
+sources</span></a> on <a class="reference external" href="https://gitlab.com/">GitLab</a>. When you are ready, you can
+automate the process of running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> using <a class="reference external" href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/">GitLab CI</a>.</p>
+<p>After you have published your sources on GitLab, create a file named
+<code class="docutils literal notranslate"><span class="pre">.gitlab-ci.yml</span></code> in your repository with these contents:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">.gitlab-ci.yml</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">stages</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="w"></span>
+
+<span class="nt">pages</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="w"></span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python:3.9-slim</span><span class="w"></span>
+<span class="w">  </span><span class="nt">before_script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apt-get update &amp;&amp; apt-get install make --no-install-recommends -y</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python -m pip install sphinx furo</span><span class="w"></span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cd docs &amp;&amp; make html</span><span class="w"></span>
+<span class="w">  </span><span class="nt">after_script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mv docs/build/html/ ./public/</span><span class="w"></span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public</span><span class="w"></span>
+<span class="w">  </span><span class="nt">rules</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>This contains a GitLab CI workflow with one job of several steps:</p>
+<ol class="arabic simple">
+<li><p>Install the necessary dependencies.</p></li>
+<li><p>Build the HTML documentation using Sphinx.</p></li>
+<li><p>Move the output to a known artifacts location.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to <a class="reference external" href="https://about.gitlab.com/blog/2021/05/17/prevent-crypto-mining-abuse/#validating-an-account">validate your account</a> by entering a payment method
+(you will be charged a small amount that will then be reimbursed).</p>
+</div>
+<p>After that, if the pipeline is successful, you should be able to see your HTML
+at the designated URL.</p>
+</section>
+</section>
+</section>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+  © <a href="../copyright.html">Copyright</a> 2007-2022, the Sphinx developers.
+  Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+</div>
+<script>var embed_css = function() {
+    Array.from(document.querySelectorAll("link")).forEach( link => {
+        if (link.getAttribute('rel') == 'stylesheet') {
+            const style = document.createElement("style");
+            var href = link.getAttribute('href');
+            let [path, get_parameters, anchor] = split_url(href);
+            path = normalize_path(path);
+            style.innerText = retrieve_file(path);
+            link.replaceWith(style);
+        };
+    });
+};
+
+
+var embed_js = function() {
+    Array.from(document.querySelectorAll("script")).forEach( oldScript => {
+        const newScript = document.createElement("script");
+        Array.from(oldScript.attributes).forEach( attr => {
+            newScript.setAttribute(attr.name, attr.value);
+        });
+        try {
+            if (newScript.hasAttribute('src') && is_virtual(newScript.getAttribute('src'))) {
+                var src = newScript.getAttribute('src');
+                let [path, get_parameters, anchor] = split_url(src);
+                path = normalize_path(path);
+                var src = retrieve_file(path) + ' //# sourceMap=' + path;
+                newScript.appendChild(document.createTextNode(src));
+                newScript.removeAttribute('src');
+                oldScript.parentNode.replaceChild(newScript, oldScript);
+            }
+        } catch (e) {
+            // Make sure all scripts are loaded
+            console.error("Caught error in " + oldScript.getAttribute("src"), e);
+        }
+    });
+};
+
+
+var split_url = function(url) {
+    // Return a list of three elements: path, GET parameters, anchor
+    var anchor = url.split('#')[1] || "";
+    var get_parameters = url.split('#')[0].split('?')[1] || "";
+    var path = url.split('#')[0];
+    path = path.split('?')[0];
+    let result = [path, get_parameters, anchor];
+    // console.log("Split URL", url, result);
+    return result;
+}
+
+
+var virtual_click = function(evnt) {
+    // Handle GET parameters and anchors
+    // console.log("Virtual click", evnt);
+
+    var el = evnt.currentTarget;
+    var name = el.tagName.toLowerCase();
+
+    if (name == 'a') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('href'));
+    } else if (name == 'form') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('action'));
+        const formData = new FormData(el);
+        get_parameters = new URLSearchParams(formData).toString();
+    } else {
+        console.error("Invalid element", el);
+    }
+
+    path = normalize_path(path);
+
+    window.parent.postMessage({
+        action: "virtual_click",
+        argument: {
+            path: path,
+            get_parameters: get_parameters,
+            anchor: anchor,
+        }
+    }, '*');
+    evnt.preventDefault();
+    evnt.stopPropagation();
+    return false;
+};
+
+var fix_links = function() {
+    Array.from(document.querySelectorAll("a")).forEach( a => {
+        fix_link(a);
+    });
+};
+
+var fix_link = function(a) {
+    if (is_virtual(a.getAttribute('href'))) {
+        a.addEventListener('click', virtual_click);
+    } else if (a.getAttribute('href').startsWith('#')) {
+        a.setAttribute('href', "about:srcdoc" + a.getAttribute('href'))
+    } else {
+        // External links should open in a new tab. Browsers block links to
+        // sites of different origin within an iframe for security reasons.
+        a.setAttribute('target', "_blank");
+    }
+};
+
+var fix_form = function(form) {
+    var href = form.getAttribute('action');
+    if (is_virtual(href) && form.getAttribute('method').toLowerCase() == 'get') {
+        form.addEventListener('submit', virtual_click);
+    }
+};
+
+
+var fix_forms = function() {
+    Array.from(document.querySelectorAll("form")).forEach( form => {
+        fix_form(form);
+    });
+};
+
+
+var embed_img = function(img) {
+    if (img.hasAttribute('src')) {
+        const src = img.getAttribute('src');
+        if (is_virtual(src)) {
+            var path = normalize_path(src);
+            const file = retrieve_file(path);
+            const mime_type = window.global_context.file_tree[path].mime_type;
+            if (mime_type == 'image/svg+xml') {
+                img.setAttribute('src', "data:image/svg+xml;charset=utf-8;base64, " + btoa(file));
+            } else {
+                img.setAttribute('src', `data:${mime_type};base64, ${file}`);
+            }
+        };
+    };
+};
+
+var embed_imgs = function() {
+    Array.from(document.querySelectorAll("img")).forEach( img => {
+        embed_img(img);
+    });
+};
+
+var is_virtual = function(url) {
+    // Return true if the url should be retrieved from the virtual file tree
+    var _url = url.toString().toLowerCase();
+    return (! (
+        _url == "" ||
+        _url[0] == "#" ||
+        _url.startsWith('https://') ||
+        _url.startsWith('http://') ||
+        _url.startsWith('data:') ||
+        _url.startsWith('blob:')
+    ));
+};
+
+var retrieve_file = function(path) {
+    // console.log("Retrieving file: " + path);
+    var file_tree = window.global_context.file_tree;
+    var file = file_tree[path];
+    if (!file) {
+        console.warn("File not found: " + path);
+        return "";
+    } else {
+        return file.data;
+    }
+};
+
+var normalize_path = function(path) {
+    // make relative paths absolute in context of our virtual file tree
+
+    while (path && path[0] == '/') {
+        path = path.substr(1);
+    }
+
+    var result = window.global_context.current_path;
+    result = result.split('/');
+    result.pop();
+    result = result.concat(path.split('/'));
+
+    // resolve relative directories
+    var array = [];
+    Array.from(result).forEach( component => {
+        if (component == '..') {
+            if (array) {
+                array.pop();
+            }
+        } else if (component == '.') {
+        } else {
+            if (component) { array.push(component); }
+        }
+    });
+
+    result = array.join('/');
+    // console.log(`Normalized path: ${path} -> ${result} (@${window.global_context.current_path})`);
+    return result;
+};
+
+
+var fix_document = function() {
+    embed_js(); // This might change the DOM, so do this first
+    monkey_patch();
+    embed_css();
+    embed_imgs();
+    fix_links();
+    fix_forms();
+};
+
+
+var on_set_data = function(argument) {
+    window.global_context = argument;
+    console.log("Received data from parent", window.global_context);
+    // dynamically fix elements on this page
+    try {
+        fix_document();
+        // Trigger DOMContentLoaded again, some scripts that have just
+        // been executed expect it.
+        window.document.dispatchEvent(new Event("DOMContentLoaded", {
+            bubbles: true,
+            cancelable: true
+        }));
+    } finally {
+        observer.observe(window.document.body, {subtree: true, childList: true});
+        window.parent.postMessage({
+            action: "show_iframe",
+            argument: "",
+        }, '*');
+    }
+}
+
+
+var on_scroll_to_anchor = function(argument) {
+    if (window.global_context.anchor) {
+        document.location.replace("about:srcdoc#" + window.global_context.anchor);
+    }
+}
+
+
+const observer = new MutationObserver((mutationList) => {
+    // console.log("Fix mutated elements...", mutationList);
+    mutationList.forEach((mutation) => {
+        if (mutation.type == 'childList') {
+            Array.from(mutation.target.querySelectorAll("a")).forEach( a => {
+                fix_link(a);
+            });
+            Array.from(mutation.target.querySelectorAll("img")).forEach( img => {
+                embed_img(img);
+            });
+            Array.from(mutation.target.querySelectorAll("form")).forEach( form => {
+                fix_form(form);
+            });
+        }
+    });
+});
+
+
+var monkey_patch = function() {
+    if (typeof jQuery === 'undefined') {return;} // Only for jQuery at the moment
+    /**
+     * Monkey patch getQueryParameters
+     * This function is defined in Sphinx' (v4) doctools.js and incompatible with our
+     * approach.
+     * This is a copy with effectively only the third line changed.
+     * See: https://github.com/sphinx-doc/sphinx/blob/2329fdef8c20c6c75194f5d842b8f62ebad5c79d/sphinx/themes/basic/static/doctools.js#L54
+     */
+    jQuery._getQueryParameters = jQuery.getQueryParameters;
+    jQuery.getQueryParameters = function(s) {
+      if (typeof s === 'undefined')
+        s = '?' + window.global_context.get_parameters;
+      return jQuery._getQueryParameters(s);
+    };
+
+    /**
+     * Monkey patch jQuery.ajax
+     * Only settings.url and settings.complete are supported for virtual
+     * URLs.
+     */
+    jQuery._ajax = jQuery.ajax;
+    jQuery.ajax = function(settings) {
+        url = normalize_path(settings.url);
+        if (is_virtual(url)) {
+            var result;
+            var data;
+            data = retrieve_file(url);
+            result = settings.complete({responseText: data}, "");
+            return; // Return value not actually needed in searchtools.js
+        } else {
+            return jQuery.ajax(settings);
+        };
+    };
+}
+
+
+var on_load = function() {
+    // Set up message listener
+    window.addEventListener("message", (evnt) => {
+        console.log("Received message in iframe", evnt);
+        if (evnt.data.action == 'set_data') {
+            on_set_data(evnt.data.argument);
+        } else if (evnt.data.action == 'scroll_to_anchor') {
+            on_scroll_to_anchor(evnt.data.argument);
+        }
+    }, false);
+
+    // Set parent window title and trigger data transmission
+    var favicon = window.document.querySelector("link[rel*='icon']");
+    if (favicon) { favicon = favicon.getAttribute('href'); }
+    var title = window.document.querySelector('head>title');
+    if (title) { title = title.innerText; }
+
+    window.parent.postMessage({
+        action: "set_title",
+        argument: {
+            title: title,
+            favicon: favicon
+        }
+    }, '*');
+
+};
+
+
+window.addEventListener('load', on_load);
+//# sourceURL=inject_post.js</script></body>
+</html>

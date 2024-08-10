@@ -1,0 +1,56 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: 
+author: 
+
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  allow_errors: true
+  execute_notebooks: force
+  timeout: 500000
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: output.tex
+
+
+launch_buttons:
+  binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
+  thebe                  : true
+
+parse:
+  myst_enable_extensions:
+    - html_image
+    - amsmath
+    - dollarmath
+   
+tikz_proc_suite:
+  - ghostscript
+
+sphinx:
+  extra_extensions: 
+    - sphinxcontrib.mermaid 
+    - sphinxcontrib.tikz
+  config:
+    nb_mime_priority_overrides: [
+      ["zundler", "application/vnd.jupyter.widget-view+json", 10],
+      ["zundler", "application/javascript", 20],
+      ["zundler", "text/html", 30],
+      ["zundler", "image/svg+xml", 40],
+      ["zundler", "image/png", 50],
+      ["zundler", "image/jpeg", 60],
+      ["zundler", "text/markdown", 70],
+      ["zundler", "text/latex", 80],
+      ["zundler", "text/plain", 90]
+    ]
+
+  
+ 
+
+
+
+

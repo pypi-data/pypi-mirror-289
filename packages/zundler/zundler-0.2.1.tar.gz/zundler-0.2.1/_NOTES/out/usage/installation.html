@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>/*
+ * Monkeypatch URLSearchParams
+ *
+ * Sphinx documents that use `searchtool.js` rely on passing information via
+ * GET parameters (aka search parameters). Unfortunately, this doesn't work
+ * in our approach due to the same origin policy, so we have to get ...
+ * creative.
+ *
+ * Here, we patch the `URLSearchParams` class so it returns the information
+ * stored in `window.global_context.get_parameters`.
+ *
+ */
+
+const originalGet = URLSearchParams.prototype.get;
+
+var myGet = function (arg) {
+    const originalResult = originalGet.apply(this, [arg]);
+    // If searchtools.js of sphinx is used
+    if (
+        window.global_context.get_parameters &&
+        (window.location.search === "") &&
+        (Array.from(this.entries()).length == 0)
+    ) {
+        const params = new URLSearchParams('?' + window.global_context.get_parameters);
+        const result = params.get(arg);
+        // console.log("Return virtual get parameter:", arg, result);
+        return result;
+    } else {
+        return originalResult;
+    }
+};
+
+URLSearchParams.prototype.get = myGet;
+
+/*
+ * Monkeypatch fetch
+ */
+
+const { fetch: originalFetch } = window;
+
+window.fetch = async (...args) => {
+    let [resource, config ] = args;
+    var path = normalize_path(resource);
+    var response;
+    if (is_virtual(path)) {
+        var data = retrieve_file(path);
+        response = new Response(data);
+
+    } else {
+        response = await originalFetch(resource, config);
+    }
+    return response;
+};
+//# sourceURL=inject_pre.js</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>Installing Sphinx — Sphinx documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/basic.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx13.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<link href="https://www.sphinx-doc.org/en/master/usage/installation.html" rel="canonical"/>
+<link href="../_static/opensearch.xml" rel="search" title="Search within Sphinx documentation" type="application/opensearchdescription+xml"/>
+<link href="../_static/favicon.svg" rel="shortcut icon"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="../tutorial/index.html" rel="next" title="Tutorial: Build your first project"/>
+<link href="quickstart.html" rel="prev" title="Getting Started"/>
+</head><body>
+<div class="pageheader">
+<a href="../index.html">
+<img alt="SPHINX" src="../_static/sphinxheader.png"/>
+</a>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li><a href="../index.html">Documentation</a> »</li>
+<li class="nav-item nav-item-this"><a href="">Installing Sphinx</a></li>
+</ul>
+</div>
+<div class="document">
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div id="searchbox" role="search" style="display: none">
+<h3 id="searchlabel">Quick search</h3>
+<div class="searchformwrapper">
+<form action="../search.html" class="search" method="get">
+<input aria-labelledby="searchlabel" autocapitalize="off" autocomplete="off" autocorrect="off" name="q" spellcheck="false" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<div class="sphinxsidebar-navigation__contents">
+<h3>On this page</h3>
+<ul>
+<li><a class="reference internal" href="#">Installing Sphinx</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#linux">Linux</a><ul>
+<li><a class="reference internal" href="#debian-ubuntu">Debian/Ubuntu</a></li>
+<li><a class="reference internal" href="#rhel-centos">RHEL, CentOS</a></li>
+<li><a class="reference internal" href="#other-distributions">Other distributions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#macos">macOS</a><ul>
+<li><a class="reference internal" href="#homebrew">Homebrew</a></li>
+<li><a class="reference internal" href="#macports">MacPorts</a></li>
+<li><a class="reference internal" href="#anaconda">Anaconda</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#windows">Windows</a><ul>
+<li><a class="reference internal" href="#chocolatey">Chocolatey</a></li>
+<li><a class="reference internal" href="#other-methods">Other Methods</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation-from-pypi">Installation from PyPI</a><ul>
+<li><a class="reference internal" href="#using-virtual-environments">Using virtual environments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#docker">Docker</a></li>
+<li><a class="reference internal" href="#installation-from-source">Installation from source</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sphinxsidebar-navigation__pages">
+<h3>Site navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial: Build your first project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Using Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Extending Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templating.html">Templating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex.html">LaTeX customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extdev/index.html">Developing extensions for Sphinx</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Get support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internals/index.html">Contribute to Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Sphinx FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../man/index.html">Command-Line Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Projects using Sphinx</a></li>
+</ul>
+</div>
+</div>
+<div class="body" role="main">
+<section id="installing-sphinx">
+<h1>Installing Sphinx<a class="headerlink" href="#installing-sphinx" title="Permalink to this heading">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview" id="id17">Overview</a></p></li>
+<li><p><a class="reference internal" href="#linux" id="id18">Linux</a></p></li>
+<li><p><a class="reference internal" href="#macos" id="id19">macOS</a></p></li>
+<li><p><a class="reference internal" href="#windows" id="id20">Windows</a></p></li>
+<li><p><a class="reference internal" href="#installation-from-pypi" id="id21">Installation from PyPI</a></p></li>
+<li><p><a class="reference internal" href="#docker" id="id22">Docker</a></p></li>
+<li><p><a class="reference internal" href="#installation-from-source" id="id23">Installation from source</a></p></li>
+</ul>
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
+<p>Sphinx is written in <a class="reference external" href="https://docs.python-guide.org/">Python</a> and supports Python 3.8+. It builds upon the
+shoulders of many third-party libraries such as <a class="reference external" href="https://docutils.sourceforge.io/">Docutils</a> and <a class="reference external" href="https://jinja.palletsprojects.com/">Jinja</a>,
+which are installed when Sphinx is installed.</p>
+</section>
+<section id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">¶</a></h2>
+<section id="debian-ubuntu">
+<h3>Debian/Ubuntu<a class="headerlink" href="#debian-ubuntu" title="Permalink to this heading">¶</a></h3>
+<p>Install either <code class="docutils literal notranslate"><span class="pre">python3-sphinx</span></code> using <strong class="command">apt-get</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>apt-get install python3-sphinx
+</pre></div>
+</div>
+<p>If it not already present, this will install Python for you.</p>
+</section>
+<section id="rhel-centos">
+<h3>RHEL, CentOS<a class="headerlink" href="#rhel-centos" title="Permalink to this heading">¶</a></h3>
+<p>Install <code class="docutils literal notranslate"><span class="pre">python-sphinx</span></code> using <strong class="command">yum</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>yum install python-sphinx
+</pre></div>
+</div>
+<p>If it not already present, this will install Python for you.</p>
+</section>
+<section id="other-distributions">
+<h3>Other distributions<a class="headerlink" href="#other-distributions" title="Permalink to this heading">¶</a></h3>
+<p>Most Linux distributions have Sphinx in their package repositories.  Usually
+the package is called <code class="docutils literal notranslate"><span class="pre">python3-sphinx</span></code>, <code class="docutils literal notranslate"><span class="pre">python-sphinx</span></code> or <code class="docutils literal notranslate"><span class="pre">sphinx</span></code>.  Be
+aware that there are at least two other packages with <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> in their name:
+a speech recognition toolkit (<em>CMU Sphinx</em>) and a full-text search database
+(<em>Sphinx search</em>).</p>
+</section>
+</section>
+<section id="macos">
+<h2>macOS<a class="headerlink" href="#macos" title="Permalink to this heading">¶</a></h2>
+<p>Sphinx can be installed using <a class="reference external" href="https://brew.sh/">Homebrew</a>, <a class="reference external" href="https://www.macports.org/">MacPorts</a>, or as part of
+a Python distribution such as <a class="reference external" href="https://www.anaconda.com/download/#macos">Anaconda</a>.</p>
+<section id="homebrew">
+<h3>Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>brew install sphinx-doc
+</pre></div>
+</div>
+<p>For more information, refer to the <a class="reference external" href="https://formulae.brew.sh/formula/sphinx-doc">package overview</a>.</p>
+</section>
+<section id="macports">
+<h3>MacPorts<a class="headerlink" href="#macports" title="Permalink to this heading">¶</a></h3>
+<p>Install either <code class="docutils literal notranslate"><span class="pre">python3x-sphinx</span></code> using <strong class="command">port</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo port install py38-sphinx
+</pre></div>
+</div>
+<p>To set up the executable paths, use the <code class="docutils literal notranslate"><span class="pre">port</span> <span class="pre">select</span></code> command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo port <span class="k">select</span> --set python python38
+<span class="gp">$ </span>sudo port <span class="k">select</span> --set sphinx py38-sphinx
+</pre></div>
+</div>
+<p>For more information, refer to the <a class="reference external" href="https://www.macports.org/ports.php?by=library&amp;substr=py38-sphinx">package overview</a>.</p>
+</section>
+<section id="anaconda">
+<h3>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda install sphinx
+</pre></div>
+</div>
+</section>
+</section>
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">¶</a></h2>
+<p>Sphinx can be install using <a class="reference external" href="https://chocolatey.org/">Chocolatey</a> or
+<a class="reference internal" href="#windows-other-method"><span class="std std-ref">installed manually</span></a>.</p>
+<section id="chocolatey">
+<h3>Chocolatey<a class="headerlink" href="#chocolatey" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>choco install sphinx
+</pre></div>
+</div>
+<p>You would need to <a class="reference external" href="https://chocolatey.org/install">install Chocolatey</a>
+before running this.</p>
+<p>For more information, refer to the <a class="reference external" href="https://chocolatey.org/packages/sphinx/">chocolatey page</a>.</p>
+</section>
+<section id="other-methods">
+<span id="windows-other-method"></span><h3>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">¶</a></h3>
+<p>Most Windows users do not have Python installed by default, so we begin with
+the installation of Python itself.  To check if you already have Python
+installed, open the <em>Command Prompt</em> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">⊞Win</kbd>-<kbd class="kbd docutils literal notranslate">r</kbd></kbd> and type <strong class="command">cmd</strong>).
+Once the command prompt is open, type <strong class="command">python --version</strong> and press
+Enter.  If Python is installed, you will see the version of Python printed to
+the screen.  If you do not have Python installed, refer to the <a class="reference external" href="https://docs.python-guide.org/">Hitchhikers
+Guide to Python’s</a> Python on Windows installation guides. You must install
+<a class="reference external" href="https://docs.python-guide.org/starting/install3/win/">Python 3</a>.</p>
+<p>Once Python is installed, you can install Sphinx using <strong class="command">pip</strong>.  Refer
+to the <a class="reference internal" href="#install-pypi"><span class="std std-ref">pip installation instructions</span></a> below for more
+information.</p>
+</section>
+</section>
+<section id="installation-from-pypi">
+<span id="install-pypi"></span><h2>Installation from PyPI<a class="headerlink" href="#installation-from-pypi" title="Permalink to this heading">¶</a></h2>
+<p>Sphinx packages are published on the <a class="reference external" href="https://pypi.org/project/Sphinx/">Python Package Index</a>.  The preferred tool for installing
+packages from <em>PyPI</em> is <strong class="command">pip</strong>.  This tool is provided with all modern
+versions of Python.</p>
+<p>On Linux or MacOS, you should open your terminal and run the following command.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install -U sphinx
+</pre></div>
+</div>
+<p>On Windows, you should open <em>Command Prompt</em> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">⊞Win</kbd>-<kbd class="kbd docutils literal notranslate">r</kbd></kbd> and type
+<strong class="command">cmd</strong>) and run the same command.</p>
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> pip install -U sphinx
+</pre></div>
+</div>
+<p>After installation, type <strong class="command">sphinx-build --version</strong> on the command
+prompt.  If everything worked fine, you will see the version number for the
+Sphinx package you just installed.</p>
+<p>Installation from <em>PyPI</em> also allows you to install the latest development
+release.  You will not generally need (or want) to do this, but it can be
+useful if you see a possible bug in the latest stable release.  To do this, use
+the <code class="docutils literal notranslate"><span class="pre">--pre</span></code> flag.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install -U --pre sphinx
+</pre></div>
+</div>
+<section id="using-virtual-environments">
+<h3>Using virtual environments<a class="headerlink" href="#using-virtual-environments" title="Permalink to this heading">¶</a></h3>
+<p>When installing Sphinx using pip,
+it is highly recommended to use <em>virtual environments</em>,
+which isolate the installed packages from the system packages,
+thus removing the need to use administrator privileges.
+To create a virtual environment in the <code class="docutils literal notranslate"><span class="pre">.venv</span></code> directory,
+use the following command.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -m venv .venv
+</pre></div>
+</div>
+<p>You can read more about them in the <a class="reference external" href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">Python Packaging User Guide</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that in some Linux distributions, such as Debian and Ubuntu,
+this might require an extra installation step as follows.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>apt-get install python3-venv
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="docker">
+<h2>Docker<a class="headerlink" href="#docker" title="Permalink to this heading">¶</a></h2>
+<p>Docker images for Sphinx are published on the <a class="reference external" href="https://hub.docker.com/">Docker Hub</a>.  There are two kind
+of images:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://hub.docker.com/r/sphinxdoc/sphinx">sphinxdoc/sphinx</a></p></li>
+<li><p><a class="reference external" href="https://hub.docker.com/r/sphinxdoc/sphinx-latexpdf">sphinxdoc/sphinx-latexpdf</a></p></li>
+</ul>
+<p>Former one is used for standard usage of Sphinx, and latter one is mainly used for
+PDF builds using LaTeX.  Please choose one for your purpose.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>sphinxdoc/sphinx-latexpdf contains TeXLive packages. So the image is very large
+(over 2GB!).</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>When using docker images, please use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command to invoke sphinx
+commands.  For example, you can use following command to create a Sphinx
+project:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>docker run -it --rm -v /path/to/document:/docs sphinxdoc/sphinx sphinx-quickstart
+</pre></div>
+</div>
+<p>And you can use the following command to build HTML document:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>docker run --rm -v /path/to/document:/docs sphinxdoc/sphinx make html
+</pre></div>
+</div>
+</div>
+<p>For more details, please read <a class="reference external" href="https://hub.docker.com/r/sphinxdoc/sphinx">README file</a> of docker images.</p>
+</section>
+<section id="installation-from-source">
+<h2>Installation from source<a class="headerlink" href="#installation-from-source" title="Permalink to this heading">¶</a></h2>
+<p>You can install Sphinx directly from a clone of the <a class="reference external" href="https://github.com/sphinx-doc/sphinx">Git repository</a>.  This
+can be done either by cloning the repo and installing from the local clone, on
+simply installing directly via <strong class="command">git</strong>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git clone https://github.com/sphinx-doc/sphinx
+<span class="gp">$ </span><span class="nb">cd</span> sphinx
+<span class="gp">$ </span>pip install .
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install git+https://github.com/sphinx-doc/sphinx
+</pre></div>
+</div>
+<p>You can also download a snapshot of the Git repo in either <a class="reference external" href="https://github.com/sphinx-doc/sphinx/archive/master.tar.gz">tar.gz</a> or
+<a class="reference external" href="https://github.com/sphinx-doc/sphinx/archive/master.zip">zip</a> format.  Once downloaded and extracted, these can be installed with
+<strong class="command">pip</strong> as above.</p>
+</section>
+</section>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+  © <a href="../copyright.html">Copyright</a> 2007-2022, the Sphinx developers.
+  Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+</div>
+<script>var embed_css = function() {
+    Array.from(document.querySelectorAll("link")).forEach( link => {
+        if (link.getAttribute('rel') == 'stylesheet') {
+            const style = document.createElement("style");
+            var href = link.getAttribute('href');
+            let [path, get_parameters, anchor] = split_url(href);
+            path = normalize_path(path);
+            style.innerText = retrieve_file(path);
+            link.replaceWith(style);
+        };
+    });
+};
+
+
+var embed_js = function() {
+    Array.from(document.querySelectorAll("script")).forEach( oldScript => {
+        const newScript = document.createElement("script");
+        Array.from(oldScript.attributes).forEach( attr => {
+            newScript.setAttribute(attr.name, attr.value);
+        });
+        try {
+            if (newScript.hasAttribute('src') && is_virtual(newScript.getAttribute('src'))) {
+                var src = newScript.getAttribute('src');
+                let [path, get_parameters, anchor] = split_url(src);
+                path = normalize_path(path);
+                var src = retrieve_file(path) + ' //# sourceMap=' + path;
+                newScript.appendChild(document.createTextNode(src));
+                newScript.removeAttribute('src');
+                oldScript.parentNode.replaceChild(newScript, oldScript);
+            }
+        } catch (e) {
+            // Make sure all scripts are loaded
+            console.error("Caught error in " + oldScript.getAttribute("src"), e);
+        }
+    });
+};
+
+
+var split_url = function(url) {
+    // Return a list of three elements: path, GET parameters, anchor
+    var anchor = url.split('#')[1] || "";
+    var get_parameters = url.split('#')[0].split('?')[1] || "";
+    var path = url.split('#')[0];
+    path = path.split('?')[0];
+    let result = [path, get_parameters, anchor];
+    // console.log("Split URL", url, result);
+    return result;
+}
+
+
+var virtual_click = function(evnt) {
+    // Handle GET parameters and anchors
+    // console.log("Virtual click", evnt);
+
+    var el = evnt.currentTarget;
+    var name = el.tagName.toLowerCase();
+
+    if (name == 'a') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('href'));
+    } else if (name == 'form') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('action'));
+        const formData = new FormData(el);
+        get_parameters = new URLSearchParams(formData).toString();
+    } else {
+        console.error("Invalid element", el);
+    }
+
+    path = normalize_path(path);
+
+    window.parent.postMessage({
+        action: "virtual_click",
+        argument: {
+            path: path,
+            get_parameters: get_parameters,
+            anchor: anchor,
+        }
+    }, '*');
+    evnt.preventDefault();
+    evnt.stopPropagation();
+    return false;
+};
+
+var fix_links = function() {
+    Array.from(document.querySelectorAll("a")).forEach( a => {
+        fix_link(a);
+    });
+};
+
+var fix_link = function(a) {
+    if (is_virtual(a.getAttribute('href'))) {
+        a.addEventListener('click', virtual_click);
+    } else if (a.getAttribute('href').startsWith('#')) {
+        a.setAttribute('href', "about:srcdoc" + a.getAttribute('href'))
+    } else {
+        // External links should open in a new tab. Browsers block links to
+        // sites of different origin within an iframe for security reasons.
+        a.setAttribute('target', "_blank");
+    }
+};
+
+var fix_form = function(form) {
+    var href = form.getAttribute('action');
+    if (is_virtual(href) && form.getAttribute('method').toLowerCase() == 'get') {
+        form.addEventListener('submit', virtual_click);
+    }
+};
+
+
+var fix_forms = function() {
+    Array.from(document.querySelectorAll("form")).forEach( form => {
+        fix_form(form);
+    });
+};
+
+
+var embed_img = function(img) {
+    if (img.hasAttribute('src')) {
+        const src = img.getAttribute('src');
+        if (is_virtual(src)) {
+            var path = normalize_path(src);
+            const file = retrieve_file(path);
+            const mime_type = window.global_context.file_tree[path].mime_type;
+            if (mime_type == 'image/svg+xml') {
+                img.setAttribute('src', "data:image/svg+xml;charset=utf-8;base64, " + btoa(file));
+            } else {
+                img.setAttribute('src', `data:${mime_type};base64, ${file}`);
+            }
+        };
+    };
+};
+
+var embed_imgs = function() {
+    Array.from(document.querySelectorAll("img")).forEach( img => {
+        embed_img(img);
+    });
+};
+
+var is_virtual = function(url) {
+    // Return true if the url should be retrieved from the virtual file tree
+    var _url = url.toString().toLowerCase();
+    return (! (
+        _url == "" ||
+        _url[0] == "#" ||
+        _url.startsWith('https://') ||
+        _url.startsWith('http://') ||
+        _url.startsWith('data:') ||
+        _url.startsWith('blob:')
+    ));
+};
+
+var retrieve_file = function(path) {
+    // console.log("Retrieving file: " + path);
+    var file_tree = window.global_context.file_tree;
+    var file = file_tree[path];
+    if (!file) {
+        console.warn("File not found: " + path);
+        return "";
+    } else {
+        return file.data;
+    }
+};
+
+var normalize_path = function(path) {
+    // make relative paths absolute in context of our virtual file tree
+
+    while (path && path[0] == '/') {
+        path = path.substr(1);
+    }
+
+    var result = window.global_context.current_path;
+    result = result.split('/');
+    result.pop();
+    result = result.concat(path.split('/'));
+
+    // resolve relative directories
+    var array = [];
+    Array.from(result).forEach( component => {
+        if (component == '..') {
+            if (array) {
+                array.pop();
+            }
+        } else if (component == '.') {
+        } else {
+            if (component) { array.push(component); }
+        }
+    });
+
+    result = array.join('/');
+    // console.log(`Normalized path: ${path} -> ${result} (@${window.global_context.current_path})`);
+    return result;
+};
+
+
+var fix_document = function() {
+    embed_js(); // This might change the DOM, so do this first
+    monkey_patch();
+    embed_css();
+    embed_imgs();
+    fix_links();
+    fix_forms();
+};
+
+
+var on_set_data = function(argument) {
+    window.global_context = argument;
+    console.log("Received data from parent", window.global_context);
+    // dynamically fix elements on this page
+    try {
+        fix_document();
+        // Trigger DOMContentLoaded again, some scripts that have just
+        // been executed expect it.
+        window.document.dispatchEvent(new Event("DOMContentLoaded", {
+            bubbles: true,
+            cancelable: true
+        }));
+    } finally {
+        observer.observe(window.document.body, {subtree: true, childList: true});
+        window.parent.postMessage({
+            action: "show_iframe",
+            argument: "",
+        }, '*');
+    }
+}
+
+
+var on_scroll_to_anchor = function(argument) {
+    if (window.global_context.anchor) {
+        document.location.replace("about:srcdoc#" + window.global_context.anchor);
+    }
+}
+
+
+const observer = new MutationObserver((mutationList) => {
+    // console.log("Fix mutated elements...", mutationList);
+    mutationList.forEach((mutation) => {
+        if (mutation.type == 'childList') {
+            Array.from(mutation.target.querySelectorAll("a")).forEach( a => {
+                fix_link(a);
+            });
+            Array.from(mutation.target.querySelectorAll("img")).forEach( img => {
+                embed_img(img);
+            });
+            Array.from(mutation.target.querySelectorAll("form")).forEach( form => {
+                fix_form(form);
+            });
+        }
+    });
+});
+
+
+var monkey_patch = function() {
+    if (typeof jQuery === 'undefined') {return;} // Only for jQuery at the moment
+    /**
+     * Monkey patch getQueryParameters
+     * This function is defined in Sphinx' (v4) doctools.js and incompatible with our
+     * approach.
+     * This is a copy with effectively only the third line changed.
+     * See: https://github.com/sphinx-doc/sphinx/blob/2329fdef8c20c6c75194f5d842b8f62ebad5c79d/sphinx/themes/basic/static/doctools.js#L54
+     */
+    jQuery._getQueryParameters = jQuery.getQueryParameters;
+    jQuery.getQueryParameters = function(s) {
+      if (typeof s === 'undefined')
+        s = '?' + window.global_context.get_parameters;
+      return jQuery._getQueryParameters(s);
+    };
+
+    /**
+     * Monkey patch jQuery.ajax
+     * Only settings.url and settings.complete are supported for virtual
+     * URLs.
+     */
+    jQuery._ajax = jQuery.ajax;
+    jQuery.ajax = function(settings) {
+        url = normalize_path(settings.url);
+        if (is_virtual(url)) {
+            var result;
+            var data;
+            data = retrieve_file(url);
+            result = settings.complete({responseText: data}, "");
+            return; // Return value not actually needed in searchtools.js
+        } else {
+            return jQuery.ajax(settings);
+        };
+    };
+}
+
+
+var on_load = function() {
+    // Set up message listener
+    window.addEventListener("message", (evnt) => {
+        console.log("Received message in iframe", evnt);
+        if (evnt.data.action == 'set_data') {
+            on_set_data(evnt.data.argument);
+        } else if (evnt.data.action == 'scroll_to_anchor') {
+            on_scroll_to_anchor(evnt.data.argument);
+        }
+    }, false);
+
+    // Set parent window title and trigger data transmission
+    var favicon = window.document.querySelector("link[rel*='icon']");
+    if (favicon) { favicon = favicon.getAttribute('href'); }
+    var title = window.document.querySelector('head>title');
+    if (title) { title = title.innerText; }
+
+    window.parent.postMessage({
+        action: "set_title",
+        argument: {
+            title: title,
+            favicon: favicon
+        }
+    }, '*');
+
+};
+
+
+window.addEventListener('load', on_load);
+//# sourceURL=inject_post.js</script></body>
+</html>

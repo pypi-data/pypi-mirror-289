@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>/*
+ * Monkeypatch URLSearchParams
+ *
+ * Sphinx documents that use `searchtool.js` rely on passing information via
+ * GET parameters (aka search parameters). Unfortunately, this doesn't work
+ * in our approach due to the same origin policy, so we have to get ...
+ * creative.
+ *
+ * Here, we patch the `URLSearchParams` class so it returns the information
+ * stored in `window.global_context.get_parameters`.
+ *
+ */
+
+const originalGet = URLSearchParams.prototype.get;
+
+var myGet = function (arg) {
+    const originalResult = originalGet.apply(this, [arg]);
+    // If searchtools.js of sphinx is used
+    if (
+        window.global_context.get_parameters &&
+        (window.location.search === "") &&
+        (Array.from(this.entries()).length == 0)
+    ) {
+        const params = new URLSearchParams('?' + window.global_context.get_parameters);
+        const result = params.get(arg);
+        // console.log("Return virtual get parameter:", arg, result);
+        return result;
+    } else {
+        return originalResult;
+    }
+};
+
+URLSearchParams.prototype.get = myGet;
+
+/*
+ * Monkeypatch fetch
+ */
+
+const { fetch: originalFetch } = window;
+
+window.fetch = async (...args) => {
+    let [resource, config ] = args;
+    var path = normalize_path(resource);
+    var response;
+    if (is_virtual(path)) {
+        var data = retrieve_file(path);
+        response = new Response(data);
+
+    } else {
+        response = await originalFetch(resource, config);
+    }
+    return response;
+};
+//# sourceURL=inject_pre.js</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>Web Support Quick Start — Sphinx documentation</title>
+<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/basic.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/sphinx13.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+<script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+<script src="../../../_static/jquery.js"></script>
+<script src="../../../_static/underscore.js"></script>
+<script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../../../_static/doctools.js"></script>
+<script src="../../../_static/sphinx_highlight.js"></script>
+<link href="https://www.sphinx-doc.org/en/master/usage/advanced/websupport/quickstart.html" rel="canonical"/>
+<link href="../../../_static/opensearch.xml" rel="search" title="Search within Sphinx documentation" type="application/opensearchdescription+xml"/>
+<link href="../../../_static/favicon.svg" rel="shortcut icon"/>
+<link href="../../../genindex.html" rel="index" title="Index"/>
+<link href="../../../search.html" rel="search" title="Search"/>
+<link href="api.html" rel="next" title="The WebSupport Class"/>
+<link href="index.html" rel="prev" title="Sphinx Web Support"/>
+</head><body>
+<div class="pageheader">
+<a href="../../../index.html">
+<img alt="SPHINX" src="../../../_static/sphinxheader.png"/>
+</a>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li><a href="../../../index.html">Documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="../../index.html">Using Sphinx</a> »</li>
+<li class="nav-item nav-item-2"><a accesskey="U" href="index.html">Sphinx Web Support</a> »</li>
+<li class="nav-item nav-item-this"><a href="">Web Support Quick Start</a></li>
+</ul>
+</div>
+<div class="document">
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div id="searchbox" role="search" style="display: none">
+<h3 id="searchlabel">Quick search</h3>
+<div class="searchformwrapper">
+<form action="../../../search.html" class="search" method="get">
+<input aria-labelledby="searchlabel" autocapitalize="off" autocomplete="off" autocorrect="off" name="q" spellcheck="false" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<div class="sphinxsidebar-navigation__contents">
+<h3>On this page</h3>
+<ul>
+<li><a class="reference internal" href="#">Web Support Quick Start</a><ul>
+<li><a class="reference internal" href="#building-documentation-data">Building Documentation Data</a></li>
+<li><a class="reference internal" href="#integrating-sphinx-documents-into-your-webapp">Integrating Sphinx Documents Into Your Webapp</a><ul>
+<li><a class="reference internal" href="#authentication">Authentication</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#performing-searches">Performing Searches</a></li>
+<li><a class="reference internal" href="#comments-proposals">Comments &amp; Proposals</a></li>
+<li><a class="reference internal" href="#comment-moderation">Comment Moderation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sphinxsidebar-navigation__pages">
+<h3>Site navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installing Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/index.html">Tutorial: Build your first project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Using Sphinx</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../restructuredtext/index.html">reStructuredText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../markdown.html">Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../configuration.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../builders/index.html">Builders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/index.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../theming.html">HTML Theming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intl.html">Internationalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setuptools.html">Setuptools integration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Sphinx Web Support</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Web Support Quick Start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html">The WebSupport Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="searchadapters.html">Search Adapters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storagebackends.html">Storage Backends</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../development/index.html">Extending Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../templating.html">Templating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../latex.html">LaTeX customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extdev/index.html">Developing extensions for Sphinx</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../support.html">Get support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../internals/index.html">Contribute to Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Sphinx FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../man/index.html">Command-Line Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples.html">Projects using Sphinx</a></li>
+</ul>
+</div>
+</div>
+<div class="body" role="main">
+<section id="web-support-quick-start">
+<span id="websupportquickstart"></span><h1>Web Support Quick Start<a class="headerlink" href="#web-support-quick-start" title="Permalink to this heading">¶</a></h1>
+<section id="building-documentation-data">
+<h2>Building Documentation Data<a class="headerlink" href="#building-documentation-data" title="Permalink to this heading">¶</a></h2>
+<p>To make use of the web support package in your application you’ll need to build
+the data it uses.  This data includes pickle files representing documents,
+search indices, and node data that is used to track where comments and other
+things are in a document.  To do this you will need to create an instance of the
+<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> class and call its <code class="xref py py-meth docutils literal notranslate"><span class="pre">build()</span></code> method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinxcontrib.websupport</span> <span class="kn">import</span> <span class="n">WebSupport</span>
+
+<span class="n">support</span> <span class="o">=</span> <span class="n">WebSupport</span><span class="p">(</span><span class="n">srcdir</span><span class="o">=</span><span class="s1">'/path/to/rst/sources/'</span><span class="p">,</span>
+                     <span class="n">builddir</span><span class="o">=</span><span class="s1">'/path/to/build/outdir'</span><span class="p">,</span>
+                     <span class="n">search</span><span class="o">=</span><span class="s1">'xapian'</span><span class="p">)</span>
+
+<span class="n">support</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This will read reStructuredText sources from <code class="docutils literal notranslate"><span class="pre">srcdir</span></code> and place the necessary
+data in <code class="docutils literal notranslate"><span class="pre">builddir</span></code>.  The <code class="docutils literal notranslate"><span class="pre">builddir</span></code> will contain two sub-directories: one
+named “data” that contains all the data needed to display documents, search
+through documents, and add comments to documents.  The other directory will be
+called “static” and contains static files that should be served from “/static”.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you wish to serve static files from a path other than “/static”, you can
+do so by providing the <em>staticdir</em> keyword argument when creating the
+<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> object.</p>
+</div>
+</section>
+<section id="integrating-sphinx-documents-into-your-webapp">
+<h2>Integrating Sphinx Documents Into Your Webapp<a class="headerlink" href="#integrating-sphinx-documents-into-your-webapp" title="Permalink to this heading">¶</a></h2>
+<p>Now that the data is built, it’s time to do something useful with it.  Start off
+by creating a <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> object for your application:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinxcontrib.websupport</span> <span class="kn">import</span> <span class="n">WebSupport</span>
+
+<span class="n">support</span> <span class="o">=</span> <span class="n">WebSupport</span><span class="p">(</span><span class="n">datadir</span><span class="o">=</span><span class="s1">'/path/to/the/data'</span><span class="p">,</span>
+                     <span class="n">search</span><span class="o">=</span><span class="s1">'xapian'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You’ll only need one of these for each set of documentation you will be working
+with.  You can then call its <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code> method to access
+individual documents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">contents</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">get_document</span><span class="p">(</span><span class="s1">'contents'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will return a dictionary containing the following items:</p>
+<ul class="simple">
+<li><p><strong>body</strong>: The main body of the document as HTML</p></li>
+<li><p><strong>sidebar</strong>: The sidebar of the document as HTML</p></li>
+<li><p><strong>relbar</strong>: A div containing links to related documents</p></li>
+<li><p><strong>title</strong>: The title of the document</p></li>
+<li><p><strong>css</strong>: Links to CSS files used by Sphinx</p></li>
+<li><p><strong>script</strong>: JavaScript containing comment options</p></li>
+</ul>
+<p>This dict can then be used as context for templates.  The goal is to be easy to
+integrate with your existing templating system.  An example using <a class="reference external" href="https://jinja.palletsprojects.com/">Jinja2</a> is:</p>
+<div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">extends</span> <span class="s2">"layout.html"</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span>- <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">document.title</span> <span class="cp">}}</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">css</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span>
+    <span class="cp">{{</span> <span class="nv">document.css</span><span class="o">|</span><span class="nf">safe</span> <span class="cp">}}</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"/static/websupport-custom.css"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span>- <span class="k">block</span> <span class="nv">script</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span>
+    <span class="cp">{{</span> <span class="nv">document.script</span><span class="o">|</span><span class="nf">safe</span> <span class="cp">}}</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span>- <span class="k">block</span> <span class="nv">relbar</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">document.relbar</span><span class="o">|</span><span class="nf">safe</span> <span class="cp">}}</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span>- <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">document.body</span><span class="o">|</span><span class="nf">safe</span> <span class="cp">}}</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span>- <span class="k">block</span> <span class="nv">sidebar</span> <span class="cp">%}</span>
+    <span class="cp">{{</span> <span class="nv">document.sidebar</span><span class="o">|</span><span class="nf">safe</span> <span class="cp">}}</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<section id="authentication">
+<h3>Authentication<a class="headerlink" href="#authentication" title="Permalink to this heading">¶</a></h3>
+<p>To use certain features such as voting, it must be possible to authenticate
+users.  The details of the authentication are left to your application.  Once a
+user has been authenticated you can pass the user’s details to certain
+<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> methods using the <em>username</em> and <em>moderator</em> keyword
+arguments.  The web support package will store the username with comments and
+votes.  The only caveat is that if you allow users to change their username you
+must update the websupport package’s data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">support</span><span class="o">.</span><span class="n">update_username</span><span class="p">(</span><span class="n">old_username</span><span class="p">,</span> <span class="n">new_username</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>username</em> should be a unique string which identifies a user, and <em>moderator</em>
+should be a boolean representing whether the user has moderation privileges.
+The default value for <em>moderator</em> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>An example <a class="reference external" href="https://flask.palletsprojects.com/">Flask</a> function that checks
+whether a user is logged in and then retrieves a document is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinxcontrib.websupport.errors</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/&lt;path:docname&gt;'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">doc</span><span class="p">(</span><span class="n">docname</span><span class="p">):</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="k">else</span> <span class="s1">''</span>
+    <span class="n">moderator</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">moderator</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="k">else</span> <span class="kc">False</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">document</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">get_document</span><span class="p">(</span><span class="n">docname</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">moderator</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">DocumentNotFoundError</span><span class="p">:</span>
+        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'doc.html'</span><span class="p">,</span> <span class="n">document</span><span class="o">=</span><span class="n">document</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The first thing to notice is that the <em>docname</em> is just the request path.  This
+makes accessing the correct document easy from a single view.  If the user is
+authenticated, then the username and moderation status are passed along with the
+docname to <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code>.  The web support package will then
+add this data to the <code class="docutils literal notranslate"><span class="pre">COMMENT_OPTIONS</span></code> that are used in the template.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This only works if your documentation is served from your
+document root. If it is served from another directory, you will
+need to prefix the url route with that directory, and give the <cite>docroot</cite>
+keyword argument when creating the web support object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">support</span> <span class="o">=</span> <span class="n">WebSupport</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">docroot</span><span class="o">=</span><span class="s1">'docs'</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/docs/&lt;path:docname&gt;'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="performing-searches">
+<h2>Performing Searches<a class="headerlink" href="#performing-searches" title="Permalink to this heading">¶</a></h2>
+<p>To use the search form built-in to the Sphinx sidebar, create a function to
+handle requests to the URL ‘search’ relative to the documentation root.  The
+user’s search query will be in the GET parameters, with the key <cite>q</cite>.  Then use
+the <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code> method to
+retrieve search results. In <a class="reference external" href="https://flask.palletsprojects.com/">Flask</a> that
+would be like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/search'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'q'</span><span class="p">)</span>
+    <span class="n">document</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">get_search_results</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'doc.html'</span><span class="p">,</span> <span class="n">document</span><span class="o">=</span><span class="n">document</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that we used the same template to render our search results as we did to
+render our documents.  That’s because <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code>
+returns a context dict in the same format that <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code>
+does.</p>
+</section>
+<section id="comments-proposals">
+<h2>Comments &amp; Proposals<a class="headerlink" href="#comments-proposals" title="Permalink to this heading">¶</a></h2>
+<p>Now that this is done it’s time to define the functions that handle the AJAX
+calls from the script.  You will need three functions.  The first function is
+used to add a new comment, and will call the web support method
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/docs/add_comment'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'POST'</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">add_comment</span><span class="p">():</span>
+    <span class="n">parent_id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'parent'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+    <span class="n">node_id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'node'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'text'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+    <span class="n">proposal</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'proposal'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="s1">'Anonymous'</span>
+    <span class="n">comment</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">add_comment</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">node_id</span><span class="o">=</span><span class="s1">'node_id'</span><span class="p">,</span>
+                                  <span class="n">parent_id</span><span class="o">=</span><span class="s1">'parent_id'</span><span class="p">,</span>
+                                  <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">proposal</span><span class="o">=</span><span class="n">proposal</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">comment</span><span class="o">=</span><span class="n">comment</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You’ll notice that both a <code class="docutils literal notranslate"><span class="pre">parent_id</span></code> and <code class="docutils literal notranslate"><span class="pre">node_id</span></code> are sent with the
+request. If the comment is being attached directly to a node, <code class="docutils literal notranslate"><span class="pre">parent_id</span></code>
+will be empty. If the comment is a child of another comment, then <code class="docutils literal notranslate"><span class="pre">node_id</span></code>
+will be empty. Then next function handles the retrieval of comments for a
+specific node, and is aptly named
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">get_data()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/docs/get_comments'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_comments</span><span class="p">():</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="n">moderator</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">moderator</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="k">else</span> <span class="kc">False</span>
+    <span class="n">node_id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'node'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">node_id</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">moderator</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The final function that is needed will call <code class="xref py py-meth docutils literal notranslate"><span class="pre">process_vote()</span></code>,
+and will handle user votes on comments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/docs/process_vote'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'POST'</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">process_vote</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">abort</span><span class="p">(</span><span class="mi">401</span><span class="p">)</span>
+    <span class="n">comment_id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'comment_id'</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'value'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">comment_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+    <span class="n">support</span><span class="o">.</span><span class="n">process_vote</span><span class="p">(</span><span class="n">comment_id</span><span class="p">,</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">"success"</span>
+</pre></div>
+</div>
+</section>
+<section id="comment-moderation">
+<h2>Comment Moderation<a class="headerlink" href="#comment-moderation" title="Permalink to this heading">¶</a></h2>
+<p>By default, all comments added through <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code> are
+automatically displayed.  If you wish to have some form of moderation, you can
+pass the <code class="docutils literal notranslate"><span class="pre">displayed</span></code> keyword argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">comment</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">add_comment</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">node_id</span><span class="o">=</span><span class="s1">'node_id'</span><span class="p">,</span>
+                              <span class="n">parent_id</span><span class="o">=</span><span class="s1">'parent_id'</span><span class="p">,</span>
+                              <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">proposal</span><span class="o">=</span><span class="n">proposal</span><span class="p">,</span>
+                              <span class="n">displayed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can then create a new view to handle the moderation of comments.  It
+will be called when a moderator decides a comment should be accepted and
+displayed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/docs/accept_comment'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'POST'</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">accept_comment</span><span class="p">():</span>
+    <span class="n">moderator</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">moderator</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="k">else</span> <span class="kc">False</span>
+    <span class="n">comment_id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'id'</span><span class="p">)</span>
+    <span class="n">support</span><span class="o">.</span><span class="n">accept_comment</span><span class="p">(</span><span class="n">comment_id</span><span class="p">,</span> <span class="n">moderator</span><span class="o">=</span><span class="n">moderator</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">'OK'</span>
+</pre></div>
+</div>
+<p>Rejecting comments happens via comment deletion.</p>
+<p>To perform a custom action (such as emailing a moderator) when a new comment is
+added but not displayed, you can pass callable to the <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a>
+class when instantiating your support object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moderation_callback</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
+    <span class="sd">"""Do something..."""</span>
+
+<span class="n">support</span> <span class="o">=</span> <span class="n">WebSupport</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">moderation_callback</span><span class="o">=</span><span class="n">moderation_callback</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The moderation callback must take one argument, which will be the same comment
+dict that is returned by <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code>.</p>
+</section>
+</section>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+  © <a href="../../../copyright.html">Copyright</a> 2007-2022, the Sphinx developers.
+  Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+</div>
+<script>var embed_css = function() {
+    Array.from(document.querySelectorAll("link")).forEach( link => {
+        if (link.getAttribute('rel') == 'stylesheet') {
+            const style = document.createElement("style");
+            var href = link.getAttribute('href');
+            let [path, get_parameters, anchor] = split_url(href);
+            path = normalize_path(path);
+            style.innerText = retrieve_file(path);
+            link.replaceWith(style);
+        };
+    });
+};
+
+
+var embed_js = function() {
+    Array.from(document.querySelectorAll("script")).forEach( oldScript => {
+        const newScript = document.createElement("script");
+        Array.from(oldScript.attributes).forEach( attr => {
+            newScript.setAttribute(attr.name, attr.value);
+        });
+        try {
+            if (newScript.hasAttribute('src') && is_virtual(newScript.getAttribute('src'))) {
+                var src = newScript.getAttribute('src');
+                let [path, get_parameters, anchor] = split_url(src);
+                path = normalize_path(path);
+                var src = retrieve_file(path) + ' //# sourceMap=' + path;
+                newScript.appendChild(document.createTextNode(src));
+                newScript.removeAttribute('src');
+                oldScript.parentNode.replaceChild(newScript, oldScript);
+            }
+        } catch (e) {
+            // Make sure all scripts are loaded
+            console.error("Caught error in " + oldScript.getAttribute("src"), e);
+        }
+    });
+};
+
+
+var split_url = function(url) {
+    // Return a list of three elements: path, GET parameters, anchor
+    var anchor = url.split('#')[1] || "";
+    var get_parameters = url.split('#')[0].split('?')[1] || "";
+    var path = url.split('#')[0];
+    path = path.split('?')[0];
+    let result = [path, get_parameters, anchor];
+    // console.log("Split URL", url, result);
+    return result;
+}
+
+
+var virtual_click = function(evnt) {
+    // Handle GET parameters and anchors
+    // console.log("Virtual click", evnt);
+
+    var el = evnt.currentTarget;
+    var name = el.tagName.toLowerCase();
+
+    if (name == 'a') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('href'));
+    } else if (name == 'form') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('action'));
+        const formData = new FormData(el);
+        get_parameters = new URLSearchParams(formData).toString();
+    } else {
+        console.error("Invalid element", el);
+    }
+
+    path = normalize_path(path);
+
+    window.parent.postMessage({
+        action: "virtual_click",
+        argument: {
+            path: path,
+            get_parameters: get_parameters,
+            anchor: anchor,
+        }
+    }, '*');
+    evnt.preventDefault();
+    evnt.stopPropagation();
+    return false;
+};
+
+var fix_links = function() {
+    Array.from(document.querySelectorAll("a")).forEach( a => {
+        fix_link(a);
+    });
+};
+
+var fix_link = function(a) {
+    if (is_virtual(a.getAttribute('href'))) {
+        a.addEventListener('click', virtual_click);
+    } else if (a.getAttribute('href').startsWith('#')) {
+        a.setAttribute('href', "about:srcdoc" + a.getAttribute('href'))
+    } else {
+        // External links should open in a new tab. Browsers block links to
+        // sites of different origin within an iframe for security reasons.
+        a.setAttribute('target', "_blank");
+    }
+};
+
+var fix_form = function(form) {
+    var href = form.getAttribute('action');
+    if (is_virtual(href) && form.getAttribute('method').toLowerCase() == 'get') {
+        form.addEventListener('submit', virtual_click);
+    }
+};
+
+
+var fix_forms = function() {
+    Array.from(document.querySelectorAll("form")).forEach( form => {
+        fix_form(form);
+    });
+};
+
+
+var embed_img = function(img) {
+    if (img.hasAttribute('src')) {
+        const src = img.getAttribute('src');
+        if (is_virtual(src)) {
+            var path = normalize_path(src);
+            const file = retrieve_file(path);
+            const mime_type = window.global_context.file_tree[path].mime_type;
+            if (mime_type == 'image/svg+xml') {
+                img.setAttribute('src', "data:image/svg+xml;charset=utf-8;base64, " + btoa(file));
+            } else {
+                img.setAttribute('src', `data:${mime_type};base64, ${file}`);
+            }
+        };
+    };
+};
+
+var embed_imgs = function() {
+    Array.from(document.querySelectorAll("img")).forEach( img => {
+        embed_img(img);
+    });
+};
+
+var is_virtual = function(url) {
+    // Return true if the url should be retrieved from the virtual file tree
+    var _url = url.toString().toLowerCase();
+    return (! (
+        _url == "" ||
+        _url[0] == "#" ||
+        _url.startsWith('https://') ||
+        _url.startsWith('http://') ||
+        _url.startsWith('data:') ||
+        _url.startsWith('blob:')
+    ));
+};
+
+var retrieve_file = function(path) {
+    // console.log("Retrieving file: " + path);
+    var file_tree = window.global_context.file_tree;
+    var file = file_tree[path];
+    if (!file) {
+        console.warn("File not found: " + path);
+        return "";
+    } else {
+        return file.data;
+    }
+};
+
+var normalize_path = function(path) {
+    // make relative paths absolute in context of our virtual file tree
+
+    while (path && path[0] == '/') {
+        path = path.substr(1);
+    }
+
+    var result = window.global_context.current_path;
+    result = result.split('/');
+    result.pop();
+    result = result.concat(path.split('/'));
+
+    // resolve relative directories
+    var array = [];
+    Array.from(result).forEach( component => {
+        if (component == '..') {
+            if (array) {
+                array.pop();
+            }
+        } else if (component == '.') {
+        } else {
+            if (component) { array.push(component); }
+        }
+    });
+
+    result = array.join('/');
+    // console.log(`Normalized path: ${path} -> ${result} (@${window.global_context.current_path})`);
+    return result;
+};
+
+
+var fix_document = function() {
+    embed_js(); // This might change the DOM, so do this first
+    monkey_patch();
+    embed_css();
+    embed_imgs();
+    fix_links();
+    fix_forms();
+};
+
+
+var on_set_data = function(argument) {
+    window.global_context = argument;
+    console.log("Received data from parent", window.global_context);
+    // dynamically fix elements on this page
+    try {
+        fix_document();
+        // Trigger DOMContentLoaded again, some scripts that have just
+        // been executed expect it.
+        window.document.dispatchEvent(new Event("DOMContentLoaded", {
+            bubbles: true,
+            cancelable: true
+        }));
+    } finally {
+        observer.observe(window.document.body, {subtree: true, childList: true});
+        window.parent.postMessage({
+            action: "show_iframe",
+            argument: "",
+        }, '*');
+    }
+}
+
+
+var on_scroll_to_anchor = function(argument) {
+    if (window.global_context.anchor) {
+        document.location.replace("about:srcdoc#" + window.global_context.anchor);
+    }
+}
+
+
+const observer = new MutationObserver((mutationList) => {
+    // console.log("Fix mutated elements...", mutationList);
+    mutationList.forEach((mutation) => {
+        if (mutation.type == 'childList') {
+            Array.from(mutation.target.querySelectorAll("a")).forEach( a => {
+                fix_link(a);
+            });
+            Array.from(mutation.target.querySelectorAll("img")).forEach( img => {
+                embed_img(img);
+            });
+            Array.from(mutation.target.querySelectorAll("form")).forEach( form => {
+                fix_form(form);
+            });
+        }
+    });
+});
+
+
+var monkey_patch = function() {
+    if (typeof jQuery === 'undefined') {return;} // Only for jQuery at the moment
+    /**
+     * Monkey patch getQueryParameters
+     * This function is defined in Sphinx' (v4) doctools.js and incompatible with our
+     * approach.
+     * This is a copy with effectively only the third line changed.
+     * See: https://github.com/sphinx-doc/sphinx/blob/2329fdef8c20c6c75194f5d842b8f62ebad5c79d/sphinx/themes/basic/static/doctools.js#L54
+     */
+    jQuery._getQueryParameters = jQuery.getQueryParameters;
+    jQuery.getQueryParameters = function(s) {
+      if (typeof s === 'undefined')
+        s = '?' + window.global_context.get_parameters;
+      return jQuery._getQueryParameters(s);
+    };
+
+    /**
+     * Monkey patch jQuery.ajax
+     * Only settings.url and settings.complete are supported for virtual
+     * URLs.
+     */
+    jQuery._ajax = jQuery.ajax;
+    jQuery.ajax = function(settings) {
+        url = normalize_path(settings.url);
+        if (is_virtual(url)) {
+            var result;
+            var data;
+            data = retrieve_file(url);
+            result = settings.complete({responseText: data}, "");
+            return; // Return value not actually needed in searchtools.js
+        } else {
+            return jQuery.ajax(settings);
+        };
+    };
+}
+
+
+var on_load = function() {
+    // Set up message listener
+    window.addEventListener("message", (evnt) => {
+        console.log("Received message in iframe", evnt);
+        if (evnt.data.action == 'set_data') {
+            on_set_data(evnt.data.argument);
+        } else if (evnt.data.action == 'scroll_to_anchor') {
+            on_scroll_to_anchor(evnt.data.argument);
+        }
+    }, false);
+
+    // Set parent window title and trigger data transmission
+    var favicon = window.document.querySelector("link[rel*='icon']");
+    if (favicon) { favicon = favicon.getAttribute('href'); }
+    var title = window.document.querySelector('head>title');
+    if (title) { title = title.innerText; }
+
+    window.parent.postMessage({
+        action: "set_title",
+        argument: {
+            title: title,
+            favicon: favicon
+        }
+    }, '*');
+
+};
+
+
+window.addEventListener('load', on_load);
+//# sourceURL=inject_post.js</script></body>
+</html>

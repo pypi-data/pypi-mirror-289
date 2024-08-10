@@ -1,0 +1,4 @@
+sphinx
+jupyter-book
+sphinxcontrib_mermaid
+sphinxcontrib_tikz

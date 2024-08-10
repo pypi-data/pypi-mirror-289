@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>/*
+ * Monkeypatch URLSearchParams
+ *
+ * Sphinx documents that use `searchtool.js` rely on passing information via
+ * GET parameters (aka search parameters). Unfortunately, this doesn't work
+ * in our approach due to the same origin policy, so we have to get ...
+ * creative.
+ *
+ * Here, we patch the `URLSearchParams` class so it returns the information
+ * stored in `window.global_context.get_parameters`.
+ *
+ */
+
+const originalGet = URLSearchParams.prototype.get;
+
+var myGet = function (arg) {
+    const originalResult = originalGet.apply(this, [arg]);
+    // If searchtools.js of sphinx is used
+    if (
+        window.global_context.get_parameters &&
+        (window.location.search === "") &&
+        (Array.from(this.entries()).length == 0)
+    ) {
+        const params = new URLSearchParams('?' + window.global_context.get_parameters);
+        const result = params.get(arg);
+        // console.log("Return virtual get parameter:", arg, result);
+        return result;
+    } else {
+        return originalResult;
+    }
+};
+
+URLSearchParams.prototype.get = myGet;
+
+/*
+ * Monkeypatch fetch
+ */
+
+const { fetch: originalFetch } = window;
+
+window.fetch = async (...args) => {
+    let [resource, config ] = args;
+    var path = normalize_path(resource);
+    var response;
+    if (is_virtual(path)) {
+        var data = retrieve_file(path);
+        response = new Response(data);
+
+    } else {
+        response = await originalFetch(resource, config);
+    }
+    return response;
+};
+//# sourceURL=inject_pre.js</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>Internationalization — Sphinx documentation</title>
+<link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/basic.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx13.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+<script src="../../_static/jquery.js"></script>
+<script src="../../_static/underscore.js"></script>
+<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../../_static/doctools.js"></script>
+<script src="../../_static/sphinx_highlight.js"></script>
+<link href="https://www.sphinx-doc.org/en/master/usage/advanced/intl.html" rel="canonical"/>
+<link href="../../_static/opensearch.xml" rel="search" title="Search within Sphinx documentation" type="application/opensearchdescription+xml"/>
+<link href="../../_static/favicon.svg" rel="shortcut icon"/>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="setuptools.html" rel="next" title="Setuptools integration"/>
+<link href="../theming.html" rel="prev" title="HTML Theming"/>
+</head><body>
+<div class="pageheader">
+<a href="../../index.html">
+<img alt="SPHINX" src="../../_static/sphinxheader.png"/>
+</a>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li><a href="../../index.html">Documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="../index.html">Using Sphinx</a> »</li>
+<li class="nav-item nav-item-this"><a href="">Internationalization</a></li>
+</ul>
+</div>
+<div class="document">
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div id="searchbox" role="search" style="display: none">
+<h3 id="searchlabel">Quick search</h3>
+<div class="searchformwrapper">
+<form action="../../search.html" class="search" method="get">
+<input aria-labelledby="searchlabel" autocapitalize="off" autocomplete="off" autocorrect="off" name="q" spellcheck="false" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<div class="sphinxsidebar-navigation__contents">
+<h3>On this page</h3>
+<ul>
+<li><a class="reference internal" href="#">Internationalization</a><ul>
+<li><a class="reference internal" href="#sphinx-internationalization-details">Sphinx internationalization details</a></li>
+<li><a class="reference internal" href="#translating-with-sphinx-intl">Translating with sphinx-intl</a><ul>
+<li><a class="reference internal" href="#quick-guide">Quick guide</a></li>
+<li><a class="reference internal" href="#translating">Translating</a></li>
+<li><a class="reference internal" href="#update-your-po-files-by-new-pot-files">Update your po files by new pot files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-transifex-service-for-team-translation">Using Transifex service for team translation</a></li>
+<li><a class="reference internal" href="#contributing-to-sphinx-reference-translation">Contributing to Sphinx reference translation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sphinxsidebar-navigation__pages">
+<h3>Site navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installing Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/index.html">Tutorial: Build your first project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Using Sphinx</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../restructuredtext/index.html">reStructuredText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../markdown.html">Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../builders/index.html">Builders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/index.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theming.html">HTML Theming</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Internationalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setuptools.html">Setuptools integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websupport/index.html">Sphinx Web Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../development/index.html">Extending Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templating.html">Templating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../latex.html">LaTeX customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extdev/index.html">Developing extensions for Sphinx</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Get support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../internals/index.html">Contribute to Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Sphinx FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../man/index.html">Command-Line Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Projects using Sphinx</a></li>
+</ul>
+</div>
+</div>
+<div class="body" role="main">
+<section id="internationalization">
+<span id="intl"></span><h1>Internationalization<a class="headerlink" href="#internationalization" title="Permalink to this heading">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.1.</span></p>
+</div>
+<p>Complementary to translations provided for Sphinx-generated messages such as
+navigation bars, Sphinx provides mechanisms facilitating the translation of
+<em>documents</em>.  See the <a class="reference internal" href="../configuration.html#intl-options"><span class="std std-ref">Options for internationalization</span></a> for details on configuration.</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../_images/translation.svg"><img alt="../../_images/translation.svg" src="../../_images/translation.svg" width="100%"/></a>
+<figcaption>
+<p><span class="caption-text">Workflow visualization of translations in Sphinx.  (The figure is created by
+<a class="reference external" href="https://plantuml.com">plantuml</a>.)</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#sphinx-internationalization-details" id="id6">Sphinx internationalization details</a></p></li>
+<li><p><a class="reference internal" href="#translating-with-sphinx-intl" id="id7">Translating with sphinx-intl</a></p>
+<ul>
+<li><p><a class="reference internal" href="#quick-guide" id="id8">Quick guide</a></p></li>
+<li><p><a class="reference internal" href="#translating" id="id9">Translating</a></p></li>
+<li><p><a class="reference internal" href="#update-your-po-files-by-new-pot-files" id="id10">Update your po files by new pot files</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#using-transifex-service-for-team-translation" id="id11">Using Transifex service for team translation</a></p></li>
+<li><p><a class="reference internal" href="#contributing-to-sphinx-reference-translation" id="id12">Contributing to Sphinx reference translation</a></p></li>
+</ul>
+</div>
+<section id="sphinx-internationalization-details">
+<h2><a class="toc-backref" href="#id6">Sphinx internationalization details</a><a class="headerlink" href="#sphinx-internationalization-details" title="Permalink to this heading">¶</a></h2>
+<p><strong>gettext</strong> <a class="footnote-reference brackets" href="#id3" id="id1">1</a> is an established standard for internationalization and
+localization.  It naively maps messages in a program to a translated string.
+Sphinx uses these facilities to translate whole documents.</p>
+<p>Initially project maintainers have to collect all translatable strings (also
+referred to as <em>messages</em>) to make them known to translators.  Sphinx extracts
+these through invocation of <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">gettext</span></code>.</p>
+<p>Every single element in the doctree will end up in a single message which
+results in lists being equally split into different chunks while large
+paragraphs will remain as coarsely-grained as they were in the original
+document.  This grants seamless document updates while still providing a little
+bit of context for translators in free-text passages.  It is the maintainer’s
+task to split up paragraphs which are too large as there is no sane automated
+way to do that.</p>
+<p>After Sphinx successfully ran the
+<a class="reference internal" href="../builders/index.html#sphinx.builders.gettext.MessageCatalogBuilder" title="sphinx.builders.gettext.MessageCatalogBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageCatalogBuilder</span></code></a> you will find a
+collection of <code class="docutils literal notranslate"><span class="pre">.pot</span></code> files in your output directory.  These are <strong>catalog
+templates</strong> and contain messages in your original language <em>only</em>.</p>
+<p>They can be delivered to translators which will transform them to <code class="docutils literal notranslate"><span class="pre">.po</span></code> files
+— so called <strong>message catalogs</strong> — containing a mapping from the original
+messages to foreign-language strings.</p>
+<p><em>gettext</em> compiles them into a binary format known as <strong>binary catalogs</strong>
+through <strong class="program">msgfmt</strong> for efficiency reasons.  If you make these files
+discoverable with <a class="reference internal" href="../configuration.html#confval-locale_dirs"><code class="xref std std-confval docutils literal notranslate"><span class="pre">locale_dirs</span></code></a> for your <a class="reference internal" href="../configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a>, Sphinx
+will pick them up automatically.</p>
+<p>An example: you have a document <code class="docutils literal notranslate"><span class="pre">usage.rst</span></code> in your Sphinx project.  The
+<em>gettext</em> builder will put its messages into <code class="docutils literal notranslate"><span class="pre">usage.pot</span></code>.  Imagine you have
+Spanish translations <a class="footnote-reference brackets" href="#id4" id="id2">2</a> stored in <code class="docutils literal notranslate"><span class="pre">usage.po</span></code> — for your builds to
+be translated you need to follow these instructions:</p>
+<ul>
+<li><p>Compile your message catalog to a locale directory, say <code class="docutils literal notranslate"><span class="pre">locale</span></code>, so it
+ends up in <code class="docutils literal notranslate"><span class="pre">./locale/es/LC_MESSAGES/usage.mo</span></code> in your source directory
+(where <code class="docutils literal notranslate"><span class="pre">es</span></code> is the language code for Spanish.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">msgfmt</span> <span class="s2">"usage.po"</span> <span class="o">-</span><span class="n">o</span> <span class="s2">"locale/es/LC_MESSAGES/usage.mo"</span>
+</pre></div>
+</div>
+</li>
+<li><p>Set <a class="reference internal" href="../configuration.html#confval-locale_dirs"><code class="xref std std-confval docutils literal notranslate"><span class="pre">locale_dirs</span></code></a> to <code class="docutils literal notranslate"><span class="pre">["locale/"]</span></code>.</p></li>
+<li><p>Set <a class="reference internal" href="../configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> to <code class="docutils literal notranslate"><span class="pre">es</span></code> (also possible via
+<a class="reference internal" href="../../man/sphinx-build.html#cmdoption-sphinx-build-D"><code class="xref std std-option docutils literal notranslate"><span class="pre">-D</span></code></a>).</p></li>
+<li><p>Run your desired build.</p></li>
+</ul>
+<p>In order to protect against mistakes, a warning is emitted if
+cross-references in the translated paragraph do not match those from the
+original.  This can be turned off globally using the
+<a class="reference internal" href="../configuration.html#confval-suppress_warnings"><code class="xref std std-confval docutils literal notranslate"><span class="pre">suppress_warnings</span></code></a> configuration variable.  Alternatively, to
+turn it off for one message only, end the message with <code class="docutils literal notranslate"><span class="pre">#noqa</span></code> like
+this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Lorem</span> <span class="n">ipsum</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span><span class="p">,</span> <span class="n">consectetur</span> <span class="n">adipiscing</span> <span class="n">elit</span><span class="o">.</span> <span class="n">Suspendisse</span>
+<span class="n">risus</span> <span class="n">tortor</span><span class="p">,</span> <span class="n">luctus</span> <span class="nb">id</span> <span class="n">ultrices</span> <span class="n">at</span><span class="o">.</span> <span class="c1">#noqa</span>
+</pre></div>
+</div>
+<p>(Write <code class="docutils literal notranslate"><span class="pre">\#noqa</span></code> in case you want to have “#noqa” literally in the
+text.  This does not apply to code blocks, where <code class="docutils literal notranslate"><span class="pre">#noqa</span></code> is ignored
+because code blocks do not contain references anyway.)</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.5: </span>The <code class="docutils literal notranslate"><span class="pre">#noqa</span></code> mechanism.</p>
+</div>
+</section>
+<section id="translating-with-sphinx-intl">
+<h2><a class="toc-backref" href="#id7">Translating with sphinx-intl</a><a class="headerlink" href="#translating-with-sphinx-intl" title="Permalink to this heading">¶</a></h2>
+<section id="quick-guide">
+<h3><a class="toc-backref" href="#id8">Quick guide</a><a class="headerlink" href="#quick-guide" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="https://pypi.org/project/sphinx-intl/">sphinx-intl</a> is a useful tool to work with Sphinx translation flow.  This
+section describe an easy way to translate with <em>sphinx-intl</em>.</p>
+<ol class="arabic">
+<li><p>Install <a class="reference external" href="https://pypi.org/project/sphinx-intl/">sphinx-intl</a>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install sphinx-intl
+</pre></div>
+</div>
+</li>
+<li><p>Add configurations to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">locale_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'locale/'</span><span class="p">]</span>   <span class="c1"># path is example but recommended.</span>
+<span class="n">gettext_compact</span> <span class="o">=</span> <span class="kc">False</span>     <span class="c1"># optional.</span>
+</pre></div>
+</div>
+<p>This case-study assumes that BUILDDIR is set to <code class="docutils literal notranslate"><span class="pre">_build</span></code>,
+<a class="reference internal" href="../configuration.html#confval-locale_dirs"><code class="xref std std-confval docutils literal notranslate"><span class="pre">locale_dirs</span></code></a> is set to <code class="docutils literal notranslate"><span class="pre">locale/</span></code> and <a class="reference internal" href="../configuration.html#confval-gettext_compact"><code class="xref std std-confval docutils literal notranslate"><span class="pre">gettext_compact</span></code></a>
+is set to <code class="docutils literal notranslate"><span class="pre">False</span></code> (the Sphinx document is already configured as such).</p>
+</li>
+<li><p>Extract translatable messages into pot files.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make gettext
+</pre></div>
+</div>
+<p>The generated pot files will be placed in the <code class="docutils literal notranslate"><span class="pre">_build/gettext</span></code> directory.</p>
+</li>
+<li><p>Generate po files.</p>
+<p>We’ll use the pot files generated in the above step.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-intl update -p _build/gettext -l de -l ja
+</pre></div>
+</div>
+<p>Once completed, the generated po files will be placed in the below
+directories:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">./locale/de/LC_MESSAGES/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">./locale/ja/LC_MESSAGES/</span></code></p></li>
+</ul>
+</li>
+<li><p>Translate po files.</p>
+<p>As noted above, these are located in the <code class="docutils literal notranslate"><span class="pre">./locale/&lt;lang&gt;/LC_MESSAGES</span></code>
+directory.  An example of one such file, from Sphinx, <code class="docutils literal notranslate"><span class="pre">builders.po</span></code>, is
+given below.</p>
+<div class="highlight-po notranslate"><div class="highlight"><pre><span></span><span class="c1"># a5600c3d2e3d48fc8c261ea0284db79b</span>
+<span class="kd">#: ../../builders.rst:4</span>
+<span class="nv">msgid</span> <span class="s">"Available builders"</span>
+<span class="nv">msgstr</span> <span class="s">"&lt;FILL HERE BY TARGET LANGUAGE&gt;"</span>
+</pre></div>
+</div>
+<p>Another case, msgid is multi-line text and contains reStructuredText syntax:</p>
+<div class="highlight-po notranslate"><div class="highlight"><pre><span></span><span class="c1"># 302558364e1d41c69b3277277e34b184</span>
+<span class="kd">#: ../../builders.rst:9</span>
+<span class="nv">msgid</span> <span class="s">""</span>
+<span class="s">"These are the built-in Sphinx builders. More builders can be added by "</span>
+<span class="s">":ref:`extensions &lt;extensions&gt;`."</span>
+<span class="nv">msgstr</span> <span class="s">""</span>
+<span class="s">"FILL HERE BY TARGET LANGUAGE FILL HERE BY TARGET LANGUAGE FILL HERE "</span>
+<span class="s">"BY TARGET LANGUAGE :ref:`EXTENSIONS &lt;extensions&gt;` FILL HERE."</span>
+</pre></div>
+</div>
+<p>Please be careful not to break reST notation.  Most po-editors will help you
+with that.</p>
+</li>
+<li><p>Build translated document.</p>
+<p>You need a <a class="reference internal" href="../configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> parameter in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> or you may also
+specify the parameter on the command line.</p>
+<p>For for BSD/GNU make, run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make -e <span class="nv">SPHINXOPTS</span><span class="o">=</span><span class="s2">"-D language='de'"</span> html
+</pre></div>
+</div>
+<p>For Windows <strong class="command">cmd.exe</strong>, run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt; set SPHINXOPTS=-D language=de</span>
+<span class="go">&gt; .\make.bat html</span>
+</pre></div>
+</div>
+<p>For PowerShell, run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt; Set-Item env:SPHINXOPTS "-D language=de"</span>
+<span class="go">&gt; .\make.bat html</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Congratulations! You got the translated documentation in the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code>
+directory.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3: </span><strong class="program">sphinx-build</strong> that is invoked by make command will build po files
+into mo files.</p>
+<p>If you are using 1.2.x or earlier, please invoke <strong class="command">sphinx-intl build</strong>
+command before <strong class="command">make</strong> command.</p>
+</div>
+</section>
+<section id="translating">
+<h3><a class="toc-backref" href="#id9">Translating</a><a class="headerlink" href="#translating" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="update-your-po-files-by-new-pot-files">
+<h3><a class="toc-backref" href="#id10">Update your po files by new pot files</a><a class="headerlink" href="#update-your-po-files-by-new-pot-files" title="Permalink to this heading">¶</a></h3>
+<p>If a document is updated, it is necessary to generate updated pot files and to
+apply differences to translated po files.  In order to apply the updates from a
+pot file to the po file, use the <strong class="command">sphinx-intl update</strong> command.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-intl update -p _build/gettext
+</pre></div>
+</div>
+</section>
+</section>
+<section id="using-transifex-service-for-team-translation">
+<h2><a class="toc-backref" href="#id11">Using Transifex service for team translation</a><a class="headerlink" href="#using-transifex-service-for-team-translation" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://www.transifex.com/">Transifex</a> is one of several services that allow collaborative translation via a
+web interface.  It has a nifty Python-based command line client that makes it
+easy to fetch and push translations.</p>
+<ol class="arabic">
+<li><p>Install <a class="reference external" href="https://pypi.org/project/transifex-client/">transifex-client</a>.</p>
+<p>You need <strong class="command">tx</strong> command to upload resources (pot files).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install transifex-client
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://docs.transifex.com/client/introduction/">Transifex Client documentation</a></p>
+</div>
+</li>
+<li><p>Create your <a class="reference external" href="https://www.transifex.com/">transifex</a> account and create new project for your document.</p>
+<p>Currently, transifex does not allow for a translation project to have more
+than one version of the document, so you’d better include a version number in
+your project name.</p>
+<p>For example:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Project ID</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">sphinx-document-test_1_0</span></code></p>
+</dd>
+<dt class="field-even">Project URL</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">https://www.transifex.com/projects/p/sphinx-document-test_1_0/</span></code></p>
+</dd>
+</dl>
+</li>
+<li><p>Create config files for <strong class="command">tx</strong> command.</p>
+<p>This process will create <code class="docutils literal notranslate"><span class="pre">.tx/config</span></code> in the current directory, as well as
+a <code class="docutils literal notranslate"><span class="pre">~/.transifexrc</span></code> file that includes auth information.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tx init
+<span class="go">Creating .tx folder...</span>
+<span class="go">Transifex instance [https://www.transifex.com]:</span>
+<span class="go">...</span>
+<span class="go">Please enter your transifex username: &lt;transifex-username&gt;</span>
+<span class="go">Password: &lt;transifex-password&gt;</span>
+<span class="go">...</span>
+<span class="go">Done.</span>
+</pre></div>
+</div>
+</li>
+<li><p>Upload pot files to transifex service.</p>
+<p>Register pot files to <code class="docutils literal notranslate"><span class="pre">.tx/config</span></code> file:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> /your/document/root
+<span class="gp">$ </span>sphinx-intl update-txconfig-resources --pot-dir _build/locale <span class="se">\</span>
+  --transifex-project-name sphinx-document-test_1_0
+</pre></div>
+</div>
+<p>and upload pot files:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tx push -s
+<span class="go">Pushing translations for resource sphinx-document-test_1_0.builders:</span>
+<span class="go">Pushing source file (locale/pot/builders.pot)</span>
+<span class="go">Resource does not exist.  Creating...</span>
+<span class="go">...</span>
+<span class="go">Done.</span>
+</pre></div>
+</div>
+</li>
+<li><p>Forward the translation on transifex.</p>
+</li>
+<li><p>Pull translated po files and make translated HTML.</p>
+<p>Get translated catalogs and build mo files. For example, to build mo files
+for German (de):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> /your/document/root
+<span class="gp">$ </span>tx pull -l de
+<span class="go">Pulling translations for resource sphinx-document-test_1_0.builders (...)</span>
+<span class="go"> -&gt; de: locale/de/LC_MESSAGES/builders.po</span>
+<span class="go">...</span>
+<span class="go">Done.</span>
+</pre></div>
+</div>
+<p>Invoke <strong class="command">make html</strong> (for BSD/GNU make):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make -e <span class="nv">SPHINXOPTS</span><span class="o">=</span><span class="s2">"-D language='de'"</span> html
+</pre></div>
+</div>
+</li>
+</ol>
+<p>That’s all!</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Translating locally and on Transifex</p>
+<p>If you want to push all language’s po files, you can be done by using
+<strong class="command">tx push -t</strong> command.  Watch out! This operation overwrites
+translations in transifex.</p>
+<p>In other words, if you have updated each in the service and local po files,
+it would take much time and effort to integrate them.</p>
+</div>
+</section>
+<section id="contributing-to-sphinx-reference-translation">
+<h2><a class="toc-backref" href="#id12">Contributing to Sphinx reference translation</a><a class="headerlink" href="#contributing-to-sphinx-reference-translation" title="Permalink to this heading">¶</a></h2>
+<p>The recommended way for new contributors to translate Sphinx reference is to
+join the translation team on Transifex.</p>
+<p>There is a <a class="reference external" href="https://www.transifex.com/sphinx-doc/sphinx-doc/">sphinx translation page</a> for Sphinx (master) documentation.</p>
+<ol class="arabic simple">
+<li><p>Login to <a class="reference external" href="https://www.transifex.com/">transifex</a> service.</p></li>
+<li><p>Go to <a class="reference external" href="https://www.transifex.com/sphinx-doc/sphinx-doc/">sphinx translation page</a>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Request</span> <span class="pre">language</span></code> and fill form.</p></li>
+<li><p>Wait acceptance by transifex sphinx translation maintainers.</p></li>
+<li><p>(After acceptance) Translate on transifex.</p></li>
+</ol>
+<p>Detail is here: <a class="reference external" href="https://docs.transifex.com/getting-started-1/translators">https://docs.transifex.com/getting-started-1/translators</a></p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>See the <a class="reference external" href="https://www.gnu.org/software/gettext/manual/gettext.html#Introduction">GNU gettext utilities</a>
+for details on that software suite.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Because nobody expects the Spanish Inquisition!</p>
+</dd>
+</dl>
+</section>
+</section>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+  © <a href="../../copyright.html">Copyright</a> 2007-2022, the Sphinx developers.
+  Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+</div>
+<script>var embed_css = function() {
+    Array.from(document.querySelectorAll("link")).forEach( link => {
+        if (link.getAttribute('rel') == 'stylesheet') {
+            const style = document.createElement("style");
+            var href = link.getAttribute('href');
+            let [path, get_parameters, anchor] = split_url(href);
+            path = normalize_path(path);
+            style.innerText = retrieve_file(path);
+            link.replaceWith(style);
+        };
+    });
+};
+
+
+var embed_js = function() {
+    Array.from(document.querySelectorAll("script")).forEach( oldScript => {
+        const newScript = document.createElement("script");
+        Array.from(oldScript.attributes).forEach( attr => {
+            newScript.setAttribute(attr.name, attr.value);
+        });
+        try {
+            if (newScript.hasAttribute('src') && is_virtual(newScript.getAttribute('src'))) {
+                var src = newScript.getAttribute('src');
+                let [path, get_parameters, anchor] = split_url(src);
+                path = normalize_path(path);
+                var src = retrieve_file(path) + ' //# sourceMap=' + path;
+                newScript.appendChild(document.createTextNode(src));
+                newScript.removeAttribute('src');
+                oldScript.parentNode.replaceChild(newScript, oldScript);
+            }
+        } catch (e) {
+            // Make sure all scripts are loaded
+            console.error("Caught error in " + oldScript.getAttribute("src"), e);
+        }
+    });
+};
+
+
+var split_url = function(url) {
+    // Return a list of three elements: path, GET parameters, anchor
+    var anchor = url.split('#')[1] || "";
+    var get_parameters = url.split('#')[0].split('?')[1] || "";
+    var path = url.split('#')[0];
+    path = path.split('?')[0];
+    let result = [path, get_parameters, anchor];
+    // console.log("Split URL", url, result);
+    return result;
+}
+
+
+var virtual_click = function(evnt) {
+    // Handle GET parameters and anchors
+    // console.log("Virtual click", evnt);
+
+    var el = evnt.currentTarget;
+    var name = el.tagName.toLowerCase();
+
+    if (name == 'a') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('href'));
+    } else if (name == 'form') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('action'));
+        const formData = new FormData(el);
+        get_parameters = new URLSearchParams(formData).toString();
+    } else {
+        console.error("Invalid element", el);
+    }
+
+    path = normalize_path(path);
+
+    window.parent.postMessage({
+        action: "virtual_click",
+        argument: {
+            path: path,
+            get_parameters: get_parameters,
+            anchor: anchor,
+        }
+    }, '*');
+    evnt.preventDefault();
+    evnt.stopPropagation();
+    return false;
+};
+
+var fix_links = function() {
+    Array.from(document.querySelectorAll("a")).forEach( a => {
+        fix_link(a);
+    });
+};
+
+var fix_link = function(a) {
+    if (is_virtual(a.getAttribute('href'))) {
+        a.addEventListener('click', virtual_click);
+    } else if (a.getAttribute('href').startsWith('#')) {
+        a.setAttribute('href', "about:srcdoc" + a.getAttribute('href'))
+    } else {
+        // External links should open in a new tab. Browsers block links to
+        // sites of different origin within an iframe for security reasons.
+        a.setAttribute('target', "_blank");
+    }
+};
+
+var fix_form = function(form) {
+    var href = form.getAttribute('action');
+    if (is_virtual(href) && form.getAttribute('method').toLowerCase() == 'get') {
+        form.addEventListener('submit', virtual_click);
+    }
+};
+
+
+var fix_forms = function() {
+    Array.from(document.querySelectorAll("form")).forEach( form => {
+        fix_form(form);
+    });
+};
+
+
+var embed_img = function(img) {
+    if (img.hasAttribute('src')) {
+        const src = img.getAttribute('src');
+        if (is_virtual(src)) {
+            var path = normalize_path(src);
+            const file = retrieve_file(path);
+            const mime_type = window.global_context.file_tree[path].mime_type;
+            if (mime_type == 'image/svg+xml') {
+                img.setAttribute('src', "data:image/svg+xml;charset=utf-8;base64, " + btoa(file));
+            } else {
+                img.setAttribute('src', `data:${mime_type};base64, ${file}`);
+            }
+        };
+    };
+};
+
+var embed_imgs = function() {
+    Array.from(document.querySelectorAll("img")).forEach( img => {
+        embed_img(img);
+    });
+};
+
+var is_virtual = function(url) {
+    // Return true if the url should be retrieved from the virtual file tree
+    var _url = url.toString().toLowerCase();
+    return (! (
+        _url == "" ||
+        _url[0] == "#" ||
+        _url.startsWith('https://') ||
+        _url.startsWith('http://') ||
+        _url.startsWith('data:') ||
+        _url.startsWith('blob:')
+    ));
+};
+
+var retrieve_file = function(path) {
+    // console.log("Retrieving file: " + path);
+    var file_tree = window.global_context.file_tree;
+    var file = file_tree[path];
+    if (!file) {
+        console.warn("File not found: " + path);
+        return "";
+    } else {
+        return file.data;
+    }
+};
+
+var normalize_path = function(path) {
+    // make relative paths absolute in context of our virtual file tree
+
+    while (path && path[0] == '/') {
+        path = path.substr(1);
+    }
+
+    var result = window.global_context.current_path;
+    result = result.split('/');
+    result.pop();
+    result = result.concat(path.split('/'));
+
+    // resolve relative directories
+    var array = [];
+    Array.from(result).forEach( component => {
+        if (component == '..') {
+            if (array) {
+                array.pop();
+            }
+        } else if (component == '.') {
+        } else {
+            if (component) { array.push(component); }
+        }
+    });
+
+    result = array.join('/');
+    // console.log(`Normalized path: ${path} -> ${result} (@${window.global_context.current_path})`);
+    return result;
+};
+
+
+var fix_document = function() {
+    embed_js(); // This might change the DOM, so do this first
+    monkey_patch();
+    embed_css();
+    embed_imgs();
+    fix_links();
+    fix_forms();
+};
+
+
+var on_set_data = function(argument) {
+    window.global_context = argument;
+    console.log("Received data from parent", window.global_context);
+    // dynamically fix elements on this page
+    try {
+        fix_document();
+        // Trigger DOMContentLoaded again, some scripts that have just
+        // been executed expect it.
+        window.document.dispatchEvent(new Event("DOMContentLoaded", {
+            bubbles: true,
+            cancelable: true
+        }));
+    } finally {
+        observer.observe(window.document.body, {subtree: true, childList: true});
+        window.parent.postMessage({
+            action: "show_iframe",
+            argument: "",
+        }, '*');
+    }
+}
+
+
+var on_scroll_to_anchor = function(argument) {
+    if (window.global_context.anchor) {
+        document.location.replace("about:srcdoc#" + window.global_context.anchor);
+    }
+}
+
+
+const observer = new MutationObserver((mutationList) => {
+    // console.log("Fix mutated elements...", mutationList);
+    mutationList.forEach((mutation) => {
+        if (mutation.type == 'childList') {
+            Array.from(mutation.target.querySelectorAll("a")).forEach( a => {
+                fix_link(a);
+            });
+            Array.from(mutation.target.querySelectorAll("img")).forEach( img => {
+                embed_img(img);
+            });
+            Array.from(mutation.target.querySelectorAll("form")).forEach( form => {
+                fix_form(form);
+            });
+        }
+    });
+});
+
+
+var monkey_patch = function() {
+    if (typeof jQuery === 'undefined') {return;} // Only for jQuery at the moment
+    /**
+     * Monkey patch getQueryParameters
+     * This function is defined in Sphinx' (v4) doctools.js and incompatible with our
+     * approach.
+     * This is a copy with effectively only the third line changed.
+     * See: https://github.com/sphinx-doc/sphinx/blob/2329fdef8c20c6c75194f5d842b8f62ebad5c79d/sphinx/themes/basic/static/doctools.js#L54
+     */
+    jQuery._getQueryParameters = jQuery.getQueryParameters;
+    jQuery.getQueryParameters = function(s) {
+      if (typeof s === 'undefined')
+        s = '?' + window.global_context.get_parameters;
+      return jQuery._getQueryParameters(s);
+    };
+
+    /**
+     * Monkey patch jQuery.ajax
+     * Only settings.url and settings.complete are supported for virtual
+     * URLs.
+     */
+    jQuery._ajax = jQuery.ajax;
+    jQuery.ajax = function(settings) {
+        url = normalize_path(settings.url);
+        if (is_virtual(url)) {
+            var result;
+            var data;
+            data = retrieve_file(url);
+            result = settings.complete({responseText: data}, "");
+            return; // Return value not actually needed in searchtools.js
+        } else {
+            return jQuery.ajax(settings);
+        };
+    };
+}
+
+
+var on_load = function() {
+    // Set up message listener
+    window.addEventListener("message", (evnt) => {
+        console.log("Received message in iframe", evnt);
+        if (evnt.data.action == 'set_data') {
+            on_set_data(evnt.data.argument);
+        } else if (evnt.data.action == 'scroll_to_anchor') {
+            on_scroll_to_anchor(evnt.data.argument);
+        }
+    }, false);
+
+    // Set parent window title and trigger data transmission
+    var favicon = window.document.querySelector("link[rel*='icon']");
+    if (favicon) { favicon = favicon.getAttribute('href'); }
+    var title = window.document.querySelector('head>title');
+    if (title) { title = title.innerText; }
+
+    window.parent.postMessage({
+        action: "set_title",
+        argument: {
+            title: title,
+            favicon: favicon
+        }
+    }, '*');
+
+};
+
+
+window.addEventListener('load', on_load);
+//# sourceURL=inject_post.js</script></body>
+</html>

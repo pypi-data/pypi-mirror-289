@@ -1,0 +1,1537 @@
+{
+  ".buildinfo": {
+    "data": "# Sphinx build info version 1\n# This file hashes the configuration used when building these files. W...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "searchindex.js": {
+    "data": "Search.setIndex({\"docnames\": [\"changes\", \"development/builders\", \"development/index\", \"development/o...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "objects.inv": {
+    "data": "IyBTcGhpbnggaW52ZW50b3J5IHZlcnNpb24gMgojIFByb2plY3Q6IFNwaGlueAojIFZlcnNpb246IDUuMy4wCiMgVGhlIHJlbWFp...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "contents.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "search.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "support.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "changes.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "py-modindex.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "genindex.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "glossary.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "templating.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "latex.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "faq.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "examples.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/logging.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/appapi.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/i18n.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/builderapi.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/deprecated.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/projectapi.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/parserapi.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/domainapi.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/envapi.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/collectorapi.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/nodes.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/markupapi.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/utils.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "extdev/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/markdown.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/installation.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/configuration.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/quickstart.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/theming.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/autosummary.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/autodoc.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/doctest.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/example_google.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/autosectionlabel.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/linkcode.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/ifconfig.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/math.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/extlinks.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/intersphinx.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/todo.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/inheritance.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/githubpages.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/duration.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/napoleon.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/graphviz.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/viewcode.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/coverage.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/example_numpy.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/imgconverter.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/extensions/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/restructuredtext/directives.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/restructuredtext/basics.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/restructuredtext/domains.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/restructuredtext/field-lists.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/restructuredtext/roles.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/restructuredtext/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/advanced/setuptools.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/advanced/intl.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/advanced/websupport/storagebackends.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/advanced/websupport/searchadapters.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/advanced/websupport/api.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/advanced/websupport/quickstart.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/advanced/websupport/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "usage/builders/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "internals/organization.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "internals/authors.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "internals/contributing.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "internals/release-process.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "internals/code-of-conduct.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "internals/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "man/sphinx-apidoc.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "man/sphinx-quickstart.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "man/sphinx-build.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "man/sphinx-autogen.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "man/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/jquery.js": {
+    "data": "/*! jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */\n!function(e...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/searchtools.js": {
+    "data": "/*\n * searchtools.js\n * ~~~~~~~~~~~~~~~~\n *\n * Sphinx JavaScript utilities for the full-text search....",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/conf.py.txt": {
+    "data": "# test documentation build configuration file, created by\n# sphinx-quickstart on Sun Jun 26 00:00:43...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/language_data.js": {
+    "data": "/*\n * language_data.js\n * ~~~~~~~~~~~~~~~~\n *\n * This script contains the language-specific data use...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/sphinxheader.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAYYAAABLCAYAAAB0gSA7AAAtjklEQVR4AezYJdQVQRTAcZx+Dk6kow0n4xBpuEe8F1wjkUbB3d3d...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/opensearch.xml": {
+    "data": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/underscore-1.13.1.js": {
+    "data": "(function (global, factory) {\n  typeof exports === 'object' && typeof module !== 'undefined' ? modul...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/doctools.js": {
+    "data": "/*\n * doctools.js\n * ~~~~~~~~~~~\n *\n * Base JavaScript utilities for all Sphinx HTML documentation.\n...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/underscore.js": {
+    "data": "!function(n,r){\"object\"==typeof exports&&\"undefined\"!=typeof module?module.exports=r():\"function\"==t...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/translation.puml": {
+    "data": "@startuml\nfile \"SphinxProject\"\nfile \".rst\"\ndatabase \".pot\"\ndatabase \".po\"\ndatabase \".mo\"\nactor trans...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/plus.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAAAAACMxyj6AAAAIUlEQVR4AWM4gwAMZz5AwTsoW5MQWxMCiFX/DgpAbAQAAC0hYZTz...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/sphinx_highlight.js": {
+    "data": "/* Highlighting utilities for Sphinx HTML documentation. */\n\"use strict\";\n\nconst SPHINX_HIGHLIGHT_EN...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/bookcover.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAJwAAADICAIAAACSxR/7AABrSklEQVR4AexTRVYDQRDlIOieg8SWHAk9QPQWOJNcgWzxLe421iVU...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/translation.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAnwAAADeCAIAAAAoxErNAAAAKXRFWHRjb3B5bGVmdABHZW5lcmF0ZWQgYnkgaHR0cDovL3BsYW50...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/documentation_options.js": {
+    "data": "var DOCUMENTATION_OPTIONS = {\n    URL_ROOT: document.getElementById(\"documentation_options\").getAttr...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/favicon.svg": {
+    "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\">\n  <style>\n    @media (prefers-color-s...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/more.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFDklEQVR4AcVVA5DkWhQ976XdO7bWtr377bW+bRW/bdu2bdtaj20b...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/minus.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAAAAACMxyj6AAAAIUlEQVR4AWM4gwAMZz5AwTso+x0htiYEEKv+HRSA2AgAAF3sZjJu...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/_sphinx_javascript_frameworks_compat.js": {
+    "data": "/*\n * _sphinx_javascript_frameworks_compat.js\n * ~~~~~~~~~~\n *\n * Compatability shim for jQuery and ...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/sphinx13.css": {
+    "data": "/* Stylesheet for Sphinx's documentation */\n\n/* Set master colours */\n:root {\n    --fonts-sans-serif...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/translation.svg": {
+    "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/Makefile": {
+    "data": "translation.png: translation.puml\n\tplantuml -tpng $<\ntranslation.svg: translation.puml\n\tplantuml -ts...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/sphinx.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAApIAAABzCAIAAACkbXU/AACFbElEQVR4AeychZoaSxBGewxncYu7J+//GDfuWVfIYoPL3L+7Qn3z...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/pygments.css": {
+    "data": "pre { line-height: 125%; }\ntd.linenos .normal { color: inherit; background-color: transparent; paddi...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/basic.css": {
+    "data": "/*\n * basic.css\n * ~~~~~~~~~\n *\n * Sphinx stylesheet -- basic theme.\n *\n * :copyright: Copyright 200...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/file.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA5UlEQVR4Aa2Tg1IGARSF9yl7hWzXINu2BtkcZts9QK7lC5w6v7m+...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/jquery-3.6.0.js": {
+    "data": "/*!\n * jQuery JavaScript Library v3.6.0\n * https://jquery.com/\n *\n * Includes Sizzle.js\n * https://s...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_static/themes/scrolls.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAABsX0lEQVR4AeyThW0DQRBFtwN3d90kAtMymZltse7aSAmpxl9mttA4...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/bizstyle.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASUAAADICAIAAAAhqGDIAABpyklEQVR4AeyYA5AkSxCGX9jms3m2bdu2bdvasa21bXvPNsLnuzDf...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/haiku.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAACod0lEQVR4AexaA4BjSbfuZ9s21rbt3fHs2NPTM292rLZt27aVtJW2...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/nature.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAABvP0lEQVR4AeyUBW7EQBRDe4cyMzOeaJmZ7rMZKN+wL7FUZibJGv14...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/sphinx_rtd_theme.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASwAAADICAIAAADdvUsCAABxmUlEQVR4AezaBXfi2ALA8fdx1t3d3d3d3d1ox92tQt2gZfAkQHFI...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/classic.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAACbvklEQVR4AeyTVdIcMQyE/TMznmCZmZmZL5LnXCN02nzj3jAzVqlU...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/sphinxdoc.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAAB12ElEQVR4AeyVg3IEQRQA8/9fEtu2nbPv1rb5KlOKzXu9KKx3umsG...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/alabaster.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASwAAADICAIAAADdvUsCAAB+K0lEQVR4AezYhV9aex/A8eefu9133bPWYUzXc7O7Wye2TgHHwCIs...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/traditional.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAAB9yUlEQVR4AexcBXgbSbLu5d0w2mFmZlwIM1yYwQ4nG8cOXJiZ0cwU...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/pyramid.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAACXXElEQVR4AezTA3Al6RYA4F7bG4w90cwN773tq2QmTia2nSxirGLb...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/agogo.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAABkh0lEQVR4AeyWBa6bMRCEc80yY5h+ZshPZWZmPEFVfCQsCAvi5Bz9...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/scrolls.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA/EAAAKnCAIAAABBA1qcAAFX9klEQVR4Aeydd1tU1/bHfRW3pPeG0obeFLHEi1R7BTvF3oJRFI0i...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/bizstyle.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA+MAAAKnCAIAAABiWAtJAAElf0lEQVR4AezaBxHEIAAEQDzhCU94wkKsBDBB35v9Mi2950KttZTS...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/haiku.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA/EAAAKnCAIAAABBA1qcAAFIr0lEQVR4AezaA24GARBA4d7/DrX527Zt29ojdGpHdfu+YB3j7WTW...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/nature.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA/EAAAKnCAIAAABBA1qcAAB90UlEQVR4AezdSY4bxxaFYa7kraZ28zbmVXgFHnrofui+mauXApSv...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/sphinx_rtd_theme.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA80AAALjCAIAAACnBXBQAACZuklEQVR4AeydhW8cd/qHf/9OhBZHWBD8jgTHGJ1YOmbYwzIzMzNu...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/classic.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA/EAAAKnCAIAAABBA1qcAAEbXElEQVR4AezWgRAAQAgAsHd4oBzyh0mjaneD2PuRcwEAAE4PAABO...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/sphinxdoc.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA/EAAAKnCAIAAABBA1qcAAFJnklEQVR4AezYVXUEQRRAwfiXEhOxEDKxjMP4lkHAYtUw9u89/fH1...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/alabaster.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA7QAAAJ3CAIAAAArropXAACc/0lEQVR4AezWAQEAAAQDMP1Dg+fYUqwGAAAIOQYAADkGAAA5BgAA...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/traditional.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA/EAAAKnCAIAAABBA1qcAAFmJ0lEQVR4AezWQ4IFMQBAwbn/Tb/ZtrkeV7WRZPs+KgAA4DfT9F8O...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/pyramid.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA/EAAAKnCAIAAABBA1qcAAGRBElEQVR4AezWNbLbbACGUa/qB30ysx1mZm7DzLSBMPdZRZjqlGFm...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/themes/fullsize/agogo.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAA/EAAAKnCAIAAABBA1qcAADeQUlEQVR4AezYhXUjMRRA0d93aBgC/SxjH8EmwqDQoWUaS3tzXsbX...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/tutorial/lumache-py-function-full.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAzkAAAJlCAYAAAD5KTwhAAAgAElEQVR4nOzddVwU6R8H8AGDDkHALqzDQPkhdmNgdwA2CiqegSIG...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/tutorial/lumache-first-light.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAABAAAAAFeCAYAAAAboW2jAAAMlnpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjarZhtchw5DkT/...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/tutorial/lumache-py-function.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAzcAAAGICAYAAAB80h5TAAAgAElEQVR4nOzddVwU6R8H8AGDBgUFu7AOA+GH2I2B3QHYKKh4BooY...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/tutorial/lumache-autosummary.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAw4AAAF4CAIAAAByxDnvAAAAA3NCSVQICAjb4U/gAAAAGXRFWHRTb2Z0d2FyZQBnbm9tZS1zY3Jl...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_static/tutorial/lumache-furo.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAABCAAAAFeCAIAAADbnvkkAAAAA3NCSVQICAjb4U/gAAAAGXRFWHRTb2Z0d2FyZQBnbm9tZS1zY3Jl...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_sources/latex.rst.txt": {
+    "data": "LaTeX customization\n===================\n\n.. module:: latex\n   :synopsis: LaTeX specifics.\n\n.. raw:: ...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/faq.rst.txt": {
+    "data": ".. _faq:\n\nSphinx FAQ\n==========\n\nThis is a list of Frequently Asked Questions about Sphinx.  Feel fr...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/glossary.rst.txt": {
+    "data": ".. _glossary:\n\nGlossary\n========\n\n.. glossary::\n\n   builder\n      A class (inheriting from :class:`~...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/examples.rst.txt": {
+    "data": ":tocdepth: 2\n\n.. _examples:\n\n.. include:: ../EXAMPLES\n...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/templating.rst.txt": {
+    "data": ".. highlight:: html+jinja\n\n.. _templating:\n\n==========\nTemplating\n==========\n\nSphinx uses the `Jinja...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/support.rst.txt": {
+    "data": "Get support\n===========\n\nFor questions or to report problems with Sphinx, join the `sphinx-users`_\nm...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/changes.rst.txt": {
+    "data": ":tocdepth: 1\n\n.. default-role:: any\n\n.. _changes:\n\n=========\nChangelog\n=========\n\n.. raw:: latex\n\n  ...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/index.rst.txt": {
+    "data": "=======\nWelcome\n=======\n\n.. epigraph:: Sphinx makes it easy to create intelligent and beautiful docu...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/appapi.rst.txt": {
+    "data": ".. highlight:: rest\n\nApplication API\n===============\n\n.. module:: sphinx.application\n   :synopsis: A...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/builderapi.rst.txt": {
+    "data": ".. _writing-builders:\n\nBuilder API\n===========\n\n.. todo:: Expand this.\n\n.. currentmodule:: sphinx.bu...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/logging.rst.txt": {
+    "data": ".. _logging-api:\n\nLogging API\n===========\n\n.. currentmodule:: sphinx.util.logging\n\n.. autofunction::...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/domainapi.rst.txt": {
+    "data": ".. _domain-api:\n\nDomain API\n==========\n\n.. module:: sphinx.domains\n\n.. autoclass:: Domain\n   :member...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/parserapi.rst.txt": {
+    "data": ".. _parser-api:\n\nParser API\n==========\n\n`The docutils documentation describes`__ parsers as follows:...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/deprecated.rst.txt": {
+    "data": ".. _dev-deprecated-apis:\n\nDeprecated APIs\n===============\n\nOn developing Sphinx, we are always caref...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/markupapi.rst.txt": {
+    "data": "Docutils markup API\n===================\n\nThis section describes the API for adding ReST markup eleme...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/envapi.rst.txt": {
+    "data": "Build environment API\n=====================\n\n.. module:: sphinx.environment\n\n.. class:: BuildEnviron...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/collectorapi.rst.txt": {
+    "data": ".. _collector-api:\n\nEnvironment Collector API\n-------------------------\n\n.. module:: sphinx.environm...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/utils.rst.txt": {
+    "data": "Utilities\n=========\n\nSphinx provides utility classes and functions to develop extensions.\n\nBase clas...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/projectapi.rst.txt": {
+    "data": ".. _project-api:\n\nProject API\n===========\n\n.. currentmodule:: sphinx.project\n\n.. autoclass:: Project...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/nodes.rst.txt": {
+    "data": ".. _nodes:\n\nDoctree node classes added by Sphinx\n====================================\n\n.. module:: s...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/i18n.rst.txt": {
+    "data": ".. _i18n-api:\n\ni18n API\n========\n\n.. currentmodule:: sphinx.locale\n\n.. autofunction:: init\n\n.. autof...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/extdev/index.rst.txt": {
+    "data": ".. _dev-extensions:\n\nDeveloping extensions for Sphinx\n================================\n\nSince many p...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/theming.rst.txt": {
+    "data": ".. highlight:: python\n\n.. _html-themes:\n\nHTML Theming\n============\n\nSphinx provides a number of buil...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/markdown.rst.txt": {
+    "data": ".. highlight:: python\n\n.. _markdown:\n\n========\nMarkdown\n========\n\n`Markdown`__ is a lightweight mark...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/configuration.rst.txt": {
+    "data": ".. highlight:: python\n\n.. _build-config:\n\n=============\nConfiguration\n=============\n\n.. module:: con...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/installation.rst.txt": {
+    "data": "=================\nInstalling Sphinx\n=================\n\n.. contents::\n   :depth: 1\n   :local:\n   :bac...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/quickstart.rst.txt": {
+    "data": "===============\nGetting Started\n===============\n\nSphinx is a *documentation generator* or a tool tha...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/index.rst.txt": {
+    "data": "============\nUsing Sphinx\n============\n\nThis guide serves to demonstrate how one can get started wit...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/autodoc.rst.txt": {
+    "data": ".. highlight:: rest\n\n:mod:`sphinx.ext.autodoc` -- Include documentation from docstrings\n============...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/math.rst.txt": {
+    "data": ".. highlight:: rest\n\n.. _math-support:\n\nMath support for HTML outputs in Sphinx\n====================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/viewcode.rst.txt": {
+    "data": ":mod:`sphinx.ext.viewcode` -- Add links to highlighted source code\n=================================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/intersphinx.rst.txt": {
+    "data": ":mod:`sphinx.ext.intersphinx` -- Link to other projects' documentation\n=============================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/extlinks.rst.txt": {
+    "data": ":mod:`sphinx.ext.extlinks` -- Markup to shorten external links\n=====================================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/example_google.rst.txt": {
+    "data": ":orphan:\n\n.. _example_google:\n\nExample Google Style Python Docstrings\n==============================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/imgconverter.rst.txt": {
+    "data": ".. _sphinx.ext.imgconverter:\n\n:mod:`sphinx.ext.imgconverter` -- A reference image converter using Im...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/linkcode.rst.txt": {
+    "data": ":mod:`sphinx.ext.linkcode` -- Add external links to source code\n====================================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/todo.rst.txt": {
+    "data": ":mod:`sphinx.ext.todo` -- Support for todo items\n================================================\n\n....",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/githubpages.rst.txt": {
+    "data": ":mod:`sphinx.ext.githubpages` -- Publish HTML docs in GitHub Pages\n=================================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/graphviz.rst.txt": {
+    "data": ".. highlight:: rest\n\n:mod:`sphinx.ext.graphviz` -- Add Graphviz graphs\n=============================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/autosectionlabel.rst.txt": {
+    "data": ".. highlight:: rest\n\n:mod:`sphinx.ext.autosectionlabel` -- Allow reference sections using its title\n...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/doctest.rst.txt": {
+    "data": ".. highlight:: rest\n\n:mod:`sphinx.ext.doctest` -- Test snippets in the documentation\n===============...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/ifconfig.rst.txt": {
+    "data": ".. highlight:: rest\n\n:mod:`sphinx.ext.ifconfig` -- Include content based on configuration\n==========...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/inheritance.rst.txt": {
+    "data": ".. highlight:: rest\n\n:mod:`sphinx.ext.inheritance_diagram` -- Include inheritance diagrams\n=========...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/coverage.rst.txt": {
+    "data": ":mod:`sphinx.ext.coverage` -- Collect doc coverage stats\n===========================================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/autosummary.rst.txt": {
+    "data": ".. highlight:: rest\n\n:mod:`sphinx.ext.autosummary` -- Generate autodoc summaries\n===================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/example_numpy.rst.txt": {
+    "data": ":orphan:\n\n.. _example_numpy:\n\nExample NumPy Style Python Docstrings\n================================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/duration.rst.txt": {
+    "data": ":mod:`sphinx.ext.duration` -- Measure durations of Sphinx processing\n===============================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/napoleon.rst.txt": {
+    "data": ":mod:`sphinx.ext.napoleon` -- Support for NumPy and Google style docstrings\n========================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/extensions/index.rst.txt": {
+    "data": "==========\nExtensions\n==========\n\nSince many projects will need special features in their documentat...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/restructuredtext/domains.rst.txt": {
+    "data": ".. highlight:: rst\n\n=======\nDomains\n=======\n\n.. versionadded:: 1.0\n\nOriginally, Sphinx was conceived...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/restructuredtext/basics.rst.txt": {
+    "data": ".. highlight:: rst\n\n.. _rst-primer:\n\n=======================\nreStructuredText Primer\n===============...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/restructuredtext/directives.rst.txt": {
+    "data": ".. highlight:: rst\n\n==========\nDirectives\n==========\n\n:ref:`As previously discussed <rst-directives>...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/restructuredtext/field-lists.rst.txt": {
+    "data": ".. highlight:: rst\n\n===========\nField Lists\n===========\n\n:ref:`As previously discussed <rst-field-li...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/restructuredtext/roles.rst.txt": {
+    "data": ".. highlight:: rst\n\n=====\nRoles\n=====\n\nSphinx uses interpreted text roles to insert semantic markup ...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/restructuredtext/index.rst.txt": {
+    "data": ".. _rst-index:\n\n================\nreStructuredText\n================\n\nreStructuredText (reST) is the d...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/advanced/setuptools.rst.txt": {
+    "data": ".. _setuptools:\n\nSetuptools integration\n======================\n\nSphinx supports integration with set...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/advanced/intl.rst.txt": {
+    "data": ".. _intl:\n\nInternationalization\n====================\n\n.. versionadded:: 1.1\n\nComplementary to transl...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/advanced/websupport/searchadapters.rst.txt": {
+    "data": ".. _searchadapters:\n\n.. currentmodule:: sphinxcontrib.websupport.search\n\nSearch Adapters\n===========...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/advanced/websupport/api.rst.txt": {
+    "data": ".. _websupportapi:\n\n.. currentmodule:: sphinxcontrib.websupport\n\nThe WebSupport Class\n==============...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/advanced/websupport/quickstart.rst.txt": {
+    "data": ".. _websupportquickstart:\n\nWeb Support Quick Start\n=======================\n\nBuilding Documentation D...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/advanced/websupport/storagebackends.rst.txt": {
+    "data": ".. _storagebackends:\n\n.. currentmodule:: sphinxcontrib.websupport.storage\n\nStorage Backends\n========...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/advanced/websupport/index.rst.txt": {
+    "data": ".. _websupport:\n\nSphinx Web Support\n==================\n\n.. versionadded:: 1.1\n\nSphinx provides a Pyt...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/usage/builders/index.rst.txt": {
+    "data": ".. _builders:\n\n========\nBuilders\n========\n\n.. module:: sphinx.builders\n   :synopsis: Available built...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/internals/code-of-conduct.rst.txt": {
+    "data": ":tocdepth: 2\n\n.. _code_of_conduct:\n\n.. include:: ../../CODE_OF_CONDUCT\n...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/internals/contributing.rst.txt": {
+    "data": "======================\nContributing to Sphinx\n======================\n\nThere are many ways you can co...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/internals/release-process.rst.txt": {
+    "data": "========================\nSphinx's release process\n========================\n\nVersioning\n----------\n\nS...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/internals/authors.rst.txt": {
+    "data": ":tocdepth: 2\n\n.. _authors:\n\n==============\nSphinx authors\n==============\n\n.. include:: ../../AUTHORS...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/internals/organization.rst.txt": {
+    "data": "==================================\nOrganization of the Sphinx project\n==============================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/internals/index.rst.txt": {
+    "data": "====================\nContribute to Sphinx\n====================\n\nThis guide contains information abou...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/man/sphinx-quickstart.rst.txt": {
+    "data": "sphinx-quickstart\n=================\n\nSynopsis\n--------\n\n**sphinx-quickstart**\n\nDescription\n---------...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/man/sphinx-build.rst.txt": {
+    "data": "sphinx-build\n============\n\nSynopsis\n--------\n\n**sphinx-build** [*options*] <*sourcedir*> <*outputdir...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/man/sphinx-apidoc.rst.txt": {
+    "data": "sphinx-apidoc\n=============\n\nSynopsis\n--------\n\n**sphinx-apidoc** [*OPTIONS*] -o <*OUTPUT_PATH*> <*M...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/man/sphinx-autogen.rst.txt": {
+    "data": "sphinx-autogen\n==============\n\nSynopsis\n--------\n\n**sphinx-autogen** [*options*] <sourcefile> ...\n\nD...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/man/index.rst.txt": {
+    "data": "Command-Line Tools\n==================\n\nThese are the applications provided as part of Sphinx.\n\nCore ...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/theming.rst.txt": {
+    "data": "HTML theme development\n======================\n\n.. versionadded:: 0.6\n\n.. note::\n\n   This document pr...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/builders.rst.txt": {
+    "data": "Configuring builders\n====================\n\nDiscover builders by entry point\n------------------------...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/overview.rst.txt": {
+    "data": "Developing extensions overview\n==============================\n\nThis page contains general informatio...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/index.rst.txt": {
+    "data": "================\nExtending Sphinx\n================\n\nThis guide is aimed at giving a quick introducti...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/tutorials/todo.rst.txt": {
+    "data": "Developing a \"TODO\" extension\n=============================\n\nThe objective of this tutorial is to cr...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/tutorials/recipe.rst.txt": {
+    "data": "Developing a \"recipe\" extension\n===============================\n\nThe objective of this tutorial is t...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/tutorials/autodoc_ext.rst.txt": {
+    "data": ".. _autodoc_ext_tutorial:\n\nDeveloping autodoc extension for IntEnum\n================================...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/tutorials/helloworld.rst.txt": {
+    "data": "Developing a \"Hello world\" extension\n====================================\n\nThe objective of this tut...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/tutorials/index.rst.txt": {
+    "data": ".. _extension-tutorials-index:\n\nExtension tutorials\n===================\n\nRefer to the following tuto...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/development/tutorials/examples/README.rst.txt": {
+    "data": ":orphan:\n\nTutorial examples\n=================\n\nThis directory contains a number of examples used in ...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/tutorial/automatic-doc-generation.rst.txt": {
+    "data": "Automatic documentation generation from code\n============================================\n\nIn the :r...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/tutorial/narrative-documentation.rst.txt": {
+    "data": "Narrative documentation in Sphinx\n=================================\n\nStructuring your documentation ...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/tutorial/first-steps.rst.txt": {
+    "data": "First steps to document your project using Sphinx\n=================================================\n...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/tutorial/getting-started.rst.txt": {
+    "data": "Getting started\n===============\n\nSetting up your project and development environment\n---------------...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/tutorial/end.rst.txt": {
+    "data": "Where to go from here\n=====================\n\nThis tutorial covered the very first steps to create a ...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/tutorial/more-sphinx-customization.rst.txt": {
+    "data": "More Sphinx customization\n=========================\n\nThere are two main ways to customize your docum...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/tutorial/describing-code.rst.txt": {
+    "data": "Describing code in Sphinx\n=========================\n\nIn the :doc:`previous sections of the tutorial ...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/tutorial/deploying.rst.txt": {
+    "data": "Appendix: Deploying a Sphinx project online\n===========================================\n\nWhen you ar...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_sources/tutorial/index.rst.txt": {
+    "data": ".. _tutorial:\n\n==================================\nTutorial: Build your first project\n===============...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_images/scrolls.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAABsX0lEQVR4AeyThW0DQRBFtwN3d90kAtMymZltse7aSAmpxl9mttA4...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/lumache-py-function-full.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAzkAAAJlCAYAAAD5KTwhAAAgAElEQVR4nOzddVwU6R8H8AGDDkHALqzDQPkhdmNgdwA2CiqegSIG...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/bizstyle.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASUAAADICAIAAAAhqGDIAABpyklEQVR4AeyYA5AkSxCGX9jms3m2bdu2bdvasa21bXvPNsLnuzDf...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/haiku.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAACod0lEQVR4AexaA4BjSbfuZ9s21rbt3fHs2NPTM292rLZt27aVtJW2...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/nature.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAABvP0lEQVR4AeyUBW7EQBRDe4cyMzOeaJmZ7rMZKN+wL7FUZibJGv14...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/lumache-first-light.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAABAAAAAFeCAYAAAAboW2jAAAMlnpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjarZhtchw5DkT/...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/lumache-py-function.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAzcAAAGICAYAAAB80h5TAAAgAElEQVR4nOzddVwU6R8H8AGDBgUFu7AOA+GH2I2B3QHYKKh4BooY...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/more.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFDklEQVR4AcVVA5DkWhQ976XdO7bWtr377bW+bRW/bdu2bdtaj20b...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/classic.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAACbvklEQVR4AeyTVdIcMQyE/TMznmCZmZmZL5LnXCN02nzj3jAzVqlU...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/sphinxdoc.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAAB12ElEQVR4AeyVg3IEQRQA8/9fEtu2nbPv1rb5KlOKzXu9KKx3umsG...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/alabaster.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASwAAADICAIAAADdvUsCAAB+K0lEQVR4AezYhV9aex/A8eefu9133bPWYUzXc7O7Wye2TgHHwCIs...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/translation.svg": {
+    "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_images/traditional.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAAB9yUlEQVR4AexcBXgbSbLu5d0w2mFmZlwIM1yYwQ4nG8cOXJiZ0cwU...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/lumache-autosummary.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAw4AAAF4CAIAAAByxDnvAAAAA3NCSVQICAjb4U/gAAAAGXRFWHRTb2Z0d2FyZQBnbm9tZS1zY3Jl...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/lumache-furo.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAABCAAAAFeCAIAAADbnvkkAAAAA3NCSVQICAjb4U/gAAAAGXRFWHRTb2Z0d2FyZQBnbm9tZS1zY3Jl...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/pyramid.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAACXXElEQVR4AezTA3Al6RYA4F7bG4w90cwN773tq2QmTia2nSxirGLb...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_images/agogo.png": {
+    "data": "iVBORw0KGgoAAAANSUhEUgAAASkAAADICAIAAAA7lIBGAABkh0lEQVR4AeyWBa6bMRCEc80yY5h+ZshPZWZmPEFVfCQsCAvi5Bz9...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": true
+  },
+  "_downloads/f3a25b842d7256a8ce8f8cb6cc6160a9/example_numpy.py": {
+    "data": "\"\"\"Example NumPy style docstrings.\n\nThis module demonstrates documentation as specified by the `NumP...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_downloads/1db87291c47cdf2a82cc635794bf6c44/example_google.py": {
+    "data": "\"\"\"Example Google style docstrings.\n\nThis module demonstrates documentation as specified by the `Goo...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/builders.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/overview.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/theming.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/tutorials/autodoc_ext.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/tutorials/todo.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/tutorials/helloworld.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/tutorials/recipe.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/tutorials/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "development/tutorials/examples/README.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/docutils/parsers/rst.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinxcontrib/applehelp.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinxcontrib/htmlhelp.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinxcontrib/serializinghtml.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinxcontrib/qthelp.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinxcontrib/devhelp.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/directives.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/environment.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/events.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/transforms.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/config.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/locale.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/domains.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/application.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/errors.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/addnodes.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/project.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/parsers.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/ext/autodoc.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/ext/coverage.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/environment/collectors.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/domains/python.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/util/logging.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/util/docutils.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/xml.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/linkcheck.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/dirhtml.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/changes.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/html.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/text.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/manpage.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/epub3.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/texinfo.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/dummy.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/latex.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/gettext.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/builders/singlehtml.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/transforms/post_transforms.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "_modules/sphinx/transforms/post_transforms/images.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "tutorial/describing-code.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "tutorial/first-steps.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "tutorial/getting-started.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "tutorial/automatic-doc-generation.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "tutorial/deploying.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "tutorial/end.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "tutorial/more-sphinx-customization.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "tutorial/narrative-documentation.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  },
+  "tutorial/index.html": {
+    "data": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><script>/*\n * Monkeypatch URLSearchParams\n *\n * Sphinx docume...",
+    "mime_type": "application/octet-stream",
+    "base64encoded": false
+  }
+}

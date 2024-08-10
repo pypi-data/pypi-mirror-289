@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>/*
+ * Monkeypatch URLSearchParams
+ *
+ * Sphinx documents that use `searchtool.js` rely on passing information via
+ * GET parameters (aka search parameters). Unfortunately, this doesn't work
+ * in our approach due to the same origin policy, so we have to get ...
+ * creative.
+ *
+ * Here, we patch the `URLSearchParams` class so it returns the information
+ * stored in `window.global_context.get_parameters`.
+ *
+ */
+
+const originalGet = URLSearchParams.prototype.get;
+
+var myGet = function (arg) {
+    const originalResult = originalGet.apply(this, [arg]);
+    // If searchtools.js of sphinx is used
+    if (
+        window.global_context.get_parameters &&
+        (window.location.search === "") &&
+        (Array.from(this.entries()).length == 0)
+    ) {
+        const params = new URLSearchParams('?' + window.global_context.get_parameters);
+        const result = params.get(arg);
+        // console.log("Return virtual get parameter:", arg, result);
+        return result;
+    } else {
+        return originalResult;
+    }
+};
+
+URLSearchParams.prototype.get = myGet;
+
+/*
+ * Monkeypatch fetch
+ */
+
+const { fetch: originalFetch } = window;
+
+window.fetch = async (...args) => {
+    let [resource, config ] = args;
+    var path = normalize_path(resource);
+    var response;
+    if (is_virtual(path)) {
+        var data = retrieve_file(path);
+        response = new Response(data);
+
+    } else {
+        response = await originalFetch(resource, config);
+    }
+    return response;
+};
+//# sourceURL=inject_pre.js</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>Describing code in Sphinx — Sphinx documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/basic.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx13.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<link href="https://www.sphinx-doc.org/en/master/tutorial/describing-code.html" rel="canonical"/>
+<link href="../_static/opensearch.xml" rel="search" title="Search within Sphinx documentation" type="application/opensearchdescription+xml"/>
+<link href="../_static/favicon.svg" rel="shortcut icon"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="automatic-doc-generation.html" rel="next" title="Automatic documentation generation from code"/>
+<link href="narrative-documentation.html" rel="prev" title="Narrative documentation in Sphinx"/>
+</head><body>
+<div class="pageheader">
+<a href="../index.html">
+<img alt="SPHINX" src="../_static/sphinxheader.png"/>
+</a>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li><a href="../index.html">Documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="index.html">Tutorial: Build your first project</a> »</li>
+<li class="nav-item nav-item-this"><a href="">Describing code in Sphinx</a></li>
+</ul>
+</div>
+<div class="document">
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div id="searchbox" role="search" style="display: none">
+<h3 id="searchlabel">Quick search</h3>
+<div class="searchformwrapper">
+<form action="../search.html" class="search" method="get">
+<input aria-labelledby="searchlabel" autocapitalize="off" autocomplete="off" autocorrect="off" name="q" spellcheck="false" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<div class="sphinxsidebar-navigation__contents">
+<h3>On this page</h3>
+<ul>
+<li><a class="reference internal" href="#">Describing code in Sphinx</a><ul>
+<li><a class="reference internal" href="#python">Python</a><ul>
+<li><a class="reference internal" href="#documenting-python-objects">Documenting Python objects</a></li>
+<li><a class="reference internal" href="#cross-referencing-python-objects">Cross-referencing Python objects</a></li>
+<li><a class="reference internal" href="#including-doctests-in-your-documentation">Including doctests in your documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-languages-c-c-others">Other languages (C, C++, others)</a><ul>
+<li><a class="reference internal" href="#documenting-and-cross-referencing-objects">Documenting and cross-referencing objects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sphinxsidebar-navigation__pages">
+<h3>Site navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installing Sphinx</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorial: Build your first project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps.html">First steps to document your project using Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more-sphinx-customization.html">More Sphinx customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="narrative-documentation.html">Narrative documentation in Sphinx</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Describing code in Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatic-doc-generation.html">Automatic documentation generation from code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploying.html">Appendix: Deploying a Sphinx project online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="end.html">Where to go from here</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Using Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Extending Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templating.html">Templating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex.html">LaTeX customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extdev/index.html">Developing extensions for Sphinx</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Get support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internals/index.html">Contribute to Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Sphinx FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../man/index.html">Command-Line Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Projects using Sphinx</a></li>
+</ul>
+</div>
+</div>
+<div class="body" role="main">
+<section id="describing-code-in-sphinx">
+<h1>Describing code in Sphinx<a class="headerlink" href="#describing-code-in-sphinx" title="Permalink to this heading">¶</a></h1>
+<p>In the <a class="reference internal" href="index.html"><span class="doc">previous sections of the tutorial</span></a> you can read
+how to write narrative or prose documentation in Sphinx. In this section you
+will describe code objects instead.</p>
+<p>Sphinx supports documenting code objects in several languages, namely Python,
+C, C++, JavaScript, and reStructuredText. Each of them can be documented using
+a series of directives and roles grouped by
+<a class="reference internal" href="../usage/restructuredtext/domains.html"><span class="doc">domain</span></a>. For the remainder of the
+tutorial you will use the Python domain, but all the concepts seen in this
+section apply for the other domains as well.</p>
+<section id="python">
+<span id="tutorial-describing-objects"></span><h2>Python<a class="headerlink" href="#python" title="Permalink to this heading">¶</a></h2>
+<section id="documenting-python-objects">
+<h3>Documenting Python objects<a class="headerlink" href="#documenting-python-objects" title="Permalink to this heading">¶</a></h3>
+<p>Sphinx offers several roles and directives to document Python objects,
+all grouped together in <a class="reference internal" href="../usage/restructuredtext/domains.html#python-domain"><span class="std std-ref">the Python domain</span></a>. For example,
+you can use the <a class="reference internal" href="../usage/restructuredtext/domains.html#directive-py-function" title="py:function directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:function</span></code></a> directive to document a Python function,
+as follows:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">docs/source/usage.rst</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Creating recipes</span>
+<span class="gh">----------------</span>
+
+To retrieve a list of random ingredients,
+you can use the <span class="s">``lumache.get_random_ingredients()``</span> function:
+
+<span class="p">..</span> <span class="ow">py:function</span><span class="p">::</span> lumache.get_random_ingredients(kind=None)
+
+   Return a list of random ingredients as strings.
+
+   <span class="nc">:param kind:</span> Optional "kind" of ingredients.
+   <span class="nc">:type kind:</span> list[str] or None
+   <span class="nc">:return:</span> The ingredients list.
+   <span class="nc">:rtype:</span> list[str]
+</pre></div>
+</div>
+</div>
+<p>Which will render like this:</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/lumache-py-function.png"><img alt="HTML result of documenting a Python function in Sphinx" src="../_images/lumache-py-function.png" style="width: 80%;"/></a>
+<figcaption>
+<p><span class="caption-text">The rendered result of documenting a Python function in Sphinx</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Notice several things:</p>
+<ul class="simple">
+<li><p>Sphinx parsed the argument of the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:function</span></code> directive and
+highlighted the module, the function name, and the parameters appropriately.</p></li>
+<li><p>The directive content includes a one-line description of the function,
+as well as an <a class="reference internal" href="../usage/restructuredtext/domains.html#info-field-lists"><span class="std std-ref">info field list</span></a> containing the function
+parameter, its expected type, the return value, and the return type.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">py:</span></code> prefix specifies the <a class="reference internal" href="../glossary.html#term-domain"><span class="xref std std-term">domain</span></a>. You may configure the
+default domain so you can omit the prefix, either globally using the
+<a class="reference internal" href="../usage/configuration.html#confval-primary_domain"><code class="xref std std-confval docutils literal notranslate"><span class="pre">primary_domain</span></code></a> configuration, or use the
+<a class="reference internal" href="../usage/restructuredtext/domains.html#directive-default-domain" title="default-domain directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">default-domain</span></code></a> directive to change it from the point it is called
+until the end of the file.
+For example, if you set it to <code class="docutils literal notranslate"><span class="pre">py</span></code> (the default), you can write
+<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">function::</span></code> directly.</p>
+</div>
+</section>
+<section id="cross-referencing-python-objects">
+<h3>Cross-referencing Python objects<a class="headerlink" href="#cross-referencing-python-objects" title="Permalink to this heading">¶</a></h3>
+<p>By default, most of these directives generate entities that can be
+cross-referenced from any part of the documentation by using
+<a class="reference internal" href="../usage/restructuredtext/domains.html#python-roles"><span class="std std-ref">a corresponding role</span></a>. For the case of functions,
+you can use <a class="reference internal" href="../usage/restructuredtext/domains.html#role-py-func" title="py:func role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">py:func</span></code></a> for that, as follows:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">docs/source/usage.rst</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The <span class="s">``kind``</span> parameter should be either <span class="s">``"meat"``</span>, <span class="s">``"fish"``</span>,
+or <span class="s">``"veggies"``</span>. Otherwise, <span class="na">:py:func:</span><span class="nv">`lumache.get_random_ingredients`</span>
+will raise an exception.
+</pre></div>
+</div>
+</div>
+<p>When generating code documentation, Sphinx will generate a
+cross-reference automatically just by using the name of the object,
+without you having to explicitly use a role for that. For example, you
+can describe the custom exception raised by the function using the
+<a class="reference internal" href="../usage/restructuredtext/domains.html#directive-py-exception" title="py:exception directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:exception</span></code></a> directive:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">docs/source/usage.rst</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">py:exception</span><span class="p">::</span> lumache.InvalidKindError
+
+   Raised if the kind is invalid.
+</pre></div>
+</div>
+</div>
+<p>Then, add this exception to the original description of the function:</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">docs/source/usage.rst</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">py:function</span><span class="p">::</span> lumache.get_random_ingredients(kind=None)
+
+   Return a list of random ingredients as strings.
+
+   <span class="nc">:param kind:</span> Optional "kind" of ingredients.
+   <span class="nc">:type kind:</span> list[str] or None
+<span class="hll">   <span class="nc">:raise lumache.InvalidKindError:</span> If the kind is invalid.
+</span>   <span class="nc">:return:</span> The ingredients list.
+   <span class="nc">:rtype:</span> list[str]
+</pre></div>
+</div>
+</div>
+<p>And finally, this is how the result would look:</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/lumache-py-function-full.png"><img alt="HTML result of documenting a Python function in Sphinx with cross-references" src="../_images/lumache-py-function-full.png" style="width: 80%;"/></a>
+<figcaption>
+<p><span class="caption-text">HTML result of documenting a Python function in Sphinx with cross-references</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Beautiful, isn’t it?</p>
+</section>
+<section id="including-doctests-in-your-documentation">
+<h3>Including doctests in your documentation<a class="headerlink" href="#including-doctests-in-your-documentation" title="Permalink to this heading">¶</a></h3>
+<p>Since you are now describing code from a Python library, it will become useful
+to keep both the documentation and the code as synchronized as possible.
+One of the ways to do that in Sphinx is to include code snippets in the
+documentation, called <em>doctests</em>, that are executed when the documentation is
+built.</p>
+<p>To demonstrate doctests and other Sphinx features covered in this tutorial,
+Sphinx will need to be able to import the code. To achieve that, write this
+at the beginning of <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">docs/source/conf.py</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># If extensions (or modules to document with autodoc) are in another directory,</span>
+<span class="c1"># add these directories to sys.path here.</span>
+<span class="hll"><span class="kn">import</span> <span class="nn">pathlib</span>
+</span><span class="hll"><span class="kn">import</span> <span class="nn">sys</span>
+</span><span class="hll"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">as_posix</span><span class="p">())</span>
+</span></pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An alternative to changing the <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.path" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code></a> variable is to create a
+<code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file and make the code installable,
+so it behaves like any other Python library. However, the <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>
+approach is simpler.</p>
+</div>
+<p>Then, before adding doctests to your documentation, enable the
+<a class="reference internal" href="../usage/extensions/doctest.html"><span class="doc">doctest</span></a> extension in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">docs/source/conf.py</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'sphinx.ext.duration'</span><span class="p">,</span>
+<span class="hll">    <span class="s1">'sphinx.ext.doctest'</span><span class="p">,</span>
+</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>Next, write a doctest block as follows:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">docs/source/usage.rst</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; import lumache
+&gt;&gt;&gt; lumache.get_random_ingredients()
+['shells', 'gorgonzola', 'parsley']
+</pre></div>
+</div>
+</div>
+<p>Doctests include the Python instructions to be run preceded by <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>,
+the standard Python interpreter prompt, as well as the expected output
+of each instruction. This way, Sphinx can check whether the actual output
+matches the expected one.</p>
+<p>To observe how a doctest failure looks like (rather than a code error as
+above), let’s write the return value incorrectly first. Therefore, add a
+function <code class="docutils literal notranslate"><span class="pre">get_random_ingredients</span></code> like this:</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">lumache.py</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_random_ingredients</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s2">"eggs"</span><span class="p">,</span> <span class="s2">"bacon"</span><span class="p">,</span> <span class="s2">"spam"</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>You can now run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code> to execute the doctests of your documentation.
+Initially this will display an error, since the actual code does not behave
+as specified:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">$ </span>make doctest
+<span class="go">Running Sphinx v4.2.0</span>
+<span class="go">loading pickled environment... done</span>
+<span class="go">...</span>
+<span class="go">running tests...</span>
+
+<span class="go">Document: usage</span>
+<span class="go">---------------</span>
+<span class="go">**********************************************************************</span>
+<span class="go">File "usage.rst", line 44, in default</span>
+<span class="go">Failed example:</span>
+<span class="go">    lumache.get_random_ingredients()</span>
+<span class="go">Expected:</span>
+<span class="go">    ['shells', 'gorgonzola', 'parsley']</span>
+<span class="go">Got:</span>
+<span class="go">    ['eggs', 'bacon', 'spam']</span>
+<span class="go">**********************************************************************</span>
+<span class="go">...</span>
+<span class="go">make: *** [Makefile:20: doctest] Error 1</span>
+</pre></div>
+</div>
+<p>As you can see, doctest reports the expected and the actual results,
+for easy examination. It is now time to fix the function:</p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">lumache.py</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_random_ingredients</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="hll">    <span class="k">return</span> <span class="p">[</span><span class="s2">"shells"</span><span class="p">,</span> <span class="s2">"gorgonzola"</span><span class="p">,</span> <span class="s2">"parsley"</span><span class="p">]</span>
+</span></pre></div>
+</div>
+</div>
+<p>And finally, <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test</span></code> reports success!</p>
+<p>For big projects though, this manual approach can become a bit tedious.
+In the next section, you will see <a class="reference internal" href="automatic-doc-generation.html"><span class="doc">how to automate the
+process</span></a>.</p>
+</section>
+</section>
+<section id="other-languages-c-c-others">
+<h2>Other languages (C, C++, others)<a class="headerlink" href="#other-languages-c-c-others" title="Permalink to this heading">¶</a></h2>
+<section id="documenting-and-cross-referencing-objects">
+<h3>Documenting and cross-referencing objects<a class="headerlink" href="#documenting-and-cross-referencing-objects" title="Permalink to this heading">¶</a></h3>
+<p>Sphinx also supports documenting and cross-referencing objects written in
+other programming languages. There are four additional built-in domains:
+C, C++, JavaScript, and reStructuredText. Third-party extensions may
+define domains for more languages, such as</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sphinx-fortran.readthedocs.io">Fortran</a>,</p></li>
+<li><p><a class="reference external" href="http://bastikr.github.io/sphinx-julia">Julia</a>, or</p></li>
+<li><p><a class="reference external" href="https://github.com/markstory/sphinxcontrib-phpdomain">PHP</a>.</p></li>
+</ul>
+<p>For example, to document a C++ type definition, you would use the built-in
+<a class="reference internal" href="../usage/restructuredtext/domains.html#directive-cpp-type" title="cpp:type directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">cpp:type</span></code></a> directive, as follows:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">cpp:type</span><span class="p">::</span> std::vector&lt;int&gt; CustomList
+
+   A typedef-like declaration of a type.
+</pre></div>
+</div>
+<p>Which would give the following result:</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv410CustomList">
+<span id="_CPPv310CustomList"></span><span id="_CPPv210CustomList"></span><span id="CustomList"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CustomList</span></span></span><a class="headerlink" href="#_CPPv410CustomList" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>A typedef-like declaration of a type.</p>
+</dd></dl>
+<p>All such directives then generate references that can be
+cross-referenced by using the corresponding role. For example, to reference
+the previous type definition, you can use the <a class="reference internal" href="../usage/restructuredtext/domains.html#role-cpp-type" title="cpp:type role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">cpp:type</span></code></a> role
+as follows:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Cross reference to <span class="na">:cpp:type:</span><span class="nv">`CustomList`</span>.
+</pre></div>
+</div>
+<p>Which would produce a hyperlink to the previous definition: <a class="reference internal" href="#_CPPv410CustomList" title="CustomList"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">CustomList</span></code></a>.</p>
+</section>
+</section>
+</section>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+  © <a href="../copyright.html">Copyright</a> 2007-2022, the Sphinx developers.
+  Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+</div>
+<script>var embed_css = function() {
+    Array.from(document.querySelectorAll("link")).forEach( link => {
+        if (link.getAttribute('rel') == 'stylesheet') {
+            const style = document.createElement("style");
+            var href = link.getAttribute('href');
+            let [path, get_parameters, anchor] = split_url(href);
+            path = normalize_path(path);
+            style.innerText = retrieve_file(path);
+            link.replaceWith(style);
+        };
+    });
+};
+
+
+var embed_js = function() {
+    Array.from(document.querySelectorAll("script")).forEach( oldScript => {
+        const newScript = document.createElement("script");
+        Array.from(oldScript.attributes).forEach( attr => {
+            newScript.setAttribute(attr.name, attr.value);
+        });
+        try {
+            if (newScript.hasAttribute('src') && is_virtual(newScript.getAttribute('src'))) {
+                var src = newScript.getAttribute('src');
+                let [path, get_parameters, anchor] = split_url(src);
+                path = normalize_path(path);
+                var src = retrieve_file(path) + ' //# sourceMap=' + path;
+                newScript.appendChild(document.createTextNode(src));
+                newScript.removeAttribute('src');
+                oldScript.parentNode.replaceChild(newScript, oldScript);
+            }
+        } catch (e) {
+            // Make sure all scripts are loaded
+            console.error("Caught error in " + oldScript.getAttribute("src"), e);
+        }
+    });
+};
+
+
+var split_url = function(url) {
+    // Return a list of three elements: path, GET parameters, anchor
+    var anchor = url.split('#')[1] || "";
+    var get_parameters = url.split('#')[0].split('?')[1] || "";
+    var path = url.split('#')[0];
+    path = path.split('?')[0];
+    let result = [path, get_parameters, anchor];
+    // console.log("Split URL", url, result);
+    return result;
+}
+
+
+var virtual_click = function(evnt) {
+    // Handle GET parameters and anchors
+    // console.log("Virtual click", evnt);
+
+    var el = evnt.currentTarget;
+    var name = el.tagName.toLowerCase();
+
+    if (name == 'a') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('href'));
+    } else if (name == 'form') {
+        var [path, get_parameters, anchor] = split_url(el.getAttribute('action'));
+        const formData = new FormData(el);
+        get_parameters = new URLSearchParams(formData).toString();
+    } else {
+        console.error("Invalid element", el);
+    }
+
+    path = normalize_path(path);
+
+    window.parent.postMessage({
+        action: "virtual_click",
+        argument: {
+            path: path,
+            get_parameters: get_parameters,
+            anchor: anchor,
+        }
+    }, '*');
+    evnt.preventDefault();
+    evnt.stopPropagation();
+    return false;
+};
+
+var fix_links = function() {
+    Array.from(document.querySelectorAll("a")).forEach( a => {
+        fix_link(a);
+    });
+};
+
+var fix_link = function(a) {
+    if (is_virtual(a.getAttribute('href'))) {
+        a.addEventListener('click', virtual_click);
+    } else if (a.getAttribute('href').startsWith('#')) {
+        a.setAttribute('href', "about:srcdoc" + a.getAttribute('href'))
+    } else {
+        // External links should open in a new tab. Browsers block links to
+        // sites of different origin within an iframe for security reasons.
+        a.setAttribute('target', "_blank");
+    }
+};
+
+var fix_form = function(form) {
+    var href = form.getAttribute('action');
+    if (is_virtual(href) && form.getAttribute('method').toLowerCase() == 'get') {
+        form.addEventListener('submit', virtual_click);
+    }
+};
+
+
+var fix_forms = function() {
+    Array.from(document.querySelectorAll("form")).forEach( form => {
+        fix_form(form);
+    });
+};
+
+
+var embed_img = function(img) {
+    if (img.hasAttribute('src')) {
+        const src = img.getAttribute('src');
+        if (is_virtual(src)) {
+            var path = normalize_path(src);
+            const file = retrieve_file(path);
+            const mime_type = window.global_context.file_tree[path].mime_type;
+            if (mime_type == 'image/svg+xml') {
+                img.setAttribute('src', "data:image/svg+xml;charset=utf-8;base64, " + btoa(file));
+            } else {
+                img.setAttribute('src', `data:${mime_type};base64, ${file}`);
+            }
+        };
+    };
+};
+
+var embed_imgs = function() {
+    Array.from(document.querySelectorAll("img")).forEach( img => {
+        embed_img(img);
+    });
+};
+
+var is_virtual = function(url) {
+    // Return true if the url should be retrieved from the virtual file tree
+    var _url = url.toString().toLowerCase();
+    return (! (
+        _url == "" ||
+        _url[0] == "#" ||
+        _url.startsWith('https://') ||
+        _url.startsWith('http://') ||
+        _url.startsWith('data:') ||
+        _url.startsWith('blob:')
+    ));
+};
+
+var retrieve_file = function(path) {
+    // console.log("Retrieving file: " + path);
+    var file_tree = window.global_context.file_tree;
+    var file = file_tree[path];
+    if (!file) {
+        console.warn("File not found: " + path);
+        return "";
+    } else {
+        return file.data;
+    }
+};
+
+var normalize_path = function(path) {
+    // make relative paths absolute in context of our virtual file tree
+
+    while (path && path[0] == '/') {
+        path = path.substr(1);
+    }
+
+    var result = window.global_context.current_path;
+    result = result.split('/');
+    result.pop();
+    result = result.concat(path.split('/'));
+
+    // resolve relative directories
+    var array = [];
+    Array.from(result).forEach( component => {
+        if (component == '..') {
+            if (array) {
+                array.pop();
+            }
+        } else if (component == '.') {
+        } else {
+            if (component) { array.push(component); }
+        }
+    });
+
+    result = array.join('/');
+    // console.log(`Normalized path: ${path} -> ${result} (@${window.global_context.current_path})`);
+    return result;
+};
+
+
+var fix_document = function() {
+    embed_js(); // This might change the DOM, so do this first
+    monkey_patch();
+    embed_css();
+    embed_imgs();
+    fix_links();
+    fix_forms();
+};
+
+
+var on_set_data = function(argument) {
+    window.global_context = argument;
+    console.log("Received data from parent", window.global_context);
+    // dynamically fix elements on this page
+    try {
+        fix_document();
+        // Trigger DOMContentLoaded again, some scripts that have just
+        // been executed expect it.
+        window.document.dispatchEvent(new Event("DOMContentLoaded", {
+            bubbles: true,
+            cancelable: true
+        }));
+    } finally {
+        observer.observe(window.document.body, {subtree: true, childList: true});
+        window.parent.postMessage({
+            action: "show_iframe",
+            argument: "",
+        }, '*');
+    }
+}
+
+
+var on_scroll_to_anchor = function(argument) {
+    if (window.global_context.anchor) {
+        document.location.replace("about:srcdoc#" + window.global_context.anchor);
+    }
+}
+
+
+const observer = new MutationObserver((mutationList) => {
+    // console.log("Fix mutated elements...", mutationList);
+    mutationList.forEach((mutation) => {
+        if (mutation.type == 'childList') {
+            Array.from(mutation.target.querySelectorAll("a")).forEach( a => {
+                fix_link(a);
+            });
+            Array.from(mutation.target.querySelectorAll("img")).forEach( img => {
+                embed_img(img);
+            });
+            Array.from(mutation.target.querySelectorAll("form")).forEach( form => {
+                fix_form(form);
+            });
+        }
+    });
+});
+
+
+var monkey_patch = function() {
+    if (typeof jQuery === 'undefined') {return;} // Only for jQuery at the moment
+    /**
+     * Monkey patch getQueryParameters
+     * This function is defined in Sphinx' (v4) doctools.js and incompatible with our
+     * approach.
+     * This is a copy with effectively only the third line changed.
+     * See: https://github.com/sphinx-doc/sphinx/blob/2329fdef8c20c6c75194f5d842b8f62ebad5c79d/sphinx/themes/basic/static/doctools.js#L54
+     */
+    jQuery._getQueryParameters = jQuery.getQueryParameters;
+    jQuery.getQueryParameters = function(s) {
+      if (typeof s === 'undefined')
+        s = '?' + window.global_context.get_parameters;
+      return jQuery._getQueryParameters(s);
+    };
+
+    /**
+     * Monkey patch jQuery.ajax
+     * Only settings.url and settings.complete are supported for virtual
+     * URLs.
+     */
+    jQuery._ajax = jQuery.ajax;
+    jQuery.ajax = function(settings) {
+        url = normalize_path(settings.url);
+        if (is_virtual(url)) {
+            var result;
+            var data;
+            data = retrieve_file(url);
+            result = settings.complete({responseText: data}, "");
+            return; // Return value not actually needed in searchtools.js
+        } else {
+            return jQuery.ajax(settings);
+        };
+    };
+}
+
+
+var on_load = function() {
+    // Set up message listener
+    window.addEventListener("message", (evnt) => {
+        console.log("Received message in iframe", evnt);
+        if (evnt.data.action == 'set_data') {
+            on_set_data(evnt.data.argument);
+        } else if (evnt.data.action == 'scroll_to_anchor') {
+            on_scroll_to_anchor(evnt.data.argument);
+        }
+    }, false);
+
+    // Set parent window title and trigger data transmission
+    var favicon = window.document.querySelector("link[rel*='icon']");
+    if (favicon) { favicon = favicon.getAttribute('href'); }
+    var title = window.document.querySelector('head>title');
+    if (title) { title = title.innerText; }
+
+    window.parent.postMessage({
+        action: "set_title",
+        argument: {
+            title: title,
+            favicon: favicon
+        }
+    }, '*');
+
+};
+
+
+window.addEventListener('load', on_load);
+//# sourceURL=inject_post.js</script></body>
+</html>
