@@ -1,0 +1,17 @@
+BL_Python/platform/__init__.py,sha256=DDOf0ODRq51cxAb1WS8b4pPVJ4JxgmTgVo6a7Rh7mIM,27
+BL_Python/platform/dependency_injection.py,sha256=6x-wKJsl_ugPnyLvbnE3vN8pvaiuAln46Qb_c0cP2uI,2538
+BL_Python/platform/feature_flag/__init__.py,sha256=6rM2TB84C-c5qbZwfjTkeFRN-iGfCKRQ_WzfxoPPZ8s,257
+BL_Python/platform/feature_flag/caching_feature_flag_router.py,sha256=td6KFNhT9Vp6co_Mt8scDw6xCEwGb61-XDMG4wjhU88,2930
+BL_Python/platform/feature_flag/db_feature_flag_router.py,sha256=2xgMlvzXrYKoWn0FAm-yJeJac2WkpnB63BxciizUC6U,4941
+BL_Python/platform/feature_flag/feature_flag_router.py,sha256=u53KGGmgqXPyzzGdd_XQXl-qd1S1tIy1WXlXqGCWoD0,1562
+BL_Python/platform/identity/__init__.py,sha256=_WnVFnD51Pwt5Qm50gZhzlT1vJWDJJJOPgyYYLs3Zqk,4237
+BL_Python/platform/identity/user_loader.py,sha256=BMz_yz7uv6TyY7mWGPkkvesVLu-cLlht5BMYf4M85II,7311
+test/unit/feature_flags/test_caching_feature_flag_router.py,sha256=84bXxT04xsGrDu0jg_q5AuAUM45IJD6V8Bu_EeNi-mU,6816
+test/unit/feature_flags/test_db_feature_flag_router.py,sha256=u3UExOpxlXHUD600kzA_fKHCK7iEq5fF6lDPXxs3Zms,8739
+test/unit/feature_flags/test_feature_flag_router.py,sha256=KIlhnuKrID5Uwy7wjjOOqDQ3dMStjAuXIwKv6LF_nss,2553
+test/unit/identity/test_loader.py,sha256=6iqwjI8AbJwpDd6fy_ODSaxWBMLWYreZeGQdQRCBt3I,1131
+BL_Python.platform-0.3.0.dist-info/LICENSE.md,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+BL_Python.platform-0.3.0.dist-info/METADATA,sha256=J7JBE6OmEIuehHgUGenDEyLM6RQhnWC1PWMvHMme4tg,1437
+BL_Python.platform-0.3.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+BL_Python.platform-0.3.0.dist-info/top_level.txt,sha256=KMwegjDHCijOOzVHpIoLBo7FvB-whCAUCSOE-Z-o_60,15
+BL_Python.platform-0.3.0.dist-info/RECORD,,
