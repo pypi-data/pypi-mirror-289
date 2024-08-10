@@ -1,0 +1,9 @@
+maplib-0.12.8.dist-info/METADATA,sha256=EG_2VH8cT0UMk-ay7_YNH6NJC-5fFSktCsrpQBu7Cro,8903
+maplib-0.12.8.dist-info/WHEEL,sha256=88DykRyub23IQeCxphAc1eW7PZo2npnb8m2maKWpwLI,95
+maplib-0.12.8.dist-info/license_files/LICENSE,sha256=8f_rikNX2RHmVhT1CFq1M2itL6kTpawNjNTHUFCB870,11661
+maplib/.gitignore,sha256=hb4XJYR9dELcPt93wdvgfiU74uDvErV0lg_e6gMdALI,4
+maplib/maplib.pyi,sha256=EDLV2fm3irS61-458tJEWHMhCwy-gj3abq7Cm0VXzMw,21046
+maplib/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maplib/__init__.py,sha256=RfyQEzEqfyJchdffrT3jjAQSR0MSSRzMN0-FFpr_t0Y,21
+maplib/maplib.cp311-win_amd64.pyd,sha256=l7uLhIdIWcS7_t4xybj0ylKatCADsBhLX0zwz0VW79Y,65792000
+maplib-0.12.8.dist-info/RECORD,,
