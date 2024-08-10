@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+yt_rss_dl.egg-info/PKG-INFO
+yt_rss_dl.egg-info/SOURCES.txt
+yt_rss_dl.egg-info/dependency_links.txt
+yt_rss_dl.egg-info/entry_points.txt
+yt_rss_dl.egg-info/requires.txt
+yt_rss_dl.egg-info/top_level.txt
+ytrssdl/__init__.py
+ytrssdl/main.py
