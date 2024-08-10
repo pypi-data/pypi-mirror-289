@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+stc8usb/stc8usb.py
+stc8usb.egg-info/PKG-INFO
+stc8usb.egg-info/SOURCES.txt
+stc8usb.egg-info/dependency_links.txt
+stc8usb.egg-info/entry_points.txt
+stc8usb.egg-info/requires.txt
+stc8usb.egg-info/top_level.txt
