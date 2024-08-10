@@ -1,0 +1,18 @@
+IDENTIFIER
+STRING
+NUMBER
+ASSIGN                  ':='
+EQEQUAL                 '=='
+LPAR                    '('
+RPAR                    ')'
+LSQB                    '['
+RSQB                    ']'
+LBRACE                  '{'
+RBRACE                  '}'
+PLUS                    '+'
+MINUS                   '-'
+STAR                    '*'
+SLASH                   '/'
+EQUAL                   '='
+SEMI                    ";"
+ATTR                    "->"
