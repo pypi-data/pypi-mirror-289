@@ -1,0 +1,18 @@
+.issue {
+  padding: 10px 0 10px 0;
+
+  .title {
+    font-weight: 700;
+
+    icon {
+      margin-right: 5px;
+    }
+  }
+  .metadata {
+    font-size: smaller;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}
