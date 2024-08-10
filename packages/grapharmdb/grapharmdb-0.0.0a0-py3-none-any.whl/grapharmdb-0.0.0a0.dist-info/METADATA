@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: grapharmdb
+Version: 0.0.0a0
+Home-page: https://www.example.com
+Author: Hoa Nguyen
+Author-email: ntthoa.uphcm@gmail.com
+Classifier: Development Status :: 1 - Planning
+Description-Content-Type: text/markdown
+
+# Register a package on PyPI
+
+* Modify package name in [setup.py](./setup.py)
+* Build and upload the package:
+  * `python setup.py bdist_wheel`
+  * `twine upload dist/* --verbose`
