@@ -1,0 +1,15 @@
+.DS_Store
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+data/.DS_Store
+data/penguins.csv
+src/.DS_Store
+src/__init__.py
+src/nominal.py
+src/utils.py
+src/nominal.egg-info/PKG-INFO
+src/nominal.egg-info/SOURCES.txt
+src/nominal.egg-info/dependency_links.txt
+src/nominal.egg-info/top_level.txt
