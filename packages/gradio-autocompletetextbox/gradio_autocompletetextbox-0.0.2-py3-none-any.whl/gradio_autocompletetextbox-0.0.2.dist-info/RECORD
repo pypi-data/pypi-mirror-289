@@ -1,0 +1,11 @@
+gradio_autocompletetextbox/__init__.py,sha256=K44-NPLYZct1ea2TmE8RLrN0XsjlKG03WtrXaAwiLR0,139
+gradio_autocompletetextbox/autocompletetextbox.py,sha256=GNZp-LUBIzRMgMGkmwYlcGdZm_vRgi1I4q3etiFJHmQ,5323
+gradio_autocompletetextbox/autocompletetextbox.pyi,sha256=e4vmBLkBOY070SCGYnOcaQiL0lUu3e10ns-lv7z3T0I,20966
+gradio_autocompletetextbox/datamodel.py,sha256=vXuUeVj-TEeqAh4XvqyKmFr-hxIKtF9SDvYuIFpQX3k,127
+gradio_autocompletetextbox/templates/component/index.js,sha256=VdaXac--cTy793CKqNASRXDLnOqgk1VgQ0pxFZyAojk,106877
+gradio_autocompletetextbox/templates/component/style.css,sha256=c9RaJ0bLyoB-_TybuL-rCNUP_mE-6uYIUKV5JlS05vY,15438
+gradio_autocompletetextbox/templates/example/index.js,sha256=OS9nWHtrMBcPa-vuGta3RE8gDLSp0_43pHlFTZPPASA,2315
+gradio_autocompletetextbox/templates/example/style.css,sha256=-DHk5asz3SWFNLQlCnYuMN4b4gTf_srMmlu5x_xU_Pw,147
+gradio_autocompletetextbox-0.0.2.dist-info/METADATA,sha256=DscvJ8y3R-wa6k1MXdu0eJpymtrVI-WY08VrI51lhH0,9634
+gradio_autocompletetextbox-0.0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+gradio_autocompletetextbox-0.0.2.dist-info/RECORD,,
