@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Brunfelsia_australis/__init__.py
+Brunfelsia_australis/module.py
+Brunfelsia_australis.egg-info/PKG-INFO
+Brunfelsia_australis.egg-info/SOURCES.txt
+Brunfelsia_australis.egg-info/dependency_links.txt
+Brunfelsia_australis.egg-info/requires.txt
+Brunfelsia_australis.egg-info/top_level.txt
+tests/test_module.py
