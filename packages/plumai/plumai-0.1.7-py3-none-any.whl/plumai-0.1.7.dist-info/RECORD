@@ -1,0 +1,13 @@
+plumai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plumai/app.py,sha256=mjRB3pPEGlc7s9BJfeT1hBzlKex5QWhjM4n91u-LRpU,4060
+plumai/plumai.py,sha256=mGaoij3yUQkU2jae3K4NyqLoa9Ky4GZK6EPLtC9eDu4,4628
+plumai/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plumai/models/flux1_dev.py,sha256=hpptKqNMlXqLEAhQwP0xl-UkhzlPn0nD9ruT9IN9WwI,5720
+plumai/models/flux1_schnell.py,sha256=zm_7rfj1YkS8B-cPdAqTFgWhrHspB-49aWpFka730Xo,5744
+plumai/templates/index.html,sha256=w3I5H0Uv-LmFRoANbpUOBRXFok8vteLGst_otFB1PPM,14057
+plumai-0.1.7.dist-info/LICENSE,sha256=jWFKVRPWhvVhCxZJYdlMFP9K57wHOsW5BJKLvNyEkgc,1066
+plumai-0.1.7.dist-info/METADATA,sha256=uhH9EC-4y-5j68qFSC3QSwUoH2j3HrBKtWsGdkDEq-4,3124
+plumai-0.1.7.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+plumai-0.1.7.dist-info/entry_points.txt,sha256=Tk15sn8UUMIDGwjikaa9-kRoEVwulB4wER9sFPlcLBI,47
+plumai-0.1.7.dist-info/top_level.txt,sha256=V2P1mdSvJAIJt2UIYupcLmcnDW_0SFCGjDfVIBPAeGs,7
+plumai-0.1.7.dist-info/RECORD,,
