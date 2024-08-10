@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "aba-cli-scrapper"
+version = "0.2.3"
+description = "Scrappe all products and theirs related suppliers existing on Alibaba based on keywords provided by user and save results into a database (Mysql/Sqlite)."
+authors = ["poneoneo <onealzero@gmail.com>"]
+readme = "README.md"
+license = "GNU GENERAL PUBLIC LICENSEVersion 3, 29 June 2007"
+homepage = "https://github.com/poneoneo/Alibaba-CLI-Scrapper"
+repository = "https://github.com/poneoneo/Alibaba-CLI-Scrapper"
+keywords = ["cli", "scrapping", "alibaba", "scraper", "alibaba-cli-scrapper","dataset"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Natural Language :: English",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Terminals",
+    "Typing :: Typed",
+]
+include = [
+    "COPYING",
+]
+
+packages = [{include = "aba_cli_scrapper"},{include = "images"}]
+
+[tool.poetry.dev-dependencies]
+pytest = "8.2.2"
+loguru = "0.7.2"
+black  = "^24.2.2"
+pyright = "1.1.370"
+
+[tool.poetry.scripts]
+aba-run = "aba_cli_scrapper.__main__:app"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+
+
+python-dotenv = "^1.0.1"
+sqlalchemy = "^2.0.32"
+typer = "^0.12.3"
+sqlmodel = "^0.0.21"
+selectolax = "^0.3.21"
+playwright = "^1.45.0"
+tenacity = "^9.0.0"
+pymysql = "^1.1.1"
+loguru = "^0.7.2"
+
+
+
+[tool.poetry.group.dev.dependencies]
+python-semantic-release = "^9.8.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:version"
+branch = "dev"
+
+[tool.semantic_release.branches.dev]
+match = "dev"
+prerelease_token = "rc"
+prerelease = false
