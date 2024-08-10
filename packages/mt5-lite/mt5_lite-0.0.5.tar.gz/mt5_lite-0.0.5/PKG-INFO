@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: mt5_lite
+Version: 0.0.5
+Summary: A small wrapper library round the Metatrader 5 Official library
+Author: Brian Obot
+Author-email: Brian Obot <brianobot9@gmail.com>
+Project-URL: Homepage, https://github.com/brianobot/mt5
+Project-URL: Issues, https://github.com/brianobot/mt5/issues
+Project-URL: Documentation, https://github.com/brianobot/mt5#
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Mt5 Lite
+
+
+## Overview
+This project is a Python-based wrapper class designed for the MetaTrader 5 (MT5) trading platform, providing a more Pythonic interface for interacting with the MT5 terminal. The wrapper class encapsulates the MT5 library functions, utilizing Object-Oriented Programming (OOP) principles to organize and structure the utility functions. This design enhances code readability, maintainability, and reusability, making it easier for developers to integrate MT5 functionalities into their Python applications.
+
+### Features
+- OOP Structure: The wrapper is organized into classes and methods that represent key MT5 functionalities, such as managing accounts, placing orders, retrieving market data, and handling trade events.
+
+- Simplified API: By wrapping the native MT5 functions, the class provides a simplified and more intuitive API, reducing the complexity of direct interaction with the MT5 terminal.
+
+- Error Handling: The wrapper includes robust error handling, translating MT5 error codes into Python exceptions, making it easier to debug and manage errors in your trading scripts.
+
+- Extensibility: The class is designed with extensibility in mind, allowing developers to easily extend the base functionality by subclassing or adding new methods.
+
+- Thread-Safe Operations: To cater to high-frequency trading and concurrent operations, the wrapper ensures thread safety in its implementation.
+
+- Comprehensive Documentation: The project includes detailed documentation, explaining how to install, use, and extend the wrapper class, along with code examples for common trading operations.
+
+### Use Cases
+- Algorithmic Trading: Use the wrapper class to develop, backtest, and deploy automated trading strategies with ease.
+
+- Data Analysis: Simplify the process of retrieving and analyzing market data from MT5 for research or decision-making purposes.
+
+- Custom Trading Tools: Build custom trading applications or scripts that interact with the MT5 terminal, leveraging the wrapper’s streamlined interface.
+
+### Installation
+To use this wrapper class, you need to have Python 3.x and the MetaTrader 5 terminal installed on your system. You can install the required dependencies using pip:
+
+```bash
+pip install mt5-lite
+```
+
+After installing the dependencies, clone this repository and import the wrapper class into your Python project.
+
+Getting Started
+Here’s a quick example of how to use the wrapper class to connect to an MT5 account and retrieve market data:
+
+```python
+from mt5 import Account
+
+# Initialize a Trading Account instance
+account = Account('34234234234', password='password', server='demo_server')
+
+# Connect/login to the MT5 terminal
+account.connect()
+
+# Retrieve current market prices for a symbol
+symbol = "EURUSD"
+market_data = account.get_market_data(symbol)
+
+print(f"Market data for {symbol}: {market_data}")
+
+# Disconnect from the MT5 terminal
+account.disconnect()
+```
+
+## Contribution
+Contributions are welcome! If you have suggestions for improvements, please submit a pull request or open an issue on the GitHub repository.
+
+This project is ideal for traders, developers, and data scientists looking to integrate MetaTrader 5 functionalities into their Python-based trading systems while maintaining a clean and modular codebase.

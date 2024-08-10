@@ -1,0 +1,13 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+mt5/__init__.py
+mt5/account.py
+mt5_lite.egg-info/PKG-INFO
+mt5_lite.egg-info/SOURCES.txt
+mt5_lite.egg-info/dependency_links.txt
+mt5_lite.egg-info/top_level.txt
+tests/__init__.py
+tests/context.py
+tests/test_accounts.py
