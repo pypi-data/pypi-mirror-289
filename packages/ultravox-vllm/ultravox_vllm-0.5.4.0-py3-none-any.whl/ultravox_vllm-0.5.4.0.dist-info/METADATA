@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ultravox-vllm
+Version: 0.5.4.0
+Summary: 
+Author: Peter Salas
+Author-email: peter@fixie.ai
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: librosa (>=0.10.2.post1,<0.11.0)
+Requires-Dist: torchaudio (>=2.4.0,<3.0.0)
+Requires-Dist: vllm (==0.5.4)
+Requires-Dist: wrapt (>=1.16.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Ultravox VLLM
+
+This contains a VLLM implementation of Ultravox and some monkeypatches to VLLM's multimodal support to allow audio to be smuggled in via `image_url`s in the OpenAI-compatible server.
