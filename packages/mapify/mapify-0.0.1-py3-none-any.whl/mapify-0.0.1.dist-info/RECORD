@@ -1,0 +1,10 @@
+mapify/__init__.py,sha256=8VA1Aq8q1HobkKpa9WIazR0rZHVHczhhaSBrVoZi97k,132
+mapify/decode.py,sha256=TA_8FOZbhicLVZoMtDX_J00IXisb3rHHh8bHtFbq1-o,1899
+mapify/default.toml,sha256=5mDjvtq3SFJpsHuqHQINubmkjVpLwQEYh9rVlBGUsnM,1497
+mapify/encode.py,sha256=q6uYfEOsURf_3xECjrslHONo2YOKuQXIDutpiquPr3s,2570
+mapify/generate.py,sha256=xPgrJnLa4LdZby0_JrB6FmTS-S469YrsygAn57tGYV8,2658
+mapify-0.0.1.dist-info/LICENSE,sha256=zDhUwWVn54ltnSJ1U8xKmGAuYnQCMangwX-B9QB7azo,1089
+mapify-0.0.1.dist-info/METADATA,sha256=tNM5IL5RqpW1UscHJQCgFD7bA23kaVkPsdNmFoa1Oxg,427
+mapify-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+mapify-0.0.1.dist-info/top_level.txt,sha256=l-Er9gIvdGdB_pHPCz0VLfYtqCDyjHy1FDsSNJ7ynGE,7
+mapify-0.0.1.dist-info/RECORD,,
