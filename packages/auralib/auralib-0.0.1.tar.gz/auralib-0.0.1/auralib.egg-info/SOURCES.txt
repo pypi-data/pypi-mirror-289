@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+setup.py
+auralib/__init__.py
+auralib/aura_cmd.py
+auralib/aura_config.py
+auralib/aura_files.py
+auralib/aura_json.py
+auralib/aura_skyrim.py
+auralib/aura_type.py
+auralib/aura_xml.py
+auralib.egg-info/PKG-INFO
+auralib.egg-info/SOURCES.txt
+auralib.egg-info/dependency_links.txt
+auralib.egg-info/requires.txt
+auralib.egg-info/top_level.txt
