@@ -1,0 +1,15 @@
+mouselungseg/__init__.py,sha256=JwlkTtNN850ibXG6WaIJDvbAZwWxJFOn9CF36QpvT98,100
+mouselungseg/_version.py,sha256=vZ9YJhtz2uaZyfeULJmmzg7nlru6jGE1i6ermqZWYAQ,411
+mouselungseg/cli.py,sha256=I_YWoGE394ihVIPOdLzhIAIlMv5AuPgnnXGv_2lIhTs,1458
+mouselungseg/napari.yaml,sha256=UeU-gBh5ftRQJRZm13WBzNDBFxMwHm1vCfAGg4ixDaI,621
+mouselungseg/postprocess.py,sha256=ztYeohG7oGO70PmALhtlz2_0Gj6zETadkGFcn2EQck4,583
+mouselungseg/predict.py,sha256=optHSyQqI_z8-iIdq5Nq3tSh80B0D6VUyhrW2WUrCSs,3446
+mouselungseg/napari_plugin/__init__.py,sha256=wctdbEcZFF5vw-pGFOFma9r0xqowy4j5tUSB7QGzvkk,79
+mouselungseg/napari_plugin/_roi_widget.py,sha256=tsLYzoCy1Ume6PpsSBKgT8PZG_IAq0J3-D0rwz1JmME,2655
+mouselungseg/napari_plugin/_widget.py,sha256=DM0bJCZ1YGslJHDIkTPbDQHGwo42deXimTgscCP3geU,2765
+mouselungseg-0.0.7.dist-info/LICENSE,sha256=C47lqLWpMVfswaAJTMgHxZBM7a34_vWw9dcxR7raJBk,1491
+mouselungseg-0.0.7.dist-info/METADATA,sha256=tBgYcOfYG0xgN9m34vnnAQkxcnoeI21YrUgypyzJVkw,5695
+mouselungseg-0.0.7.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+mouselungseg-0.0.7.dist-info/entry_points.txt,sha256=bJi4FJWbJe_EN1YtDsPX_Y5rF74yYOms4n5Qo117VFY,207
+mouselungseg-0.0.7.dist-info/top_level.txt,sha256=fgsVhFgTT_B91Dmfk6Y_vS9x8LUEiYProQuKMv4SyAQ,13
+mouselungseg-0.0.7.dist-info/RECORD,,
