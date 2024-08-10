@@ -1,0 +1,45 @@
+[project]
+name = "pyodide-httpx"
+version = "0.1.0"
+description = "patch httpx for using in pyodide"
+dependencies = [
+    "httpx>=0.25.1",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Operating System :: OS Independent",
+]
+
+[project.license]
+file = "LICENSE"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pyodide-py>=0.26",
+    "ruff>=0.5",
+]
+
+[tool.pdm.scripts.fmt]
+composite = [
+    "ruff format",
+    "ruff check --fix --show-fixes",
+]
+
+[tool.pyright]
+reportRedeclaration = false
+reportMissingModuleSource = false
+
+[tool.ruff]
+line-length = 200
