@@ -1,0 +1,8 @@
+buildbot_tag_filters_plugin/VERSION,sha256=eblkoJL_o4koUEsMgLDrlvbhNDvS1ALIVBpn8foXOE4,8
+buildbot_tag_filters_plugin/__init__.py,sha256=L7bjSxO19mDjWMIyp-2j3_QrOza2LkRLoocqFvzZe6g,175
+buildbot_tag_filters_plugin/static/scripts.js,sha256=2i2GxQYemRh3I_gXKDfGTLAszTYfsHf7gTSHi049LEs,3643
+buildbot_tag_filters_plugin-2024.8.8.dist-info/METADATA,sha256=CV8YIQNjp4jebKAic86lnZ5xhUMfrHd83Xu0joi2mXU,2008
+buildbot_tag_filters_plugin-2024.8.8.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+buildbot_tag_filters_plugin-2024.8.8.dist-info/entry_points.txt,sha256=LgG78_PEyMzfpdauPEaW0AI6uxrcU0ddAB8Gjbi83NU,67
+buildbot_tag_filters_plugin-2024.8.8.dist-info/top_level.txt,sha256=2qTbYApxECZxiDOPy78ajzzD7qfUdcjDypvLMPWewdM,28
+buildbot_tag_filters_plugin-2024.8.8.dist-info/RECORD,,
