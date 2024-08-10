@@ -1,0 +1,9 @@
+README.md
+setup.py
+umamail/__init__.py
+umamail/test.py
+umamail.egg-info/PKG-INFO
+umamail.egg-info/SOURCES.txt
+umamail.egg-info/dependency_links.txt
+umamail.egg-info/requires.txt
+umamail.egg-info/top_level.txt
