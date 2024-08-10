@@ -1,0 +1,8 @@
+LICENSE
+MANIFEST.in
+setup.py
+SimplePythonSocket.egg-info/PKG-INFO
+SimplePythonSocket.egg-info/SOURCES.txt
+SimplePythonSocket.egg-info/dependency_links.txt
+SimplePythonSocket.egg-info/requires.txt
+SimplePythonSocket.egg-info/top_level.txt
