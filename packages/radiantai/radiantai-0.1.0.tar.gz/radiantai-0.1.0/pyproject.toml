@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "radiantai"
+version = "0.1.0"
+description = "Radiant SDK"
+authors = ["nkulkarni <nitish.kulkarni@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "radiantai"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.32.3"
+
+[project]
+readme = "README.md"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
