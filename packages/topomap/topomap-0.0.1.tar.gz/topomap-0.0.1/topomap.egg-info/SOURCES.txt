@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+topomap/HierarchicalTopoMap.py
+topomap/TopoMap.py
+topomap/TopoTree.py
+topomap/UnionFindComponents.py
+topomap/__init__.py
+topomap/dataset_utils.py
+topomap/test_utils.py
+topomap/utils.py
+topomap/visualizations.py
+topomap.egg-info/PKG-INFO
+topomap.egg-info/SOURCES.txt
+topomap.egg-info/dependency_links.txt
+topomap.egg-info/requires.txt
+topomap.egg-info/top_level.txt
