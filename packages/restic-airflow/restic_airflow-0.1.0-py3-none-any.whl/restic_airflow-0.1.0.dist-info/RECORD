@@ -1,0 +1,9 @@
+restic_airflow-0.1.0.dist-info/METADATA,sha256=YrSk-MXcAHftJHg7AukcYTbdT1BjVmn9gNuzW9RJTdw,594
+restic_airflow-0.1.0.dist-info/WHEEL,sha256=rSwsxJWe3vzyR5HCwjWXQruDgschpei4h_giTm0dJVE,90
+restic_airflow-0.1.0.dist-info/licenses/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+restic_airflow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restic_airflow/helpers.py,sha256=tXZ8QDniL8LqxaW0q2LqZNRsBaVGcV35dtY7cQHkrQc,133
+restic_airflow/notifications.py,sha256=07lVGYcPGh1qVsJQf2rr7pWxFhYyMInTylLuMAWblCo,2616
+restic_airflow/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restic_airflow/operators/restic.py,sha256=GJKl2Xj-gAPN7ALW9r_1RuTpFtrH1gi-8EuVo8GRWso,9166
+restic_airflow-0.1.0.dist-info/RECORD,,
