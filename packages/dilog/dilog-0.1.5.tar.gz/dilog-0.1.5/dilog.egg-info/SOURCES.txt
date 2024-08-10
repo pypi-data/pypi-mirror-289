@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+dilog/__init__.py
+dilog/logger.py
+dilog/logging_config.yaml
+dilog/upload_log.py
+dilog.egg-info/PKG-INFO
+dilog.egg-info/SOURCES.txt
+dilog.egg-info/dependency_links.txt
+dilog.egg-info/requires.txt
+dilog.egg-info/top_level.txt
