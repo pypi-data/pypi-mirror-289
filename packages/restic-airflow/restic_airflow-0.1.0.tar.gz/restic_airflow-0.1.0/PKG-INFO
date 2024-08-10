@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: restic-airflow
+Version: 0.1.0
+Summary: Airflow operators to backup and restore data using restic
+Author-Email: Jelther Goncalves <hello@jelther.dev>
+License: The Unlicense
+Requires-Python: <3.13,>=3.10
+Requires-Dist: apache-airflow==2.9.1
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: apache-airflow-providers-docker>=3.11.0
+Description-Content-Type: text/markdown
+
+# Restic Airflow
+
+## Introduction
+This repository contains a simple example of how to use [Restic](https://restic.net/) with [Apache Airflow](https://airflow.apache.org/).
+
