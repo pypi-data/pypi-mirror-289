@@ -1,0 +1,4 @@
+bcrypt
+click
+gunicorn
+jsonschema>=3.2.0
