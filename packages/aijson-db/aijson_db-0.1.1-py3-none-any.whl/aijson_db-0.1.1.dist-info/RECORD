@@ -1,0 +1,13 @@
+aijson_db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aijson_db/actions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aijson_db/actions/execute_db_statement.py,sha256=Yg8vIkSJteYQjjgKygG2kobGrvWfrV3VFiHwGXLTI6c,2131
+aijson_db/actions/get_db_schema.py,sha256=tNZ9ggcdJMHKCiPZR1fPuDGi3DeYg6vZ869IXz3I1cU,1256
+aijson_db/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aijson_db/tests/conftest.py,sha256=V_58yX0q7TZNfDVhJ5vetgk4JkiJrZ-qz5mnwAhqZ6k,11051
+aijson_db/tests/test_execute_db_statement.py,sha256=hP50MMp4R7nNMo7k1PQvYEuLkjlrbsWDPObzC9GVvT0,915
+aijson_db/tests/test_get_db_schema.py,sha256=-1BZFwITfe6BuNAdMqZlFf6EIuCp84oygaLTKB0bsxI,710
+aijson_db-0.1.1.dist-info/LICENSE,sha256=AbHbVVtcEv2EqI9EHVvf-szUVibIMho3OM146AEhpzY,1063
+aijson_db-0.1.1.dist-info/METADATA,sha256=C0g_JKX7qwN9hs_Yq_0iC5B4qvEb8uN7f2hXat9ZkTE,982
+aijson_db-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+aijson_db-0.1.1.dist-info/entry_points.txt,sha256=FU-SwAh37PU7L31mAuzYofrO9ecYenS6zcffawVGwWY,36
+aijson_db-0.1.1.dist-info/RECORD,,
