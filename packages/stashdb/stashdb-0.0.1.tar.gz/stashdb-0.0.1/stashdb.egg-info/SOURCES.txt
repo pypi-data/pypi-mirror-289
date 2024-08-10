@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+stashdb/__init__.py
+stashdb/db.py
+stashdb.egg-info/PKG-INFO
+stashdb.egg-info/SOURCES.txt
+stashdb.egg-info/dependency_links.txt
+stashdb.egg-info/top_level.txt
