@@ -1,0 +1,13 @@
+postman_sync/__init__.py,sha256=rvwEamUfnf8WU1t4XCFwGQDeAzxTnpVHo9gHT69tbvQ,373
+postman_sync/endpoint_transfer.py,sha256=9KgDomHTkbA44qLTnR5TZR2mGN5F2p4QVnfb5zW0jHg,2801
+postman_sync/helper_functions.py,sha256=Xm4ijvmafo3MmZZcpuYTQzabliU_R8PUSMlQycSndoM,6904
+postman_sync/main_script.py,sha256=sxlliL36twHH4efv0eY9E3HqOIIXzqeKJk0Fz1wJJ_o,13085
+tests/__init__.py,sha256=kmhYj3yKINcvVtiJSMcB0Ag4A_Whxa8_RxVwIVOzQFw,366
+tests/test_endpoint_transfer.py,sha256=dL2QFkrlfCPkvoQuR76XVbca1iQlMrmcn448MVNJ5W8,3121
+tests/test_helper_functions.py,sha256=V-EXZ5ybEhzQ8T5k8REikNXST9T_zdxQB72Ajd0-YtY,2986
+tests/test_main_script.py,sha256=jrq6WPwbO-zQK0VScG7F0eV_nXmwqAchWIXx79gCqZY,6272
+postman_sync-0.1.0.dist-info/METADATA,sha256=7OT6qMAjzwoIpZS0D5Rf7c5TCGHpgt7mk1nLKyAHBjU,7114
+postman_sync-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+postman_sync-0.1.0.dist-info/entry_points.txt,sha256=bfBA_ovlHxvHww-WySNEj2YQLX8f-8Vq2reXXX4P7cM,63
+postman_sync-0.1.0.dist-info/top_level.txt,sha256=reDJaeKHjTneVZ1rMqJXOm6m3Y94n6DXG3oxC91aODY,19
+postman_sync-0.1.0.dist-info/RECORD,,
