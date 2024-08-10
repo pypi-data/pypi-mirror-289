@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+logged_hypixeloffical.egg-info/PKG-INFO
+logged_hypixeloffical.egg-info/SOURCES.txt
+logged_hypixeloffical.egg-info/dependency_links.txt
+logged_hypixeloffical.egg-info/top_level.txt
