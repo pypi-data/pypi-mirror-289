@@ -1,0 +1,3 @@
+[console_scripts]
+eborg = eborg.entrypoints.cli:cli
+
