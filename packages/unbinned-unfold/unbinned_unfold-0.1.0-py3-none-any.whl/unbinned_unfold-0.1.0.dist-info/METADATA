@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: unbinned_unfold
+Version: 0.1.0
+Summary: OmniFold, a library to perform unbinned and high-dimensional unfolding for HEP.
+Home-page: https://github.com/ViniciusMikuni/omnifold
+Author: Vinicius Mikuni
+Author-email: vmikuni@lbl.gov
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: horovod ==0.28.1
+Requires-Dist: matplotlib ==3.8.2
+Requires-Dist: numpy ==2.0.1
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: PyYAML ==6.0.2
+Requires-Dist: setuptools ==69.0.3
+Requires-Dist: tensorflow ==2.15.0
+
+# Pip OmniFold
