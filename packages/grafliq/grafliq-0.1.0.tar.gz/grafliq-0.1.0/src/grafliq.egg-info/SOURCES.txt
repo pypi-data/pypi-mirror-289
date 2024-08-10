@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/grafliq/__init__.py
+src/grafliq/builder.py
+src/grafliq/query.py
+src/grafliq.egg-info/PKG-INFO
+src/grafliq.egg-info/SOURCES.txt
+src/grafliq.egg-info/dependency_links.txt
+src/grafliq.egg-info/requires.txt
+src/grafliq.egg-info/top_level.txt
