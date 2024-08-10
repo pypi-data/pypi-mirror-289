@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: card_game_lib
+Version: 0.1
+Summary: A simple text-based card game library
+Home-page: https://github.com/yourusername/card_game_lib
+Author: kwonpop
+Author-email: kwonpop@naver.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Card Game Library
+
+A simple text-based card game GUI library using `tkinter`.
+
+## Installation
+
+```bash
+pip install .
