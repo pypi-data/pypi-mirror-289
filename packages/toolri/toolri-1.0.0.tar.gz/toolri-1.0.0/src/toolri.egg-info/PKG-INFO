@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: toolri
+Version: 1.0.0
+Summary: A tool for extracting, labeling and linking entities in document images for Information Extraction tasks.
+Author-email: "Victor G. Lima" <victorgonl@outlook.com>
+Project-URL: Homepage, https://github.com/Victorgonl/ToolRI
+Project-URL: Issues, https://github.com/Victorgonl/ToolRI/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: pytesseract
+Requires-Dist: customtkinter
+Requires-Dist: CTkMessagebox
