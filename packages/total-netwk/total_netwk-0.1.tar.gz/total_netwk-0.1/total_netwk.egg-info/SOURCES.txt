@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.py
+total_netwk/__init__.py
+total_netwk/basic_index_dict.py
+total_netwk/clifin.py
+total_netwk/create_network.py
+total_netwk/filter_sequence.py
+total_netwk/find_community_byhost.py
+total_netwk.egg-info/PKG-INFO
+total_netwk.egg-info/SOURCES.txt
+total_netwk.egg-info/dependency_links.txt
+total_netwk.egg-info/requires.txt
+total_netwk.egg-info/top_level.txt
