@@ -1,0 +1,12 @@
+ofxstatement_bancoposta-1.0.2-py3.11-nspkg.pth,sha256=vgI_bvHvytrOVsxvIeFKh9nK24qvY4uGHWLNbZa2xBM,1093
+ofxstatement/plugins/bancoposta.py,sha256=6XrRPrIH1Go96AyQLmYBM_yEoi7Hg5fuYwk6JXkrXGQ,2609
+ofxstatement/plugins/bancopostaTransaction.py,sha256=--1_5ZrqU-eNqhFEYjmRJXE7ZAVXHop1FbxdO2tl4ek,11980
+ofxstatement/plugins/bancopostacsvparser.py,sha256=MfVDs6_zoccIq_K_zb2PFtv889Dwmr69YG5etj3aNuI,3077
+ofxstatement/plugins/bancopostapdfparser.py,sha256=Ag2rr72Dk7jP_CEF-oAMIN3JlNkFOt6hzShri3iwIWI,6187
+ofxstatement_bancoposta-1.0.2.dist-info/METADATA,sha256=SMcdXLCDGNvBZAhx_E8_ezakzPjA8evgiRW8G9mvd3U,1748
+ofxstatement_bancoposta-1.0.2.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+ofxstatement_bancoposta-1.0.2.dist-info/entry_points.txt,sha256=iSOxop_ViaRddogzyUFoaZqVr3yt3OeThQ45NricmcM,77
+ofxstatement_bancoposta-1.0.2.dist-info/namespace_packages.txt,sha256=i29PY9ieDhHxwObljMcvZNQ_PHxIyAHVbzFlzcpcHn4,34
+ofxstatement_bancoposta-1.0.2.dist-info/top_level.txt,sha256=QULlVVrNlYwAPeKqH5xw5QYTOH04LNlME6axewv7XDs,13
+ofxstatement_bancoposta-1.0.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ofxstatement_bancoposta-1.0.2.dist-info/RECORD,,
