@@ -1,0 +1,15 @@
+README.md
+setup.py
+testing/__init__.py
+testing/test_data.py
+testing/test_mix.py
+testing/test_transcript.py
+working/__init__.py
+working/data.py
+working/mix.py
+working/transcript.py
+ytube_data_and_transcript.egg-info/PKG-INFO
+ytube_data_and_transcript.egg-info/SOURCES.txt
+ytube_data_and_transcript.egg-info/dependency_links.txt
+ytube_data_and_transcript.egg-info/requires.txt
+ytube_data_and_transcript.egg-info/top_level.txt
