@@ -1,0 +1,10 @@
+humatron/__init__.py,sha256=gD7w3WfvGf9pvnM6W3uML6D0qVBkRDI90xw2O1zMV6s,1252
+humatron/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+humatron/worker/__init__.py,sha256=gD7w3WfvGf9pvnM6W3uML6D0qVBkRDI90xw2O1zMV6s,1252
+humatron/worker/rest_utils.py,sha256=iZyxn1g46PX83NKGpK5G_lU2XIkOT8DJiU1Y7AT9ydo,2211
+humatron/worker/specialist.py,sha256=KQSMpuGhShGMdUPvV8Ss29AaJhcZ8wwVSM6jOfRT3Gk,8009
+humatron_python_sdk-1.0.0.dist-info/LICENSE.txt,sha256=1E9A5X_FTb2ev86kMLKSk6tAuo0CdTmUS8h0rCNpzNo,1064
+humatron_python_sdk-1.0.0.dist-info/METADATA,sha256=ZgQvJbDcMKGR0ZzaC8pZ0_DcEP9wBsEx8yJHzOJdcgM,1861
+humatron_python_sdk-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+humatron_python_sdk-1.0.0.dist-info/top_level.txt,sha256=2fW8Nx9kfLUoDEGdIeIKgG6sLePXvcfbVaI5k4JB3pQ,25
+humatron_python_sdk-1.0.0.dist-info/RECORD,,
