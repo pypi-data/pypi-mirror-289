@@ -1,0 +1,2 @@
+"""Готов к выполнению своих обязанностей 25/8! Создатель данного Relise: Пирожок с Рисом RU\nЯвляется форком библиотеки ["FlorestDevInstruments"](https://pypi.org/project/florestdevinstruments/)"""
+from .piewithrise1 import *

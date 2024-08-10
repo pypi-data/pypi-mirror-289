@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+iLibrary7/__init__.py
+iLibrary7/piewithrise1.py
+piroschockmanagelite.egg-info/PKG-INFO
+piroschockmanagelite.egg-info/SOURCES.txt
+piroschockmanagelite.egg-info/dependency_links.txt
+piroschockmanagelite.egg-info/requires.txt
+piroschockmanagelite.egg-info/top_level.txt
