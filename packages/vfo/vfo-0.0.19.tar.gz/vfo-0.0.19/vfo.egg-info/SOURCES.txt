@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+vfo/__init__.py
+vfo/classTags.py
+vfo/internal_database_functions.py
+vfo/internal_plotting_functions.py
+vfo/vfo.py
+vfo.egg-info/PKG-INFO
+vfo.egg-info/SOURCES.txt
+vfo.egg-info/dependency_links.txt
+vfo.egg-info/requires.txt
+vfo.egg-info/top_level.txt
