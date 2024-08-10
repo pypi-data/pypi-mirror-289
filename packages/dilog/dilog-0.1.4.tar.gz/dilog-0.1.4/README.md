@@ -1,0 +1,52 @@
+# dlog
+
+`dlog` 是一个用于日志记录和上传到阿里云OSS的私有Python包。它提供了日志记录功能，以及将日志文件压缩并上传到阿里云OSS的功能，非常适合在私有项目中使用。
+
+## 功能特点
+
+- **日志记录**: 支持将日志记录到本地文件，支持多级别日志（DEBUG、INFO、ERROR、SYSTEM）。
+- **日志上传**: 自动将日志文件压缩为zip格式，并上传到阿里云OSS。
+- **单例模式**: 采用单例模式确保日志处理类只会被实例化一次。
+
+## 安装
+
+确保安装最新版本
+```bash
+pip install dilog
+pip install dilog --upgrade
+```
+
+## 使用说明
+
+### 记录日志
+
+```python
+from dilog.log_handler import LogHandler
+
+# 获取日志处理器实例
+log_handler = LogHandler.get_instance()
+
+# 记录日志
+log_handler.report(tag="Initialization", content="LogHandler initialized successfully", level="INFO")
+```
+
+### 上传日志文件
+
+```python
+import os
+from dilog.log_handler import handle_error_feedback
+
+# 确保环境变量已设置
+os.environ['ALI_ACCESS_KEY_ID'] = 'your_access_key_id'
+os.environ['ALI_ACCESS_KEY_SECRET'] = 'your_access_key_secret'
+os.environ['ALI_OSS_ENDPOINT'] = 'ALI_OSS_ENDPOINT'
+os.environ['ALI_BUCKET_NAME'] = 'ALI_BUCKET_NAME'
+
+# 调用日志处理功能
+handle_error_feedback()
+```
+
+## 联系我们：
+didiwangluo@outlook.com
+
+
