@@ -1,0 +1,9 @@
+chessdotcom/__init__.py,sha256=NtDjOBNNiJARuI3IahKpdWR8k2lw2FheNmFELgyil4U,918
+chessdotcom/aio.py,sha256=QcQGgqxdYZ_uCwJef1s458ChljCWUym34-GZg_CQsf0,83
+chessdotcom/client.py,sha256=2b_Izd4AHN8sA0SHFZfJ5Q21I7PmLg-IYJsa2e1dDLk,20071
+chessdotcom/types.py,sha256=cz-0ACgTxQQqSnpa8i6SLRiNqXiOYddLyXTE-WYAln0,4220
+chessdotcom/utils.py,sha256=OTqiS6gQm4cQ7uHUMKJ8BlYzc9PARYPVY1gGQ-SMkkE,940
+nav_chess_com-2.1.0.dist-info/LICENSE,sha256=qsTfMoFrtgTHN2YTnLMTwjpRgljakGDlMKK-cUw7g7U,1093
+nav_chess_com-2.1.0.dist-info/METADATA,sha256=3wsGYV-mIBEnEuZhBI8T-nBoP6240Ly47SELqGeTnVg,4368
+nav_chess_com-2.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+nav_chess_com-2.1.0.dist-info/RECORD,,
