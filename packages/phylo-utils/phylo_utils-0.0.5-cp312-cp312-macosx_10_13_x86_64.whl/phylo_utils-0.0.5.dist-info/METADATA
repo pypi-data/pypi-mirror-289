@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: phylo_utils
+Version: 0.0.5
+Summary: Phylogenetics calculations in python
+Home-page: 
+Author: Kevin Gori
+Author-email: kgori@ebi.ac.uk
+Requires-Dist: cython
+Requires-Dist: numpy
+Requires-Dist: dendropy
+
