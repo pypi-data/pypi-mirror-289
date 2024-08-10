@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.py
+tal_ntwk/__init__.py
+tal_ntwk/basic_index_dict.py
+tal_ntwk/clifin.py
+tal_ntwk/create_network.py
+tal_ntwk/filter_sequence.py
+tal_ntwk/find_community_byhost.py
+tal_ntwk.egg-info/PKG-INFO
+tal_ntwk.egg-info/SOURCES.txt
+tal_ntwk.egg-info/dependency_links.txt
+tal_ntwk.egg-info/requires.txt
+tal_ntwk.egg-info/top_level.txt
