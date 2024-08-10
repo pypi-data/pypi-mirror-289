@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mt5_lite
+Version: 0.0.2
+Summary: A small wrapper library round the Metatrader 5 Official library
+Author: Brian Obot
+Author-email: Brian Obot <brianobot9@gmail.com>
+Project-URL: Homepage, https://github.com/brianobot/mt5
+Project-URL: Issues, https://github.com/brianobot/mt5/issues
+Project-URL: Documentation, https://github.com/brianobot/mt5/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Mt5 Lite
