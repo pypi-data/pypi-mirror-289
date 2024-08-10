@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "deviousq.__version__"}
+
+[project]
+name = "deviousq"
+dynamic = ["version"]
+authors = [
+    { name = "Anders Feder", email = "anders.feder.83@gmail.com" }
+]
+description = "DeviantArt RSS API querying utility"
+readme = "README.md"
+requires-python = ">=3.6"
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Internet :: WWW/HTTP"
+]
+dependencies = [
+    "aiohttp==3.10.0",
+    "python-dateutil==2.8.2"
+]
+keywords = ["DeviantArt", "cli"]
+
+[project.urls]
+Homepage = "https://gitlab.com/afeder/deviousq"
+Repository = "https://gitlab.com/afeder/deviousq.git"
+
+[project.scripts]
+deviousq = "deviousq:main"

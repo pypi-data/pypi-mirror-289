@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/deviousq/__init__.py
+src/deviousq.egg-info/PKG-INFO
+src/deviousq.egg-info/SOURCES.txt
+src/deviousq.egg-info/dependency_links.txt
+src/deviousq.egg-info/entry_points.txt
+src/deviousq.egg-info/requires.txt
+src/deviousq.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+deviousq = deviousq:main
