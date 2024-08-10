@@ -1,0 +1,10 @@
+README.md
+setup.py
+DrugTargetTool/__init__.py
+DrugTargetTool/main.py
+DrugTargetTool.egg-info/PKG-INFO
+DrugTargetTool.egg-info/SOURCES.txt
+DrugTargetTool.egg-info/dependency_links.txt
+DrugTargetTool.egg-info/entry_points.txt
+DrugTargetTool.egg-info/requires.txt
+DrugTargetTool.egg-info/top_level.txt
