@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: aijson-pdf
+Version: 0.1.1
+Summary: AI JSON PDF Actions
+License: MIT
+Author: Rafael Irgolic
+Author-email: hello@irgolic.com
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Provides-Extra: ocr
+Requires-Dist: aijson-core
+Requires-Dist: ocrmypdf (>=16.2.0,<17.0.0) ; extra == "ocr" or extra == "all"
+Requires-Dist: pypdfium2 (>=4.24.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# AI JSON – PDF
+
+This package contains AI JSON actions for interacting with PDFs.

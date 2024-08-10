@@ -1,0 +1,3 @@
+[aijson]
+actions=aijson_pdf.actions
+
