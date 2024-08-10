@@ -1,0 +1,12 @@
+fedrq
+
+[dev]
+black
+build
+mypy
+pip-tools
+pytest
+pytest-cov
+
+[test]
+pytest
