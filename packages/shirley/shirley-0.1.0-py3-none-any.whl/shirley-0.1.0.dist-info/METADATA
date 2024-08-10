@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: shirley
+Version: 0.1.0
+Summary: It intelligently chats.
+Author: luojiahai
+Author-email: ljiahai@hotmail.com
+Requires-Python: ==3.10.6
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: azure-cognitiveservices-speech (>=1.38.0,<2.0.0)
+Requires-Dist: einops (>=0.8.0,<0.9.0)
+Requires-Dist: gradio (>=4.39.0,<5.0.0)
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: pypdf (>=4.3.1,<5.0.0)
+Requires-Dist: pytest (>=8.3.1,<9.0.0)
+Requires-Dist: tiktoken (>=0.7.0,<0.8.0)
+Requires-Dist: transformers (==4.36.0)
+Requires-Dist: transformers-stream-generator (>=0.0.5,<0.0.6)
+Description-Content-Type: text/markdown
+
+## 🦈 Shirley
+
+It is just doing some stuff intelligently. It has the following features:
+- Chat, powered by [Qwen/Qwen-VL-Chat](https://huggingface.co/Qwen/Qwen-VL-Chat) (通义千问).
+- Text-To-Speech, powered by [Azure AI Speech](https://azure.microsoft.com/products/ai-services/ai-speech).
+
+## Requirements
+
+- [Git](https://git-scm.com/)
+- [CUDA](https://developer.nvidia.com/cuda-toolkit) if using NVIDIA graphics cards
+- [Python 3.10.6](https://www.python.org/downloads/release/python-3106/)
+- [pip](https://pypi.org/project/pip/)
+- [poetry](https://python-poetry.org/)
+
+## Installation
+
+### Setup virtual environment
+
+[Optional] Configure that creating the virtualenv inside the project’s root directory:
+```bash
+poetry config virtualenvs.in-project true
+```
+
+If you are not using Python 3.10.6, you need to install the specific version. Alternatively, use `pyenv` to manage
+Python versions:
+```bash
+pyenv install 3.10.6
+```
+
+Use Python 3.10.6 for the environment:
+```bash
+poetry env use <PATH>
+```
+
+Create and activate the virtual environment:
+```bash
+poetry shell
+```
+
+### Setup dependencies
+
+Install dependencies:
+```bash
+poetry install
+```
+
+Install [PyTorch](https://pytorch.org/get-started/locally/).
+
+### [Chat] Setup Qwen model
+
+Install submodule:
+```
+git submodule update --init --recursive
+```
+
+Update submodule:
+```
+git submodule update --remote --merge
+```
+
+### [Text-To-Speech] Setup Azure AI Speech
+
+Create [AI Speech](https://azure.microsoft.com/products/ai-services/ai-speech) service in Azure portal.
+
+Set environment variables:
+```
+export SPEECH_KEY=your-key
+export SPEECH_REGION=your-region
+```
+
+## Running
+
+Activate the virtual environment:
+```bash
+poetry shell
+```
+
+Run WebUI:
+```bash
+poetry run webui
+```
+
+Run tests (not available yet):
+```bash
+poetry run pytest
+```
+
+## WebUI Usage
+
+TODO
+
