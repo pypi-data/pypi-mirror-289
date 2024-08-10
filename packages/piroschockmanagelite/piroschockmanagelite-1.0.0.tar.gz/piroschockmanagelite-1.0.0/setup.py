@@ -1,0 +1,6 @@
+# -*- coding: utf-8 -*-
+
+from setuptools import setup
+
+
+setup(name='piroschockmanagelite', version='1.0.0', description='Улучшенная библиотека от Пирожок с Рисом! Написана на языке программирования Python!', long_description=f'Установив даннуб библиотеку, вы получите множество различных команд от начинающего программиста, Пирожка с Рисом! Также все функции которые как - то связаны с библиотекой имеют свои действия! Например: PyGames; API; Искуственный Интелект и многие другие функции ждут вас только здесь!!! Спасибо за то, что используете мою библиотеку! Огромное спасибо!!!', long_description_content_type='text/markdown', packages=['iLibrary7'], author='piroschock8develop', author_email='dizelano.53.usinger.917@internet.ru', install_requires=['florestdevinstruments'], url='https://telegra.ph/Socialnye-Seti-Ot--Zeeby--Light-07-23', python_requires='>=3.8.9',project_urls={"Pie With Rise's Resources":'https://telegra.ph/Socialnye-Seti-Ot--Zeeby--Light-07-23','GitHub':'https://github.com/pirosukirilla591/piroschock-jifersing391'})
