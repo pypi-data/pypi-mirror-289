@@ -1,0 +1,9 @@
+Metadata-Version: 2.3
+Name: imagingcontrol4pyside6
+Version: 6.7.0.38rc0
+Summary: IC Imaging Control 4 PySide6 Dialogs
+Author: The Imaging Source
+Author-email: support@theimagingsource.com
+Requires-Python: >=3.6
+Requires-Dist: imagingcontrol4>=1.0.0
+Requires-Dist: pyside6<6.8,>=6.7.2
