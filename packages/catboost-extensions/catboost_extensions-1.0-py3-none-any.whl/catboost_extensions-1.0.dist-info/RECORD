@@ -1,0 +1,9 @@
+catboost_extensions/__init__.py,sha256=dd411L1tPR96fvl7nAlvIYlilDfx7ICbkYgUrGXAW4E,122
+catboost_extensions/feature_selection.py,sha256=T1wmzbbr-doceMLSLw1Oiw1a-q2DUgpx7K5Eu8S967Q,22249
+catboost_extensions/optuna.py,sha256=LOQiCgmW6rm9bxl81gC3HHTIFF4YE30ZQL2pjwu-E_U,24187
+catboost_extensions/utils.py,sha256=3dZS_jkxqOdVBJ6e2RRyBitnLkVcCBbn2zWigzdZG-w,1749
+catboost_extensions-1.0.dist-info/LICENSE,sha256=e-ontEUzq8QBMKZevgEpOGBa3cOzXYIQsIrwbwppvsA,1070
+catboost_extensions-1.0.dist-info/METADATA,sha256=QqZJVKxeFX4hIQtfPuz-js93uH-P38oVHXig3LL-uxU,4004
+catboost_extensions-1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+catboost_extensions-1.0.dist-info/top_level.txt,sha256=VG3kxsJRh4n6twxB3kJ83YI-PjX3GG1eeWSsMqKUKro,20
+catboost_extensions-1.0.dist-info/RECORD,,
