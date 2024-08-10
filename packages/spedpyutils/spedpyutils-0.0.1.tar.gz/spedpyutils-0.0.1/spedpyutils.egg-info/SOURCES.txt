@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+model/__init__.py
+model/biddings/__init__.py
+model/biddings/hierarquical_schema.py
+spedpyutils.egg-info/PKG-INFO
+spedpyutils.egg-info/SOURCES.txt
+spedpyutils.egg-info/dependency_links.txt
+spedpyutils.egg-info/requires.txt
+spedpyutils.egg-info/top_level.txt
+test/test_efd.py
