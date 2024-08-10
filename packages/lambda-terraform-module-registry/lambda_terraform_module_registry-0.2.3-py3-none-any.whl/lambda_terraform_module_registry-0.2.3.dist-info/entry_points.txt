@@ -1,0 +1,4 @@
+[console_scripts]
+get-registry-token=registry.cli.iam_token_fetcher:main
+manage-registry-permissions=registry.cli.iam_permissions_manager:main
+
