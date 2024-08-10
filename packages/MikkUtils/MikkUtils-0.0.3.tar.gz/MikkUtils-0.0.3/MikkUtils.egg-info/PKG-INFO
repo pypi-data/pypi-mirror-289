@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: MikkUtils
+Version: 0.0.3
+Summary: Utilities for scripting in my projects, almost is goldsource-related
+Home-page: https://github.com/Mikk155/MikkUtils
+Author: Mikk155
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# MikkUtils
+ Some Utility scripts for my own usage in other proyect's workflows, most of them are for delevopment under GoldSource Engine
+
+```
+pip install MikkUtils --upgrade
+```
+
+---
+
+```python
+import MikkUtils as utils
+
+Vec = utils.Vector( 0, 0, 0 )
+```
+
+OR
+```python
+from MikkUtils import Vector
+
+Vec = Vector( 0, 0, 0 )
+```
+(Recommended)
