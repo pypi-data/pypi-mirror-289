@@ -1,0 +1,2 @@
+[console_scripts]
+jwallet = jwallet.jwalleti:main
