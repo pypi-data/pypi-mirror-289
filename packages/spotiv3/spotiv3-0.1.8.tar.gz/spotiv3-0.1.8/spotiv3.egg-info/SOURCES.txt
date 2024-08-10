@@ -1,0 +1,9 @@
+README.md
+setup.py
+spotiv3/__init__.py
+spotiv3/recaptcha.py
+spotiv3.egg-info/PKG-INFO
+spotiv3.egg-info/SOURCES.txt
+spotiv3.egg-info/dependency_links.txt
+spotiv3.egg-info/requires.txt
+spotiv3.egg-info/top_level.txt
