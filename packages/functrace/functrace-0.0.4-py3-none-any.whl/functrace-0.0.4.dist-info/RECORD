@@ -1,0 +1,9 @@
+functrace/__init__.py,sha256=za5wM5l7NxHvgTqyvYxulR9WhLWBe8SsUmB4WOscoSc,53
+functrace/api.py,sha256=TfFcqJ5sM9B-HRdV59jaNxYOYKjDJa_S8_-qh4IEbWA,8465
+functrace/type_hints.py,sha256=YLxZ55Pcv7dyIT-rGxbJSyDRGzQ23CndLE2FGSq_FAw,218
+functrace/utilities.py,sha256=DjM-j5vtZUuJTOZFcvwilB568raMofCkFEmaEBY-uZg,11611
+functrace-0.0.4.dist-info/LICENSE,sha256=9cid48ajlCisvz1tHSmP0o2oPNkgI71aGcnVW8cxLUo,1067
+functrace-0.0.4.dist-info/METADATA,sha256=J58QjgRd_L9dkyCzI88VAhrLmQE88ZY-F2tEeU5JMDE,3196
+functrace-0.0.4.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+functrace-0.0.4.dist-info/top_level.txt,sha256=p_5kE2jK1FBRAAomBnTXxRPLV4qxIRbD3bKY0TKGFN8,10
+functrace-0.0.4.dist-info/RECORD,,
