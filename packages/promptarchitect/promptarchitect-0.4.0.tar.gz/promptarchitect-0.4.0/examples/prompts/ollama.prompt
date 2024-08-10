@@ -1,0 +1,12 @@
+---
+provider: ollama
+model: gemma2
+prompt_version: 1.0
+temperature: 0.2
+input: examples/inputs/podcast_titels/beschrijving.txt
+output: title-ollama.txt
+test_path: examples/tests/podcast_titels
+---
+# Instructies
+
+Genereer 5 titels voor een AI podcast.
