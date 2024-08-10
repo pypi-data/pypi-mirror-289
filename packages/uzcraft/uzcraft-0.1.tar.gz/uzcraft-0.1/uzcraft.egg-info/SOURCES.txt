@@ -1,0 +1,7 @@
+setup.py
+uzbminecraft/__init__.py
+uzcraft.egg-info/PKG-INFO
+uzcraft.egg-info/SOURCES.txt
+uzcraft.egg-info/dependency_links.txt
+uzcraft.egg-info/requires.txt
+uzcraft.egg-info/top_level.txt
