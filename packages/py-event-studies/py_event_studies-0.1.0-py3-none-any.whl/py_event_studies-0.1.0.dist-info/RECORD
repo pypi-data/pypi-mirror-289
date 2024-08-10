@@ -1,0 +1,11 @@
+py_event_studies/__init__.py,sha256=59ASdSoVP6sZv3M05sT1wmJJC4kcm-mrZtwEcYLOkKE,352
+py_event_studies/_calibration.py,sha256=76yWXBcavUI6m7IwTHOqjNidQfQ67IG6_sHH1-Y0Oyw,12652
+py_event_studies/_data_loader.py,sha256=D2fDyE1K5ti0OnK97AFyKkf-fylNVQfcEtdRjclrRAI,3624
+py_event_studies/_statistic_tests.py,sha256=6uCjAzHIZnWPIDE_UAO4qeXVmMjmnw9GC0oTZLQOZ64,7164
+py_event_studies/_utils.py,sha256=43TaTWUFptt4_wrxJf3f_LYBX0Sh0iqeMTgoSB1Y9dU,464
+py_event_studies/api.py,sha256=cEFtHV3V6xI9SZO9LfpEZ05LI3snM2S5guJwqawRRqU,17595
+py_event_studies/data_storage.py,sha256=ZtzTaoEFKVpJ3wT7bk-D3xX2PE7QZSWro9nLIwnxfkk,1070
+py_event_studies-0.1.0.dist-info/LICENCE,sha256=E0mkthSEkrRPYp5k7tZ2YS4jT-moOeTzsnfBSCyISfE,20849
+py_event_studies-0.1.0.dist-info/METADATA,sha256=35kz8koSzNnRSlno_UcpkjaR2-f3z_2r6paZ-LyToDY,3226
+py_event_studies-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+py_event_studies-0.1.0.dist-info/RECORD,,
