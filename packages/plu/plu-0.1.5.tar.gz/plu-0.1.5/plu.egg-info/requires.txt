@@ -1,0 +1,8 @@
+tiktoken
+openai-whisper
+soundfile
+transformers
+datasets
+peft
+accelerate
+faster-whisper
