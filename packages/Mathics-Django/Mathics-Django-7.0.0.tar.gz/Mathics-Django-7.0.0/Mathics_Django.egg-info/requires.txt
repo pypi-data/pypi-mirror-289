@@ -1,0 +1,8 @@
+Mathics-Scanner<1.4,>=1.2.2
+Mathics3<7.1.0,>=7.0.0.dev0
+django>=4.0
+networkx>=3.0
+pygments
+requests
+
+[full]
