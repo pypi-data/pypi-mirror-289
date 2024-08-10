@@ -1,0 +1,13 @@
+fastshermanmorrison_pulsar-0.4.7.dist-info/RECORD,,
+fastshermanmorrison_pulsar-0.4.7.dist-info/WHEEL,sha256=Aa2u_xh_0i_8Kt2iHZC2QSFV0HykHoBya3mEjcivvUs,147
+fastshermanmorrison_pulsar-0.4.7.dist-info/LICENSE,sha256=NKBO2AeAp_z-8psAUyQyzThCcY0kNOyw6FJfV0IunoU,1077
+fastshermanmorrison_pulsar-0.4.7.dist-info/top_level.txt,sha256=LkHu7rnnHe4ngR4Kr1lIOr_1-XdpTQEcDQUiFme0qQQ,20
+fastshermanmorrison_pulsar-0.4.7.dist-info/AUTHORS.md,sha256=bhwTnl0fu0dfLVPNZj0Pz1c97Zbk-0IVUL4yaF33jDI,107
+fastshermanmorrison_pulsar-0.4.7.dist-info/METADATA,sha256=ux-V1mXHyVvcZTwk0yO7Oj7xctCBrTZxbA5WmP6DXKo,2782
+fastshermanmorrison/cython_fastshermanmorrison.cpython-39-x86_64-linux-gnu.so,sha256=VUm27Izbzth5Eic9XyHUEvzjXRgHqpVjF-lv5xz1lL0,3012392
+fastshermanmorrison/cython_fastshermanmorrison.pyx,sha256=tg7OEfiOf-n1RN6spm1PpJpRffwgB6TZQkPUD9abd3M,37357
+fastshermanmorrison/fastshermanmorrison.c,sha256=UFrArn6ehQO0urExDdnI8xWdJ7moltz0PaNPnZ8pOhA,5704
+fastshermanmorrison/cython_fastshermanmorrison.c,sha256=SLV3i94-ardzP4ycF-5oiOCNDTka_aOBHS_c04pfa8s,2001100
+fastshermanmorrison/_version.py,sha256=swwUIK4WtUiYyZYTfyyc_9CkUUoMvY9Mrqd1fsqa9_E,21
+fastshermanmorrison/__init__.py,sha256=qIGVMWIBjllfLdhP9S4SfHylAjtz7rYAdyKDsfgKibY,224
+fastshermanmorrison/fastshermanmorrison.py,sha256=NaeVvJZnpDDYGjB4Ssx9OorSdK7kee8sTsbKg0qcR3M,8671
