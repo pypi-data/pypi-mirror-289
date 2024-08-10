@@ -1,0 +1,9 @@
+libsfst.so,sha256=9Q9spbJHjxKVlhjEsV2rEpVvXkWEA1N2xBGL-IJMAaw,479905
+sfst.cpython-312-i386-linux-musl.so,sha256=L3oySyrv0yTt0w_15mvBtk8yMHJcf2x2-rhTm70vgkE,537265
+sfst-1.6.0.dist-info/COPYING,sha256=pFkyx5MX0VEW6tvxycb8WRF-w8RiHbOodgZt76cjljs,15127
+sfst-1.6.0.dist-info/RECORD,,
+sfst-1.6.0.dist-info/WHEEL,sha256=yjAngpH9Z8160or92r7RHfkV8Fbf0yT_vTW3fV4kVd8,110
+sfst-1.6.0.dist-info/top_level.txt,sha256=B4nZ1RkaIiZDWPbegAuOycpC347cOu3gx06yD0lkxpE,5
+sfst-1.6.0.dist-info/METADATA,sha256=BLU4HpKlc01vqNjXPbBVA0CqdE3fcpjg74rTrbH4GKk,1270
+sfst.libs/libgcc_s-8b50eaaa.so.1,sha256=WXj_FYQE1MDIyb-nN8siUALdxit6NHma0p9UxemQV8o,101649
+sfst.libs/libstdc++-8baf04f9.so.6.0.28,sha256=yrzOxg1heyJ9Y-43YCLLn04Cpl_A68FN0D2Q1iBTMcY,2428961
