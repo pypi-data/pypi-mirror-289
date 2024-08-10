@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: langchain-references
+Version: 0.2.29
+Summary: Component to manager referenced documents with LLM.
+Home-page: https://www.github.com/pprados/langchain-references
+License: Apache 2.0
+Author: Philippe PRADOS
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: langchain-core (>=0.2.29)
+Project-URL: Repository, https://www.github.com/pprados/langchain-references
+Description-Content-Type: text/markdown
+
+Langchain-Reference
+===================
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/pprados/langchain-references?quickstart=1)
+
+TODO
