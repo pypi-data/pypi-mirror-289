@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: wt_blk_pybindings
+Version: 0.1.2
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+
+# Publish to pypy
+```shell
+maturin publish
+```
