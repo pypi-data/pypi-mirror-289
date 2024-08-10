@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: csp_symphony
+Version: 0.1.0
+Summary: A csp adapter for symphony
+Author-email: the csp authors <CSPOpenSource@point72.com>
+Project-URL: Repository, https://github.com/point72/csp-adapter-symphony
+Project-URL: Homepage, https://github.com/point72/csp-adapter-symphony
+Keywords: csp,stream-processing,symphony,chat,chatbot
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Jupyter
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: csp-adapter-symphony
+
+# csp symphony adapter
+
+A [csp](https://github.com/point72/csp) adapter for [symphony](https://symphony.com)
+
+[![Build Status](https://github.com/point72/csp-adapter-symphony/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/point72/csp-adapter-symphony/actions?query=workflow%3A%22Build+Status%22)
+[![GitHub issues](https://img.shields.io/github/issues/point72/csp-adapter-symphony.svg)](https://github.com/point72/csp-adapter-symphony/issues)
+[![PyPI](https://img.shields.io/pypi/l/csp-adapter-symphony.svg)](https://pypi.python.org/pypi/csp-adapter-symphony)
+[![PyPI](https://img.shields.io/pypi/v/csp-adapter-symphony.svg)](https://pypi.python.org/pypi/csp-adapter-symphony)
+
+Please use `csp-adapter-symphony`
