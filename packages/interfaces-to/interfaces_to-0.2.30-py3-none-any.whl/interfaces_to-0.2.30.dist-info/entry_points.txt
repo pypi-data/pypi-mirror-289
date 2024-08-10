@@ -1,0 +1,3 @@
+[console_scripts]
+into=interfaces_to.cli:main
+
