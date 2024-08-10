@@ -1,0 +1,12 @@
+SuperTerminal/__init__.py,sha256=jfbAJZzC14_b5AaOld3yaoWaoz6I1ykxx6QosGzTI0k,103
+SuperTerminal/api_call.py,sha256=tUAr2Y0YMCh0HE2EGVhoQmj7Rd-FYne-3aYHQpQ01_8,1938
+SuperTerminal/const_var.py,sha256=N-6suMaJhPYxZtlEsGl-3InzmYdTnglvAkiidSCty9w,90
+SuperTerminal/error_handler.py,sha256=JcbpFUYhTOivEbZOeP5l6MrYB7wJT4iOCv8M8RKtlB0,250
+SuperTerminal/failed_command.py,sha256=zXjXpP0Vt-4EkZqsmfR5pkoUuLMexfa0vDeTVgo2Auc,1847
+SuperTerminal/main.py,sha256=Zgod3t020GtZ5n659t5F8filzTC7Cy8gjdJLf_d5ck4,1070
+SuperTerminal/system_run.py,sha256=RKTYfd9yS5ZmM83IPjBID2SPTzzsDqZQTf71orwM-is,248
+SuperTerminal-0.1.4.dist-info/METADATA,sha256=dvIhaPbyRXRwGSByCTKtmYU_ibNdoK5gKAFrpz7JpW4,562
+SuperTerminal-0.1.4.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+SuperTerminal-0.1.4.dist-info/entry_points.txt,sha256=zD2Q9_OvlFvSNh7t6DJ1MWWNVt8bxA9VlYbWoNeu8Kg,57
+SuperTerminal-0.1.4.dist-info/top_level.txt,sha256=cJQq0n_twO_1fOjOvI2ud1dykiNzF4G0ZIAQVD6z_nM,14
+SuperTerminal-0.1.4.dist-info/RECORD,,

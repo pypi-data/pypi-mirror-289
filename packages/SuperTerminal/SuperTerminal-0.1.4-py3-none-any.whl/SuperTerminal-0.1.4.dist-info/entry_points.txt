@@ -1,0 +1,2 @@
+[console_scripts]
+SuperTerminal = SuperTerminal:Main_Run
