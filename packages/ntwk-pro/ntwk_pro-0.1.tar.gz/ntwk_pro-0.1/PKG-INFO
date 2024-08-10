@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ntwk_pro
+Version: 0.1
+Summary: A package for network analysis and community detection, created by Gongruihao
+Author: Gongruihao
+Author-email: 202031200039@mail.bnu.edu.cn
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Network Generator
+
+A
+
+## Installation
+
+You can install this package via pip:
+
+```bash
+pip install ntwk_pro
