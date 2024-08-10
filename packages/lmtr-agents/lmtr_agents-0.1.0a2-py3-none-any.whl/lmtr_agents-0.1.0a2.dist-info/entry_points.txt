@@ -1,0 +1,2 @@
+[console_scripts]
+lmtr-agents = lmtr_agents.__main__:app
