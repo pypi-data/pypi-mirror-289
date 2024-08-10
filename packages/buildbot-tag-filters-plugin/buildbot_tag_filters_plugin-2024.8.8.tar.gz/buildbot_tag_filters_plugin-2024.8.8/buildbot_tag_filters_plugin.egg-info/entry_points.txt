@@ -1,0 +1,2 @@
+[buildbot.www]
+tag_filters_plugin = buildbot_tag_filters_plugin:ep
