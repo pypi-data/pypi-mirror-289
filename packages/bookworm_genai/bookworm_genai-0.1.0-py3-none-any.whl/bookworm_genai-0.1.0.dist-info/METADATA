@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: bookworm_genai
+Version: 0.1.0
+Summary: Bookworm - A LLM-powered bookmark search engine
+Author: kiran94
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: duckdb (>=1.0.0,<2.0.0)
+Requires-Dist: jq (>=1.7.0,<2.0.0)
+Requires-Dist: langchain (>=0.2.12,<0.3.0)
+Requires-Dist: langchain-community (>=0.2.11,<0.3.0)
+Requires-Dist: langchain-openai (>=0.1.20,<0.2.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: platformdirs (>=4.2.2,<5.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Description-Content-Type: text/markdown
+
+# bookworm
+
+[![main](https://github.com/kiran94/bookworm/actions/workflows/main.yml/badge.svg)](https://github.com/kiran94/bookworm/actions/workflows/main.yml)
+
+### Processes 
+
+*`bookworm sync`*
+
+```python
+python -m bookworm sync
+```
+
+```mermaid
+graph LR
+
+subgraph Bookmarks 
+    Chrome(Chrome Bookmarks)
+    Brave(Brave Bookmarks)
+end
+
+Bookworm(bookworm sync)
+
+EmbeddingsService(Embeddings Service e.g OpenAIEmbeddings)
+
+VectorStore(Vector Store e.g DuckDB)
+
+Chrome -->|load bookmarks|Bookworm
+Brave -->|load bookmarks|Bookworm
+
+Bookworm -->|vectorize bookmarks|EmbeddingsService-->|store embeddings|VectorStore
+```
+
+---
+
+*`bookworm ask`*
+
+```python
+python -m bookworm ask
+```
+
+```mermaid
+graph LR
+
+query
+Bookworm(bookworm ask)
+
+subgraph _
+    LLM(LLM e.g OpenAI)
+    VectorStore(Vector Store e.g DuckDB)
+end
+
+query -->|user queries for information|Bookworm
+
+Bookworm -->|simularity search|VectorStore -->|send similar docs + user query|LLM
+LLM -->|send back response|Bookworm
+```
+
+---
+
+
+### Developer Setup 
+
+```bash
+# LLMs
+export OPENAI_API_KEY=
+
+# Langchain (optional, but useful for debugging)
+export LANGCHAIN_API_KEY=
+export LANGCHAIN_TRACING_V2=true
+export LANGCHAIN_PROJECT=bookworm
+
+# Misc (optional)
+export LOGGING_LEVEL=INFO
+```
+
+Recommendations:
+
+- Install [`pyenv`](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation) and ensure [build dependencies are installed](https://github.com/pyenv/pyenv?tab=readme-ov-file#install-python-build-dependencies) for your OS.
+- Install [Poetry](https://python-poetry.org/docs/) we will be using [environment management](https://python-poetry.org/docs/managing-environments/) below.
+
+
+```bash
+poetry env use 3.9 # or path to your 3.9 installation
+
+poetry shell
+poetry install
+
+bookworm --help
+```
+
