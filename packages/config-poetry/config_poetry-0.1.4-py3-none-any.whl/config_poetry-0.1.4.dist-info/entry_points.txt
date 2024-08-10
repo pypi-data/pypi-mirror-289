@@ -1,0 +1,3 @@
+[console_scripts]
+config-analyzer=config_poetry.parser_1:main
+

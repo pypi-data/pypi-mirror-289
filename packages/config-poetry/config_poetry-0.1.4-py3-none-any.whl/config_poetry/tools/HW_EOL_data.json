@@ -1,0 +1,205 @@
+[
+  {
+    "End_of_Sale_Product": "PAN-2.5IN-HDD-2TB-PAIR",
+    "End_of_Life_Date": "2028-08-31",
+    "Resources": "/resources/datasheets/pa-5200-series-specsheet",
+    "Last_Supported_OS": "PAN-OS 11.2",
+    "Recommended_Replacement": "PAN-2.5IN-SSD-1.92TB-PAIR"
+  },
+  {
+    "End_of_Sale_Product": "PAN-QSFP-40GBASE-LM4",
+    "End_of_Life_Date": "2029-05-16",
+    "Resources": "/resources/datasheets/key-specs-for-paloalto-interface-transceivers",
+    "Last_Supported_OS": "TBD",
+    "Recommended_Replacement": "PAN-QSFP40G- BASE-LR4PAN-QSFP40G- BASE-BIDI"
+  },
+  {
+    "End_of_Sale_Product": "PA-800 Series(PA-820, PA-850)",
+    "End_of_Life_Date": "2029-08-31",
+    "Resources": "https://docs.paloaltonetworks.com/hardware/pa-800-hardware-reference",
+    "Last_Supported_OS": "PAN-OS 11.1^^^",
+    "Recommended_Replacement": "PA-1400 Series"
+  },
+  {
+    "End_of_Sale_Product": "ION 9000",
+    "End_of_Life_Date": "2029-08-01",
+    "Resources": "https://docs.paloaltonetworks.com/hardware/ion-9000-hardware-reference",
+    "Last_Supported_OS": "TBD",
+    "Recommended_Replacement": "ION 9200"
+  },
+  {
+    "End_of_Sale_Product": "ION 3000",
+    "End_of_Life_Date": "2029-08-01",
+    "Resources": "https://docs.paloaltonetworks.com/hardware/ion-3000-hardware-reference",
+    "Last_Supported_OS": "TBD",
+    "Recommended_Replacement": "ION 3200"
+  },
+  {
+    "End_of_Sale_Product": "M-200 and M-600",
+    "End_of_Life_Date": "2029-02-15",
+    "Resources": "https://docs.paloaltonetworks.com/hardware/m-200-m-600-appliances-hardware-reference/m-200_m-600-overview",
+    "Last_Supported_OS": "TBD",
+    "Recommended_Replacement": "M-300 and M-700"
+  },
+  {
+    "End_of_Sale_Product": "ION 1000",
+    "End_of_Life_Date": "2029-02-01",
+    "Resources": "https://docs.paloaltonetworks.com/hardware/ion-1000-hardware-reference",
+    "Last_Supported_OS": "TBD",
+    "Recommended_Replacement": "ION 1200"
+  },
+  {
+    "End_of_Sale_Product": "ION 2000",
+    "End_of_Life_Date": "2029-02-01",
+    "Resources": "https://docs.paloaltonetworks.com/hardware/ion-2000-hardware-reference",
+    "Last_Supported_OS": "TBD",
+    "Recommended_Replacement": "ION 1200-S"
+  },
+  {
+    "End_of_Sale_Product": "WF-500",
+    "End_of_Life_Date": "2028-12-31",
+    "Resources": "/products/secure-the-network/subscriptions/wf-500-wildfire-appliance",
+    "Last_Supported_OS": "TBD",
+    "Recommended_Replacement": "WF-500-B"
+  },
+  {
+    "End_of_Sale_Product": "PA-3200 Series(PA-3220, PA-3250, PA-3260)(PA-3220-ZTP, PA-3250-ZTP, PA-3260-ZTP)",
+    "End_of_Life_Date": "2028-08-31",
+    "Resources": "/resources/datasheets/pa-3200-series",
+    "Last_Supported_OS": "PAN-OS 11.1^^^",
+    "Recommended_Replacement": "PA-3400 Series"
+  },
+  {
+    "End_of_Sale_Product": "PA-5200 Series(PA-5220, PA-5250, PA-5260, PA-5280)",
+    "End_of_Life_Date": "2028-08-31",
+    "Resources": "/resources/datasheets/pa-5200-series-specsheet",
+    "Last_Supported_OS": "PAN-OS 11.2",
+    "Recommended_Replacement": "PA-5400 Series"
+  },
+  {
+    "End_of_Sale_Product": "PA-220",
+    "End_of_Life_Date": "2028-01-31",
+    "Resources": "/resources/datasheets/pa-220-specsheet",
+    "Last_Supported_OS": "PAN-OS 10.2^^",
+    "Recommended_Replacement": "PA-400 Series"
+  },
+  {
+    "End_of_Sale_Product": "ION 7000",
+    "End_of_Life_Date": "2027-02-01",
+    "Resources": "https://docs.paloaltonetworks.com/hardware/ion-7000-hardware-reference.html",
+    "Last_Supported_OS": "TBD",
+    "Recommended_Replacement": ""
+  },
+  {
+    "End_of_Sale_Product": "PA-7000-20GXM-NPCPA-7000-20GQXM-NPC",
+    "End_of_Life_Date": "2026-05-08",
+    "Resources": "/content/pan/en_US/network-security/next-generation-firewall/pa-7000-series",
+    "Last_Supported_OS": "PAN-OS 10.1\u2021",
+    "Recommended_Replacement": "PA-7000-100G-NPC-APA-7000-DPC-A"
+  },
+  {
+    "End_of_Sale_Product": "PA-7050-SMCPA-7080-SMCPA-7000-LPC",
+    "End_of_Life_Date": "2026-02-28",
+    "Resources": "/content/pan/en_US/network-security/next-generation-firewall/pa-7000-series",
+    "Last_Supported_OS": "PAN-OS 10.1\u2021",
+    "Recommended_Replacement": "PA-7050-SMC-BPA-7080-SMC-BPA-7000-LFC"
+  },
+  {
+    "End_of_Sale_Product": "K2-Series(PA-5280-K2, PA-7050-K2, PA-7080-K2)",
+    "End_of_Life_Date": "2026-02-28",
+    "Resources": "/content/pan/en_US/resources/datasheets/k2-series",
+    "Last_Supported_OS": "PAN-OS 10.1\u2021",
+    "Recommended_Replacement": "PA-5445PA-7500"
+  },
+  {
+    "End_of_Sale_Product": "M-500",
+    "End_of_Life_Date": "2025-02-28",
+    "Resources": "/content/pan/en_US/products/management/panorama.html",
+    "Last_Supported_OS": "PAN-OS 10.1\u2021",
+    "Recommended_Replacement": "M-300M-700"
+  },
+  {
+    "End_of_Sale_Product": "PA-3000 Series(PA-3020, PA-3050, PA-3060)",
+    "End_of_Life_Date": "2024-10-31",
+    "Resources": "/products/secure-the-network/next-generation-firewall/pa-3000-series",
+    "Last_Supported_OS": "PAN-OS 9.1++",
+    "Recommended_Replacement": "PA-3400 Series"
+  },
+  {
+    "End_of_Sale_Product": "PA-5000 Series(PA-5020, PA-5050, PA-5060)",
+    "End_of_Life_Date": "2024-01-31",
+    "Resources": "/products/secure-the-network/next-generation-firewall/pa-5000-series",
+    "Last_Supported_OS": "PAN-OS 8.1+",
+    "Recommended_Replacement": "PA-5400 Series"
+  },
+  {
+    "End_of_Sale_Product": "PA-7000-20G-NPCPA-7000-20GQ-NPC",
+    "End_of_Life_Date": "2024-01-31",
+    "Resources": "/content/pan/en_US/products/secure-the-network/next-generation-firewall/pa-7000-series.html",
+    "Last_Supported_OS": "PAN-OS 10.0^",
+    "Recommended_Replacement": "PA-7000-100G-NPC-APA-7000-DPC-A"
+  },
+  {
+    "End_of_Sale_Product": "PA-200",
+    "End_of_Life_Date": "2023-10-31",
+    "Resources": "/products/secure-the-network/next-generation-firewall/pa-200",
+    "Last_Supported_OS": "PAN-OS 8.1+",
+    "Recommended_Replacement": "PA-400 Series"
+  },
+  {
+    "End_of_Sale_Product": "PA-500",
+    "End_of_Life_Date": "2023-10-31",
+    "Resources": "/products/secure-the-network/next-generation-firewall/pa-500",
+    "Last_Supported_OS": "PAN-OS 8.1+",
+    "Recommended_Replacement": "PA-400 Series"
+  },
+  {
+    "End_of_Sale_Product": "M-100",
+    "End_of_Life_Date": "2023-10-31",
+    "Resources": "/content/pan/en_US/products/management/panorama",
+    "Last_Supported_OS": "(16GB) PAN-OS 8.1+(32GB) PAN-OS 9.1*",
+    "Recommended_Replacement": "M-300"
+  },
+  {
+    "End_of_Sale_Product": "PA-2000 Series(PA-2020, PA-2050)",
+    "End_of_Life_Date": "2020-04-30",
+    "Resources": "/products/secure-the-network/next-generation-firewall/pa-2000-series",
+    "Last_Supported_OS": "PAN-OS 7.1",
+    "Recommended_Replacement": "PA-1400 Series"
+  },
+  {
+    "End_of_Sale_Product": "PA-4000 Series(PA-4020, PA-4050, PA-4060)",
+    "End_of_Life_Date": "2019-04-30",
+    "Resources": "/products/secure-the-network/next-generation-firewall/pa-4000-series",
+    "Last_Supported_OS": "PAN-OS 7.1",
+    "Recommended_Replacement": "PA-1400 Series"
+  },
+  {
+    "End_of_Sale_Product": "GP-100",
+    "End_of_Life_Date": "2021-04-30",
+    "Resources": "/content/pan/en_US/products/globalprotect/subscription",
+    "Last_Supported_OS": "GlobalProtect Mobile Security Manager 6.2",
+    "Recommended_Replacement": ""
+  },
+  {
+    "End_of_Sale_Product": "LightCyber Magna Detector(D-300, D-500, D-1000)",
+    "End_of_Life_Date": "2020-12-31",
+    "Resources": "/resources/datasheets/cortex-xdr",
+    "Last_Supported_OS": "Magna 3.9",
+    "Recommended_Replacement": ""
+  },
+  {
+    "End_of_Sale_Product": "LightCyber Magna Probe(P-50T)",
+    "End_of_Life_Date": "2020-12-31",
+    "Resources": "/resources/datasheets/cortex-xdr",
+    "Last_Supported_OS": "Magna 3.9",
+    "Recommended_Replacement": ""
+  },
+  {
+    "End_of_Sale_Product": "LightCyber Magna Master (M-100)",
+    "End_of_Life_Date": "2020-12-31",
+    "Resources": "/resources/datasheets/cortex-xdr",
+    "Last_Supported_OS": "Magna 3.9",
+    "Recommended_Replacement": ""
+  }
+]
