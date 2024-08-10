@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cmoat
+Version: 0.1.0
+Summary: A toolkit for analysising cancer genomics & proteomics.
+Author-email: super_samantha <zhangsamantha9@gmail.com>, suisuishou <blightue@gmail.com>
+Project-URL: Homepage, https://cmoat.notion.site/CMoAT-Manual-c4ca7801421d4b06b25891988164952c?pvs=4
+Project-URL: Repository, https://github.com/ZhangSamantha9/CMOA.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: cptac >=1.5.7
+Requires-Dist: lifelines >=0.27.8
+Requires-Dist: matplotlib >=3.8.0
+Requires-Dist: numpy >=1.24.2
+Requires-Dist: pandas >=2.0.0
+Requires-Dist: Requests >=2.31.0
+Requires-Dist: scikit-learn >=1.3.0
+Requires-Dist: scipy >=1.11.2
+Requires-Dist: seaborn >=0.12.2
+Requires-Dist: statsmodels >=0.13.5
+
