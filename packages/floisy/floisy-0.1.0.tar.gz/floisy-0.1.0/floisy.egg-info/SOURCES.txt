@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+floisy/__init__.py
+floisy.egg-info/PKG-INFO
+floisy.egg-info/SOURCES.txt
+floisy.egg-info/dependency_links.txt
+floisy.egg-info/top_level.txt
