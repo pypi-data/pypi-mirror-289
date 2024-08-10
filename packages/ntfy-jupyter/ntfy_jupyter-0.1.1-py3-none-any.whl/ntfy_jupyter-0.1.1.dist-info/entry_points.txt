@@ -1,0 +1,3 @@
+[console_scripts]
+ntfy-jupyter=ntfy_jupyter:load_ipython_extension
+
