@@ -1,0 +1,2 @@
+[console_scripts]
+audiocat = sun22.audiocat:main
