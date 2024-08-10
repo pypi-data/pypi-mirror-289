@@ -1,0 +1,10 @@
+sqlalchemy_snowpark/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlalchemy_snowpark/connection.py,sha256=ZHIAu4LuH2BXCXG1WbS6BLXGbkUo7tz93uRN-yy4jng,2367
+sqlalchemy_snowpark/constants.py,sha256=T-LDaHaT8X-ZrR74T6QFyf_kCaBgis08XgHJBncomgA,663
+sqlalchemy_snowpark/helper.py,sha256=ke2fLC1Sub8uMJEFyCLARPxdMoKVF9xedWrgcYWWcZw,671
+sqlalchemy_snowpark/logger.py,sha256=kju97CmWC7GUv7Qh44MPftY8jEgjnZmXoQLtnAAk7Lg,305
+sqlalchemy_snowpark-0.5.dist-info/LICENSE,sha256=yPX1a5Z80E3lrP_cyv7RHU_OtZcTK09Rp92upYb8eMQ,1068
+sqlalchemy_snowpark-0.5.dist-info/METADATA,sha256=WAWaXnZ48OuniQ3Id5DdUWjBmqOm2J82A-L9EC0HiWc,12408
+sqlalchemy_snowpark-0.5.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+sqlalchemy_snowpark-0.5.dist-info/top_level.txt,sha256=mQN4DgEnWukj7CspMMzfo06kic1M_3sX7kP-TKtVd5Y,20
+sqlalchemy_snowpark-0.5.dist-info/RECORD,,
