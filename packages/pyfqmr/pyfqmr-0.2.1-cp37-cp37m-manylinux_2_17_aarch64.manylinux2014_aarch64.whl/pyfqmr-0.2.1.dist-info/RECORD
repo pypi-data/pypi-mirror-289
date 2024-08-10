@@ -1,0 +1,9 @@
+pyfqmr-0.2.1.dist-info/RECORD,,
+pyfqmr-0.2.1.dist-info/WHEEL,sha256=9jsgp3F0aAxUY4VBcIJx9mp7MqSh2cemYM7-PW1W5dA,152
+pyfqmr-0.2.1.dist-info/LICENSE,sha256=AZdT96SyInKVR1MUJRzWW7Kb0QnmH0oky29XduMD25E,1065
+pyfqmr-0.2.1.dist-info/top_level.txt,sha256=3uGhpvmIA3O4AbEmef4YmNLpU7aC6h6gePtTcBjuw_c,7
+pyfqmr-0.2.1.dist-info/METADATA,sha256=VaN0VSRJh3D6jDpAlOi-JlSFE0TIwWbZVoR8k6hMbSI,3831
+pyfqmr/Simplify.cpython-37m-aarch64-linux-gnu.so,sha256=Sb9R3mBMZ8889rqe-PNHV70nxWQ5teqsANqKEePV-e4,2752360
+pyfqmr/Simplify.h,sha256=VabDP44JieRA9tOgHEF0rVIL5d6uXlXxJtUR84LsH90,30878
+pyfqmr/__init__.py,sha256=m5XhES3bG6gA-udX4w7rXcAuxsNapkPwhJxNIOSN-Mo,23
+pyfqmr/Simplify.pyx,sha256=bY6zGbGin6YqoC4Uh4XgGOp_ShmWwQbDWAcbLWzVeWw,7915
