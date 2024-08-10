@@ -1,0 +1,2 @@
+[console_scripts]
+pg_summary = pg_summary.pg_summary:cli
