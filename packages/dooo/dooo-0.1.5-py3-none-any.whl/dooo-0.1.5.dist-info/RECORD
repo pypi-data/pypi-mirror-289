@@ -1,0 +1,10 @@
+dooo/__init__.py,sha256=bCcGIFNS35hZH8SoNDZCCsIBPezk3J0U2tDGNthdYfM,267
+dooo/code_execution.py,sha256=87b492PwjvBpR-fZNd2rvDX2jCeGsFF-FQnHcU-GkYE,1197
+dooo/core.py,sha256=7mP7VUEdp2-t__XVBQm-YEKJpnrqdJbhigB78h6sfjI,3308
+dooo/llm_utils.py,sha256=PJJFnrgWeiBgpdsxfzbKnxtKIewU1563q3veCulb0gA,352
+dooo/prompts.py,sha256=699J4nPlyeGo4a46hzvDeFSMIofCdeMhMvoGWSV2sGk,1020
+dooo-0.1.5.dist-info/LICENSE,sha256=FLyOr9-1k3mrXmgvVwNJmGaqXsdCaG_EStGA-Bixqro,1083
+dooo-0.1.5.dist-info/METADATA,sha256=BIm5gewwxKJI-UkRzCpRNELYH7DHzcKaLr2RK-DyOYY,2109
+dooo-0.1.5.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+dooo-0.1.5.dist-info/top_level.txt,sha256=dbImbi6C5YtZCaBgZeWe_mjW2qo-AW0otDyM3U_9X4M,5
+dooo-0.1.5.dist-info/RECORD,,
