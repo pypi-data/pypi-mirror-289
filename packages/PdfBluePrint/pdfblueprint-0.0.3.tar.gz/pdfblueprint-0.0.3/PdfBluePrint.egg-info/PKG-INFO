@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: PdfBluePrint
+Version: 0.0.3
+Summary: Beautify PDF Colors for CMYK printer without K color
+Home-page: https://github.com/jomoly/PdfBluePrint
+Author: John Lu
+Author-email: jomoly@gmail.com
+License: LGPL
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: frontend
+Requires-Dist: Fitz
+Requires-Dist: Pillow
+Requires-Dist: numpy
+Requires-Dist: img2pdf
+
+# Beauty your PDF Blue Print effects. Erase (Blac)K Color from your  CMYK.
+
+## Source
+
+  - `PdfBluePrint.py`:  Excecute all 0-4 functions together and show the working status. Include: 
+  - `0-temp_del.py`: clean the temporary files in working folder. 0th step.
+  - `1-pdf2img.py`: split your PDF files into images. 1st step.
+  - `2-black2final.py`:  erase the K color from images. 2nd step.
+  - `3-img2pdf.py`: combine the images into PDF format. 3rd step.
+  - `4-dir_del.py`: clean the temporary files in working folder. 4th step.
+You can comments any step as you need.
+ 
+###### Output
+
+- A pdf file with the name Output-YYYY-MM-DD-hh-mm-ss.pdf; the time is from local computer, the processing end time point.
+
+## Usage
+
+```bash
+# Clone project
+$ git clone https://github.com/jomoly/pdfblueprint.git
+$ cd PdfBluePrint/
+
+# Install dependencies
+$ python3 setup.py install
+
+# Run default decipherment (Caesar cipher with hint, alphabet size = 5, hint always at the first place)
+$ python3 PdfBluePrint.py
+	No More parameters needed.
+```
+This work is under LGPL agreement.
+Enjoy.Your feedback is welcomed.
