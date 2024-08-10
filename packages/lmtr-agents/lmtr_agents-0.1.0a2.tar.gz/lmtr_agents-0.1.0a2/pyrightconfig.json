@@ -1,0 +1,9 @@
+{
+   "include": ["tests", "lmtr_agents"],
+  "venvPath": ".venv",
+  "reportTypeshedErrors": false,
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+  "pythonVersion": "3.8",
+  "ignore": []
+}
