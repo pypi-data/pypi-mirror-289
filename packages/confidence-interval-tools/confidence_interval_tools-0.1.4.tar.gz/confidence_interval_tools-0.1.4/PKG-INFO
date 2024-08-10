@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: confidence-interval-tools
+Version: 0.1.4
+Summary: A small package for calculating drawing confidence intervals.
+Home-page: https://gitlab.com/aufildelanuit/confidence-interval-tools
+License: MIT
+Keywords: data science,confidence intervals,graphing,extreme values
+Author: Yohann OPOLKA
+Author-email: yohann.opolka@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: matplotlib (>=3.9,<4.0)
+Requires-Dist: numpy (>=1.26,<2.0)
+Requires-Dist: pandas (>=2.2,<3.0)
+Requires-Dist: scipy (>=1.14,<2.0)
+Requires-Dist: seaborn (>=0.13,<0.14)
+Project-URL: Repository, https://gitlab.com/aufildelanuit/confidence-interval-tools
+Description-Content-Type: text/markdown
+
+# Confidence Interval Tools
+
+A small python library for calculating and drawing confidence intervals. 
+
+
+1. [Requirements](#requirements)
+2. [Status](#status)
+3. [Documentation](#documentation)
+
+
+## Requirements 
+
+```python
+Python^3.12   ## might also work with lower versions, but untested  
+pandas^2.2  
+matplotlib^3.9  
+seaborn^0.13  
+scipy^1.14  
+numpy^1.26
+```
+
+
+## Status
+
+> [!WARNING]  
+> The project is in a very early development phase. Expect important changes between updates. 
+
+
+## Documentation
+
+> [!NOTE]  
+> The full documentation is currently unavailable, but will be provided in upcoming versions.  
+
+
