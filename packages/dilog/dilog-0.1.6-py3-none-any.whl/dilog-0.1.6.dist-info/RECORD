@@ -1,0 +1,12 @@
+dilog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dilog/logger.py,sha256=Xnc8C2cXruYfdMTGKV2uJpyAEO-eezPCzjBmtWbYDiM,2121
+dilog/logging_config.yaml,sha256=q4AvUMYIaHteua2j015lTgPNYXq3GUxxUIQhryXCsk8,391
+dilog/upload_log.py,sha256=TQ-ckex3BxkJfxcRG_AwL85xpvOIMOh8-l-YwlCY5Oo,2663
+dlog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlog/logger.py,sha256=E5jFha1HZyjDOTd9ME3muag7FPGMPBTUwWE6BwBQkbU,1949
+dlog/upload_log.py,sha256=swrnc-Iwp50QEJjLF7gqo1U03xRg5ImnCWphRC3T5VM,2116
+dilog-0.1.6.dist-info/LICENSE,sha256=KgQMZRoJxjMVMwHoqZOvNz4uA0go6XT3G_dgxJiRo6I,1081
+dilog-0.1.6.dist-info/METADATA,sha256=MNjCNwFgF_parQDrEGxpqS0hyzf8iBdB9vKdLPpPNLU,1920
+dilog-0.1.6.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+dilog-0.1.6.dist-info/top_level.txt,sha256=1ddjnHTKZbWsjZpJTgrrnCn6gftYlEAaRqXDnBWbK4E,6
+dilog-0.1.6.dist-info/RECORD,,
