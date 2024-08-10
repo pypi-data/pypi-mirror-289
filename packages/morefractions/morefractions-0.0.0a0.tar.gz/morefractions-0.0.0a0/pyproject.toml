@@ -1,0 +1,15 @@
+[project]
+name = "morefractions"
+version = "0.0.0a0"
+authors = [{name="Te Du", email="tdu0915@gmail.com"}]
+description = "A package with various classes and functions to manipulate fractions"
+readme = "README.md"
+requires-python = ">= 3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/meowdog011011/morefractions-py"
+Issues = "https://github.com/meowdog011011/morefractions-py/issues"
