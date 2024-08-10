@@ -1,0 +1,16 @@
+g4f
+MukeshAPI
+pypresence
+curl_cffi
+pygame
+pygame_gui
+vk_api
+pyautogui
+googletrans
+rcon
+discord
+pywebio
+mcstatus
+pyjokes
+googleapiclient
+segno
