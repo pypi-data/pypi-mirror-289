@@ -1,0 +1,10 @@
+README.md
+setup.py
+nautilus-forgepy/__init__.py
+nautilus-forgepy/module1.py
+nautilus-forgepy/module2.py
+nautilus_forgepy.egg-info/PKG-INFO
+nautilus_forgepy.egg-info/SOURCES.txt
+nautilus_forgepy.egg-info/dependency_links.txt
+nautilus_forgepy.egg-info/requires.txt
+nautilus_forgepy.egg-info/top_level.txt
