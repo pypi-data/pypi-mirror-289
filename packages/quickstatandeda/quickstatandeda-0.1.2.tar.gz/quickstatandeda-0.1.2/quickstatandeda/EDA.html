@@ -1,0 +1,686 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quick Statistics and Exploratory Data Analysis Report</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7O4R0zMQ3f2kZdBc6sP9vO4R0zMQ3f2kZdBc6sP9vO4fVQ8tJaT5fs7iU1z8K6J4t4d1K6Zn6A/FA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            /* Global Styles */
+            html, body {
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+                overflow-x: hidden; /* Prevent horizontal scroll */
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+            }
+
+            /* Header Styles */
+            header {
+                background-color: #000000; /* Black background */
+                color: white;
+                padding: 20px 10px;
+                text-align: center;
+                position: sticky;
+                top: 0;
+                width: 100%;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            header .logo {
+                display: flex;
+                align-items: center;
+            }
+
+            header .logo img {
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5em;
+                font-weight: normal;
+                display: inline-block;
+            }
+
+            header nav a {
+                color: white;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 1.1em;
+                transition: color 0.3s ease;
+            }
+
+            header nav a:hover {
+                color: #ddd;
+            }
+            
+            .plot {
+                text-align: center;
+                margin: 10px 0;
+            }
+            .plot img {
+                max-width: 100%; /* Ensures the image is responsive */
+                height: auto; /* Maintains aspect ratio */
+            }
+            .table-responsive {
+                overflow-x: auto;
+            }
+            .table {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 1rem;
+                background-color: transparent;
+            }
+
+            /* Subsection Title Styles */
+            ol {
+                padding-left: 0;
+                list-style: none; /* Remove default list styling */
+            }
+            ol li {
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: 10px 0;
+                margin-bottom: 15px;
+                background-color: #ffffff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            /* Button Styles */
+            .top-button {
+                margin-top: 20px;
+                padding: 10px 15px;
+                background-color: #000000; /* Black button */
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .top-button:hover {
+                background-color: #333333;
+            }
+
+            /* Container Styles */
+            .container {
+                max-width: 100%;
+                margin: auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            /* Section Styles */
+            section {
+                padding: 60px 20px;
+                text-align: center;
+                background-color: #f4f4f9;
+                border-bottom: 1px solid #ddd;
+                min-height: 150px; /* Add min-height for visibility */
+            }
+
+            section:nth-child(even) {
+                background-color: #e2e2eb;
+            }
+
+            section h2 {
+                font-size: 2em;
+                margin-bottom: 10px;
+            }
+
+            /* Footer Styles */
+            footer {
+                background-color: #000000; /* Black background */
+                color: white;
+                text-align: center;
+                padding: 15px;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                header h1 {
+                    font-size: 2em;
+                }
+
+                header nav a {
+                    font-size: 1em;
+                    margin: 0 10px;
+                }
+
+                header {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                header nav {
+                    margin-top: 10px;
+                }
+
+                section {
+                    padding: 40px 10px;
+                }
+
+                section h2 {
+                    font-size: 1.8em;
+                }
+
+                ol li {
+                    font-size: 1.1em;
+                    padding: 8px 15px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Header Section -->
+        <header id="top">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKvslzr0H2trJJ-BvlhfF8WJYu0n1fwrvjrg&s" alt="Logo">
+                <h1>Preliminary Study</h1>
+            </div>
+            <nav>
+                <a href="#summary"><i class="fas fa-chart-pie"></i> Summary Statistics</a>
+                <a href="#eda"><i class="fas fa-chart-line"></i> Exploratory Data Analysis</a>
+                <a href="#regression"><i class="fas fa-chart-bar"></i> Preliminary Regression Analysis</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container">
+            <section id="summary">
+                <h2>Summary Statistics</h2>
+                <ol>
+                
+                    <li>Numeric Features
+                    <div class="table-responsive">
+                        <table border="2" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>a</th>
+      <th>d</th>
+      <th>e</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2.0</td>
+      <td>230.25</td>
+      <td>302.25</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.0</td>
+      <td>179.288176</td>
+      <td>127.335188</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.0</td>
+      <td>42.0</td>
+      <td>123.0</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1.5</td>
+      <td>102.75</td>
+      <td>271.5</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2.0</td>
+      <td>223.5</td>
+      <td>331.5</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2.5</td>
+      <td>351.0</td>
+      <td>362.25</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>3.0</td>
+      <td>432.0</td>
+      <td>423.0</td>
+    </tr>
+    <tr>
+      <th>number of nan</th>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Shprio Wilk p value</th>
+      <td>1.0</td>
+      <td>0.669265</td>
+      <td>0.450092</td>
+    </tr>
+    <tr>
+      <th>Anderson Darling result</th>
+      <td>is not from a normal distribution at 0.05</td>
+      <td>is from a normal distribution at 0.05</td>
+      <td>is from a normal distribution at 0.05</td>
+    </tr>
+    <tr>
+      <th>data type</th>
+      <td>float64</td>
+      <td>int64</td>
+      <td>int64</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                    </li>
+            
+                    <li>Categorical Features
+                    <div class="table-responsive">
+                        <table border="2" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>q</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>number of nan</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>unique values</th>
+      <td>'q': 1, 'w': 1, 'e': 1</td>
+    </tr>
+    <tr>
+      <th>data type</th>
+      <td>object</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                    </li>
+            
+                    <li>Date Time Features
+                    <div class="table-responsive">
+                        <table border="2" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>latest date time</th>
+      <td>2020-03-03 00:00:00</td>
+    </tr>
+    <tr>
+      <th>earliest date time</th>
+      <td>2020-03-03 00:00:00</td>
+    </tr>
+    <tr>
+      <th>date time range</th>
+      <td>3682 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>number of nan</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>data type</th>
+      <td>datetime64[ns]</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                    </li>
+            
+                    <li>Outlier Records of Feature e
+                    <div class="table-responsive">
+                        <table border="2" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+      <th>d</th>
+      <th>e</th>
+      <th>modified_z_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>q</td>
+      <td>2010-02-02</td>
+      <td>42</td>
+      <td>123</td>
+      <td>-6.061135</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                    </li>
+            
+                </ol>
+                <a href="#top" class="top-button">Back to Top</a>
+            </section>
+
+            <section id="eda">
+                <h2>Exploratory Data Analysis</h2>
+                <ol>
+                
+                        <li>Heatmap of Correlation Matrix
+                        <div class="plot">
+                            <img src="visuals/correlation_heatmap.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                        <li>Heatmap of Missing Values
+                        <div class="plot">
+                            <img src="visuals/missing_value_heatmap.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                        <li>Q-Q Plot of Feature a
+                        <div class="plot">
+                            <img src="visuals/a_qqplot.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                        <li>Q-Q Plot of Feature d
+                        <div class="plot">
+                            <img src="visuals/d_qqplot.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                        <li>Q-Q Plot of Feature e
+                        <div class="plot">
+                            <img src="visuals/e_qqplot.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                        <li>Lineplot On All Numeric Features Paired with Date Time Features
+                        <div class="plot">
+                            <img src="visuals/lineplot_all_numeric_vs_datetime.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                        <li>Cluster Map On All Numeric Features
+                        <div class="plot">
+                            <img src="visuals/cluster_map.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                        <li>Pairplot On All Numeric Features
+                        <div class="plot">
+                            <img src="visuals/pairplot_numeric.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                        <li>Countplot On All Categorical Features
+                        <div class="plot">
+                            <img src="visuals/countplot_categorical.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                        <li>Boxplot On All Categorical Features Paired with Numeric Features
+                        <div class="plot">
+                            <img src="visuals/boxplot_all_numeric_vs_categorical.png" alt="EDA Visual" class="img-fluid">
+                        </div>
+                        </li>
+                    
+                </ol>  
+                <a href="#top" class="top-button">Back to Top</a>
+            </section>
+
+            <section id="regression">
+                <h2>Preliminary Regression Analysis</h2>
+                <ol>
+                
+                            <li>Forward Selection
+                            <div class="table-responsive">
+                                <table border="2" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Step</th>
+      <th>Predictor Entered</th>
+      <th>AIC</th>
+      <th>BIC</th>
+      <th>R-squared</th>
+      <th>Adjusted R-sqaured</th>
+      <th>Log-likelihood</th>
+      <th>P-value</th>
+      <th>F-test significance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Intercept</td>
+      <td>27.718295</td>
+      <td>26.411442</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>-12.859148</td>
+      <td>0.319851</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+                            </div>
+                            </li>
+                        
+                            <li>Backward Selection
+                            <div class="table-responsive">
+                                <table border="2" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Step</th>
+      <th>Predictor Entered</th>
+      <th>AIC</th>
+      <th>BIC</th>
+      <th>R-squared</th>
+      <th>Adjusted R-sqaured</th>
+      <th>Log-likelihood</th>
+      <th>F-test significance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Full Model</td>
+      <td>-99.429788</td>
+      <td>-102.043493</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>51.714894</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+                            </div>
+                            </li>
+                        
+                            <li>All Possible Selection
+                            <div class="table-responsive">
+                                <table border="2" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Index</th>
+      <th>Predictors</th>
+      <th>AIC</th>
+      <th>BIC</th>
+      <th>R-squared</th>
+      <th>Adjusted R-sqaured</th>
+      <th>Log-likelihood</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>a</td>
+      <td>-112.811870</td>
+      <td>-115.425575</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>58.405935</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>d</td>
+      <td>-110.900847</td>
+      <td>-113.514553</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>57.450423</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>a + d</td>
+      <td>-99.429788</td>
+      <td>-102.043493</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>51.714894</td>
+    </tr>
+  </tbody>
+</table>
+                            </div>
+                            </li>
+                        
+                            <li>Best Models
+                            <div class="table-responsive">
+                                <table border="2" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Criterion</th>
+      <th>Predictors</th>
+      <th>AIC</th>
+      <th>BIC</th>
+      <th>R-squared</th>
+      <th>Adjusted R-sqaured</th>
+      <th>Log-likelihood</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Best AIC</td>
+      <td>a</td>
+      <td>-112.811870</td>
+      <td>-115.425575</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>58.405935</td>
+    </tr>
+    <tr>
+      <td>Best BIC</td>
+      <td>a</td>
+      <td>-112.811870</td>
+      <td>-115.425575</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>58.405935</td>
+    </tr>
+    <tr>
+      <td>Best R-squared</td>
+      <td>a</td>
+      <td>-112.811870</td>
+      <td>-115.425575</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>58.405935</td>
+    </tr>
+    <tr>
+      <td>Best R-squared</td>
+      <td>d</td>
+      <td>-110.900847</td>
+      <td>-113.514553</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>57.450423</td>
+    </tr>
+    <tr>
+      <td>Best R-squared</td>
+      <td>a + d</td>
+      <td>-99.429788</td>
+      <td>-102.043493</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>51.714894</td>
+    </tr>
+    <tr>
+      <td>Best Log-likelihood</td>
+      <td>a</td>
+      <td>-112.811870</td>
+      <td>-115.425575</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>58.405935</td>
+    </tr>
+  </tbody>
+</table>
+                            </div>
+                            </li>
+                        
+                </ol>  
+                <a href="#top" class="top-button">Back to Top</a>         
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; Quick Statistics and Exploratory Data Analysis Report</p>
+        </footer>
+
+    </body>
+    </html>
+    
