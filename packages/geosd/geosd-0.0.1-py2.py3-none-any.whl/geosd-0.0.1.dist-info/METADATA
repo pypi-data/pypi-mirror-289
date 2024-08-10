@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: geosd
+Version: 0.0.1
+Summary: Python Package demo for Geographic Software Design 2024
+Author-email: Victory Sunday Chinmerem <chi42983@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/victorysundayc/geosd
+Keywords: geosd
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: geosd[extra] ; extra == 'all'
+Provides-Extra: extra
+Requires-Dist: pandas ; extra == 'extra'
+
+# geosd
+
+
+[![image](https://img.shields.io/pypi/v/geosd.svg)](https://pypi.python.org/pypi/geosd)
+[![image](https://img.shields.io/conda/vn/conda-forge/geosd.svg)](https://anaconda.org/conda-forge/geosd)
+
+
+**Python Package demo for Geographic Software Design 2024**
+
+
+-   Free software: MIT License
+-   Documentation: https://victorysundayc.github.io/geosd
+    
+
+## Features
+
+-   TODO

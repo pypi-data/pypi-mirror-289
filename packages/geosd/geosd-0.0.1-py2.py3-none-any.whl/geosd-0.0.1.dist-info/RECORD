@@ -1,0 +1,9 @@
+geosd/__init__.py,sha256=z7D3UhCLWJNOZWBvg-pEd1k2XvSoRDoPcvg7vVLoYqk,135
+geosd/common.py,sha256=Si4ZvbkkaVGyKrOa7gmsVNWS2Abtji-V5nEsJhrIM3M,188
+geosd/geosd.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+geosd-0.0.1.dist-info/LICENSE,sha256=NTfKETwnQusGQs7Q2B_Osd0lZGOnj38B0gjWFLJrlOo,1083
+geosd-0.0.1.dist-info/METADATA,sha256=qqfQsytk5vaIVe-f4rDuAler9Hp5sX2YgGs9BgG26w0,1282
+geosd-0.0.1.dist-info/WHEEL,sha256=XRxW4r1PNiVhMpP4bT9oWtu3HyndxpJ84SkubFgzp_Y,109
+geosd-0.0.1.dist-info/entry_points.txt,sha256=0YH7DCG9Cxq8tkzRQHggZReNzw7b0bUOaV3vr_a5-Gk,41
+geosd-0.0.1.dist-info/top_level.txt,sha256=0FcDyrEj3zq9OjGdgVEc7UNTiyhscYQ9WGbDj9vYXYE,6
+geosd-0.0.1.dist-info/RECORD,,
