@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: aijson-db
+Version: 0.1.1
+Summary: AI JSON Database Actions
+License: MIT
+Author: Rafael Irgolic
+Author-email: hello@irgolic.com
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Provides-Extra: pg
+Provides-Extra: sqlite
+Requires-Dist: aijson-core
+Requires-Dist: aiosqlite (>=0.20.0,<0.21.0) ; extra == "sqlite" or extra == "all"
+Requires-Dist: asyncpg (>=0.29.0,<0.30.0) ; extra == "pg" or extra == "all"
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: psycopg2 (>=2.9.9,<3.0.0) ; extra == "pg" or extra == "all"
+Requires-Dist: sqlalchemy (>=2.0.30,<3.0.0)
+Description-Content-Type: text/markdown
+
+# AI JSON – DB
+
+This package contains AI JSON actions for interacting with relational databases.
