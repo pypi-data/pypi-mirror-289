@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: BuckTheDuck
+Version: 0.0.3
+Summary: This package will help you have more meaningful commit messages
+Author: Yoav Alroy
+Author-email: yoavalro@gmail.com
+License: MIT
+Keywords: GIT,GENAI,AUTOMATION,CLI
+Requires-Python: >=3.9
+Requires-Dist: setuptools
+Requires-Dist: importlib-resources
+Requires-Dist: pygit2
+Requires-Dist: unidiff
+Requires-Dist: google-generativeai
+Requires-Dist: IPython
+Requires-Dist: throttle
+Requires-Dist: openai
+Requires-Dist: py-mini-racer
+
