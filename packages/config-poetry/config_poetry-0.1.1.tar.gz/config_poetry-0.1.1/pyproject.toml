@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "config-poetry"
+version = "0.1.1"
+description = ""
+authors = ["Omar Fareed <ofareed@paloaltonetworks.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+config-analyzer = "config_poetry.parser_1:main"
+
+[[tool.poetry.source]]
+name = "artifactory"
+url = "https://art.code.pan.run/artifactory/api/pypi/pypi.org/simple"
+priority = "default"
+
+
+[[tool.poetry.source]]
+name = "artifactory-ngfw"
+url = "https://art.code.pan.run/artifactory/api/pypi/pypi-coe-ngfw-automation/simple"
+priority = "supplemental"
+
+[tool.semantic_release.remote]
+token = { env = "GL_TOKEN" }
+type = "gitlab"
+
+[tool.semantic_release.branches.main]
+match = "(main|master)"
+prerelease_token = "rc"
+prerelease = false
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
