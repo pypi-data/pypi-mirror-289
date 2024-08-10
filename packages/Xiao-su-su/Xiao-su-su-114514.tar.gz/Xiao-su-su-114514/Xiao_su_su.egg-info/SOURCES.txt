@@ -1,0 +1,7 @@
+setup.py
+Xiao_su_su.egg-info/PKG-INFO
+Xiao_su_su.egg-info/SOURCES.txt
+Xiao_su_su.egg-info/dependency_links.txt
+Xiao_su_su.egg-info/top_level.txt
+Xisosusu520/__init__.py
+Xisosusu520/setup.py
