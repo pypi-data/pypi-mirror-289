@@ -1,0 +1,13 @@
+keeleastrolab/__init__.py,sha256=gzHCqs3aK8SCv_fkca5mCQpUP4NLvmcrAiv9eY2zPos,85
+keeleastrolab/astrometry_index_files.csv,sha256=RTydxP3plaz17krgS78iEwPs9WFnZkeQn9ZyKyaFq3w,265
+keeleastrolab/bright_star_cat.csv,sha256=d0a9wigvqXg76oDy6DNN2k4G8MmuPPfEdr0hueYASxM,626844
+keeleastrolab/camera_database.csv,sha256=jJG0Xolhh-tAWz8vl41fWGyOP5QSHEnNFSmMBG0fwMc,224
+keeleastrolab/raw2fits.py,sha256=DKwGnPmKoxsqmP0E55vSapWXeCVScq70rwyMrfHSFww,22469
+keeleastrolab/stackfits.py,sha256=sbB_m5h0j90Udq1LByh1fWPV0cusUtAUF_GR0rE1_hM,5111
+keeleastrolab/tools.py,sha256=vpvwXKTnP0RF-8cv2hXXfwgJoRvMSWCEba0rcONs-kw,18527
+keeleastrolab-0.1.0.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+keeleastrolab-0.1.0.dist-info/METADATA,sha256=U8-xAhCcNrx34ID_iO0R4PNb-edvXzbL56Q98ZKp0FI,741
+keeleastrolab-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+keeleastrolab-0.1.0.dist-info/entry_points.txt,sha256=hxZFjVFIuYmFe_qhVRmgp17b9b__qH5w25Fh5h767mA,98
+keeleastrolab-0.1.0.dist-info/top_level.txt,sha256=4pQB6u_oEXmkQldumeyRX5Ws6B1IG-paeLpPg0D7bs8,14
+keeleastrolab-0.1.0.dist-info/RECORD,,
