@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+include sitewide/middleware/config.yaml
+recursive-include sitewide/static *
+recursive-include sitewide/templates *
+recursive-include docs *
