@@ -1,0 +1,2 @@
+[console_scripts]
+geo_subsample = geo_subsampler.phylogenetic_diversity:main
