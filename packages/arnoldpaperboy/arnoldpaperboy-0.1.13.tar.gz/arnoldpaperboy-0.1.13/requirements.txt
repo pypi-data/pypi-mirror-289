@@ -1,0 +1,11 @@
+dealer==2.1.0
+google-api-core==2.19.1
+google-auth==2.33.0
+google-auth-oauthlib==1.2.1
+google-cloud-core==2.4.1
+google-cloud-logging==3.11.1
+google-cloud-monitoring==2.22.2
+googleapis-common-protos==1.63.2
+grpc-google-iam-v1==0.13.1
+grpcio==1.65.4
+six==1.16.0
