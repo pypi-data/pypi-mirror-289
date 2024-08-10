@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py_person_detector"
+version = "0.0.1"
+authors = [
+  { name="k3y5tr0k3", email="k3y5tr0k3.software@gmail.com" },
+]
+description = "A high level API for detecting and tracking people."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/k3y5tr0k3/person-detector"
+Issues = "https://github.com/k3y5tr0k3/person-detector/issues"
