@@ -1,0 +1,11 @@
+tal_ntwk/__init__.py,sha256=6DEYjrMna9ITrmvJ3Sm7kWLs_Q2TGS-0Ja3hS-G8n7k,219
+tal_ntwk/basic_index_dict.py,sha256=DrvbkBy9R1cG6Ww4QReoHhVxKo3YSLDKOCtX5UXBsdE,1262
+tal_ntwk/clifin.py,sha256=OvoPoKwD54bg6AXeiSa7y6TNO5Y6ejxVf_AUpFtH-sM,1486
+tal_ntwk/create_network.py,sha256=aLcMRIbRvtvRHQ09WhIntw-C1HMhFZGohD30lEClq8A,1344
+tal_ntwk/filter_sequence.py,sha256=geDgVgc6m8WXZmKSuJD4SJotAEP4ly55b4USvBunQSE,686
+tal_ntwk/find_community_byhost.py,sha256=989B2OvWacFo1Zpnw8zH0VXEWb9WQmSZjoWlO4Z272Y,41572
+tal_ntwk-0.1.dist-info/LICENSE.txt,sha256=UIp30ue1HZit7tMmSK0SS3swJBqOcLLnLJn5LY5YdNE,1036
+tal_ntwk-0.1.dist-info/METADATA,sha256=RGPvhwmHMBSvyEJFhBTEU-B2LFSnhVtCUcS-0qR62pk,772
+tal_ntwk-0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+tal_ntwk-0.1.dist-info/top_level.txt,sha256=HuYlfR-Ymm4C0DIz7vjFckFxsa3HuTvw3ZspFC4BJ_Q,9
+tal_ntwk-0.1.dist-info/RECORD,,
