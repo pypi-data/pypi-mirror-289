@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "impotsgouvdata"
+version = "0.1.0"
+description = "Retrieve taxpayer data from impots.gouv.fr."
+authors = ["Pierre Gobin <p.dev@gobin.cc>"]
+readme = "README.md"
+license = "CECILL-C"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.12.3"
+lxml = "^5.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
