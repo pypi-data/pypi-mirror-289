@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pkg-depgraph
+Version: 0.0.1
+Summary: Packaging-oriented dependency graph library
+Home-page: https://pagure.io/michel-slm/pkg-depgraph
+Author: Michel Lind
+Author-email: salimma@fedoraproject.org
+License: GPL-2.0-or-later
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+License-File: COPYING.md
+Requires-Dist: fedrq
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# pkg-depgraph
+
+Packaging-oriented dependency graph library
+
+## Contributing
+
+See [CONTRIBUTING.md](https://pagure.io/michel-slm/pkg-depgraph/blob/main/f/CONTRIBUTING.md)

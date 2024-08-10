@@ -1,0 +1,9 @@
+pkg_depgraph/__init__.py,sha256=ZlGMVcSvhVTYMDoHKPfp7nd9x1YnZDRkrH8z5UOTFpU,404
+pkg_depgraph/dnf.py,sha256=iFjklhxchV2BkYX3TFvNtQW7O1NUVbSp0fgFJjc8Xv4,2686
+pkg_depgraph/protocols.py,sha256=bxooiDeIj6-AzJs81ovGqKWGBiAwBGP6bLlG6eeIsyg,1472
+pkg_depgraph/repo_diff.py,sha256=jl-4Sy5Tec6RbXolXcecuz4mFjcxnS8z2GyU8a--YvM,1610
+pkg_depgraph-0.0.1.dist-info/COPYING.md,sha256=rvi0Iit50Nv2vxfP_3HJCmpruJF6QWKr5Be0ae0i2i4,17895
+pkg_depgraph-0.0.1.dist-info/METADATA,sha256=GzUc90YlOMImro2Wk8qysGopnPWBgdy9rCLm6rP3l1s,1094
+pkg_depgraph-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+pkg_depgraph-0.0.1.dist-info/top_level.txt,sha256=aA93RXZRJDuyNGdwNhhW9DwP6vcuILtVJf-XQydr46Q,13
+pkg_depgraph-0.0.1.dist-info/RECORD,,
