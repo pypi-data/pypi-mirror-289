@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: torchhyper
+Version: 0.1.0
+Summary: torchhyper: A PyTorch Library for Modular Hypernetworks
+Home-page: https://github.com/alisiahkoohi/torchhyper
+Author: Ali Siahkoohi
+Author-email: alisk@rice.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: gitpython
+Requires-Dist: torch
+Provides-Extra: pytorch
+Requires-Dist: torch; extra == "pytorch"
+Requires-Dist: torch-cuda; extra == "pytorch"
+
+# torchhyper
+torchhyper
