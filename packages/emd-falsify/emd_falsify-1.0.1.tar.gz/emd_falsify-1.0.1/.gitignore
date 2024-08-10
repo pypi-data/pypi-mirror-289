@@ -1,0 +1,10 @@
+build
+*.joblib-cache
+*.pytest_cache
+*.jupyter
+*.jupyter_cache
+
+purgatory
+_version.py
+emd_falsify/*.md
+test/*.txt
