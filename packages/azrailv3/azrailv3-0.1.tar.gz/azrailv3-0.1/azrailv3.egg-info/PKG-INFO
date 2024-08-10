@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: azrailv3
+Version: 0.1
+Summary: A module to bypass reCAPTCHA v3 challenges.
+Home-page: https://github.com/yourusername/azrailv3
+Author: Fatih
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# azrailv3
+
+A module to bypass reCAPTCHA v3 challenges.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install azrailv3
+
+
+from azrailv3.bypass import ReCaptchaV3Bypass
+
+url = "https://example.com"
+bypasser = ReCaptchaV3Bypass(url)
+gtk_token = bypasser.bypass()
+print(gtk_token)
