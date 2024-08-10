@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: devwer
+Version: 0.0.1
+Summary: A Word Error Rate (WER) evaluation Metrics Calculator for Devnagari (Nepali) language.
+Home-page: https://github.com/kiranpantha/DevWordErrorRate
+Author: Kiran Pantha
+Author-email: info@kiranpantha.com.np
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+devwer/__init__.py
+devwer/devwer.py
+devwer.egg-info/PKG-INFO
+devwer.egg-info/SOURCES.txt
+devwer.egg-info/dependency_links.txt
+devwer.egg-info/requires.txt
+devwer.egg-info/top_level.txt
