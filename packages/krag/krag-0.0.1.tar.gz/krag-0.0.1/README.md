@@ -1,0 +1,131 @@
+
+# Krag
+
+Krag is a Python package designed for evaluating retrieval-augmented generation (RAG) systems. It provides tools to calculate various evaluation metrics such as hit rate, recall@k, precision@k, MRR (Mean Reciprocal Rank), and more.
+
+## Installation
+
+You can install Krag using pip:
+
+```bash
+pip install krag
+```
+
+## Usage
+
+Here is a simple example of how to use the `KragDocument` and `OfflineRetrievalEvaluators` classes provided by this package.
+
+```python
+from krag.document import KragDocument as Document
+from krag.evaluators import OfflineRetrievalEvaluators
+
+# Actual Documents
+actual_docs = [
+    Document(
+        page_content='Content for document five.',
+        metadata={'source': 'source_5.md', 'id': 'doc_5'}
+    ),
+    Document(
+        page_content='Test document four.',
+        metadata={'source': 'source_4.md', 'id': 'doc_4'}
+    ),
+]
+
+# Predicted Documents
+predicted_docs = [
+    Document(
+        page_content='Data loaders processing.',
+        metadata={'source': 'source_2.md', 'id': 'doc_2'}
+    ),
+    Document(
+        page_content='Test document four.',
+        metadata={'source': 'source_4.md', 'id': 'doc_4'}
+    ),
+    Document(
+        page_content='Optimization metrics.',
+        metadata={'source': 'source_6.md', 'id': 'doc_6'}
+    ),
+    Document(
+        page_content='Neural networks guide.',
+        metadata={'source': 'source_7.md', 'id': 'doc_7'}
+    ),
+    Document(
+        page_content='Content for document five.',
+        metadata={'source': 'source_5.md', 'id': 'doc_5'}
+    ),
+]
+
+
+# Initialize the evaluator
+evaluator = OfflineRetrievalEvaluators(actual_docs, predicted_docs)
+
+# Calculate evaluation metrics
+hit_rate = evaluator.calculate_hit_rate()
+recall_at_3 = evaluator.calculate_recall_k(k=3)
+precision_at_5 = evaluator.calculate_precision_k(k=5)
+mrr = evaluator.calculate_mrr()
+map_at_5 = evaluator.calculate_map_k(k=5)
+ndcg_at_5 = evaluator.ndcg_at_k(k=5)
+
+# Print results
+print(f"Hit Rate: {hit_rate}")
+print(f"Recall@3: {recall_at_3}")
+print(f"Precision@5: {precision_at_5}")
+print(f"MRR: {mrr}")
+print(f"MAP@5: {map_at_5}")
+print(f"NDCG@5: {ndcg_at_5}")
+```
+
+#### Using Custom Tokenizer with BM25 Retriever
+You can also use the KiWiBM25RetrieverWithScore class with a custom Kiwi tokenizer for advanced text retrieval. Here's an example:
+
+```python
+from krag.tokenizers import KiwiTokenizer
+from krag.retrievers import KiWiBM25RetrieverWithScore
+
+# Create a KiwiTokenizer with specific options
+kiwi_tokenizer = KiwiTokenizer(model_type='knlm', typos='basic')
+
+# Create the retriever instance with the custom tokenizer
+retriever = KiWiBM25RetrieverWithScore(
+    documents=langchain_docs, 
+    kiwi_tokenizer=kiwi_tokenizer, 
+    k=5, 
+    threshold=0.0,
+)
+
+# Use the retriever
+query = "K-RAG 패키지는 어떤 평가지표를 제공하나요?"
+
+retrieved_docs = retriever.invoke(query, 2)
+
+# Print retrieved documents with their BM25 scores
+for doc in retrieved_docs:
+    print(doc.metadata.get('doc_id'))
+    print(doc.metadata["bm25_score"])
+    print(doc.page_content)
+    print("------------------------------")
+
+```
+
+
+## Features
+
+- **Document Management**: Use `KragDocument` for extended document handling with metadata and title support. `KragDocument` inherits from LangChain's `Document` class, ensuring compatibility with existing LangChain workflows.
+- **Evaluation Metrics**: Calculate a variety of metrics including hit rate, recall@k, precision@k, MRR, MAP, and NDCG.
+- **BM25 Integration**: Seamlessly integrate with BM25 retrievers for scoring and evaluating document retrieval performance.
+
+## License
+
+This project is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for more details.
+
+
+## Contributing
+
+Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
+
+## Contact
+
+If you have any questions, feel free to reach out via [email](mailto:pandasdataanalysis@gmail.com>).
+
+

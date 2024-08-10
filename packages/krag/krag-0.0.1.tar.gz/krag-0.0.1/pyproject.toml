@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "krag"
+version = "0.0.1"
+description = "A Python package for RAG performance evaluation"
+authors = ["Pandas-Studio <pandasdataanalysis@gmail.com>"]
+license = "MIT"
+readme = "README.md"  # README 파일의 경로
+keywords = ["RAG", "evaluation", "BM25", "NLP"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "1.0.0"
+cython = "^3.0.11"
+langchain = "^0.2.12"
+langchain-community = "^0.2.11"
+langchain-openai = "^0.1.20"
+kiwipiepy = "^0.18.0"
+rank-bm25 = "^0.2.2"
+twine = "^5.1.1"
+
+[tool.poetry.dev-dependencies]
+pyinstaller = "^4.0"
+pytest = "^6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
