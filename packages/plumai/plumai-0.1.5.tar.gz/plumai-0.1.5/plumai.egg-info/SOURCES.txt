@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+plumai/__init__.py
+plumai/app.py
+plumai/plumai.py
+plumai.egg-info/PKG-INFO
+plumai.egg-info/SOURCES.txt
+plumai.egg-info/dependency_links.txt
+plumai.egg-info/entry_points.txt
+plumai.egg-info/requires.txt
+plumai.egg-info/top_level.txt
+plumai/models/__init__.py
+plumai/models/flux1_dev.py
+plumai/models/flux1_schnell.py
