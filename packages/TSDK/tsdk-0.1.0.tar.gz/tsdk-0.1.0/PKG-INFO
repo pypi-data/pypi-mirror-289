@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: TSDK
+Version: 0.1.0
+Summary: taobao login
+Home-page: https://github.com/xinlingqudongX/TSDK
+License: MIT
+Keywords: login,taobao,qrcode
+Author: xinlingqudongX
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: pendulum (>=3.0.0,<4.0.0)
+Requires-Dist: pillow (>=10.4.0,<11.0.0)
+Requires-Dist: playwright (>=1.45.1,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Project-URL: Documentation, https://github.com/xinlingqudongX/TSDK
+Project-URL: Repository, https://github.com/xinlingqudongX/TSDK
+Description-Content-Type: text/markdown
+
+
