@@ -1,0 +1,8 @@
+LICENCE.txt
+README.md
+setup.py
+MikkUtils/__init__.py
+MikkUtils.egg-info/PKG-INFO
+MikkUtils.egg-info/SOURCES.txt
+MikkUtils.egg-info/dependency_links.txt
+MikkUtils.egg-info/top_level.txt
