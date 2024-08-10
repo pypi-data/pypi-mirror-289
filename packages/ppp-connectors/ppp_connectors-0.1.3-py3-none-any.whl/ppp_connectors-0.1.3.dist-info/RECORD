@@ -1,0 +1,7 @@
+ppp_connectors/__init__.py,sha256=ibw5sAq2WJ3NWMiDl_MpI-KYZKL4Q2ek6BsJA51Xm9o,98
+ppp_connectors/broker.py,sha256=IIpVuhYIRyxVrDXptRrGhGmQkuTFy8DDU9kTdvXwTDQ,2354
+ppp_connectors/helpers.py,sha256=ITGJbdv22h6XxaiI1b_gOC0y4SrKq9h6oVZhLr1pxGs,734
+ppp_connectors/spycloud.py,sha256=EBgyJrNGrkfE6cwJbGBAfWXJ4DTM6iiT4b5MIhYhJ3E,5798
+ppp_connectors-0.1.3.dist-info/METADATA,sha256=TxkVB0Fb8Vz2kw9h2WwUIBoAoUS5cqab_6H6fvanjdM,956
+ppp_connectors-0.1.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ppp_connectors-0.1.3.dist-info/RECORD,,
