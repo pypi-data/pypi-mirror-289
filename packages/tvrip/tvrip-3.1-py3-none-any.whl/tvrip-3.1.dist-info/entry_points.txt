@@ -1,0 +1,2 @@
+[console_scripts]
+tvrip = tvrip.main:main
