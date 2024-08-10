@@ -1,0 +1,9 @@
+rescalepy/__init__.py,sha256=8PUi-Vi1vK1TH9CYOwhuhRy0K8DdJqBvdXWVruz_9u0,28
+rescalepy/__main__.py,sha256=BP0RT5u9-M5bCpo0xjlO7-H0IBwP8yLXprs6D5JmYLs,4170
+rescalepy/client.py,sha256=u5pNCBoujJuH8831rK_a0vs9sbmAH7WYr-kzYMkKf7s,11725
+rescalepy/config.py,sha256=mkjqPzlu235XgCnVqhX8O71mhR1mXplOGbC6sVnoevY,711
+rescalepy-0.0.2.dist-info/LICENSE,sha256=A9F2MPWuUblXKsdAOaiXI-QId6ocq3mtM6AveCYRks0,1093
+rescalepy-0.0.2.dist-info/METADATA,sha256=YBhwtiYK_rubPzqD0awU4i2QodO55l6EzDGofjM52v8,2013
+rescalepy-0.0.2.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+rescalepy-0.0.2.dist-info/top_level.txt,sha256=I43cVePSdeRyYVkkzzGxj-DMlioORLmxzfoZxxTNOO8,10
+rescalepy-0.0.2.dist-info/RECORD,,
