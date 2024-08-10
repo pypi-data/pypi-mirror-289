@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: yt-rss-dl
+Version: 0.0.1
+Summary: A RSS feed downloader for YouTube Channels
+Home-page: https://github.com/thisisawesome1994/yt-rss-dl
+Author: Joannes J.A. Wyckmans
+Author-email: johan.wyckmans@gmail.com
+Requires-Dist: feedparser
+Requires-Dist: yt-dlp
+
