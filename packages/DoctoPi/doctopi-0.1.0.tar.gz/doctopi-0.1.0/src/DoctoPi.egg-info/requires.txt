@@ -1,0 +1,9 @@
+docspec
+docspec_python
+docstring_parser
+mdutils
+
+[dev]
+coverage
+pylint
+pytest
