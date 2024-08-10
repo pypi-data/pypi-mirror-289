@@ -1,0 +1,9 @@
+README.md
+setup.py
+english_dict/__init__.py
+english_dict/english_dict.py
+english_dict.egg-info/PKG-INFO
+english_dict.egg-info/SOURCES.txt
+english_dict.egg-info/dependency_links.txt
+english_dict.egg-info/requires.txt
+english_dict.egg-info/top_level.txt

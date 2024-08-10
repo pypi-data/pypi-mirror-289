@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: english-dict
+Version: 0.1.0
+Summary: Simple, storage efficient solution to find definitions with ease.
+Author: dsochamp
+Keywords: dictionary,meaning,english,easy to use
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+
+# English Dict
+
+English Dict can be used to find the meaning of words easily.
+To find the meaning of an English word by using the `find_word()` function to find the meaning of a word easily. Like
+over here:
+
+```
+# Replace example with any english word
+
+word =  "example"
+
+find_word(word)
+
+>> example means - : an instance
+ (such as a problem to be solved)
+ serving to illustrate a rule or
+ precept or to act as an exercise
+ in the application of a rule
+ ```
+
+You can type `c` to clear the terminal if it gets to 
+messy.
+
+
+> **NOTE!**
+> 
+> Remember that on some ocassions a link may exist but not a certain word like the word `chided`. In this scenario it may
+return an alternative word. You could instead use that. 
