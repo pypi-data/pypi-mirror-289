@@ -1,0 +1,17 @@
+tg_migrator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tg_migrator/config.py,sha256=BG4MZvEHQuQ8JULR0Ivyyalija_Nhjo0dZ7lY87Fwg0,14178
+tg_migrator/main.py,sha256=exRrBIA0hWUpqKrDBqVwyj5n5LFCRosNWIbwwOJu_1I,3581
+tg_migrator/versions/20240703224042_creating_Person_vertex.py,sha256=6m73qZP1u3tI4Ziq00E-blyQESKbxKigcSdvRtDk0ck,835
+tg_migrator/versions/20240703224217_creating_freind_edge.py,sha256=H_UOZwDYc4wCniL-miafD10UsP6c43mP_fnURuJm96g,782
+tg_migrator/versions/20240703224218_creating_location.py,sha256=e5C8CdoS8D1yFcsSSW6WVRvfG7E9DCwi4bA8qofj3Tk,830
+tg_migrator/versions/20240703224219_creating_located.py,sha256=tCvqQ2_JlCC9J76NFy3CEzPPLmKWBabsWNyO-2bHv6U,788
+tg_migrator/versions/20240707080142_liked_vertex.py,sha256=ntcRmhnISkbounr_FjQQ8YXZU1oAQ43UDGK78-98UbM,815
+tg_migrator/versions/20240707080757_liked_edge_between_Person_and_Post.py,sha256=-76CiwUZbhvokACwWja8S-5ofx3nx5rO_3CdMRqV4k4,806
+tg_migrator/versions/20240809201406_Hashtag_vertex_and_Edge.py,sha256=EMFI1L9YUsHCWVP_UZl66gU-6hXa-hNVT1eFD_WFwng,905
+tg_migrator/versions/20240810001920_adding_new_vertex.py,sha256=TH6gUOYif51yY-ZBMB0X9eUm3yFfUR0lJI30VFMlGA4,819
+tg_migrator/versions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tg_migrator-0.1.7.dist-info/METADATA,sha256=b2IpYRXU3chY_DHnxQaBsOl-sUrgnUwlSKAvcKM3LUE,3692
+tg_migrator-0.1.7.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tg_migrator-0.1.7.dist-info/entry_points.txt,sha256=m129tH1N2HOSWZneZKbf3TNV15zstuRIjFPT5Pc_kao,54
+tg_migrator-0.1.7.dist-info/top_level.txt,sha256=VIoL_zJQsoyNjxxKCgzjOOyzuqVdU39s3DXmAfTVcQw,12
+tg_migrator-0.1.7.dist-info/RECORD,,
