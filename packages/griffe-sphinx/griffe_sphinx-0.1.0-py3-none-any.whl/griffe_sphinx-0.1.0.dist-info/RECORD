@@ -1,0 +1,9 @@
+griffe_sphinx-0.1.0.dist-info/METADATA,sha256=oo2TOBuZ3Tbug61TevCKOut-pcUE9UyHZPMzETO8viw,2276
+griffe_sphinx-0.1.0.dist-info/WHEEL,sha256=rSwsxJWe3vzyR5HCwjWXQruDgschpei4h_giTm0dJVE,90
+griffe_sphinx-0.1.0.dist-info/licenses/LICENSE,sha256=nke00CVElTmhjAOYXkupvTNauLNPzBTuASi3u9moZ1U,754
+griffe_sphinx/__init__.py,sha256=n0SFNnz8B5cZV9curBdjE57wbenjqJ_jko7WbXyuNpY,243
+griffe_sphinx/_internals/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+griffe_sphinx/_internals/extension.py,sha256=Ckc6UII2q0NnsnTIJUPRJeUDuWlH2dcDIMTDG5oDVRU,129
+griffe_sphinx/debug.py,sha256=UEDYEmtR5dr5ikg_s2qaSd1awO6cKC0cw0V2mQUEJww,2840
+griffe_sphinx/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+griffe_sphinx-0.1.0.dist-info/RECORD,,
