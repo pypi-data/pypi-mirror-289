@@ -1,0 +1,19 @@
+[package]
+name = "textcanvas"
+version = "3.5.0"
+edition = "2021"
+authors = ["Quentin Richert <noreply@richert.co>"]
+description = "Draw to the terminal like an HTML Canvas."
+license = "MIT"
+repository = "https://github.com/qrichert/textcanvas.git"
+readme = "README.md"
+keywords = ["tui", "canvas", "draw", "terminal", "console"]
+categories = ["command-line-interface", "rendering::engine"]
+
+[profile.release]
+strip = true
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tarpaulin_include)'] }
+
+[dependencies]
