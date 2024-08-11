@@ -1,0 +1,6 @@
+README.md
+setup.py
+matplotlib_autolayout.egg-info/PKG-INFO
+matplotlib_autolayout.egg-info/SOURCES.txt
+matplotlib_autolayout.egg-info/dependency_links.txt
+matplotlib_autolayout.egg-info/top_level.txt
