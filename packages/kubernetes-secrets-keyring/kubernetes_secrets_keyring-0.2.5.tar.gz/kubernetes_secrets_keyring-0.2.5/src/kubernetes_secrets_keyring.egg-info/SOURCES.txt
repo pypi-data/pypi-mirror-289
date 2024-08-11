@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/kubernetes_secrets_keyring/__init__.py
+src/kubernetes_secrets_keyring/k8s_keyring_backend.py
+src/kubernetes_secrets_keyring.egg-info/PKG-INFO
+src/kubernetes_secrets_keyring.egg-info/SOURCES.txt
+src/kubernetes_secrets_keyring.egg-info/dependency_links.txt
+src/kubernetes_secrets_keyring.egg-info/entry_points.txt
+src/kubernetes_secrets_keyring.egg-info/requires.txt
+src/kubernetes_secrets_keyring.egg-info/top_level.txt
+tests/test_keyring.py
