@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+preksha_square.egg-info/PKG-INFO
+preksha_square.egg-info/SOURCES.txt
+preksha_square.egg-info/dependency_links.txt
+preksha_square.egg-info/entry_points.txt
+preksha_square.egg-info/top_level.txt
+square/__init__.py
+square/__main__.py

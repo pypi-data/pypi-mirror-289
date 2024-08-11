@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: preksha_square
+Version: 1.0.0
+Summary: It squares the number
+Home-page: https://github.com/Preksha-Dadoo/preksha_square
+Author: Preksha Dadoo
+Author-email: pdadoo_be22@thapar.edu
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Preksha Square
+It takes an integer as an input and prints it square.
+
+## Installation
+'''pip install preksha_square'''
+
+## How to use it?
+Open terminal and type square and then input the integer
+
+## License
+
+©️ 2024 Preksha Dadoo
+
+This repository is licensed under the MIT license.
+See LICENSE for details.
