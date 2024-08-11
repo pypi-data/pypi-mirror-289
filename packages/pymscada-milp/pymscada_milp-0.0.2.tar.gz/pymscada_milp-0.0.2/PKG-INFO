@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pymscada-milp
+Version: 0.0.2
+Summary: MILP extension for pymscada
+Author-Email: Jamie Walton <jamie@walton.net.nz>
+License: GPL-3.0-or-later
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: JavaScript
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# pymscada-milp
