@@ -1,0 +1,37 @@
+#! /usr/bin/env bash
+
+function notebooks_and_scripts_workflow_monitor() {
+    local options=$1
+
+    if [ $(abcli_option_int "$options" help 0) == 1 ]; then
+        local options="$EOP~download,node=<node>,publish_as=<public-object-name>,~upload"
+        abcli_show_usage "workflow monitor$ABCUL$options$ABCUL.|<job-name>$EOPE" \
+            "monitor workflow."
+        return
+    fi
+
+    local do_download=$(abcli_option_int "$options" download 1)
+    local publish_as=$(abcli_option "$options" publish_as)
+    local do_upload=$(abcli_option_int "$options" upload 1)
+    local node=$(abcli_option "$options" node void)
+
+    local job_name=$(abcli_clarify_object $2 .)
+
+    abcli_log "📜 workflow.monitor: $job_name @ $node ..."
+
+    [[ "$do_download" == 1 ]] &&
+        abcli_download - $job_name
+
+    python3 -m notebooks_and_scripts.workflow.runners \
+        monitor \
+        --hot_node $node \
+        --job_name $job_name
+
+    [[ "$do_upload" == 1 ]] &&
+        abcli_upload - $job_name
+
+    [[ ! -z "$publish_as" ]] &&
+        abcli_publish as=$publish_as,~download,suffix=.gif $job_name
+
+    return 0
+}
