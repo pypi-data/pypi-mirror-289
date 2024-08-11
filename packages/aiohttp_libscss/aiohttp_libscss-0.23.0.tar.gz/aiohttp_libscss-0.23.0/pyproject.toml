@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "aiohttp_libscss"
+version = "0.23.0"
+description = "Scss for Python: A straightforward binding of libscss for Python."
+authors = []
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+
+[tool.poetry.urls]
+homepage = "https://pypi.org/project/libsass"
+repository = "https://github.com/sass/libsass-python"
+documentation = "https://sass.github.io/libsass-python"
