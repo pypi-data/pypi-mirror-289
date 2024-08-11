@@ -1,0 +1,6 @@
+sealy==0.1.5
+flwr
+numpy
+
+[tests]
+pytest
