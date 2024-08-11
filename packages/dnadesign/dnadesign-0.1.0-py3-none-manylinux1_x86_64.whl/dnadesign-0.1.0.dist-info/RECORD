@@ -1,0 +1,17 @@
+dnadesign/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dnadesign/cffi_bindings.py,sha256=6-1JvRUM5g3LORB6mcqaEI2yuLiYQBnmeDgtA3dfycw,641
+dnadesign/definitions.h,sha256=hSNzEew_LOLw89vFM0nJnHk8ENIGxOS8V_Z8b2CgnFg,367
+dnadesign/fasta_parser.py,sha256=MYQuCsXUqjefN3dWmzZRpWSuQAw3h0ULCPM1R2itmNM,1084
+dnadesign/libdnadesign.h,sha256=tF2UeZbw9FbrNDrf47SvmxngBqmXi9zLZrGE8Wj_mnY,2230
+dnadesign/libdnadesign.so,sha256=LMFoc9riQGkjir7yymGV6UTzc4gjyqmLMtZfuU3kFc4,4452400
+dnadesign/test_fasta_parser.py,sha256=zIsLI9Vs2Gr2jhv5GB7SgiClFThXwZr-UZYL30Plxtc,351
+dnadesign/__pycache__/__init__.cpython-312.pyc,sha256=HExIsWKCgMCfgqdlp3kdvjQlBpb7nm3tV_N7HHjzwhc,180
+dnadesign/__pycache__/cffi_bindings.cpython-312.pyc,sha256=rKB3qlG9pJZY-S0qformPNl0F2c_wb5nd_qaDn5Cd4E,1104
+dnadesign/__pycache__/fasta_parser.cpython-312.pyc,sha256=IZCQ3rMgwZXdIi9pcjZDuwVBEiyQcNYiYDjSUJSGzZs,2567
+dnadesign/__pycache__/test_fasta_parser.cpython-312-pytest-7.4.4.pyc,sha256=tdEcsOuiIdgOft1uyTZ6AfSTUNTQwgi3bqbbK3RbG74,2561
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_fasta_parser.py,sha256=2IZzORruAPSlpL4pqPAcN1zKLGK-gEIhHXyijmJuhU8,648
+dnadesign-0.1.0.dist-info/METADATA,sha256=eVyCrMRh1voMyANh-1Eq7g08jM9w6ThbuCfP4cAAblk,197
+dnadesign-0.1.0.dist-info/WHEEL,sha256=XYu_VHmNEf2noKVYzlVp01ZZWTe1ziZKv6CHbJf921s,106
+dnadesign-0.1.0.dist-info/top_level.txt,sha256=3LvXWH-Jz5zeqCR8cv9PEoA-8eHi7mpxpDpo8ObE6P0,16
+dnadesign-0.1.0.dist-info/RECORD,,
