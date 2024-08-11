@@ -1,0 +1,9 @@
+simplebloom/__init__.py,sha256=9AN5BUfT5EN93A6LpxAvcoolpMDNUGnHOEB6DCTyrUI,96
+simplebloom/_cbloom.pypy38-pp73-darwin.so,sha256=gi96V_N7qQAhNniLwzBykjzu27Wky9wiMdKHnPyo_9s,60320
+simplebloom/_pybloom.py,sha256=sQUM6_qZgiJJXqETlX0_z1F9KkdcOeXOm7gmRrUjkPE,1290
+simplebloom/bloom.py,sha256=UCWm0eCnNzf04Zc6yxYqAczPxHLeqWn3LOIiQaSHZqw,5098
+simplebloom-1.0.6.dist-info/RECORD,,
+simplebloom-1.0.6.dist-info/LICENSE,sha256=CMmjpQwx7PoPtASq6Nifg5JWG0L4jat9qB2ave0282Y,1138
+simplebloom-1.0.6.dist-info/WHEEL,sha256=MNzS18sc81hDCA6VxgPhMBH311R7G3XPaa-0t81uSaA,115
+simplebloom-1.0.6.dist-info/top_level.txt,sha256=dfYP-nMqevvAUAkJEiCosCfcKO8Yzd1Ly90PxNxqLiI,12
+simplebloom-1.0.6.dist-info/METADATA,sha256=r6DsSLwA83a7DeV33vab4R4Ae5D2eZfirnG_mUGdygY,5514
