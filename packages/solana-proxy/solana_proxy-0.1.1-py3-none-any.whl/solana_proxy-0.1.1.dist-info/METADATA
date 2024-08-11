@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: solana-proxy
+Version: 0.1.1
+Summary: A library for using HTTP and SOCKS5 proxies with solana clients
+Home-page: https://github.com/BotsForge/solana-proxy
+License: MIT
+Author: MrSmith06
+Author-email: sletars@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.27,<0.28)
+Requires-Dist: httpx-socks (>=0.9,<0.10)
+Requires-Dist: proxystr (>=2.0.5,<3.0.0)
+Requires-Dist: solana (>=0.34,<0.35)
+Project-URL: Repository, https://github.com/BotsForge/solana-proxy
+Description-Content-Type: text/markdown
+
+# **solana-proxy**
+[![Telegram channel](https://img.shields.io/endpoint?url=https://runkit.io/damiankrawczyk/telegram-badge/branches/master?url=https://t.me/bots_forge)](https://t.me/bots_forge)
+
+**A library for using *HTTP* and *SOCKS5* proxies with [`solana`](https://pypi.org/project/solana/) clients**
+The library provides `Client` and `AsyncClient` classes, which override the initialization of the original classes. Apart from these two classes, the library does not offer any additional features, and in all other cases, the original `solana` library, included as part of the installation package, should be used.
+
+```bash
+pip install solana-proxy
+```
+**Depencies**: `solana, httpx, httpx-socks, proxystr`
+
+## Simple usage
+```python
+from solana_proxy import Client
+
+RPC_URL = 'https://api.mainnet-beta.solana.com'
+client = Client(RPC_URL, proxy='login:password@ip:port')  # or 'socks5://login:password@ip:port'
+client.is_connected()
+...
+client.close()
+```
+`Client` and `AsyncClient` take proxy in any popular format because they use [`proxystr`](https://pypi.org/project/proxystr/) lib. Also they take a `Proxy` obj from that lib.
+## Context manager
+```python
+import asyncio
+from solana_proxy import Client, AsyncClient
+
+RPC_URL = 'https://api.mainnet-beta.solana.com'
+PROXY = 'login:password@ip:port'  # or 'socks5://login:password@ip:port'
+
+with Client(RPC_URL, proxy=PROXY) as client:
+    client.is_connected()
+
+async def is_connected():
+    async with AsyncClient(RPC_URL, proxy=PROXY) as client:
+        return await client.is_connected()
+```
+
+## Support
+Developed by `MrSmith06`: [telegram](https://t.me/Mr_Smith06) |  [gtihub](https://github.com/MrSmith06)
+If you find this project helpful, feel free to leave a tip!
+- EVM address (metamask): `0x6201d7364F01772F8FbDce67A9900d505950aB99`
