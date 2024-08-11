@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: sxss-sample-project
+Version: 0.1.0
+Summary: A sample Python project
+Home-page: https://github.com/yourusername/my_sample_project
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# 项目名称
+
+这是一个示例Python项目，用于演示如何创建和上传包到PyPI。
+
+## 安装
+
+使用以下命令安装：
+
+```bash
+pip install my_sample_project
+
