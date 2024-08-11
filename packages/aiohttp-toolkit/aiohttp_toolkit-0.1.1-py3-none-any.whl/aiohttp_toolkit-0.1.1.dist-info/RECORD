@@ -1,0 +1,10 @@
+aiohttp_toolkit/__init__.py,sha256=vVjKnx2qoKlLG-w3CuguJfga8ZTywAQm169kKcNGAcU,223
+aiohttp_toolkit/_handler.py,sha256=9bQX5h58HPSHOLO8gE3ek732vc7gAdTDohEIEO9hZfw,12006
+aiohttp_toolkit/callback_builders.py,sha256=0Uuh4iJHKrVTTachhmGiG8M2DGXbTxCGfwptKf3aKBU,2941
+aiohttp_toolkit/response_callbacks.py,sha256=yVISVgXWeUhrawmB5n9gEbGKmZj-sw8n-9vaTu8wVK4,2637
+aiohttp_toolkit/response_models.py,sha256=hhfW1fwqpIWNwVU2ASjLXEbviK99G5SFjA1c3D-pjE8,2188
+aiohttp_toolkit/types.py,sha256=XzqbACR7CIluWf5hwBC_cf7mxX2Uphsuqo8eer2WIu8,396
+aiohttp_toolkit-0.1.1.dist-info/LICENSE.txt,sha256=ZJb-XYLG2YjvIM_1vNyLt_Nytqpt9SsL9LzGrGsFWds,10388
+aiohttp_toolkit-0.1.1.dist-info/METADATA,sha256=A7fZJ50TFgAsj0GsViYzpl8knDdjlabxp2f80QPOFH0,1331
+aiohttp_toolkit-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+aiohttp_toolkit-0.1.1.dist-info/RECORD,,

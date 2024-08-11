@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: aiohttp-toolkit
+Version: 0.1.1
+Summary: aiohttp-toolkit - package to ease the process of handling aiohttp with premade functions
+Home-page: https://github.com/zguydev/aiohttp-toolkit
+License: Apache-2.0
+Keywords: aiohttp,poetry
+Author: ZGuyDev
+Author-email: 77798764+ZGuyDev@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: Framework :: aiohttp
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.10.2,<4.0.0)
+Requires-Dist: yarl (>=1.9.4,<2.0.0)
+Project-URL: Repository, https://github.com/zguydev/aiohttp-toolkit
+Description-Content-Type: text/markdown
+
+# aiohttp-toolkit
+
+[![CI](https://github.com/zguydev/aiohttp-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/zguydev/aiohttp-toolkit/actions/workflows/ci.yml)
+[![Coverage Status](https://codecov.io/gh/zguydev/aiohttp-toolkit/branch/master/graph/badge.svg)](https://codecov.io/gh/zguydev/aiohttp-toolkit)
+
+`aiohttp-toolkit` - package to ease the process of handling aiohttp with premade functions
+
+> Docs will be added soon.
+
