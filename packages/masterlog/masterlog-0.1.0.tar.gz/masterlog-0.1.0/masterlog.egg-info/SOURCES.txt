@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+masterlog/__init__.py
+masterlog/log.py
+masterlog.egg-info/PKG-INFO
+masterlog.egg-info/SOURCES.txt
+masterlog.egg-info/dependency_links.txt
+masterlog.egg-info/top_level.txt
