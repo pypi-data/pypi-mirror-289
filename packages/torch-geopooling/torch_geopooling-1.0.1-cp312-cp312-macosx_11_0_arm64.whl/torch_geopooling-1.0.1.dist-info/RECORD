@@ -1,0 +1,17 @@
+torch_geopooling/_C.cpython-312-darwin.so,sha256=diaBthZMonfUO7dunaz-uGsi7zLAwY18ZTAWiYLBPMU,519096
+torch_geopooling/__init__.py,sha256=g3zAIxXO6CdrT0zoTlfM3K86LeTWJcgIsqPTqYmhBMQ,60
+torch_geopooling/functional.py,sha256=MuJfPW_RC4slgzWBO2ngQIBTzlZXeW7DBqV3ooIOSw4,12060
+torch_geopooling/functional_test.py,sha256=Sfv6bSe4DIB-y1xYVwavZoyIdu0bwARGdr8woOx7F7U,2997
+torch_geopooling/nn.py,sha256=_NnGB45dWTZy4MQokFfmJL3as-EPVU3liwOuAmWbv1Y,14219
+torch_geopooling/nn_test.py,sha256=zKoyK1f9SUJGhR8pt4wvocmVICoA6nPWPeUMvKKbwY8,4786
+torch_geopooling/return_types.py,sha256=QhIKf_qxpppzuZzUrT-VacfbvZ6zKmSRu-WZOqL8wuE,898
+torch_geopooling/tiling.py,sha256=f1g0Gf__5zIOafZzDkwO62t9OqMDMBEYVtM2HXB5X0Y,2553
+torch_geopooling/transforms.py,sha256=NHPBgx1L4-1745xNO_PvLuvbMH6DWi2rs1ViuRyBQAY,3635
+torch_geopooling/transforms_test.py,sha256=Cqp4VVObBVrc8HQ7uxkpe1EsQ5NxXrCI77BiUqngLXw,1196
+torch_geopooling/__bind__/python_module.cc,sha256=5K04tRT62XTVsZhY2EE4r4bBTz4mA4IwEkw5adPzo58,576
+torch_geopooling-1.0.1.dist-info/LICENSE,sha256=jLc4eyvG8hqxH4AdKAjK2DwXoP68qjHiGfq8eP5ubBI,35069
+torch_geopooling-1.0.1.dist-info/METADATA,sha256=CgOBHIw38QEgF4TIAVvnVYWz-RlPgW_60AbdJkK_J-E,44364
+torch_geopooling-1.0.1.dist-info/WHEEL,sha256=h9jBNgvnuEaix45NgESHvfNcOPGGNEywrbP9Un7hZlk,110
+torch_geopooling-1.0.1.dist-info/dependency_links.txt,sha256=JqLDcYHtEaQB51V72n3gAJvRd36bpoPk9qgTbot-Lx4,37
+torch_geopooling-1.0.1.dist-info/top_level.txt,sha256=3geTL2nsLvybdtr1psWIE6h63B1LuyIIyWWv0rDafTk,17
+torch_geopooling-1.0.1.dist-info/RECORD,,
