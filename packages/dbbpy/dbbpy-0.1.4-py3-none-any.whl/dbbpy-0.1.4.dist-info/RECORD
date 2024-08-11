@@ -1,0 +1,6 @@
+dbbpy/__init__.py,sha256=JieHiDOOqxXzx8CV-WPkj5pou7fuwoDskd2ZOm6jBRQ,488
+dbbpy/bindings.cp312-win_amd64.pyd,sha256=JsaIGOIrItN0rHEn9Uq99PA72pVhUYAPEawv-vkG7RE,4147712
+dbbpy/bindings.cpython-311-x86_64-linux-gnu.so,sha256=bSlfWlYH2VDXQ0JSABbNVDvgSpaYDnHBHNT2P2LB0gE,6139784
+dbbpy-0.1.4.dist-info/METADATA,sha256=YWMgLWe8ISwTEoQtM4H3cZ2m3o3qBvI3EmsbBo9stNE,496
+dbbpy-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dbbpy-0.1.4.dist-info/RECORD,,
