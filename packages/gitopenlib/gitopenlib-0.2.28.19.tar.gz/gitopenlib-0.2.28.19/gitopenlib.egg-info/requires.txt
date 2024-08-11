@@ -1,0 +1,11 @@
+scikit-learn
+pandas
+seaborn
+matplotlib
+tqdm
+requests
+pymongo
+emoji
+fake_useragent
+lxml
+psutil
