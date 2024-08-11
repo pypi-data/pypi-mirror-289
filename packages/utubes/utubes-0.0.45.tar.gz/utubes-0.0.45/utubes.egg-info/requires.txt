@@ -1,0 +1,5 @@
+spotdlpyrofork
+tgcrypto
+requests
+instaloader
+beautifulsoup4
