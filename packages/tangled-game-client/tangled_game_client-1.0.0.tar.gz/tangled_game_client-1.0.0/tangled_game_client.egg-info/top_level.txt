@@ -1,0 +1,2 @@
+tangled-game-api-python
+tangled_game_client
