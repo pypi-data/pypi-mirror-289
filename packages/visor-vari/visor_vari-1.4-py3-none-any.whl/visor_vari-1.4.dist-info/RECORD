@@ -1,0 +1,12 @@
+visor_vari/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+visor_vari/control.py,sha256=y3SpQa-SaA4T1LXK4HFUVZR0pJMGY64PThhsQaQ9t_8,19717
+visor_vari/visorquipus.py,sha256=egsk78dxIDskPXX5VAhemMumQuP4zDoThwru-04TIww,1293
+visor_vari/mas_bajo_nivel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+visor_vari/mas_bajo_nivel/variables_valores.py,sha256=XhB3HmwsUsUGsen-yne6SZghUr8y0MpeDus_IaW2fk0,2638
+visor_vari/readme_visor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+visor_vari/readme_visor/readme.py,sha256=NqT1bfl9gpPCZH4sSPDPLRlJWHnnXgD7U3GuHymEvuI,2573
+visor_vari-1.4.dist-info/METADATA,sha256=4lNgoJHYX47s9bH3XU9CBW00WPsIeIVhqfqAaLhp2v4,1871
+visor_vari-1.4.dist-info/WHEEL,sha256=mguMlWGMX-VHnMpKOjjQidIo1ssRlCFu4a4mBpz1s2M,91
+visor_vari-1.4.dist-info/license.txt,sha256=f5hhud8SJuBypbUTq7FbwZbgs-IfWDVEYbHQAvoWU4s,16940
+visor_vari-1.4.dist-info/top_level.txt,sha256=Bxiw5uZOSD2G56gwsd6CFIFvqfYZ4FfgnnfW4h7zfZI,11
+visor_vari-1.4.dist-info/RECORD,,
