@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: wordle_solverGG
+Version: 0.0.2
+Summary: A package to automatically solve Wordle puzzles
+Home-page: http://example.com/wordle_solver
+Author: Your Name
+Author-email: firi8228@gmail.com
+Requires-Dist: selenium
+Requires-Dist: pyautogui
+
+This package provides functionality to automatically solve Wordle puzzles using Selenium and PyAutoGUI.
