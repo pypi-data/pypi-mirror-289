@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: cge_modeling
+Version: 0.0.3
+Summary: A package for working with computable general equilibrium (CGE) models
+Home-page: https://github.com/jessegrabowski/cge_modeling
+Author: Jesse Grabowski
+Author-email: jessegrabowski@gmail.com
+Description-Content-Type: text/markdown
+
+# cge_modeling
+A package for working with CGE models in Python
