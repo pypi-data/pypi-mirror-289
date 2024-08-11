@@ -1,0 +1,11 @@
+tkinter_gl/__init__.py,sha256=qC1mKOuu34RlPqkbb3yvH6TwKOc9W1nCNUhiRgXDl4A,2752
+tkinter_gl/tk/README,sha256=0RjfL5f64zgPv0OkfTU93qWeLaTMr1AZPOE4VQ0Kxlg,68
+tkinter_gl/tk/license.terms,sha256=ugW1TOQkPIpO6EInkoMOI_uxBhqGrlAa9Wo_L5ieDhk,2546
+tkinter_gl/tk/darwin/Tkgl1.2/libTkgl1.2.dylib,sha256=Cbubyx16mykBACsqUx2YXXAujJvMXN3uZ2PsM76QYfc,153469
+tkinter_gl/tk/darwin/Tkgl1.2/libtcl9Tkgl1.2.dylib,sha256=xNMcaYJD6hQEjPKy7aD6GjIn7EJ6nT2-JEXqRWfNM0k,153505
+tkinter_gl/tk/darwin/Tkgl1.2/pkgIndex.tcl,sha256=ELuDSE8T0E4dbj2qYkTafQbfSx1Nz5az5z-uBUz1xuI,334
+tkinter_gl-1.0b0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+tkinter_gl-1.0b0.dist-info/METADATA,sha256=YIUv3ACQoRgvq6GMigCGz4jQBaouQguKGk78uooYNZU,1427
+tkinter_gl-1.0b0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+tkinter_gl-1.0b0.dist-info/top_level.txt,sha256=bdoDjLuEYRrk3u9wVHRP8vwMe9oVZj1WsjrdwkWQRsI,11
+tkinter_gl-1.0b0.dist-info/RECORD,,
