@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: partlint
+Version: 1.1.0
+Summary: Check if LCSC part numbers still match the values of the parts
+Home-page: https://git.sr.ht/~martijnbraam/partlint
+Author: Martijn Braam
+Author-email: martijn@brixit.nl
+Project-URL: Source, https://git.sr.ht/~martijnbraam/partlint
+Requires-Dist: sexpdata
+Requires-Dist: tabulate
+Requires-Dist: requests
+Requires-Dist: openpyxl
