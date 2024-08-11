@@ -1,0 +1,7 @@
+numpy>=2.0.1
+scipy>=1.14
+pwlf>=2.2.1
+
+[docs]
+sphinx>=3.0
+sphinx_rtd_theme
