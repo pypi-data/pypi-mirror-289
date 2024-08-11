@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: oneflowpy
+Version: 0.3.0
+Summary: api wrapper for OneFlow contract tool
+License: proprietary license
+Author: leik
+Author-email: nordavindltd@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: requests-mock (>=1.12.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Api Wrapper for Oneflow
+
+[![Upload Python Package](https://github.com/Leikaab/OneFlowPy/actions/workflows/python-publish.yml/badge.svg?branch=main)](https://github.com/Leikaab/OneFlowPy/actions/workflows/python-publish.yml)
+
+Todos:
+
+- Add logging
+- Add file to exclude tests from package
+- Solve datamodels issues wirh config, or other method
+
+- write tests for contracts: copy, publish, decline and mark_as_signed(not implemented)
