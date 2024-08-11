@@ -1,0 +1,7 @@
+README.md
+setup.py
+discord.gaon.egg-info/PKG-INFO
+discord.gaon.egg-info/SOURCES.txt
+discord.gaon.egg-info/dependency_links.txt
+discord.gaon.egg-info/requires.txt
+discord.gaon.egg-info/top_level.txt
