@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "socom"
+version = "0.1.0"
+description = "Data analysis tool for studying social communication"
+authors = ["Davide Vega <davide.vega@it.uu.se>"]
+license = "LICENSE"
+readme = "README.md"
+
+packages = [
+    { include = "socom" },
+]
+
+include = ["CMakeLists.txt", "src", "ext"]
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = true
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+pybind11 = ">=2.8.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.0.0"
+pytest-sugar = "*"  
+pytest-cov = "*"
+
+[build-system]
+requires = ["poetry-core", "setuptools", "setuptools-cpp"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.cibuildwheel]
+build = ["cp310-*", "cp311-*", "cp312-*"]
+
+skip = ["*-win32", "*-manylinux_i686"]
