@@ -1,0 +1,11 @@
+pypasscrypt/__init__.py,sha256=vEHWc4G2pKVlioC_pOHQPCZY_oodW6zMMNp2CwWRmNQ,9446
+pypasscrypt/connectionhandler.py,sha256=FarVwRqfWTk_Ae7W_nJ_tsy6Xs_FbVgMIWAMBQEG8e8,36798
+pypasscrypt/cryptohandler.py,sha256=kgJYZl6mYVXNm7eX_RmKTMqS6-aHceLlIq-mSimXGC0,75163
+pypasscrypt/passwordhandler.py,sha256=q3ET2LOUhARKn4MpZMBJr_ixVDoAoOF3z0AxlUJPFKs,29544
+pypasscrypt/storagehandler.py,sha256=fcPiBhgTDpi1yr9TtBqJhhfleF4hs12OrOGaldofiu4,84749
+pypasscrypt/userinterface.py,sha256=hYBhfTXlHWQbU2i78R7GJNHQmLzOMc5eVtRzyNn_MD8,96264
+pypasscrypt-2.0.0.dist-info/entry_points.txt,sha256=XtN0AGlgu3rNpgxixOzb_AW0GegAJcr0-JJTCAxDcB8,38
+pypasscrypt-2.0.0.dist-info/license,sha256=66E_03J9cMTzxvBQDdjMxgod2axkmoqUkCia2qGgzBU,1089
+pypasscrypt-2.0.0.dist-info/METADATA,sha256=vp6tMa74J3rSylFrCgNxtKvwR-7-72TygzuYs8LMuUg,4443
+pypasscrypt-2.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pypasscrypt-2.0.0.dist-info/RECORD,,
