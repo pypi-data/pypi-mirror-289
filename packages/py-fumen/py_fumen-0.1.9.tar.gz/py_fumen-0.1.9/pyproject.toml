@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "py_fumen"
+version = "0.1.9"
+authors = [
+  { name="hsohliyt105", email="hsohliyt105@naver.com" },
+]
+description = "A package that replicates js fumen in python. More description on 'https://github.com/hsohliyt105/py-fumen'"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["hatchling"]
+
+[project.urls]
+Homepage = "https://github.com/hsohliyt105/py-fumen"
+Issues = "https://github.com/hsohliyt105/py-fumen/issues"
+
+[tool.poetry]
+name = "py_fumen"
+version = "0.1.9"
+description = "A package that replicates js fumen in python. More description on 'https://github.com/hsohliyt105/py-fumen'"
+authors = ["hsohliyt105 <hsohliyt105@naver.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+hacthling = "1.25.0"
