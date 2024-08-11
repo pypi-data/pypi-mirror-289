@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: custom_exception_logger
+Version: 0.1
+Requires-Dist: mysql-connector-python
+Requires-Dist: python-dotenv
+
