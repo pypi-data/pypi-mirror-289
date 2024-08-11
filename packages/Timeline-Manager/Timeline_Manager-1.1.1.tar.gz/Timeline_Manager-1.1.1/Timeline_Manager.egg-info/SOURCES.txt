@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+Timeline_Manager/__init__.py
+Timeline_Manager/module.py
+Timeline_Manager.egg-info/PKG-INFO
+Timeline_Manager.egg-info/SOURCES.txt
+Timeline_Manager.egg-info/dependency_links.txt
+Timeline_Manager.egg-info/top_level.txt
