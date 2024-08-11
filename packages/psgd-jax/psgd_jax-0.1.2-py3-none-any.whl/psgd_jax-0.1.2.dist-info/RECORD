@@ -1,0 +1,11 @@
+psgd_jax/.DS_Store,sha256=jBMyhds9mgtopl6P1BWzrqKgmduFBR8p8OFETtLGpWA,6148
+psgd_jax/__init__.py,sha256=k_rrOhdLfjxkdba3UxADbA_sSRVTOMzzw4FQuEqMjmg,42
+psgd_jax/affine.py,sha256=CnVGtt_ktCq93lVZ8UG1B9r1LuIvzMIx54RazHXJ3_M,25831
+psgd_jax/low_rank_approximation.py,sha256=7Zqd3lqfte_ftv77rReOskawq3CQwSJ0UJI4QuoHYsc,14290
+psgd_jax/psgd_test.py,sha256=r_uoO8trUSoZw_1cLFG5A-6ueCunsT7TafUIKHcQG1c,7616
+psgd_jax/utils.py,sha256=yLVLMst7qx9BiQsocV9PDYXHgnNGyXPgWogXF-m4wR0,3427
+psgd_jax/xmat.py,sha256=rNhHEg0vgCZoHYGcaISOc9omUl3D3rQ2aHNGJWc_so8,10383
+psgd_jax-0.1.2.dist-info/LICENSE,sha256=nl8bPGELnC2lwxO_gdV3p9Gs7Ghr2wOE7e-m3w-QzZQ,18656
+psgd_jax-0.1.2.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+psgd_jax-0.1.2.dist-info/METADATA,sha256=zEvXcVvqJNBgKa4fF-nMC1qtxK3zssEXxZXYcnsjX04,9124
+psgd_jax-0.1.2.dist-info/RECORD,,
