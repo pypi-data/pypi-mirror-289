@@ -1,0 +1,15 @@
+pathpilot/__init__.py,sha256=eudPXyPNvxVT7jQZ5PFY0a2gS9xPFwyZEd2OVGqQJA4,121
+pathpilot/_csv.py,sha256=vu5WwFVZkZs0H6wwqVLqgce39uj3v3eZbwhN-JJSoJk,517
+pathpilot/_excel.py,sha256=t-ROpfAiaFHFHvVUCyrj49244gY090Hj7peQIqUCya8,39884
+pathpilot/_file.py,sha256=6ikHOnS4MT5JfTxC0lNkbUK-JEcFUsdwXSnZLIkIh4Q,14588
+pathpilot/_folder.py,sha256=zFgXLGmgdFahf4DfC6dJVMRQ9VTDoUBXGt6L56M8O-E,29383
+pathpilot/_pickle.py,sha256=66wu0YKDz-kw45Hd_9yicWXVPUVtw80eqGSWtKJxcx0,674
+pathpilot/_sqlite.py,sha256=KsamEf3gke5NBxkANbZ-XXw6p6DF-xG4anZwNxXWrTw,7282
+pathpilot/_text.py,sha256=PuLXbRH2DPYKObC3GhsWl5GMDvY7Usj8fbDH1Ina5EA,589
+pathpilot/_zip.py,sha256=-JwOzfRSItJCkIDv0TtW9TQS2CEqskY3nryBFoNa5Jc,6268
+pathpilot/core.py,sha256=8uVvcPpPZjeOA7ZmIh2zmqR_RoCAf2MwYPNm-uwkEvY,1757
+pathpilot/utils.py,sha256=raD0LRp8aFaukTXhPocX-fZJVZHfzNAxtuAu0TF9Ujs,7958
+pathpilot-0.1.6.dist-info/LICENSE,sha256=e2vk_CZyvQY50wY_UPKw03gYPnT8BV9nG2lgmPfUlnU,1091
+pathpilot-0.1.6.dist-info/METADATA,sha256=MyVxpXRHTJm_qRljsKFP2Bmh4g_pV5Qmgzkmt2pPrSM,4051
+pathpilot-0.1.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pathpilot-0.1.6.dist-info/RECORD,,
