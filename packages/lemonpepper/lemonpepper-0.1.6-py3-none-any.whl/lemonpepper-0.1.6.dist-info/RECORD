@@ -1,0 +1,17 @@
+lemonpepper/__init__.py,sha256=ERmJLVVtR1mrDBm9TbYFkvArG8PssBQyrPyvzChmOvc,297
+lemonpepper/gui_textual.py,sha256=pznyUZiOOgGD0cu5vXwyDeLHuLD_c0-dQwDButQn11A,68331
+lemonpepper/gui_textual.tcss,sha256=gtZIG77jGNiNmlAwrMDP9NBk8jjKZWtx918BlbCwBKY,763
+lemonpepper/local_debug_import.py,sha256=lGDE5FMhSgThuGcpgDjLiV68vkLvcD6wmAI7DEsf7vc,577
+lemonpepper/model_manager.py,sha256=ED1a0v6y4fCOu8SGDcJ0NAJdingdHHf5n57wAf3y2rA,3221
+lemonpepper/ollama_api.py,sha256=EI2RddjHPgqkRF58QZfxeMSN5sFllXInuDEGgwArkcQ,7182
+lemonpepper/spinners.json,sha256=9Wq4QZjVdSTEW_2gsT3trQHmzJLhqHj4RFBQ2yPYdqI,26476
+lemonpepper/transcribe_audio.py,sha256=R4DRJhslFmMzHW2GxffGePsVXIps8EpaGWjgzSfXSzs,10820
+lemonpepper/transcribe_audio_google_cloud.py,sha256=xTUIgNuVKShjVdQMxwJQFi4ulII19tuOXTnBC2KAeCE,3857
+lemonpepper/transcribe_audio_whisper.py,sha256=-5lb77txflTROYTdyY5BE1w2nVT4Nte0j-y13PjShLE,7502
+lemonpepper/utils.py,sha256=j104BhrqwonLe0gLfliAkDpOennMZC_caa8a0_PiJIQ,385
+lemonpepper-0.1.6.dist-info/LICENSE,sha256=VHKTsKg8KRjMtWxK_05vMzcgSxhWco9tbdlPa2vWE6M,10229
+lemonpepper-0.1.6.dist-info/METADATA,sha256=FU2S9lCrYmh0EHryxFHHKTwV4xO59HvKXfUvMLKKYWE,7254
+lemonpepper-0.1.6.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+lemonpepper-0.1.6.dist-info/entry_points.txt,sha256=_CSKA64TutQTao10iqNcazUdihiasos8V1mP3-2SPeM,61
+lemonpepper-0.1.6.dist-info/top_level.txt,sha256=hpGsgvWKK1mY6TvIIIUHLHZyblByBbzNywNypjSdxUs,12
+lemonpepper-0.1.6.dist-info/RECORD,,
