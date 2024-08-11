@@ -1,0 +1,10 @@
+argx/__init__.py,sha256=qQL7Rb7cXMUoIJselN_5o0AuKt5eIeWKEgcMDxNavJs,152
+argx/action.py,sha256=FJO2nz0XTq5rgDK0E6u0i9T86QWGkrLJ7xK4c8YfKew,6623
+argx/formatter.py,sha256=9vF5faJOFnv496d1dk0lQ46nntQ_GJe6SUzOnecEWZg,3974
+argx/parser.py,sha256=licWzpuCnkxIVfGiTPsdBYF-5JPlG4B2fTrQgvWUGdc,22017
+argx/type_.py,sha256=KbelXFAHSTzqhoKBhhXorBIIBk4DP5ciANd2ztnJgk8,717
+argx/utils.py,sha256=tdEoxSntQa8yEwmrpeX4QkvUfZeejseQXUmmha4trnc,2703
+argx-0.2.11.dist-info/LICENSE,sha256=N4EoXu8gA2oQidbj3bywb9MH2fS28TLibIX9gjcJtxI,1063
+argx-0.2.11.dist-info/METADATA,sha256=IDwhLhRvZls1u5_a0OM7HdErZhXUgMrF8blGsytSvmk,14986
+argx-0.2.11.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+argx-0.2.11.dist-info/RECORD,,
