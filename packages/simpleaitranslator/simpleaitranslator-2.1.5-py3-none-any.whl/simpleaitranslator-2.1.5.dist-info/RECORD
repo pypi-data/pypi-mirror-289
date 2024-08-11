@@ -1,0 +1,12 @@
+simpleaitranslator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpleaitranslator/exceptions.py,sha256=v1ZJgPzSrDFLSOy-dzTFguBjzBg1oAdTklNyBSCILF0,1110
+simpleaitranslator/translator.py,sha256=5SO_gzITiHi_eg2JMIOyPx5vg8ExxodbI5j3Eo8dRIU,8786
+simpleaitranslator/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpleaitranslator/utils/chunk_translator.py,sha256=Hl3euHVa-ibrmH85_jx-143cPEqLA2q6_NGb6XDVH5Q,1170
+simpleaitranslator/utils/enums.py,sha256=PN_AJ1SJRRQK4m5OtUP8Otrk9Ny39ucvH7Pvb7Qno7s,255
+simpleaitranslator/utils/language_counter.py,sha256=KkJnxm-B0iczzjnsiE8ULPJG_38c4kfLO3uOh1-xF1c,930
+simpleaitranslator/utils/text_splitter.py,sha256=LPUSxJ_Cv0qvISpXr3sfzCNXAB4Ap8esNqQSmsVXFqc,1509
+simpleaitranslator-2.1.5.dist-info/LICENSE,sha256=X5YrLyMLyrCu4R1RRdLG95WmbUwOVImyD0F8EjjRwhY,1070
+simpleaitranslator-2.1.5.dist-info/METADATA,sha256=dYyEp6s3R-jxCta3am88Nbw-_n2GRUI-WBoAT9jTGyg,5271
+simpleaitranslator-2.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+simpleaitranslator-2.1.5.dist-info/RECORD,,
