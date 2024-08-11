@@ -1,0 +1,11 @@
+datasette_geojson_map/__init__.py,sha256=3Nm3y-HnbaeIswDRB_ZGHhwm3HMV5eazjhbCIg3IScw,1612
+datasette_geojson_map/static/leaflet-simplestyle.min.js,sha256=0UNcuh7qPoyylkiWk8awOgLe04sBcaS5QAP8coJyRuM,2537
+datasette_geojson_map/static/leaflet-simplestyle.min.js.map,sha256=YcvqZrVavZSiCLc8HQcJdvOj87w8Aw-uQ8HNRk6XgD0,6475
+datasette_geojson_map/static/map.css,sha256=3oA-SGv0cFTyRLguKNcCL92ikhumO0HWrUg288E33Fo,341
+datasette_geojson_map/static/map.js,sha256=y9Ye5tG9LzAAkp5WKmK64zAuVmlnpqZfJ9SjL-HYZrg,1691
+datasette_geojson_map/static/map.js.map,sha256=GXBpjmdIoNh797R6mg1BYYEQTbyiyw8ulMnVIWwTd54,4127
+datasette_geojson_map-0.5.0.dist-info/METADATA,sha256=gsEZK6ch3AajZd7w-WBmobopQ87wuDqwwDRaPGW4h8Q,5223
+datasette_geojson_map-0.5.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+datasette_geojson_map-0.5.0.dist-info/entry_points.txt,sha256=F4TCs9RZSnwzQSh9e36vgj9gHJGIkNPymbDzwlTJGPU,48
+datasette_geojson_map-0.5.0.dist-info/top_level.txt,sha256=uHtCwa7aVmUGEeWR4btmx291Otbp2w1TWzorLSimU6s,22
+datasette_geojson_map-0.5.0.dist-info/RECORD,,
