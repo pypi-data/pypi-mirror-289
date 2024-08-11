@@ -1,0 +1,100 @@
+Metadata-Version: 2.3
+Name: gdsr
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: typing-extensions ; python_version < '3.11'
+Requires-Dist: maturin ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: hypothesis ; extra == 'dev'
+Requires-Dist: pytest-randomly ; extra == 'dev'
+Requires-Dist: pytest-xdist ; extra == 'dev'
+Requires-Dist: mkdocs ; extra == 'docs'
+Requires-Dist: mkdocstrings-python ; extra == 'docs'
+Requires-Dist: mkdocs-material ; extra == 'docs'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: hypothesis ; extra == 'test'
+Requires-Dist: pytest-randomly ; extra == 'test'
+Requires-Dist: pytest-xdist ; extra == 'test'
+Requires-Dist: ruff ; extra == 'lint'
+Requires-Dist: mypy ; extra == 'lint'
+Requires-Dist: isort ; extra == 'lint'
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: lint
+License-File: LICENSE
+Keywords: gdsr,rust,python,pyo3,GDSII,CAD
+Author-email: Matthew Mckee <matthewmckee04@yahoo.co.uk>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Documentation, https://MatthewMckee4.github.io/gdsr/
+Project-URL: Repository, https://github.com/MatthewMckee4/gdsr
+Project-URL: Issues, https://github.com/MatthewMckee4/gdsr/issues
+
+# gdsr
+GDSII manipulation, written in rust.
+
+## Documentation
+
+The documentation for this project is available at [matthewmckee4.github.io/gdsr/](matthewmckee4.github.io/gdsr/).
+
+## Installation
+
+I recommend using [uv](https://github.com/astral-sh/uv) to manage your python packages.
+
+To install and use yourself:
+
+```bash
+uv pip install gdsr
+```
+
+To use from source code:
+
+```bash
+uv pip install requirements-dev.txt
+
+maturin develop
+# or
+uv pip install .
+```
+
+## What can you do with gdsr
+
+gdsr offers many features which include but are not limited to:
+- Easy reading from and writing to gds files
+- Strictly typed python code
+- Easy to understand code
+
+## Inspiration
+
+My main inspiration comes from [gdstk](https://github.com/heitzmann/gdstk). If you are looking for an extremely fast gds manipulation python package then i would strongly recommend heading over and having a look at his work.
+
+Other inspirations include:
+- [gdsfactory](https://github.com/gdsfactory/gdsfactory)
+- [klayout](https://www.klayout.org/klayout-pypi/)
+
+## How to get started using gdsr
+
+A simple program below shows the easy to use interface.
+
+```python
+import gdsr
+
+library = gdsr.Library("My First Library")
+
+cell = gdsr.Cell("My First Cell")
+
+cell.add(gdsr.Text("Hello, World!"))
+
+library.add(cell)
+
+library.to_gds("My first gdsr output.gds")
+```
+
+## Need help?
+
+Head over to the [discussions page](https://github.com/MatthewMckee4/gdsr/discussions) and create a new discussion there or have a look at the [issues page](https://github.com/MatthewMckee4/gdsr/issues) to see if anyone has had the same issue as you.
