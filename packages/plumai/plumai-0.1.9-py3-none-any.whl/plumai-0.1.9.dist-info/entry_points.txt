@@ -1,0 +1,3 @@
+[console_scripts]
+plumai = plumai.plumai:main
+
