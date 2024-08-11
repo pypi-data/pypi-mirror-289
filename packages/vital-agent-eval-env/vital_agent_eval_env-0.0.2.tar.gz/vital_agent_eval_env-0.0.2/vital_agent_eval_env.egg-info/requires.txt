@@ -1,0 +1,8 @@
+vital-ai-vitalsigns>=0.1.19
+vital-ai-aimp>=0.1.6
+vital-agent-container-client>=0.0.3
+openpyxl
+
+[dev]
+twine
+setuptools
