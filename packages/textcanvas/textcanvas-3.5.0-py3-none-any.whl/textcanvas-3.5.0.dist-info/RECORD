@@ -1,0 +1,10 @@
+textcanvas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textcanvas/charts.py,sha256=eHKC14MEJL0_l8OOQamMaS6D4YQHDNiwIJ1S0OEn0V4,33971
+textcanvas/color.py,sha256=7QaNX9_8E-iAtw40yd6xthFV0RHduYHEby61RVIOYVg,49878
+textcanvas/maths.py,sha256=sAiEX7YRyO38rWWJqzelFD3_FFNBUVPrh3W9xUBDEZo,9190
+textcanvas/textcanvas.py,sha256=IPU3qeysw0w-JOmvLD7zSrZWW9pZCXeLvOxA2ApMGOg,36678
+textcanvas/utils.py,sha256=6P_f0SB6O7qQLnND_3CtOa--Fk9DJhVXQtl5c1EscPQ,8896
+textcanvas-3.5.0.dist-info/LICENSE,sha256=E0nUAX87MoPPMHjOMWW1e1LeluImx5HZ8th_fCrbo5w,1072
+textcanvas-3.5.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+textcanvas-3.5.0.dist-info/METADATA,sha256=7wstg9HggmaGyLQqlRS5PLxbd7M0LMFQcTPpCqaLzwI,22248
+textcanvas-3.5.0.dist-info/RECORD,,
