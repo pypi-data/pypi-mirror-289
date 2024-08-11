@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: cloudspark
+Version: 1.0.5
+Summary: CloudSpark is a powerful Python package designed to simplify the management of AWS S3 and Lambda services. Whether you're working on the frontend or backend, CloudSpark provides an intuitive interface to generate presigned URLs and handle file uploads seamlessly.
+Home-page: https://github.com/muhammedrahil/cloudspark
+Author: Muhammed Rahil M
+Author-email: muhammedrahilmadathingal@gmail.com
+Keywords: python,aws,s3,lambda,presigned urls,file uploads
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3>=1.34.157
+
+# CloudSpark
+
+
+
+**CloudSpark** is a powerful Python package designed to simplify the management of AWS S3 and Lambda services. Whether you're working on the frontend or backend, CloudSpark provides an intuitive interface to generate presigned URLs and handle file uploads seamlessly.
+
+
+
+## Features
+
+
+
+- **S3 Management**: Effortlessly manage your S3 buckets, objects, and file uploads with built-in methods.
+
+
+
+- **Lambda Management**: Integrate and manage AWS Lambda functions with ease, allowing for smooth event-driven architecture.
+
+
+
+- **Presigned URL Generation**: Generate secure presigned URLs for your S3 objects, enabling users to upload files directly from the frontend without exposing your credentials.
+
+
+
+- **Seamless Integration**: Designed to work smoothly with both frontend and backend applications, making file uploads and cloud function management more accessible.
+
