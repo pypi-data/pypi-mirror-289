@@ -1,0 +1,12 @@
+pyemblite/mesh_construction.cpython-39-x86_64-linux-gnu.so,sha256=sm-8SycAcYyHjOWSPj0kL6QVd_6TQ1lG940j9kc3IGc,32929616
+pyemblite/test_scene.cpython-39-x86_64-linux-gnu.so,sha256=x95pH5DMFJRRzfbf75C35Ozyht6qSLdX4owDjMpj8Yg,32904488
+pyemblite/_version.py,sha256=ALli2m_3ZwnAuz5RzAQJfPUyU1tBJvsBMmmhF1vYy5M,497
+pyemblite/__init__.py,sha256=cOjrZozN96elyivPfZGTVU6SnDi1vdHNOyjHWLq5Rew,102
+pyemblite/rtcore.cpython-39-x86_64-linux-gnu.so,sha256=hO02DM-7HkJmXQVbb31Q3ru2fUwwTF0gqCQe3VaVK9E,32949768
+pyemblite/rtcore_scene.cpython-39-x86_64-linux-gnu.so,sha256=VJ8NqmokquJBd26E3qLIbvUmotUNavucxxUqT2metXk,33257960
+pyemblite/test.py,sha256=lTQij9fHnQOwV9lBl7XXfSG6YzdLZpvILW8LlZVmZPQ,18514
+pyemblite-0.1.6.dist-info/RECORD,,
+pyemblite-0.1.6.dist-info/WHEEL,sha256=MVTUj9HsKcwgO1CyrX7rss2OaaDdFsaqcRhTHux_ueQ,143
+pyemblite-0.1.6.dist-info/top_level.txt,sha256=YDaD_IQhzfOGtWLupRa-TogxcO7hI4V0CVWm8VYIleU,10
+pyemblite-0.1.6.dist-info/LICENSE.txt,sha256=_xuYAn05ET9sP82cOw68xgsUW5orgvVnD0RL4wKKkA4,1299
+pyemblite-0.1.6.dist-info/METADATA,sha256=xSEqP0c81i7-2HuJ04FFyGXnrxJRJviHIl55RMJvFDU,7045
