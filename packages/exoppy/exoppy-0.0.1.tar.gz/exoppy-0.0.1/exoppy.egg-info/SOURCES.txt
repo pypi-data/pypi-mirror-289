@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+exoppy/__init__.py
+exoppy/lightcurve.py
+exoppy.egg-info/PKG-INFO
+exoppy.egg-info/SOURCES.txt
+exoppy.egg-info/dependency_links.txt
+exoppy.egg-info/requires.txt
+exoppy.egg-info/top_level.txt
+tests/test_lightcurve.py
