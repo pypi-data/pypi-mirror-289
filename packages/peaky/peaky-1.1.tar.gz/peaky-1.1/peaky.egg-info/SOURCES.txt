@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+peaky/__init__.py
+peaky/_doc.py
+peaky/_main.py
+peaky/_methods.py
+peaky/_string.py
+peaky.egg-info/PKG-INFO
+peaky.egg-info/SOURCES.txt
+peaky.egg-info/dependency_links.txt
+peaky.egg-info/requires.txt
+peaky.egg-info/top_level.txt
