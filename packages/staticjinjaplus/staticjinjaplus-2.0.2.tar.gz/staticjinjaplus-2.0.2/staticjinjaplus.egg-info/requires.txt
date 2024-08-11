@@ -1,0 +1,12 @@
+staticjinja~=5.0
+webassets~=2.0
+htmlmin~=0.1
+jsmin~=3.0
+environs~=11.0
+markdown~=3.6
+
+[dev]
+setuptools>=69
+build~=1.2
+twine~=5.0
+mkdocs~=1.6
