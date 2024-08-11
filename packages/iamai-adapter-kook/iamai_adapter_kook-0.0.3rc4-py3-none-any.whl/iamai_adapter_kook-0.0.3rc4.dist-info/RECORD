@@ -1,0 +1,15 @@
+iamai/adapter/kook/__init__.py,sha256=dvL34XnmUEH389mc0oQOE0OMH5g1bKwRyZzxx064Jnk,13636
+iamai/adapter/kook/_event.py,sha256=G5YLG7WW9uk0-1N-rr6-kwUgH5_2twGN0wtpxuwVwxU,22994
+iamai/adapter/kook/config.py,sha256=7_HAJ3KidwZTmgJRu3X_3R8cHlS2cVbap1RU9KuPPFo,881
+iamai/adapter/kook/event.py,sha256=r8Q17-nBmqqqLN1pkx0Tedg4bX-oZTvXUvud4Y2XPyo,22992
+iamai/adapter/kook/exceptions.py,sha256=0fIZvk1YNs8ihJAPtmyH29-X2VLMbXElgO8QYx4v-BM,2116
+iamai/adapter/kook/message.py,sha256=x8ultMb7gV6hbKP24Hkj-jqnedcxC6MFuO869wZ9Yv0,10135
+iamai/adapter/kook/api/__init__.py,sha256=5k4UFbvT9kwAW7EljcKvI2EZnQUfNgBmx-ikNcSXg_A,64
+iamai/adapter/kook/api/client.py,sha256=-uuaBdHyaoeR7GfV6KhHrnpZNe-s5aAeudNUJWgdxLw,21
+iamai/adapter/kook/api/client.pyi,sha256=_vPy0qLDNRSGpKoNHbNhPTYDOdknAVO1uwAH26mF2a4,12034
+iamai/adapter/kook/api/handle.py,sha256=4pQGOk7rRUsnr7eyFFs0y1Lr4EsegKCKdhz3_4iE-Cg,4149
+iamai/adapter/kook/api/model.py,sha256=Lp989l53MOdhIgclpUjcxw4t-feRcIPRfghgy0hc6cE,11827
+iamai_adapter_kook-0.0.3rc4.dist-info/METADATA,sha256=rZVJnVZzqdTX8riZdna4emyulqkEKH-6REm2R5DlTr4,1134
+iamai_adapter_kook-0.0.3rc4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+iamai_adapter_kook-0.0.3rc4.dist-info/licenses/LICENSE,sha256=F6QoWtpDqYV6uPhHHutTPi8MF_lRY6qm9nyAugdsSlI,1071
+iamai_adapter_kook-0.0.3rc4.dist-info/RECORD,,
