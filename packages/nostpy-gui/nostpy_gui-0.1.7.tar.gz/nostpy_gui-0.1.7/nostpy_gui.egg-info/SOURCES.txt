@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+nostpy_gui/__init__.py
+nostpy_gui/main.py
+nostpy_gui.egg-info/PKG-INFO
+nostpy_gui.egg-info/SOURCES.txt
+nostpy_gui.egg-info/dependency_links.txt
+nostpy_gui.egg-info/entry_points.txt
+nostpy_gui.egg-info/requires.txt
+nostpy_gui.egg-info/top_level.txt
