@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: LittleDog
+Version: 0.1.1
+Summary: A must have python package which makes pragramming a lot easier
+Author-email: Little Dog <littledog.5727@gmail.com>
+License: Copyright (c) 2023 Littledog
+        
+        Software License Agreement
+        
+        This Software License Agreement ("Agreement") is entered into between LittleDog ("Licensor") and the user ("Licensee").
+        
+        1. License Grant:
+           Licensor grants Licensee a non-exclusive, non-transferable license to use the software (the "Software") subject to the terms and conditions of this Agreement.
+        
+        2. Restrictions:
+           Licensee shall not:
+           a. Copy, reproduce, or distribute the Software, in whole or in part, except as expressly permitted by this Agreement.
+           b. Modify, adapt, translate, reverse engineer, decompile, or disassemble the Software.
+           c. Rent, lease, lend, or sublicense the Software to any third party.
+           d. Remove, alter, or obscure any copyright, trademark, or other proprietary notices on the Software.
+        
+        3. Ownership:
+           The Software remains the exclusive property of Licensor. Licensee acknowledges and agrees that it does not acquire any ownership rights in the Software.
+        
+        4. Termination:
+           This Agreement is effective until terminated by either party. Upon termination, Licensee must cease using the Software and destroy all copies of the Software in their possession.
+        
+        5. Warranty Disclaimer:
+           The Software is provided "as is" without warranty of any kind, either express or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose.
+        
+        6. Limitation of Liability:
+           In no event shall Licensor be liable for any indirect, incidental, special, or consequential damages arising out of or in any way connected with the use of the Software.
+        
+        7. Governing Law:
+           This Agreement shall be governed by and construed in accordance with the laws of [Your Jurisdiction].
+        
+        8. Entire Agreement:
+           This Agreement constitutes the entire agreement between the parties and supersedes all prior or contemporaneous understandings, agreements, representations, and warranties.
+        
+        By installing or using the Software, Licensee agrees to be bound by the terms and conditions of this Agreement.
+        
+        LittleDog
+        10-08-2024
+        
+        
+Project-URL: Homepage, https://www.sites.google.com/view/littledog-python
+Project-URL: Download, https://pypi.org/project/Littledog/#files
+Project-URL: License, https://github.com/LittleDog5727/littledog-python/blob/main/LICENSE
+Project-URL: Repository, https://github.com/LittleDog5727/littledog-python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+LittleDogAI, now integrated into the LittleDog package, is a state-of-the-art Python tool that leverages advanced AI and natural language processing (NLP) to convert user instructions into executable Python code. Utilizing the Gemini API, LittleDogAI supports both text and image inputs, transforming them into functional Python scripts that are executed seamlessly. This package is designed for developers and data scientists looking to simplify their coding workflow by automating code generation and execution through intuitive, interactive interfaces. Whether automating tasks, generating code snippets, or handling visual data, LittleDogAI makes complex coding accessible with minimal effort.
+
+LittleDog aims to consolidate essential functions and applications into a streamlined module, eliminating the need for extensive code writing. Simply specify your requirements in a single line, and let LittleDogAI handle the rest. Say goodbye to cumbersome code and hello to effortless programming.
+
+pip install opencv-contrib-python numpy matplotlib google-generativeai
+
+Test Pypi source - https://test.pypi.org/project/Littledog-LittleDog5727/0.1.1/ (Source code & Build)<br>
+Pypi source - https://pypi.org/project/Littledog/0.1.1/<br>
+Official website - https://www.sites.google.com/view/littledog-python<br>
+Github repository - https://github.com/LittleDog5727/littledog-python
