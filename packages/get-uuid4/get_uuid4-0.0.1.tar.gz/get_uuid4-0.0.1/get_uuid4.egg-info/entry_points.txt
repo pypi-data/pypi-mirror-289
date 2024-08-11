@@ -1,0 +1,2 @@
+[console_scripts]
+get_uuid4 = get_uuid4:main

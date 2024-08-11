@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: get_uuid4
+Version: 0.0.1
+Summary: Get a random uuid4 per-time
+Author: Ahmed Mohamed
+Author-email: Ahmedelmawrdy2@gmail.com

@@ -1,0 +1,8 @@
+setup.py
+get_uuid4/__init__.py
+get_uuid4/app.py
+get_uuid4.egg-info/PKG-INFO
+get_uuid4.egg-info/SOURCES.txt
+get_uuid4.egg-info/dependency_links.txt
+get_uuid4.egg-info/entry_points.txt
+get_uuid4.egg-info/top_level.txt
