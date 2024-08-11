@@ -1,0 +1,8 @@
+CMakeLists.txt,sha256=99GZ9emcSa9HoKw92Tx1v9UmKrUmVexWu0znstXb_Ok,893
+socom/__init__.py,sha256=ZLzJC26-BX9w8N7uMOomKKpBFjR0WzTTeqZnfgCB-CI,262
+socom/_multinet.cpython-311-darwin.so,sha256=RSKLZqMtD5XFQHDNOPMtL3sq0P3OU-81x2fT_xzx2wY,2739192
+socom/net.py,sha256=a1Xeplw8e-VcXH2c8SKhBM1x2PXUX0Jh2TfWna8plCQ,539
+socom-0.1.0.dist-info/LICENSE.txt,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+socom-0.1.0.dist-info/METADATA,sha256=peDKMZD3h1pIiojwg3dyw2PHhwxuFn4v39LCm5L1KjQ,1118
+socom-0.1.0.dist-info/WHEEL,sha256=63kvc_xM4LlRZXk_KbLSrQxoK-CtK1ikzhhFlK5PpFc,107
+socom-0.1.0.dist-info/RECORD,,
