@@ -1,0 +1,9 @@
+cocodev/django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cocodev/django/auto_import/__init__.py,sha256=lBtCdLCb6IUdQstJSk2QJZ1KsTVjVXYCgpH0lTrtMyM,593
+cocodev/django/auto_import/apps.py,sha256=H91xU3elQczkM2UgN-vEJ3va7UOPYnOnO4o4lA6-BwI,2206
+cocodev/django/auto_import/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_app_auto_import-1.0.1.dist-info/LICENSE.txt,sha256=7XVyi1Jyk-XtXflt2SB4TKtkE5thao-hzsfd7em0plU,1076
+django_app_auto_import-1.0.1.dist-info/METADATA,sha256=H7Ce8j2UpJmc1x-IeT4xsQvFy8WOjDiIh4l7F5Fd__g,3893
+django_app_auto_import-1.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+django_app_auto_import-1.0.1.dist-info/top_level.txt,sha256=0tXQvW2S9blmlKW8ctSvSx6xXQHwAyUdmx35hgUFj48,8
+django_app_auto_import-1.0.1.dist-info/RECORD,,
