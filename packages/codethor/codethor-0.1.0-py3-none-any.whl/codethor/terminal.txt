@@ -1,0 +1,21 @@
+Adding src/core.py
+[36mSummarized: src/core.py[0m
+[94mRERANK:
+└─📄 src/core.py
+└─📄 src/test/swamix_code_assistant.py
+└─📄 src/utils/scraper.py
+└─📄 src/apps/article_writer/articlewriter.py
+└─📄 src/test/SamQuickWiki.py
+└─📄 src/test/dfinity_parser.py
+└─📄 src/uaiclient.py
+└─📄 src/test/ollama_openai.py
+└─📄 src/utils/emailparser.py
+└─📄 src/test/local_loader.py
+└─📄 src/utils/embedder.py
+└─📄 src/utils/tools.py
+└─📄 src/test/ollamabench.py
+└─📄 src/apps/quickintegrate_demo.py
+└─📄 src/main.py[0m
+[33mContext Tokens: 18729 [0m
+
+[0m
