@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+spedpyutils/__init__.py
+spedpyutils/arquivo_digital_handler.py
+spedpyutils/utilslib.py
+spedpyutils.egg-info/PKG-INFO
+spedpyutils.egg-info/SOURCES.txt
+spedpyutils.egg-info/dependency_links.txt
+spedpyutils.egg-info/requires.txt
+spedpyutils.egg-info/top_level.txt
+spedpyutils/biddings/__init__.py
+spedpyutils/biddings/hierarquical_schema.py
