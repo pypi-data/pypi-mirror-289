@@ -1,0 +1,9 @@
+README.md
+setup.py
+synccord/__init__.py
+synccord/main.py
+synccord.egg-info/PKG-INFO
+synccord.egg-info/SOURCES.txt
+synccord.egg-info/dependency_links.txt
+synccord.egg-info/requires.txt
+synccord.egg-info/top_level.txt
