@@ -1,0 +1,15 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_flac.py,sha256=Q4CvGTPClchtzNYoqKOkukjqc_h0XaqWaNV6RZfGPHc,700
+tests/test_m4a.py,sha256=FZD089iasHAIZUrK40g2vZjXwC3ezaZz1hEvbhpHRq8,778
+tests/test_mp3.py,sha256=6x3WWtfxnRyTW5UQ1jSxuh-e-LUglEeKLttZXWUB8r0,699
+tests/test_ogg.py,sha256=IXKKfBvbOn5pFWTC76SVZnuDHQwhhC_FdKfG5no9b6s,699
+tests/test_opus.py,sha256=N-Z-g2GHZyATG6bwBbeJ66B-3A5IfpVM7vp3B5nghrk,751
+tests/test_unigen.py,sha256=4jBpPglxUaRXbWyGeiBNwTVF2h2Fc33Sw4jK4PozfmE,12332
+tests/test_utils.py,sha256=h7nf66oY3AKX9Rx_yEMhHkU847dKopwmo-ZAhguKxnI,3742
+tests/test_wav.py,sha256=3OdlEInwhm_54DkR7bVbiqchoWAQbb0t85bjwlyOUOw,698
+unigen/__init__.py,sha256=bVd64S5NvUGs6AyY9mf0thqThYChAv2E37Jk7OYoCho,229
+unigen-1.4.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+unigen-1.4.1.dist-info/METADATA,sha256=AodihcITg7Dn8juSG_QTLkRiX4ZkwQZV0TDZLDvKGcU,538
+unigen-1.4.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+unigen-1.4.1.dist-info/top_level.txt,sha256=H9FNfAxa6T3JqHb619po7olPVzU7GMH02pF9bW2TFB8,13
+unigen-1.4.1.dist-info/RECORD,,
