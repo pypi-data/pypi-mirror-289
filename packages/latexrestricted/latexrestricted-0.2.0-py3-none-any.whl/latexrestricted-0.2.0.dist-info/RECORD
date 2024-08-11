@@ -1,0 +1,14 @@
+latexrestricted/__init__.py,sha256=P1AdAjSY373Zrvgrr3b1cozfY8N7FJdZxemqf2iZD_c,671
+latexrestricted/_anypath.py,sha256=lm4qYg-9poC4SnxJSj6bfshInoF-woZJJlpWWIX560Y,2762
+latexrestricted/_latex_config.py,sha256=4_nndmm7OkkBbUcQUgpLEETNrNu6DtmUUb5mU-ZZSzQ,26927
+latexrestricted/_restricted_pathlib.py,sha256=gwfgr6JSl-CEK385pI_QSKbxjY2FkeDu8qEl2uEHbzk,30030
+latexrestricted/_restricted_subprocess.py,sha256=PWa3ClcenmfpDTZpx_z26cAriIXUkvkuHF2DTTJrUBk,5403
+latexrestricted/err.py,sha256=DDBgoSEkCEtVSsQQbCuuqfTElzAXw8GemWYKAPdfPYs,755
+latexrestricted/fmtversion.py,sha256=Vfm7NQm50fzd9-teRzFLXKLHyiDtt2dSztufRH5YbwA,8724
+latexrestricted/version.py,sha256=0M84yHQV9vi56kDdnxe2W7iXSnObtV8eRPQ-jyzCc1I,150
+latexrestricted-0.2.0.dist-info/CHANGELOG.md,sha256=nTeqTy-BQInY-d0AHbuVRLC0VDEFsLUA4EL7e8hd5Ys,198
+latexrestricted-0.2.0.dist-info/LICENSE.txt,sha256=r32fnpOyfQtRKt1JYnobQXJEgpiMc3xTOqFz0au3Dlo,620
+latexrestricted-0.2.0.dist-info/METADATA,sha256=6lQb-R0osqq7AiZ_XXIA3eOU1d_UHFa-b0onW3u4dSM,20530
+latexrestricted-0.2.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+latexrestricted-0.2.0.dist-info/top_level.txt,sha256=_IAF_fREhYKHSfm6bYRChxRyjRDSsuMQsjfvWlxBSl0,16
+latexrestricted-0.2.0.dist-info/RECORD,,
