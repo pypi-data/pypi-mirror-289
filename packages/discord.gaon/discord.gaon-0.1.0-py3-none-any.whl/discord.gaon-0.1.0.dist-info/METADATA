@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: discord.gaon
+Version: 0.1.0
+Summary: Finally, the discord.gaon Python module is complete! Let's all try it together!
+Home-page: https://github.com/gugaon0210aa/discord.gaon
+Author: gugaon0210
+Author-email: ngng01010@naver.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: websockets>=10.0
+Requires-Dist: aiohttp>=3.8.0
+
+# discord.gaon
+
+`discord.gaon` is a simple Discord bot library.
+
+## Installation
+
+```bash
+pip install discord.gaon
