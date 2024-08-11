@@ -1,0 +1,18 @@
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.23.0"
+tag_format = "$version"
+version_scheme = "semver2"
+changelog_file = "CHANGELOG.md"
+version_files = ["setup.py", "src/test/__version__.py"]
+update_changelog_on_bump = false
+
+[tool.commitizen.change_type_map]
+build = "MAJOR"
+release = "MAJOR"
+
+[tool.commitizen.change_type_order]
+BREAKING = 0
+MAJOR = 1
+MINOR = 2
+PATCH = 3
