@@ -1,0 +1,11 @@
+nonebot_plugin_eventmonitor/__init__.py,sha256=12rN-18U4x-9drRuiiix2Zu71eKdhpo0xFvvCzmVW8w,3797
+nonebot_plugin_eventmonitor/config.py,sha256=ddDs9V6uL72ELMFPJm6sWSv4BsnHhsn9YmmCBhfeR_Q,6130
+nonebot_plugin_eventmonitor/fonts/SIMYOU.TTF,sha256=5EQOB-AvprWo9JfaUvyrCqcRs5nUP_KKK6JGxgM2OTA,6700204
+nonebot_plugin_eventmonitor/handle.py,sha256=loMt0vIgOHlyRdkxjEgG8DuRGJg_qoX9ac8_FyGUbV0,15346
+nonebot_plugin_eventmonitor/txt2img.py,sha256=j1KEe0DNRLYIrvoAt8NbpveP64HC25auc0PgEzGAfLs,2286
+nonebot_plugin_eventmonitor/update.py,sha256=70gSP9dOeIPhB6RnR-gpIv1NX8E_gjKAEy_cXn8AIUE,4474
+nonebot_plugin_eventmonitor/utils.py,sha256=jF2B4iHN2vc0O9sU3A3cG0qXzShkvaO4Js_V93UhJsc,12479
+nonebot_plugin_eventmonitor-0.3.2.2.dist-info/LICENSE,sha256=81LoU1NdMjsqUSE8xxDGXipg3wbhkHJVcIGadsP8gGI,1089
+nonebot_plugin_eventmonitor-0.3.2.2.dist-info/METADATA,sha256=dVLU1oy8Ftq0DS_S0sHSNFtgfuGxNttvQ65WIiWfaoA,8760
+nonebot_plugin_eventmonitor-0.3.2.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+nonebot_plugin_eventmonitor-0.3.2.2.dist-info/RECORD,,
