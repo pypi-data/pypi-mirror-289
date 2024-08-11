@@ -1,0 +1,14 @@
+anthropic
+openai
+boto3
+requests
+click
+urllib3==1.26.15
+
+[dev]
+black
+flake8
+pylint
+mypy
+bandit
+types-requests
