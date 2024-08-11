@@ -1,0 +1,7 @@
+README.md
+setup.py
+pyfetchver.egg-info/PKG-INFO
+pyfetchver.egg-info/SOURCES.txt
+pyfetchver.egg-info/dependency_links.txt
+pyfetchver.egg-info/requires.txt
+pyfetchver.egg-info/top_level.txt
