@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+dict_reorder/__init__.py
+dict_reorder.egg-info/PKG-INFO
+dict_reorder.egg-info/SOURCES.txt
+dict_reorder.egg-info/dependency_links.txt
+dict_reorder.egg-info/top_level.txt
