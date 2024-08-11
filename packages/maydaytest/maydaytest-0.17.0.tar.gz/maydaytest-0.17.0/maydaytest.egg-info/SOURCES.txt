@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+maydaytest.egg-info/PKG-INFO
+maydaytest.egg-info/SOURCES.txt
+maydaytest.egg-info/dependency_links.txt
+maydaytest.egg-info/top_level.txt
