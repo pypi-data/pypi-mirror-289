@@ -1,0 +1,7 @@
+[project]
+name = "ada-s3"
+authors = [
+    {name = "michael", email = "michael_chia7@msn.com"}
+]
+version = "0.0.0"
+description = "pending"
