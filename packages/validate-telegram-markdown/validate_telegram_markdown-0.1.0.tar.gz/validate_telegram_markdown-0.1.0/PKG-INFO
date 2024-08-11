@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: validate-telegram-markdown
+Version: 0.1.0
+Summary: Validate Telegram flavored markdown
+Home-page: https://github.com/skarrok/validate-telegram-markdown
+License: MIT
+Keywords: telegram,markdown,validate
+Author: skarrok
+Author-email: skarrork.h@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Utilities
+Project-URL: Repository, https://github.com/skarrok/validate-telegram-markdown
+Description-Content-Type: text/markdown
+
+# Validate Telegram Markdown
+
+[![Lint and Test](https://github.com/skarrok/validate-telegram-markdown/actions/workflows/test.yml/badge.svg)](https://github.com/skarrok/validate-telegram-markdown/actions/workflows/test.yml)
+[![pypi package](https://img.shields.io/pypi/v/validate-telegram-markdown)](https://pypi.org/project/validate-telegram-markdown)
+[![python](https://img.shields.io/pypi/pyversions/validate-telegram-markdown)](https://pypi.org/project/validate-telegram-markdown)
+
+This package tries to validate that telegram-flavored markdown is correct and
+safe to use in [sendMessage](https://core.telegram.org/bots/api#sendmessage).
+
+Simple and naive implementation, probably has bugs but good enough for my
+personal use case.
+
+Supports all features of [MarkdownV2 Style](https://core.telegram.org/bots/api#markdownv2-style).
+
+Contributions are welcome!
+
+## Installation
+
+```bash
+pip install validate-telegram-markdown
+```
+
+## Usage
+
+```python
+from validate_telegram_markdown import validate_markdown
+
+message = "*bold*"
+try:
+    validate_markdown(message)
+except ValueError:
+    # something isn't right
+    raise
+
+# or here you can safely use message in telegram sendMessage method
+```
+
