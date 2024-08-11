@@ -1,0 +1,4 @@
+[console_scripts]
+gc = ai_commit_msg.main:main
+git_ai_commit = ai_commit_msg.main:main
+
