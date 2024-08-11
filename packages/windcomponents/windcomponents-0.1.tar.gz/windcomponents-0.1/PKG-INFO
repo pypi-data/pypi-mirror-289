@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: windcomponents
+Version: 0.1
+Summary: A library for calculating crosswind and tailwind components on a runway
+Author: Sebastiaan Menger
+Author-email: sebastiaan.menger@outlook.com
+License: GPL-3.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# windcomponents
+
+py lib for rwy crosswind and tailwind calculations
+programmed for analysis with metar data
+works with 10 deg wind intervals
+work in progress
+consider rwy = magnetic, metar is true, so apply magnetic variation/inclination etc
+Not yet optimised for runtime performance (duplication of calculation only required once - should become a dedicated function)
+status: very conceptual
