@@ -1,0 +1,21 @@
+{
+  "template": "https://github.com/sphinx-notes/cookiecutter",
+  "commit": "df33950130c89d7d65d9a008716d95f99c4077c9",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "namespace": "sphinxnotes",
+      "name": "any",
+      "full_name": "sphinxnotes-any",
+      "author": "Shengyu Zhang",
+      "description": "Sphinx domain for documenting anything",
+      "version": "2.4.2",
+      "github_owner": "sphinx-notes",
+      "github_repo": "any",
+      "pypi_name": "sphinxnotes-any",
+      "pypi_owner": "SilverRainZ",
+      "_template": "https://github.com/sphinx-notes/cookiecutter"
+    }
+  },
+  "directory": null
+}
