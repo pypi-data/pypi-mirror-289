@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pywombo"
+version = "0.1.1"
+description = "wombo AI free image generation"
+authors = ["MrSmith06 <sletars@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/BotsForge/pywombo"
+homepage = "https://github.com/BotsForge/pywombo"
+packages = [{include = "wombo"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^2.0"
+httpx = "^0.27"
+httpx-socks = "^0.9"
+proxystr = "^2.0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
