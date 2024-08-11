@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: nodeprocess
+Version: 0.0.1
+Summary: Node Process Community Detection
+Author: Patrick Gildersleve
+Author-email: <p.gildersleve@lse.ac.uk>
+Keywords: python,network science,community detection,Wikipedia
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: igraph
+Requires-Dist: leidenalg
+
+Package for temporal community detection, using link data as well as correlations between processes on nodes
