@@ -1,0 +1,7 @@
+[project]
+name = "ada-auth"
+authors = [
+    {name = "michael", email = "michael_chia7@msn.com"}
+]
+version = "0.0.0"
+description = "pending"
