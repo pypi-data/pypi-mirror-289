@@ -1,0 +1,15 @@
+app/__init__.py,sha256=-VCb2bCezeIIk8cZVS-3OXkSdzXG3vjqiFvj816hZZM,249
+app/taskit.py,sha256=W6CIHKOOyHB1DLqZWdr3UWQKPDsHcQp9vYci3a9nj1Q,144
+app/src/__init__.py,sha256=XS-u3cQ7aEkFsWdV_KU3DBGA8aR81Pp6iuQVDOAJLOM,288
+app/src/models.py,sha256=aNbRlMiuIsPa2Jn8ocQ-piP1fKa0lUU2KxeD7YSV228,853
+app/src/taskdb.py,sha256=DkFL7XFewkZcU2XFSiCAQkuvM9nv-z1V71DLaHcnKz4,3721
+app/src/text_helpers.py,sha256=47wLZLUmd9p4WoRol-uNf21LfwpXvFMCnU-DNjjSzz4,2518
+app/src/cmd/TaskItCLI.py,sha256=MhtOuEAhWwCv1auw6_0E-gnLjpdGWnXG09BhWz6fElY,4253
+app/src/cmd/__init__.py,sha256=BDfKT8bkVZH42bhmXHC0LwytkEigjXocWv1ZEKOiFXc,82
+app/src/cmd/cmd_actions.py,sha256=XuqIIPOghiSuC9RySfMwvuI93jv8QdWF8jdlKHJfwuc,392
+taskwizard-1.0.0.dist-info/LICENSE,sha256=eJ6tNkL4HbDIj7B0gE7ci_l49NsaiQyPT01b6PVc_fU,1069
+taskwizard-1.0.0.dist-info/METADATA,sha256=VqtADJznUBZdFxAqmI8Et_0bvyBgfiaiZs9MHSWFx_Q,1992
+taskwizard-1.0.0.dist-info/WHEEL,sha256=Wyh-_nZ0DJYolHNn1_hMa4lM7uDedD_RGVwbmTjyItk,91
+taskwizard-1.0.0.dist-info/entry_points.txt,sha256=Dg-N-fyKkGG6TDwWMyPW-IpXUNcw_DdKftpT7luKaio,45
+taskwizard-1.0.0.dist-info/top_level.txt,sha256=io9g7LCbfmTG1SFKgEOGXmCFB9uMP2H5lerm0HiHWQE,4
+taskwizard-1.0.0.dist-info/RECORD,,
