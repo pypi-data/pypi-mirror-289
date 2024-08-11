@@ -1,0 +1,9 @@
+flowai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flowai/config_manager.py,sha256=3amnuW5jDY4qu6HHhpFvtMJmvhMKEq9KiE3s1K0rExY,3666
+flowai/llm_connector.py,sha256=Bh0tBaZQHhU1ap0C8s3bFsbaOo46of6Mexj41jS8NYk,8799
+flowai/main.py,sha256=kCd9rbtDK7CALp-GLsCK9fej3sTk_S1OGWjM--Yvcak,20243
+flowai/task_manager.py,sha256=m3YjNMreEOmWPIV-6u-U9O4oJw68hbof_UHNvvhoQqc,2871
+glagos_flowai-0.2.0.dist-info/METADATA,sha256=PeGH4aEwv0GJzomF26jsj27pysM6d4BuJVrUf4-vlt4,6423
+glagos_flowai-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+glagos_flowai-0.2.0.dist-info/entry_points.txt,sha256=euhs-6ivjgmr2G9gn0CEFVGLy3xdAiOHoVKylentElg,42
+glagos_flowai-0.2.0.dist-info/RECORD,,
