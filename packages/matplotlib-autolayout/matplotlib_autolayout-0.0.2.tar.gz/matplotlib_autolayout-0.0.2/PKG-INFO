@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: matplotlib-autolayout
+Version: 0.0.2
+Summary: Auto layouts for matplotlib multiplots
+Home-page: https://github.com/ericspring08/matplotlib-autolayout
+Author: Eric Zhang
+Author-email: ericspring08@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Matplotlib AutoLayout
+Matplotlib AutoLayout enables developers to easily create complex multiplots and multi-axes layouts without worrying about the exact positioning of the plots. The library automatically calculates the positions of the plots and axes based on the number of rows and columns specified by the user.
