@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+SimpleHTTP/__init__.py
+SimpleHTTP/app.py
+SimpleHTTP/response.py
+SimpleHTTP/server.py
+SimpleHTTPServe.egg-info/PKG-INFO
+SimpleHTTPServe.egg-info/SOURCES.txt
+SimpleHTTPServe.egg-info/dependency_links.txt
+SimpleHTTPServe.egg-info/top_level.txt
