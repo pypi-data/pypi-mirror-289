@@ -1,0 +1,9 @@
+kluck/__init__.py,sha256=bfHRrDlnAWNMyKKqm-n4zJPs3HlPvJeuihvFS8CIMjE,70
+kluck/classes/__init__.py,sha256=YKvHfOmAx4tY_-DbZlwMx0fQrZWNkUy1sGdt8IoVRmk,77
+kluck/classes/kfalse.py,sha256=Mz4QNTUD3a9upm-kTQrkEP1tVxylks7AhsFA3JLZCsQ,262
+kluck/classes/ktrue.py,sha256=WtdXawFWAsdkZw8N9NciGSz6Pz1Wu_66XYTOMWgTVdE,261
+kluck/classes/maybe.py,sha256=iprM5djROP3nKuUF-_-keUsAb9jkbx8Kt95Tl2SjMxA,307
+kluck-0.0.1.dist-info/METADATA,sha256=qCybdj1fhgsoTNaX1DQoOkOAQM1kbaVE8dbR8xzyDG4,1826
+kluck-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+kluck-0.0.1.dist-info/top_level.txt,sha256=PkaQMHFOWtuVSxNzNiXfxd5SmdLJy_lL9nWc8Ln8h-k,6
+kluck-0.0.1.dist-info/RECORD,,
