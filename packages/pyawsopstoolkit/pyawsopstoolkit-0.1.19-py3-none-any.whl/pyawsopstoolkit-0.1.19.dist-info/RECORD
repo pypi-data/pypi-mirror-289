@@ -1,0 +1,11 @@
+pyawsopstoolkit/__init__.py,sha256=qs0H9jzeQyPFsMzXhrf3Xjw8wKEpOmeTzhQTumV_xGc,725
+pyawsopstoolkit/__validations__.py,sha256=IXL7Jq6cEkM4HQXuL-mnvKIzAwNw58fBk_JeScnucWQ,464
+pyawsopstoolkit/account.py,sha256=RBe1zbFmLbtHD3UySRqPfe4-R_ly23eA_ocVEzC6fsQ,1073
+pyawsopstoolkit/credentials.py,sha256=67tvADcG-s1q-Mow7vx35UEACWTkusPA1AhBoD9gIpc,1745
+pyawsopstoolkit/exceptions.py,sha256=FNfRu1Faow17JJ4aLBmbXHX_VoRisxX4U1lekzhgi2I,1750
+pyawsopstoolkit/session.py,sha256=kM7F5TOH2ksJgnMl5_zHBqMvFQQImMPh1qXBlcpCIaE,9007
+pyawsopstoolkit-0.1.19.dist-info/LICENSE,sha256=QDd-5ssO5cRVguOaD889uNuqyZlNg2DQS6VjttE-8Dk,1069
+pyawsopstoolkit-0.1.19.dist-info/METADATA,sha256=oU9FEU5UbkpC4BxqZBs9gxJNdZTBoxkVujczFfu5AKY,8051
+pyawsopstoolkit-0.1.19.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+pyawsopstoolkit-0.1.19.dist-info/top_level.txt,sha256=Sf9U8aiv7IzpPAt3wJmc0sUFQ7q_PyyOqUmugSJpwbA,16
+pyawsopstoolkit-0.1.19.dist-info/RECORD,,
