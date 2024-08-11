@@ -1,0 +1,245 @@
+# ---
+# User basic setting
+# Below is an example of a user plot configuration file
+simulation:
+  # Timing
+  name: 缺省电机名
+  CL_TS: 1.0e-4
+  VL_EXE_PER_CL_EXE: 5
+  # 500 # 500 enable simulation of SVPWM
+  MACHINE_SIMULATIONs_PER_SAMPLING_PERIOD: 1
+  TIME_SLICE: 0.02
+  NUMBER_OF_SLICES: 6
+  # user_system_input_code: 'if ii < 1: CTRL.cmd_idq[0] = 0.0; CTRL.cmd_rpm = 50 \\nelif ii <5: ACM.TLoad = 0.2 \\nelif ii <100: CTRL.cmd_rpm = -50'
+  # Second-order system
+  zeta: 0.5
+  omega_n: 2500  # rad/s
+  max_CLBW_PER_min_CLBW: 0.5  # 决定最终的current bandwith到底是多少
+  # Sweeping
+  CTRL.CMD_SPEED_SINE_RPM: 50
+  CTRL.CMD_CURRENT_SINE_AMPERE: 1.0  # A
+  CTRL.bool_sweeping_frequency_for_speed_loop: True
+  CTRL.bool_apply_sweeping_frequency_excitation: False  # 扫频开启按钮
+  # Controller config
+  CTRL.bool_apply_WC_tunner_for_speed_loop: True
+  CTRL.bool_apply_speed_closed_loop_control: True
+  CTRL.bool_apply_decoupling_voltages_to_current_regulation: False  
+  CTRL.bool_overwrite_speed_commands: True
+  CTRL.bool_zero_id_control: True
+  FOC_delta: 10  # 25 # 6.5 **
+  FOC_CLBW_HZ: 500
+  FOC_desired_VLBW_HZ: 40  # 60
+  FOC_CL_KI_factor_when__bool_apply_decoupling_voltages_to_current_regulation__is_False: 10  
+  # CL_SERIES_KP: 
+  # CL_SERIES_KI: 
+  CL_SERIES_KP_Q: 
+  CL_SERIES_KI_Q: 
+  VL_SERIES_KP: 
+  VL_SERIES_KI: 
+  # PI parameter for id TRY
+  CL_SERIES_KP_D: 
+  CL_SERIES_KI_D: 
+  # PI parameter for id  危！
+  ###########
+  VL_FEEDBACK_KFB: 
+  ##########
+  VL_LIMIT_OVERLOAD_FACTOR: 3.0
+  disp.Kp: 0.0
+  disp.Ki: 0.0
+  disp.Kd: 0.0
+  disp.tau: 0.0
+  disp.OutLimit: 0.0
+  disp.IntLimit: 0.0
+
+config:
+  DATA_FILE_NAME: /dat/ProjectBezier-0-0-0-0.dat
+  mpl:
+    mathtext.fontset: stix
+    font.family: STIXGeneral
+  plt:
+    font.weight: 900 # bold is 700, normal is 400, see https://matplotlib.org/2.0.2/users/customizing.html
+    font.size: 13 # 13 is too big, commenting out is too small
+    axes.facecolor: '#3d444c' # also need to change facecolor in mplwidget.py to get a consistent look
+    axes.labelcolor: '#d5d1c7' # tint grey
+    axes.axisbelow: 'False' # 'line'
+    ytick.color: '#d5d1c7' #'white'
+    xtick.color: '#d5d1c7' #'white'
+    text.color: '#d5d1c7' #'white'
+    grid.color: '#d5d1c7' # grid color
+    grid.linestyle: '--' # solid
+    grid.linewidth: 0.3 # in points
+    grid.alpha: 0.8 # transparency, between 0.0 and 1.0
+  cjh_colors: [
+        '#ff6347', # tomato red
+        'white',   # #d5d1c7',
+        '#B3F5FF', # dark-theme-bright-blue
+        '#FFF0B3', # dark-theme-bright-yellow
+        '#ffabff', # pink
+        '#E1C7E0', # dark-theme-bright-violet(purple)
+        '#ABF5D1', # dark-theme-bright-green
+        '#FFBDAD', # dark-theme-bright-red
+        '#00dcff', # blue
+        '#c593ff', # dark-theme-bright-color1
+        '#02dac3', # dark-theme-bright-color2
+        '#efc9a1', # dark-theme-bright-color3
+        # 'black',
+        'blue',
+        '#857F72', # warmGrey
+        '#616E7C', # Cool Grey
+        '#B8B2A7', # warmGrey
+        '#9AA5B1', # Cool Grey
+        '#504A40', # warmGrey
+        '#27241D', # warmGrey
+    ] # https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
+
+cplot:
+  title:
+  x_data:             # default is time
+  x_label: Time (s)
+  width: 10
+  height: 3           # per subplot height
+  subplot:
+    - # Subplot 1
+      title: ProjectBezier
+      y_title: Speed [r/min]
+      y:
+        -
+          y_data: ACM.rpm_cmd
+          y_label: $\omega_r^*$
+        -
+          y_data: (*CTRL).I->rpm
+          y_label: $\omega_r$
+    - # Subplot 2
+      title: 
+      y_title: D-axis Current [A]
+      y:
+        -
+          y_data: (*CTRL).I->idq_cmd[0]
+          y_label: $i_d^*$
+        -
+          y_data: (*CTRL).I->idq[0]
+          y_label: $i_d$
+    - # Subplot 3
+      title: 
+      y_title: Q-axis Current [A]
+      y:
+        -
+          y_data: (*CTRL).I->idq_cmd[1]
+          y_label: $i_q^*$
+        -
+          y_data: (*CTRL).I->idq[1]
+          y_label: $i_q$
+    - # Subplot 4
+      title: 
+      y_title: Torque [Nm]
+      y:
+        -
+          y_data: ACM.TLoad
+          y_label: $T_{L}$
+        -
+          y_data: ACM.Tem
+          y_label: $T_{\rm em}$
+    - # Subplot 5
+      title: 
+      y_title: Voltage [V]
+      y:
+        -
+          y_data: (*CTRL).O->udq_cmd[0]
+          y_label: $u_d$
+        -
+          y_data: (*CTRL).O->udq_cmd[1]
+          y_label: $u_q$
+    - # Subplot 6
+      title: 
+      y_title: Voltage [V]
+      y:
+        -
+          y_data: ACM.ual
+          y_label: $u_\alpha$
+        -
+          y_data: ACM.ube
+          y_label: $u_\beta$
+        -
+          y_data: (*CTRL).O->uab_cmd_to_inverter[0]
+          y_label: $u_\alpha$ 2
+        -
+          y_data: (*CTRL).O->uab_cmd_to_inverter[1]
+          y_label: $u_\beta$ 2
+
+pyplot:
+  title:
+  x_data:             # default is time
+  x_label: Time (s)
+  width: 8
+  height: 3           # per subplot height
+  subplot:
+    -
+      title:
+      y_title: Speed [r/min]
+      y:
+        -
+          y_data: CTRL.cmd_rpm
+          y_label: $\omega_r^*$
+        -
+          y_data: CTRL.omega_r_mech
+          y_label: $\omega_r$
+    -
+      title:
+      y_title: $i_d$ [A]
+      y:
+        -
+          y_data: CTRL.cmd_idq[0]
+          y_label: $i_d^*$
+        -
+          y_data: CTRL.idq[0]
+          y_label: $i_d$
+    -
+      title:
+      y_title: $i_q$ [A]
+      y:
+        -
+          y_data: CTRL.cmd_idq[1]
+          y_label: $i_q^*$
+        -
+          y_data: CTRL.idq[1]
+          y_label: $i_q$
+    -
+      title:
+      y_title: $T_{\rm em}$ [Nm]
+      y:
+        -
+          y_data: ACM.Tem
+          y_label: ACM.$T_{\rm em}$
+        -
+          y_data: CTRL.Tem
+          y_label: CTRL.$T_{\rm em}$
+    -
+      title:
+      y_title: $u_d$ [V]
+      y:
+        -
+          y_data: ACM.udq[0]
+          y_label: $u_d$
+        -
+          y_data: CTRL.cmd_udq[0]
+          y_label: $u_d^*$
+    -
+      title:
+      y_title: $u_q$ [V]
+      y:
+        -
+          y_data: ACM.udq[1]
+          y_label: $u_q$
+        -
+          y_data: CTRL.cmd_udq[1]
+          y_label: $u_q^*$
+    -
+      title:
+      y_title: $u_{\alpha,\beta}$ [V]
+      y:
+        -
+          y_data: CTRL.cmd_uab[0]
+          y_label: $u_\alpha$
+        -
+          y_data: CTRL.cmd_uab[1]
+          y_label: $u_\beta$
