@@ -1,0 +1,15 @@
+README.md
+setup.py
+tests/test_cli.py
+tests/test_plotter.py
+tests/test_utils.py
+umap_jsonl/__init__.py
+umap_jsonl/cli.py
+umap_jsonl/plotter.py
+umap_jsonl/utils.py
+umap_jsonl.egg-info/PKG-INFO
+umap_jsonl.egg-info/SOURCES.txt
+umap_jsonl.egg-info/dependency_links.txt
+umap_jsonl.egg-info/entry_points.txt
+umap_jsonl.egg-info/requires.txt
+umap_jsonl.egg-info/top_level.txt
