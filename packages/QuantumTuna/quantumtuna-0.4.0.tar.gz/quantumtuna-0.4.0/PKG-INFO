@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: QuantumTuna
+Version: 0.4.0
+Summary: A user-friendly quantum chemistry program for diatomics!
+Home-page: https://github.com/harrybrough1/TUNA
+Author: Harry Brough
+Author-email: harry.brough@yahoo.com
+License: BSD 2-clause
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy
+Requires-Dist: setuptools
