@@ -1,0 +1,3 @@
+[console_scripts]
+iris-coon=iris_coon.cli:main
+
