@@ -1,0 +1,16 @@
+cbr_shared/__init__.py,sha256=DdJDmQc9zbQUlPVyTJOww6Ixrn9n4bD3ami5ItQfzJI,16
+cbr_shared/config/CBR__Config.py,sha256=1Z-14glwzBwhlDXQgIklnaM47dSFaQhOZ1qK4slzpGM,3102
+cbr_shared/config/CBR__Config__Active.py,sha256=AJiBuj_UsvdvtH9zbC1Gsc3P-7tByJIguWsxxt_Tw7M,266
+cbr_shared/config/CBR__Config__Data.py,sha256=f0xE_TAJ7W1OVuspJOg3kZ0uMYuQ9XipeTZ3ElDZpLs,3396
+cbr_shared/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cbr_shared/config/cbr-website.beta.toml,sha256=fldKkyUd1Ftj_aBJSHpK2ssSHSnWiRfhN6-kN6_ciTs,290
+cbr_shared/config/cbr-website.community-cbr-hosted.toml,sha256=7IWUlY2ja0V_wwIxGAMzK_mwoqNfKsO33KJMn4UCFOg,296
+cbr_shared/config/cbr-website.community.toml,sha256=8ggWGri1y-4jeaLrXpdcSKk3GyxRlxy207d1SdFmi40,302
+cbr_shared/config/cbr-website.dev-local.toml,sha256=zytZPQ6E2uhZJ9zmB0XC4l1wtz8Pz0VRVadkMtmL24A,292
+cbr_shared/utils/Version.py,sha256=RO54ykW0l2dKcqe-uTzJc8z0LGaF2r797I_aow45w-Y,546
+cbr_shared/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cbr_shared/version,sha256=PbKreNSCefOjUymbDvl5zE-sTnwoyS5G7LZmABR5o7Y,7
+cbr_shared-0.2.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cbr_shared-0.2.4.dist-info/METADATA,sha256=RA3d1sYF8y2PGpL8kgmoSw4CS-C2OQAG3IyhxIb8fF8,932
+cbr_shared-0.2.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cbr_shared-0.2.4.dist-info/RECORD,,
