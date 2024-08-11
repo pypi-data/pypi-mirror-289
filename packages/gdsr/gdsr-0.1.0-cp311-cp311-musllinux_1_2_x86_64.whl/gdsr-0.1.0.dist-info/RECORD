@@ -1,0 +1,12 @@
+gdsr-0.1.0.dist-info/METADATA,sha256=FDnSW4Fsg2LBeDU9wrUO4kg0dLGV48ez8EzXcKJr40o,3072
+gdsr-0.1.0.dist-info/WHEEL,sha256=wrEyNIfBFKhSxsG4MDMbnqVf6oYdWFb8aJCfYxHtOwA,107
+gdsr-0.1.0.dist-info/license_files/LICENSE,sha256=XHd9_nr-uHT6K869S87QarYO0CaSujBGqg1ekCGtBGg,1061
+gdsr.libs/libgcc_s-1e52349c.so.1,sha256=Ani0u_W_tB8ESsFePO4D2mn2lrgWLhyFdw6RETxBTYM,437537
+gdsr/_gdsr.pyi,sha256=dbfwVhabAhBj8ffB8BIVqjaZcimjWK6UDfOBFat29lk,26440
+gdsr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdsr/typings/__init__.py,sha256=kNLe3khcM30gsnOEGinDLP9F1usVIEqF9SbnlsSAoKA,2641
+gdsr/__init__.py,sha256=lxzeeCO3FKtEdGVXLzuMsZmAUbyTwGVDKk5jtOO87xE,856
+gdsr/logging/__init__.py,sha256=hcOrrmn7522JthAX1iAWo3ghfPXYfIMEXqSG3AflUDA,92
+gdsr/logging/setup.py,sha256=osjXslpkonWTc6nMyvAzR-ntbM3zYZlvnW8FJ7l9B6s,884
+gdsr/_gdsr.cpython-311-x86_64-linux-musl.so,sha256=bJyseIW4DqK2PAgW0NXDMwrW3MhkN5V6u2sv2WRLhrg,6024849
+gdsr-0.1.0.dist-info/RECORD,,
