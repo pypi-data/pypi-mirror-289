@@ -1,0 +1,16 @@
+cuser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cuser/admin.py,sha256=BN53ILw7wO0_1hELpM-hlfYHEQsr0jCd6aWhGCGb-xI,1771
+cuser/apps.py,sha256=jpt8YEjOsbDgXASI3o9BGSIyeiYwZQPLnQyL9C3E0DA,230
+cuser/forms.py,sha256=DJQwS9NsXLr8i5yYEwehOu0zO66xB5NjZwDNU26CaTQ,7992
+cuser/models.py,sha256=cUnImnNro_Iqw41YZjRfh5uQkhLf613xl4NVf2oFbdY,5155
+cuser/settings.py,sha256=fCJmrWKsNvZfeab4KivzXqfhEaXeK2Rlbs98rOuxVsc,272
+cuser/migrations/0001_initial.py,sha256=g8Z0lsX3g82cIdJPZui8e5XhwTcWCW2q15hrmuqiMSw,3209
+cuser/migrations/0002_alter_user_last_name_max_length.py,sha256=bLvbM12TeCEipEZkPAsbxZ2ibVj09O0TBcWX7PeQDqE,365
+cuser/migrations/0003_alter_user_first_name_max_length.py,sha256=rTdYBRreauZcKmfruvsrxk_NrVAuGIswQ3RaN0Bid3E,391
+cuser/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cuser/templates/admin/cuser/cuser/add_form.html,sha256=k07-xGeqviSQrTApLpYOyvs0hgROAr1mba28NlcjGZ4,331
+django_username_email-2.5.5.dist-info/LICENSE,sha256=ENF9gtTzOUw79KPdty1RvkqEZu6fzBiDgIGJYm1Jg2A,1087
+django_username_email-2.5.5.dist-info/METADATA,sha256=oJJQggxwLpW0BxEN9Hqi-p6XhdoIM4B4yn6oKGSYZP8,8732
+django_username_email-2.5.5.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+django_username_email-2.5.5.dist-info/top_level.txt,sha256=xj8oApLtTh4-QqVPLON_VJXgcXokYYfOk_Bi4IdFkdg,6
+django_username_email-2.5.5.dist-info/RECORD,,
