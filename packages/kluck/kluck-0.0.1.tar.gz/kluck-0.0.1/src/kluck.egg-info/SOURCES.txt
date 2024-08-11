@@ -1,0 +1,16 @@
+pyproject.toml
+requirements/_.txt
+requirements/dev.txt
+src/kluck/__init__.py
+src/kluck.egg-info/PKG-INFO
+src/kluck.egg-info/SOURCES.txt
+src/kluck.egg-info/dependency_links.txt
+src/kluck.egg-info/requires.txt
+src/kluck.egg-info/top_level.txt
+src/kluck/classes/__init__.py
+src/kluck/classes/kfalse.py
+src/kluck/classes/ktrue.py
+src/kluck/classes/maybe.py
+tests/test_kfalse.py
+tests/test_kmaybe.py
+tests/test_ktrue.py
