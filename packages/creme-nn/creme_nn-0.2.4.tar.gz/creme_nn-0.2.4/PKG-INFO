@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: creme-nn
+Version: 0.2.4
+Summary: An in silico perturbation framework to interpret large-scale genomic deep learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.6, <4
+License-File: LICENSE
+Requires-Dist: pyranges
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: kipoiseq
+Requires-Dist: tensorflow-hub
+Requires-Dist: pyfaidx
+Requires-Dist: logomaker
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: protobuf==3.20
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
