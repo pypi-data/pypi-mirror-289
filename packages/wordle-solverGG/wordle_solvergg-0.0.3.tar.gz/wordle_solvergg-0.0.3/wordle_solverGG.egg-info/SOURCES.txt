@@ -1,0 +1,6 @@
+setup.py
+wordle_solverGG.egg-info/PKG-INFO
+wordle_solverGG.egg-info/SOURCES.txt
+wordle_solverGG.egg-info/dependency_links.txt
+wordle_solverGG.egg-info/requires.txt
+wordle_solverGG.egg-info/top_level.txt
