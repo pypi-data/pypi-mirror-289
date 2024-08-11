@@ -1,0 +1,9 @@
+networkkit/.gitignore,sha256=O_1oL0aPga7KQQiSccwDu_-l4_8-ukQcw2ku1hCGeMo,19
+networkkit/__init.py__,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+networkkit/databus.py,sha256=T9ewPVogv6K3Km-szgSPVw5WoNC2QfRRm3w0SIrYMug,2453
+networkkit/messages.py,sha256=uMS_jjl-5-3z9jAHmB86TJouDn3DOslnZyCxwghZVBE,2746
+networkkit/network.py,sha256=IFY9lksK9w-o0dPPb28NqEFdTWnSyUmRM4wR-VkMRDI,6950
+networkkit-0.0.1.dist-info/METADATA,sha256=OCfkmwayOXF58GhiZT2m5rKar5f2d-FKtd0B6Vg57R8,19655
+networkkit-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+networkkit-0.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+networkkit-0.0.1.dist-info/RECORD,,
