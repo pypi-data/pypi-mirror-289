@@ -1,0 +1,8 @@
+dataset_manager/__init__.py,sha256=F5VaDSAUCykBbmHLB-kbmpoEZass-gtWOHuMWZJk1is,40
+dataset_manager/dataset_manager.py,sha256=9jsqQKdZIxlUtSGjcuOLqo98MDHWnIVTXAsanp2Zp0M,119
+s3_manager/__init__.py,sha256=ImV-D3XMjRdGD_wi5lsCrgl8wMsVrmRljYplZqpLzOA,35
+s3_manager/s3_manager.py,sha256=QLFEzmfwuipqPO-4ITM_IHsr-wubFQHERF_Kt8ZeBkk,160
+llmassist-0.1.0.dist-info/METADATA,sha256=e4JgnyPewOnY1sFjUWhQ4EyYcDfUa3abzyZQmbsX294,448
+llmassist-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+llmassist-0.1.0.dist-info/top_level.txt,sha256=c5lT-yQQk1CIJtFHj3nrNgy8ZbrVfDk-M0iSFUifzV4,16
+llmassist-0.1.0.dist-info/RECORD,,
