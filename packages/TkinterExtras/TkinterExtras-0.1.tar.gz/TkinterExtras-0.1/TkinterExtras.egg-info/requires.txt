@@ -1,0 +1,9 @@
+
+[:platform_system == "Darwin"]
+tkinter
+
+[:platform_system == "Linux"]
+python3-tk
+
+[:platform_system == "Windows"]
+tkinter
