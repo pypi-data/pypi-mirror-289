@@ -1,0 +1,7 @@
+Flask>=2.0
+requests>=2.26
+
+[dev]
+tox>=3.0
+black>=22.0
+flake8>=4.0
