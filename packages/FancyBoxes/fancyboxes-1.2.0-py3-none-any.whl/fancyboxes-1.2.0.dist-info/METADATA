@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: FancyBoxes
+Version: 1.2.0
+Summary: Utility library for building boxes at the console
+Project-URL: Homepage, https://github.com/bradleydonmorris/FancyBoxes
+Project-URL: Issues, https://github.com/bradleydonmorris/FancyBoxes/issues
+Author-email: Bradley Morris <bradleydonmorris@hotmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# FancyBoxes
+Utility library for outputing fancey boxes to the console.
