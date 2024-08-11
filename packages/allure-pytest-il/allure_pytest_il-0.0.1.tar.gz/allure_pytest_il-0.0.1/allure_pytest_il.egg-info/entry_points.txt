@@ -1,0 +1,2 @@
+[pytest11]
+allure_pytest_il = allure_pytest_il.plugin
