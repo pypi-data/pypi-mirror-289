@@ -1,0 +1,7 @@
+MANIFEST.in
+README.md
+setup.py
+src/my_rust_installer.egg-info/PKG-INFO
+src/my_rust_installer.egg-info/SOURCES.txt
+src/my_rust_installer.egg-info/dependency_links.txt
+src/my_rust_installer.egg-info/top_level.txt
