@@ -1,0 +1,1 @@
+"""Define program exceptions."""
