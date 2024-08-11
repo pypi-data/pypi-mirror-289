@@ -1,0 +1,6 @@
+kernel_quantile_regression/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kernel_quantile_regression/kqr.py,sha256=n8JwpY6GV_GFjUTejggynyFlwUrsCxRJ5mh_XJM6gl8,10033
+kernel_quantile_regression-0.0.15.dist-info/METADATA,sha256=iOM06AICHilX0P51xuD3nHt1U_OwmOo3y5yGAxHO_jw,3349
+kernel_quantile_regression-0.0.15.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+kernel_quantile_regression-0.0.15.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+kernel_quantile_regression-0.0.15.dist-info/RECORD,,
