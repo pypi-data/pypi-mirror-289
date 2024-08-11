@@ -1,0 +1,14 @@
+SpeechRecognition
+moviepy
+pydub
+numpy
+pillow
+opencv-python
+pyautogui
+pynput
+screeninfo
+pyaudio
+PyQt5
+noisereduce
+scipy
+pystray
