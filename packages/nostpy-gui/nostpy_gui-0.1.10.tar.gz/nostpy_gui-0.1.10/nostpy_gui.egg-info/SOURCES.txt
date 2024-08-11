@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+nostpy_gui/__init__.py
+nostpy_gui/delete.py
+nostpy_gui/event.py
+nostpy_gui/landing.py
+nostpy_gui/main.py
+nostpy_gui/manage.py
+nostpy_gui/query.py
+nostpy_gui.egg-info/PKG-INFO
+nostpy_gui.egg-info/SOURCES.txt
+nostpy_gui.egg-info/dependency_links.txt
+nostpy_gui.egg-info/entry_points.txt
+nostpy_gui.egg-info/requires.txt
+nostpy_gui.egg-info/top_level.txt
