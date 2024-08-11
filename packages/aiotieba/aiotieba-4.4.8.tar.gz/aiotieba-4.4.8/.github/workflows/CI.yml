@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  schedule:
+    - cron: "42 6 * * *"
+  push:
+    branches: [develop]
+    paths:
+      - "aiotieba/**"
+      - "tests/**"
+      - ".github/workflows/CI.yml"
+  pull_request:
+    branches: [develop]
+    paths:
+      - "aiotieba/**"
+      - "tests/**"
+      - ".github/workflows/CI.yml"
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    environment: develop
+
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+
+    steps:
+      - name: Checkout develop
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+
+      - name: Setup Rye
+        uses: eifinger/setup-rye@v4
+
+      - name: Pin Py${{ matrix.python-version }}
+        run: |
+          rye pin ${{ matrix.python-version }}
+          rye sync --features=speedup
+
+      - name: Run tests
+        env:
+          TB_BDUSS: ${{ secrets.BDUSS }}
+          TB_STOKEN: ${{ secrets.STOKEN }}
+        run: rye test
