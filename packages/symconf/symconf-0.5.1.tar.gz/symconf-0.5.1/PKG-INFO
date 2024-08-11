@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: symconf
+Version: 0.5.1
+Summary: Local app configuration manager
+Author-email: Sam Griesemer <samgriesemer+git@gmail.com>
+Project-URL: Homepage, https://doc.olog.io/symconf
+Project-URL: Documentation, https://doc.olog.io/symconf
+Project-URL: Repository, https://git.olog.io/olog/symconf
+Project-URL: Issues, https://git.olog.io/olog/symconf/issues
+Keywords: config
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyxdg
+Requires-Dist: colorama
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-togglebutton; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Provides-Extra: build
+Requires-Dist: build; extra == "build"
+Requires-Dist: twine; extra == "build"
+
+# Symconf
+`symconf` is a CLI tool for managing local application configuration. It implements a
+general model that supports dynamically switching/reloading themes for any application,
+and makes it easy to templatize your config files.
+
+## Quick example
+The single command `symconf config -m dark -s gruvbox` indicates a dark mode preference and
+that the `gruvbox` palette should be used. In this example, invoking this command kicks
+off several app-specific process to update the system state:
+
+- **GTK**: reacts to the mode setting and sets `prefer-dark` system-wide, changing general
+  GTK-responsive applications like Firefox (and subsequently websites that are responsive to
+  `prefers-color-scheme`)
+- **kitty**: theme template is re-generated using the dark `gruvbox` palette, and `kitty`
+  processes are sent a message to live reload the new config
+- **neovim**: a `vim` theme file is generated from the `gruvbox` palette, and running
+  instances of `neovim` are sent a message to re-source this theme
+- **waybar**: bar styles are updated to match the mode setting
+- **sway**: the background color and window borders are dynamically set to base `gruvbox`
+  colors, and `swaymsg reload` is called
+- **fzf**: a palette-dependent theme is re-generated for `gruvbox` colors and re-exported
+- **rofi**: launcher text and highlight colors are set according to mode
+
+# Behavior
+It uses a simple operational model that symlinks centralized config files to their
+expected locations across one's system. This central config directory can then be version
+controlled, and app config files can be updated in one place.
+
+`symconf` also facilitates dynamically setting system and application themes. You can
+create themed variants of your config files, and `symconf` will "swap out" the matching
+theme config files for registered apps and running config reloading scripts. 
+
+# Usage
+See more in [USAGE](/USAGE.md)
