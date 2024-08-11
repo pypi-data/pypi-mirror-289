@@ -1,0 +1,17 @@
+sdzkp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdzkp/_version.py,sha256=qwAe3k7m1E5TfrXTtsET8rtcRFffI9P5qRHNPCIUhoQ,122
+sdzkp/elementaryabeliansubgroup.py,sha256=3npDAS6sixgDFaJjiW7Zib3PsPILyqm2JoPVu4XFEfk,5062
+sdzkp/max2sat.py,sha256=lcb3l2WLuA-MAvuzJn5Ces-X9mkivu-R1xWQDHBYmKE,12435
+sdzkp/prover.py,sha256=z6QfZVwFGS6ShuEj5tjHOGQtyIVYBlxEQMqSH5O8Wgw,2839
+sdzkp/sgd.py,sha256=iGuHf2unA4JtRxsttpFTzf-pl0EPzindPfejC0dV8kY,19700
+sdzkp/verifier.py,sha256=hr3IRoiy_Yjz9bk55TarhKgCYvjnfblSoek823VoWuk,5049
+sdzkp/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdzkp/sdzkproto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdzkp/sdzkproto/sdzkp_pb2.py,sha256=lntBg3Nr7VTFtkKmeTYmp9FPcjpcG6fG1AnN2090-lw,4008
+sdzkp/sdzkproto/sdzkp_pb2.pyi,sha256=LVVDxoBWqo4bUqOPEJMmziFZynJ9szedrqxLkRlC5oI,3816
+sdzkp/sdzkproto/sdzkp_pb2_grpc.py,sha256=QNjRWT_rZ-vzXyrg3_UXsrapFL_tnK5rGmeBsCcFgWQ,7194
+SDZKP-0.0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+SDZKP-0.0.3.dist-info/METADATA,sha256=97ec5L2IZ1RBrwgL3C4Ac4nURyGiHQetXT2dx9vBO6M,1697
+SDZKP-0.0.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+SDZKP-0.0.3.dist-info/top_level.txt,sha256=U8BwcfQYhIX_oncDbnbJk9fXw4N7csbB1a7QsUAcVbs,6
+SDZKP-0.0.3.dist-info/RECORD,,
