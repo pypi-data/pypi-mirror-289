@@ -1,0 +1,7 @@
+mongodb_connector/__init__.py,sha256=cPn6qDbB0xSGfFiQjRS6SGJXy0QxpoLB22uORGAUQYk,46
+mongodb_connector/mongo_crud.py,sha256=PNwKgYaCx3LUINQ78MNCda1yRy7wNyUMAlj7tafc8No,2338
+MongoConn-0.0.4.dist-info/LICENSE,sha256=fhkKqnqZCkIWTqsnbF6d9hYkSUbffRoaO6bFCfToEq0,1066
+MongoConn-0.0.4.dist-info/METADATA,sha256=sPyQwCr5ea2PmnVR3jGbeI9dNyIW6Xf08t0nRfC9n68,2556
+MongoConn-0.0.4.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+MongoConn-0.0.4.dist-info/top_level.txt,sha256=KdxQpgMsvg9GgFp7CV0tRD4OhznUEsi4oi3566JFwRg,18
+MongoConn-0.0.4.dist-info/RECORD,,
