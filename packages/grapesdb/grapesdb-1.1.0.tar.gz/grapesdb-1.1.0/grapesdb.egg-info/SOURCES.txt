@@ -1,0 +1,6 @@
+LICENSE
+README.md
+grapesdb.egg-info/PKG-INFO
+grapesdb.egg-info/SOURCES.txt
+grapesdb.egg-info/dependency_links.txt
+grapesdb.egg-info/top_level.txt
