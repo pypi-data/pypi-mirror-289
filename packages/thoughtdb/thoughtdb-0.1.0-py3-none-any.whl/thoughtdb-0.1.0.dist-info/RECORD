@@ -1,0 +1,15 @@
+thoughtdb/__init__.py,sha256=PfM_yAZ9QwZqUbvvwFmJkCuAlCZN6DAYzubNF1W6MLA,66
+thoughtdb/app/Collection.py,sha256=qbo9v9jND_RnhnuA8bZZIC-jPBsV9SJcc6Xgjvi0wb8,390
+thoughtdb/app/Conversation.py,sha256=_GAZLbVi9cxv_t-2MZaDojwlrYVaaHW9-J_hzxp0CdQ,303
+thoughtdb/app/Core.py,sha256=3vQfHEf8tNDzMOYEoLuaacyRtp9JDRYPuILfrLxpmTQ,498
+thoughtdb/app/Document.py,sha256=ls1oulzK3_3MRBp_Y43gTWd3MwRy9MRCPfSYywgVx7s,296
+thoughtdb/app/Organization.py,sha256=3AdPjlhOqCE7pWNVAlszehWftCpW6juAZsVV_GWEkwM,1801
+thoughtdb/app/VectorStore.py,sha256=hoCobyeaWpHn4Pcl58V0X1fjgojfI5nYkFLM_fZU-LU,487
+thoughtdb/app/VectorTool.py,sha256=V9R-piI_Q7VZqWQiKN8PiLTgsbSpG3n5fqp4Itb2Vvs,1989
+thoughtdb/app/readme.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thoughtdb/orm/readme.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thoughtdb/routes/readme.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thoughtdb-0.1.0.dist-info/LICENSE,sha256=gD_n8IMxxoYM7QykFDX_A9Hznk2vvCM3_ne7wu8O9no,1062
+thoughtdb-0.1.0.dist-info/METADATA,sha256=IRWosuhVUJJ4RUixMnscfIIYFXbSo1w9HFk1WgGTTuc,2194
+thoughtdb-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+thoughtdb-0.1.0.dist-info/RECORD,,
