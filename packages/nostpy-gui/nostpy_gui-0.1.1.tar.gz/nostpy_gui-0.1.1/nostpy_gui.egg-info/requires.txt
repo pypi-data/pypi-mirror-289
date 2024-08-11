@@ -1,0 +1,3 @@
+asyncio
+secp256k1
+websockets
