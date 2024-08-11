@@ -1,0 +1,10 @@
+brainplus/__init__.py,sha256=OVuc4rzGVtgz41XKEPya_vCA8r-ASuuQYFbtSqpEax8,72
+brainplus/__main__.py,sha256=_FnbFTICiVAWTMcAyPeu3BI7tduUraq_xe3uX2yfV_w,147
+brainplus/brainplus.py,sha256=HhEoRx-BRYD3-N0tpBefW32qymrjwcG98xJJrJA75Xg,2715
+brainplus/test,sha256=UK_ihI4furKlUnEiDcueAXY5tuuFXyS7vgswJtcs-ks,16064
+brainplus/test.bf,sha256=Pc-9YnGpyuJaIK0gITYy6Enkt2uvj0jkZQ_APzABPXs,170
+brainplus-1.0.dist-info/entry_points.txt,sha256=eTW7o9kJTYpff5DqDJc396vaaDWj5btIkE4VS-nidWc,54
+brainplus-1.0.dist-info/LICENSE,sha256=0SAgqCl8RI6Vm7Rv5YC6CPyLA2MXedQM9tq17WMXl-o,33041
+brainplus-1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+brainplus-1.0.dist-info/METADATA,sha256=fFse5BYc1R2Jtd26kwIIEtwSqEmITkv5YPSHX_Xwaf8,329
+brainplus-1.0.dist-info/RECORD,,
