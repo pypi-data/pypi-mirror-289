@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: backstepping_controller
+Version: 0.1.0
+Summary: A package for simulating control systems using backstepping control laws
+Home-page: https://github.com/sof-danny/backstepping_controller
+Author: Samuel O. Folorunsho
+Author-email: folorunshosamuel001@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: sympy
+

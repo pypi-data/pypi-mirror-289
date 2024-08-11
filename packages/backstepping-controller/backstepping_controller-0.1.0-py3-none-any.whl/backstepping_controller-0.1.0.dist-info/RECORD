@@ -1,0 +1,9 @@
+backstepping_controller/__init__.py,sha256=NhqcwsoXaq9zlUnEoXdABtLpZdRJjLuKrxrb5gBSoWc,168
+backstepping_controller/controller.py,sha256=0t3GV6xOabeoGRbGiswpED4-wHMfW5l1XV8eer7qnlU,1729
+backstepping_controller/plotting.py,sha256=jlb2FWwwSRxpTXj3culE2Q_dyJNUtyEQNGL6EC_zzqI,658
+backstepping_controller/saving.py,sha256=PF6BFlJTZts5kd33ljDl8cE9l-NHY8Vvx-s2-m6Ein4,303
+backstepping_controller/simulation.py,sha256=pl2lSNLqp6ADtg6n7Dhyt7hIAcuJdGe32v0OFWWXDN8,2631
+backstepping_controller-0.1.0.dist-info/METADATA,sha256=_4JotFIn9fRQo53jRWj5OxVoKZ5oN-jDh4Pu2L07Vls,524
+backstepping_controller-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+backstepping_controller-0.1.0.dist-info/top_level.txt,sha256=vHr4rQ-86EprE8Fr5JvpraxgzgJETQMIQgbmL5cfXmU,24
+backstepping_controller-0.1.0.dist-info/RECORD,,
