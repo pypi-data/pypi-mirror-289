@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: kago-utils
+Version: 0.1.0
+Summary: Mahjong Library for Python
+Project-URL: Homepage, https://github.com/zurukumo/kago-utils
+Project-URL: Issues, https://github.com/zurukumo/kago-utils/issues
+Author-email: zurukumo <zurukumo@gmail.com>
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# kago-utils
