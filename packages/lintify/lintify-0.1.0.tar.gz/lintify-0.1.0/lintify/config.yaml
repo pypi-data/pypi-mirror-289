@@ -1,0 +1,10 @@
+# Default config.
+# Can be overridden by
+# ~/.config.yaml if it exists.
+
+theme: 'frame'  # raw | frame
+files:
+  - '*.py'
+linters:
+  # - 'flake8 {path}'
+  # - 'mypy {path}'
