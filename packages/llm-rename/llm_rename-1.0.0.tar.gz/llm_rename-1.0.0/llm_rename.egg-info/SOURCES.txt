@@ -1,0 +1,10 @@
+LICENSE
+README.md
+llm_rename.py
+pyproject.toml
+llm_rename.egg-info/PKG-INFO
+llm_rename.egg-info/SOURCES.txt
+llm_rename.egg-info/dependency_links.txt
+llm_rename.egg-info/entry_points.txt
+llm_rename.egg-info/requires.txt
+llm_rename.egg-info/top_level.txt
