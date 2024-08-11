@@ -1,0 +1,12 @@
+pyemblite/__init__.py,sha256=cOjrZozN96elyivPfZGTVU6SnDi1vdHNOyjHWLq5Rew,102
+pyemblite/_version.py,sha256=ALli2m_3ZwnAuz5RzAQJfPUyU1tBJvsBMmmhF1vYy5M,497
+pyemblite/mesh_construction.cpython-312-darwin.so,sha256=Ov88iEB0ZnWG1kKEp65FVfW2URub-T07vNtkD7x8p08,8400216
+pyemblite/rtcore.cpython-312-darwin.so,sha256=KQ_q2EbuK82eeE5m52fEGpmp_aa-C2xxLbfrkytsFrg,8420576
+pyemblite/rtcore_scene.cpython-312-darwin.so,sha256=aWpwlSCJrRpXDHaU30irKRCPlmDnb-1nE5rkzLMiWao,8666088
+pyemblite/test.py,sha256=lTQij9fHnQOwV9lBl7XXfSG6YzdLZpvILW8LlZVmZPQ,18514
+pyemblite/test_scene.cpython-312-darwin.so,sha256=7OxQ3Ce9v1Bw0jWVaZgg4xMdaJLZ3RVhyqcGXCAyW8E,8382096
+pyemblite-0.1.6.dist-info/LICENSE.txt,sha256=_xuYAn05ET9sP82cOw68xgsUW5orgvVnD0RL4wKKkA4,1299
+pyemblite-0.1.6.dist-info/METADATA,sha256=xSEqP0c81i7-2HuJ04FFyGXnrxJRJviHIl55RMJvFDU,7045
+pyemblite-0.1.6.dist-info/WHEEL,sha256=ZQNac9QwHfISxWMxwq_-hlKsykuXCVB_Sv2F_SG2ZF4,105
+pyemblite-0.1.6.dist-info/top_level.txt,sha256=YDaD_IQhzfOGtWLupRa-TogxcO7hI4V0CVWm8VYIleU,10
+pyemblite-0.1.6.dist-info/RECORD,,
