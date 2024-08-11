@@ -1,0 +1,2 @@
+[console_scripts]
+arpier = arpier.run_arpier:run
