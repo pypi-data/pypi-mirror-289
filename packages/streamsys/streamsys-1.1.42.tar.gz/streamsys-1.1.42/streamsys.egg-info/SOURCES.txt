@@ -1,0 +1,9 @@
+setup.py
+StreamSYS/StreamSYS.py
+StreamSYS/__init__.py
+StreamSYS/client.py
+StreamSYS/loader.py
+streamsys.egg-info/PKG-INFO
+streamsys.egg-info/SOURCES.txt
+streamsys.egg-info/dependency_links.txt
+streamsys.egg-info/top_level.txt
