@@ -1,0 +1,7 @@
+dist/
+*.pyc
+__pycache__
+*.whl
+*.tar.gz
+brainplus/test.c
+brainplus/test
