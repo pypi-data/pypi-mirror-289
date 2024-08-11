@@ -1,0 +1,10 @@
+wraps_futures/__init__.py,sha256=X706yhmhoT0xHrZEKFjU4q_t0vb5Rsq7d9AKQPza2zw,825
+wraps_futures/either.py,sha256=AgPFEgwP0RHnUbf-45iP67FnSsUnxOFrf9CRF5fJiYQ,14363
+wraps_futures/option.py,sha256=zv9BmM_XU_Dpm36yAbQePLnAw_7WJHkB6p3Wkb8M8FM,13813
+wraps_futures/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wraps_futures/result.py,sha256=2TxsYE5m4a2HG13BVrCXMkHJL6_hdCtfYMTV2fE7TYA,17533
+wraps_futures/typing.py,sha256=AL8-MAMMNC7298h2UwCfTRuQLEAnpYQF50UObgVrCvM,770
+wraps_futures-0.1.0.dist-info/METADATA,sha256=6RmObuDcE9LmAuUuu7R9bJClwxt-xnjfVWpwvHDp1S0,5611
+wraps_futures-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+wraps_futures-0.1.0.dist-info/licenses/LICENSE,sha256=YNU40SLxIJYrb0N9V6lh7cnZdj9EMVpCNy2RWFzQGZk,1092
+wraps_futures-0.1.0.dist-info/RECORD,,
