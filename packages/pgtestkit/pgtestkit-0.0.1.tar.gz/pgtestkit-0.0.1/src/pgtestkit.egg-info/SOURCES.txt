@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/_pgtestkit/__init__.py
+src/_pgtestkit/_version.py
+src/pgtestkit/__init__.py
+src/pgtestkit/__main__.py
+src/pgtestkit/py.typed
+src/pgtestkit.egg-info/PKG-INFO
+src/pgtestkit.egg-info/SOURCES.txt
+src/pgtestkit.egg-info/dependency_links.txt
+src/pgtestkit.egg-info/entry_points.txt
+src/pgtestkit.egg-info/requires.txt
+src/pgtestkit.egg-info/top_level.txt
