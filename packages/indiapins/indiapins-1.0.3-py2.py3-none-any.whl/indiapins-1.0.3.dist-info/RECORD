@@ -1,0 +1,11 @@
+indiapins/__init__.py,sha256=7UdvlmfzBCGAxwC_wIOSGq-PDv3MOYo6IQ-rpLklyXo,2591
+indiapins/cli.py,sha256=3zEw_RA5-rjHo4VAln_2zuXycYswTms2094BZBMPOAY,405
+indiapins/indiapins.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+indiapins/pins.json.bz2,sha256=Ot_CZIQIEsOQmauTtBumAFZQ_p6h5p7l3spQBq1oiaA,2249635
+indiapins-1.0.3.dist-info/AUTHORS.rst,sha256=dbWHdn6iMfMd7WrUZbASKPx1I9dbxveQkiJOHBTfJpA,165
+indiapins-1.0.3.dist-info/LICENSE,sha256=f04osV3sUZp2jH0Hi0MX7Jsw8NgKQcqUHTzrxvBbbqk,1080
+indiapins-1.0.3.dist-info/METADATA,sha256=F-cbUwF0kwWYvUN4xR4lf1FyQeeALa5eagzz9wL-ris,4898
+indiapins-1.0.3.dist-info/WHEEL,sha256=XRxW4r1PNiVhMpP4bT9oWtu3HyndxpJ84SkubFgzp_Y,109
+indiapins-1.0.3.dist-info/entry_points.txt,sha256=p3HI2L09NoRRjjmYYjImYKNb2yebQAFn4MlbWLX2Yts,49
+indiapins-1.0.3.dist-info/top_level.txt,sha256=lDZn_vcFQCTIDaqrKQQQUcicLm1-isE9VcqsSGgO2_I,10
+indiapins-1.0.3.dist-info/RECORD,,
