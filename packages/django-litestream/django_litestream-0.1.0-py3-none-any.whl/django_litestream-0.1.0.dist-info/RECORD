@@ -1,0 +1,11 @@
+django_litestream/__about__.py,sha256=5lAkq2F8oin4WnZjBe3xQCsdp9dprn_DVftw1mZ7djQ,129
+django_litestream/__init__.py,sha256=r94O36QjFjTHbHgig-HKk-EymEIXfkAADGWOBcO4lMw,107
+django_litestream/apps.py,sha256=qpIR8rDpI-LqjeKdnbI1AifkFgJfFB91J--ZkqY2K1k,165
+django_litestream/conf.py,sha256=CNvnfvOkBkxAf63EnMPD4iBOcR-GMVP5Thx359UxGFg,947
+django_litestream/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_litestream/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_litestream/management/commands/litestream.py,sha256=jf8__WePZikXuP9LUa1XXAy_V82r7z649QzZ6NbhhTI,8364
+django_litestream-0.1.0.dist-info/METADATA,sha256=SBYjLJAD2idaaNCPcwXvHcSLXJ1EADSz0thsZVZqtxg,2795
+django_litestream-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+django_litestream-0.1.0.dist-info/licenses/LICENSE.txt,sha256=0QF8XfuH0zkIHhSet6teXfiCze6JSdr8inRkmLLTDyo,1099
+django_litestream-0.1.0.dist-info/RECORD,,
