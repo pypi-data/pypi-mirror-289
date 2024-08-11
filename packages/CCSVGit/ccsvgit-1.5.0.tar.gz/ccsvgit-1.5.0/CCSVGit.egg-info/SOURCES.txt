@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+CCSVGit/Git.py
+CCSVGit/Versioning.py
+CCSVGit/__init__.py
+CCSVGit.egg-info/PKG-INFO
+CCSVGit.egg-info/SOURCES.txt
+CCSVGit.egg-info/dependency_links.txt
+CCSVGit.egg-info/top_level.txt
