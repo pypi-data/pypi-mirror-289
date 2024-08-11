@@ -1,0 +1,16 @@
+unigen/__init__.py,sha256=bVd64S5NvUGs6AyY9mf0thqThYChAv2E37Jk7OYoCho,229
+unigen/types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unigen/types/audio_metadata.py,sha256=_fZOhQqZfJMmQKZhuJCdXn42ivONimm1ILI5ojPRcUg,1994
+unigen/types/picture.py,sha256=1Oe3zHw4_3kXpCIs8EAPlKO43UOTFb7mDR701NqW-qM,1259
+unigen/wrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unigen/wrapper/audio_factory.py,sha256=GUkMjKcbJWlaF2wzRsYKjRyZgG8yu3q-I4VHc9nP88s,1550
+unigen/wrapper/audio_manager.py,sha256=d637u1Wv19kKBZvgAcmIXGdX--sxTqZKdY9jMIVmRBQ,6193
+unigen/wrapper/id3.py,sha256=oPOgulH46reGYO-HHMiLNLwz9Mh0VvPjK-qV9Xd_Yvo,8571
+unigen/wrapper/mp4.py,sha256=dpSdn2talJvcFvrvK6HzzsVuYhphvNtq27i0i5qN2AU,5697
+unigen/wrapper/utils.py,sha256=k-UWkGc2zkUV_7ESPe3IK0_wJnpOuE5E1orROMZj59g,4641
+unigen/wrapper/vorbis.py,sha256=_d0ndJuBwrisiHyR7F9ZlVnR2AjQvpHaXU6_J1BOz-Y,10169
+unigen-1.4.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+unigen-1.4.4.dist-info/METADATA,sha256=y7bKYIGbgObstis5g5MQBf6tQnti8fAegCCf-rlr6QM,1158
+unigen-1.4.4.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+unigen-1.4.4.dist-info/top_level.txt,sha256=yUAcH2MmLNymqP_3mNaze_xGceiifLFBhhbzK3gd2Zg,7
+unigen-1.4.4.dist-info/RECORD,,
