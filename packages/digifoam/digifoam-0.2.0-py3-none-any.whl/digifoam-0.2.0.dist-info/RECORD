@@ -1,0 +1,12 @@
+digifoam/__init__.py,sha256=TNxXsTPgb52OhakIda9wTRh91cqoBqgQRx5TxjzQQFU,21
+digifoam/api.py,sha256=weelj1MQ0tVGN_4OHg5XxAtLL31atdDihIddy1m9KSk,11817
+digifoam/cli.py,sha256=vxtcFNlQVg6fTqrGLKQ7Gra1TS48hMInyAm35ipI6jY,10286
+digifoam/constants.py,sha256=cEYE9S_RXvxij1_fDSpcu8nSOo-7zHnm1af2UINtuXI,363
+digifoam/types.py,sha256=-F0a0xSJfPypzot0LlOsShvV9MP-ZaxAMbDl5HT3ucE,366
+digifoam/utils.py,sha256=yvKCKI5zPu6rK7uvRmAvimhm-0zDzapoAxSMVllWxXo,3552
+digifoam-0.2.0.dist-info/LICENSE,sha256=GmCxJl53i2GoPutuZkYam-5jR9-UNEjKz9xLPtXBBaA,1064
+digifoam-0.2.0.dist-info/METADATA,sha256=-5CTLc3coX4gazYvFksonu85VM-7W0Ss8dXXJXznW1s,733
+digifoam-0.2.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+digifoam-0.2.0.dist-info/entry_points.txt,sha256=4Bh3krNjneJBe45l8ZW5yZXlv3cIW4NVH4983w7Ctgk,46
+digifoam-0.2.0.dist-info/top_level.txt,sha256=oErE4_i1v127K_rIGg9ZfxGfUqBrsOfN-xErelQXdYg,9
+digifoam-0.2.0.dist-info/RECORD,,

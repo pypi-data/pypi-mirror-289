@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: digifoam
+Version: 0.2.0
+Summary: DigiFOAM CLI
+Home-page: https://digifoam.ai
+Author: Michael
+Author-email: michael@digitalcarbon.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: chardet
+Requires-Dist: typer
+Requires-Dist: websockets
+
+# DigiFOAM CLI
+This is the CLI for the DigiFOAM project, which allows you to create and manage projects as well as use AI features to help withy our OpenFOAM workflows. This is a work in progress.
