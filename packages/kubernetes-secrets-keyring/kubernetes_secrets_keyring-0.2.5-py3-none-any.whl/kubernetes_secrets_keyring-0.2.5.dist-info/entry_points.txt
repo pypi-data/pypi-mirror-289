@@ -1,0 +1,2 @@
+[keyring.backends]
+KubernetesSecretsKeyring = kubernetes_secrets_keyring
