@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: my_rust_installer
+Version: 0.1
+Summary: A package to install Rust and agg
+Home-page: https://github.com/yourusername/my_rust_installer
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# My Rust Installer
+
+This package installs Rust and the `agg` tool from asciinema during its own installation process.
+
+## Installation
+
+You can install this package using pip:
+
+```
+pip install my_rust_installer
+```
+
+This will automatically:
+1. Install Rust using rustup
+2. Set up the Rust environment
+3. Install the `agg` tool from asciinema
+
+## Requirements
+
+- Python 3.6+
+- curl
+- Internet connection
+
+## Note
+
+This package requires sudo privileges to install Rust and cargo. It will make changes to your system during the installation process.
+
+## License
+
+This project is licensed under the MIT License.
