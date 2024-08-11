@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: llm_rename
+Version: 1.0.0
+Summary: An `llm` plugin to assist with renameutils qcp/qmv commands.
+Author-email: Yaniv Aknin <yaniv@aknin.name>
+License: MIT License
+Project-URL: homepage, https://github.com/yaniv-aknin/llm-rename
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: llm
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# llm-rename
+
+Small [`llm`](https://llm.datasette.io/) plugin designed to assist with `qcp/qmv` execution plans.
+
+Once you install the plugin, you can run `qmv --editor 'llm rename'` and it will -
+
+- Append a default prompt to the plan
+- Open `$EDITOR` to let you change the plan/prompt
+- Use `llm` to ask an LLM to mutate the plan using the prompt
+- Deliver the mutated plan back to `qcp/qmv`
+
+# Installation
+
+After you installed `llm` itself (e.g., `pipx install llm`), use:
+
+`llm install llm-rename`
