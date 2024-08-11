@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: weedout
+Version: 0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: statsmodels
+Requires-Dist: imbalanced-learn
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Requires-Dist: typing
+
+UNKNOWN
+
+
