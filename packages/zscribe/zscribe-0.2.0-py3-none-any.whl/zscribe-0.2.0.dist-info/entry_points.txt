@@ -1,0 +1,3 @@
+[console_scripts]
+zscribe = scribe.zscribe_cli:cli
+
