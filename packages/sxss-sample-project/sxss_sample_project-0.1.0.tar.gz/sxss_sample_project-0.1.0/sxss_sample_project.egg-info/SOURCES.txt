@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+my_sample_module/__init__.py
+my_sample_module/sample.py
+sxss_sample_project.egg-info/PKG-INFO
+sxss_sample_project.egg-info/SOURCES.txt
+sxss_sample_project.egg-info/dependency_links.txt
+sxss_sample_project.egg-info/top_level.txt
+test/test_sample.py
