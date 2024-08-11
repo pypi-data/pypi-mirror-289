@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gh_auto_updater"
+version = "0.0.1"
+authors = [
+  { name="Kirill Ibragimov", email="hexchap@gmail.com" },
+]
+description = "Find, download and apply latest release from a GitHub repo."
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+GitHub = "https://github.com/HexChap/ImagesManip"
+Issues = "https://github.com/HexChap/ImagesManip/issues"
