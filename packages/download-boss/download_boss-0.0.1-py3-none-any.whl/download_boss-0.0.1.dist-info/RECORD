@@ -1,0 +1,17 @@
+download_boss/AbstractClient.py,sha256=KKqCukBEguUQBaMm1S2qIsHgpE0aoTO3d4tDTOWns54,131
+download_boss/AbstractWrapper.py,sha256=42kYZNgEi05PXVlXJN0vuE0MtBPzvjDhi9fXRkAMJ_I,323
+download_boss/DelayWrapper.py,sha256=KRDPv5mMwpI_8VKPmgZnipU9hVOtYSYWXkbkN9LHZXQ,927
+download_boss/FileCacheWrapper.py,sha256=vXXtSr3nPLKw2dhh-TdDxTAAP4bDFyW28BbtJLrboig,2574
+download_boss/HttpClient.py,sha256=4QvwgV2KLjEtV2BB6n1AJVrwlRRsDi8htE7bGN0wa7o,1117
+download_boss/RetryWrapper.py,sha256=bSzfTdLGMrGFnwVcvNrmqftajoN3_bQjM8n6nGU2018,984
+download_boss/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+download_boss/error/CachedFileExpired.py,sha256=0D270OV0-Wm_AP4RmAhYJMGKO7u2HP69WMyYvr-GADY,45
+download_boss/error/CachedFileNotFound.py,sha256=yv4WwD5HG-Dp0gdabScEs3c0CjgZfH1YaxJoDmLTsjw,46
+download_boss/error/RetriesExhausted.py,sha256=iKQZbWId311fdGO6cz7yzuBDqZwrJxGd_OlX5AyKn1U,44
+download_boss/util/LogHandler.py,sha256=K-hadCeTVWUFl3fL1q7SFh5tAW5ycN8d80wbGvbKDSI,1431
+download_boss/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+download_boss-0.0.1.dist-info/LICENSE,sha256=hqYRvga0gWj669ZAwtEbatHN7Tjp-e6oT4M9BCQFVVw,1068
+download_boss-0.0.1.dist-info/METADATA,sha256=Gyaw3_GtxiYFfK4NKrw_3CtfBoZB1qdz_wh5xU2HeH0,1052
+download_boss-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+download_boss-0.0.1.dist-info/top_level.txt,sha256=B3pdYxkyssh4LLJGRuzfOiEAHn3Na975PBe-UYk2f40,14
+download_boss-0.0.1.dist-info/RECORD,,

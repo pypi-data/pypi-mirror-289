@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: download_boss
+Version: 0.0.1
+Summary: Python download library
+Author: kristof9851
+Project-URL: Homepage, https://github.com/kristof9851/download_boss
+Project-URL: Issues, https://github.com/kristof9851/download_boss/issues
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Download Boss
+![Python CI Build](https://github.com/kristof9851/download_boss/actions/workflows/python-ci.yml/badge.svg)
+![PyPI Downloads](https://img.shields.io/pypi/dm/download_boss?label=PyPI%20Downloads&color=rgb(50%2C%20165%2C%20233)
+)
+
+*Python download library*
+
+## 1. Installation
+
+```bash
+pip install download_boss
+```
+
+## 2. Usage
+
+```bash
+TODO
+```
+
+## 3. Maintainer documentation
+See: [docs/README_MAINTAINER.md](docs/README_MAINTAINER.md)
