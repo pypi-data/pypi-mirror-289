@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tridge
+Version: 0.1.0
+Summary: Simple wrapper around our remote-logging API, for easy integration in your project
+Home-page: https://github.com/Demianight/tridge
+License: MIT
+Keywords: logging,remote logging,API,wrapper
+Author: Demianight
+Author-email: komarovdemian@yandex.ru
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Project-URL: Documentation, https://github.com/Demianight/tridge
+Project-URL: Repository, https://github.com/Demianight/tridge
+Project-URL: changelog, https://github.com/Demianight/tridge
+Project-URL: documentation, https://github.com/Demianight/tridge
+Project-URL: homepage, https://github.com/Demianight/tridge
+Project-URL: repository, https://github.com/Demianight/tridge
+Description-Content-Type: text/markdown
+
+
