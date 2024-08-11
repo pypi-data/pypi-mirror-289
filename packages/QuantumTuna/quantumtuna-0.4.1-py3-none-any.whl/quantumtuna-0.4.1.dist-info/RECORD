@@ -1,0 +1,15 @@
+TUNA/__init__.py,sha256=rInYR17B1qWVztBrjDxGqmmbqz7Ifc4Hs83MAgpncv0,129
+TUNA/tuna.bat,sha256=Dv_z4rlOgBYs1l8bzN5SGSyaD5CkKaHAzNaMAJ0ps2o,65
+TUNA/tuna.py,sha256=l3cqpC693OGSUi9sKxgPtjXfrrYoWbMp3FA8zfLO0xk,39964
+TUNA/tuna_anharm.py,sha256=qifzfIZosgPu9WcQkmpaHOUsCw7va7aJfus8EfO2enY,2550
+TUNA/tuna_basis.py,sha256=NQtvEoIRl-VMCaYBjm-fPux4BccXlrM4BEDusV0s0cw,6750
+TUNA/tuna_dispersion.py,sha256=-OpugMSw_Coc6h7WgY9QG6Ye5-Zijv7CW1YKuHM9WpY,821
+TUNA/tuna_integral.py,sha256=nIJsoI3HgwtXSTpuz7LrK60dXSRG0eDdaXFNs__H93c,11212
+TUNA/tuna_mp2.py,sha256=83r3e4M8jzO0xX_DhpKNLrZONd4ryKBgGm9OJK5yj2Q,5928
+TUNA/tuna_postscf.py,sha256=4LwDHQRjaXzzRKtFaQn8rdhsCVtN-USR4dKlzc06NBs,11817
+TUNA/tuna_scf.py,sha256=3Q0j9-cfs1YtrQvNe3U7-dc3JvVVgIJl9qxicuXNt08,9433
+TUNA/tuna_thermo.py,sha256=mGPPFHpm6awk5_auBE2Rv6A5q-3cvXKRWbW907c-TgM,3530
+quantumtuna-0.4.1.dist-info/METADATA,sha256=Q2raJW3pBaPNhEi9AlHEMMHjVtvY2neWKNDFmIK7l2E,583
+quantumtuna-0.4.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+quantumtuna-0.4.1.dist-info/licenses/LICENSE,sha256=umPY6J6Lea8CcwZQzuWwtBAkpqoPT9XvHQ0YTF-Rius,1073
+quantumtuna-0.4.1.dist-info/RECORD,,
