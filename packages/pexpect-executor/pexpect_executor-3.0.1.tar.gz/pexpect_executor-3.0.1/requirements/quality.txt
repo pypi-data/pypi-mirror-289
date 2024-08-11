@@ -1,0 +1,4 @@
+mypy>=0.971
+pylint>=2.6.0
+types-setuptools>=65.3.0
+yapf>=0.29.0
