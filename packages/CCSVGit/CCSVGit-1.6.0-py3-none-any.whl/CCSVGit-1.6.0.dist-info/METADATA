@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: CCSVGit
+Version: 1.6.0
+Summary: Utility library for using conventional commits and semantic versioning with a Git repo for building a CHANGELOG
+Author-email: Bradley Morris <bradleydonmorris@hotmail.com>
+Project-URL: Homepage, https://github.com/bradleydonmorris/CCSVGit
+Project-URL: Issues, https://github.com/bradleydonmorris/CCSVGit/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# CCSVGit
+Utility library for using conventional commits and semantic versioning with a Git repo
