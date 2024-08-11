@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: simple-smatch
+Version: 0.1.3.1
+Summary: Simple Smatch
+Home-page: https://github.com/EinsZwo/smatch
+Author: Matt Buchholz
+Author-email: CzechEinsZwo@gmail.com
+License: MIT
+Keywords: nlp semantics amr evaluation
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Smatch (semantic match) tool
+
+[![Version on PyPI](https://img.shields.io/pypi/v/smatch)](https://pypi.org/project/smatch/)
+![Python Support](https://img.shields.io/pypi/pyversions/smatch)
+
+
+Simple extension of the original smatch library to support graph-by-graph comparisons and get away from file loading
