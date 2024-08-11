@@ -1,0 +1,8 @@
+README.md
+setup.py
+modelmgr.egg-info/PKG-INFO
+modelmgr.egg-info/SOURCES.txt
+modelmgr.egg-info/dependency_links.txt
+modelmgr.egg-info/top_level.txt
+s3_manager/__init__.py
+s3_manager/s3_manager.py

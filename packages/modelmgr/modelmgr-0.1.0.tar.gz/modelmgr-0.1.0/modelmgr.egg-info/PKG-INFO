@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: modelmgr
+Version: 0.1.0
+Summary: A Model Management package for model archive including upload and download from AWS S3 and Huggingface Hub.
+Author: Yinghao Li
+Author-email: shiyi.yinghao@gmail.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# ModelMgr
+
+ModelMgr is a Model Management package for model archive including upload and download from AWS S3 and Huggingface Hub.
+
+## Installation
+
+You can install ModelMgr using pip:
+
+```bash
+pip install modelmgr
+
