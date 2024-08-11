@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools","wheel","opencv-contrib-python","numpy","caer","matplotlib","google-generativeai"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LittleDog"
+version = "0.1.1"
+license = {file = 'LICENSE'}
+authors = [
+  { name="Little Dog", email="littledog.5727@gmail.com" },
+]
+description = "A must have python package which makes pragramming a lot easier"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+
+[project.urls]
+Homepage = "https://www.sites.google.com/view/littledog-python"
+Download = "https://pypi.org/project/Littledog/#files"
+License = "https://github.com/LittleDog5727/littledog-python/blob/main/LICENSE"
+Repository = "https://github.com/LittleDog5727/littledog-python"
+
