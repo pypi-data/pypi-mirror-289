@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+wdecipher/__init__.py
+wdecipher/wx_db.py
+wdecipher/wx_info.py
+wdecipher.egg-info/PKG-INFO
+wdecipher.egg-info/SOURCES.txt
+wdecipher.egg-info/dependency_links.txt
+wdecipher.egg-info/requires.txt
+wdecipher.egg-info/top_level.txt
+wdecipher.egg-info/zip-safe
+wdecipher/utils/__init__.py
+wdecipher/utils/sqlite.py
+wdecipher/utils/win32_process.py
