@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/autopwlf.egg-info/PKG-INFO
+src/autopwlf.egg-info/SOURCES.txt
+src/autopwlf.egg-info/dependency_links.txt
+src/autopwlf.egg-info/requires.txt
+src/autopwlf.egg-info/top_level.txt

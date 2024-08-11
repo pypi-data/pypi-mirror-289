@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: autopwlf
+Version: 0.4.0
+Summary: Automated piecewise linear fitting
+Home-page: https://github.com/nweerasuriya/auto_pwlf
+Author: Nedeesha Weerasuriya
+Author-email: nedeeshawork@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: scipy>=1.11.4
+Requires-Dist: pwlf>=2.2.1
+Provides-Extra: docs
+Requires-Dist: sphinx>=3.0; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+
+# Auto PWLF
+Piecewise Linear Fit with option to automatically find the optimal number of line segments.
+
+[Documentation](https://autopwlf.readthedocs.io/en/latest/#)
+
+The piecewise fitting uses the [pwlf module](https://github.com/cjekel/piecewise_linear_fit_py) with full credit to all contributors to this package.
+AutoPWLF exists as an add-on to this package.
+
+
+![image](https://github.com/user-attachments/assets/cb21b3c2-2ccc-49ff-ab42-f4aa2b991091)
+
