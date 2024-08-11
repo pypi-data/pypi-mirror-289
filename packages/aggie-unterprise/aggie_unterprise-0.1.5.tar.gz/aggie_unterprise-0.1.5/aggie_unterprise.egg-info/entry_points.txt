@@ -1,0 +1,2 @@
+[console_scripts]
+aggie-report = scripts.aggie_report:main
