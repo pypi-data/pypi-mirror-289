@@ -1,0 +1,8 @@
+README.md
+setup.py
+jdb_python/__init__.py
+jdb_python/functions.py
+jdb_python.egg-info/PKG-INFO
+jdb_python.egg-info/SOURCES.txt
+jdb_python.egg-info/dependency_links.txt
+jdb_python.egg-info/top_level.txt
