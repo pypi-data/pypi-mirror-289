@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logged"
+version = "0.3.1"
+authors = [
+  { name="hypixeloffical", email="hypixel.offical.tr@gmail.com" },
+]
+description = "A custom logging package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/hypixeloffical/logged-py"
+Issues = "https://github.com/hypixeloffical/logged-py/issues"
