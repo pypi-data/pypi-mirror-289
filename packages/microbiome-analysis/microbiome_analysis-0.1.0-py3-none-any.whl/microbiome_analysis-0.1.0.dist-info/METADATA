@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: microbiome-analysis
+Version: 0.1.0
+Summary: A comprehensive Python library for microbiome data analysis
+Author: Jaemin Kim
+Author-email: jaemin52577441@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: biopython
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Requires-Dist: plotly
+Requires-Dist: streamlit
+Requires-Dist: networkx
+Requires-Dist: statsmodels
+Requires-Dist: kaleido
+
