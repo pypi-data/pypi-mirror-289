@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+r_a_installer.egg-info/PKG-INFO
+r_a_installer.egg-info/SOURCES.txt
+r_a_installer.egg-info/dependency_links.txt
+r_a_installer.egg-info/top_level.txt
+rust_and_agg_installer/__init__.py
