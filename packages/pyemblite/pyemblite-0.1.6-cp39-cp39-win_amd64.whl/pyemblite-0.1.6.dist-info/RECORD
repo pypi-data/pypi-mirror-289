@@ -1,0 +1,14 @@
+pyemblite/__init__.py,sha256=tav7YwA8Nct_o1ehAurQDVLt_6hFMVRuFMod0QkP-Ks,108
+pyemblite/_version.py,sha256=2lcRg5rldjPFjEsQPHbIpX6nvxHDbdGoV5l1hJQpzBU,518
+pyemblite/embree3.dll,sha256=9vxr_jvlBUKye85CadnQ5vEMZuG3a577oHx4pCD_5_s,21750272
+pyemblite/mesh_construction.cp39-win_amd64.pyd,sha256=cewMQKKmXRtJFPiA9Ipq53I0K4JqCDRJAAG76xG0fIo,91136
+pyemblite/rtcore.cp39-win_amd64.pyd,sha256=PItUXV7XglB2DqRfyHqzXk6Yxbn9q4QdteLRLAODu9I,96768
+pyemblite/rtcore_scene.cp39-win_amd64.pyd,sha256=pnl9Lnt3cGcdmf2euI_K03T7rEIJyG67tMwS1mG8300,317440
+pyemblite/tbb12.dll,sha256=yAix63iuB0_tUsd2KIhvdlu0WCcsdF_CaugNQGXDztM,329216
+pyemblite/test.py,sha256=-bqMyWwQOCmjaeKLcQRDMM9QzVLzXvEUtMbdW0-wXHk,19001
+pyemblite/test_scene.cp39-win_amd64.pyd,sha256=pBrBUSsjsuxTR-6069jYga3-2OdgEpw74Eqln5Jtbds,70656
+pyemblite-0.1.6.dist-info/LICENSE.txt,sha256=jHKQqjQeBLEURACxGrahlkXqgW1IQ-aF1OF5yvvh4PA,1323
+pyemblite-0.1.6.dist-info/METADATA,sha256=mNBsIUARIsCWymQxBCDAHMRFL_qJiIe6WVCtzkT1G30,7247
+pyemblite-0.1.6.dist-info/WHEEL,sha256=3Xnqm9ZJFVM9Y9DHI7KHdVZVbOQUVZ8ikSQF9ernTQ0,94
+pyemblite-0.1.6.dist-info/top_level.txt,sha256=YDaD_IQhzfOGtWLupRa-TogxcO7hI4V0CVWm8VYIleU,10
+pyemblite-0.1.6.dist-info/RECORD,,
