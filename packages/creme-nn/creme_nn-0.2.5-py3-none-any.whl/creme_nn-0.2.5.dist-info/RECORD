@@ -1,0 +1,10 @@
+creme/__init__.py,sha256=l5VPmHvIpa-6pvnxIIgv8Wu-B_1m7HEFONl1KgDzXWE,22
+creme/creme.py,sha256=2_UpM1jbn6Dr9pvCIiymERCUd6X_XA9xKNTBc-Z5wnA,31036
+creme/custom_model.py,sha256=xW61YDq6eA8bq-5h6aj0U_BS9wzVCuFBE1sbRtFO5NI,4619
+creme/shuffle.py,sha256=hB8i-ql0oG0AQfqJ4MRKlfBKSbRA_nN3rN-bsqwo-rc,4661
+creme/utils.py,sha256=4yNcTnddVgq8Lvqxc_NZ0925gItEs4AmpEvDgzYZ1dg,11970
+creme_nn-0.2.5.dist-info/LICENSE,sha256=ub2UeQys61Uga7avwjDtm7dxykAdurHbegBt0EcTjDc,1065
+creme_nn-0.2.5.dist-info/METADATA,sha256=9iApmRxuxFBZO2fl2MQrQaMpmM9gai1W9dP-gU09dBQ,1022
+creme_nn-0.2.5.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+creme_nn-0.2.5.dist-info/top_level.txt,sha256=a9p8U4e4_BFc7sxKwAHPVwWEjh6f3MaXcnfx-oBnb0g,6
+creme_nn-0.2.5.dist-info/RECORD,,
