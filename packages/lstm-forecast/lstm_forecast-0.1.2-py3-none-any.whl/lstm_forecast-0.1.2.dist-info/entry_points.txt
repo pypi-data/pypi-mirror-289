@@ -1,0 +1,3 @@
+[console_scripts]
+lstm_forecast = lstm_forecast.cli:main
+
