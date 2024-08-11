@@ -1,0 +1,6 @@
+setup.py
+ASHTEAM.egg-info/PKG-INFO
+ASHTEAM.egg-info/SOURCES.txt
+ASHTEAM.egg-info/dependency_links.txt
+ASHTEAM.egg-info/top_level.txt
+tc4/__init__.py
