@@ -1,0 +1,20 @@
+stages:
+  - tests
+
+'Job 1':
+  stage: tests
+  image: local
+  script:
+    - echo 'Job 1'
+
+'Job 2':
+  stage: tests
+  image: local
+  script:
+    - echo 'Job 2'
+
+'Job 3':
+  stage: tests
+  image: local
+  script:
+    - echo 'Job 3'
