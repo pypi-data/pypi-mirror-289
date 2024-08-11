@@ -1,0 +1,34 @@
+[build-system]
+requires      = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osbee"
+version = "0.3.1"
+description = "Connect to your OSBee 3-valve controller's REST API"
+readme = "README.md"
+authors = [{ name = "Allan Clark", email = "allanc@chickenandpork.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["osbee", "opensprinkler"]
+# yup, pure bog-standard python
+# NOTE: we use tpying, but homeassistant has bombed that out in constraints.txt, so we cannot list it here
+dependencies = [ "aiohttp" ]
+#requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = [ "black" ]
+
+[project.urls]
+Homepage = "https://github.com/chickenandpork/osbee"
+Repository = "https://github.com/chickenandpork/osbee.git"
+Issues = "https://github.com/chickenandpork/osbee/issues"
+Changelog = "https://github.com/chickenandpork/osbee/blob/master/CHANGELOG.md"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
