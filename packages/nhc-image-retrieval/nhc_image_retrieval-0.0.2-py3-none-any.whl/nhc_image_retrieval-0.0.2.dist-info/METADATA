@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: nhc-image-retrieval
+Version: 0.0.2
+Summary: Downloads images from the NOAA NHC website.
+Author-email: John Barton <john@mediayoucanfeel.com>
+License: The MIT License (MIT)
+        Copyright © 2024 John Barton
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Project-URL: Homepage, https://github.com/JohnBarton27/nhc_image_retrieval
+Keywords: hurricane,nhc,image
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bs4
+Requires-Dist: feedparser
+Requires-Dist: pytz
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: pip-tools; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+
+# NHC Image Retrieval
+This is a simple tool to download images from the NOAA NHC website. Today, it retrieves the latest available "uncertainty track" for an active storm in the Atlantic hurricane basin.
+
+## Installation
+This library can be installed via `pip`:
+
+```
+pip install nhc-image-retrieval
+```
+
+### Usage
+
+#### Home Assistant
+I initially wrote this library for Home Assistant. I have an automation setup to read from the NHC RSS feeds already - now, when those are read from, my Home Assistant instance also downloads the latest "Uncertainty Track" from the NHC.
+
+![alt text](examples/home_assistant_example.png)
+
+This is possible using [AppDaemon](https://appdaemon.readthedocs.io/en/latest/index.html), which can be downloaded as a Home Assistant Add-On.
+
+The example in `examples/home_assistant_appdaemon.py` shows the script I use in my Home Assistant instance.
+
+#### General
+For any generic application, I've also included an `examples/main.py` that shows basic usage & the downloading of the Uncertainty Track image.
