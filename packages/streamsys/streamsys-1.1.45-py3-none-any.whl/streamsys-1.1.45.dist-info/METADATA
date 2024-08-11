@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: streamsys
+Version: 1.1.45
+Summary: Advanced Streaming System | Available with 24/7 Stream
+Author: Javi17mod
+Author-email: javi17mod@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
