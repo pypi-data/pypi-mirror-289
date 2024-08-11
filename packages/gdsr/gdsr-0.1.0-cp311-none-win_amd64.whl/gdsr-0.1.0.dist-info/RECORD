@@ -1,0 +1,11 @@
+gdsr-0.1.0.dist-info/METADATA,sha256=eooM288H1THoqKpC7-HybCbG4-eLkMlQN8aLYbUP97Y,3134
+gdsr-0.1.0.dist-info/WHEEL,sha256=Zt-eJCUbFaJCkkuaw3Ty5at2NF9rLilS2NihesH-s2U,95
+gdsr-0.1.0.dist-info/license_files/LICENSE,sha256=glda2PHJALcM5PJW9q5xmccHm9tcXTr6zJdnBlGXQws,1082
+gdsr/logging/setup.py,sha256=esEEjg07OOPRB7zk1Avfa4vRKnRAgL8gr9NRPXIdfPc,913
+gdsr/logging/__init__.py,sha256=xDNlySNfGznwy2md7tTFGDb0ZwdfEwSPEktHhjNJqsA,97
+gdsr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdsr/typings/__init__.py,sha256=3OLAbwZyKzxYUlIpgkBuLKTlfen2eWiAYax6eFPasx8,2752
+gdsr/_gdsr.pyi,sha256=RFKVz5uYV0GRBnTN889Aq8gwAQONvwlwW4d_TKvSV-o,27154
+gdsr/__init__.py,sha256=Gk3W6O5Q4JsRcmULealwvReqwMf578TiKJFmGJ5hOJM,906
+gdsr/_gdsr.cp311-win_amd64.pyd,sha256=pDp9-JCgo6NWi3d-ezcu2qKRtcb9iA6WXIhcdUs-ZfQ,5343232
+gdsr-0.1.0.dist-info/RECORD,,
