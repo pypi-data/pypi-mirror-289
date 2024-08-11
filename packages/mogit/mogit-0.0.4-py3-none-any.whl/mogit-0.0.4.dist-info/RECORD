@@ -1,0 +1,12 @@
+mogit/__init__.py,sha256=rOicCnDiXL3ga84jRVB3ReEwTUeeIR5ZitXWWWRUwjc,4620
+mogit/cli.py,sha256=le9uNrfYnXqvXpVZEe2QGBJL2cQV7md-gcqB8FCgkIg,1489
+mogit/ignorefile.py,sha256=jXgYXaztu0sGfswggmnVwPlXKwTq5axcNC-UH2EMP8s,12522
+mogit/objs.py,sha256=urGFcVpTlzgpidBdhwiH-1fEXzCjgKD9waciHvegP2A,1460
+mogit/repo.py,sha256=fmKXu2YG000DUPkDjJWIaMChy7IbpkL73m8CI11x6x0,5208
+mogit/server.py,sha256=Vz_C0IzmoA-TagdIOZb7MIJ7Nx4rQl3EQgwfA_vp6MM,1292
+mogit-0.0.4.dist-info/LICENSE,sha256=82ZmGfSo-KEatKHNhlwDy8ObnHiDHIBjsGF4VAP1mnw,1067
+mogit-0.0.4.dist-info/METADATA,sha256=72FKCb2h3CqF5IQjePemX6gYO-rv8htqEVzwpjGEumU,2863
+mogit-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mogit-0.0.4.dist-info/entry_points.txt,sha256=uuX4cXxJVZnSDuhpWMtXJovfRkVtrJ3nOK48Pjm3djw,41
+mogit-0.0.4.dist-info/top_level.txt,sha256=bc1Od6uoWEQtWW8Z7_8VgpORpst-JN61BdVhbsnOLHQ,6
+mogit-0.0.4.dist-info/RECORD,,
