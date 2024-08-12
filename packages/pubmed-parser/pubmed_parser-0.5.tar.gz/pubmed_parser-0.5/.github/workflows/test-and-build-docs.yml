@@ -1,0 +1,63 @@
+name: Build test and documentation page
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: ${{ github.event.pull_request.head.ref }}
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python --version
+        pip install -U pip
+        pip install -r requirements.txt  # Install project dependencies
+        pip install pytest pytest-cov   # Install pytest and coverage plugin
+        python setup.py install
+    - name: Run tests
+      run: pytest --cov=pubmed_parser tests/ --verbose
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        pip install -r docs/doc_requirements.txt
+    - name: Install project dependencies
+      run: |
+        pip install -r requirements.txt  # Install project dependencies
+        python setup.py install
+    - name: Build documentation
+      run: |
+        cd docs
+        make html
+        touch _build/html/.nojekyll
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/_build/html/
+        keep_files: true
