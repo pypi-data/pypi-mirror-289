@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: upper-case-change
+Version: 1.0.0
+Summary: It uppercases whole folder
+Home-page: https://github.com/Shubhamaggarwal6/upper-case-change
+Author: shubham
+Author-email: 09shubhamaggarwal@gmial.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+

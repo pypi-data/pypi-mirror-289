@@ -1,0 +1,2 @@
+[console_scripts]
+upper-case-change = upper_case_change.__main__:main
