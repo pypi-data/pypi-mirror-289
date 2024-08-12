@@ -1,0 +1,10 @@
+accelerate
+datasets
+py-cpuinfo
+sentencepiece
+torch
+transformers
+triton
+numpy<2.0
+threadpoolctl
+intel-extension-for-transformers
