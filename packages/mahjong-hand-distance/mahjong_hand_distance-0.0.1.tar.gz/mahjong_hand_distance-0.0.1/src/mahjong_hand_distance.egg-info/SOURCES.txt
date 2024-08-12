@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+.github/workflows/deploy.yml
+src/mahjong_hand_distance/__init__.py
+src/mahjong_hand_distance/tile.py
+src/mahjong_hand_distance/version.py
+src/mahjong_hand_distance.egg-info/PKG-INFO
+src/mahjong_hand_distance.egg-info/SOURCES.txt
+src/mahjong_hand_distance.egg-info/dependency_links.txt
+src/mahjong_hand_distance.egg-info/requires.txt
+src/mahjong_hand_distance.egg-info/top_level.txt

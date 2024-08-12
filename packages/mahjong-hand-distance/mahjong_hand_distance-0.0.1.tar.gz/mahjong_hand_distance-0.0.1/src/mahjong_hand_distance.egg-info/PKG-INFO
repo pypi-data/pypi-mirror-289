@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mahjong_hand_distance
+Version: 0.0.1
+Summary: Little python library for computing the distance between Riichi Mahjong hands
+Author: Billy Broderick
+Project-URL: Homepage, https://github.com/billbrod/mahjong-hand-distance
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.1
+Requires-Dist: mahjong
+
+# mahjong-hand-distance
+Little python library for computing the distance between Riichi Mahjong hands
