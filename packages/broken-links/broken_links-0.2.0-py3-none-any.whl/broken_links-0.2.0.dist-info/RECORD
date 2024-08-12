@@ -1,0 +1,13 @@
+broken_links/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+broken_links/broken_links.py,sha256=NwfB3yrGIieiPE6fdjf2zQeXPB_pAznEuaog1SJ_prA,4260
+broken_links/cli.py,sha256=UJWt-pBexi8V5tAc2sg-I2EgCYBz954lUEgKVKp4TXk,861
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_check_links.py,sha256=jyi6L-vSoHWA3500as4nbzorTCK_qxseaxhi8rsun0Y,774
+tests/test_load_ignore_patterns.py,sha256=JJiqqFQCsPjMi8Qe2HcIyZMo9FV2Z0ECYmOmt2tUVqY,1158
+tests/test_should_ignore.py,sha256=_JtsaenImvhfB68XJtvnWXOV6NH3fPMfFRypUi1QqIw,2119
+broken_links-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+broken_links-0.2.0.dist-info/METADATA,sha256=WUwQgWnI8hSAH915EuevpcRaXjmoeIolN3LD8Gfo6XE,6006
+broken_links-0.2.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+broken_links-0.2.0.dist-info/entry_points.txt,sha256=1YlsaZYWZYx2VlJ6r8Cj4rGZhB24HKxDqpGq9ZPaJ5E,55
+broken_links-0.2.0.dist-info/top_level.txt,sha256=4GnGyJvqYssnaE1X5kRfBwL8Rt05LfvZY-QsRUarVP0,19
+broken_links-0.2.0.dist-info/RECORD,,
