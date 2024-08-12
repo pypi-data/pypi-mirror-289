@@ -1,0 +1,5 @@
+pycatima-1.91.dist-info/RECORD,,
+pycatima-1.91.dist-info/WHEEL,sha256=LvDvFYUIWpqhs1cLc47zNFzvbgmv_d0J503rh6WkVXs,112
+pycatima-1.91.dist-info/METADATA,sha256=j-7KJvTdBOK8EvTsgA53lAihxbD4Dtrq8YQZvwwCgHo,987
+pycatima/__init__.py,sha256=jRN4zSfSYb-okqa-vrJ_Se-0f7KKIZk0Dttn355_YAY,20
+pycatima/_ext.cpython-38-darwin.so,sha256=9SRnvQ9sG9cCV8fWlybisTRKknjbSiUMWXVxxQWFZ0E,1129784
