@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+my_datasets/__init__.py
+my_datasets/iris.py
+my_datasets/data/Electric_Vehicle_Data.csv
+my_datasets/data/Iris.csv
+my_datasets/data/Most Streamed Spotify Songs 2024.csv
+my_datasets/data/flight_data_2018_2024.csv
+my_datasets/data/online_course_engagement_data.csv
+my_unique_datasets_library.egg-info/PKG-INFO
+my_unique_datasets_library.egg-info/SOURCES.txt
+my_unique_datasets_library.egg-info/dependency_links.txt
+my_unique_datasets_library.egg-info/requires.txt
+my_unique_datasets_library.egg-info/top_level.txt
