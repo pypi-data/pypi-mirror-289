@@ -1,0 +1,72 @@
+# Abstract APIs
+
+`abstract_apis` is a Python module designed to simplify HTTP requests by abstracting common request setups and processing. It helps developers make GET and POST requests with JSON content easily, managing headers and data serialization internally.
+
+## Features
+
+- Automatic handling of request headers for JSON content types.
+- Ensures data passed to requests is properly serialized into JSON.
+- Simplified functions for making GET and POST requests.
+
+## Installation
+
+You can install the `abstract_apis` package directly from PyPI:
+
+```bash
+pip install abstract_apis
+```
+
+## Usage
+
+### Making a POST Request
+
+To make a POST request with JSON data:
+
+```python
+from abstract_apis import make_requests
+
+url = "https://api.example.com/data"
+data = {"key": "value"}
+response = make_requests.getPostRequest(url, data)
+print(response)
+```
+
+### Making a GET Request
+
+To make a GET request with query parameters:
+
+```python
+from abstract_apis import make_requests
+
+url = "https://api.example.com/data"
+params = {"query": "info"}
+response = make_requests.getGetRequest(url, params)
+print(response)
+```
+
+## Dependencies
+
+- Python 3.6+
+- `requests` library
+
+Ensure you have the `requests` library installed:
+
+```bash
+pip install requests
+```
+
+## Contributions
+
+Contributions are welcome! Please fork the [repository on GitHub](https://github.com/AbstractEndeavors/abstract_apis) and submit a pull request with your proposed changes.
+
+## License
+
+This project is licensed under the terms of the MIT license.
+
+## Contact
+
+If you have any questions, please email us at [partners@abstractendeavors.com](mailto:partners@abstractendeavors.com).
+
+---
+
+This README provides basic instructions for installation, usage, and contribution. Adjust as necessary to match your documentation style and additional functionalities.
