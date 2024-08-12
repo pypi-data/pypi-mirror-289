@@ -1,0 +1,67 @@
+Metadata-Version: 2.3
+Name: QuantumTuna
+Version: 0.4.2
+Summary: A user-friendly quantum chemistry program for diatomics.
+Project-URL: Repository, https://github.com/harrybrough1/TUNA
+Author-email: Harry Brough <harry.brough@icloud.com>
+License-File: LICENSE
+Keywords: dft,hartree-fock,molecular physics,mp2,quantum chemistry
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: plotly
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# TUNA
+
+Welcome to TUNA! A user-friendly quantum chemistry program for diatomics.
+
+<br>
+<p align="center">
+  <img src="TUNA Logo.svg" alt="Fish swimming through a wavepacket" />
+</p>
+
+## Contents
+
+The repository includes:
+
+* This README file
+* The TUNA logo
+* The file LICENSE with the MIT license
+* The folder TUNA containing python files
+* The installation file pyproject.toml
+* The TUNA manual
+
+## Documentation
+
+A copy of the TUNA manual can be found in the directory where the Python files are installed.
+
+## Using TUNA
+
+### Prerequisites
+The program requires Python 3.12 or higher and the following packages:
+
+* numpy
+* scipy
+* matplotlib
+* plotly
+* scikit-image
+
+### Installation
+
+The simplest way to install TUNA is by running
+
+```
+pip install QuantumTUNA
+```
+
+### Running
+
+Add the folder where TUNA was installed (on Windows this may be ```/AppData/Local/Programs/Python/Python312/Lib/site-packages/TUNA/```) to PATH, and then run ```tuna --version``` which should print the correct version if TUNA has installed correctly.
+
