@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: anandhu_api
+Version: 0.1
+Summary: A simple API client library with API key support by anandhu
+Home-page: https://github.com/anandhu/anandhu_api
+Author: anandhuaskkkk
+Author-email: wedalev767@eixdeal.com
+Requires-Dist: requests
+
