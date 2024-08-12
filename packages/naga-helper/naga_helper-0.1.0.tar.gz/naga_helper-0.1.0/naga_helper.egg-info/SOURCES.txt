@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+analyzer/__init__.py
+analyzer/analyzer.py
+naga_helper.egg-info/PKG-INFO
+naga_helper.egg-info/SOURCES.txt
+naga_helper.egg-info/dependency_links.txt
+naga_helper.egg-info/top_level.txt
