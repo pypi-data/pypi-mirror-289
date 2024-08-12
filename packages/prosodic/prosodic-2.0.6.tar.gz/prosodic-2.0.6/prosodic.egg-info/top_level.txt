@@ -1,0 +1,8 @@
+corpora
+data
+deployment
+dist
+docs
+notebooks
+prosodic
+tests
