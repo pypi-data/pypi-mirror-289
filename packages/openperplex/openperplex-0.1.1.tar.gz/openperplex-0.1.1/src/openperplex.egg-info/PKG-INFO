@@ -1,0 +1,166 @@
+Metadata-Version: 2.1
+Name: openperplex
+Version: 0.1.1
+Summary: A Python client for the Openperplex API
+Home-page: https://github.com/YassKhazzan/openperplex_python_client
+Author: Yassine khazzan
+Author-email: Yassine khazzan <yassine.khazzan@gmail.com>
+Project-URL: Homepage, https://github.com/YassKhazzan/openperplex_python_client
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: httpx==0.26.0
+
+# Openperplex
+
+Openperplex is a powerful Python library that provides an interface to interact with an AI-powered search and question-answering system. It offers both streaming and non-streaming search capabilities, making it versatile for various use cases.
+
+## Features
+
+- Supports multiple AI providers (OpenAI and Groq)
+- Streaming and non-streaming search options
+- Simple and advanced search interfaces
+- Error handling with custom exceptions
+- Date context and location-based search
+- Professional mode for advanced queries
+
+## Installation
+
+To install Openperplex, use pip:
+
+```bash
+pip install openperplex
+```
+
+## Usage
+
+### Initialization
+
+To use Openperplex, you need to initialize it with your API key and provider information:
+
+```python
+from openperplex import Openperplex
+
+client = Openperplex(
+    api_key="your_api_key",
+    provider="openai",  # or "groq"
+    provider_key="your_provider_key"
+)
+```
+
+### Streaming Search
+
+Openperplex offers two streaming search methods:
+
+1. `search_stream`: Advanced streaming search with additional parameters.
+2. `search_simple_stream`: Simple streaming search with minimal parameters.
+
+#### Advanced Streaming Search
+
+```python
+query = "What are the latest developments in AI?"
+for result in client.search_stream(query=query, date_context="2024-08-11", location="us", pro_mode=True):
+    if result["type"] == "llm":
+        print("AI response:", result["text"])
+    elif result["type"] == "sources":
+        print("Sources:", result["data"])
+    elif result["type"] == "relevant":
+        print("Relevant questions :", result["data"])
+    elif result["type"] == "finished":
+        print("Search completed")
+```
+
+#### Simple Streaming Search
+
+```python
+query = "Tell me about quantum computing"
+for result in client.search_simple_stream(query):
+    if result["type"] == "llm":
+        print("AI response:", result["text"])
+    # Handle other result types as needed
+```
+
+### Non-Streaming Search
+
+Openperplex also provides non-streaming search methods:
+
+1. `search`: Advanced search with additional parameters.
+2. `search_simple`: Simple search with minimal parameters.
+
+#### Advanced Search
+
+```python
+query = "What are the economic impacts of climate change?"
+results = client.search(query, date_context="2024-08-11", location="us", pro_mode=True)
+print(results)
+```
+
+#### Simple Search
+
+```python
+query = "Explain the theory of relativity"
+result = client.search_simple(query)
+print(result)
+```
+
+## Error Handling
+
+Openperplex uses custom exceptions to handle errors. You can catch these exceptions to manage error scenarios:
+
+```python
+from openperplex import Openperplex, OpenperplexError
+
+try:
+    client = Openperplex(api_key="invalid_key", provider="openai", provider_key="invalid_key")
+    result = client.search_simple("Test query")
+except OpenperplexError as e:
+    print(f"An error occurred: {e.status_code} - {e.detail}")
+```
+
+## Advanced Usage
+
+### Date Context
+
+You can provide a date context to get results relevant to a specific time:
+
+```python
+results = client.search("Current global events", date_context="2024-08-11")
+```
+
+### Location-Based Search
+
+Specify a location to get region-specific results:
+
+```python
+results = client.search("Local news", location="uk")
+```
+
+### Professional Mode
+
+Enable professional mode for more detailed and technical responses:
+
+```python
+results = client.search("Advanced AI algorithms", pro_mode=True)
+```
+
+## Closing the Client
+
+The client automatically closes the underlying HTTP client when the Openperplex instance is deleted. However, you can explicitly close it if needed:
+
+```python
+client.__del__()
+```
+
+## Conclusion
+
+Openperplex provides a flexible and powerful interface for AI-powered search and question-answering. Whether you need real-time streaming results or simple query responses, Openperplex has you covered. Experiment with different search methods and parameters to find the best fit for your use case.
+
+For more information and updates, please refer to the official documentation or contact the library maintainers.
