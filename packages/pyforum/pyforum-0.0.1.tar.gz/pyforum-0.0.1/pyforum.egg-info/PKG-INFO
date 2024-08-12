@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyforum
+Version: 0.0.1
+Summary: Feature-Oriented Ranking Utility Metric (FORUM) for evaluating ranking algorithms
+Author: Patrick Gildersleve
+Author-email: <p.gildersleve@lse.ac.uk>
+Keywords: python,ranking algorithms,algorithms,forum,comments,news comments
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: numpy
+
+A package that calculates the Feature-Oriented Ranking Utility Metric (FORUM) for evaluating ranking algorithms.
