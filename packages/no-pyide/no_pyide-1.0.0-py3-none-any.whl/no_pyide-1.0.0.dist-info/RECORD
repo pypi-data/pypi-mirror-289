@@ -1,0 +1,11 @@
+no_pyide/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+no_pyide/__main__.py,sha256=OPoDFFp8-1KOyPRamXniGzho0FKyEOs2JAIRy6VK5bs,63
+no_pyide/code.py,sha256=jLINe6r7nmBjtqVs6HkVVcwl8nj9pbSFxBXrMCr2J7g,1394
+no_pyide/templates/index.html,sha256=IyOjllC1F_SvOAl1TKLkDKw7shkCa-MaJPenjdlAIys,1780
+no_pyide/templates/results.html,sha256=O1NJpE7cqQsYlQubgNFskqwNOMNROYywH9RKuqzEpGI,275
+no_pyide-1.0.0.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+no_pyide-1.0.0.dist-info/METADATA,sha256=UfxLFKCoKVaQfG_v-UJaPIYxLNcKSE1h8wLBgMjurfw,891
+no_pyide-1.0.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+no_pyide-1.0.0.dist-info/entry_points.txt,sha256=GHJe2nstcVwPkqdqajUWYA-0guHMOy6EYL9D6Zk4asQ,49
+no_pyide-1.0.0.dist-info/top_level.txt,sha256=56kLODFmJoyRFtTE-IQRVquP-cL_-jYDP92Pv7BTq4Y,9
+no_pyide-1.0.0.dist-info/RECORD,,
