@@ -1,0 +1,12 @@
+.bumpversion.cfg
+.gitignore
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+browsinator/browsinator.py
+browsinator.egg-info/PKG-INFO
+browsinator.egg-info/SOURCES.txt
+browsinator.egg-info/dependency_links.txt
+browsinator.egg-info/requires.txt
+browsinator.egg-info/top_level.txt
