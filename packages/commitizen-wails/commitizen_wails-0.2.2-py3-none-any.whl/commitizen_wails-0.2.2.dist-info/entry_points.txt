@@ -1,0 +1,2 @@
+[commitizen.provider]
+wails-provider = commitizen_wails:WailsVersionProvider
