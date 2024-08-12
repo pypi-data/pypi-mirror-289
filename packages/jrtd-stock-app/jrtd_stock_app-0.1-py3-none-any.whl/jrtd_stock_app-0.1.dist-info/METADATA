@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: jrtd_stock_app
+Version: 0.1
+Summary: A tool to visualize stock data with enhanced charts
+Home-page: https://github.com/yourusername/my_stock_app
+Author: Your Name
+Author-email: your.email@example.com
+Requires-Dist: pandas
+Requires-Dist: yfinance
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: mplfinance
+Requires-Dist: numpy
+

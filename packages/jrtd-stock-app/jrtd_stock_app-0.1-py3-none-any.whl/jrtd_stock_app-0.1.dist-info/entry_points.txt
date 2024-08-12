@@ -1,0 +1,2 @@
+[console_scripts]
+stockplot = enhanced_stock_visualization:main
