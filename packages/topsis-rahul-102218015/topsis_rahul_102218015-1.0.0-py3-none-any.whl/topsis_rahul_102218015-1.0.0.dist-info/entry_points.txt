@@ -1,0 +1,2 @@
+[console_scripts]
+topsis15 = topsis.__main__:main
