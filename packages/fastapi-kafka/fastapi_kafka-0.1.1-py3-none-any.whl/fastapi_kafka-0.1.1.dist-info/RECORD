@@ -1,0 +1,8 @@
+fastapi_kafka/__init__.py,sha256=-ofo1O0P8vNRPy64MCOzHwQg7pTO59X-cyzJCfDA_hQ,262
+fastapi_kafka/consumer.py,sha256=M5hPZJr9bKWNv1CWNaIY9xz0Z0W1SXOhCpsmuK7NjuY,4278
+fastapi_kafka/schema.py,sha256=QddRWYxxtQnc0mCXJvXAtAmUMjSztlk1AgBSysYFTNs,4116
+fastapi_kafka-0.1.1.dist-info/LICENSE,sha256=rvykoa32E5R3stWYjOytyjmVwGREhTCxjaf7pE7pj_U,1065
+fastapi_kafka-0.1.1.dist-info/METADATA,sha256=q4hfgDUNW2IPL1j7rn7gj88NVdLWcl-rV7rQo6vwepk,344
+fastapi_kafka-0.1.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+fastapi_kafka-0.1.1.dist-info/top_level.txt,sha256=sr9rD_hk13YB8i7-mQoG6jykn5xLzHrjwH5W2BflK_I,14
+fastapi_kafka-0.1.1.dist-info/RECORD,,
