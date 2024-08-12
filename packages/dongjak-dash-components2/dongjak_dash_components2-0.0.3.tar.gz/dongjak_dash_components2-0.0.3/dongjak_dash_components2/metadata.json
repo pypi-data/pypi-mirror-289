@@ -1,0 +1,148 @@
+{
+  "src/ts/components/AdminAppLayout.tsx": {
+    "displayName": "AdminAppLayout",
+    "description": "",
+    "props": {
+      "routes": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "union",
+            "value": [
+              {
+                "name": "shape",
+                "value": {
+                  "label": {
+                    "description": "",
+                    "required": true,
+                    "name": "string",
+                    "raw": "string"
+                  },
+                  "icon": {
+                    "description": "",
+                    "required": false,
+                    "name": "node",
+                    "raw": "ReactNode"
+                  },
+                  "children": {
+                    "description": "",
+                    "required": false,
+                    "name": "arrayOf",
+                    "value": {
+                      "name": "any",
+                      "raw": "RouteObjectProps"
+                    },
+                    "raw": "RouteObjectProps[]"
+                  }
+                },
+                "raw": "{ label: string; icon?: ReactNode; children?: RouteObjectProps[]; }"
+              },
+              {
+                "name": "shape",
+                "value": {
+                  "path": {
+                    "description": "",
+                    "required": false,
+                    "name": "string",
+                    "raw": "string"
+                  },
+                  "element": {
+                    "description": "",
+                    "required": false,
+                    "name": "node",
+                    "raw": "ReactNode"
+                  }
+                },
+                "raw": "Pick<RouteObject, \"path\" | \"element\">"
+              }
+            ],
+            "raw": "RouteObjectProps"
+          },
+          "raw": "RouteObjectProps[]"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      },
+      "children": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "node",
+          "raw": "ReactNode"
+        }
+      }
+    },
+    "isContext": false
+  },
+  "src/ts/components/FunctionCall.tsx": {
+    "displayName": "FunctionCall",
+    "description": "",
+    "props": {
+      "inputs": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "node",
+          "raw": "ReactNode"
+        }
+      },
+      "outputs": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "node",
+          "raw": "ReactNode"
+        }
+      },
+      "docs": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "node",
+          "raw": "ReactNode"
+        }
+      },
+      "id": {
+        "description": "Unique ID to identify this component in Dash callbacks.",
+        "required": false,
+        "type": {
+          "name": "string",
+          "raw": "string"
+        }
+      },
+      "setProps": {
+        "description": "Update props to trigger callbacks.",
+        "required": true,
+        "type": {
+          "name": "func",
+          "raw": "(props: Record<string, any>) => void"
+        }
+      },
+      "children": {
+        "description": "",
+        "required": false,
+        "type": {
+          "name": "node",
+          "raw": "ReactNode"
+        }
+      }
+    },
+    "isContext": false
+  }
+}

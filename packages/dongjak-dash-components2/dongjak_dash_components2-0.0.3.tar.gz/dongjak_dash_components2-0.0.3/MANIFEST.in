@@ -1,0 +1,2 @@
+recursive-include dongjak_dash_components2/** *.js *.css *.json *.html
+prune tests
