@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+st_txt_copybutton/__init__.py
+st_txt_copybutton.egg-info/PKG-INFO
+st_txt_copybutton.egg-info/SOURCES.txt
+st_txt_copybutton.egg-info/dependency_links.txt
+st_txt_copybutton.egg-info/requires.txt
+st_txt_copybutton.egg-info/top_level.txt
