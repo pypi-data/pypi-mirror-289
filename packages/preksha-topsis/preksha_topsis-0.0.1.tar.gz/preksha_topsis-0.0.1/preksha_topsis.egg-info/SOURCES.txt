@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+preksha_topsis.egg-info/PKG-INFO
+preksha_topsis.egg-info/SOURCES.txt
+preksha_topsis.egg-info/dependency_links.txt
+preksha_topsis.egg-info/entry_points.txt
+preksha_topsis.egg-info/top_level.txt
+topsis/__init__.py
+topsis/__main__.py
