@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ibdpainting
+Version: 0.1
+Summary: Identify parents of a crossed individual by comparing identity in windows across their genomes
+Home-page: https://github.com/ellisztamas/ibdpainting
+Author: Tom Ellis
+Author-email: thomas.ellis@gmi.oeaw.ac.at
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: h5py
+Requires-Dist: scikit-allel
+
+# ibdpainting
+Identify parents of a crossed individual by comparing identity in windows across their genomes

@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+ibdpainting/__init__.py
+ibdpainting/genetic_distance.py
+ibdpainting/ibd_table.py
+ibdpainting/ibs_scores.py
+ibdpainting/load_genomes.py
+ibdpainting/plot_ibd_table.py
+ibdpainting.egg-info/PKG-INFO
+ibdpainting.egg-info/SOURCES.txt
+ibdpainting.egg-info/dependency_links.txt
+ibdpainting.egg-info/not-zip-safe
+ibdpainting.egg-info/requires.txt
+ibdpainting.egg-info/top_level.txt
