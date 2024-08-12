@@ -1,0 +1,8 @@
+README.md
+setup.py
+cognitivo_hello/__init__.py
+cognitivo_hello/main.py
+cognitivo_hello.egg-info/PKG-INFO
+cognitivo_hello.egg-info/SOURCES.txt
+cognitivo_hello.egg-info/dependency_links.txt
+cognitivo_hello.egg-info/top_level.txt
