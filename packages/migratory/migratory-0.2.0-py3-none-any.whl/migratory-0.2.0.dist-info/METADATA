@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: migratory
+Version: 0.2.0
+Summary: 
+Author: SmsS4
+Author-email: smss.lite@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: sqlalchemy (>=2.0.32,<3.0.0)
+Requires-Dist: sqlalchemy-cratedb (>=0.38.0,<0.39.0)
