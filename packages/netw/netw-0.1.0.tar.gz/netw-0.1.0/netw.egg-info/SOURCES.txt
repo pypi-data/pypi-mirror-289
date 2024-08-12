@@ -1,0 +1,5 @@
+setup.py
+netw.egg-info/PKG-INFO
+netw.egg-info/SOURCES.txt
+netw.egg-info/dependency_links.txt
+netw.egg-info/top_level.txt
