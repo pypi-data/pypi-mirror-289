@@ -1,0 +1,1 @@
+TV_SCREEN_GOOGLE_DRIVER_DOWNLOAD_URL = 'https://drive.google.com/file/d/1fHGLruNc0ddqMwsGldcsc_OnHyWFC99x/view?usp=sharing'
