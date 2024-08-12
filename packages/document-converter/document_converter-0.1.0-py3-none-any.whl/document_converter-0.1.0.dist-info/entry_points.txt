@@ -1,0 +1,2 @@
+[console_scripts]
+document-converter = document_converter.document_converter:main

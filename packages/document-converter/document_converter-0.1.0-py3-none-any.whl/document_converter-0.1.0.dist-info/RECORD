@@ -1,0 +1,12 @@
+textify_docs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textify_docs/base.py,sha256=2LF3-J-tfCyvsIzdf9umWBk0SOfQb-I_QMhG8gQT6B0,643
+textify_docs/document_converter.py,sha256=lXk8cYQ47QNaAYyac1K8rikvtOZpaTkJz9hVIWw_gAs,1432
+textify_docs/docx_converter.py,sha256=qXeCA-Cu7_WiUorM0FLLcc8v48dxobdUxEfOimo31uk,504
+textify_docs/image_converter.py,sha256=XQdf8DHphcjMTE8bqa07zxN_kmtlue7BkWcfzc24W6M,3812
+textify_docs/pdf_converter.py,sha256=rqCt_0WLs3_XvJDIT-Om45tlHaFRzOXuIu07OGKit1k,862
+textify_docs/xlsx_converter.py,sha256=eEdTiVOV6iQQfBb9Ivux8fQl9xfvgeqPbRer_uAHS7E,422
+document_converter-0.1.0.dist-info/METADATA,sha256=KyIuOPQ7wqTQaAuztM8MRcxbzfVOhG6_be63fQqYsDI,677
+document_converter-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+document_converter-0.1.0.dist-info/entry_points.txt,sha256=rqR4_J03rpDB8reSJv4CM9KdtCPNuWJIYdaZZxSHmAQ,82
+document_converter-0.1.0.dist-info/top_level.txt,sha256=rqfgCCISLS3E93PXZ4OXNfICaN1eDIgBNGpXo4BXe8M,13
+document_converter-0.1.0.dist-info/RECORD,,
