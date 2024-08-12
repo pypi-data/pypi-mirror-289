@@ -1,0 +1,9 @@
+README.md
+setup.py
+pip-sdk-build-test/__init__.py
+pip-sdk-build-test/main.py
+pip_sdk_build_test.egg-info/PKG-INFO
+pip_sdk_build_test.egg-info/SOURCES.txt
+pip_sdk_build_test.egg-info/dependency_links.txt
+pip_sdk_build_test.egg-info/entry_points.txt
+pip_sdk_build_test.egg-info/top_level.txt
