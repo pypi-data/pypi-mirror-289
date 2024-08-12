@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Topsis-Lovely-102218034
+Version: 1.0.0
+Summary: It will find the topsis score of data to find the best module
+Home-page: https://github.com/bansal9855/Topsis-Lovely-102218034
+Author: Lovely Bansal
+Author-email: admin@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+ ##Topsis-Lovely-102218034
+ how to awshdan
