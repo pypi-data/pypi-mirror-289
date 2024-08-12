@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "aasms"
+version = "0.9"
+description = "aaisp.net SMS interface"
+authors = ["Michael Stevens <mstevens@mstevens.org>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+classifiers = [
+        "License :: OSI Approved :: GNU General Public License (GPL)",
+        "Intended Audience :: System Administrators",
+        "Intended Audience :: Developers",
+        "Topic :: Communications :: Telephony",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+send-aa-sms = 'aasms.send-aa-sms:run'
