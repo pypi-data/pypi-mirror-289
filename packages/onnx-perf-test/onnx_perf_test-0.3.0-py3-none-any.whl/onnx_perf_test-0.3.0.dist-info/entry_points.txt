@@ -1,0 +1,3 @@
+[console_scripts]
+analyze-onnx-profile = onnx_perf_test.analyze_onnx_profile:main
+onnx-perf-test = onnx_perf_test.onnx_perf_test:main
