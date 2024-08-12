@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: MF-Tools
+Version: 1.0.0
+Summary: Collection of helpful utilities for Manim
+Home-page: https://github.com/TheMathematicFanatic/MF_Tools
+License: MIT
+Author: John Connell
+Author-email: johnconnelltutor@gmail.com
+Requires-Python: >=3.8,<=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: manim (>=0.17)
+Project-URL: Repository, https://github.com/TheMathematicFanatic/MF_Tools
+Description-Content-Type: text/markdown
+
+# MF_Tools
+
+## TransformByGlyphMap
+
+
+
+## Common Updaters
+
+
+
+## Miscellaneous

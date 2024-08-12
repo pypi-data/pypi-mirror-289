@@ -1,0 +1,9 @@
+MF_Tools/__init__.py,sha256=evVnxxmFkk3zZkEpnRKyxiDt2JvulzCw1M_KMA50yN0,253
+MF_Tools/misc.py,sha256=k2LhmRY15VhmWWLow1d6ivvCF82dPJeyq24s3j98UqI,1196
+MF_Tools/transforms.py,sha256=dUX3oIOarORIWWvy6qdCSkz3aWG7TSl5GoPoqnYOVVk,4755
+MF_Tools/updaters.py,sha256=IOswdrxHurk7WElARHR4uuiWiXnRDIHHwEWHF4EDOJM,1852
+mf_tools-1.0.0.dist-info/entry_points.txt,sha256=9EgEI4e-hKyqM5fR_JYKE5NtT8A5eYR1ksxhYe12Bto,57
+mf_tools-1.0.0.dist-info/LICENSE,sha256=dbN5K7Ov3636uWSGRKF2k3jDZ7SJTz-KUP5lq6c0lq4,1090
+mf_tools-1.0.0.dist-info/METADATA,sha256=jBVDW5hECxxVqbDVx71yhJLyxiKWDQPclPVPTW7aYpM,842
+mf_tools-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mf_tools-1.0.0.dist-info/RECORD,,
