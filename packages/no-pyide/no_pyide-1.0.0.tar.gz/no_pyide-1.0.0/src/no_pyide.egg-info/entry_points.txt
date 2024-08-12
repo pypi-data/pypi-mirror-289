@@ -1,0 +1,2 @@
+[console_scripts]
+pyide_run = no_pyide.code:main
