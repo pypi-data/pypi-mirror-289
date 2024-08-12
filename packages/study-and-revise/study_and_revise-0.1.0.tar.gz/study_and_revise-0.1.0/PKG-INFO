@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: study_and_revise
+Version: 0.1.0
+Summary: 查看复习项目
+Author: txs
+License: GPLv3
+Requires-Python: >=3.0
+License-File: LICENSE.txt
