@@ -1,0 +1,14 @@
+[project]
+version = "0.1.0"
+name = "lumberkid-rs"
+
+[build-system]
+requires = ["maturin>=1.2,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+bindings = "bin"
+
+[tool.semantic_release]
+branch = "main"
+version_toml = ["pyproject.toml:project.version"]
