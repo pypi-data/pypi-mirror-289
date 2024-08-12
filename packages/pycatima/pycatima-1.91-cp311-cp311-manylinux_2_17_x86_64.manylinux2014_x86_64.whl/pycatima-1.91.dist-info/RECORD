@@ -1,0 +1,5 @@
+pycatima/__init__.py,sha256=jRN4zSfSYb-okqa-vrJ_Se-0f7KKIZk0Dttn355_YAY,20
+pycatima/_ext.cpython-311-x86_64-linux-gnu.so,sha256=OY704fjF4xXGd54FxWHFD9fsqRx0t0Ho7fzvI5lCNwI,1287232
+pycatima-1.91.dist-info/RECORD,,
+pycatima-1.91.dist-info/WHEEL,sha256=fj0KcEQWGEbGVia2EAG_bEzMnjcpCh8oN-sshQ5ECWc,156
+pycatima-1.91.dist-info/METADATA,sha256=j-7KJvTdBOK8EvTsgA53lAihxbD4Dtrq8YQZvwwCgHo,987
