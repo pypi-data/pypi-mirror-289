@@ -1,0 +1,4 @@
+[console_scripts]
+ca=cmd_assist.cli_manager:cli
+cmd_assist=cmd_assist.cli_manager:cli
+
