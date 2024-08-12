@@ -1,0 +1,164 @@
+Metadata-Version: 2.1
+Name: RsLogMod
+Version: 0.1.0
+Summary: A versatile logging module for Python projects
+Home-page: https://github.com/D-3-X/RsLogMod/
+Author: D-3-X
+Author-email: felix.dxlan@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/D-3-X/RsLogMod/issues
+Project-URL: Documentation, https://github.com/D-3-X/RsLogMod#readme
+Project-URL: Source Code, https://github.com/D-3-X/RsLogMod
+Keywords: logging,log rotation,python logging
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# RsLogMod
+
+**RsLogMod** is a Python logging module that helps manage log files with features like log rotation, custom log paths, and log levels. It's designed to be simple to use and configure, emphasizing flexibility.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Getting Started](#getting-started)
+- [Log Levels & Prefixes](#log-levels--prefixes)
+- [Customization](#customization)
+  - [Set Log Folder Path](#set-log-folder-path)
+  - [Set Maximum Log Size](#set-maximum-log-size)
+  - [Enable or Disable Log Rotation](#enable-or-disable-log-rotation)
+- [Configuration](#configuration)
+- [License](#license)
+
+## Installation
+
+To install the module, use pip:
+
+```bash
+pip install rslogmod
+```
+
+## Getting Started
+
+Here’s a quick example to get you logging:
+
+```python
+from RsLogMod import rlog
+
+# Log a simple message
+rlog(log_name='my_log', log_level=1, log_entry='This is a log entry.')
+
+# Example output: [INFO] 2024-12-02 13:20: This is a log entry.
+```
+
+### Explanation
+
+- **`log_name`**: The name of the log file (e.g., `my_log`).
+- **`log_level`**: The log level, where `1` typically corresponds to `INFO`.
+- **`log_entry`**: The message you want to log.
+
+This will create a log file named `my_log.log` (if it doesn't already exist) in the configured directory with the entry formatted as shown above.
+
+## Log Levels & Prefixes
+
+RsLogMod supports several log levels, each with its own prefix:
+
+- **`0`**: `[DEBUG]`  
+  - For detailed debugging information.
+- **`1`**: `[INFO]`  
+  - For general information about program execution.
+- **`2`**: `[ERROR]`  
+  - For errors that occur during execution.
+- **`3`**: `[CRITICAL]`  
+  - For critical issues that need immediate attention.
+- **`4`**: `[SEC-ALERT]`  
+  - For security-related alerts.
+- **`5`**: `[SEC-BREACH]`  
+  - For security breaches or serious security issues.
+
+## Customization
+
+To customize how `RsLogMod` operates, such as changing the log file directory, setting the maximum log file size, or enabling log rotation, you can use the `RsManager` class.
+
+### Using `RsManager`
+
+Here's how you can customize various settings:
+
+### Set Log Folder Path
+
+```python
+from RsLogMod import RsManager
+
+# Create an RsManager instance
+manager = RsManager()
+
+# Set a new log folder path
+manager.log_folder_path('/new/log/directory')
+
+# Display the current configuration to verify changes
+manager.display()
+```
+
+### Set Maximum Log Size
+
+```python
+from RsLogMod import RsManager
+
+# Create an RsManager instance
+manager = RsManager()
+
+# Set the max size for log files to 20 MB
+manager.log_max_size(20)
+
+# Display the current configuration to verify changes
+manager.display()
+```
+
+### Enable or Disable Log Rotation
+
+```python
+from RsLogMod import RsManager
+
+# Create an RsManager instance
+manager = RsManager()
+
+# Enable log rotation
+manager.log_rotation(True)
+
+# Display the current configuration to verify changes
+manager.display()
+```
+
+### Explanation
+
+- **`RsManager`**: This class handles the configuration settings for RsLogMod, such as where log files are stored, how large they can grow before being rotated, and whether log rotation is enabled.
+- **`log_folder_path(path: str)`**: Sets the directory where logs are saved.
+- **`log_max_size(mega_bytes: int)`**: Sets the maximum size for log files in megabytes.
+- **`log_rotation(value: bool)`**: Enables or disables log rotation.
+
+## Configuration
+
+RsLogMod uses a `configs.json` file for settings. Here’s an example:
+
+```json
+{
+    "log_rotation": false,
+    "max_size_in_mega_bytes": 10,
+    "out_dir": "/path/to/logs"
+}
+```
+
+- **log_rotation**: Enable or disable log rotation.
+- **max_size_in_mega_bytes**: The maximum size of a log file before it is rotated.
+- **out_dir**: The directory where log files will be stored.
+
+You can update these settings programmatically using the `RsManager` class, as shown in the examples above.
+
+## License
+
+This project is licensed under the [MIT License](https://github.com/D-3-X/Rodent-REPO/blob/main/licenses/MIT_License.txt). See the LICENSE file for details.
+
+
