@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Kahi_unicity_person.egg-info/PKG-INFO
+Kahi_unicity_person.egg-info/SOURCES.txt
+Kahi_unicity_person.egg-info/dependency_links.txt
+Kahi_unicity_person.egg-info/requires.txt
+Kahi_unicity_person.egg-info/top_level.txt
+kahi_unicity_person/Kahi_unicity_person.py
+kahi_unicity_person/__init__.py
+kahi_unicity_person/_version.py
