@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: study-and-revise
+Version: 0.1.2
+Summary: 查看复习项目
+Author: txs
+License: GPLv3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# 一个简单的复习命令行工具
+## 使用方法
+### 添加复习项
+```cmd
+python sr.py review_name position
+```
+
+### 查看今天的复习项
+```cmd
+python sr.py
+```
