@@ -1,0 +1,8 @@
+README.md
+setup.py
+jrtd_stock_app.egg-info/PKG-INFO
+jrtd_stock_app.egg-info/SOURCES.txt
+jrtd_stock_app.egg-info/dependency_links.txt
+jrtd_stock_app.egg-info/entry_points.txt
+jrtd_stock_app.egg-info/requires.txt
+jrtd_stock_app.egg-info/top_level.txt

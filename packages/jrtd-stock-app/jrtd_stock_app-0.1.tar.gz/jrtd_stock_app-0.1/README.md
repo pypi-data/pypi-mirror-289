@@ -1,0 +1,1 @@
+this is my stock app project for my portfolio
