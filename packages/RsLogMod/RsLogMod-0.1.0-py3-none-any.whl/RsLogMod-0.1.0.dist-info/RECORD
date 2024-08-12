@@ -1,0 +1,12 @@
+RsLogMod/__init__.py,sha256=vTdMiZN1hrlaDoOPfLvJ3HN9Q4-irzQpbZEGQgOanXo,70
+RsLogMod/rlog.py,sha256=1_B9kF-tTkk-q9haeQph04d3j31O9NvG-7WvWUDjB8Q,210
+RsLogMod/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+RsLogMod/bin/configure.py,sha256=34hmabMCeD2d1UMDLn8-FHe9s2fi8Lowa2hfKIk4aTY,3221
+RsLogMod/bin/dictionaries.py,sha256=WFVNR71WzepL7qLdniCyurV9COU4ysQS6jwcVCu0AZk,199
+RsLogMod/bin/logger.py,sha256=s0wP-AuQ0SLdAKaeCHXjwMo3_ZELNkIav7pSOEewBFU,1208
+RsLogMod/bin/utilities.py,sha256=mp1sLPzbe6ckl2CB2b9lE9wyOOooDJPADX5_5wk2tX8,3173
+RsLogMod/configs/configs.json,sha256=RBvt5WA0f_KCZxA8PjlrDw97buT-RDnfHjKgBXz60WI,81
+RsLogMod-0.1.0.dist-info/METADATA,sha256=W0zHq8_scz2Q-0ULtfO7vHXjyfUBiv5xRkJUUt5RXNY,4722
+RsLogMod-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+RsLogMod-0.1.0.dist-info/top_level.txt,sha256=dYDN1zBg7Ub8_ksKes49en9SAntrCBH5VSLoGzGEeVg,9
+RsLogMod-0.1.0.dist-info/RECORD,,

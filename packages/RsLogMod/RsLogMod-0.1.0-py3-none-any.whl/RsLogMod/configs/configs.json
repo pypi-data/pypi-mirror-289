@@ -1,0 +1,5 @@
+{
+    "log_rotation": true,
+    "max_size_in_mega_bytes": 10,
+    "out_dir": ""
+}
