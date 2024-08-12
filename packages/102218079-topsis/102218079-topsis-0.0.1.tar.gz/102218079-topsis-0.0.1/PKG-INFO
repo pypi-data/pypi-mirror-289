@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: 102218079-topsis
+Version: 0.0.1
+Summary: topsis program
+Author: aabha manroa
+Author-email: aabhamanroa@gmail.com
+Keywords: python
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) is a decision-making method that helps identify the most suitable alternative by evaluating how close each option is to the ideal solution and how far it is from the worst-case scenario. The process involves normalizing the decision matrix to standardize performance measures, applying weights to reflect the importance of different criteria, and calculating distances from the ideal and negative-ideal solutions. By determining the relative closeness of each alternative to the ideal solution, TOPSIS provides a straightforward way to rank options and make informed decisions based on multiple criteria.
