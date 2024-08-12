@@ -1,0 +1,10 @@
+simplewebserver/__init__.py,sha256=Dk16cxO7fijAsMjnbAfqLIBurqCpqDCAZI9U8e42Bbk,105
+simplewebserver/decorator.py,sha256=9Mth4ODbm8ZnHXlubttZkXOohiXV7gy1ODPyOo8SxSw,524
+simplewebserver/handler.py,sha256=KUn8cVeNgUKks4A-XMtYXCeNikZtX5JGy66P4PvOT84,4346
+simplewebserver/server.py,sha256=MAM5VTQbvttYmunqAS_9gD5_T_K6fBg7o0fwUIKGB2I,1794
+simplewebserver/utils.py,sha256=rc8yhp9LWUvr6EvXubcTlGSHE_gF7La7YnmWhjTnXeQ,1087
+simplewebserver-0.0.5.dist-info/LICENSE,sha256=h5_P8E2d_fOGHKjiJ3xF3SxMjSuMYyFD99kFgow4Nc8,1063
+simplewebserver-0.0.5.dist-info/METADATA,sha256=IPGA-Tw9QysMS98SxeyvDyVyFyYWYSIKsIBYUp8D6lI,1439
+simplewebserver-0.0.5.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+simplewebserver-0.0.5.dist-info/top_level.txt,sha256=lCvMreul8yo3E6qAe1FxFmUc_8lSl46l4jPZHLdAiPw,16
+simplewebserver-0.0.5.dist-info/RECORD,,
