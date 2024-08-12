@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: fastapi_kafka
+Version: 0.1.1
+Summary: A wrapper around FastAPI to easily consume kafka messages as routes
+Author-email: OSS Mafia <dev@oss-mafia.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi>=0.95.0
+Requires-Dist: aiokafka>=0.8.0
+
+# FastAPI Kafka
