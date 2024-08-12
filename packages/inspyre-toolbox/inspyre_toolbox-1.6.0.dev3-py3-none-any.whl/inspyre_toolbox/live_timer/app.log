@@ -1,0 +1,54 @@
+2024-05-02 17:20:58,721 - [inSPy-Logger.log_engine] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:20:58,722 - [inSPy-Logger.log_engine] - DEBUG - Started logger for inspy_logger. |-| __init__.py:337
+2024-05-02 17:20:58,800 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:20:58,800 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:20:58,803 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:21:15,322 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:21:15,324 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Set up class attributes. |-| __init__.py:83
+2024-05-02 17:21:15,340 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Timer class instantiated! |-| __init__.py:88
+2024-05-02 17:21:15,346 - [InspyreToolbox.InspyreToolbox.live_timer.Timer__get_elapsed] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:21:54,209 - [inSPy-Logger.log_engine] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:21:54,210 - [inSPy-Logger.log_engine] - DEBUG - Started logger for inspy_logger. |-| __init__.py:337
+2024-05-02 17:21:54,285 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:21:54,285 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:21:54,290 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:22:18,343 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:22:18,347 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Set up class attributes. |-| __init__.py:83
+2024-05-02 17:22:18,347 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Timer class instantiated! |-| __init__.py:88
+2024-05-02 17:22:29,106 - [InspyreToolbox.InspyreToolbox.live_timer.Timer__get_elapsed] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:23:45,264 - [inSPy-Logger.log_engine] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:23:45,265 - [inSPy-Logger.log_engine] - DEBUG - Started logger for inspy_logger. |-| __init__.py:337
+2024-05-02 17:23:45,364 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:23:45,365 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:23:45,368 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:23:54,352 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:23:54,352 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Set up class attributes. |-| __init__.py:83
+2024-05-02 17:23:54,352 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Timer class instantiated! |-| __init__.py:88
+2024-05-02 17:23:54,357 - [InspyreToolbox.InspyreToolbox.live_timer.Timer__get_elapsed] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:26:23,667 - [inSPy-Logger.log_engine] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:26:23,667 - [inSPy-Logger.log_engine] - DEBUG - Started logger for inspy_logger. |-| __init__.py:337
+2024-05-02 17:26:23,741 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:26:23,741 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:26:23,746 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:26:26,825 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:26:26,825 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Set up class attributes. |-| __init__.py:89
+2024-05-02 17:26:26,826 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Timer class instantiated! |-| __init__.py:94
+2024-05-02 17:26:26,835 - [InspyreToolbox.InspyreToolbox.live_timer.Timer__get_elapsed] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:31:01,493 - [inSPy-Logger.log_engine] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:31:01,494 - [inSPy-Logger.log_engine] - DEBUG - Started logger for inspy_logger. |-| __init__.py:337
+2024-05-02 17:31:01,572 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:31:01,572 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:31:01,576 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:28
+2024-05-02 17:31:03,736 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:31:03,738 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Set up class attributes. |-| __init__.py:89
+2024-05-02 17:31:03,738 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Timer class instantiated! |-| __init__.py:94
+2024-05-02 17:31:03,745 - [InspyreToolbox.InspyreToolbox.live_timer.Timer__get_elapsed] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:31:16,402 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Set up class attributes. |-| __init__.py:89
+2024-05-02 17:31:16,402 - [InspyreToolbox.InspyreToolbox.live_timer.Timer] - DEBUG - Timer class instantiated! |-| __init__.py:94
+2024-05-02 17:35:44,567 - [inSPy-Logger.log_engine] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:35:44,567 - [inSPy-Logger.log_engine] - DEBUG - Started logger for inspy_logger. |-| __init__.py:337
+2024-05-02 17:35:44,670 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Initializing Logger |-| __init__.py:94
+2024-05-02 17:35:44,671 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:30
+2024-05-02 17:35:44,678 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Log started! |-| __init__.py:30
+2024-05-02 17:35:57,820 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Setting log levels |-| __init__.py:161
+2024-05-02 17:36:05,720 - [InspyreToolbox.InspyreToolbox.live_timer] - DEBUG - Setting log levels |-| __init__.py:161
