@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: make_personal_website
+Version: 0.2.0
+Summary: This package has been renamed to pro-website-maker.
+Project-URL: Homepage, https://github.com/d3987ef8/pwm
+Project-URL: Issues, https://github.com/d3987ef8/pwm/issues
+Author-email: Jack Murray <info@jackmurray.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: pro-website-maker
+Description-Content-Type: text/markdown
+
+# make-personal-website
+
+This package has been renamed to `pro-website-maker`.
+
+## Dependencies
+
+This project depends on:
+
+- pro-website-maker
