@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: bulk_upload_testrail_rf
+Version: 0.1
+Summary: A simple Python library for bulk upload to testrail in robot framework.
+Author: Adi Darmawan

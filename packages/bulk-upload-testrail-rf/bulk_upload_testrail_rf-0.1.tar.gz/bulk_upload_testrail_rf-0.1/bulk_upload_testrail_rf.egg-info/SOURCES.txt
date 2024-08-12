@@ -1,0 +1,5 @@
+setup.py
+bulk_upload_testrail_rf.egg-info/PKG-INFO
+bulk_upload_testrail_rf.egg-info/SOURCES.txt
+bulk_upload_testrail_rf.egg-info/dependency_links.txt
+bulk_upload_testrail_rf.egg-info/top_level.txt
