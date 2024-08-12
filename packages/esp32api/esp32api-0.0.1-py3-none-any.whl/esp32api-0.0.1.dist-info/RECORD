@@ -1,0 +1,17 @@
+esp32-api-001/DataChangeUtil.py,sha256=BcOUSbALQZkd5SCYtz6O6tcrxCQX5LgL709NL6K-V8s,1411
+esp32-api-001/FactoryUtil.py,sha256=R-mpPmT6HMipI_Icqil2spUl_3RPP-FO4wDSTT9CCwc,1813
+esp32-api-001/FlagCode.py,sha256=7z8j39DKwj1FtRgfB-tSIEgVfWjl5ROZT22eSybUvn0,1668
+esp32-api-001/Main.py,sha256=ceqsFKyx8_ZgliYEKr7A7dUwz_P-Gn3CUIFMCpgy_E0,7461
+esp32-api-001/ReturnDataSubstring.py,sha256=lb7d-TmnFYtGcJ9Wx9WxB8QLvj2r7c1-9Y0XVSir1ok,6382
+esp32-api-001/__init__.py,sha256=I318XhOmpeKYFLcw8nKWRc6Lekdp-HNWmaMA7idWSNw,222
+esp32api/DataChangeUtil.py,sha256=BcOUSbALQZkd5SCYtz6O6tcrxCQX5LgL709NL6K-V8s,1411
+esp32api/FactoryUtil.py,sha256=R-mpPmT6HMipI_Icqil2spUl_3RPP-FO4wDSTT9CCwc,1813
+esp32api/FlagCode.py,sha256=7z8j39DKwj1FtRgfB-tSIEgVfWjl5ROZT22eSybUvn0,1668
+esp32api/Main.py,sha256=ceqsFKyx8_ZgliYEKr7A7dUwz_P-Gn3CUIFMCpgy_E0,7461
+esp32api/ReturnDataSubstring.py,sha256=lb7d-TmnFYtGcJ9Wx9WxB8QLvj2r7c1-9Y0XVSir1ok,6382
+esp32api/__init__.py,sha256=I318XhOmpeKYFLcw8nKWRc6Lekdp-HNWmaMA7idWSNw,222
+esp32api-0.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+esp32api-0.0.1.dist-info/METADATA,sha256=FHAQSkGbF6AstIO10yAP7CwoI-yeVVf1vq-KqqoRD3c,853
+esp32api-0.0.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+esp32api-0.0.1.dist-info/top_level.txt,sha256=CruHE-Knv6DFCD66RJin8LLnZp3rsjLoITNiFM85Z30,9
+esp32api-0.0.1.dist-info/RECORD,,
