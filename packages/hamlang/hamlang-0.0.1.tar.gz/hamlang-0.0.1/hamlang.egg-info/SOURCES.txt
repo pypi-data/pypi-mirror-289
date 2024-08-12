@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+hamlang/__init__.py
+hamlang/__main__.py
+hamlang/hamlang.py
+hamlang.egg-info/PKG-INFO
+hamlang.egg-info/SOURCES.txt
+hamlang.egg-info/dependency_links.txt
+hamlang.egg-info/entry_points.txt
+hamlang.egg-info/top_level.txt
