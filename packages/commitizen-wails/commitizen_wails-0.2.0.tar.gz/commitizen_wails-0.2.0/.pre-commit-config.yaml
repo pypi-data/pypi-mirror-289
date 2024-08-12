@@ -1,0 +1,28 @@
+repos:
+  - hooks:
+      - id: commitizen
+      - id: commitizen-branch
+        stages:
+          - push
+    repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.29.0
+  - repo: https://github.com/YogiLiu/pre-commit
+    rev: 0.4.1
+    hooks:
+      - id: ruff-lint
+      - id: ruff-fmt
+      - id: mypy
+      - id: prettier
+        files: .pre-commit-config.yaml
+  - repo: local
+    hooks:
+      - id: pytest
+        name: Pytest
+        description: Test Framework for Python.
+        entry: .venv/bin/pytest
+        language: system
+        types:
+          - text
+        files: ^.+\.py$|pyproject\.toml$
+        pass_filenames: false
+        minimum_pre_commit_version: 3.0.0

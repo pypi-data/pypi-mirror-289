@@ -1,0 +1,53 @@
+[project]
+name = "commitizen-wails"
+version = "0.2.0"
+description = "Add your description here"
+authors = [
+    { name = "YogiLiu", email = "YogiLiu@outlook.com" }
+]
+dependencies = [
+    "commitizen>=3.29.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+license = 'mit'
+
+[project.entry-points."commitizen.provider"]
+wails-provider = "commitizen_wails:WailsVersionProvider"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.3.2",
+    "pytest-mock>=3.14.0",
+]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "pep621"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[[tool.mypy.overrides]]
+module = [
+    "commitizen.config",
+    "commitizen.providers",
+    "pytest_mock",
+    "commitizen_wails.provider"
+]
+ignore_missing_imports = true
+
+[tool.pytest]
+python_paths = ['.venv']
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/commitizen_wails"]
