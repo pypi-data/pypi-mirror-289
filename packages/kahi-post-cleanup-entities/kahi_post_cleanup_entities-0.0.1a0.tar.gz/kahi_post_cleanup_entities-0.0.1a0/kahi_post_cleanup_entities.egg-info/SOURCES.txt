@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+kahi_post_cleanup_entities/Kahi_post_cleanup_entities.py
+kahi_post_cleanup_entities/__init__.py
+kahi_post_cleanup_entities/_version.py
+kahi_post_cleanup_entities.egg-info/PKG-INFO
+kahi_post_cleanup_entities.egg-info/SOURCES.txt
+kahi_post_cleanup_entities.egg-info/dependency_links.txt
+kahi_post_cleanup_entities.egg-info/requires.txt
+kahi_post_cleanup_entities.egg-info/top_level.txt
