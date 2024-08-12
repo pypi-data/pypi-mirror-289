@@ -1,0 +1,9 @@
+pytest_gitconfig-0.7.0.dist-info/METADATA,sha256=1gYbMkoXekGx5MTWOqALoiyHjqHO0elqx3_6c16JLLQ,7867
+pytest_gitconfig-0.7.0.dist-info/WHEEL,sha256=rSwsxJWe3vzyR5HCwjWXQruDgschpei4h_giTm0dJVE,90
+pytest_gitconfig-0.7.0.dist-info/entry_points.txt,sha256=Rg0mBis88YuGUm9vbL-ZTbLl0NhbGU4FMpIeMRmnbJ0,48
+pytest_gitconfig-0.7.0.dist-info/licenses/LICENSE,sha256=mGvg56Jg42sibUwNMD7f55op8yqaWFG9-ELS6HqAocA,1078
+pytest_gitconfig/VERSION,sha256=ln2a-xATRmZxZvLnboGRC8GQSI19QdUMoAcunZLwDjI,6
+pytest_gitconfig/__init__.py,sha256=FEpsVWoM4Sk3SB5P2HDbSt7EFrUTO2uxYmQGtUr-jwo,326
+pytest_gitconfig/plugin.py,sha256=pOcUlKzxdPbxEXDNOxpI978_A4uKlXMXq7-QPs5nYZI,4894
+pytest_gitconfig/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_gitconfig-0.7.0.dist-info/RECORD,,
