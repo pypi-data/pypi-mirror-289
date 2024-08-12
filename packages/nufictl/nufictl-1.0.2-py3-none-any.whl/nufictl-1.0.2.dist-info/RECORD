@@ -1,0 +1,13 @@
+README.md,sha256=AYgP-OShxuB-sgLC2Fy67EfjNxgynELqJCBideUbt88,1646
+nufictl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nufictl/config.yaml,sha256=FNKviwtC1fq8YxemjhoT-QUBrsO4JJokOGY4VrqzGE0,37
+nufictl/config_manager.py,sha256=NncqmxCtF417wTG42d1jjtzrNmSUHl0rTn30flR8tV8,5191
+nufictl/help_texts.py,sha256=-DBgYSOLgKg26m0Bjbkms12iWvFy7fZOApUfJ8Ii6p0,1657
+nufictl/model.py,sha256=IFovY2SYteJGT-xrI-S72tTd80du5v-IWR8ZlILO8Bw,1281
+nufictl/nufictl.py,sha256=WeusXs0r3s865NoB8pD_5H9a9lI0C-wfmvnmB09r0zk,6591
+nufictl/stream_tester.py,sha256=1_w2IH9uF38BC7uqAvYmar7XszRxTJT-0e-JRXjRyew,4674
+nufictl/utils.py,sha256=FXqZJE0pbPsByd2K1ljNUR8PvwLly3ZsHZ4VP5mRKRs,151
+nufictl-1.0.2.dist-info/METADATA,sha256=gq0fC59j7DP0cB777PUmNj_03DlmrHrGgXVWDHNlyjQ,2527
+nufictl-1.0.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+nufictl-1.0.2.dist-info/entry_points.txt,sha256=8NgDib57g8RI76F3BSUrg6CZlhN3bac7hBjg3w5ZNf0,48
+nufictl-1.0.2.dist-info/RECORD,,
