@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pdf_rss_dl.egg-info/PKG-INFO
+pdf_rss_dl.egg-info/SOURCES.txt
+pdf_rss_dl.egg-info/dependency_links.txt
+pdf_rss_dl.egg-info/entry_points.txt
+pdf_rss_dl.egg-info/requires.txt
+pdf_rss_dl.egg-info/top_level.txt
+pdfrssdl/__init__.py
+pdfrssdl/downloader.py
