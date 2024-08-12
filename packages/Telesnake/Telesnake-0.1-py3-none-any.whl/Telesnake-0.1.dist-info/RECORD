@@ -1,0 +1,15 @@
+telesnake/__init__.py,sha256=Saz6hnPTM9lTynVixCXkt2DpgpuhRD-GNVx9oFqC2fg,196
+telesnake/bot.py,sha256=Zp0lv7Gk_FdimfNf0-_tOudx0FAflRciUlRM9ORsAE8,3537
+telesnake/cog.py,sha256=BcWvqebcXWfGTbpN14q73AJv3a1OTYjgyNWsccC5Ti4,365
+telesnake/context.py,sha256=Htmmz2ovwn07DMaHB-HOmPPpq6n4qi8D1GmK-g1ska4,262
+telesnake/types/__init__.py,sha256=2ngfYp0AYNWVDq-YtaNsN2dMQf4BorbnWhn4E5MQIy0,115
+telesnake/types/callback.py,sha256=RDXB8ry8_jIKPVli7kGzeuTsXAegwHIc9I1qZcz5HEU,555
+telesnake/types/chat.py,sha256=n4uPupTlIxN4yBK2DETboE5SICXqsQpkT9vC6y__oh8,281
+telesnake/types/message.py,sha256=iXxA1Bh1jyb7NjArNPHwP_t03LMSXLuudbeafdQvZPY,493
+telesnake/types/user.py,sha256=hST-XHCCcwW2Zb5iCtvP0SRZNaHsLrszF_S8QIa40T0,792
+telesnake/utils/__init__.py,sha256=konXZVEvE5W8HCjbvE3ibq7gwzf0GSpn4sYmDjlncIo,66
+telesnake/utils/keyboard.py,sha256=demHyloeySciFlUgPc-w2LOyuCwog2qkTj5-wSZ1LT4,742
+Telesnake-0.1.dist-info/METADATA,sha256=TMDAosuAIacIyRfgPvVSU0flR7QFt1Kf_7mDjmyK7YE,373
+Telesnake-0.1.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+Telesnake-0.1.dist-info/top_level.txt,sha256=ZqOOEmcnlqNmOQcdYjikuMce4CbsAr6XVrJKZDWZqVs,10
+Telesnake-0.1.dist-info/RECORD,,
