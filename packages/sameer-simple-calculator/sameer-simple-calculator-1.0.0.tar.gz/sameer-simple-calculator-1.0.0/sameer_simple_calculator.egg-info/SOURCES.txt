@@ -1,0 +1,7 @@
+setup.py
+libname/__init__.py
+libname/calculator.py
+sameer_simple_calculator.egg-info/PKG-INFO
+sameer_simple_calculator.egg-info/SOURCES.txt
+sameer_simple_calculator.egg-info/dependency_links.txt
+sameer_simple_calculator.egg-info/top_level.txt
