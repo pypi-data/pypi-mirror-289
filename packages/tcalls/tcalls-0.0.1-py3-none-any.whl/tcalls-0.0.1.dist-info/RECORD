@@ -1,0 +1,6 @@
+tcalls/__init__.py,sha256=8LPGv4UttAQAd_ZYbWSIg27RIC2el5Iyw2WHYG_kXVU,56
+tcalls/openai_tool_call.py,sha256=JlWFHjVJsnqxpUlQiIqk4x8DuZHcTF2JgyyokG5GjEY,1767
+tcalls/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tcalls-0.0.1.dist-info/METADATA,sha256=mqnZkTwAvhX6Ks96sQSnP0x4CxYUwttXKD6gi8KSQag,1403
+tcalls-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tcalls-0.0.1.dist-info/RECORD,,
