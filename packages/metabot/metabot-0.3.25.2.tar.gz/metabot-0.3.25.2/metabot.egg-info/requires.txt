@@ -1,0 +1,11 @@
+googlemaps
+ntelebot>=0.4.2
+pytz
+PyYAML>=5.1
+requests
+
+[dev]
+pylint
+pytest-cov
+pytest
+requests-mock
