@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+./model/__init__.py
+AttentionMechanism.egg-info/PKG-INFO
+AttentionMechanism.egg-info/SOURCES.txt
+AttentionMechanism.egg-info/dependency_links.txt
+AttentionMechanism.egg-info/top_level.txt
