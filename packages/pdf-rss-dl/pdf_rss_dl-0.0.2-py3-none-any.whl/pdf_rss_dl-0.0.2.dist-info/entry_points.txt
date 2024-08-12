@@ -1,0 +1,2 @@
+[console_scripts]
+pdf-rss-dl = pdfrssdl.downloader:main
