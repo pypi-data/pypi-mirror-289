@@ -1,0 +1,5 @@
+setup.py
+pointcalcs.egg-info/PKG-INFO
+pointcalcs.egg-info/SOURCES.txt
+pointcalcs.egg-info/dependency_links.txt
+pointcalcs.egg-info/top_level.txt
