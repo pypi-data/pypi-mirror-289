@@ -1,0 +1,34 @@
+Log file created at: 2024/08/12 06:52:16
+Running on machine: f0689f0fd398
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20240812 06:52:16.034595     1 GraphDaemon.cpp:122] Starting Graph HTTP Service
+I20240812 06:52:16.039549     7 WebService.cpp:124] Web service started on HTTP[19669]
+I20240812 06:52:16.039597     1 GraphDaemon.cpp:136] Number of networking IO threads: 4
+I20240812 06:52:16.039611     1 GraphDaemon.cpp:145] Number of worker threads: 4
+I20240812 06:52:16.043880     1 MetaClient.cpp:80] Create meta client to "172.28.1.1":9559
+I20240812 06:52:16.043910     1 MetaClient.cpp:81] root path: /usr/local/nebula, data path size: 0
+I20240812 06:52:17.155028     1 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 60 space
+I20240812 06:52:17.155050     1 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 0 space
+I20240812 06:52:17.155057     1 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 0 space
+I20240812 06:52:17.155063     1 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:17.156884     1 MetaClient.cpp:162] Register time task for heartbeat!
+I20240812 06:52:17.157352     1 GraphSessionManager.cpp:337] Total of 9 sessions are loaded
+E20240812 06:52:17.171200     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/34.000MiB
+I20240812 06:52:17.171502     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
+I20240812 06:52:17.171841     1 Snowflake.cpp:17] WorkerId init success: 1
+I20240812 06:52:17.171998    38 GraphServer.cpp:63] Starting nebula-graphd on 127.0.0.1:9669
+I20240812 06:52:19.049616    20 GraphService.cpp:77] Authenticating user root from 172.28.0.1:59560
+I20240812 06:52:21.989176    35 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 60 space
+I20240812 06:52:21.989200    35 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 0 space
+I20240812 06:52:21.989207    35 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 0 space
+I20240812 06:52:21.989212    35 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:25.095626    35 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 61 space
+I20240812 06:52:25.095654    35 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 0 space
+I20240812 06:52:25.095661    35 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 0 space
+I20240812 06:52:25.095667    35 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:37.135107     1 GraphDaemon.cpp:176] Signal 15(Terminated) received, stopping this server
+I20240812 06:52:37.136147    33 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f4d0b872628 in thread 0x7f4cfee17280
+I20240812 06:52:37.137116    38 GraphServer.cpp:74] nebula-graphd on 127.0.0.1:9669 has been stopped
+I20240812 06:52:37.137224     1 GraphDaemon.cpp:161] The graph Daemon stopped
+I20240812 06:52:37.137233     1 GraphServer.cpp:109] The graph server has been stopped

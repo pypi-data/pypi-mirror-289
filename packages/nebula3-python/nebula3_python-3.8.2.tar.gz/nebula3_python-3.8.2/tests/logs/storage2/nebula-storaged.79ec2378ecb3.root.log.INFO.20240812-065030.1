@@ -1,0 +1,629 @@
+Log file created at: 2024/08/12 06:50:30
+Running on machine: 79ec2378ecb3
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20240812 06:50:30.915316     1 StorageDaemon.cpp:132] localhost = "172.28.2.3":9779
+I20240812 06:50:30.915580     1 StorageDaemon.cpp:147] data path= /data/storage
+I20240812 06:50:30.924183     1 MetaClient.cpp:80] Create meta client to "172.28.1.3":9559
+I20240812 06:50:30.924227     1 MetaClient.cpp:81] root path: /usr/local/nebula, data path size: 1
+W20240812 06:50:30.924285     1 FileBasedClusterIdMan.cpp:43] Open file failed, error No such file or directory
+I20240812 06:50:32.941669    47 MetaClient.cpp:2672] Persist the cluster Id from metad 1079019334856601579
+I20240812 06:50:32.941709    47 FileBasedClusterIdMan.cpp:21] Remove the existed file cluster.id
+I20240812 06:50:32.941787    47 FileBasedClusterIdMan.cpp:34] Persist clusterId 1079019334856601579 succeeded!
+I20240812 06:50:32.964674     1 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 0 space
+I20240812 06:50:32.964699     1 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 0 space
+I20240812 06:50:32.964707     1 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 0 space
+I20240812 06:50:32.964713     1 MetaClient.cpp:3269] Load leader ok
+I20240812 06:50:32.995827     1 MetaClient.cpp:162] Register time task for heartbeat!
+I20240812 06:50:32.995858     1 StorageServer.cpp:250] Init schema manager
+I20240812 06:50:32.995867     1 StorageServer.cpp:253] Init index manager
+I20240812 06:50:32.995872     1 StorageServer.cpp:256] Init kvstore
+I20240812 06:50:32.995884     1 NebulaStore.cpp:48] Start the raft service...
+I20240812 06:50:32.996240     1 NebulaSnapshotManager.cpp:25] Send snapshot is rate limited to 10485760 for each part by default
+I20240812 06:50:33.011651     1 RaftexService.cpp:46] Start raft service on 9780
+I20240812 06:50:33.011716     1 NebulaStore.cpp:82] Scan the local path, and init the spaces_
+E20240812 06:50:33.011739     1 FileUtils.cpp:377] Failed to read the directory "/data/storage/nebula" (2): No such file or directory
+I20240812 06:50:33.011878     1 NebulaStore.cpp:292] Init data from partManager for "172.28.2.3":9779
+I20240812 06:50:33.011895     1 NebulaStore.cpp:75] Register handler...
+I20240812 06:50:33.011907     1 StorageServer.cpp:259] Init LogMonitor
+I20240812 06:50:33.011996     1 StorageServer.cpp:126] Starting Storage HTTP Service
+I20240812 06:50:33.012209     1 StorageServer.cpp:130] Http Thread Pool started
+I20240812 06:50:33.013206    79 WebService.cpp:124] Web service started on HTTP[19779]
+I20240812 06:50:33.013453     1 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20240812 06:50:33.013466     1 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20240812 06:50:33.013473     1 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20240812 06:50:33.013595     1 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20240812 06:50:33.024113     1 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/0/data
+I20240812 06:50:33.024180     1 AdminTaskManager.cpp:22] max concurrent subtasks: 10
+I20240812 06:50:33.024271   103 AdminTaskManager.cpp:224] waiting for incoming task
+I20240812 06:50:33.024303     1 AdminTaskManager.cpp:40] exit AdminTaskManager::init()
+E20240812 06:50:33.044005     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/128.999MiB
+I20240812 06:50:33.044039     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
+I20240812 06:51:22.103116    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 0 space
+I20240812 06:51:22.103144    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 0 space
+I20240812 06:51:22.103152    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 0 space
+I20240812 06:51:22.103159    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:22.103228    64 NebulaStore.cpp:417] Create data space 1
+I20240812 06:51:22.103663   154 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20240812 06:51:22.103677   154 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20240812 06:51:22.103696   154 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20240812 06:51:22.103816   154 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20240812 06:51:22.112311   154 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/1/data
+I20240812 06:51:22.112562    64 NebulaStore.cpp:480] Space 1, part 47 has been added, asLearner 0
+I20240812 06:51:22.112676    64 NebulaStore.cpp:480] Space 1, part 44 has been added, asLearner 0
+I20240812 06:51:22.112787    64 NebulaStore.cpp:480] Space 1, part 41 has been added, asLearner 0
+I20240812 06:51:22.112892    64 NebulaStore.cpp:480] Space 1, part 38 has been added, asLearner 0
+I20240812 06:51:22.112998    64 NebulaStore.cpp:480] Space 1, part 35 has been added, asLearner 0
+I20240812 06:51:22.113101    64 NebulaStore.cpp:480] Space 1, part 32 has been added, asLearner 0
+I20240812 06:51:22.113204    64 NebulaStore.cpp:480] Space 1, part 29 has been added, asLearner 0
+I20240812 06:51:22.113308    64 NebulaStore.cpp:480] Space 1, part 26 has been added, asLearner 0
+I20240812 06:51:22.113410    64 NebulaStore.cpp:480] Space 1, part 11 has been added, asLearner 0
+I20240812 06:51:22.113525    64 NebulaStore.cpp:480] Space 1, part 8 has been added, asLearner 0
+I20240812 06:51:22.113641    64 NebulaStore.cpp:480] Space 1, part 74 has been added, asLearner 0
+I20240812 06:51:22.113749    64 NebulaStore.cpp:480] Space 1, part 5 has been added, asLearner 0
+I20240812 06:51:22.113854    64 NebulaStore.cpp:480] Space 1, part 71 has been added, asLearner 0
+I20240812 06:51:22.113957    64 NebulaStore.cpp:480] Space 1, part 2 has been added, asLearner 0
+I20240812 06:51:22.114063    64 NebulaStore.cpp:480] Space 1, part 68 has been added, asLearner 0
+I20240812 06:51:22.114176    64 NebulaStore.cpp:480] Space 1, part 53 has been added, asLearner 0
+I20240812 06:51:22.114279    64 NebulaStore.cpp:480] Space 1, part 65 has been added, asLearner 0
+I20240812 06:51:22.114383    64 NebulaStore.cpp:480] Space 1, part 98 has been added, asLearner 0
+I20240812 06:51:22.114486    64 NebulaStore.cpp:480] Space 1, part 89 has been added, asLearner 0
+I20240812 06:51:22.114593    64 NebulaStore.cpp:480] Space 1, part 20 has been added, asLearner 0
+I20240812 06:51:22.114698    64 NebulaStore.cpp:480] Space 1, part 56 has been added, asLearner 0
+I20240812 06:51:22.114805    64 NebulaStore.cpp:480] Space 1, part 92 has been added, asLearner 0
+I20240812 06:51:22.114909    64 NebulaStore.cpp:480] Space 1, part 23 has been added, asLearner 0
+I20240812 06:51:22.115062    64 NebulaStore.cpp:480] Space 1, part 59 has been added, asLearner 0
+I20240812 06:51:22.115170    64 NebulaStore.cpp:480] Space 1, part 62 has been added, asLearner 0
+I20240812 06:51:22.115283    64 NebulaStore.cpp:480] Space 1, part 95 has been added, asLearner 0
+I20240812 06:51:22.115396    64 NebulaStore.cpp:480] Space 1, part 86 has been added, asLearner 0
+I20240812 06:51:22.115507    64 NebulaStore.cpp:480] Space 1, part 17 has been added, asLearner 0
+I20240812 06:51:22.115612    64 NebulaStore.cpp:480] Space 1, part 83 has been added, asLearner 0
+I20240812 06:51:22.115722    64 NebulaStore.cpp:480] Space 1, part 14 has been added, asLearner 0
+I20240812 06:51:22.115830    64 NebulaStore.cpp:480] Space 1, part 80 has been added, asLearner 0
+I20240812 06:51:22.115934    64 NebulaStore.cpp:480] Space 1, part 77 has been added, asLearner 0
+I20240812 06:51:22.116039    64 NebulaStore.cpp:480] Space 1, part 50 has been added, asLearner 0
+I20240812 06:51:23.120664    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 0 space
+I20240812 06:51:23.120707    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 1 space
+I20240812 06:51:23.120720    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 1 space
+I20240812 06:51:23.120738    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:24.126190    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 1 space
+I20240812 06:51:24.126228    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 1 space
+I20240812 06:51:24.126255    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 1 space
+I20240812 06:51:24.126261    64 MetaClient.cpp:3269] Load leader ok
+E20240812 06:51:26.382853   142 Serializer.h:43] Thrift serialization is only defined for structs and unions, not containers thereof. Attemping to deserialize a value of type `nebula::Value`.
+I20240812 06:51:32.145233    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 1 space
+I20240812 06:51:32.145273    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 1 space
+I20240812 06:51:32.145292    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 1 space
+I20240812 06:51:32.145299    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:32.145395    64 NebulaStore.cpp:417] Create data space 2
+I20240812 06:51:32.145769   176 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20240812 06:51:32.145782   176 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20240812 06:51:32.145790   176 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20240812 06:51:32.145900   176 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20240812 06:51:32.155176   176 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/2/data
+I20240812 06:51:32.155380    64 NebulaStore.cpp:480] Space 2, part 2 has been added, asLearner 0
+I20240812 06:51:32.155514    64 NebulaStore.cpp:480] Space 2, part 8 has been added, asLearner 0
+I20240812 06:51:32.155643    64 NebulaStore.cpp:480] Space 2, part 5 has been added, asLearner 0
+I20240812 06:51:33.161875    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 1 space
+I20240812 06:51:33.161911    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 2 space
+I20240812 06:51:33.161927    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 2 space
+I20240812 06:51:33.161934    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:34.168365    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 2 space
+I20240812 06:51:34.168403    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 2 space
+I20240812 06:51:34.168421    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 2 space
+I20240812 06:51:34.168427    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:39.185243    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 2 space
+I20240812 06:51:39.185276    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 2 space
+I20240812 06:51:39.185302    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 2 space
+I20240812 06:51:39.185308    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:39.185544    64 NebulaStore.cpp:417] Create data space 4
+I20240812 06:51:39.185904   192 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20240812 06:51:39.185918   192 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20240812 06:51:39.185926   192 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20240812 06:51:39.186043   192 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20240812 06:51:39.204106   192 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/4/data
+I20240812 06:51:39.204360    64 NebulaStore.cpp:480] Space 4, part 47 has been added, asLearner 0
+I20240812 06:51:39.204526    64 NebulaStore.cpp:480] Space 4, part 44 has been added, asLearner 0
+I20240812 06:51:39.204670    64 NebulaStore.cpp:480] Space 4, part 41 has been added, asLearner 0
+I20240812 06:51:39.204784    64 NebulaStore.cpp:480] Space 4, part 38 has been added, asLearner 0
+I20240812 06:51:39.204898    64 NebulaStore.cpp:480] Space 4, part 35 has been added, asLearner 0
+I20240812 06:51:39.205013    64 NebulaStore.cpp:480] Space 4, part 32 has been added, asLearner 0
+I20240812 06:51:39.205143    64 NebulaStore.cpp:480] Space 4, part 29 has been added, asLearner 0
+I20240812 06:51:39.205260    64 NebulaStore.cpp:480] Space 4, part 26 has been added, asLearner 0
+I20240812 06:51:39.205395    64 NebulaStore.cpp:480] Space 4, part 11 has been added, asLearner 0
+I20240812 06:51:39.205504    64 NebulaStore.cpp:480] Space 4, part 8 has been added, asLearner 0
+I20240812 06:51:39.205626    64 NebulaStore.cpp:480] Space 4, part 74 has been added, asLearner 0
+I20240812 06:51:39.205744    64 NebulaStore.cpp:480] Space 4, part 5 has been added, asLearner 0
+I20240812 06:51:39.205857    64 NebulaStore.cpp:480] Space 4, part 71 has been added, asLearner 0
+I20240812 06:51:39.205971    64 NebulaStore.cpp:480] Space 4, part 2 has been added, asLearner 0
+I20240812 06:51:39.206082    64 NebulaStore.cpp:480] Space 4, part 68 has been added, asLearner 0
+I20240812 06:51:39.206188    64 NebulaStore.cpp:480] Space 4, part 53 has been added, asLearner 0
+I20240812 06:51:39.206311    64 NebulaStore.cpp:480] Space 4, part 65 has been added, asLearner 0
+I20240812 06:51:39.206423    64 NebulaStore.cpp:480] Space 4, part 98 has been added, asLearner 0
+I20240812 06:51:39.206537    64 NebulaStore.cpp:480] Space 4, part 89 has been added, asLearner 0
+I20240812 06:51:39.206645    64 NebulaStore.cpp:480] Space 4, part 20 has been added, asLearner 0
+I20240812 06:51:39.206756    64 NebulaStore.cpp:480] Space 4, part 56 has been added, asLearner 0
+I20240812 06:51:39.206868    64 NebulaStore.cpp:480] Space 4, part 92 has been added, asLearner 0
+I20240812 06:51:39.207019    64 NebulaStore.cpp:480] Space 4, part 23 has been added, asLearner 0
+I20240812 06:51:39.207144    64 NebulaStore.cpp:480] Space 4, part 59 has been added, asLearner 0
+I20240812 06:51:39.207273    64 NebulaStore.cpp:480] Space 4, part 62 has been added, asLearner 0
+I20240812 06:51:39.207387    64 NebulaStore.cpp:480] Space 4, part 95 has been added, asLearner 0
+I20240812 06:51:39.207510    64 NebulaStore.cpp:480] Space 4, part 86 has been added, asLearner 0
+I20240812 06:51:39.207623    64 NebulaStore.cpp:480] Space 4, part 17 has been added, asLearner 0
+I20240812 06:51:39.207739    64 NebulaStore.cpp:480] Space 4, part 83 has been added, asLearner 0
+I20240812 06:51:39.207847    64 NebulaStore.cpp:480] Space 4, part 14 has been added, asLearner 0
+I20240812 06:51:39.207970    64 NebulaStore.cpp:480] Space 4, part 80 has been added, asLearner 0
+I20240812 06:51:39.208091    64 NebulaStore.cpp:480] Space 4, part 77 has been added, asLearner 0
+I20240812 06:51:39.208216    64 NebulaStore.cpp:480] Space 4, part 50 has been added, asLearner 0
+I20240812 06:51:39.208227    64 NebulaStore.cpp:417] Create data space 3
+I20240812 06:51:39.208528   208 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20240812 06:51:39.208541   208 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20240812 06:51:39.208549   208 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20240812 06:51:39.208644   208 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20240812 06:51:39.221359   208 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/3/data
+I20240812 06:51:39.221547    64 NebulaStore.cpp:480] Space 3, part 47 has been added, asLearner 0
+I20240812 06:51:39.221678    64 NebulaStore.cpp:480] Space 3, part 46 has been added, asLearner 0
+I20240812 06:51:39.221812    64 NebulaStore.cpp:480] Space 3, part 45 has been added, asLearner 0
+I20240812 06:51:39.221954    64 NebulaStore.cpp:480] Space 3, part 78 has been added, asLearner 0
+I20240812 06:51:39.222081    64 NebulaStore.cpp:480] Space 3, part 79 has been added, asLearner 0
+I20240812 06:51:39.222216    64 NebulaStore.cpp:480] Space 3, part 80 has been added, asLearner 0
+I20240812 06:51:39.222337    64 NebulaStore.cpp:480] Space 3, part 81 has been added, asLearner 0
+I20240812 06:51:39.222455    64 NebulaStore.cpp:480] Space 3, part 82 has been added, asLearner 0
+I20240812 06:51:39.222579    64 NebulaStore.cpp:480] Space 3, part 83 has been added, asLearner 0
+I20240812 06:51:39.222707    64 NebulaStore.cpp:480] Space 3, part 84 has been added, asLearner 0
+I20240812 06:51:39.222826    64 NebulaStore.cpp:480] Space 3, part 85 has been added, asLearner 0
+I20240812 06:51:39.222999    64 NebulaStore.cpp:480] Space 3, part 86 has been added, asLearner 0
+I20240812 06:51:39.223126    64 NebulaStore.cpp:480] Space 3, part 93 has been added, asLearner 0
+I20240812 06:51:39.223250    64 NebulaStore.cpp:480] Space 3, part 94 has been added, asLearner 0
+I20240812 06:51:39.223397    64 NebulaStore.cpp:480] Space 3, part 95 has been added, asLearner 0
+I20240812 06:51:39.223541    64 NebulaStore.cpp:480] Space 3, part 97 has been added, asLearner 0
+I20240812 06:51:39.223706    64 NebulaStore.cpp:480] Space 3, part 96 has been added, asLearner 0
+I20240812 06:51:39.224110    64 NebulaStore.cpp:480] Space 3, part 92 has been added, asLearner 0
+I20240812 06:51:39.224303    64 NebulaStore.cpp:480] Space 3, part 91 has been added, asLearner 0
+I20240812 06:51:39.224474    64 NebulaStore.cpp:480] Space 3, part 90 has been added, asLearner 0
+I20240812 06:51:39.224680    64 NebulaStore.cpp:480] Space 3, part 89 has been added, asLearner 0
+I20240812 06:51:39.224825    64 NebulaStore.cpp:480] Space 3, part 88 has been added, asLearner 0
+I20240812 06:51:39.224951    64 NebulaStore.cpp:480] Space 3, part 87 has been added, asLearner 0
+I20240812 06:51:39.225065    64 NebulaStore.cpp:480] Space 3, part 74 has been added, asLearner 0
+I20240812 06:51:39.225183    64 NebulaStore.cpp:480] Space 3, part 73 has been added, asLearner 0
+I20240812 06:51:39.225303    64 NebulaStore.cpp:480] Space 3, part 72 has been added, asLearner 0
+I20240812 06:51:39.225433    64 NebulaStore.cpp:480] Space 3, part 71 has been added, asLearner 0
+I20240812 06:51:39.225550    64 NebulaStore.cpp:480] Space 3, part 58 has been added, asLearner 0
+I20240812 06:51:39.225687    64 NebulaStore.cpp:480] Space 3, part 57 has been added, asLearner 0
+I20240812 06:51:39.225805    64 NebulaStore.cpp:480] Space 3, part 55 has been added, asLearner 0
+I20240812 06:51:39.225930    64 NebulaStore.cpp:480] Space 3, part 56 has been added, asLearner 0
+I20240812 06:51:39.226047    64 NebulaStore.cpp:480] Space 3, part 53 has been added, asLearner 0
+I20240812 06:51:39.226186    64 NebulaStore.cpp:480] Space 3, part 100 has been added, asLearner 0
+I20240812 06:51:39.226307    64 NebulaStore.cpp:480] Space 3, part 3 has been added, asLearner 0
+I20240812 06:51:39.226435    64 NebulaStore.cpp:480] Space 3, part 54 has been added, asLearner 0
+I20240812 06:51:39.226558    64 NebulaStore.cpp:480] Space 3, part 99 has been added, asLearner 0
+I20240812 06:51:39.226850    64 NebulaStore.cpp:480] Space 3, part 2 has been added, asLearner 0
+I20240812 06:51:39.227015    64 NebulaStore.cpp:480] Space 3, part 52 has been added, asLearner 0
+I20240812 06:51:39.227152    64 NebulaStore.cpp:480] Space 3, part 98 has been added, asLearner 0
+I20240812 06:51:39.227288    64 NebulaStore.cpp:480] Space 3, part 1 has been added, asLearner 0
+I20240812 06:51:39.227418    64 NebulaStore.cpp:480] Space 3, part 51 has been added, asLearner 0
+I20240812 06:51:39.227568    64 NebulaStore.cpp:480] Space 3, part 59 has been added, asLearner 0
+I20240812 06:51:39.227725    64 NebulaStore.cpp:480] Space 3, part 60 has been added, asLearner 0
+I20240812 06:51:39.227896    64 NebulaStore.cpp:480] Space 3, part 61 has been added, asLearner 0
+I20240812 06:51:39.228170    64 NebulaStore.cpp:480] Space 3, part 62 has been added, asLearner 0
+I20240812 06:51:39.228338    64 NebulaStore.cpp:480] Space 3, part 63 has been added, asLearner 0
+I20240812 06:51:39.228466    64 NebulaStore.cpp:480] Space 3, part 64 has been added, asLearner 0
+I20240812 06:51:39.228578    64 NebulaStore.cpp:480] Space 3, part 65 has been added, asLearner 0
+I20240812 06:51:39.228693    64 NebulaStore.cpp:480] Space 3, part 66 has been added, asLearner 0
+I20240812 06:51:39.228802    64 NebulaStore.cpp:480] Space 3, part 67 has been added, asLearner 0
+I20240812 06:51:39.228946    64 NebulaStore.cpp:480] Space 3, part 68 has been added, asLearner 0
+I20240812 06:51:39.229076    64 NebulaStore.cpp:480] Space 3, part 69 has been added, asLearner 0
+I20240812 06:51:39.229197    64 NebulaStore.cpp:480] Space 3, part 70 has been added, asLearner 0
+I20240812 06:51:39.229313    64 NebulaStore.cpp:480] Space 3, part 77 has been added, asLearner 0
+I20240812 06:51:39.229427    64 NebulaStore.cpp:480] Space 3, part 76 has been added, asLearner 0
+I20240812 06:51:39.229540    64 NebulaStore.cpp:480] Space 3, part 75 has been added, asLearner 0
+I20240812 06:51:39.229667    64 NebulaStore.cpp:480] Space 3, part 50 has been added, asLearner 0
+I20240812 06:51:39.229779    64 NebulaStore.cpp:480] Space 3, part 49 has been added, asLearner 0
+I20240812 06:51:39.229892    64 NebulaStore.cpp:480] Space 3, part 48 has been added, asLearner 0
+I20240812 06:51:39.230000    64 NebulaStore.cpp:480] Space 3, part 23 has been added, asLearner 0
+I20240812 06:51:39.230113    64 NebulaStore.cpp:480] Space 3, part 22 has been added, asLearner 0
+I20240812 06:51:39.230221    64 NebulaStore.cpp:480] Space 3, part 21 has been added, asLearner 0
+I20240812 06:51:39.230331    64 NebulaStore.cpp:480] Space 3, part 20 has been added, asLearner 0
+I20240812 06:51:39.230458    64 NebulaStore.cpp:480] Space 3, part 19 has been added, asLearner 0
+I20240812 06:51:39.230574    64 NebulaStore.cpp:480] Space 3, part 18 has been added, asLearner 0
+I20240812 06:51:39.230684    64 NebulaStore.cpp:480] Space 3, part 17 has been added, asLearner 0
+I20240812 06:51:39.230796    64 NebulaStore.cpp:480] Space 3, part 16 has been added, asLearner 0
+I20240812 06:51:39.230908    64 NebulaStore.cpp:480] Space 3, part 15 has been added, asLearner 0
+I20240812 06:51:39.231101    64 NebulaStore.cpp:480] Space 3, part 14 has been added, asLearner 0
+I20240812 06:51:39.231212    64 NebulaStore.cpp:480] Space 3, part 13 has been added, asLearner 0
+I20240812 06:51:39.231325    64 NebulaStore.cpp:480] Space 3, part 12 has been added, asLearner 0
+I20240812 06:51:39.231434    64 NebulaStore.cpp:480] Space 3, part 5 has been added, asLearner 0
+I20240812 06:51:39.231546    64 NebulaStore.cpp:480] Space 3, part 4 has been added, asLearner 0
+I20240812 06:51:39.231657    64 NebulaStore.cpp:480] Space 3, part 6 has been added, asLearner 0
+I20240812 06:51:39.231766    64 NebulaStore.cpp:480] Space 3, part 7 has been added, asLearner 0
+I20240812 06:51:39.231878    64 NebulaStore.cpp:480] Space 3, part 8 has been added, asLearner 0
+I20240812 06:51:39.231990    64 NebulaStore.cpp:480] Space 3, part 9 has been added, asLearner 0
+I20240812 06:51:39.232115    64 NebulaStore.cpp:480] Space 3, part 10 has been added, asLearner 0
+I20240812 06:51:39.232270    64 NebulaStore.cpp:480] Space 3, part 11 has been added, asLearner 0
+I20240812 06:51:39.232388    64 NebulaStore.cpp:480] Space 3, part 24 has been added, asLearner 0
+I20240812 06:51:39.232501    64 NebulaStore.cpp:480] Space 3, part 25 has been added, asLearner 0
+I20240812 06:51:39.232611    64 NebulaStore.cpp:480] Space 3, part 26 has been added, asLearner 0
+I20240812 06:51:39.232743    64 NebulaStore.cpp:480] Space 3, part 27 has been added, asLearner 0
+I20240812 06:51:39.232906    64 NebulaStore.cpp:480] Space 3, part 28 has been added, asLearner 0
+I20240812 06:51:39.233080    64 NebulaStore.cpp:480] Space 3, part 29 has been added, asLearner 0
+I20240812 06:51:39.233422    64 NebulaStore.cpp:480] Space 3, part 30 has been added, asLearner 0
+I20240812 06:51:39.233654    64 NebulaStore.cpp:480] Space 3, part 31 has been added, asLearner 0
+I20240812 06:51:39.233827    64 NebulaStore.cpp:480] Space 3, part 32 has been added, asLearner 0
+I20240812 06:51:39.234004    64 NebulaStore.cpp:480] Space 3, part 33 has been added, asLearner 0
+I20240812 06:51:39.234143    64 NebulaStore.cpp:480] Space 3, part 34 has been added, asLearner 0
+I20240812 06:51:39.234259    64 NebulaStore.cpp:480] Space 3, part 35 has been added, asLearner 0
+I20240812 06:51:39.234372    64 NebulaStore.cpp:480] Space 3, part 36 has been added, asLearner 0
+I20240812 06:51:39.234508    64 NebulaStore.cpp:480] Space 3, part 37 has been added, asLearner 0
+I20240812 06:51:39.234627    64 NebulaStore.cpp:480] Space 3, part 38 has been added, asLearner 0
+I20240812 06:51:39.234762    64 NebulaStore.cpp:480] Space 3, part 39 has been added, asLearner 0
+I20240812 06:51:39.234877    64 NebulaStore.cpp:480] Space 3, part 40 has been added, asLearner 0
+I20240812 06:51:39.235038    64 NebulaStore.cpp:480] Space 3, part 41 has been added, asLearner 0
+I20240812 06:51:39.235167    64 NebulaStore.cpp:480] Space 3, part 42 has been added, asLearner 0
+I20240812 06:51:39.235284    64 NebulaStore.cpp:480] Space 3, part 43 has been added, asLearner 0
+I20240812 06:51:39.235596    64 NebulaStore.cpp:480] Space 3, part 44 has been added, asLearner 0
+I20240812 06:51:40.245395    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:51:40.245448    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 4 space
+I20240812 06:51:40.245471    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 4 space
+I20240812 06:51:40.245478    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:41.254768    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:51:41.254822    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 4 space
+I20240812 06:51:41.254842    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 4 space
+I20240812 06:51:41.254849    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:49.285015    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:51:49.285084    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 4 space
+I20240812 06:51:49.285110    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 4 space
+I20240812 06:51:49.285117    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:49.285418    64 NebulaStore.cpp:417] Create data space 5
+I20240812 06:51:49.285610   154 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20240812 06:51:49.285625   154 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20240812 06:51:49.285632   154 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20240812 06:51:49.285737   154 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20240812 06:51:49.297966   154 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/5/data
+I20240812 06:51:49.298180    64 NebulaStore.cpp:480] Space 5, part 47 has been added, asLearner 0
+I20240812 06:51:49.298312    64 NebulaStore.cpp:480] Space 5, part 44 has been added, asLearner 0
+I20240812 06:51:49.298444    64 NebulaStore.cpp:480] Space 5, part 41 has been added, asLearner 0
+I20240812 06:51:49.298571    64 NebulaStore.cpp:480] Space 5, part 38 has been added, asLearner 0
+I20240812 06:51:49.298702    64 NebulaStore.cpp:480] Space 5, part 35 has been added, asLearner 0
+I20240812 06:51:49.298842    64 NebulaStore.cpp:480] Space 5, part 32 has been added, asLearner 0
+I20240812 06:51:49.299008    64 NebulaStore.cpp:480] Space 5, part 29 has been added, asLearner 0
+I20240812 06:51:49.299135    64 NebulaStore.cpp:480] Space 5, part 26 has been added, asLearner 0
+I20240812 06:51:49.299266    64 NebulaStore.cpp:480] Space 5, part 11 has been added, asLearner 0
+I20240812 06:51:49.299404    64 NebulaStore.cpp:480] Space 5, part 8 has been added, asLearner 0
+I20240812 06:51:49.299532    64 NebulaStore.cpp:480] Space 5, part 74 has been added, asLearner 0
+I20240812 06:51:49.299659    64 NebulaStore.cpp:480] Space 5, part 5 has been added, asLearner 0
+I20240812 06:51:49.299789    64 NebulaStore.cpp:480] Space 5, part 71 has been added, asLearner 0
+I20240812 06:51:49.299929    64 NebulaStore.cpp:480] Space 5, part 2 has been added, asLearner 0
+I20240812 06:51:49.300086    64 NebulaStore.cpp:480] Space 5, part 68 has been added, asLearner 0
+I20240812 06:51:49.300213    64 NebulaStore.cpp:480] Space 5, part 53 has been added, asLearner 0
+I20240812 06:51:49.300341    64 NebulaStore.cpp:480] Space 5, part 65 has been added, asLearner 0
+I20240812 06:51:49.300480    64 NebulaStore.cpp:480] Space 5, part 98 has been added, asLearner 0
+I20240812 06:51:49.300612    64 NebulaStore.cpp:480] Space 5, part 89 has been added, asLearner 0
+I20240812 06:51:49.300742    64 NebulaStore.cpp:480] Space 5, part 20 has been added, asLearner 0
+I20240812 06:51:49.300876    64 NebulaStore.cpp:480] Space 5, part 56 has been added, asLearner 0
+I20240812 06:51:49.301003    64 NebulaStore.cpp:480] Space 5, part 92 has been added, asLearner 0
+I20240812 06:51:49.301134    64 NebulaStore.cpp:480] Space 5, part 23 has been added, asLearner 0
+I20240812 06:51:49.301265    64 NebulaStore.cpp:480] Space 5, part 59 has been added, asLearner 0
+I20240812 06:51:49.301396    64 NebulaStore.cpp:480] Space 5, part 62 has been added, asLearner 0
+I20240812 06:51:49.301530    64 NebulaStore.cpp:480] Space 5, part 95 has been added, asLearner 0
+I20240812 06:51:49.301667    64 NebulaStore.cpp:480] Space 5, part 86 has been added, asLearner 0
+I20240812 06:51:49.301795    64 NebulaStore.cpp:480] Space 5, part 17 has been added, asLearner 0
+I20240812 06:51:49.301929    64 NebulaStore.cpp:480] Space 5, part 83 has been added, asLearner 0
+I20240812 06:51:49.302058    64 NebulaStore.cpp:480] Space 5, part 14 has been added, asLearner 0
+I20240812 06:51:49.302220    64 NebulaStore.cpp:480] Space 5, part 80 has been added, asLearner 0
+I20240812 06:51:49.302359    64 NebulaStore.cpp:480] Space 5, part 77 has been added, asLearner 0
+I20240812 06:51:49.302489    64 NebulaStore.cpp:480] Space 5, part 50 has been added, asLearner 0
+I20240812 06:51:50.313165    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:51:50.313237    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 5 space
+I20240812 06:51:50.313275    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 5 space
+I20240812 06:51:50.313282    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:51.324844    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 5 space
+I20240812 06:51:51.324901    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 5 space
+I20240812 06:51:51.324951    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 5 space
+I20240812 06:51:51.324959    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:55.342046    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 5 space
+I20240812 06:51:55.342101    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 5 space
+I20240812 06:51:55.342145    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 5 space
+I20240812 06:51:55.342152    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:00.470625    37 AdminTask.cpp:21] createAdminTask (6, 1)
+I20240812 06:52:00.470666    37 RebuildIndexTask.cpp:40] Rebuild index task is rate limited to 4194304 for each subtask by default
+I20240812 06:52:00.470733    37 AdminTaskManager.cpp:155] enqueue task(6, 1)
+I20240812 06:52:00.470770   103 AdminTaskManager.cpp:236] dequeue task(6, 1)
+I20240812 06:52:00.470866   103 AdminTaskManager.cpp:279] run task(6, 1), 33 subtasks in 10 thread
+I20240812 06:52:00.471288   239 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.471447   240 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.471458   239 RebuildIndexTask.cpp:119] Building index successful, space=5, part=2
+I20240812 06:52:00.471474   239 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=2
+I20240812 06:52:00.471539   240 RebuildIndexTask.cpp:119] Building index successful, space=5, part=5
+I20240812 06:52:00.471554   240 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=5
+I20240812 06:52:00.471729   241 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.471812   241 RebuildIndexTask.cpp:119] Building index successful, space=5, part=8
+I20240812 06:52:00.471863   241 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=8
+I20240812 06:52:00.471863   240 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=5
+I20240812 06:52:00.471908   240 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 32
+I20240812 06:52:00.471977   239 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=2
+I20240812 06:52:00.471999   239 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 31
+I20240812 06:52:00.472146   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.472298   241 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=8
+I20240812 06:52:00.472311   241 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 30
+I20240812 06:52:00.472333   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=11
+I20240812 06:52:00.472344   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=11
+I20240812 06:52:00.472635   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=11
+I20240812 06:52:00.472649   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 29
+I20240812 06:52:00.472846   243 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.472935   244 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.473012   244 RebuildIndexTask.cpp:119] Building index successful, space=5, part=14
+I20240812 06:52:00.473026   244 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=14
+I20240812 06:52:00.473106   243 RebuildIndexTask.cpp:119] Building index successful, space=5, part=17
+I20240812 06:52:00.473119   243 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=17
+I20240812 06:52:00.473441   244 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=14
+I20240812 06:52:00.473456   244 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 28
+I20240812 06:52:00.473472   245 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.473695   245 RebuildIndexTask.cpp:119] Building index successful, space=5, part=20
+I20240812 06:52:00.473711   245 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=20
+I20240812 06:52:00.473863   246 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.473953   246 RebuildIndexTask.cpp:119] Building index successful, space=5, part=23
+I20240812 06:52:00.474013   246 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=23
+I20240812 06:52:00.474097   243 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=17
+I20240812 06:52:00.474110   243 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 27
+I20240812 06:52:00.474224   245 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=20
+I20240812 06:52:00.474241   245 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 26
+I20240812 06:52:00.474442   248 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.474454   246 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=23
+I20240812 06:52:00.474467   246 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 25
+I20240812 06:52:00.474656   248 RebuildIndexTask.cpp:119] Building index successful, space=5, part=26
+I20240812 06:52:00.474670   248 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=26
+I20240812 06:52:00.474735   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.474834   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=29
+I20240812 06:52:00.474849   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=29
+I20240812 06:52:00.475036   244 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.475131   244 RebuildIndexTask.cpp:119] Building index successful, space=5, part=38
+I20240812 06:52:00.475145   244 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=38
+I20240812 06:52:00.475303   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=29
+I20240812 06:52:00.475317   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 24
+I20240812 06:52:00.475390   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.475548   244 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=38
+I20240812 06:52:00.475562   244 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 23
+I20240812 06:52:00.475642   244 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.475723   244 RebuildIndexTask.cpp:119] Building index successful, space=5, part=44
+I20240812 06:52:00.475735   244 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=44
+I20240812 06:52:00.475805   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=41
+I20240812 06:52:00.475817   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=41
+I20240812 06:52:00.475951   245 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.476022   245 RebuildIndexTask.cpp:119] Building index successful, space=5, part=47
+I20240812 06:52:00.476034   245 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=47
+I20240812 06:52:00.476217   244 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=44
+I20240812 06:52:00.476231   244 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 22
+I20240812 06:52:00.476311   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=41
+I20240812 06:52:00.476322   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 21
+I20240812 06:52:00.476390   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.476470   244 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.476547   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=53
+I20240812 06:52:00.476562   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=53
+I20240812 06:52:00.476644   244 RebuildIndexTask.cpp:119] Building index successful, space=5, part=50
+I20240812 06:52:00.476656   244 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=50
+I20240812 06:52:00.476802   240 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.477041   244 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=50
+I20240812 06:52:00.477052   244 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 20
+I20240812 06:52:00.477097   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=53
+I20240812 06:52:00.477108   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 19
+I20240812 06:52:00.477193   244 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.477244   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.477322   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=65
+I20240812 06:52:00.477334   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=65
+I20240812 06:52:00.477528   245 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=47
+I20240812 06:52:00.477543   245 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 18
+I20240812 06:52:00.477751   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=65
+I20240812 06:52:00.477766   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 17
+I20240812 06:52:00.477870   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.477975   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=71
+I20240812 06:52:00.477993   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=71
+I20240812 06:52:00.478094   245 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.478175   245 RebuildIndexTask.cpp:119] Building index successful, space=5, part=68
+I20240812 06:52:00.478188   245 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=68
+I20240812 06:52:00.478325   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=71
+I20240812 06:52:00.478338   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 16
+I20240812 06:52:00.478402   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.478490   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=74
+I20240812 06:52:00.478500   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=74
+I20240812 06:52:00.478663   243 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.478821   245 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=68
+I20240812 06:52:00.478884   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=74
+I20240812 06:52:00.479125   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 14
+I20240812 06:52:00.478909   245 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 15
+I20240812 06:52:00.479260   245 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.479334   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.479413   245 RebuildIndexTask.cpp:119] Building index successful, space=5, part=83
+I20240812 06:52:00.479423   245 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=83
+I20240812 06:52:00.479499   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=80
+I20240812 06:52:00.479511   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=80
+I20240812 06:52:00.478747   243 RebuildIndexTask.cpp:119] Building index successful, space=5, part=77
+I20240812 06:52:00.479600   243 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=77
+I20240812 06:52:00.479669   239 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.479892   245 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=83
+I20240812 06:52:00.479907   245 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 13
+I20240812 06:52:00.479975   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=80
+I20240812 06:52:00.479986   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 12
+I20240812 06:52:00.480054   245 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.480134   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.480202   245 RebuildIndexTask.cpp:119] Building index successful, space=5, part=86
+I20240812 06:52:00.480213   245 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=86
+I20240812 06:52:00.480280   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=89
+I20240812 06:52:00.480293   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=89
+I20240812 06:52:00.480448   243 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=77
+I20240812 06:52:00.480461   243 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 11
+I20240812 06:52:00.480664   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=89
+I20240812 06:52:00.480676   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 10
+I20240812 06:52:00.480743   245 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=86
+I20240812 06:52:00.480757   245 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 9
+I20240812 06:52:00.480818   242 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.480890   245 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.480965   242 RebuildIndexTask.cpp:119] Building index successful, space=5, part=95
+I20240812 06:52:00.480978   242 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=95
+I20240812 06:52:00.481060   245 RebuildIndexTask.cpp:119] Building index successful, space=5, part=98
+I20240812 06:52:00.481071   245 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=98
+I20240812 06:52:00.481151   243 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.481218   243 RebuildIndexTask.cpp:119] Building index successful, space=5, part=92
+I20240812 06:52:00.481228   243 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=92
+I20240812 06:52:00.481464   245 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=98
+I20240812 06:52:00.481487   245 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 8
+I20240812 06:52:00.481520   242 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=95
+I20240812 06:52:00.481532   242 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 7
+I20240812 06:52:00.481600   241 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.481690   240 RebuildIndexTask.cpp:119] Building index successful, space=5, part=32
+I20240812 06:52:00.481703   240 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=32
+I20240812 06:52:00.481848   243 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=92
+I20240812 06:52:00.481863   243 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 6
+I20240812 06:52:00.481890   239 RebuildIndexTask.cpp:119] Building index successful, space=5, part=56
+I20240812 06:52:00.481902   239 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=56
+I20240812 06:52:00.481969   241 RebuildIndexTask.cpp:119] Building index successful, space=5, part=59
+I20240812 06:52:00.481981   241 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=59
+I20240812 06:52:00.482067   249 RebuildIndexTask.cpp:113] Start building index
+I20240812 06:52:00.482172   249 RebuildIndexTask.cpp:119] Building index successful, space=5, part=35
+I20240812 06:52:00.482182   249 RebuildIndexTask.cpp:122] Processing operation logs, space=5, part=35
+I20240812 06:52:00.482396   239 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=56
+I20240812 06:52:00.482409   239 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 5
+I20240812 06:52:00.482510   240 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=32
+I20240812 06:52:00.482524   240 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 4
+I20240812 06:52:00.482553   241 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=59
+I20240812 06:52:00.482563   241 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 3
+I20240812 06:52:00.474741   103 AdminTaskManager.cpp:224] waiting for incoming task
+I20240812 06:52:00.483251   248 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=26
+I20240812 06:52:00.483266   248 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 2
+I20240812 06:52:00.484858   249 RebuildIndexTask.cpp:130] RebuildIndexTask Finished, space=5, part=35
+I20240812 06:52:00.484874   249 AdminTaskManager.cpp:315] subtask of task(6, 1) finished, unfinished task 1
+I20240812 06:52:00.491578   242 AdminTaskManager.cpp:326] task(6, 1) runSubTask() exit
+I20240812 06:52:00.491609   245 AdminTaskManager.cpp:326] task(6, 1) runSubTask() exit
+I20240812 06:52:00.491940   243 AdminTaskManager.cpp:326] task(6, 1) runSubTask() exit
+I20240812 06:52:00.492223   246 AdminTaskManager.cpp:326] task(6, 1) runSubTask() exit
+I20240812 06:52:00.492499   239 AdminTaskManager.cpp:326] task(6, 1) runSubTask() exit
+I20240812 06:52:00.492605   240 AdminTaskManager.cpp:326] task(6, 1) runSubTask() exit
+I20240812 06:52:00.492626   241 AdminTaskManager.cpp:326] task(6, 1) runSubTask() exit
+I20240812 06:52:00.494571   248 AdminTaskManager.cpp:326] task(6, 1) runSubTask() exit
+I20240812 06:52:00.494956   249 AdminTaskManager.cpp:326] task(6, 1) runSubTask() exit
+I20240812 06:52:01.367594    64 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:52:01.367656    64 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 4 space
+I20240812 06:52:01.367678    64 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 4 space
+I20240812 06:52:01.367686    64 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:01.369324    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 47] Clean rocksdb part data
+I20240812 06:52:01.369391    64 NebulaStore.cpp:594] Space 5, part 47 has been removed!
+I20240812 06:52:01.370381    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 44] Clean rocksdb part data
+I20240812 06:52:01.370426    64 NebulaStore.cpp:594] Space 5, part 44 has been removed!
+I20240812 06:52:01.370667    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 41] Clean rocksdb part data
+I20240812 06:52:01.370707    64 NebulaStore.cpp:594] Space 5, part 41 has been removed!
+I20240812 06:52:01.371014    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 38] Clean rocksdb part data
+I20240812 06:52:01.371049    64 NebulaStore.cpp:594] Space 5, part 38 has been removed!
+I20240812 06:52:01.371439    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 35] Clean rocksdb part data
+I20240812 06:52:01.371470    64 NebulaStore.cpp:594] Space 5, part 35 has been removed!
+I20240812 06:52:01.372004    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 32] Clean rocksdb part data
+I20240812 06:52:01.372040    64 NebulaStore.cpp:594] Space 5, part 32 has been removed!
+I20240812 06:52:01.372531    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 29] Clean rocksdb part data
+I20240812 06:52:01.372563    64 NebulaStore.cpp:594] Space 5, part 29 has been removed!
+I20240812 06:52:01.372906    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 26] Clean rocksdb part data
+I20240812 06:52:01.372938    64 NebulaStore.cpp:594] Space 5, part 26 has been removed!
+I20240812 06:52:01.373173    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 11] Clean rocksdb part data
+I20240812 06:52:01.373210    64 NebulaStore.cpp:594] Space 5, part 11 has been removed!
+I20240812 06:52:01.373916    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 8] Clean rocksdb part data
+I20240812 06:52:01.373946    64 NebulaStore.cpp:594] Space 5, part 8 has been removed!
+I20240812 06:52:01.374146    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 74] Clean rocksdb part data
+I20240812 06:52:01.374182    64 NebulaStore.cpp:594] Space 5, part 74 has been removed!
+I20240812 06:52:01.374680    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 5] Clean rocksdb part data
+I20240812 06:52:01.374711    64 NebulaStore.cpp:594] Space 5, part 5 has been removed!
+I20240812 06:52:01.375371    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 71] Clean rocksdb part data
+I20240812 06:52:01.375406    64 NebulaStore.cpp:594] Space 5, part 71 has been removed!
+I20240812 06:52:01.376129    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 2] Clean rocksdb part data
+I20240812 06:52:01.376158    64 NebulaStore.cpp:594] Space 5, part 2 has been removed!
+I20240812 06:52:01.376397    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 68] Clean rocksdb part data
+I20240812 06:52:01.376432    64 NebulaStore.cpp:594] Space 5, part 68 has been removed!
+I20240812 06:52:01.376754    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 53] Clean rocksdb part data
+I20240812 06:52:01.376791    64 NebulaStore.cpp:594] Space 5, part 53 has been removed!
+I20240812 06:52:01.377334    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 65] Clean rocksdb part data
+I20240812 06:52:01.377364    64 NebulaStore.cpp:594] Space 5, part 65 has been removed!
+I20240812 06:52:01.377884    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 98] Clean rocksdb part data
+I20240812 06:52:01.377914    64 NebulaStore.cpp:594] Space 5, part 98 has been removed!
+I20240812 06:52:01.378113    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 89] Clean rocksdb part data
+I20240812 06:52:01.378144    64 NebulaStore.cpp:594] Space 5, part 89 has been removed!
+I20240812 06:52:01.378674    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 20] Clean rocksdb part data
+I20240812 06:52:01.378710    64 NebulaStore.cpp:594] Space 5, part 20 has been removed!
+I20240812 06:52:01.378911    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 56] Clean rocksdb part data
+I20240812 06:52:01.378974    64 NebulaStore.cpp:594] Space 5, part 56 has been removed!
+I20240812 06:52:01.379328    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 92] Clean rocksdb part data
+I20240812 06:52:01.379367    64 NebulaStore.cpp:594] Space 5, part 92 has been removed!
+I20240812 06:52:01.379861    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 23] Clean rocksdb part data
+I20240812 06:52:01.379899    64 NebulaStore.cpp:594] Space 5, part 23 has been removed!
+I20240812 06:52:01.380683    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 59] Clean rocksdb part data
+I20240812 06:52:01.380714    64 NebulaStore.cpp:594] Space 5, part 59 has been removed!
+I20240812 06:52:01.381155    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 62] Clean rocksdb part data
+I20240812 06:52:01.381186    64 NebulaStore.cpp:594] Space 5, part 62 has been removed!
+I20240812 06:52:01.381603    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 95] Clean rocksdb part data
+I20240812 06:52:01.381639    64 NebulaStore.cpp:594] Space 5, part 95 has been removed!
+I20240812 06:52:01.382053    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 86] Clean rocksdb part data
+I20240812 06:52:01.382084    64 NebulaStore.cpp:594] Space 5, part 86 has been removed!
+I20240812 06:52:01.382300    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 17] Clean rocksdb part data
+I20240812 06:52:01.382331    64 NebulaStore.cpp:594] Space 5, part 17 has been removed!
+I20240812 06:52:01.382536    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 83] Clean rocksdb part data
+I20240812 06:52:01.382572    64 NebulaStore.cpp:594] Space 5, part 83 has been removed!
+I20240812 06:52:01.382956    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 14] Clean rocksdb part data
+I20240812 06:52:01.382998    64 NebulaStore.cpp:594] Space 5, part 14 has been removed!
+I20240812 06:52:01.383457    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 80] Clean rocksdb part data
+I20240812 06:52:01.383489    64 NebulaStore.cpp:594] Space 5, part 80 has been removed!
+I20240812 06:52:01.384068    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 77] Clean rocksdb part data
+I20240812 06:52:01.384099    64 NebulaStore.cpp:594] Space 5, part 77 has been removed!
+I20240812 06:52:01.384311    64 Part.cpp:494] [Port: 9780, Space: 5, Part: 50] Clean rocksdb part data
+I20240812 06:52:01.384342    64 NebulaStore.cpp:594] Space 5, part 50 has been removed!
+I20240812 06:52:01.384351    64 AdminTask.h:189] task(6, 1) cancelled
+I20240812 06:52:01.384373    64 AdminTaskManager.cpp:362] cancel task(6, 1), spaceId: 5
+I20240812 06:52:09.663280    67 Part.h:59] [Port: 9780, Space: 5, Part: 44] ~Part()
+I20240812 06:52:09.724186    68 Part.h:59] [Port: 9780, Space: 5, Part: 14] ~Part()
+I20240812 06:52:09.867841    65 Part.h:59] [Port: 9780, Space: 5, Part: 71] ~Part()
+I20240812 06:52:09.932261    68 Part.h:59] [Port: 9780, Space: 5, Part: 35] ~Part()
+I20240812 06:52:09.941720    66 Part.h:59] [Port: 9780, Space: 5, Part: 74] ~Part()
+I20240812 06:52:10.005653    66 Part.h:59] [Port: 9780, Space: 5, Part: 59] ~Part()
+I20240812 06:52:10.045243    68 Part.h:59] [Port: 9780, Space: 5, Part: 68] ~Part()
+I20240812 06:52:10.091140    68 Part.h:59] [Port: 9780, Space: 5, Part: 62] ~Part()
+I20240812 06:52:10.165529    68 Part.h:59] [Port: 9780, Space: 5, Part: 56] ~Part()
+I20240812 06:52:10.229113    68 Part.h:59] [Port: 9780, Space: 5, Part: 2] ~Part()
+I20240812 06:52:10.232476    67 Part.h:59] [Port: 9780, Space: 5, Part: 50] ~Part()
+I20240812 06:52:10.251811    65 Part.h:59] [Port: 9780, Space: 5, Part: 47] ~Part()
+I20240812 06:52:10.264268    68 Part.h:59] [Port: 9780, Space: 5, Part: 83] ~Part()
+I20240812 06:52:10.301039    68 Part.h:59] [Port: 9780, Space: 5, Part: 53] ~Part()
+I20240812 06:52:10.360816    67 Part.h:59] [Port: 9780, Space: 5, Part: 89] ~Part()
+I20240812 06:52:10.370940    67 Part.h:59] [Port: 9780, Space: 5, Part: 98] ~Part()
+I20240812 06:52:10.415113    68 Part.h:59] [Port: 9780, Space: 5, Part: 38] ~Part()
+I20240812 06:52:10.427304    67 Part.h:59] [Port: 9780, Space: 5, Part: 95] ~Part()
+I20240812 06:52:10.436935    66 Part.h:59] [Port: 9780, Space: 5, Part: 29] ~Part()
+I20240812 06:52:10.440162    68 Part.h:59] [Port: 9780, Space: 5, Part: 80] ~Part()
+I20240812 06:52:10.460397    68 Part.h:59] [Port: 9780, Space: 5, Part: 92] ~Part()
+I20240812 06:52:10.493956    65 Part.h:59] [Port: 9780, Space: 5, Part: 20] ~Part()
+I20240812 06:52:10.544375    68 Part.h:59] [Port: 9780, Space: 5, Part: 8] ~Part()
+I20240812 06:52:10.560175    67 Part.h:59] [Port: 9780, Space: 5, Part: 41] ~Part()
+I20240812 06:52:10.624248    65 Part.h:59] [Port: 9780, Space: 5, Part: 32] ~Part()
+I20240812 06:52:10.636348    65 Part.h:59] [Port: 9780, Space: 5, Part: 11] ~Part()
+I20240812 06:52:10.663373    68 Part.h:59] [Port: 9780, Space: 5, Part: 86] ~Part()
+I20240812 06:52:10.664451    65 Part.h:59] [Port: 9780, Space: 5, Part: 26] ~Part()
+I20240812 06:52:10.819919    68 Part.h:59] [Port: 9780, Space: 5, Part: 5] ~Part()
+I20240812 06:52:10.853207    66 Part.h:59] [Port: 9780, Space: 5, Part: 23] ~Part()
+I20240812 06:52:10.895568    65 Part.h:59] [Port: 9780, Space: 5, Part: 17] ~Part()
+I20240812 06:52:10.943418    67 Part.h:59] [Port: 9780, Space: 5, Part: 77] ~Part()
+I20240812 06:52:11.143956    67 Part.h:59] [Port: 9780, Space: 5, Part: 65] ~Part()
+I20240812 06:53:07.685226     1 StorageDaemon.cpp:201] Signal 15(Terminated) received, stopping this server
+I20240812 06:53:07.686203     1 NebulaStore.cpp:343] Stop the raft service...
+I20240812 06:53:07.686285     1 RaftexService.cpp:67] Stopping the raftex service on port 9780
+I20240812 06:53:07.686487     1 RaftexService.cpp:77] All partitions have stopped
+I20240812 06:53:07.686825     1 NebulaStore.cpp:346] Stop kv engine...
+I20240812 06:53:07.693300    47 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12fdbbb328 in thread 0x7f12ff116280
+I20240812 06:53:07.694196    53 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12fdbbb828 in thread 0x7f12fdaac700
+I20240812 06:53:07.695755    54 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12fdbbbd28 in thread 0x7f1301847280
+I20240812 06:53:07.700340    55 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12fdbbc228 in thread 0x7f1301429280
+I20240812 06:53:07.700536    55 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12cca6a228 in thread 0x7f1301429280
+I20240812 06:53:07.701053    56 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12fdbbc728 in thread 0x7f12ff32f280
+I20240812 06:53:07.702764    58 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12fdbbd128 in thread 0x7f12ff1b7280
+I20240812 06:53:07.703403    59 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12fdbbd628 in thread 0x7f12fbc29280
+I20240812 06:53:07.707646    63 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12dd4e4a28 in thread 0x7f12fac29280
+I20240812 06:53:07.708092    70 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12dd4e4f28 in thread 0x7f130188e280
+I20240812 06:53:07.708472    71 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12dd4e5428 in thread 0x7f130146c280
+I20240812 06:53:07.708880    72 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12dd4e5928 in thread 0x7f12ff372280
+I20240812 06:53:07.709290    73 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7f12dd4e5e28 in thread 0x7f12fc06f280
+I20240812 06:53:07.710772     1 AdminTaskManager.cpp:176] enter AdminTaskManager::shutdown()
+I20240812 06:53:07.710804   104 AdminTaskManager.cpp:146] Unreported-Admin-Thread stopped
+I20240812 06:53:07.718678   103 AdminTaskManager.cpp:231] detect AdminTaskManager::shutdown()
+I20240812 06:53:07.718875     1 AdminTask.h:189] task(6, 1) cancelled

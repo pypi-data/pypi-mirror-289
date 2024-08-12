@@ -1,0 +1,187 @@
+Log file created at: 2024/08/12 06:50:30
+Running on machine: f0689f0fd398
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20240812 06:50:30.940605     1 GraphDaemon.cpp:122] Starting Graph HTTP Service
+I20240812 06:50:30.945176     6 WebService.cpp:124] Web service started on HTTP[19669]
+I20240812 06:50:30.945223     1 GraphDaemon.cpp:136] Number of networking IO threads: 4
+I20240812 06:50:30.945235     1 GraphDaemon.cpp:145] Number of worker threads: 4
+I20240812 06:50:30.948464     1 MetaClient.cpp:80] Create meta client to "172.28.1.3":9559
+I20240812 06:50:30.948496     1 MetaClient.cpp:81] root path: /usr/local/nebula, data path size: 0
+I20240812 06:50:31.964959     1 MetaClient.cpp:3269] Load leader ok
+I20240812 06:50:31.965978     1 MetaClient.cpp:162] Register time task for heartbeat!
+I20240812 06:50:31.966271     1 GraphSessionManager.cpp:337] Total of 0 sessions are loaded
+E20240812 06:50:31.983282     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/32.000MiB
+I20240812 06:50:31.983533     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
+I20240812 06:50:31.985378     1 Snowflake.cpp:17] WorkerId init success: 0
+I20240812 06:50:31.985518    37 GraphServer.cpp:63] Starting nebula-graphd on 127.0.0.1:9669
+I20240812 06:50:32.496991    20 GraphService.cpp:77] Authenticating user root from 172.28.0.2:45932
+I20240812 06:50:57.326773    21 GraphService.cpp:77] Authenticating user root from 172.28.0.1:33130
+I20240812 06:50:57.329785    20 GraphService.cpp:77] Authenticating user root from 172.28.0.1:33136
+I20240812 06:50:57.334125    20 GraphService.cpp:77] Authenticating user root from 172.28.0.1:33146
+I20240812 06:50:57.335871    20 GraphService.cpp:77] Authenticating user root from 172.28.0.1:33162
+I20240812 06:50:57.338968    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:33176
+E20240812 06:51:09.341830    19 GraphSessionManager.cpp:50] Get session `1723445457343592' failed:Session not existed!
+E20240812 06:51:09.341883    19 GraphService.cpp:165] Get session for sessionId: 1723445457343592 failed: Session `1723445457343592' not found: Session not existed!
+I20240812 06:51:09.343237    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:43108
+E20240812 06:51:21.346104    18 GraphSessionManager.cpp:50] Get session `1723445469349837' failed:Session not existed!
+E20240812 06:51:21.346158    18 GraphService.cpp:165] Get session for sessionId: 1723445469349837 failed: Session `1723445469349837' not found: Session not existed!
+I20240812 06:51:21.383373    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 0 space
+I20240812 06:51:21.383399    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 0 space
+I20240812 06:51:21.383404    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 0 space
+I20240812 06:51:21.383409    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:23.390408    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 1 space
+I20240812 06:51:23.390440    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 1 space
+I20240812 06:51:23.390455    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 1 space
+I20240812 06:51:23.390458    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:32.411619    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 1 space
+I20240812 06:51:32.411651    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 1 space
+I20240812 06:51:32.411662    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 1 space
+I20240812 06:51:32.411667    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:33.418053    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 2 space
+I20240812 06:51:33.418087    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 2 space
+I20240812 06:51:33.418100    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 2 space
+I20240812 06:51:33.418105    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:38.250561    18 GraphService.cpp:77] Authenticating user root from 172.28.0.1:55520
+I20240812 06:51:38.253901    20 SwitchSpaceExecutor.cpp:45] Graph switched to `test_meta_cache1', space id: 3
+I20240812 06:51:38.256875    21 SwitchSpaceExecutor.cpp:45] Graph switched to `test_meta_cache2', space id: 4
+I20240812 06:51:38.434094    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 2 space
+I20240812 06:51:38.434131    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 2 space
+I20240812 06:51:38.434149    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 2 space
+I20240812 06:51:38.434154    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:39.442806    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:51:39.442837    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 2 space
+I20240812 06:51:39.442852    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 2 space
+I20240812 06:51:39.442857    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:40.451624    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:51:40.451678    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 4 space
+I20240812 06:51:40.451701    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 4 space
+I20240812 06:51:40.451706    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:48.472702    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:51:48.472765    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 4 space
+I20240812 06:51:48.472787    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 4 space
+I20240812 06:51:48.472792    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:50.489495    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 5 space
+I20240812 06:51:50.489548    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 5 space
+I20240812 06:51:50.489594    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 5 space
+I20240812 06:51:50.489600    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:51:54.505281    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 5 space
+I20240812 06:51:54.505343    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 5 space
+I20240812 06:51:54.505389    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 5 space
+I20240812 06:51:54.505395    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:00.583456    18 GraphService.cpp:77] Authenticating user root from 172.28.0.1:34386
+I20240812 06:52:00.589825    20 GraphService.cpp:77] Authenticating user root from 172.28.0.1:34410
+I20240812 06:52:00.643218    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:34386
+I20240812 06:52:01.531623    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:52:01.531672    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 4 space
+I20240812 06:52:01.531692    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 4 space
+I20240812 06:52:01.531697    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:03.543988    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:52:03.544051    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 4 space
+I20240812 06:52:03.544077    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 4 space
+I20240812 06:52:03.544085    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:05.691876    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:34386
+I20240812 06:52:05.712489    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:34500
+W20240812 06:52:05.714774    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_pool_thread0
+I20240812 06:52:05.719380    18 GraphService.cpp:77] Authenticating user root from 172.28.0.1:34524
+W20240812 06:52:05.721378    20 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_pool_thread2
+I20240812 06:52:05.728729    18 GraphService.cpp:77] Authenticating user root from 172.28.0.1:34552
+W20240812 06:52:05.731290    19 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_pool_thread4
+I20240812 06:52:06.568403    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 4 space
+I20240812 06:52:06.568428    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 0 space
+I20240812 06:52:06.568434    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 0 space
+I20240812 06:52:06.568440    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:08.591879    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 10 space
+I20240812 06:52:08.591903    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 0 space
+I20240812 06:52:08.591910    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 0 space
+I20240812 06:52:08.591917    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:08.721438    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_pool_thread0', space id: 7
+I20240812 06:52:08.727785    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_pool_thread2', space id: 9
+I20240812 06:52:08.735216    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_pool_thread4', space id: 11
+I20240812 06:52:08.750092    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57546
+W20240812 06:52:08.752223    21 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread0
+I20240812 06:52:08.757541    21 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57552
+W20240812 06:52:08.761370    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread2
+I20240812 06:52:08.766625    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57570
+W20240812 06:52:08.773663    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread4
+I20240812 06:52:08.775971    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57580
+W20240812 06:52:08.779279    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread6
+I20240812 06:52:08.789983    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57602
+W20240812 06:52:08.792404    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread30
+I20240812 06:52:08.797541    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57618
+W20240812 06:52:08.800278    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread10
+I20240812 06:52:08.805179    21 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57646
+W20240812 06:52:08.807127    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread12
+I20240812 06:52:08.813557    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57670
+W20240812 06:52:08.815527    20 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread14
+I20240812 06:52:08.840507    20 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57692
+W20240812 06:52:08.841769    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread16
+I20240812 06:52:08.858662    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57714
+W20240812 06:52:08.860630    21 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread18
+I20240812 06:52:08.865648    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57738
+W20240812 06:52:08.867331    20 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread20
+I20240812 06:52:08.874814    21 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57760
+W20240812 06:52:08.877115    20 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread22
+I20240812 06:52:08.882675    21 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57782
+W20240812 06:52:08.884413    20 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread24
+I20240812 06:52:08.890111    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57798
+W20240812 06:52:08.891870    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread26
+I20240812 06:52:08.895906    18 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57824
+W20240812 06:52:08.900704    21 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread28
+I20240812 06:52:08.900772    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57848
+W20240812 06:52:08.904160    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread8
+I20240812 06:52:08.907804    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57866
+W20240812 06:52:08.913553    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread32
+I20240812 06:52:08.915181    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57886
+W20240812 06:52:08.920547    21 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread34
+I20240812 06:52:08.921339    18 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57894
+W20240812 06:52:08.925591    19 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread36
+I20240812 06:52:08.948961    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57920
+W20240812 06:52:08.951133    21 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread38
+I20240812 06:52:08.971997    18 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57932
+W20240812 06:52:08.974221    21 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread40
+I20240812 06:52:08.980422    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57942
+I20240812 06:52:08.985605    20 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57968
+W20240812 06:52:08.986371    20 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread42
+W20240812 06:52:08.991948    20 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread44
+I20240812 06:52:08.992887    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:57992
+W20240812 06:52:08.996968    18 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread46
+I20240812 06:52:09.001631    19 GraphService.cpp:77] Authenticating user root from 172.28.0.1:58002
+W20240812 06:52:09.006011    20 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: space_test_session_context_thread48
+I20240812 06:52:09.693030    34 MetaClient.cpp:3263] Load leader of "172.28.2.1":9779 in 10 space
+I20240812 06:52:09.693054    34 MetaClient.cpp:3263] Load leader of "172.28.2.2":9779 in 0 space
+I20240812 06:52:09.693061    34 MetaClient.cpp:3263] Load leader of "172.28.2.3":9779 in 0 space
+I20240812 06:52:09.693068    34 MetaClient.cpp:3269] Load leader ok
+I20240812 06:52:11.757694    19 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread0', space id: 13
+I20240812 06:52:11.770825    19 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread2', space id: 15
+I20240812 06:52:11.785459    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread4', space id: 17
+I20240812 06:52:11.790350    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread6', space id: 19
+I20240812 06:52:11.797263    20 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread30', space id: 21
+I20240812 06:52:11.806785    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread10', space id: 23
+I20240812 06:52:11.811328    19 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread12', space id: 25
+I20240812 06:52:11.819892    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread14', space id: 27
+I20240812 06:52:11.845275    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread16', space id: 29
+I20240812 06:52:11.867507    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread18', space id: 31
+I20240812 06:52:11.874260    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread20', space id: 33
+I20240812 06:52:11.881455    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread22', space id: 35
+I20240812 06:52:11.888540    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread24', space id: 37
+I20240812 06:52:11.897079    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread26', space id: 39
+I20240812 06:52:11.912127    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread28', space id: 41
+I20240812 06:52:11.921087    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread8', space id: 43
+I20240812 06:52:11.930073    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread32', space id: 46
+I20240812 06:52:11.933157    18 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread34', space id: 48
+I20240812 06:52:11.934643    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread36', space id: 49
+I20240812 06:52:11.954798    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread38', space id: 51
+I20240812 06:52:11.981346    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread40', space id: 52
+I20240812 06:52:11.994053    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread42', space id: 55
+I20240812 06:52:12.000178    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread44', space id: 57
+I20240812 06:52:12.008177    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread46', space id: 59
+I20240812 06:52:12.012174    21 SwitchSpaceExecutor.cpp:45] Graph switched to `space_test_session_context_thread48', space id: 61
+I20240812 06:52:12.115293     1 GraphDaemon.cpp:176] Signal 15(Terminated) received, stopping this server
+I20240812 06:52:12.116367    30 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7fc075679028 in thread 0x7fc07a5ea280
+I20240812 06:52:12.117880    31 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7fc075679528 in thread 0x7fc079012280
+I20240812 06:52:12.118211    32 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7fc075679a28 in thread 0x7fc077e15280
+I20240812 06:52:12.118330    33 Acceptor.cpp:527] Dropping all connections from Acceptor=0x7fc075679f28 in thread 0x7fc075396280
+I20240812 06:52:12.119915    37 GraphServer.cpp:74] nebula-graphd on 127.0.0.1:9669 has been stopped
+I20240812 06:52:12.120018     1 GraphDaemon.cpp:161] The graph Daemon stopped
+I20240812 06:52:12.120026     1 GraphServer.cpp:109] The graph server has been stopped

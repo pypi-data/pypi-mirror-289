@@ -1,0 +1,28 @@
+Log file created at: 2024/08/12 06:53:19
+Running on machine: 1e728f1ca951
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20240812 06:53:19.641801     1 MetaDaemon.cpp:137] localhost = "172.28.1.2":9559
+I20240812 06:53:19.645767     1 NebulaStore.cpp:48] Start the raft service...
+I20240812 06:53:19.647439     1 NebulaSnapshotManager.cpp:25] Send snapshot is rate limited to 10485760 for each part by default
+I20240812 06:53:19.699780     1 RaftexService.cpp:46] Start raft service on 9560
+I20240812 06:53:19.699867     1 NebulaStore.cpp:82] Scan the local path, and init the spaces_
+I20240812 06:53:19.699909     1 NebulaStore.cpp:90] Scan path "/data/meta/nebula/0"
+I20240812 06:53:19.699928     1 NebulaStore.cpp:292] Init data from partManager for "172.28.1.2":9559
+I20240812 06:53:19.699945     1 NebulaStore.cpp:417] Create data space 0
+I20240812 06:53:19.738734    75 RocksEngine.cpp:107] open rocksdb on /data/meta/nebula/0/data
+I20240812 06:53:19.759258     1 NebulaStore.cpp:480] Space 0, part 0 has been added, asLearner 0
+I20240812 06:53:19.759335     1 NebulaStore.cpp:75] Register handler...
+I20240812 06:53:19.759351     1 MetaDaemonInit.cpp:106] Waiting for the leader elected...
+I20240812 06:53:19.759362     1 MetaDaemonInit.cpp:118] Leader has not been elected, sleep 1s
+I20240812 06:53:20.759512     1 MetaDaemonInit.cpp:153] Get meta version is 4
+I20240812 06:53:20.759567     1 MetaDaemonInit.cpp:169] Nebula store init succeeded, clusterId 1079019334856601579
+I20240812 06:53:20.759580     1 MetaDaemon.cpp:150] Start http service
+I20240812 06:53:20.759881     1 MetaDaemonInit.cpp:226] Starting Meta HTTP Service
+I20240812 06:53:20.761701    98 WebService.cpp:124] Web service started on HTTP[19559]
+I20240812 06:53:20.761838     1 MetaDaemonInit.cpp:192] Check root user
+I20240812 06:53:20.761898     1 RootUserMan.h:35] God user exists
+I20240812 06:53:20.765776     1 MetaDaemon.cpp:193] The meta daemon start on "172.28.1.2":9559
+I20240812 06:53:20.765797     1 JobManager.cpp:88] Not leader, skip reading remaining jobs
+I20240812 06:53:20.765863     1 JobManager.cpp:64] JobManager initialized
+I20240812 06:53:20.765909   104 JobManager.cpp:150] JobManager::scheduleThread enter
