@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Kahi_post_person_work_cleaning.egg-info/PKG-INFO
+Kahi_post_person_work_cleaning.egg-info/SOURCES.txt
+Kahi_post_person_work_cleaning.egg-info/dependency_links.txt
+Kahi_post_person_work_cleaning.egg-info/requires.txt
+Kahi_post_person_work_cleaning.egg-info/top_level.txt
+kahi_post_person_work_cleaning/Kahi_post_person_work_cleaning.py
+kahi_post_person_work_cleaning/__init__.py
+kahi_post_person_work_cleaning/_version.py
