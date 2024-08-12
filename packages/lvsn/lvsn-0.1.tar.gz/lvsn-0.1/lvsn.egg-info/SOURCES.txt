@@ -1,0 +1,7 @@
+setup.py
+lvsn/__init__.py
+lvsn/main.py
+lvsn.egg-info/PKG-INFO
+lvsn.egg-info/SOURCES.txt
+lvsn.egg-info/dependency_links.txt
+lvsn.egg-info/top_level.txt
