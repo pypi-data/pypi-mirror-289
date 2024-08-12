@@ -1,0 +1,9 @@
+paragraphs
+
+[dev]
+commitizen
+coverage
+pre-commit
+pylint
+pytest
+tox
