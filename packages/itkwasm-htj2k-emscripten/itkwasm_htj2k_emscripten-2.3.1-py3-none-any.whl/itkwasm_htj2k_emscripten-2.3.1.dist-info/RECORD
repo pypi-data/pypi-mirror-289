@@ -1,0 +1,8 @@
+itkwasm_htj2k_emscripten/__init__.py,sha256=A3QsSBixng_WDEdvowm_B9_96GaZubFgygNsCesplSI,310
+itkwasm_htj2k_emscripten/_version.py,sha256=neZxeMmEfjhVZM6xetRikrBdHWt5T5ehL72ZYdPtJ-E,22
+itkwasm_htj2k_emscripten/decode_async.py,sha256=-UC_cbaatRcWcvGvwcZMlZStQE3Rdt3igJDTr2gY7sI,1779
+itkwasm_htj2k_emscripten/encode_async.py,sha256=if0u7iFwzuClwOr2OSu8TRPmLTMrdrATU7Oem6k2zig,2768
+itkwasm_htj2k_emscripten/js_package.py,sha256=-zz2Ei398NZWbIehJCUkqBhI6gj_OgXxOuJcyzdpWH4,193565
+itkwasm_htj2k_emscripten-2.3.1.dist-info/METADATA,sha256=3E8gTJgG9X2KVyLsTjPFDNzadVA947bd5oQxbcCjX5s,1765
+itkwasm_htj2k_emscripten-2.3.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+itkwasm_htj2k_emscripten-2.3.1.dist-info/RECORD,,
