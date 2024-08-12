@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+find_keyword.c
+find_keyword.pyx
+setup.py
+find_keyword_xtvu.egg-info/PKG-INFO
+find_keyword_xtvu.egg-info/SOURCES.txt
+find_keyword_xtvu.egg-info/dependency_links.txt
+find_keyword_xtvu.egg-info/top_level.txt
