@@ -1,0 +1,8 @@
+README.md
+setup.py
+pax_hello/__init__.py
+pax_hello/main.py
+pax_hello.egg-info/PKG-INFO
+pax_hello.egg-info/SOURCES.txt
+pax_hello.egg-info/dependency_links.txt
+pax_hello.egg-info/top_level.txt
