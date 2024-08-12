@@ -1,0 +1,2 @@
+[console_scripts]
+SafePassGen = secure_password.__main__:main
