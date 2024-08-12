@@ -1,0 +1,11 @@
+pywhispercpp
+vosk
+pvorca
+numpy
+sounddevice
+webrtcvad
+textual
+textual-slider
+ollama
+pyperclip
+rich
