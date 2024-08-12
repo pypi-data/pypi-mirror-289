@@ -1,0 +1,2 @@
+[console_scripts]
+topsis-akash-102218072 = topsis_akash_102218072.topsis:main
