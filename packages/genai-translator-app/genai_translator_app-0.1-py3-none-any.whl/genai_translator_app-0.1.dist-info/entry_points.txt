@@ -1,0 +1,3 @@
+[console_scripts]
+translator_app = app:main
+

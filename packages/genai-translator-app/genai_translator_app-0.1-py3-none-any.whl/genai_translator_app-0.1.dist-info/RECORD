@@ -1,0 +1,8 @@
+src/__init__.py,sha256=fED9GIZlkxpWjn6E7Ba3zjijiatRND2Pj59t64af6to,70
+src/logger.py,sha256=f8G6mwOcbTzHTY0Y5MDqf7AkCqW6HXDBPRPQF0sWiOI,1244
+src/prompts.py,sha256=TLlwH31XV_EzgqZXYyl89QP1iuR608wAm1hEO4RzbiU,886
+genai_translator_app-0.1.dist-info/METADATA,sha256=n2biDeOAkLp2MzrnUxRGNYejdM2B84wPEi0toYftD3o,5744
+genai_translator_app-0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+genai_translator_app-0.1.dist-info/entry_points.txt,sha256=FYkStyoBYGK9XBdm1AV6ze_sRLSQuBJ4CvxJYn4fv08,45
+genai_translator_app-0.1.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+genai_translator_app-0.1.dist-info/RECORD,,
