@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: id-region
+Version: 0.0.2
+Summary: find id region from id card
+Home-page: https://github.com/hbx286/id-region.git
+Author: hbx286
+Author-email: hbxmail429@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+## example
+```python
+from id_region import get_id_info
+id_info = get_id_info('110101199003075678')
+'''
+id_info is a dict
+output just like:
+{
+    'sex': int,
+    'birthday': date,
+    'abandoned': False if address_code.get(code['address_code']) else True,
+    'address': '',
+    'country': '中国',
+    'province': 'xx',
+    'city': 'xx',
+    'district': 'xxx'
+}
+'''
+```
