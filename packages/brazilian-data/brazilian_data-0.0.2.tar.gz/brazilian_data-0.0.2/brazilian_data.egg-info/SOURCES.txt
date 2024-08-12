@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+brazilian_data/__init__.py
+brazilian_data/economic_data.py
+brazilian_data/economic_data_collection.py
+brazilian_data/economic_data_process.py
+brazilian_data.egg-info/PKG-INFO
+brazilian_data.egg-info/SOURCES.txt
+brazilian_data.egg-info/dependency_links.txt
+brazilian_data.egg-info/requires.txt
+brazilian_data.egg-info/top_level.txt
