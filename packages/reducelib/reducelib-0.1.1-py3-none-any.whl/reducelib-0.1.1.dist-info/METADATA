@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: reducelib
+Version: 0.1.1
+Summary: Reducelib is a powerful Python library primaraly made for making websites.
+Author: Logan Paxton
+Author-email: loganpaxton6@gmail.com
+Requires-Python: >=3.10.0,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
