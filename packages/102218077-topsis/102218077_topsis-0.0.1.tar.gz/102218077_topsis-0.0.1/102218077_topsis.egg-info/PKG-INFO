@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: 102218077_topsis
+Version: 0.0.1
+Summary: Topsis program
+Author: Shruti
+Author-email: <ishrutisahota@gmail.com>
+Keywords: python
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: opencv-python
+Requires-Dist: pyautogui
+Requires-Dist: pyaudio
+
+TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) is a Python package designed to facilitate multi-criteria decision-making by evaluating and ranking alternatives based on various criteria. It supports data normalization, weight assignment, and computes the Euclidean distances to both ideal and negative-ideal solutions. This method is useful for scenarios like supplier selection, project prioritization, and risk assessment, where multiple factors need to be considered to make an informed decision. The package is easy to integrate into larger systems or use as a standalone tool..
