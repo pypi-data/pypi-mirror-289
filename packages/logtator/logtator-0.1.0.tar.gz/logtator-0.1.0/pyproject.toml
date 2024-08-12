@@ -1,0 +1,30 @@
+[project]
+name = "logtator"
+version = "0.1.0"
+description = "logging dictator"
+authors = [
+    { name = "Martin Zaťko" },
+]
+dependencies = []
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.5.7",
+    "mypy>=1.11.1",
+    "pre-commit-hooks>=4.6.0",
+    "pre-commit>=3.8.0",
+]
