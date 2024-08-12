@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: deltadb
+Version: 0.1.2
+Summary: 
+Author: uname-n
+Author-email: noreply@github.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: deltalake (>=0.18.2,<0.19.0)
+Requires-Dist: polars (>=1.4.1,<2.0.0)
+Requires-Dist: pytest (>=8.3.2,<9.0.0)
+Description-Content-Type: text/markdown
+
+# delta
+
+__delta__ is a lightweight, fast, simple, and massively scalable database based on [__polars__](https://github.com/pola-rs/polars) and [__deltalake__](https://github.com/delta-io/delta-rs) designed to facilitate seamless data operations, offering features like upsert, delete, commit, and version control on your datasets, while leveraging the powerful performance of polars and deltalake.
+
+### pip
+```bash
+pip install deltadb
+```
+
+### usage
+```python
+from deltadb import delta
+
+# connect to a delta table
+db = delta.connect(path="test.delta")
+
+# Upsert data into the table
+db.upsert(
+    table="test_table", primary_key="id", 
+    data=dict(id=1, name="alice")
+)
+
+# Query the data
+result = db.sql("select * from test_table")
+print(result)  # Output: [dict(id=1, name="alice")]
+
+# Commit the changes
+db.commit("test_table")
+```
