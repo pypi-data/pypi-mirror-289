@@ -1,0 +1,2 @@
+[console_scripts]
+topsis-nikhil-102218082 = topsis_nikhil_102218082.topsis:main
