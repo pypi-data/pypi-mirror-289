@@ -1,0 +1,7 @@
+serbiacard/__init__.py,sha256=4BuBSz8oGHgWU0kG2v62IIvJCVWOZH2Zk6fHkKb_A5s,55
+serbiacard/card.dll,sha256=9IOrNm0dD18W9qeaqPj3HeAaZ3-BFa2LQrNouDcGlhg,4889600
+serbiacard/card.py,sha256=GxJ8Z9IBJ18u-oF8jpz6NvPEIGG5_czU_ORT2-GwAsM,8037
+serbiacard/id_card_memory_addresses.py,sha256=vHpuwzgaEk8aaZwdSjxtJsSVyeUzY4ZH7j-AnEeWviA,3079
+serbiacard-0.3.0.dist-info/METADATA,sha256=PVTzUIU44bMxuHNn9kuL1AaDnStjKaaYnEpd4wtz62g,485
+serbiacard-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+serbiacard-0.3.0.dist-info/RECORD,,
