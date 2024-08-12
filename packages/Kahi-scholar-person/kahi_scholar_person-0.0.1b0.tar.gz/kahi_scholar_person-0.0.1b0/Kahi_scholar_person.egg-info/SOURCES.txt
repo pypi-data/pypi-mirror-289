@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Kahi_scholar_person.egg-info/PKG-INFO
+Kahi_scholar_person.egg-info/SOURCES.txt
+Kahi_scholar_person.egg-info/dependency_links.txt
+Kahi_scholar_person.egg-info/requires.txt
+Kahi_scholar_person.egg-info/top_level.txt
+kahi_scholar_person/Kahi_scholar_person.py
+kahi_scholar_person/__init__.py
+kahi_scholar_person/_version.py
+kahi_scholar_person/parser.py
+kahi_scholar_person/process_one.py
