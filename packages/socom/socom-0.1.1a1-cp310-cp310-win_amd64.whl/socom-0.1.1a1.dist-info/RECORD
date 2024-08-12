@@ -1,0 +1,8 @@
+CMakeLists.txt,sha256=w6533-Khtvpj04a2vmbPt_NC01JiD1uS1nU_dzXf2qQ,926
+socom/__init__.py,sha256=dRjRcQTZdJhqG0k2ENzq59DcyyT7r_pyAHe9foDmJ9I,276
+socom/net.py,sha256=ljKbr8lJtVRSMcHYKYqG7zEizu8kk35BWA4Goez7WTk,565
+socom/_multinet.cp310-win_amd64.pyd,sha256=UFn03eSG9BDXkhIjcB_lp74pihV412BR3AQCyP9biYA,1979392
+socom-0.1.1a1.dist-info/LICENSE.txt,sha256=fTqV5eBpeAZO0_jit8j4Ref9ikBSlHJ8xwj5TLg7gFk,7817
+socom-0.1.1a1.dist-info/METADATA,sha256=oqcZXfHi5lfKC3XlgJOCB1l7yH3CN6Vvag5yQaWd7cc,2000
+socom-0.1.1a1.dist-info/WHEEL,sha256=Jr_qyVDoEAnAI5RcZqNdiGEGsXCke4YuTFjHKZdYyb4,98
+socom-0.1.1a1.dist-info/RECORD,,
