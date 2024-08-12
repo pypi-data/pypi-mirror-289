@@ -1,0 +1,30 @@
+[project]
+name = "bian"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    { name = "Meng Xiangzhuo", email = "aumo@foxmail.com" },
+]
+dependencies = [
+    "pandas>=2.2.2",
+    "python-binance>=1.0.19",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ipykernel>=6.29.5",
+]
