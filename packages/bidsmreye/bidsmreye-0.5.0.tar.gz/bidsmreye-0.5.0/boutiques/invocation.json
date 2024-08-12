@@ -1,0 +1,18 @@
+{
+    "bids_dir": [
+        "./tests/data/moae_fmriprep"
+    ],
+    "output_dir": [
+        "./outputs/moae_fmriprep/derivatives"
+    ],
+    "analysis_level": [
+        "participant"
+    ],
+    "command": "all",
+    "log_level": "-vv",
+    "debug": false,
+    "reset_database": true,
+    "force": false,
+    "linear_coreg": true,
+    "model": "1_guided_fixations"
+}

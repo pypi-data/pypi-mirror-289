@@ -1,0 +1,30 @@
+{
+    "bold": {
+        "datatype": "func",
+        "desc": "preproc",
+        "suffix": "^bold$",
+        "extension": "nii.*"
+    },
+    "mask": {
+        "suffix": "mask",
+        "extension": "p"
+    },
+    "no_label_bold": {
+        "desc": "eye",
+        "suffix": "^timeseries$$",
+        "extension": "npz"
+    },
+    "no_label_bold_json": {
+        "desc": "eye",
+        "suffix": "^timeseries$$",
+        "extension": "json"
+    },
+    "eyetrack": {
+        "suffix": "^eyetrack$$",
+        "extension": "tsv"
+    },
+    "eyetrack_qc": {
+        "suffix": "^eyetrack$$",
+        "extension": "json"
+    }
+}
