@@ -1,0 +1,3 @@
+[console_scripts]
+creatio-activity-monitor=creatio_activity_monitor.__main__:main
+
