@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+MagicTK/__init__.py
+MagicTK/animations.py
+MagicTK/base.py
+MagicTK/graphics.py
+MagicTK/tools.py
+MagicTK/widgets.py
+MagicTKTool.egg-info/PKG-INFO
+MagicTKTool.egg-info/SOURCES.txt
+MagicTKTool.egg-info/dependency_links.txt
+MagicTKTool.egg-info/top_level.txt
