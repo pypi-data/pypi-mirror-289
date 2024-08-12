@@ -1,0 +1,16 @@
+README.md
+setup.py
+dnadesign/__init__.py
+dnadesign/cffi_bindings.py
+dnadesign/definitions.h
+dnadesign/fasta_parser.py
+dnadesign/libdnadesign.h
+dnadesign/libdnadesign.so
+dnadesign.egg-info/PKG-INFO
+dnadesign.egg-info/SOURCES.txt
+dnadesign.egg-info/dependency_links.txt
+dnadesign.egg-info/not-zip-safe
+dnadesign.egg-info/requires.txt
+dnadesign.egg-info/top_level.txt
+tests/__init__.py
+tests/test_fasta_parser.py
