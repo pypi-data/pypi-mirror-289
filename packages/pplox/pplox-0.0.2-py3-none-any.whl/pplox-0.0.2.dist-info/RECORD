@@ -1,0 +1,11 @@
+pplox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pplox/cli.py,sha256=QZdiQo05rmwfBfpX7PbGFp3Pa9Hqr5F8hZm3-edly9Q,724
+pplox/error_reporter.py,sha256=jj6kE9NgjjLMBxUx67O-A1rRVNedhGZcA7KpuAknptk,329
+pplox/scanner.py,sha256=ekaPCgTAmTP-ve3EorlCOhIHuVvqq_xGaV2GjNhLSa4,5186
+pplox/token.py,sha256=A3RFiGfSAsdjplXSuH2N3-bG2BuRCpMNmXNHR6hh-5c,398
+pplox/token_type.py,sha256=joOdQeGMkW45cyjW7jmVaU09mbP4g0N7_XfuseXqkaA,892
+pplox-0.0.2.dist-info/METADATA,sha256=L38IzJ5H5x0jh8o6Fv0Rra_SAxU2N1W6L7h452JXp6w,713
+pplox-0.0.2.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+pplox-0.0.2.dist-info/entry_points.txt,sha256=y-jEfaxVfIOoGlYUe3xr_NFmcrIxh9ruuMwON2VIhN0,41
+pplox-0.0.2.dist-info/top_level.txt,sha256=EvV_pT5mLRWkzHpDtvqKm0ry2ehk8gTCXnT38JXt1AY,6
+pplox-0.0.2.dist-info/RECORD,,
