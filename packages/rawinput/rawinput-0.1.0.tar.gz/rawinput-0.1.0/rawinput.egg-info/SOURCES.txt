@@ -1,0 +1,6 @@
+rawinput.py
+setup.py
+rawinput.egg-info/PKG-INFO
+rawinput.egg-info/SOURCES.txt
+rawinput.egg-info/dependency_links.txt
+rawinput.egg-info/top_level.txt
