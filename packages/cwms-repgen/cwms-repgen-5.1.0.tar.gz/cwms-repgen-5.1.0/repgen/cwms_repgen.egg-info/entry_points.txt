@@ -1,0 +1,4 @@
+[console_scripts]
+repgen = repgen5:main
+repgen5 = repgen5:main
+
