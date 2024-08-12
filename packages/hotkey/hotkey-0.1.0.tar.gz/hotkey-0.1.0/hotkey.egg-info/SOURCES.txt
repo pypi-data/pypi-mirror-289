@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+hotkey/__init__.py
+hotkey/hotkey.py
+hotkey.egg-info/PKG-INFO
+hotkey.egg-info/SOURCES.txt
+hotkey.egg-info/dependency_links.txt
+hotkey.egg-info/top_level.txt
+tests/__init__.py
