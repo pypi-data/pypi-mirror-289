@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlmodel-zod"
+version = "0.1.0"
+description = "A CLI tool to generate Zod schemas from SQLModel models"
+authors = [
+    { name = "OSS Mafia", email = "dev@oss-mafia.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+keywords = ["sqlmodel", "zod"]
+
+[project.scripts]
+sqlmodel-zod = "sqlmodel_zod.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/OSSMafia/sqlmodel-zod-generator"
+"Source" = "https://github.com/OSSMafia/sqlmodel-zod-generator"
+
+[tools.setuptools.packages.find]
+where = "sqlmodel_zod/"
+include = ["sqlmodel_zod"]
+namespaces = true
