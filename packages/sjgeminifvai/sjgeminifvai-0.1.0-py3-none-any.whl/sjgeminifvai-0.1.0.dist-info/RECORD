@@ -1,0 +1,15 @@
+sjgeminifvai/__init__.py,sha256=1NnRplb9VqmO50Ut-HrHP3HpwuuP1KYEsFYk-Q-A-ik,87
+sjgeminifvai/jclass/__init__.py,sha256=tfadGAHvmsstpHhi3hnThKL5W8rch3srbN2xqxwLqDY,200
+sjgeminifvai/jclass/blokthreshold.py,sha256=LkVcn-YzSn92bANz_3j4eJEHrGZ40NngLcq1crAs-jM,834
+sjgeminifvai/jclass/contentbuilder.py,sha256=s8162rpCB6j6nsWWRaLJXqqBicd5InaXkDJm2oHbNZI,1119
+sjgeminifvai/jclass/fvai.py,sha256=HOfSFbAvG0iUgJQ2soorNbwkukQHSL1shxznP-n-2rM,2933
+sjgeminifvai/jclass/gcbuilder.py,sha256=WcIln0AoEJD2rKDDwcR3MjgrApn3r_tdnXckzRioIj0,784
+sjgeminifvai/jclass/gcr.py,sha256=VxFeMdSB-25w3kBHkv3SB9pBq9y1MEm3k2qdht5Nq9I,847
+sjgeminifvai/jclass/gmf.py,sha256=MtNOg78VJP0PA2ZwFhktvTVNSREM6J0ud3G3EVULcdU,1284
+sjgeminifvai/jclass/harmcategory.py,sha256=BcZlDotj8LugBsespwrSt_5q-3-M1fuLVW7x8dWAs5o,840
+sjgeminifvai/jclass/optionals.py,sha256=9qDn4ukOVk5PlvJzz6nckTQlTyTqI4P-BeIcerNVsT8,124
+sjgeminifvai/jclass/safetysettings.py,sha256=-F4RW25mO3awGBec22cEyfNyl9PJAP04eaM32gEUjG0,536
+sjgeminifvai/jinterface/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sjgeminifvai-0.1.0.dist-info/METADATA,sha256=eCw388vHPu_KEg5ailHEGZSGX_6GY3HfMN4ny9O0Ryg,6614
+sjgeminifvai-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sjgeminifvai-0.1.0.dist-info/RECORD,,
