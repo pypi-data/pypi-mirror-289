@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+antivirus_microservice.egg-info/PKG-INFO
+antivirus_microservice.egg-info/SOURCES.txt
+antivirus_microservice.egg-info/dependency_links.txt
+antivirus_microservice.egg-info/requires.txt
+antivirus_microservice.egg-info/top_level.txt
