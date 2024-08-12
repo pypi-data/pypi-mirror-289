@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: bluetracker-hass-mqtt
+Version: 0.1.2
+Summary: Monitor Bluetooth Classic devices and integrate them into Home Assistant via MQTT.
+Author: essel-dev
+License: MIT License
+        
+        Copyright (c) 2024 essel-dev
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Bug Tracker, https://github.com/essel-dev/bluetracker-hass-mqtt/issues
+Project-URL: Changelog, https://github.com/essel-dev/bluetracker-hass-mqtt/releases
+Project-URL: Documentation, https://bluetracker-hass-mqtt.readthedocs.io/
+Project-URL: GitHub, https://github.com/essel-dev/bluetracker-hass-mqtt
+Keywords: device tracker,bluetooth classic,home assistant,raspberry pi,mqtt
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Typing :: Typed
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.11
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: paho-mqtt ==2.1.*
+Requires-Dist: requests ==2.32.*
+Provides-Extra: dev
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: sphinx-copybutton ; extra == 'dev'
+
+BlueTracker
+===========
+
+
+.. image:: https://github.com/essel-dev/bluetracker-hass-mqtt/actions/workflows/tests.yml/badge.svg
+    :target: https://github.com/essel-dev/bluetracker-hass-mqtt/actions/workflows/tests.yml
+
+.. image:: https://github.com/essel-dev/bluetracker-hass-mqtt/actions/workflows/pypi.yml/badge.svg
+    :target: https://github.com/essel-dev/bluetracker-hass-mqtt/actions/workflows/pypi.yml
+
+|
+
+
+.. include_intro_start
+
+BlueTracker is a Python tool designed to seamlessly integrate your Bluetooth devices
+into Home Assistant. It periodically scans for nearby Bluetooth devices and reports
+their presence or absence to Home Assistant via MQTT.
+
+.. include_intro_end
+
+
+See it in action:
+
+.. image:: https://raw.githubusercontent.com/essel-dev/bluetracker-hass-mqtt/master/docs/source/_static/example-mqtt.png
+  :target: https://raw.githubusercontent.com/essel-dev/bluetracker-hass-mqtt/master/docs/source/_static/example-mqtt.png
+  :alt: BlueTracker device state example
+
+|
+
+.. image:: https://raw.githubusercontent.com/essel-dev/bluetracker-hass-mqtt/master/docs/source/_static/example-attributes.png
+  :target: https://raw.githubusercontent.com/essel-dev/bluetracker-hass-mqtt/master/docs/source/_static/example-attributes.png
+  :alt: BlueTracker device attributes example
+
+
+Resources
+---------
+
+- `bluetracker-hass-mqtt @ Read the Docs <https://bluetracker-hass-mqtt.readthedocs.io/>`_
+- `bluetracker-hass-mqtt @ PyPI <https://pypi.org/project/bluetracker-hass-mqtt/>`_
