@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: 102218026-topsiss
+Version: 1.0.0
+Summary: ranking according to your prefrence
+Home-page: https://github.com/Shubhamaggarwal6/calculate_performance_scores
+Author: shubham
+Author-email: 09shubhamaggarwal@gmial.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# Upper-case-change
+ranking according to your preferances
+## Installation
+```pip install topsiss_102218026```
+
+## How to use it?
+enter the value of weights and sign of impact 
+range of weight is in 0 to 1
+imapct must be '+','-'
+## License
+
+Â© 2020 shubham aggarwal
+
+This repository is licensed under the MIT license. See LICENSE for details.
