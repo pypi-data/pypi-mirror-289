@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pygments-simtalk"
+version = "0.1.0"
+description = "A Pygments lexer for the SimTalk programming language."
+authors = ["Sean Reed <sean@sean-reed.com>"]
+readme = "README.md"
+packages = [{include = "pygments_simtalk"}]
+
+[tool.poetry.plugins."pygments.lexers"]
+simtalk_lexer = "pygments_simtalk.simtalk_lexer:SimTalkLexer"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pygments = "^2.18.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+isort = "^5.13.2"
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
