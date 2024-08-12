@@ -1,0 +1,9 @@
+paho-mqtt==2.1.*
+requests==2.32.*
+
+[dev]
+pre-commit
+tox
+sphinx
+sphinx-rtd-theme
+sphinx_copybutton
