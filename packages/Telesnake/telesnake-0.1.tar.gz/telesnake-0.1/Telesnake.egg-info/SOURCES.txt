@@ -1,0 +1,17 @@
+setup.py
+Telesnake.egg-info/PKG-INFO
+Telesnake.egg-info/SOURCES.txt
+Telesnake.egg-info/dependency_links.txt
+Telesnake.egg-info/requires.txt
+Telesnake.egg-info/top_level.txt
+telesnake/__init__.py
+telesnake/bot.py
+telesnake/cog.py
+telesnake/context.py
+telesnake/types/__init__.py
+telesnake/types/callback.py
+telesnake/types/chat.py
+telesnake/types/message.py
+telesnake/types/user.py
+telesnake/utils/__init__.py
+telesnake/utils/keyboard.py
