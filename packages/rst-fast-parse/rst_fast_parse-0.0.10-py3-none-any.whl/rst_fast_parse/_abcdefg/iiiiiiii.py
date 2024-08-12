@@ -1,0 +1,39 @@
+from __future__ import annotations
+import re
+from rst_fast_parse._abcdefg.nnnnnnnn import gAAAAABmuVIfcJJ36pcvWvwZ4AvUrDnMqNaJjQhhOL73MngXzH5gCexj5ACCAiwJ6ZBYbf8xO_fGQ63WLtfgLJ3zkdAw117zBQ__
+from rst_fast_parse.core import gAAAAABmuVIfPw1MR29_WhZNGCi3Q8FEwRFlbI3nEb7WlGptd1PJMphv9DnNDT5S5_bxEA4hslOwR4nYUYkVeZ5eGsJmzvASR4_HNP9Omkl_Jx_yXd9iRLs_, gAAAAABmuVIfanHDr_DkOsfdtlLwNVSLjxE_lmhdlo_dWcJ6jNpVRkjsuu9j2TJrRXBxJ_CvimAiNYWtIjjwYJ3Cc0rn35_H1w__, gAAAAABmuVIfZaVSbKyFlYJr0ekNr2t_Jrz7ijtSG_SjOCgPZnZzzo7KFR0Yh26ZqEgWw_08pVV2qINoQ5wCkn6BNf81oGst9zrcv_vlMHLSrh5i3DNOwNc_, gAAAAABmuVIfN0l2TcdJP_L82Pdsk1CA_7f5myp0bAlzwyCicFleRAxfCC8S9b9oEjbjpJ1PlWSv56d6mzx6yK_VbsMFTV9lLg__
+from rst_fast_parse.elements import ListElement, ListItemElement
+from rst_fast_parse._hijklmn.block import gAAAAABmuVIfd2cDTlrvn0ufJ2zS87iPJK1_lWN2KOmjiIIUbd_llFEjKbMzcU823RJ6uljROpPwI7ved6FQFNDWhF47GoXCQVA5ymxnrdXAuprlv6C_smo_
+from rst_fast_parse.source import gAAAAABmuVIfn8_QoZZda_B1ee7ZSZOU9HYQ3WCA_RfcyKsUPfTrulwxfbLz_wAf1h3l5WJTwf8xOwzWW1SaFPNclPosK0zq7A__
+from rst_fast_parse.utils.diagnostics import gAAAAABmuVIf5_jpL3d0xe3TQK6anR2EKlj5nhNserDOdUxbttLdKqbaeAybrlGvZ9LEiPUHOLs9youHdAAMatj8dfRTLkPFO_snaAjYhoPpj_C_FplgNJI_
+
+def gAAAAABmuVIfR5O0hq_TeRl2z4L_AOBo1v3MJl6VeG2Mz1R4MVDMJQlFFlg9PSth93A__ZOeu5bAqA57QNkqtn7XH5wAx85qAQJkq65nY4dPrOmV1iDUBJc_(source: gAAAAABmuVIfn8_QoZZda_B1ee7ZSZOU9HYQ3WCA_RfcyKsUPfTrulwxfbLz_wAf1h3l5WJTwf8xOwzWW1SaFPNclPosK0zq7A__, parent: gAAAAABmuVIfN0l2TcdJP_L82Pdsk1CA_7f5myp0bAlzwyCicFleRAxfCC8S9b9oEjbjpJ1PlWSv56d6mzx6yK_VbsMFTV9lLg__, diagnostics: gAAAAABmuVIfZaVSbKyFlYJr0ekNr2t_Jrz7ijtSG_SjOCgPZnZzzo7KFR0Yh26ZqEgWw_08pVV2qINoQ5wCkn6BNf81oGst9zrcv_vlMHLSrh5i3DNOwNc_, context: gAAAAABmuVIfanHDr_DkOsfdtlLwNVSLjxE_lmhdlo_dWcJ6jNpVRkjsuu9j2TJrRXBxJ_CvimAiNYWtIjjwYJ3Cc0rn35_H1w__, /) -> gAAAAABmuVIfPw1MR29_WhZNGCi3Q8FEwRFlbI3nEb7WlGptd1PJMphv9DnNDT5S5_bxEA4hslOwR4nYUYkVeZ5eGsJmzvASR4_HNP9Omkl_Jx_yXd9iRLs_:
+    if not (_gAAAAABmuVIfncMy6dT6FMHEGGwByexwJCKMmI3Fpu3qtKS5x69BWXw_3Cfe9SiBrWc_1S0ALqLCzbg8iMGdcj9gpfgGXAz_GA__ := source.gAAAAABmuVIfncMy6dT6FMHEGGwByexwJCKMmI3Fpu3qtKS5x69BWXw_3Cfe9SiBrWc_1S0ALqLCzbg8iMGdcj9gpfgGXAz_GA__):
+        return gAAAAABmuVIfPw1MR29_WhZNGCi3Q8FEwRFlbI3nEb7WlGptd1PJMphv9DnNDT5S5_bxEA4hslOwR4nYUYkVeZ5eGsJmzvASR4_HNP9Omkl_Jx_yXd9iRLs_.gAAAAABmuVIflyJJjUongu_6DQvTNEStLlrdGg7Tgaxg62ePuVW6ZFuC36P4oEJ34kIf_TkN0JBkJwqf7cAwOGE_B0LZqJzVLw__
+    if not (_ := re.match(gAAAAABmuVIfd2cDTlrvn0ufJ2zS87iPJK1_lWN2KOmjiIIUbd_llFEjKbMzcU823RJ6uljROpPwI7ved6FQFNDWhF47GoXCQVA5ymxnrdXAuprlv6C_smo_, _gAAAAABmuVIfncMy6dT6FMHEGGwByexwJCKMmI3Fpu3qtKS5x69BWXw_3Cfe9SiBrWc_1S0ALqLCzbg8iMGdcj9gpfgGXAz_GA__.content)):
+        return gAAAAABmuVIfPw1MR29_WhZNGCi3Q8FEwRFlbI3nEb7WlGptd1PJMphv9DnNDT5S5_bxEA4hslOwR4nYUYkVeZ5eGsJmzvASR4_HNP9Omkl_Jx_yXd9iRLs_.gAAAAABmuVIf_a25Qj_GkfWtn_mkZHayuE0P0_yNO6t3e3ERR4eciDjL1LW_ET7DN6NQ_8BOLRK4dFzMzHRpaC1w2GCo8YCkFA__
+    items: list[ListItemElement] = []
+    while (gAAAAABmuVIfncMy6dT6FMHEGGwByexwJCKMmI3Fpu3qtKS5x69BWXw_3Cfe9SiBrWc_1S0ALqLCzbg8iMGdcj9gpfgGXAz_GA__ := source.gAAAAABmuVIfncMy6dT6FMHEGGwByexwJCKMmI3Fpu3qtKS5x69BWXw_3Cfe9SiBrWc_1S0ALqLCzbg8iMGdcj9gpfgGXAz_GA__):
+        if gAAAAABmuVIfncMy6dT6FMHEGGwByexwJCKMmI3Fpu3qtKS5x69BWXw_3Cfe9SiBrWc_1S0ALqLCzbg8iMGdcj9gpfgGXAz_GA__.gAAAAABmuVIfkFxbCqNYbRuFdouu_r6feqTsiw61cRZGCux2fLb9Cm7ZR6_3eOCL5erbwhbttfjBgD0K9AmIgM8asyDwVwvmXQ__:
+            source.gAAAAABmuVIfTCJjbwXcXMJV5Dw8XlNnlPqU2RodK8L6jdsswNmMD_pQvWclTZ_rphENmPlQuU_iT7Hkoz_XP8H8iCrAzHrrng__()
+            continue
+        if (match := re.match(gAAAAABmuVIfd2cDTlrvn0ufJ2zS87iPJK1_lWN2KOmjiIIUbd_llFEjKbMzcU823RJ6uljROpPwI7ved6FQFNDWhF47GoXCQVA5ymxnrdXAuprlv6C_smo_, gAAAAABmuVIfncMy6dT6FMHEGGwByexwJCKMmI3Fpu3qtKS5x69BWXw_3Cfe9SiBrWc_1S0ALqLCzbg8iMGdcj9gpfgGXAz_GA__.content)):
+            initial_index = source.gAAAAABmuVIf29HELQwbeTnKWj8Aa9ZQXX5B_XzLJWGyOaij96gaZFNk3Bzg1XCHmGoUm6OgIVibPO4yZD9QFw_KLRpnDk3nJA__
+            content = source.gAAAAABmuVIfMmNjQaTNA5H0Iq0fJvcEHk2FfmwFAb7cVjARLRwAZR_FIxZLBWf7iA9YdQcaCpxdp5ZFhTEsGWMaIFtV8SFH1Hs1FFhGzdjGP_L8qW1kuhA_(first_indent=match.end(0), advance=True)
+            if not content.gAAAAABmuVIfvD5pwNUNjstTh4IRN6o7FJpNvDxxg6STLJ_eS9r_6K03kUD88YtrdnVjKJ8AiYQGFpktirNeo3HYYAzliGGJ_g__():
+                source.gAAAAABmuVIfNhVy2kdp_TjkHrjyAqtQllsjdSPJHwDFeZ726HMImjcLltlhkrQrPdI4kIXgOv_4aOvAm6QsXyQ99L6_zWV67k_uK2nIA3lEXvHAji3MDjM_(initial_index)
+                if items:
+                    parent.append(ListElement('option_list', items))
+                    gAAAAABmuVIf5_jpL3d0xe3TQK6anR2EKlj5nhNserDOdUxbttLdKqbaeAybrlGvZ9LEiPUHOLs9youHdAAMatj8dfRTLkPFO_snaAjYhoPpj_C_FplgNJI_(diagnostics, source, 'Option list')
+                return gAAAAABmuVIfcJJ36pcvWvwZ4AvUrDnMqNaJjQhhOL73MngXzH5gCexj5ACCAiwJ6ZBYbf8xO_fGQ63WLtfgLJ3zkdAw117zBQ__(source, parent, diagnostics, context)
+            list_item = ListItemElement((gAAAAABmuVIfncMy6dT6FMHEGGwByexwJCKMmI3Fpu3qtKS5x69BWXw_3Cfe9SiBrWc_1S0ALqLCzbg8iMGdcj9gpfgGXAz_GA__.line, gAAAAABmuVIfncMy6dT6FMHEGGwByexwJCKMmI3Fpu3qtKS5x69BWXw_3Cfe9SiBrWc_1S0ALqLCzbg8iMGdcj9gpfgGXAz_GA__.line if content.gAAAAABmuVIfMn8K7QZmUIjVcVlv1WC_Ci3h7ngYNG_I3wanrkeYE_isiAGlmCVyiI_5nA73AqYnYhP1Xh1njfjCR1_g5ZFrGg__ is None else content.gAAAAABmuVIfMn8K7QZmUIjVcVlv1WC_Ci3h7ngYNG_I3wanrkeYE_isiAGlmCVyiI_5nA73AqYnYhP1Xh1njfjCR1_g5ZFrGg__.line))
+            items.append(list_item)
+            context.gAAAAABmuVIf_PwOm7Pp40eA1eV0Q5AYKRkV_MKySOtmIWEonuuP8hiLYo3SqjupoxuURTLDtLIiZv7YkUWLiTJaN3Anc_D8Jw__(content, list_item, diagnostics)
+            source.gAAAAABmuVIfTCJjbwXcXMJV5Dw8XlNnlPqU2RodK8L6jdsswNmMD_pQvWclTZ_rphENmPlQuU_iT7Hkoz_XP8H8iCrAzHrrng__()
+        else:
+            source.gAAAAABmuVIfPW0BtsCJcRQmCEwEzU5ZKQShiA33Q8gnGVUFdlWiwg32f5e_xbArUA7m_CRx9xgk_OdUS_V5j_3lhtopw7Mssw__()
+            break
+    if items:
+        parent.append(ListElement('option_list', items))
+        gAAAAABmuVIf5_jpL3d0xe3TQK6anR2EKlj5nhNserDOdUxbttLdKqbaeAybrlGvZ9LEiPUHOLs9youHdAAMatj8dfRTLkPFO_snaAjYhoPpj_C_FplgNJI_(diagnostics, source, 'Option list')
+    return gAAAAABmuVIfPw1MR29_WhZNGCi3Q8FEwRFlbI3nEb7WlGptd1PJMphv9DnNDT5S5_bxEA4hslOwR4nYUYkVeZ5eGsJmzvASR4_HNP9Omkl_Jx_yXd9iRLs_.gAAAAABmuVIf26PxlIKRwpnbh3_5RJ8X8v5UqKh26G7FkgbijHc1wjZRx1ymoelyoYHqWOO9yzuu8KYjP045HyQ0RG6USv5xJg__
