@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/mapithma/__init__.py
+src/mapithma/__main__.py
+src/mapithma.egg-info/PKG-INFO
+src/mapithma.egg-info/SOURCES.txt
+src/mapithma.egg-info/dependency_links.txt
+src/mapithma.egg-info/top_level.txt
