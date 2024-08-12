@@ -1,0 +1,2 @@
+yhttp<5,>=3.5.2
+psycopg2
