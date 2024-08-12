@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: SEMALEX
+Version: 0.1.0
+Summary: A comprehensive evaluation metric designed to measure the weighted similarity score by prioritizing semantic capture while also considering lexical alignment.
+Home-page: https://github.com/jhaayush2004/SemaLex
+Author: Ayush Shaurya Jha
+Author-email: shauryasphinx@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: sentence-transformers
+
