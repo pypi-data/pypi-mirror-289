@@ -1,0 +1,15 @@
+pymathics/natlang/__init__.py,sha256=4K5pSQDONjLSCPjmFPWePqJm5Eyef8fAZbFkUkyLxRQ,2237
+pymathics/natlang/linguistic_data.py,sha256=qfImeH8xD0iW1j11ex8BlwTq4VLIZyUauyl4_iJEqiQ,15195
+pymathics/natlang/manipulate.py,sha256=6NL_djHYgm-ump_znvGdIqJO73mY0mgzuFE1Up1oh44,812
+pymathics/natlang/nltk.py,sha256=2G2-0GLaEGxNRvCuhGqljUrlRw9IRY5vTXuO5HSQVm8,10532
+pymathics/natlang/normalization.py,sha256=gabbP1jbhvg2Lspsjsl4ZClYjQXBdV97GuG_HKBPxb4,10467
+pymathics/natlang/spacy.py,sha256=dncSucChck0xo74BQ9Vjb4b3IUfmRDPkl9QifIUxbZs,7631
+pymathics/natlang/textual_analysis.py,sha256=XAgOFwfotnByVYiGYqqwWISO3bVLt2uChhfk0w4Ab7s,11461
+pymathics/natlang/translation.py,sha256=iUy7ip-x09FU9dCNUGHoVIRwxIuSzMOW9vkwJWHPO_Y,1431
+pymathics/natlang/util.py,sha256=fTZmDSKaZBa8pe09enxhFkmHFNF7iAqFjpsoW7JZdtk,177
+pymathics/natlang/version.py,sha256=rZ3PVnaalEfRXkXaTGz3DOR3_vk9mmC_sikWdVzMbpI,206
+pymathics_natlang-7.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pymathics_natlang-7.0.0.dist-info/METADATA,sha256=F_TYJWzBFQeDtSPh_oSky1TSploKVd1QPekj8t-b3lY,4936
+pymathics_natlang-7.0.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+pymathics_natlang-7.0.0.dist-info/top_level.txt,sha256=oc3yoMM4e3_a3Q7ZNGHphW6Tm5gAuE8pPWJ6cioE9rs,10
+pymathics_natlang-7.0.0.dist-info/RECORD,,
