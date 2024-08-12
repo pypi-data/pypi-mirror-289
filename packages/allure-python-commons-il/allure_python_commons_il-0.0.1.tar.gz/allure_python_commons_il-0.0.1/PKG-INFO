@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: allure-python-commons-il
+Version: 0.0.1
+Summary: ('Contains the API for end users as well as helper functions and classes to build Allure adapters for Python test frameworks',)
+Home-page: https://allurereport.org/
+Author: Qameta Software Inc., Stanislav Seliverstov
+Author-email: sseliverstov@qameta.io
+License: Apache-2.0
+Project-URL: Source, https://github.com/allure-framework/allure-python
+Keywords: allure reporting report-engine
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: attrs>=16.0.0
+Requires-Dist: pluggy>=0.4.0
+
+## Allure Common API
+
+[Копия проекта allure python commons 2.13.5](https://pypi.org/project/allure-python-commons/) 
+[Копия проекта allure-python 2.13.5](https://github.com/allure-framework/allure-python) 
+
+---
+
+## Изменения
