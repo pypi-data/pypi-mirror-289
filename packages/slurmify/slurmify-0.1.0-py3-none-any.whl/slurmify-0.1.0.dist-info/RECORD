@@ -1,0 +1,9 @@
+slurmify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slurmify/cli.py,sha256=tfWrWw8mExPJ4KCAisulT_0YmGPSV1Da7e3KhQEpm2c,7758
+slurmify/job_submission.py,sha256=0-ARdzSzfan0pbtCmt1D-OKkxbC7kr-xSrbkzOZx8sw,12300
+slurmify-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+slurmify-0.1.0.dist-info/METADATA,sha256=3AqzjnEk6CSXteBjrztdxd_UYh0GEzFYJcpedjLzQfs,2249
+slurmify-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+slurmify-0.1.0.dist-info/entry_points.txt,sha256=bmZkIcIw74wHSBs75pZ2CDRcsvkKLFvM3FKNyotWO4s,47
+slurmify-0.1.0.dist-info/top_level.txt,sha256=sd66m-FYkLbaLLtOG7MyQyjUk2yZ_NjmK6swbADjbq8,9
+slurmify-0.1.0.dist-info/RECORD,,
