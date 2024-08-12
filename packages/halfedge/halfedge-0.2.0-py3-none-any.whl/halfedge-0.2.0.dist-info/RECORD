@@ -1,0 +1,12 @@
+halfedge/__init__.py,sha256=XuyK1eJ6mn_0Y7GYZ9yZKGjUf2lBDr31u8l_pW9q49k,502
+halfedge/half_edge_constructors.py,sha256=AVxbZRuqEgjaWut3R7FfJBLid-9eDPscUQNoFh_gwrQ,7850
+halfedge/half_edge_elements.py,sha256=6PkPjGxe_0FYSWXi5MY8Yp4an7yYMWir8MPZn8QlUOc,18042
+halfedge/half_edge_object.py,sha256=Cc1t_hy2tF52O9iD5tvZN6_w4H7Wt9hwDGFLdBqUxr4,28451
+halfedge/half_edge_querries.py,sha256=q5xVOFdpw7t6fhs-Z8yF5j3RlG4DOrOgoLbBsAfkm4A,5179
+halfedge/py.typed,sha256=MsSFjiLMLJZ7QhUPpVBWKiyDnCzryquRyr329NoCACI,2
+halfedge/type_attrib.py,sha256=61HLkMlvPYbjT6ijaKms-3z9c-844sS8j3QBKYwA720,15980
+halfedge/validations.py,sha256=FhUv_J7XcaAduyudYGmi7ZL1tEqwJoCxKZwJU2zQolg,4512
+halfedge-0.2.0.dist-info/METADATA,sha256=bj7tyx2nCeNx2wNGbDjJwboGiAhSl5Unc6OpzZAq0uk,7411
+halfedge-0.2.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+halfedge-0.2.0.dist-info/top_level.txt,sha256=iqphKHiIR4DfFMs14-gkFOWTXVkRWfGmDZmCYHhuoFM,9
+halfedge-0.2.0.dist-info/RECORD,,
