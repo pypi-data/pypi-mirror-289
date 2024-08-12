@@ -1,0 +1,3 @@
+[console_scripts]
+send-aa-sms=aasms.send-aa-sms:run
+
