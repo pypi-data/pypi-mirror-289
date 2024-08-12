@@ -1,0 +1,8 @@
+pyodr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyodr/cli.py,sha256=eQ7prtZzQb7jbIR088I6FoCX7-qSH7akcQ3sVn_8qg0,1050
+pyodr/core.cpython-310-darwin.so,sha256=chIo2daXNymX8wQcAbF0F7PPgWonCa8js1nz_3SPSks,2536696
+pyodr-0.0.1.post1.dist-info/RECORD,,
+pyodr-0.0.1.post1.dist-info/WHEEL,sha256=NULSiJMmGENgN7vW33ei8Ee-lhNyxLwjAdiXiWWmqwA,106
+pyodr-0.0.1.post1.dist-info/entry_points.txt,sha256=zBBPPcawkHhd-no53b91ubyCZcEG30yRO4kcoudzLQM,41
+pyodr-0.0.1.post1.dist-info/top_level.txt,sha256=41U3BwaSkIQSJvkmxMlZlLYPmthzU9okAZLTl_6_TOM,6
+pyodr-0.0.1.post1.dist-info/METADATA,sha256=pwmP6z5HvLXLgONGm6xAuMma83hZz18jYr50xe8Lgy8,577
