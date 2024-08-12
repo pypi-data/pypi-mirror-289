@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: no_pyide
+Version: 0.0.0
+Summary: A barebones web code editor for python.
+Author-email: Simon Vedaa <simvedaa@gmail.com>
+Project-URL: Homepage, https://github.com/simsam8/no-pyide
+Project-URL: Issues, https://github.com/simsam8/no-pyide/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi[standard]
+
+# py-noide
+
+Barebones and minimalistic web code editor for Python.
+Not intended to actually be used by anyone.
+Only created to learn how to package python packages.

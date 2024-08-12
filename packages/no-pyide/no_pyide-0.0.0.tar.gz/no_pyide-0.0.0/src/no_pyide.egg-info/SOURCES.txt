@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/no_pyide/__init__.py
+src/no_pyide/__main__.py
+src/no_pyide/code.py
+src/no_pyide.egg-info/PKG-INFO
+src/no_pyide.egg-info/SOURCES.txt
+src/no_pyide.egg-info/dependency_links.txt
+src/no_pyide.egg-info/entry_points.txt
+src/no_pyide.egg-info/requires.txt
+src/no_pyide.egg-info/top_level.txt
+src/no_pyide/templates/index.html
+src/no_pyide/templates/results.html
