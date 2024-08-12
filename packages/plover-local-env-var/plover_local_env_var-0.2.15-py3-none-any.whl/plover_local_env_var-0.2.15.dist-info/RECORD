@@ -1,0 +1,14 @@
+plover_local_env_var/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plover_local_env_var/extension.py,sha256=zCqDYwpjvUkDPGgTJv3DYEA_pe4-VIbjtSGCnHExlKU,2577
+plover_local_env_var/config/__init__.py,sha256=oDCGAcYzugJP0UOAWc72YxheIB0oYdflF3fDngzA_QQ,181
+plover_local_env_var/config/actions.py,sha256=Gsyrx_nZeeh_r_EvLkbjF-ZbBieXtgt5rlMRIhdm_Dg,1356
+plover_local_env_var/config/file.py,sha256=26GBKOiUcFWT42y_UfbIQQFDCafhvZpUqQRqW34KXIo,847
+plover_local_env_var/env_var/__init__.py,sha256=m6osOPcOIWk4nsYvQKLVdlZp38CHUwMn4dx-jERnw4k,215
+plover_local_env_var/env_var/expander.py,sha256=4O8Ld0LHIWRoD9FKFqlT9uf5QfsDdlQe5SDocBQvA8Y,1749
+plover_local_env_var-0.2.15.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+plover_local_env_var-0.2.15.dist-info/METADATA,sha256=7T0llBN8oXT_tkPGJE1lIb8ZDUQxjhPsSx_1nqi3CCY,8214
+plover_local_env_var-0.2.15.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+plover_local_env_var-0.2.15.dist-info/entry_points.txt,sha256=IgcoaDkl9NDz-ogJRNgbfQIPD7QxukhNNFcjan1X6Dw,85
+plover_local_env_var-0.2.15.dist-info/top_level.txt,sha256=NpLAoEln5iNaVt98zZKLUCPb0UvnK8SGnN0wbS_FAw4,21
+plover_local_env_var-0.2.15.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+plover_local_env_var-0.2.15.dist-info/RECORD,,
