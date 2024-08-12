@@ -1,0 +1,2 @@
+[console_scripts]
+fastapi_cli_command = fastapi_cli_command.cli.cli:cli
