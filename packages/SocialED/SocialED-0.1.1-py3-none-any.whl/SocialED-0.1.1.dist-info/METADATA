@@ -1,0 +1,323 @@
+Metadata-Version: 2.1
+Name: SocialED
+Version: 0.1.1
+Summary: A Python Library for Social Event Detection
+Home-page: https://github.com/ChenBeici/SocialED
+Author: beici
+Author-email: SY2339225@buaa.edu.cn
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: accelerate ==0.28.0
+Requires-Dist: aiohttp ==3.9.5
+Requires-Dist: aiosignal ==1.3.1
+Requires-Dist: alabaster ==0.7.13
+Requires-Dist: annotated-types ==0.6.0
+Requires-Dist: anyio ==4.3.0
+Requires-Dist: async-timeout ==4.0.3
+Requires-Dist: attrs ==23.2.0
+Requires-Dist: Babel ==2.15.0
+Requires-Dist: beautifulsoup4 ==4.12.3
+Requires-Dist: bitsandbytes ==0.42.0
+Requires-Dist: blis ==0.7.11
+Requires-Dist: catalogue ==2.0.10
+Requires-Dist: certifi ==2024.2.2
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: click ==8.1.7
+Requires-Dist: cloudpathlib ==0.16.0
+Requires-Dist: cmake ==3.28.4
+Requires-Dist: commonmark ==0.9.1
+Requires-Dist: confection ==0.1.4
+Requires-Dist: contourpy ==1.1.1
+Requires-Dist: cycler ==0.12.1
+Requires-Dist: cymem ==2.0.8
+Requires-Dist: Cython ==0.29.37
+Requires-Dist: decorator ==5.1.1
+Requires-Dist: dgl ==0.6.0
+Requires-Dist: dgl-cu110 ==0.6.1
+Requires-Dist: dill ==0.3.8
+Requires-Dist: docutils ==0.20.1
+Requires-Dist: en-core-web-lg ==3.7.1
+Requires-Dist: exceptiongroup ==1.2.0
+Requires-Dist: faiss-gpu ==1.7.2
+Requires-Dist: fastapi ==0.110.0
+Requires-Dist: filelock ==3.13.1
+Requires-Dist: fonttools ==4.53.1
+Requires-Dist: fr-core-news-lg ==3.7.0
+Requires-Dist: frozenlist ==1.4.1
+Requires-Dist: fsspec ==2024.3.1
+Requires-Dist: furo ==2024.8.6
+Requires-Dist: gensim ==4.3.2
+Requires-Dist: h11 ==0.14.0
+Requires-Dist: hdbscan ==0.8.36
+Requires-Dist: huggingface-hub ==0.23.3
+Requires-Dist: idna ==3.7
+Requires-Dist: ignite ==1.1.0
+Requires-Dist: imagesize ==1.4.1
+Requires-Dist: importlib-metadata ==8.2.0
+Requires-Dist: importlib-resources ==6.4.0
+Requires-Dist: Jinja2 ==3.1.3
+Requires-Dist: joblib ==1.4.2
+Requires-Dist: kiwisolver ==1.4.5
+Requires-Dist: langcodes ==3.4.0
+Requires-Dist: language-data ==1.2.0
+Requires-Dist: latexcodec ==3.0.0
+Requires-Dist: lit ==18.1.2
+Requires-Dist: marisa-trie ==1.1.1
+Requires-Dist: MarkupSafe ==2.1.5
+Requires-Dist: matplotlib ==3.7.5
+Requires-Dist: mpmath ==1.3.0
+Requires-Dist: multidict ==6.0.5
+Requires-Dist: multiprocess ==0.70.16
+Requires-Dist: murmurhash ==1.0.10
+Requires-Dist: networkx ==3.1
+Requires-Dist: numpy ==1.24.4
+Requires-Dist: nvidia-cublas-cu11 ==11.10.3.66
+Requires-Dist: nvidia-cublas-cu12 ==12.1.3.1
+Requires-Dist: nvidia-cuda-cupti-cu11 ==11.7.101
+Requires-Dist: nvidia-cuda-cupti-cu12 ==12.1.105
+Requires-Dist: nvidia-cuda-nvrtc-cu11 ==11.7.99
+Requires-Dist: nvidia-cuda-nvrtc-cu12 ==12.1.105
+Requires-Dist: nvidia-cuda-runtime-cu11 ==11.7.99
+Requires-Dist: nvidia-cuda-runtime-cu12 ==12.1.105
+Requires-Dist: nvidia-cudnn-cu11 ==8.5.0.96
+Requires-Dist: nvidia-cudnn-cu12 ==8.9.2.26
+Requires-Dist: nvidia-cufft-cu11 ==10.9.0.58
+Requires-Dist: nvidia-cufft-cu12 ==11.0.2.54
+Requires-Dist: nvidia-curand-cu11 ==10.2.10.91
+Requires-Dist: nvidia-curand-cu12 ==10.3.2.106
+Requires-Dist: nvidia-cusolver-cu11 ==11.4.0.1
+Requires-Dist: nvidia-cusolver-cu12 ==11.4.5.107
+Requires-Dist: nvidia-cusparse-cu11 ==11.7.4.91
+Requires-Dist: nvidia-cusparse-cu12 ==12.1.0.106
+Requires-Dist: nvidia-nccl-cu11 ==2.14.3
+Requires-Dist: nvidia-nccl-cu12 ==2.20.5
+Requires-Dist: nvidia-nvjitlink-cu12 ==12.4.127
+Requires-Dist: nvidia-nvtx-cu11 ==11.7.91
+Requires-Dist: nvidia-nvtx-cu12 ==12.1.105
+Requires-Dist: packaging ==24.0
+Requires-Dist: pandas ==2.0.3
+Requires-Dist: peft ==0.3.0
+Requires-Dist: pillow ==10.3.0
+Requires-Dist: POT ==0.9.4
+Requires-Dist: preshed ==3.0.9
+Requires-Dist: psutil ==5.9.8
+Requires-Dist: pyarrow ==16.1.0
+Requires-Dist: pyarrow-hotfix ==0.6
+Requires-Dist: pybtex ==0.24.0
+Requires-Dist: pybtex-docutils ==1.0.3
+Requires-Dist: pydantic ==2.6.4
+Requires-Dist: pydantic-core ==2.16.3
+Requires-Dist: Pygments ==2.18.0
+Requires-Dist: pyparsing ==3.1.2
+Requires-Dist: python-dateutil ==2.9.0.post0
+Requires-Dist: pytorch-ignite ==0.5.0.post2
+Requires-Dist: pytz ==2024.1
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: recommonmark ==0.7.1
+Requires-Dist: regex ==2023.12.25
+Requires-Dist: requests ==2.32.3
+Requires-Dist: safetensors ==0.4.2
+Requires-Dist: scikit-learn ==1.3.2
+Requires-Dist: scipy ==1.10.1
+Requires-Dist: sentence-transformers ==3.0.1
+Requires-Dist: shortuuid ==1.0.13
+Requires-Dist: six ==1.16.0
+Requires-Dist: smart-open ==6.4.0
+Requires-Dist: sniffio ==1.3.1
+Requires-Dist: snowballstemmer ==2.2.0
+Requires-Dist: soupsieve ==2.5
+Requires-Dist: spacy ==3.7.4
+Requires-Dist: spacy-legacy ==3.0.12
+Requires-Dist: spacy-loggers ==1.0.5
+Requires-Dist: Sphinx ==7.1.2
+Requires-Dist: sphinx-autodoc-typehints ==2.0.1
+Requires-Dist: sphinx-basic-ng ==1.0.0b2
+Requires-Dist: sphinx-gallery ==0.17.1
+Requires-Dist: sphinx-rtd-theme ==2.0.0
+Requires-Dist: sphinxcontrib-applehelp ==1.0.4
+Requires-Dist: sphinxcontrib-bibtex ==2.6.2
+Requires-Dist: sphinxcontrib-devhelp ==1.0.2
+Requires-Dist: sphinxcontrib-htmlhelp ==2.0.1
+Requires-Dist: sphinxcontrib-jquery ==4.1
+Requires-Dist: sphinxcontrib-jsmath ==1.0.1
+Requires-Dist: sphinxcontrib-qthelp ==1.0.3
+Requires-Dist: sphinxcontrib-serializinghtml ==1.1.5
+Requires-Dist: srsly ==2.4.8
+Requires-Dist: starlette ==0.36.3
+Requires-Dist: sympy ==1.12
+Requires-Dist: thinc ==8.2.3
+Requires-Dist: threadpoolctl ==3.5.0
+Requires-Dist: tokenizers ==0.19.1
+Requires-Dist: torch ==2.3.0
+Requires-Dist: torch-cluster ==1.6.3+pt23cu121
+Requires-Dist: torch-geometric ==2.5.3
+Requires-Dist: torch-scatter ==2.1.2+pt23cu121
+Requires-Dist: torch-sparse ==0.6.18+pt23cu121
+Requires-Dist: torch-spline-conv ==1.2.2+pt23cu121
+Requires-Dist: torchaudio ==2.3.0
+Requires-Dist: torchdata ==0.7.1
+Requires-Dist: torchvision ==0.18.0
+Requires-Dist: tqdm ==4.66.4
+Requires-Dist: transformers ==4.41.2
+Requires-Dist: triton ==2.3.0
+Requires-Dist: typer ==0.9.4
+Requires-Dist: typing-extensions ==4.11.0
+Requires-Dist: tzdata ==2024.1
+Requires-Dist: urllib3 ==2.2.1
+Requires-Dist: uvicorn ==0.29.0
+Requires-Dist: wasabi ==1.1.2
+Requires-Dist: weasel ==0.3.4
+Requires-Dist: wrapt ==1.16.0
+Requires-Dist: xxhash ==3.4.1
+Requires-Dist: yarl ==1.9.4
+Requires-Dist: zipp ==3.19.2
+
+# SocailED
+
+A Python Library for Social Event Detection
+
+
+## Folder Structure
+
+
+
+
+## Installation
+
+### Manually
+
+```bash
+# Set up the environment
+conda create -n socialED python=3.8
+conda activate socailED
+
+# Installation
+git clone https://github.com/yukobebryantlakers/socialED.git
+pip install -r requirements.txt
+pip install socialED
+```
+
+## Usage & Example
+
+~~~python
+from socialED import KPGNN, args_define
+from Event2012 import Event2012_Dataset
+
+# Load the dataset using the Event2012_Dataset class
+dataset = Event2012_Dataset.load_data()
+
+# Create an instance of the KPGNN class with the parsed arguments and loaded dataset
+kpgnn = KPGNN(dataset)
+
+# Run the KPGNN instance
+kpgnn.preprocess()
+model = kpgnn.fit()
+kpgnn.detection()
+
+
+~~~
+
+
+## Collected Algorithms
+
+19 different methods in total are implemented in this library. We provide an overview of their characteristics as follows.
+
+## Algorithm Descriptions
+
+- **LDA**: Latent Dirichlet Allocation (LDA) is a generative statistical model that allows sets of observations to be explained by unobserved groups. It is particularly useful for discovering the hidden thematic structure in large text corpora.
+- **BiLSTM**: Bi-directional Long Short-Term Memory (BiLSTM) networks enhance the capabilities of traditional LSTMs by processing sequences in both forward and backward directions. This bidirectional approach is effective for tasks like sequence classification and time series detection.
+- **Word2Vec**: Word2Vec is a family of models that generate word embeddings by training shallow neural networks to predict the context of words. These embeddings capture semantic relationships between words, making them useful for various natural language processing tasks.
+- **GLOVE**: Global Vectors for Word Representation (GLOVE) generates word embeddings by aggregating global word-word co-occurrence statistics from a corpus. This approach produces vectors that capture meaning effectively, based on the frequency of word pairs in the training text.
+- **WMD**: Word Mover's Distance (WMD) measures the semantic distance between two documents by computing the minimum distance that words from one document need to travel to match words from another document. This method is grounded in the concept of word embeddings.
+- **BERT**: Bidirectional Encoder Representations from Transformers (BERT) is a transformer-based model that pre-trains deep bidirectional representations by conditioning on both left and right context in all layers. BERT has achieved state-of-the-art results in many NLP tasks.
+- **SBERT**: Sentence-BERT (SBERT) modifies the BERT network to generate semantically meaningful sentence embeddings that can be compared using cosine similarity. It is particularly useful for sentence clustering and semantic search.
+- **EventX**: EventX is designed for online event detection in social media streams, processing tweets in real-time to identify emerging events by clustering similar content. This framework is optimized for high-speed data environments.
+- **CLKD**: cross-lingual knowledge distillation (CLKD) combines a convolutional neural network with dynamic time warping to align sequences and detect events in streaming data. This online algorithm is effective for real-time applications.
+- **MVGAN**: Multi-View Graph Attention Network (MVGAN) leverages multiple data views to enhance event detection accuracy. This offline algorithm uses GANs to model complex data distributions, improving robustness against noise and incomplete data.
+- **KPGNN**: Knowledge-Preserving Graph Neural Network (KPGNN) is designed for incremental social event detection. It utilizes rich semantics and structural information in social messages to continuously detect events and extend its knowledge base. KPGNN outperforms baseline models, with potential for future research in event analysis and causal discovery in social data.
+- **Finevent**: Fine-Grained Event Detection (FinEvent) uses a reinforced, incremental, and cross-lingual architecture for social event detection. It employs multi-agent reinforcement learning and density-based clustering (DRL-DBSCAN) to improve performance in various detection tasks. Future work will extend RL-guided GNNs for event correlation and evolution.
+- **QSGNN**: Quality-Aware Self-Improving Graph Neural Network (QSGNN) addresses open set social event detection. It uses a pairwise loss with an orthogonal constraint for training and reference similarity distributions for pseudo label generation and quality assessment. A quality-aware optimization strategy re-weights contributions to handle noise. QSGNN achieves state-of-the-art results in both closed and open set settings.
+- **ETGNN**: Evidential Temporal-aware Graph Neural Network (ETGNN) addresses social event detection by incorporating uncertainty and temporal information. Using Evidential Deep Learning and Dempster-Shafer theory, it estimates uncertainty for robust multi-view integration and interpretable classification. A novel temporal-aware GNN aggregator is also devised. Experiments demonstrate ETGNN's effectiveness and superiority over methods lacking these considerations.
+- **HCRC**: Hybrid Graph Contrastive Learning for Social Event Detection (HCRC) captures comprehensive semantic and structural information from social messages. Using hybrid graph contrastive learning and reinforced incremental clustering, HCRC outperforms baselines across various experimental settings.
+- **UCLSED**: Uncertainty-Guided Class Imbalance Learning Framework (UCLSED) enhances model generalization in imbalanced social event detection tasks. It uses an uncertainty-guided contrastive learning loss to handle uncertain classes and combines multi-view architectures with Dempster-Shafer theory for robust uncertainty estimation, achieving superior results.
+- **RPLMSED**: Relational Prompt-Based Pre-Trained Language Models for Social Event Detection (RPLMSED) uses pairwise message modeling to address missing and noisy edges in social message graphs. It leverages content and structural information with a clustering constraint to enhance message representation, achieving state-of-the-art performance in various detection tasks.
+- **HISevent**: Structural Entropy-Based Social Event Detection (HISevent) is an unsupervised tool that explores message correlations without the need for labeling or predetermining the number of events. HISevent combines GNN-based methods' advantages with efficient and robust performance, achieving new state-of-the-art results in closed- and open-set settings.
+
+
+
+We provide their statistics as follows.
+=============  ====================  =========  =============  ====================================
+| Algorithm   | Type1               | Type2    | Type3        | Reference                         |
+|-------------|---------------------|----------|--------------|-----------------------------------|
+| **LDA**     | Topic               | Offline  | Supervised   | (David M. Blei et al. 2003)       |
+| **BiLSTM**  | Deep learning       | Offline  | Supervised   | (Alex Graves et al. 2005)         |
+| **Word2Vec**| Word embeddings     | Offline  | Supervised   | (Tomas Mikolov et al. 2013)       |
+| **GLOVE**   | Word embeddings     | Offline  | Supervised   | (Jeffrey Pennington et al. 2014)  |
+| **WMD**     | Similarity          | Offline  | Supervised   | (Matt Kusner et al. 2015)         |
+| **BERT**    | PLMs                | Offline  | Supervised   | (J. Devlin et al. 2018)           |
+| **SBERT**   | PLMs                | Offline  | Supervised   | (Nils Reimers et al. 2019)        |
+| **EventX**  | Community detection | Online   | Supervised   | (BANG LIU et al. 2020)            |
+| **CLKD**    | GNNs                | Online   | Supervised   | (Jiaqian Ren et al. 2021)         |
+| **MVGAN**   | GNNs                | Offline  | Supervised   | (Wanqiu Cui et al. 2021)          |
+| **PP-GCN**  | GNNs                | Online   | Supervised   | (Hao Peng et al. 2021)            |
+| **KPGNN**   | GNNs                | Online   | Supervised   | (Yuwei Cao et al. 2021)           |
+| **Finevent**| GNNs                | Online   | Supervised   | (Hao Peng et al. 2022)            |
+| **QSGNN**   | GNNs                | Online   | Supervised   | (Jiaqian Ren et al. 2022)         |
+| **ETGNN**   | GNNs                | Offline  | Supervised   | (Jiaqian Ren et al. 2023)         |
+| **HCRC**    | GNNs                | Online   | Unsupervised | (Yuanyuan Guo et al. 2023)        |
+| **UCLsed**  | GNNs                | Offline  | Supervised   | (Jiaqian Ren et al. 2023)         |
+| **RPLMsed** | PLMs                | Online   | Supervised   | (Pu Li et al. 2024)               |
+| **HISevent**| Community detection | Online   | Unsupervised | (Yuwei Cao et al. 2024)           |
+=============  ====================  =========  =============  ====================================
+                                
+## 6. Collected Datasets
+
+-   **ACE2005**: The ACE2005 dataset is a comprehensive collection of news articles annotated for entities, relations, and events. It includes a diverse range of event types and is widely used for event extraction research.
+-   **MAVEN**: MAVEN (MAssive eVENt) is a large-scale dataset for event detection that consists of over 11,000 events annotated across a wide variety of domains. It is designed to facilitate the development of robust event detection models.
+-   **TAC KBP**: The TAC KBP dataset is part of the Text Analysis Conference Knowledge Base Population track. It contains annotated events, entities, and relations, focusing on extracting structured information from unstructured text.
+-   **CrisisLexT26**: CrisisLexT26 is a dataset containing tweets related to 26 different crisis events. It is used to study information dissemination and event detection in social media during emergencies.
+-   **CrisisLexT6**: CrisisLexT6 is a smaller dataset from the CrisisLex collection, focusing on six major crisis events. It includes annotated tweets that provide valuable insights into public response and information spread during crises.
+-   **Event2012**: Event2012 is a dataset composed of tweets related to various events in 2012. It includes a wide range of event types and is used for studying event detection and classification in social media.
+-   **Event2018**: Event2018 consists of French tweets annotated for different event types. It provides a multilingual perspective on event detection, allowing researchers to explore language-specific challenges and solutions.
+-   **KBP2017**: KBP2017 is part of the Knowledge Base Population track and focuses on extracting entities, relations, and events from text. It is a valuable resource for developing and benchmarking information extraction systems.
+-   **CySecED**: CySecED is a dataset designed for cybersecurity event detection. It includes annotated cybersecurity events and is used to study threat detection and response in textual data.
+-   **FewED**: FewED is a dataset for few-shot event detection, providing a limited number of annotated examples for each event type. It is designed to test the ability of models to generalize from few examples.
+
+
+
+We provide their statistics as follows.
+|----------------|---------|-------------|-----------|-----------|-----------|
+| Dataset        | Events  | Event_Types | Sentences | Tokens    | Documents |
+|----------------|---------|-------------|-----------|-----------|-----------|
+| **ACE2005**    | 5,349   | 33          | 11,738    | 230,382   | 599       |
+| **MAVEN**      | 11,191  | 168         | 23,663    | 512,394   | 4,480     |
+| **TAC KBP**    | 3,500   | 18          | 7,800     | 150,000   | 2,500     |
+| **CrisisLexT26**| 4,353  | 26          | 8,000     | 175,000   | 1,200     |
+| **CrisisLexT6**| 2,100   | 6           | 4,500     | 90,000    | 600       |
+| **Event2012**  | 68,841  | 20          | 150,000   | 3,000,000 | 10,000    |
+| **Event2018**  | 15,000  | 10          | 50,000    | 1,000,000 | 5,000     |
+| **KBP2017**    | 4,200   | 22          | 9,000     | 180,000   | 3,000     |
+| **CySecED**    | 5,500   | 35          | 12,000    | 250,000   | 4,200     |
+| **FewED**      | 6,000   | 40          | 14,000    | 300,000   | 5,500     |
+|----------------|---------|-------------|-----------|-----------|-----------|
+
+
+
+## How to Contribute
+You are welcome to become part of this project. See [contribute guide](./docs/contribute.md) for more information.
+
+
+## Authors & Acknowledgements
+
+
+## Contact
+
+Reach out to us by submitting an issue report or sending an email to sy2339225@buaa.edu.cn
+
+## References
+
+
