@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: tcalls
+Version: 0.0.1
+Summary: LLMs tool calling made easy
+Home-page: https://github.com/onemquan/tcalls
+License: MIT
+Keywords: Large Language Models,LLMs Tool Calling
+Author: TCalls Developers
+Requires-Python: >=3.9.0,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Large Language Models :: Tools Calling
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: openai (>=1.40.3)
+Requires-Dist: pydantic (>=1.9,<3)
+Project-URL: Documentation, https://github.com/onemquan/tcalls/docs
+Project-URL: Repository, https://github.com/onemquan/tcalls
+Description-Content-Type: text/markdown
+
+# LLMs tool calling
+
+
+## Quick Install
+With pip:
+```
+pip install -U tcalls
+```
+
+## Contributing
+
+To set up the project with [poetry](https://python-poetry.org):
+:
+```bash
+git clone https://github.com/onemquan/tcalls.git
+
+cd tcalls
+pip install poetry
+poetry env use python3.10  # make sure python --version ~ 3.10
+poetry shell
+
+# install test/develop dependencies
+poetry install
+poetry run pre-commit install
+
+# run tests:
+poetry run pytest
+```
+The full [contributing documentation](./CONTRIBUTING.md) provides helpful guidance.
+

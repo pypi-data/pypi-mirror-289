@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "tcalls"
+version = "0.0.1"
+description = "LLMs tool calling made easy"
+authors= ["TCalls Developers"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/onemquan/tcalls"
+repository = "https://github.com/onemquan/tcalls"
+documentation = "https://github.com/onemquan/tcalls/docs"
+keywords = [
+    "Large Language Models",
+    "LLMs Tool Calling",
+]
+classifiers = [
+    "Topic :: Large Language Models :: Tools Calling",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+# Requirements
+[tool.poetry.dependencies]
+python = ">=3.9.0,<3.12"
+openai = ">=1.40.3"
+pydantic = ">=1.9,<3"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = ">=2.10"
+ruff = ">=0.5.0"
+isort = ">=5.13.2"
+pytest = ">=8.0"
+pytest-mock = ">=3.9"
+mypy = ">=1.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+extend-exclude = [
+    "docs/*",
+]
+fix = true
+line-length = 119
+src = ["src"]
+target-version = "py38"
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
