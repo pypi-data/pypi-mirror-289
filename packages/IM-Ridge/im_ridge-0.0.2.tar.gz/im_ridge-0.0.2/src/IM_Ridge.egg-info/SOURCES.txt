@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/IM_Ridge/IM_Ridge.py
+src/IM_Ridge/__init__.py
+src/IM_Ridge.egg-info/PKG-INFO
+src/IM_Ridge.egg-info/SOURCES.txt
+src/IM_Ridge.egg-info/dependency_links.txt
+src/IM_Ridge.egg-info/top_level.txt
