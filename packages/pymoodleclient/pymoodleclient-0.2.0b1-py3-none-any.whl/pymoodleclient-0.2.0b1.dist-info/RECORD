@@ -1,0 +1,14 @@
+pymoodleclient/__init__.py,sha256=Xv8SW-6BHLiyTAa_fHdeZixTLvlP2YYvhLOmVRd59GM,51
+pymoodleclient/client.py,sha256=5Rt9X7F5oYOGWh79kKfizqvYKkZHvqX-UjHfbLSxCpY,624
+pymoodleclient/endpoints/__init__.py,sha256=wPSTAC4_z2YpB-m6UqaqiZbbU4aefaGRHh2flMwA3ds,22
+pymoodleclient/endpoints/base/__init__.py,sha256=f-bY5oFKYbyWD867nJT4q-Q2PY8syTALcUcoLXgP3Gg,146
+pymoodleclient/endpoints/base/base_endpoint.py,sha256=DltCWQGi7xLcUZ6Qrq2Iszw_84fVUwf5BPk-drw0TrE,237
+pymoodleclient/endpoints/base/base_response_object.py,sha256=I3WApMpLrWnafbIyreFqIeNSVbiZ-_dYBRFUQ0A0W8o,171
+pymoodleclient/endpoints/course/__init__.py,sha256=lO_kykkOiG6qp8RHexakl1kTzKBwPxBNvtyxsSD9rz8,45
+pymoodleclient/endpoints/course/course_endpoints.py,sha256=iS4X1l5b13_gmPJQMrDRkdwM0DIW28uM-PwDMAQ741Y,406
+pymoodleclient/endpoints/course/course_responses.py,sha256=snXQKdntCzMRfBLaVk8unTIXqG3T6IAnIS_Tml14DRY,1399
+pymoodleclient/request_params.py,sha256=Vauo7DxP2dHo5ARiJc_2idtlbqfLHEOjKmeYUnVD8sE,225
+pymoodleclient-0.2.0b1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pymoodleclient-0.2.0b1.dist-info/METADATA,sha256=05VcJOEpTpnghNdwaC4DJ74isCayIHakH0zkyeyNanU,893
+pymoodleclient-0.2.0b1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pymoodleclient-0.2.0b1.dist-info/RECORD,,

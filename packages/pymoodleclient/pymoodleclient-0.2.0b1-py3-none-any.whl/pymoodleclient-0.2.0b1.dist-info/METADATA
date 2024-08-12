@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pymoodleclient
+Version: 0.2.0b1
+Summary: Simple and powerful python client for Moodle webservices REST API
+Home-page: https://github.com/vlaszdunov/pymoodleclient
+License: Apache-2.0
+Author: vlaszdunov
+Author-email: design@formo.design
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Project-URL: Repository, https://github.com/vlaszdunov/pymoodleclient
+Description-Content-Type: text/markdown
+
+# pymoodleclient
+Simple and powerful python client for Moodle webservices REST API
+
