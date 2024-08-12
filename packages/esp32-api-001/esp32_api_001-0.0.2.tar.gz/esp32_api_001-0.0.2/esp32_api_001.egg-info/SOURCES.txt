@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+esp32-api-001/DataChangeUtil.py
+esp32-api-001/FactoryUtil.py
+esp32-api-001/FlagCode.py
+esp32-api-001/Main.py
+esp32-api-001/ReturnDataSubstring.py
+esp32-api-001/__init__.py
+esp32_api_001.egg-info/PKG-INFO
+esp32_api_001.egg-info/SOURCES.txt
+esp32_api_001.egg-info/dependency_links.txt
+esp32_api_001.egg-info/top_level.txt
