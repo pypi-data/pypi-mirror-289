@@ -1,0 +1,3 @@
+[console_scripts]
+pip-sdk-test = pip_sdk_test.main:main
+
