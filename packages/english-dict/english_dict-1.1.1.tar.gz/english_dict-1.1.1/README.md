@@ -1,0 +1,61 @@
+# English Dict
+### `find_word()`
+English Dict can be used to find the meaning of words easily.
+To find the meaning of an English word by using the `find_word()` function to find the meaning of a word easily. Like
+over here:
+
+```
+# Replace example with any english word
+
+word =  "example"
+
+find_word(word)
+
+>> example means - : an instance
+ (such as a problem to be solved)
+ serving to illustrate a rule or
+ precept or to act as an exercise
+ in the application of a rule
+ ```
+
+You can type `c` to clear the terminal if it gets to 
+messy.
+
+### `find_synonyms()`
+
+English Dict can be used to find the synonyms of words too.
+To find 20 synonyms of an English word by using the `find_synonyms()` function to find the 20 synonyms of a word easily. Like
+over here:
+
+```
+word =  "example"
+
+find_synonyms(word)
+
+>> Here are your synonyms:
+
+1. lesson
+2. object
+3. part
+4. pattern
+5. precedent
+6. symbol
+7. archetype
+8. citation
+9. copy
+10. excuse
+11. exemplar
+12. exemplification
+13. ideal
+14. original
+15. paradigm
+16. paragon
+17. prototype
+18. quotation
+19. representation
+20. sample
+```
+
+> [!NOTE]
+> 
+> Remember to remove suffixes (prefixes can stay). Examples: -ing, -ed, -less, -ful
