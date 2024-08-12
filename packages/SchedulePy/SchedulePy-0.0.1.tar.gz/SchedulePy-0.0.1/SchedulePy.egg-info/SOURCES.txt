@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+SchedulePy/__init__.py
+SchedulePy/module.py
+SchedulePy.egg-info/PKG-INFO
+SchedulePy.egg-info/SOURCES.txt
+SchedulePy.egg-info/dependency_links.txt
+SchedulePy.egg-info/top_level.txt
