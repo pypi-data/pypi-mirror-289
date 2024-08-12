@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/activated_notebook_importer/__init__.py
+src/activated_notebook_importer/importer.py
+src/activated_notebook_importer.egg-info/PKG-INFO
+src/activated_notebook_importer.egg-info/SOURCES.txt
+src/activated_notebook_importer.egg-info/dependency_links.txt
+src/activated_notebook_importer.egg-info/requires.txt
+src/activated_notebook_importer.egg-info/top_level.txt
+tests/test_importer.py
