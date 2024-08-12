@@ -1,0 +1,1 @@
+from .compression_algorithm import image_compression_algorithm, compress_image
