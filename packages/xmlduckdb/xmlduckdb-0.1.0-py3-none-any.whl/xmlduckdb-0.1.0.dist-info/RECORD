@@ -1,0 +1,5 @@
+xmlduckdb/__init__.py,sha256=z6NzGv9SnkNO9Zai2NvQFHOAbxF4pi3njQ0WelxWROs,48
+xmlduckdb/open_xml_extractor.py,sha256=oHWX7ji0w2UMAXTnMPZvu2j6LYVpcN48bz_ETTXhmC4,8907
+xmlduckdb-0.1.0.dist-info/METADATA,sha256=sxwL3QoN_pf2YiLFTfQRlDmToJz0L2TCtNsj4kHc8MM,774
+xmlduckdb-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+xmlduckdb-0.1.0.dist-info/RECORD,,
