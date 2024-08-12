@@ -1,0 +1,11 @@
+.DS_Store,sha256=EvFbafMrHUToN5MlovQ9xMjewMNbCxrqqNJTleu4vpo,6148
+backstepping_controller/__init__.py,sha256=NhqcwsoXaq9zlUnEoXdABtLpZdRJjLuKrxrb5gBSoWc,168
+backstepping_controller/controller.py,sha256=vnF8X7sixeYRHzuO6V87bXTWoC5loHbVR_9EnVY0Nxw,1376
+backstepping_controller/plotting.py,sha256=4GewGOmwD1_wizd4U75hqAJ4XGJ4vAnY-zZJRNbbGzM,685
+backstepping_controller/saving.py,sha256=CQkeSX3sbsxILGdve-R6dAlVs0NVIxGjPIbObXaiT8s,310
+backstepping_controller/simulation.py,sha256=_MITNPFn5dIJFNt6wNhjJHxU8w2Wd9A6IunO4ZwcaNM,2605
+backstepping_controller/test.py,sha256=MyyySnm1GjRgoGuoy8ag16VCXOmt6NZ8S7Ult2yP8m4,988
+backstepping_controller-0.1.3.dist-info/METADATA,sha256=_KjbJWqzQ-EdbMbe9wjKGQWrQckvvg2UJWMTZug_muE,6366
+backstepping_controller-0.1.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+backstepping_controller-0.1.3.dist-info/top_level.txt,sha256=vHr4rQ-86EprE8Fr5JvpraxgzgJETQMIQgbmL5cfXmU,24
+backstepping_controller-0.1.3.dist-info/RECORD,,
