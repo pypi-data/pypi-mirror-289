@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: lingua-nova
+Version: 0.0.1a0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: de-la-Vietnamita
+Author-email: ductq1801@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/de-la-Vietnamita/LinguaNova/issues
+Project-URL: Source, https://github.com/de-la-Vietnamita/LinguaNova
+Keywords: machine-learning,deep-learning,Speech,ML,DL,AI,LinguaNova
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+License-File: LICENSE
+
+# LinguaNova
+
+###Install
+```python
+pip install lingua-nova
+```
+###TODO
+
+- [X] Tạo pip install 
+- [ ] Tạo package structure gồm (utils, engine, dataloaders) # mới tạo có thể chưa cần code
+- [ ] Thêm phần dataloaders cho một vài dataset của task text2speech, speech2text + requirements.txt
+- [ ] Thêm phần metrics vào utils cho task t2p và p2t
+- [ ] Thêm base Trainer, Validator, Predictor + requiremnts.txt + test
+- [ ] TODO...
+

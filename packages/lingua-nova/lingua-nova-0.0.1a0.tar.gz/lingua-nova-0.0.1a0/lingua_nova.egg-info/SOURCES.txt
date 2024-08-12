@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+lingua_nova.egg-info/PKG-INFO
+lingua_nova.egg-info/SOURCES.txt
+lingua_nova.egg-info/dependency_links.txt
+lingua_nova.egg-info/requires.txt
+lingua_nova.egg-info/top_level.txt
+linguanova/__init__.py
