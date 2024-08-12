@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: find_keyword_xtvu
+Version: 3.0
+Summary: A package to find keywords in .pdf, .docx, .odt, and .rtf files
+Home-page: https://github.com/xtvu2207/find_keyword.git
+Author: Xuan Tung VU
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Cython
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# find_keyword
