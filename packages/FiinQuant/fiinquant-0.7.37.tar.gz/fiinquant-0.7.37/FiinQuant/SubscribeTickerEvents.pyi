@@ -1,0 +1,11 @@
+import pandas as pd
+
+
+class SubscribeTickerEvents:
+    def __init__(self, access_token: str, tickers: list, callback: callable) -> None: ...
+    
+    def start(self) -> None: ...
+    
+    def stop(self) -> None: ...
+
+
