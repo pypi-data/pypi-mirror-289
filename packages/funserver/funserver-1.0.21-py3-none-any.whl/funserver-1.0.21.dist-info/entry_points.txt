@@ -1,0 +1,4 @@
+[console_scripts]
+funjupyter=funserver.servers.funjupyter.run:funjupyter
+funserver=funserver.base:funserver
+
