@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: fastapi-playbook
+Version: 0.1.0
+Summary: 
+Author: Dmitrii Galkin
+Author-email: galkin.dmitry.485@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: black (>=24.8.0,<25.0.0)
+Requires-Dist: fastapi (>=0.110.2,<0.111.0)
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: pydantic-settings (>=2.2.1,<3.0.0)
+Requires-Dist: twine (>=5.1.0,<6.0.0)
+Requires-Dist: uvicorn (>=0.29.0,<0.30.0)
+Description-Content-Type: text/markdown
+
+# Fast API Flow
+The Fast API library for create HTTP flow with requests from Open API documentation (Swagger).
+
