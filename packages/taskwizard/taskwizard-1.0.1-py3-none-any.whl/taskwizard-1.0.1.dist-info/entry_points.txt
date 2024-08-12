@@ -1,0 +1,2 @@
+[console_scripts]
+taskwizard = app:start_app
