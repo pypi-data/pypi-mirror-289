@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+topsis_jatin_102218046/__init__.py
+topsis_jatin_102218046/topsis.py
+topsis_jatin_102218046.egg-info/PKG-INFO
+topsis_jatin_102218046.egg-info/SOURCES.txt
+topsis_jatin_102218046.egg-info/dependency_links.txt
+topsis_jatin_102218046.egg-info/entry_points.txt
+topsis_jatin_102218046.egg-info/requires.txt
+topsis_jatin_102218046.egg-info/top_level.txt
