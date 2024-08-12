@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate -i /local/openapi.json -g python -o /local/ --additional-properties=packageName=pyartifactsmmo,asyncNative=true,library=asyncio
