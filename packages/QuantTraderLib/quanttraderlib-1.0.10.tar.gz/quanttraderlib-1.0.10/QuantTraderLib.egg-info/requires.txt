@@ -1,0 +1,6 @@
+yfinance
+vnstock3
+pandas_datareader
+bokeh
+backtesting
+MetaTrader5
