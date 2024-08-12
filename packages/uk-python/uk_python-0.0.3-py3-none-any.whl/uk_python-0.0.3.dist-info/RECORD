@@ -1,0 +1,14 @@
+пітон/__init__.py,sha256=qzg_zWU5PtXOhBDc-9OJIQ_86lo8QFdF-2yG2I3jxx0,23
+пітон/стд/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+пітон/стд/аргпарсер.py,sha256=JQNNZnacqxAmCwqe0oCIa1o8toLJvRsYRgPp0bjz7qc,3528
+пітон/стд/багатопоточність.py,sha256=FCnGe-Yj54rAKeWJxXpgkcxju86KLddZb0TkSfcSMhI,1972
+пітон/стд/час.py,sha256=Ns_mdrXp0zYz7MnuT8Y83kiS65mxbE48fS1RIJKyglk,140
+пітон/ядро/__init__.py,sha256=EBTr6lVSI5N1Fhb5-ydUowA_yOnupKHtYt7eYiBuQs0,89
+пітон/ядро/вбудовані_функції.py,sha256=rGm-lM5n6TpQoZd-HUkpzwrhI6-jI5MFOJer1eOAwdQ,3519
+пітон/ядро/переривання.py,sha256=xvjyfSCGc3oUF9Ot0umbhrwydx92sRrSXoG3MVUWqqs,86
+пітон/ядро/типи_данних.py,sha256=QMQrpJYVN7cu5TjbWr_FSPOEx3T94na3oUaT8IZl7V0,125
+пітон/ядро/фіксовані_значення.py,sha256=E04Ss_ijVZg465vzatMz7QYQgmAEU8kgn6I8DZ1anrM,56
+uk_python-0.0.3.dist-info/METADATA,sha256=Gi7XQVDu1_SuIyHpLe8ClZZTx2bE6wJKVNSN_aGmzD8,720
+uk_python-0.0.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+uk_python-0.0.3.dist-info/top_level.txt,sha256=10b-U0C7viNLeS5FyFBzzsqE4v0X9QKds3COQp-pV6o,11
+uk_python-0.0.3.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+БазовеПереривання = BaseException
+Переривання = Exception
