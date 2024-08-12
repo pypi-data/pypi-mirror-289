@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: 102218026upper-case-change
+Version: 1.0.0
+Summary: It uppercases whole folder
+Home-page: https://github.com/Shubhamaggarwal6/upper-case-change
+Author: shubham
+Author-email: 09shubhamaggarwal@gmial.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# Upper-case-change
+lowercase to uppercase
+
+## Installation
+```pip installupper-case-change```
+
+## How to use it?
+Open terminal and type square and then input the sentance
+
+## License
+
+Â© 2020 shubham aggarwal
+
+This repository is licensed under the MIT license. See LICENSE for details.
