@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+study_and_revise/__init__.py
+study_and_revise/sr.py
+study_and_revise.egg-info/PKG-INFO
+study_and_revise.egg-info/SOURCES.txt
+study_and_revise.egg-info/dependency_links.txt
+study_and_revise.egg-info/entry_points.txt
+study_and_revise.egg-info/top_level.txt
