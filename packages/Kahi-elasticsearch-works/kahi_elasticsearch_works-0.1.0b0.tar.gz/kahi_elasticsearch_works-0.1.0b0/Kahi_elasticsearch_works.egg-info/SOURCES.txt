@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Kahi_elasticsearch_works.egg-info/PKG-INFO
+Kahi_elasticsearch_works.egg-info/SOURCES.txt
+Kahi_elasticsearch_works.egg-info/dependency_links.txt
+Kahi_elasticsearch_works.egg-info/requires.txt
+Kahi_elasticsearch_works.egg-info/top_level.txt
+kahi_elasticsearch_works/Kahi_elasticsearch_works.py
+kahi_elasticsearch_works/__init__.py
+kahi_elasticsearch_works/_version.py
