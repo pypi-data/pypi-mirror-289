@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: almo-cli
+Version: 0.0.1
+License-File: LICENSE
+Requires-Dist: PyYAML
+Requires-Dist: argparse
+Requires-Dist: almo==v0.0.1
+Requires-Dist: livereload
+Requires-Dist: jinja2

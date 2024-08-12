@@ -1,0 +1,5 @@
+PyYAML
+argparse
+almo==v0.0.1
+livereload
+jinja2
