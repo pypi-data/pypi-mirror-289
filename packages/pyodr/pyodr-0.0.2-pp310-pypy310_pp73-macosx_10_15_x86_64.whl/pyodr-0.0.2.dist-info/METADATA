@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyodr
+Version: 0.0.2
+Summary: It's Android's first OpenOffice Document Reader for Python!
+Author: Andreas Stefl
+Author-email: stefl.andreas@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=6.0; extra == "test"
+
+# It's Android's first OpenOffice Document Reader!
+
+This is a Python frontend for our C++ OpenDocument.core library. Feel free to use it in your own project too, but please don't forget to tell us about it!
