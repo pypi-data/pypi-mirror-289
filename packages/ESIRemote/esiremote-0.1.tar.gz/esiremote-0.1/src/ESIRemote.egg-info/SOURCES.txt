@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/esi_remote.py
+src/filter_list.py
+src/models.py
+src/ESIRemote.egg-info/PKG-INFO
+src/ESIRemote.egg-info/SOURCES.txt
+src/ESIRemote.egg-info/dependency_links.txt
+src/ESIRemote.egg-info/requires.txt
+src/ESIRemote.egg-info/top_level.txt
