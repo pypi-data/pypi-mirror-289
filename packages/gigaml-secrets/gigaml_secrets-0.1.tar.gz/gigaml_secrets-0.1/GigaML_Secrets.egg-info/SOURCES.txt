@@ -1,0 +1,7 @@
+README.md
+setup.py
+GigaML_Secrets.egg-info/PKG-INFO
+GigaML_Secrets.egg-info/SOURCES.txt
+GigaML_Secrets.egg-info/dependency_links.txt
+GigaML_Secrets.egg-info/requires.txt
+GigaML_Secrets.egg-info/top_level.txt
