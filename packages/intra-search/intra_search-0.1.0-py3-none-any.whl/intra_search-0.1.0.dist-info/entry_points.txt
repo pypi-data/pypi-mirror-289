@@ -1,0 +1,2 @@
+[console_scripts]
+intra-search = intra_search.cli:cli
