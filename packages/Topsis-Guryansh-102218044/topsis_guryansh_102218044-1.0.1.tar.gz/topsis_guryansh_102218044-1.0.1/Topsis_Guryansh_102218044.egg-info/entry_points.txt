@@ -1,0 +1,2 @@
+[console_scripts]
+guryansh_topsis = guryansh_topsis.cli:main
