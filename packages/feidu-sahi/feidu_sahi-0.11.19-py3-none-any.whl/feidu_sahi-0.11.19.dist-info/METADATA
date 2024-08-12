@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: feidu-sahi
+Version: 0.11.19
+Summary: A vision library for performing sliced inference on large images/small objects
+Home-page: https://github.com/glock-fei/sahi
+Author: glock-fei
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: opencv-python <=4.9.0.80
+Requires-Dist: shapely >=1.8.0
+Requires-Dist: tqdm >=4.48.2
+Requires-Dist: pillow >=8.2.0
+Requires-Dist: pybboxes ==0.1.6
+Requires-Dist: pyyaml
+Requires-Dist: fire
+Requires-Dist: terminaltables
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: numpy <2.0.0
+Provides-Extra: dev
+Requires-Dist: black ==22.3.0 ; extra == 'dev'
+Requires-Dist: flake8 ==3.9.2 ; extra == 'dev'
+Requires-Dist: isort ==5.9.2 ; extra == 'dev'
+Requires-Dist: jupyterlab ==3.0.14 ; extra == 'dev'
+Requires-Dist: importlib-metadata <4.3,>=1.1.0 ; (python_version < "3.8") and extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: mmdet ==3.0.0 ; extra == 'tests'
+Requires-Dist: pycocotools ==2.0.6 ; extra == 'tests'
+
+## 切片推理
+
+此代码 Fork [obss/sahi](https://github.com/obss/sahi), 添加如下功能
+- 添加rknn支持
+- 添加yolov10 导出 onnx 支持
+- 添加参数 EP_LIST, 使用onnx推理时直接传递
