@@ -1,0 +1,3 @@
+sourmash<5,>=4.8.0
+matplotlib
+matplotlib_venn

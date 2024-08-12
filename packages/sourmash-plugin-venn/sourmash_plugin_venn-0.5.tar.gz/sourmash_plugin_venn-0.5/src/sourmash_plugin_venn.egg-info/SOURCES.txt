@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/sourmash_plugin_venn.py
+src/sourmash_plugin_venn.egg-info/PKG-INFO
+src/sourmash_plugin_venn.egg-info/SOURCES.txt
+src/sourmash_plugin_venn.egg-info/dependency_links.txt
+src/sourmash_plugin_venn.egg-info/requires.txt
+src/sourmash_plugin_venn.egg-info/top_level.txt
+tests/test_sourmash_venn.py
