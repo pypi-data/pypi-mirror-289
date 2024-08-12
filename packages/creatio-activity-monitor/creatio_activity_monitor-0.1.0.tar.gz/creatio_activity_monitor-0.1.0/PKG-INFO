@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: creatio-activity-monitor
+Version: 0.1.0
+Summary: 
+Author: YisusChrist
+Author-email: agelrenorenardo@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: creatio-odata-api (>=1.1.0,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: requests-pprint (>=1.0.0,<2.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Description-Content-Type: text/markdown
+
+![img](https://i.imgur.com/qGaIDeN.png)
+
