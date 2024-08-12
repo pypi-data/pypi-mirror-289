@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: zf-memician
+Version: 0.1.0
+Summary: Memician is a state of the art Memelord
+Author: Zeff Muks
+Author-email: zeffmuks@gmail.com
+License: PROPRIETARY
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Memician
+
+*Memician is the state of the art Memelord*
+
+```bash
+$ pip install zf-memician
+```
+
+## How it works
+
+memician uses the Python Imaging Library *PIL* to edit existing templates of memes and return them to the user.
+
+memician has a list of defined `MemeImage` templates that are fed to a `MemeFactory`. The factory then produces an image with all the arguments, given by the user, pasted onto the image in the correct formats of the specific meme.
+
+In addition to just text-based memes, memician also supports substituting the text-argument with an image. Just supply an image-link in `< ... >` angle brackets as an argument, and the text will be substituted for the image. ENDLESS POTENTIAL!!!
+
+The available meme templates can be found in the [Image Library](./memician/Resources/ImageLibrary). The specifications of each meme template can be found in the [Meme Library](./memician/Resources/MemeLibrary). Where `builtin.JSON` is the place for default templates. You can define your own templates as well, which is described below.
+
+## Usage
+
+```console
+memician <path> <template> <*args> <*options>
+```
+
+- __path__ is where on your computer you want to save the meme.
+- __template__ is the underlying template to use for the meme (not case sensitive).
+- __\*args__ are all arguments to be placed onto the template.
+  - Multi-word arguments must be surrounded by "" quotation marks
+  - Arguments can be images, pasted onto the template. Image-links should be given in '<>' angle brackets.
+- __\*options__ are the options that modify behavior of the generation.
+  - Options are passed with '{}' curly braces.
+  - Currently supported options: "stretch".
