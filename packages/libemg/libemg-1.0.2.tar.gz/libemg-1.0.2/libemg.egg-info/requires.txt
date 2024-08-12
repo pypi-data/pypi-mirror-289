@@ -1,0 +1,16 @@
+numpy<2.0
+scipy
+scikit-learn
+pillow
+matplotlib
+librosa
+wfdb
+pyserial
+PyWavelets
+requests
+semantic-version
+websockets
+opencv-python
+pythonnet
+bleak
+dearpygui
