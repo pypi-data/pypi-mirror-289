@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+upper_case_change.egg-info/PKG-INFO
+upper_case_change.egg-info/SOURCES.txt
+upper_case_change.egg-info/dependency_links.txt
+upper_case_change.egg-info/entry_points.txt
+upper_case_change.egg-info/top_level.txt
