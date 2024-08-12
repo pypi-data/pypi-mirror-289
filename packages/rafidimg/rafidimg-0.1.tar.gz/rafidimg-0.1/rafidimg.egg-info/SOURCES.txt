@@ -1,0 +1,11 @@
+README.md
+setup.py
+color_extractor/__init__.py
+color_extractor/extractor.py
+rafidimg.egg-info/PKG-INFO
+rafidimg.egg-info/SOURCES.txt
+rafidimg.egg-info/dependency_links.txt
+rafidimg.egg-info/requires.txt
+rafidimg.egg-info/top_level.txt
+tests/__init__.py
+tests/test_extractor.py
