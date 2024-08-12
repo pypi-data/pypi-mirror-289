@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools >= 64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clproc"
+version = "2024.08.12"
+authors = [
+  { name="Michel Albert", email="michel.albert@post.lu" },
+]
+description = "Generate curated changelogs into various formats."
+readme = "README.rst"
+license = { text="MIT License" }
+requires-python = ">=3.7"
+keywords = [
+    "changelog",
+    "documentation",
+    "json",
+    "markdown",
+    "pre-commit",
+    "release notes",
+    "yaml",
+]
+dependencies = [
+    "packaging",
+    "python-dateutil",
+    "pyyaml",
+    "tomli",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+clproc = "clproc.cli:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cache",
+    "pytest-coverage",
+]
+dev = [
+    "furo",
+    "mypy",
+    "myst-parser",
+    "sphinx",
+    "sphinx-rtd-theme",
+    "types-PyYAML",
+    "types-python-dateutil",
+]
+
+[project.urls]
+"Source" = "https://github.com/post-luxembourg/clproc"
+"Issues" = "https://github.com/post-luxembourg/clproc/issues"
+
+
+[tool.black]
+line-length = 80
+
+[tool.isort]
+line_length = 80
+force_grid_wrap = 0
+virtual_env = "env"
+profile = "black"
+
+[tool.coverage.run]
+relative_files = true
+source = ["clproc"]
+branch = true
+omit = [
+    "env/*",
+    "tests/*",
+]
+
+[tool.coverage.report]
+skip_covered = true
+skip_empty = true
+sort = "-cover"
+
+[tool.coverage.html]
+show_contexts = true
+
+[tool.mypy]
+strict = true
