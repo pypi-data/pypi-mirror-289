@@ -1,0 +1,9 @@
+sphinx>=3.0.0
+myst-parser
+
+[dev]
+sphinx
+sphinx_rtd_theme
+myst-parser
+twine
+wheel
