@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Heb
+Version: 6.8.0
+Summary: NLP lab set from 1 to 9 not for cheating
+Author: Ibrahim
+Author-email: string2025@gmail.com
+Requires-Dist: pyperclip
