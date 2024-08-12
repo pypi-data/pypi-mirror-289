@@ -1,0 +1,2 @@
+[console_scripts]
+topsis-jatin-102218046 = topsis_jatin_102218046.topsis:main
