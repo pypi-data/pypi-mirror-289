@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: commitizen-wails
+Version: 0.2.0
+Summary: Add your description here
+Author-email: YogiLiu <YogiLiu@outlook.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: commitizen>=3.29.0
+Description-Content-Type: text/markdown
+
+# commitizen Wails Version Provider
+
+A commitizen version provider for [Wails](https://wails.io).
+
+## Installation
+
+```shell
+pip install commitizen commitizen-wails
+```
+
+Via rye tools:
+
+```shell
+rye install commitizen --extra-requirement commitizen-wails
+```
+
+## Configuration
+
+Example for `.cz.yaml`
+
+```toml
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "wails-provider"
+update_changelog_on_bump = true
+major_version_zero = true
+```
+
+## License
+
+This project is [MIT](./LICENSE) licensed.
