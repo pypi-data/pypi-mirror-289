@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: textify-docs
+Version: 0.1.0
+Summary: A package to convert various document types to plain text.
+Home-page: https://github.com/BlcMed
+Author: Mohamed Boulaich
+Author-email: boulaich.mohamed970@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+UNKNOWN
+
