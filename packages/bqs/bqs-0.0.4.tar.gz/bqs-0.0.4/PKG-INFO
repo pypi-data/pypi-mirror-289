@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: bqs
+Version: 0.0.4
+Summary: Better Quantum Software
+Home-page: https://github.com/MichiCatte/bqs.git
+Author: Michele Cattelan
+Author-email: michelecat97@gmail.com
+License: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.25.1
+Requires-Dist: cirq>=1.2.0
+Requires-Dist: dimod>=0.12.10
+Requires-Dist: matplotlib>=3.7.2
+Requires-Dist: networkx>=2.8.8
+Requires-Dist: scipy>=1.11.1
+
+TODO

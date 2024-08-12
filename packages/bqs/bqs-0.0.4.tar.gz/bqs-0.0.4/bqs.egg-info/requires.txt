@@ -1,0 +1,6 @@
+numpy>=1.25.1
+cirq>=1.2.0
+dimod>=0.12.10
+matplotlib>=3.7.2
+networkx>=2.8.8
+scipy>=1.11.1
