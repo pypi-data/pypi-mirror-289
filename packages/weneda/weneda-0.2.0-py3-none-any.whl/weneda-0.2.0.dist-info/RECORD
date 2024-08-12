@@ -1,0 +1,11 @@
+LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pyproject.toml,sha256=-uQsQ83iarxbklPhXE55whaXXfuaFUQkwwRS1SYLlKQ,415
+weneda/__init__.py,sha256=hFOhln0NEIpdQStK6zYhSweAVDpdb9hX4IqLcgX8iVE,146
+weneda/compose.py,sha256=Xk67_3zL3pkW4ij1AAXKo2-Cz5q8RfhT4VvWrqVGLLA,6084
+weneda/font.py,sha256=VT0l3MQRzKeRrsj8IjAE0iKF1JqMeIboc5TKKX_0Yi0,1349
+weneda/formatter.py,sha256=IgdoFIFPx3OXBRDvRagWAlZW81DZAm9qsZO-ZzPDNVA,8356
+weneda/placeholder.py,sha256=QR_nE60mtJq-fu_sEgschoU4CgjpkO1o81iM0AeZH_0,3128
+weneda-0.2.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+weneda-0.2.0.dist-info/METADATA,sha256=fS2CJm7QtMRDXpzgd0rHKTzOvlDVBfxHZzfyD8JsMUY,1451
+weneda-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+weneda-0.2.0.dist-info/RECORD,,
