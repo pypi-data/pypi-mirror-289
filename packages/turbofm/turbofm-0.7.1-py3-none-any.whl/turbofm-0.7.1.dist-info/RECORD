@@ -1,0 +1,12 @@
+turbofm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turbofm/__main__.py,sha256=5Yip1wejlXe8oxsnbvDAGazPW-vEiiXarxb56CmJeds,5934
+turbofm/send/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turbofm/send/minimal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turbofm/send/minimal/__main__.py,sha256=WWD3bepjBjtMKimgHjoLuiBO8EGy9pgYDVFATGUySuk,628
+turbofm/send/plain/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turbofm/send/plain/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turbofm-0.7.1.dist-info/LICENSE,sha256=Vro2JJ6oIWrVE7E9895sDkkLohSJdnTTAzHxx-ftvvM,5
+turbofm-0.7.1.dist-info/METADATA,sha256=_tQJu_BR5tDFwloNErvUWZnwZuLsFpdyPSDQZe-y05w,519
+turbofm-0.7.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+turbofm-0.7.1.dist-info/top_level.txt,sha256=JKVGRn1Kgez7QYMUNIm5kuSTn7cqhR4vJ_ZDmDNdOEc,8
+turbofm-0.7.1.dist-info/RECORD,,
