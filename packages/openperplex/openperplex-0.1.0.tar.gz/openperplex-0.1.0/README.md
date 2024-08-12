@@ -1,0 +1,127 @@
+# Openperplex
+
+Openperplex is a Python library that provides a simple interface to interact with the Openperplex API. It allows users to perform searches and retrieve information using various endpoints, with support for both streaming and non-streaming responses.
+
+## Installation
+
+You can install Openperplex using pip:
+
+```bash
+pip install openperplex
+```
+
+## Requirements
+
+- Python 3.6+
+- httpx
+- typing
+
+## Usage
+
+### Initialization
+
+To use the Openperplex library, you need to initialize the `Openperplex` class with your API key, provider, and provider key:
+
+```python
+from openperplex import Openperplex
+
+client = Openperplex(
+    api_key="your_api_key",
+    provider="openai",  # or "groq"
+    provider_key="your_provider_key"
+)
+```
+
+### Methods
+
+#### 1. Search Stream
+
+The `search_stream` method allows you to perform a search and receive results as a stream of events.
+
+```python
+for event in client.search_stream(
+    query="Your search query",
+    date_context="optional_date_context",
+    location="us",
+    pro_mode=False
+):
+    print(event)
+```
+
+#### 2. Search Simple Stream
+
+The `search_simple_stream` method provides a simplified streaming search.
+
+```python
+for event in client.search_simple_stream("Your search query"):
+    print(event)
+```
+
+#### 3. Search
+
+The `search` method performs a search and returns the complete results as a list.
+
+```python
+results = client.search(
+    query="Your search query",
+    date_context="optional_date_context",
+    location="us", // can be any country code
+    pro_mode=False
+)
+print(results)
+```
+
+#### 4. Search Simple
+
+The `search_simple` method provides a simplified search that returns results as a string.
+
+```python
+result = client.search_simple("Your search query")
+print(result)
+```
+
+### Error Handling
+
+The library uses custom `OpenperplexError` exceptions to handle errors. You can catch these exceptions to handle errors in your code:
+
+```python
+from openperplex import Openperplex, OpenperplexError
+
+client = Openperplex(api_key="your_api_key", provider="openai", provider_key="your_provider_key")
+
+try:
+    results = client.search("Your query")
+except OpenperplexError as e:
+    print(f"An error occurred: {e.status_code} - {e.detail}")
+```
+
+## Streaming Responses
+
+For methods that return a stream (`search_stream` and `search_simple_stream`), the library yields dictionaries with different types of events:
+
+- `{"type": "llm", "text": "..."}`: LLM-generated text
+- `{"type": "sources", ...}`: Source information
+- `{"type": "relevant", ...}`: Relevant questions
+- `{"type": "finished", ...}`: Indicates the end of the stream
+
+You can process these events as needed in your application.
+
+## Configuration Options
+
+- `api_key` (required): Your Openperplex API key
+- `provider` (required): The provider to use ("openai" or "groq")
+- `provider_key` (required): Your provider API key
+- `base_url` (optional): The base URL for the Openperplex API (defaults to the provided URL)
+
+## Notes
+
+- The library automatically closes the HTTP client when the `Openperplex` instance is deleted.
+- Make sure to handle rate limiting and other API-specific requirements as per the Openperplex API documentation.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+[MIT License](LICENSE)
