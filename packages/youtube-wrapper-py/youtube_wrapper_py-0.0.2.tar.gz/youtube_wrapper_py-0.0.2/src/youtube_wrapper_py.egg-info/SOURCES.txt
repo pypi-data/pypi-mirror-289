@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/youtube_wrapper_py/__init__.py
+src/youtube_wrapper_py/data_api.py
+src/youtube_wrapper_py/transcript_api.py
+src/youtube_wrapper_py.egg-info/PKG-INFO
+src/youtube_wrapper_py.egg-info/SOURCES.txt
+src/youtube_wrapper_py.egg-info/dependency_links.txt
+src/youtube_wrapper_py.egg-info/requires.txt
+src/youtube_wrapper_py.egg-info/top_level.txt
+tests/test_data_api.py
+tests/test_transcript_api.py
