@@ -1,0 +1,14 @@
+astropy_iers_data/__init__.py,sha256=zqs1Xr1yaOTMdRKSyabH8rU1mgd99ULSJfzIXu-Tv2E,1236
+astropy_iers_data/_version.py,sha256=7OJ5XY67iQWOcniidFsIh9Mvbbs-ESxc4OlEXHqvBRw,443
+astropy_iers_data/data/Leap_Second.dat,sha256=UOydHNURBMYy0lsmkt_0nGFg2slwf-VQ25tGjlv6cmQ,1352
+astropy_iers_data/data/README.rst,sha256=7RU7-Tnvn3evkEtPNZTDBmohRUPE4SQS-TF3E1KeZvA,245
+astropy_iers_data/data/ReadMe.eopc04,sha256=QteJBUP65p3wJCGdHTbyQrT82Ef2-KdWx9N8Xf0QAkM,3275
+astropy_iers_data/data/ReadMe.finals2000A,sha256=fGGCzA_Qy-zjlxH2SNFeSLSRaJJWAuNgpXCcXMyNWhI,3429
+astropy_iers_data/data/eopc04.1962-now,sha256=SmaqmW0DVxrflnvtrGtwX6WwBVK5l-o9Xm7ASbdGMbM,5000941
+astropy_iers_data/data/finals2000A.all,sha256=oiCNRGLM8_Ii9_iGnJf3pzAGqzh-xDXCg7SR1OVD-l4,3621444
+astropy_iers_data/tests/__init__.py,sha256=1D-l3TVbwIZHY78A-sB7kc4ldldX8ZaEq-Ntph51WVw,108
+astropy_iers_data-0.2024.8.12.0.32.58.dist-info/LICENSE.rst,sha256=BdjsNkN3NDHLVEexBxHxGdeZVUcM37uMouZwpEMqFTw,1491
+astropy_iers_data-0.2024.8.12.0.32.58.dist-info/METADATA,sha256=wbe-9jONziEz4MWDGMGQiD8NeGN0RHdaDVLiLW_Sny8,5116
+astropy_iers_data-0.2024.8.12.0.32.58.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+astropy_iers_data-0.2024.8.12.0.32.58.dist-info/top_level.txt,sha256=yUeoKtR9D4loi2ve67ZepKnuDyH9QjGMvtXfmS97Q9E,18
+astropy_iers_data-0.2024.8.12.0.32.58.dist-info/RECORD,,
