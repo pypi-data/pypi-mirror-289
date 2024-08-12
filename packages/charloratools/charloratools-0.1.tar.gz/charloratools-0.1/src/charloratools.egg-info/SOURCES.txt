@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/charloratools.egg-info/PKG-INFO
+src/charloratools.egg-info/SOURCES.txt
+src/charloratools.egg-info/dependency_links.txt
+src/charloratools.egg-info/requires.txt
+src/charloratools.egg-info/top_level.txt
+src/charloratools.egg-info/PKG-INFO
+src/charloratools.egg-info/SOURCES.txt
+src/charloratools.egg-info/dependency_links.txt
+src/charloratools.egg-info/requires.txt
+src/charloratools.egg-info/top_level.txt
