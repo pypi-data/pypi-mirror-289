@@ -1,0 +1,6 @@
+numpy
+yfinance
+vnstock
+pandas_datareader
+bokeh
+backtesting
