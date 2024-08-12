@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: study-and-revise
+Version: 0.1.11
+Summary: study and revise
+Author: txs
+Author-email: c3qu@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# 一个简单的复习命令行工具
+
+## 使用方法
+
+### 添加复习项
+
+```cmd
+review review_name position
+```
+
+### 查看今天的复习项
+
+```cmd
+review
+```
+
+## .pypirc格式
+
+```
+[pypi]
+username = __token__
+password = <the token value, including the `pypi-` prefix>
+```
+
+## 打包命令
+
+```python setup.py sdist bdist_wheel```
+
+## 上传命令
+
+```twine upload dist/*```
+
