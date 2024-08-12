@@ -1,0 +1,9 @@
+serbiacard/CelikApi.dll,sha256=9IOrNm0dD18W9qeaqPj3HeAaZ3-BFa2LQrNouDcGlhg,4889600
+serbiacard/__init__.py,sha256=qSJayeNcaZiwF9s5Gxzl0w9x4_7-0Z45obfYqYoQR5o,65
+serbiacard/card.py,sha256=XuLIQe4Y3U-m-4FE9MTZ-XT70roNpuCgY5xrSWTIAHY,8175
+serbiacard/card_additional.py,sha256=t0hLSPCP3PRfdolQ3HuNWRrX130tgtmDex3sZ8cTmvA,18637
+serbiacard/pyarmor_runtime_000000/__init__.py,sha256=J4-qEd71J4alScu94BHTWg-xGdJrCsBPhN1h9O42S58,102
+serbiacard/pyarmor_runtime_000000/pyarmor.rkey,sha256=GWDhj6CCo4QYG_voyGKfPdCURBFvnZ1eUQxBDwt4Bu8,499
+serbiacard-2.0.3.dist-info/METADATA,sha256=7RThz0CP6NmXKPni3RF_c29Omn6mzfbTV8dkXuzn7ms,485
+serbiacard-2.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+serbiacard-2.0.3.dist-info/RECORD,,
