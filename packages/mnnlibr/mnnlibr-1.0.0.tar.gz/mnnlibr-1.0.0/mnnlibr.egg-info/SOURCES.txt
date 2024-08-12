@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+mnnlibr/Generator.py
+mnnlibr/__init__.py
+mnnlibr.egg-info/PKG-INFO
+mnnlibr.egg-info/SOURCES.txt
+mnnlibr.egg-info/dependency_links.txt
+mnnlibr.egg-info/requires.txt
+mnnlibr.egg-info/top_level.txt
