@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+simplewebserver/__init__.py
+simplewebserver/decorator.py
+simplewebserver/handler.py
+simplewebserver/server.py
+simplewebserver/utils.py
+simplewebserver.egg-info/PKG-INFO
+simplewebserver.egg-info/SOURCES.txt
+simplewebserver.egg-info/dependency_links.txt
+simplewebserver.egg-info/top_level.txt
