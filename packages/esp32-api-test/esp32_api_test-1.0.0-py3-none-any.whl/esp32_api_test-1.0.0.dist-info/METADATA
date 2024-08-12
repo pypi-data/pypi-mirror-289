@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: esp32-api-test
+Version: 1.0.0
+Summary: My short description for my project.
+Home-page: https://github.com/me/myproject
+Author: AL
+Author-email: zhoulong0014@163.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Example Package
+This is a simple example package. You can use
+
+[联系作者](https://mp.weixin.qq.com/s/9FQ-Tun5FbpBepBAsdY62w)
+
+to write your content.
