@@ -1,0 +1,8 @@
+habanero
+numpy
+pandas
+scipy
+ollama
+beautifulsoup4
+scikit-learn
+pypaperbot
