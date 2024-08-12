@@ -1,0 +1,8 @@
+olivos<1.0.0,>=0.10.2
+nonebot2<3.0.0,>=2.0.0
+
+[onebot]
+nonebot-adapter-onebot<3.0.0.0,>=2.2.2
+
+[telegram]
+nonebot-adapter-telegram<1.0.0.0,>=0.1.0b13
