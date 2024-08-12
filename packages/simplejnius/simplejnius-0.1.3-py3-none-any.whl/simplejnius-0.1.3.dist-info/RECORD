@@ -1,0 +1,13 @@
+simplejnius/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplejnius/guava/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplejnius/guava/jclass/__init__.py,sha256=ETglnPqpk3hTl-qoCby_LiyGVDCpBbh9SZ7AVU8N0aI,23
+simplejnius/guava/jclass/futures.py,sha256=n75ud0GTuRx16_g9liE4BXbejk6NBaJ-mvcR8wxLlNY,5923
+simplejnius/guava/jinterface/__init__.py,sha256=nr6krAxBiTfZpKLLvQtz5ARtl6Kw3tHN10RRCR9QNyk,30
+simplejnius/guava/jinterface/futurecallback.py,sha256=tmzQ7cPh9WXsDSiHE5vXelw1jGnm0zt0h2t6EvBE9rA,670
+simplejnius/reactivestreams/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplejnius/reactivestreams/jinterface/__init__.py,sha256=E8_Il6ETPX8p8MKsGexxTe999djcYWlyZe1XHX3NQIY,26
+simplejnius/reactivestreams/jinterface/subscriber.py,sha256=ZEhCb5XzYO1-CxkbgIk67ZpslSOtHi-x-sM1AjpriAk,876
+simplejnius-0.1.3.dist-info/LICENSE,sha256=X4xefmI3OvAs_b4ICprXyfRnZfqzCe77JLTGIq5P53I,1068
+simplejnius-0.1.3.dist-info/METADATA,sha256=704qANMzK6L_fUPtxFNX1nncB-3qwE93AGFPE_nV6Dg,971
+simplejnius-0.1.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+simplejnius-0.1.3.dist-info/RECORD,,
