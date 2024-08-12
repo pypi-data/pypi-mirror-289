@@ -1,0 +1,11 @@
+simplejnius/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplejnius/guava/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplejnius/guava/jinterface/__init__.py,sha256=nr6krAxBiTfZpKLLvQtz5ARtl6Kw3tHN10RRCR9QNyk,30
+simplejnius/guava/jinterface/futurecallback.py,sha256=tmzQ7cPh9WXsDSiHE5vXelw1jGnm0zt0h2t6EvBE9rA,670
+simplejnius/reactivestreams/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplejnius/reactivestreams/jinterface/__init__.py,sha256=E8_Il6ETPX8p8MKsGexxTe999djcYWlyZe1XHX3NQIY,26
+simplejnius/reactivestreams/jinterface/subscriber.py,sha256=ZEhCb5XzYO1-CxkbgIk67ZpslSOtHi-x-sM1AjpriAk,876
+simplejnius-0.1.0.dist-info/LICENSE,sha256=X4xefmI3OvAs_b4ICprXyfRnZfqzCe77JLTGIq5P53I,1068
+simplejnius-0.1.0.dist-info/METADATA,sha256=EzSMDq7u52aQ4nKqyqSUculXNQEfc3qgIlxH3agSYH8,452
+simplejnius-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+simplejnius-0.1.0.dist-info/RECORD,,

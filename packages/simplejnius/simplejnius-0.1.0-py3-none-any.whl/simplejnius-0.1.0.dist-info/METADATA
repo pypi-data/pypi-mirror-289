@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: simplejnius
+Version: 0.1.0
+Summary: Access third party Android Java libraries in Python
+Author: Kenechukwu Akubue
+Author-email: kengoon19@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pyjnius (>=1.6.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# SimpleJnius
+
+Access third party Android Java libraries in Python
