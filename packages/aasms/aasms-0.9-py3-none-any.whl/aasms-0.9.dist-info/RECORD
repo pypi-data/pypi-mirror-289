@@ -1,0 +1,8 @@
+aasms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aasms/aasms.py,sha256=hO3v4rT7F4hxXxfVbP0jdTDnRoLFQx86sMLlF4VFLCw,3430
+aasms/send-aa-sms.py,sha256=2nlBwm6CjwMJIh-i3Pmky6mHDJnkRCSroJaNVyyXfsw,3713
+aasms-0.9.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+aasms-0.9.dist-info/METADATA,sha256=Z8ZP5uR0uV_bd1H0U3Fqkz6GEYg95vU6UdHwz_UiV6Y,1199
+aasms-0.9.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+aasms-0.9.dist-info/entry_points.txt,sha256=lhmVPo3yviDGjALvxucFpQgr37quD0i4P5Q4QwKdS64,53
+aasms-0.9.dist-info/RECORD,,
