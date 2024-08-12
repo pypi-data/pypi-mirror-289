@@ -1,0 +1,10 @@
+yhttp/ext/dbmanager/__init__.py,sha256=8-cpEfg8fDXfC8IwqFfnmoYA15JD--504NphPmrqcD4,167
+yhttp/ext/dbmanager/cli.py,sha256=MfmToDtHBuQH0HpQnIcGVplw1B8K628mh83VW7MLH54,2139
+yhttp/ext/dbmanager/dbmanager.py,sha256=ZXy5LhmFMqK1CkSMMlPVQp3-ecbt6MPHbQmiAJ4RAu8,1908
+yhttp/ext/dbmanager/install.py,sha256=fSNUqFknpP3ZficNjzlRlejEpxtf70OrOFh-yL-TMXY,431
+yhttp/ext/dbmanager/uri.py,sha256=CQdw_1yJwUwV67L3hQICA4ziKCDYb4E2Gqd4Y2Cc8-w,973
+yhttp_dbmanager-2.8.0.dist-info/LICENSE,sha256=1lZ7neh4Es6earhYMwYaqsuS1Alohsrf9GZRVdl7l5o,1062
+yhttp_dbmanager-2.8.0.dist-info/METADATA,sha256=mgWYUmabIsw-Hx1e37g8xyGM8ylQzH8Ca9C23jNHSgo,2726
+yhttp_dbmanager-2.8.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+yhttp_dbmanager-2.8.0.dist-info/top_level.txt,sha256=efaJ4DfUOs7MO3pjIEyRhnQASGVyD6vH-SL3ogQxkeU,6
+yhttp_dbmanager-2.8.0.dist-info/RECORD,,
