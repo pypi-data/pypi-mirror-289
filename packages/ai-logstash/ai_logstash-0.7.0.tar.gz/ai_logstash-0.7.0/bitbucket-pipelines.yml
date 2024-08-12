@@ -1,0 +1,39 @@
+image: python:3.11
+
+pipelines:
+  default:
+    - step:
+        name: Run tests and lint
+        script:
+          - python3 -m venv env
+          - source env/bin/activate
+          - pip install .[test]
+          - ruff check .
+          - ruff format . --check
+          - python -m build
+          # - pip-audit
+
+  branches:
+    main:
+      - step:
+          name: Run tests and lint
+          script:
+            - python3 -m venv env
+            - source env/bin/activate
+            - pip install .[test]
+            - ruff check .
+            - ruff format . --check
+            - python -m build
+            # - pip-audit
+
+  tags:
+    '*':
+      - step:
+          name: Build and publish package to pypi
+          script:
+            - python3 -m venv env
+            - source env/bin/activate
+            - pip install .[test]
+            - sed -i "s/__version__ = \".*\"/__version__ = \"$BITBUCKET_TAG\"/" ai_logstash/version.py
+            - python -m build
+            - twine upload dist/*
