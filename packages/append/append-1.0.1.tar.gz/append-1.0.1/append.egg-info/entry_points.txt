@@ -1,0 +1,2 @@
+[console_scripts]
+append = append:main
