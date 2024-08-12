@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: iofx
+Version: 0.1.0
+Summary: IO effect handlers for Python
+Author-Email: Louis Maddox <louismmx@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: pydantic>=2.8.2
+Description-Content-Type: text/markdown
+
+# iofx
