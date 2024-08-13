@@ -1,0 +1,8 @@
+pydantic
+docstring_parser~=0.15
+
+[examples]
+openai
+
+[test]
+pytest~=7.4.4
