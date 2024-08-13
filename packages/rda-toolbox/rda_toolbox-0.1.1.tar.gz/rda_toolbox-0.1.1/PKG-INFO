@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rda-toolbox
+Version: 0.1.1
+Summary: 
+Author: timoleistner
+Author-email: leistner.timo@googlemail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: altair (>=5.4.0,<6.0.0)
+Requires-Dist: numpy (>=2.0.1,<3.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Robotic-assisted Discovery of Antiinfectives
+
+
+### Readers
+- Cytation C10
+
+<!-- https://testdriven.io/blog/python-project-workflow/ -->
+
