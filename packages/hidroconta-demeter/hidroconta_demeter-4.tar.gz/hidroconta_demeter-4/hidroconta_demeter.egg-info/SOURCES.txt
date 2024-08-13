@@ -1,0 +1,7 @@
+README.md
+setup.py
+hidroconta_demeter.egg-info/PKG-INFO
+hidroconta_demeter.egg-info/SOURCES.txt
+hidroconta_demeter.egg-info/dependency_links.txt
+hidroconta_demeter.egg-info/requires.txt
+hidroconta_demeter.egg-info/top_level.txt
