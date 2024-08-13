@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: aginstaller
+Version: 0.0.1
+Summary: aginstall beta
+Home-page: UNKNOWN
+Author: ldp
+Author-email: bruceamadeuslee@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: loguru
+
+install apk for test, beta.
+
+
