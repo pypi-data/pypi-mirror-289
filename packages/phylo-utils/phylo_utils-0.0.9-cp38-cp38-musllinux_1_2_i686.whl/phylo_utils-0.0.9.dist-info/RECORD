@@ -1,0 +1,10 @@
+phylo_utils-0.0.9.dist-info/RECORD,,
+phylo_utils-0.0.9.dist-info/WHEEL,sha256=kW23jpDHftgjj24lqb533ga59d9h38N3sdhwy6Sjjl8,108
+phylo_utils-0.0.9.dist-info/top_level.txt,sha256=3mIgiFvOfMN1TzCN5AEJkh7ZnqLZjAywDYypkp7xM3U,12
+phylo_utils-0.0.9.dist-info/METADATA,sha256=eKYrFnjaecI7BQ6MH8g6cpr476xbiT9-9pCG_XVnzT4,230
+phylo_utils/markov.py,sha256=WvfSm1Vl2XMBD9AigZUM8qVp4KdupH74yzCgJL64LqE,2186
+phylo_utils/seq_to_partials.py,sha256=dJxYZRlGtMo2OxrceVgwbUMTIHveIjKsjjWBkPeg4Tk,7343
+phylo_utils/models.py,sha256=r4HaR-Ay0V1UwPCqagGOm54bcJ03FLnN0sp6nXqpkB8,15030
+phylo_utils/__init__.py,sha256=OseE9_pIgWdnSAijuQx9ZVWCTdrWMlSs8L28IwQ6Yas,112
+phylo_utils/likelihood.py,sha256=4KQ1vIUXNO4Y9oeCt81T09iHU-4Zqr6NGiOKTRYgGpo,9562
+phylo_utils/likcalc.cpython-38-i386-linux-gnu.so,sha256=TXTk-XXDfYnK2yYAtX0or8ExcIolXLacHgAkVIwiKZI,1435492
