@@ -1,0 +1,1 @@
+from bulk_upload_testrail.update_report import update_junit_report
