@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+tictactoelibrary/Board.py
+tictactoelibrary/__init__.py
+tictactoelibrary.egg-info/PKG-INFO
+tictactoelibrary.egg-info/SOURCES.txt
+tictactoelibrary.egg-info/dependency_links.txt
+tictactoelibrary.egg-info/top_level.txt
