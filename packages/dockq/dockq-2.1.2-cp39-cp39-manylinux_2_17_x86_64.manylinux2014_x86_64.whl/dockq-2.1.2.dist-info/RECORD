@@ -1,0 +1,14 @@
+DockQ/__main__.py,sha256=otyUS2_a61xPNXTEUlGUSVBXVqu7luImEXmitkO1ffU,63
+DockQ/operations_nocy.py,sha256=52IWYR_V2QHO2Z77OMmMLVPzMgkScu3ec3EJ-V2l0NM,1643
+DockQ/constants.py,sha256=Qxdn23SfqnTiy4dvdozubkPPuzDaJjcl1H1ldP7T7Bg,2509
+DockQ/parsers.py,sha256=onDrJ2I0nvBb6jHDEGXWsXACvDmiXWHxp_sO1K0K07s,22132
+DockQ/operations.cpython-39-x86_64-linux-gnu.so,sha256=39R57BaADIfWL28fj_ZciZYQfH_06FDBKQHHqJQOBvQ,1444392
+DockQ/DockQ.py,sha256=o_HhxBGpLw_RFERhto0CQXU82iDcajgPV7pi0wXYFho,37393
+DockQ/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+DockQ/operations.c,sha256=UNYpsev93JXH_gH7hNaoO9Cfr37u13KxVx1DtArG7DA,1136576
+dockq-2.1.2.dist-info/METADATA,sha256=OIU-SHNwwI4aZL28XA0aA1QAtSQZLu3SWRpZGmsqAM8,11393
+dockq-2.1.2.dist-info/top_level.txt,sha256=MRXzqrrSV8QyXtyupwi21rqylxKDjnCWRTbHDhbKehc,6
+dockq-2.1.2.dist-info/entry_points.txt,sha256=QdMNawhzJoH_b7AKOWFsw4Jqhw_K2gQGj5rnbcgcqWg,46
+dockq-2.1.2.dist-info/RECORD,,
+dockq-2.1.2.dist-info/LICENSE,sha256=GsYvd4_4U7C3IVVlqoaitv3pRlCFUstBt1p05eDD33k,1069
+dockq-2.1.2.dist-info/WHEEL,sha256=Aa2u_xh_0i_8Kt2iHZC2QSFV0HykHoBya3mEjcivvUs,147
