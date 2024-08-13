@@ -1,0 +1,7 @@
+owlready2
+scriptcwl
+ruamel.yaml
+thefuzz
+spacy
+torch==2.3.0
+sentence-transformers
