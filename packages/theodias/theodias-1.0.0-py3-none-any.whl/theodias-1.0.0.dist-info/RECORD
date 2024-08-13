@@ -1,0 +1,14 @@
+theodias/__init__.py,sha256=yJlYZkYBwyVUQqGPxYHPIbtqNyzmh4wlVB3KtKeV1Dc,2077
+theodias/base.py,sha256=KEzxGb6XAql65c41ObMJkaAsrq7qtAOOXTJsoS9h6mg,21408
+theodias/bitarray_implementation.py,sha256=o7GO13_hkOhRPMOlhll3-3FN24xGdZxFvEqfk5E5zK8,30201
+theodias/core.py,sha256=1CZ9xvTzaVKxzDVGxrC-Te692w_M9kf60JeOcSRu35A,1060
+theodias/numba_tau.py,sha256=YaYiKRoAfvap8aWwAfuWmzk7SyROMS0IIUNk30zHX0Y,1692
+theodias/numpy_implementation.py,sha256=OuY5QrJNPUaEqDXBH_IFLD1x4VA7l47G58MvyObIsuI,39945
+theodias/set_implementation.py,sha256=CIl6VOgkF7-yfSFq3yqiYLFLEv5sptZ9boZN3Lsfn9M,28093
+theodias/test_tau.py,sha256=tW68WAHRCt0VvSy9_om7RyMNVI01-w-yKJEpdyja6Tk,60611
+theodias/util.py,sha256=a1dej2_EjULh_KjT8oQ3jYUDGU2vNeh5I78cYsAMLb0,34780
+theodias-1.0.0.dist-info/LICENSE,sha256=ulLkIVbxQBUYXwN6JECmDmequXDAdYFwX9_T3iZzVbU,1066
+theodias-1.0.0.dist-info/METADATA,sha256=5PlDXhE6xmoejeYJpgNDotfLjXXEgZC-ayOYAunpwGY,1865
+theodias-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+theodias-1.0.0.dist-info/top_level.txt,sha256=SzG0-i5Y8cWnX1AkNt62Md8VHPdwXcVa4ne11QHhUtg,9
+theodias-1.0.0.dist-info/RECORD,,
