@@ -1,0 +1,15 @@
+gradio2api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gradio2api/aggregator.py,sha256=woHESTvtMgJVdalLRZNfUIv3rB7CuOBzRuK1HoyXh_A,1452
+gradio2api/clients_aggregator.py,sha256=UkdgfWuqXKyB23CUVAj5AHlIDKFL6y_mCsXz3rdGV0w,1470
+gradio2api/gr_application.py,sha256=X3js-xyrjjw_MDvTqDr6F2zCnVG9nMX6n8Q_rRaRUPs,12421
+gradio2api/gr_fastapi.py,sha256=EObuMzohhc5XMpGJN5U3d-tX4yJcaqVJLlp8JBPHrrM,1701
+gradio2api/gr_types/__init__.py,sha256=WXbEs8prQx7NGL0Jtsx9JsOS3nTYuJTDB0dz2ENvkWE,250
+gradio2api/gr_types/models_parameters.py,sha256=i_YyOWl0ViHEZglEejwLCYB8fqDOpk6QjvXK3ONYaxg,3477
+gradio2api/gr_types/models_returns.py,sha256=ybxl41jzNeA4MJVoTgShJwXy5XIqcTNlg2V5dLSXEgw,3561
+gradio2api/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gradio2api/utils/hash.py,sha256=vp7BAcaQ1ZljhwQdzZlLgOIKLrxcKqZNsFKIf-8S55I,525
+gradio2api/utils/names.py,sha256=Ml5LEIo9vSl_pJXLha4sBkhV_KIae4m4kIN9OX9z9Uk,178
+gradio2api-0.0.3.dist-info/METADATA,sha256=X1U885wnDthiCFH-Bicmvc81xZmETQFiN3kYdCYh5rw,397
+gradio2api-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gradio2api-0.0.3.dist-info/top_level.txt,sha256=zV6woOwsPFlhfSTNsjz9Akzu0ze-rEoO087Er08VnhQ,11
+gradio2api-0.0.3.dist-info/RECORD,,
