@@ -1,0 +1,3 @@
+[console_scripts]
+zpp = zpp:main
+zpp_register = zpp.registration:main
