@@ -1,0 +1,7 @@
+serbiacard/CelikApi.dll,sha256=9IOrNm0dD18W9qeaqPj3HeAaZ3-BFa2LQrNouDcGlhg,4889600
+serbiacard/__init__.py,sha256=4BuBSz8oGHgWU0kG2v62IIvJCVWOZH2Zk6fHkKb_A5s,55
+serbiacard/card.py,sha256=3e58ZYhjkL8-vN3h3Cnk9e60TCeyb2GX5lPB63EHVaM,8165
+serbiacard/card_additional.py,sha256=abm2ldItKsbvytULa_ul038yMSudqsRGKS1TfzE12K0,3138
+serbiacard-2.0.17.dist-info/METADATA,sha256=WhEMICvtM88KbtfaqoNHLv1U0_OpIhsoLb5sQdhSrU0,486
+serbiacard-2.0.17.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+serbiacard-2.0.17.dist-info/RECORD,,
