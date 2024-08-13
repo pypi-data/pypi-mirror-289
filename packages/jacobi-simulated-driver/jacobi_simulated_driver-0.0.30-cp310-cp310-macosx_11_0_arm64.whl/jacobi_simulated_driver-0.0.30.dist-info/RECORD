@@ -1,0 +1,8 @@
+jacobi_driver_simulated.cpython-310-darwin.so,sha256=o-BEi9BAMBYktmwG2v7CmUe3CNpzdMjVrTqWzOk1Wig,463744
+libjacobi-simulated-driver.dylib,sha256=VpyiIW9PQTmO9Fft9j7_dKjma0q2a9rBPY8FFDgoCPI,526864
+jacobi_simulated_driver-0.0.30.dist-info/RECORD,,
+jacobi_simulated_driver-0.0.30.dist-info/WHEEL,sha256=fq9UeTsEXgGD0_izFXMwa7hoi8xNG4IwwSVs8Y-nvLc,114
+jacobi_simulated_driver-0.0.30.dist-info/METADATA,sha256=80SNjFuvv4SJaG9HBthhfQfg9zXGUdSmkl2zHU_R9zA,5521
+jacobi_simulated_driver-0.0.30.dist-info/licenses/LICENSE,sha256=aOoSTZXfCLkJEh1SwiDvRcxqbW-GEe-zl4VUAwA89wA,3859
+jacobi_simulated_driver.dylibs/libssl.3.dylib,sha256=kn_1iLN2AN767wWWad-ddXL565dfqRwn0ehkwxUL2AY,838736
+jacobi_simulated_driver.dylibs/libcrypto.3.dylib,sha256=cCV_y6MnHYPF6YIdr_abNGCvavXfL-9fuFS8Fcm0qws,4222928
