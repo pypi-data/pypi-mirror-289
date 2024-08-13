@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: sarc-asm
+Version: 0.0.0
+Summary: Sarcomere Analysis Multitool for structural and functional analysis of sarcomeres in microscopy images and movies
+Home-page: https://github.com/danihae/SarcAsM
+Author: Daniel Haertter
+Author-email: dani.hae@posteo.de
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/danihae/SarcAsM
+Description-Content-Type: text/markdown
+
+![SarcAsM logo](./docs/images/logo.png)
+
+## Overview
+
+SarcAsM (Sarcomere Analysis Multitool) is a Python package designed for comprehensive analysis of sarcomere structure and function in microscopy images and movies. This tool aims to provide researchers and clinicians with advanced capabilities for studying muscle biology and related disorders.
+
+## Features (coming soon)
+
+- Automated detection and analysis of Z-bands, sarcomeres, myofibrils, and sarcomere domains
+- Tracking and analysis of sarcomere motion, both individually and on average
+- Machine learning-based unbiased structural assessment
+- Compatible with various cardiomyocyte models, including human iPSC-derived cardiomyocytes
+- Available as both a Python package and a stand-alone application
+
+## Installation
+
+`pip install SarcAsM`
+
+## Usage
+
+Detailed usage instructions and documentation will be available upon full release of the package.
+
+## Development Status
+
+SarcAsM is currently under active development. The full source code and comprehensive documentation will be made available here upon publication of our research.
+
+## Citation
+
+If you use SarcAsM in your research, please cite our upcoming paper (details to be provided upon publication).
+
+## Contact
+
+For inquiries about SarcAsM, please contact:
+
+Daniel Haertter - daniel.haertter@med.uni-goettingen.de
+
+## License
+
+License information will be provided upon release.
+
+---
+
+© 2024 Institute of Pharmacology and Toxicology, University Medical Center Göttingen, Germany. All rights reserved.
+
