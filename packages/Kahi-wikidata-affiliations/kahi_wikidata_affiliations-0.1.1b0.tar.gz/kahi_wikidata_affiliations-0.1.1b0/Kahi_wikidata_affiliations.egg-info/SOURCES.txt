@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Kahi_wikidata_affiliations.egg-info/PKG-INFO
+Kahi_wikidata_affiliations.egg-info/SOURCES.txt
+Kahi_wikidata_affiliations.egg-info/dependency_links.txt
+Kahi_wikidata_affiliations.egg-info/requires.txt
+Kahi_wikidata_affiliations.egg-info/top_level.txt
+kahi_wikidata_affiliations/Kahi_wikidata_affiliations.py
+kahi_wikidata_affiliations/__init__.py
+kahi_wikidata_affiliations/_version.py
