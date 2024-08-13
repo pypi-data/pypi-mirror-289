@@ -1,0 +1,14 @@
+qrguide/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qrguide/analysis_fn.py,sha256=CQjpwVMepqs0F68Dl4cV2gj8vl1V4eE2COwRApLfbwQ,28358
+qrguide/transformation.py,sha256=jzWv_jS1epKf8_QwSPgzImlND4UNmQSrOURamuS6Z0U,20611
+qrguide/unet2.py,sha256=ubaPS2aBj9P61OqE4e48adWv5c1KLybIGU473tKjE10,16108
+qrguide/version.py,sha256=kQOJvtmpbHGE0oVJv6oubUfigE6lAOQFBGPyh3SkWZI,21
+qrguide/utils/Model_weights.pkl,sha256=2UoPkzUy7TYAamIr1_U2T4jBOM2D_TPs-w3K20Xq1Uc,9769205
+qrguide/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qrguide/utils/coding_XY.py,sha256=0abXHbs4xwoXDsAfT2WRUkgPDqeOaIYPbQ3AmsrJeMo,4467
+qrguide/utils/model_prereq.pkl,sha256=AnpQHOHaD-8_oEBXa5ngqp-6W5uh3fhFH8SeWgX2O_E,77385
+qrguide-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+qrguide-0.0.3.dist-info/METADATA,sha256=c0gu25tlFu81v4lNSQ7WoMTb-zz0jOVvg4pWwkrJ13g,623
+qrguide-0.0.3.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+qrguide-0.0.3.dist-info/top_level.txt,sha256=K8AybVpQU8shuD0FGbXyneTx75LlI329Jqh6Qn4gLGY,8
+qrguide-0.0.3.dist-info/RECORD,,
