@@ -1,0 +1,7 @@
+click==8.1.0
+jinja2
+
+[dev]
+black>=24.3.0
+flake8>=6.1.0
+black[jupyter]>=0.3.0
