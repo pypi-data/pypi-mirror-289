@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: grect
+Version: 0.0.1
+Summary: Generate a rectangle through a certain point and angle, with adjustable width and length.
+Author-email: Houqi Li <lihouqi007@gmail.com>
+Project-URL: Homepage, https://github.com/tanxinyue
+Project-URL: Bug Tracker, https://github.com/tanxinyue/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Rectangle Package
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+Generate a rectangle through a certain point and angle, with adjustable width and length.
