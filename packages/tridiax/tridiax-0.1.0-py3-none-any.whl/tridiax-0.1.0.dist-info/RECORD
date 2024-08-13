@@ -1,0 +1,10 @@
+tridiax/__init__.py,sha256=2AYf4t2IJxM9mCDheR4GA_TCfVHFROkoTxurL_jBgOk,435
+tridiax/__version__.py,sha256=tgddc4nshr7gDCj3-sxga8DfK5rb6xpqsrRe80P-A4U,238
+tridiax/divide_and_conquer.py,sha256=jsIsfmVxRwMTjze6CSExUK18biAW_oXWRNc9OH8A3C0,2952
+tridiax/stone.py,sha256=7gFo_CAWpze2tCLc5Io8HPUxYJS-DqmxArWJQ0lrAe4,6099
+tridiax/thomas.py,sha256=I5kIHNdDnJ8KNI5rgZiZk4mRMhCjtMhdbR9ZLdqgcAw,3850
+tridiax-0.1.0.dist-info/LICENSE,sha256=OE_AHxLyw3BLj8NrfCFwGunCixPopt7H80w0ahUTzBk,11346
+tridiax-0.1.0.dist-info/METADATA,sha256=gRDOBgQefW3tvt0Ldg1YQ2YQ-KF0tIZJvz9WcHorqv0,2892
+tridiax-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+tridiax-0.1.0.dist-info/top_level.txt,sha256=2zfHp08SvNiWTBGhpqcnVsiOz36TtF8rA5PooGnuln8,8
+tridiax-0.1.0.dist-info/RECORD,,
