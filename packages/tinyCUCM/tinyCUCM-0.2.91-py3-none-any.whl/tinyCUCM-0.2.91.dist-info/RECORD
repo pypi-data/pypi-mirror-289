@@ -1,0 +1,13 @@
+tinyCUCM/__init__.py,sha256=qeCqvacP8pdNY9QQjR1_Lb7hx4WR02QmiwgILPsbnEw,102
+tinyCUCM/ccs_models.py,sha256=cYN83WwpjFMhm7Ogt-jQKynh-VTSbTorrYxHaKJZjoo,1011
+tinyCUCM/client.py,sha256=it6yerzG6EH2Mr2ky4bdBfF8PqelHUSETnRZwZq1BlY,69629
+tinyCUCM/decorators.py,sha256=JHb-c43gFvdoLBjEG9-uyjW6LpEVZgiHrg7LP2Zqonw,3969
+tinyCUCM/exceptions.py,sha256=NN2oHYV46oGhoyvrpSczoeB9ztSV1Gx-uWKtiENJ9WE,865
+tinyCUCM/ris_models.py,sha256=Z4Wwsc3-_TCv_d2LdEG9Syo6-6G4IhycrMUU5ZSZPfc,1152
+tinyCUCM/settings.py,sha256=Yqzo84lLSAK63lWnZHGT6fK2eB6b1rpMh-szAGDdYAI,7822
+tinyCUCM/sql_models.py,sha256=E-G4spjGpZfAx7YWM8-lN85eSbVeVWgUKMX7mdhpKFo,4856
+tinyCUCM-0.2.91.dist-info/LICENSE,sha256=08ZYB_hlA3HBGWWKsa1w6Zxsy3zgPFnVI0UfFIo2jJg,1065
+tinyCUCM-0.2.91.dist-info/METADATA,sha256=7w0gZcd5FDMu7mJ0n49bcmWJgVf9q7EhEv1gYTMhOs4,53582
+tinyCUCM-0.2.91.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+tinyCUCM-0.2.91.dist-info/top_level.txt,sha256=VhoupNKLUeh_TQbnQe7h7Ezu-2Xr7Zej7n7odLaxJkI,9
+tinyCUCM-0.2.91.dist-info/RECORD,,
