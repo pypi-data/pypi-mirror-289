@@ -1,0 +1,2 @@
+[console_scripts]
+iplens = iplens_cli:main
