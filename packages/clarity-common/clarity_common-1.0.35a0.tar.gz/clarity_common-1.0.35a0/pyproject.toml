@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "clarity-common"
+version = "1.0.35a0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jsonschema = "*"
+cwe2 = "*"
+awscrt = "*"
+awsiotsdk = "*"
+pydantic = "*"
+twine = "*"
+docutils = "*"
+awscli = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
